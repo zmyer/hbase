@@ -312,7 +312,10 @@ in <a href="http://hbase.apache.org/apidocs/index.html">Javadoc</a> or
 </div>
 <div class="paragraph">
 <div class="title">About This Guide</div>
-<p>This reference guide is a work in progress. The source for this guide can be found in the _src/main/asciidoc directory of the HBase source. This reference guide is marked up using <a href="http://asciidoc.org/">AsciiDoc</a> from which the finished guide is generated as part of the 'site' build target. Run</p>
+<p>This reference guide is a work in progress. The source for this guide can be found in the
+_src/main/asciidoc directory of the HBase source. This reference guide is marked up
+using <a href="http://asciidoc.org/">AsciiDoc</a> from which the finished guide is generated as part of the
+'site' build target. Run</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -322,11 +325,14 @@ in <a href="http://hbase.apache.org/apidocs/index.html">Javadoc</a> or
 <div class="paragraph">
 <p>to generate this documentation.
 Amendments and improvements to the documentation are welcomed.
-Click <a href="https://issues.apache.org/jira/secure/CreateIssueDetails!init.jspa?pid=12310753&amp;issuetype=1&amp;components=12312132&amp;summary=SHORT+DESCRIPTION">this link</a> to file a new documentation bug against Apache HBase with some values pre-selected.</p>
+Click
+<a href="https://issues.apache.org/jira/secure/CreateIssueDetails!init.jspa?pid=12310753&amp;issuetype=1&amp;components=12312132&amp;summary=SHORT+DESCRIPTION">this link</a>
+to file a new documentation bug against Apache HBase with some values pre-selected.</p>
 </div>
 <div class="paragraph">
 <div class="title">Contributing to the Documentation</div>
-<p>For an overview of AsciiDoc and suggestions to get started contributing to the documentation, see the <a href="#appendix_contributing_to_documentation">relevant section later in this documentation</a>.</p>
+<p>For an overview of AsciiDoc and suggestions to get started contributing to the documentation,
+see the <a href="#appendix_contributing_to_documentation">relevant section later in this documentation</a>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Heads-up if this is your first foray into the world of distributed computing&#8230;&#8203;</div>
@@ -25769,7 +25775,7 @@ GIT is our repository of record for all but the Apache HBase website.
 We used to be on SVN.
 We migrated.
 See <a href="https://issues.apache.org/jira/browse/INFRA-7768">Migrate Apache HBase SVN Repos to Git</a>.
-Updating hbase.apache.org still requires use of SVN (See <a href="#hbase.org">hbase.org</a>). See <a href="http://hbase.apache.org/source-repository.html">Source Code
+See <a href="http://hbase.apache.org/source-repository.html">Source Code
                 Management</a> page for contributor and committer links or seach for HBase on the <a href="http://git.apache.org/">Apache Git</a> page.</p>
 </div>
 </div>
@@ -26428,7 +26434,8 @@ To set a version in all the many poms of the hbase multi-module project, use a c
 <p>Update the documentation.</p>
 <div class="paragraph">
 <p>Update the documentation under <em>src/main/asciidoc</em>.
-This usually involves copying the latest from master and making version-particular adjustments to suit this release candidate version.</p>
+This usually involves copying the latest from master and making version-particular
+adjustments to suit this release candidate version.</p>
 </div>
 </li>
 <li>
@@ -26482,7 +26489,8 @@ Do it in two steps.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Otherwise, the build complains that hbase modules are not in the maven repository when you try to do it at once, especially on fresh repository.
+<p>Otherwise, the build complains that hbase modules are not in the maven repository
+when you try to do it at once, especially on fresh repository.
 It seems that you need the install goal in both steps.</p>
 </div>
 <div class="paragraph">
@@ -26696,35 +26704,7 @@ See <a href="#appendix_contributing_to_documentation">appendix contributing to d
 <div class="sect2">
 <h3 id="hbase.org.site.publishing"><a class="anchor" href="#hbase.org.site.publishing"></a>144.2. Publishing <a href="http://hbase.apache.org">hbase.apache.org</a></h3>
 <div class="paragraph">
-<p>As of <a href="https://issues.apache.org/jira/browse/INFRA-5680">INFRA-5680 Migrate apache hbase website</a>, to publish the website, build it using Maven, and then deploy it over a checkout of <em><a href="https://svn.apache.org/repos/asf/hbase/hbase.apache.org/trunk" class="bare">https://svn.apache.org/repos/asf/hbase/hbase.apache.org/trunk</a></em>                and check in your changes.
-The script <em>dev-scripts/publish_hbase_website.sh</em> is provided to automate this process and to be sure that stale files are removed from SVN.
-Review the script even if you decide to publish the website manually.
-Use the script as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ publish_hbase_website.sh -h
-Usage: publish_hbase_website.sh [-i | -a] [-g &lt;dir&gt;] [-s &lt;dir&gt;]
- -h          Show this message
- -i          Prompts the user for input
- -a          Does not prompt the user. Potentially dangerous.
- -g          The local location of the HBase git repository
- -s          The local location of the HBase svn checkout
- Either --interactive or --silent is required.
- Edit the script to set default Git and SVN directories.</pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The SVN commit takes a long time.
-</td>
-</tr>
-</table>
+<p>See <a href="#website_publish">Publishing the HBase Website and Documentation</a> for instructions on publishing the website and documentation.</p>
 </div>
 </div>
 </div>
@@ -29364,7 +29344,8 @@ Owners do not need to be committers.</p>
 <h2 id="appendix_contributing_to_documentation"><a class="anchor" href="#appendix_contributing_to_documentation"></a>Appendix A: Contributing to Documentation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Apache HBase project welcomes contributions to all aspects of the project, including the documentation.</p>
+<p>The Apache HBase project welcomes contributions to all aspects of the project,
+including the documentation.</p>
 </div>
 <div class="paragraph">
 <p>In HBase, documentation includes the following areas, and probably some others:</p>
@@ -29377,10 +29358,6 @@ Guide</a> (this book)</p>
 </li>
 <li>
 <p>The <a href="http://hbase.apache.org/">HBase website</a></p>
-</li>
-<li>
-<p>The <a href="http://wiki.apache.org/hadoop/Hbase">HBase
-Wiki</a></p>
 </li>
 <li>
 <p>API documentation</p>
@@ -29403,35 +29380,34 @@ Wiki</a></p>
 </ul>
 </div>
 <div class="paragraph">
-<p>No matter which area you want to help out with, the first step is almost always to download (typically by cloning the Git repository) and familiarize yourself with the HBase source code.
-The only exception in the list above is the HBase Wiki, which is edited online.
-For information on downloading and building the source, see <a href="#developer">developer</a>.</p>
+<p>No matter which area you want to help out with, the first step is almost always
+to download (typically by cloning the Git repository) and familiarize yourself
+with the HBase source code. For information on downloading and building the source,
+see <a href="#developer">developer</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="_getting_access_to_the_wiki"><a class="anchor" href="#_getting_access_to_the_wiki"></a>A.1. Getting Access to the Wiki</h3>
+<h3 id="_contributing_to_documentation_or_other_strings"><a class="anchor" href="#_contributing_to_documentation_or_other_strings"></a>A.1. Contributing to Documentation or Other Strings</h3>
 <div class="paragraph">
-<p>The HBase Wiki is not well-maintained and much of its content has been moved into the HBase Reference Guide (this guide). However, some pages on the Wiki are well maintained, and it would be great to have some volunteers willing to help out with the Wiki.
-To request access to the Wiki, register a new account at <a href="https://wiki.apache.org/hadoop/Hbase?action=newaccount">https://wiki.apache.org/hadoop/Hbase?action=newaccount</a>.
-Contact one of the HBase committers, who can either give you access or refer you to someone who can.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_contributing_to_documentation_or_other_strings"><a class="anchor" href="#_contributing_to_documentation_or_other_strings"></a>A.2. Contributing to Documentation or Other Strings</h3>
-<div class="paragraph">
-<p>If you spot an error in a string in a UI, utility, script, log message, or elsewhere, or you think something could be made more clear, or you think text needs to be added where it doesn&#8217;t currently exist, the first step is to file a JIRA.
-Be sure to set the component to <code>Documentation</code> in addition any other involved components.
-Most components have one or more default owners, who monitor new issues which come into those queues.
-Regardless of whether you feel able to fix the bug, you should still file bugs where you see them.</p>
+<p>If you spot an error in a string in a UI, utility, script, log message, or elsewhere,
+or you think something could be made more clear, or you think text needs to be added
+where it doesn&#8217;t currently exist, the first step is to file a JIRA. Be sure to set
+the component to <code>Documentation</code> in addition any other involved components. Most
+components have one or more default owners, who monitor new issues which come into
+those queues. Regardless of whether you feel able to fix the bug, you should still
+file bugs where you see them.</p>
 </div>
 <div class="paragraph">
 <p>If you want to try your hand at fixing your newly-filed bug, assign it to yourself.
-You will need to clone the HBase Git repository to your local system and work on the issue there.
-When you have developed a potential fix, submit it for review.
-If it addresses the issue and is seen as an improvement, one of the HBase committers will commit it to one or more branches, as appropriate.</p>
+You will need to clone the HBase Git repository to your local system and work on
+the issue there. When you have developed a potential fix, submit it for review.
+If it addresses the issue and is seen as an improvement, one of the HBase committers
+will commit it to one or more branches, as appropriate.</p>
 </div>
 <div class="paragraph">
 <div class="title">Procedure: Suggested Work flow for Submitting Patches</div>
-<p>This procedure goes into more detail than Git pros will need, but is included in this appendix so that people unfamiliar with Git can feel confident contributing to HBase while they learn.</p>
+<p>This procedure goes into more detail than Git pros will need, but is included
+in this appendix so that people unfamiliar with Git can feel confident contributing
+to HBase while they learn.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -29440,11 +29416,13 @@ If it addresses the issue and is seen as an improvement, one of the HBase commit
 You only need to do this once.</p>
 </li>
 <li>
-<p>Fairly often, pull remote changes into your local repository by using the <code>git pull</code> command, while your master branch is checked out.</p>
+<p>Fairly often, pull remote changes into your local repository by using the
+<code>git pull</code> command, while your tracking branch is checked out.</p>
 </li>
 <li>
 <p>For each issue you work on, create a new branch.
-One convention that works well for naming the branches is to name a given branch the same as the JIRA it relates to:</p>
+One convention that works well for naming the branches is to name a given branch
+the same as the JIRA it relates to:</p>
 <div class="listingblock">
 <div class="content">
 <pre>$ git checkout -b HBASE-123456</pre>
@@ -29452,40 +29430,23 @@ One convention that works well for naming the branches is to name a given branch
 </div>
 </li>
 <li>
-<p>Make your suggested changes on your branch, committing your changes to your local repository often.
-If you need to switch to working on a different issue, remember to check out the appropriate branch.</p>
+<p>Make your suggested changes on your branch, committing your changes to your
+local repository often. If you need to switch to working on a different issue,
+remember to check out the appropriate branch.</p>
 </li>
 <li>
-<p>When you are ready to submit your patch, first be sure that HBase builds cleanly and behaves as expected in your modified branch.
-If you have made documentation changes, be sure the documentation and website builds by running <code>mvn clean site</code>.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Before you use the <code>site</code> target the very first time, be sure you have built HBase at least once, in order to fetch all the Maven dependencies you need.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ mvn clean install -DskipTests               # Builds HBase</pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ mvn clean site -DskipTests                  # Builds the website and documentation</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If any errors occur, address them.</p>
-</div>
+<p>When you are ready to submit your patch, first be sure that HBase builds cleanly
+and behaves as expected in your modified branch.</p>
 </li>
 <li>
-<p>If it takes you several days or weeks to implement your fix, or you know that the area of the code you are working in has had a lot of changes lately, make sure you rebase your branch against the remote master and take care of any conflicts before submitting your patch.</p>
+<p>If you have made documentation changes, be sure the documentation and website
+builds by running <code>mvn clean site</code>.</p>
+</li>
+<li>
+<p>If it takes you several days or weeks to implement your fix, or you know that
+the area of the code you are working in has had a lot of changes lately, make
+sure you rebase your branch against the remote master and take care of any conflicts
+before submitting your patch.</p>
 <div class="listingblock">
 <div class="content">
 <pre>$ git checkout HBASE-123456
@@ -29494,50 +29455,103 @@ $ git rebase origin/master</pre>
 </div>
 </li>
 <li>
-<p>Generate your patch against the remote master.
-Run the following command from the top level of your git repository (usually called <code>hbase</code>):</p>
+<p>Generate your patch against the remote master. Run the following command from
+the top level of your git repository (usually called <code>hbase</code>):</p>
 <div class="listingblock">
 <div class="content">
 <pre>$ git format-patch --stdout origin/master &gt; HBASE-123456.patch</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The name of the patch should contain the JIRA ID.
-Look over the patch file to be sure that you did not change any additional files by accident and that there are no other surprises.
-When you are satisfied, attach the patch to the JIRA and click the <b class="button">Patch Available</b> button.
-A reviewer will review your patch.
-If you need to submit a new version of the patch, leave the old one on the JIRA and add a version number to the name of the new patch.</p>
+<p>The name of the patch should contain the JIRA ID.</p>
 </div>
 </li>
 <li>
-<p>After a change has been committed, there is no need to keep your local branch around.
-Instead you should run <code>git pull</code> to get the new change into your master branch.</p>
+<p>Look over the patch file to be sure that you did not change any additional files
+by accident and that there are no other surprises.</p>
+</li>
+<li>
+<p>When you are satisfied, attach the patch to the JIRA and click the
+<b class="button">Patch Available</b> button. A reviewer will review your patch.</p>
+</li>
+<li>
+<p>If you need to submit a new version of the patch, leave the old one on the
+JIRA and add a version number to the name of the new patch.</p>
+</li>
+<li>
+<p>After a change has been committed, there is no need to keep your local branch around.</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_editing_the_hbase_website"><a class="anchor" href="#_editing_the_hbase_website"></a>A.3. Editing the HBase Website</h3>
+<h3 id="_editing_the_hbase_website"><a class="anchor" href="#_editing_the_hbase_website"></a>A.2. Editing the HBase Website</h3>
 <div class="paragraph">
 <p>The source for the HBase website is in the HBase source, in the <em>src/main/site/</em> directory.
-Within this directory, source for the individual pages is in the <em>xdocs/</em> directory, and images referenced in those pages are in the <em>images/</em> directory.
+Within this directory, source for the individual pages is in the <em>xdocs/</em> directory,
+and images referenced in those pages are in the <em>resources/images/</em> directory.
 This directory also stores images used in the HBase Reference Guide.</p>
 </div>
 <div class="paragraph">
-<p>The website&#8217;s pages are written in an HTML-like XML dialect called xdoc, which has a reference guide at link:http://maven.apache.org/archives/maven-1.x/plugins/xdoc/reference/xdocs.html.
-You can edit these files in a plain-text editor, an IDE, or an XML editor such as XML Mind XML Editor (XXE) or Oxygen XML Author.</p>
+<p>The website&#8217;s pages are written in an HTML-like XML dialect called xdoc, which
+has a reference guide at
+link:http://maven.apache.org/archives/maven-1.x/plugins/xdoc/reference/xdocs.html.
+You can edit these files in a plain-text editor, an IDE, or an XML editor such
+as XML Mind XML Editor (XXE) or Oxygen XML Author.</p>
 </div>
 <div class="paragraph">
-<p>To preview your changes, build the website using the mvn clean site
-                -DskipTests command.
-The HTML output resides in the <em>target/site/</em> directory.
-When you are satisfied with your changes, follow the procedure in <a href="#submit_doc_patch_procedure">submit doc patch procedure</a> to submit your patch.</p>
+<p>To preview your changes, build the website using the <code>mvn clean site -DskipTests</code>
+command. The HTML output resides in the <em>target/site/</em> directory.
+When you are satisfied with your changes, follow the procedure in
+<a href="#submit_doc_patch_procedure">submit doc patch procedure</a> to submit your patch.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="website_publish"><a class="anchor" href="#website_publish"></a>A.3. Publishing the HBase Website and Documentation</h3>
+<div class="paragraph">
+<p>HBase uses the ASF&#8217;s <code>gitpubsub</code> mechanism.
+. After generating the website and documentation
+artifacts using <code>mvn clean site site:stage</code>, check out the <code>asf-site</code> repository.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Remove previously-generated content using the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre>rm -rf rm -rf *apidocs* *xref* *book* *.html *.pdf* css js</pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Do not remove the <code>0.94/</code> directory. To regenerate them, you must check out
+the 0.94 branch and run <code>mvn clean site site:stage</code> from there, and then copy the
+artifacts to the 0.94/ directory of the <code>asf-site</code> branch.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Copy the contents of <code>target/staging</code> to the branch.</p>
+</li>
+<li>
+<p>Add and commit your changes, and submit a patch for review.</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_hbase_reference_guide_style_guide_and_cheat_sheet"><a class="anchor" href="#_hbase_reference_guide_style_guide_and_cheat_sheet"></a>A.4. HBase Reference Guide Style Guide and Cheat Sheet</h3>
 <div class="paragraph">
-<p>The HBase Reference Guide is written in Asciidoc and built using <a href="http://asciidoctor.org">AsciiDoctor</a>. The following cheat sheet is included for your reference. More nuanced and comprehensive documentation is available at link:http://asciidoctor.org/docs/user-manual/.</p>
+<p>The HBase Reference Guide is written in Asciidoc and built using <a href="http://asciidoctor.org">AsciiDoctor</a>.
+The following cheat sheet is included for your reference. More nuanced and comprehensive documentation
+is available at link:http://asciidoctor.org/docs/user-manual/.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 12. AsciiDoc Cheat Sheet</caption>
@@ -29934,22 +29948,31 @@ Nothing between the slashes will show up.
 <div class="sect2">
 <h3 id="_auto_generated_content"><a class="anchor" href="#_auto_generated_content"></a>A.5. Auto-Generated Content</h3>
 <div class="paragraph">
-<p>Some parts of the HBase Reference Guide, most notably <a href="#config.files">config.files</a>, are generated automatically, so that this area of the documentation stays in sync with the code.
-This is done by means of an XSLT transform, which you can examine in the source at <em>src/main/xslt/configuration_to_asciidoc_chapter.xsl</em>.
-This transforms the <em>hbase-common/src/main/resources/hbase-default.xml</em>            file into an Asciidoc output which can be included in the Reference Guide.
-Sometimes, it is necessary to add configuration parameters or modify their descriptions.
-Make the modifications to the source file, and they will be included in the Reference Guide when it is rebuilt.</p>
+<p>Some parts of the HBase Reference Guide, most notably <a href="#config.files">config.files</a>,
+are generated automatically, so that this area of the documentation stays in
+sync with the code. This is done by means of an XSLT transform, which you can examine
+in the source at <em>src/main/xslt/configuration_to_asciidoc_chapter.xsl</em>. This
+transforms the <em>hbase-common/src/main/resources/hbase-default.xml</em> file into an
+Asciidoc output which can be included in the Reference Guide.</p>
 </div>
 <div class="paragraph">
-<p>It is possible that other types of content can and will be automatically generated from HBase source files in the future.</p>
+<p>Sometimes, it is necessary to add configuration parameters or modify their descriptions.
+Make the modifications to the source file, and they will be included in the
+Reference Guide when it is rebuilt.</p>
+</div>
+<div class="paragraph">
+<p>It is possible that other types of content can and will be automatically generated
+from HBase source files in the future.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_images_in_the_hbase_reference_guide"><a class="anchor" href="#_images_in_the_hbase_reference_guide"></a>A.6. Images in the HBase Reference Guide</h3>
 <div class="paragraph">
-<p>You can include images in the HBase Reference Guide. It is important to include an image title if possible, and alternate text always.
-This allows screen readers to navigate to the image and also provides alternative text for the image.
-The following is an example of an image with a title and alternate text. Notice the double colon.</p>
+<p>You can include images in the HBase Reference Guide. It is important to include
+an image title if possible, and alternate text always. This allows screen readers
+to navigate to the image and also provides alternative text for the image.
+The following is an example of an image with a title and alternate text. Notice
+the double colon.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -29958,7 +29981,8 @@ image::sunset.jpg[Alt Text]</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Here is an example of an inline image with alternate text. Notice the single colon. Inline images cannot have titles. They are generally small images like GUI buttons.</p>
+<p>Here is an example of an inline image with alternate text. Notice the single colon.
+Inline images cannot have titles. They are generally small images like GUI buttons.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -29971,19 +29995,25 @@ When you link to the image, do not include the directory portion of the path.
 The image will be copied to the appropriate target location during the build of the output.</p>
 </div>
 <div class="paragraph">
-<p>When you submit a patch which includes adding an image to the HBase Reference Guide, attach the image to the JIRA.
-If the committer asks where the image should be committed, it should go into the above directory.</p>
+<p>When you submit a patch which includes adding an image to the HBase Reference Guide,
+attach the image to the JIRA. If the committer asks where the image should be
+committed, it should go into the above directory.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_adding_a_new_chapter_to_the_hbase_reference_guide"><a class="anchor" href="#_adding_a_new_chapter_to_the_hbase_reference_guide"></a>A.7. Adding a New Chapter to the HBase Reference Guide</h3>
 <div class="paragraph">
-<p>If you want to add a new chapter to the HBase Reference Guide, the easiest way is to copy an existing chapter file, rename it, and change the ID (in double brackets) and title. Chapters are located in the <em>src/main/asciidoc/_chapters/</em> directory.</p>
+<p>If you want to add a new chapter to the HBase Reference Guide, the easiest way
+is to copy an existing chapter file, rename it, and change the ID (in double
+brackets) and title. Chapters are located in the <em>src/main/asciidoc/_chapters/</em>
+directory.</p>
 </div>
 <div class="paragraph">
-<p>Delete the existing content and create the new content.
-Then open the <em>src/main/asciidoc/book.adoc</em> file, which is the main file for the HBase Reference Guide, and copy an existing <code>include</code> element to include your new chapter in the appropriate location.
-Be sure to add your new file to your Git repository before creating your patch.</p>
+<p>Delete the existing content and create the new content. Then open the
+<em>src/main/asciidoc/book.adoc</em> file, which is the main file for the HBase Reference
+Guide, and copy an existing <code>include</code> element to include your new chapter in the
+appropriate location. Be sure to add your new file to your Git repository before
+creating your patch.</p>
 </div>
 <div class="paragraph">
 <p>When in doubt, check to see how other files have been included.</p>
@@ -29992,18 +30022,23 @@ Be sure to add your new file to your Git repository before creating your patch.<
 <div class="sect2">
 <h3 id="_common_documentation_issues"><a class="anchor" href="#_common_documentation_issues"></a>A.8. Common Documentation Issues</h3>
 <div class="paragraph">
-<p>The following documentation issues come up often.
-Some of these are preferences, but others can create mysterious build errors or other problems.</p>
+<p>The following documentation issues come up often. Some of these are preferences,
+but others can create mysterious build errors or other problems.</p>
 </div>
 <div class="qlist qanda">
 <ol>
 <li>
 <p><em>Isolate Changes for Easy Diff Review.</em></p>
-<p>Be careful with pretty-printing or re-formatting an entire XML file, even if the formatting has degraded over time. If you need to reformat a file, do that in a separate JIRA where you do not change any content. Be careful because some XML editors do a bulk-reformat when you open a new file, especially if you use GUI mode in the editor.</p>
+<p>Be careful with pretty-printing or re-formatting an entire XML file, even if
+the formatting has degraded over time. If you need to reformat a file, do that
+in a separate JIRA where you do not change any content. Be careful because some
+XML editors do a bulk-reformat when you open a new file, especially if you use
+GUI mode in the editor.</p>
 </li>
 <li>
 <p><em>Syntax Highlighting</em></p>
-<p>The HBase Reference Guide uses <code>coderay</code> for syntax highlighting. To enable syntax highlighting for a given code listing, use the following type of syntax:</p>
+<p>The HBase Reference Guide uses <code>coderay</code> for syntax highlighting. To enable
+syntax highlighting for a given code listing, use the following type of syntax:</p>
 <div class="literalblock">
 <div class="content">
 <pre>[source,xml]
@@ -30013,7 +30048,8 @@ Some of these are preferences, but others can create mysterious build errors or 
 </div>
 </div>
 <div class="paragraph">
-<p>Several syntax types are supported. The most interesting ones for the HBase Reference Guide are <code>java</code>, <code>xml</code>, <code>sql</code>, and <code>bash</code>.</p>
+<p>Several syntax types are supported. The most interesting ones for the HBase
+Reference Guide are <code>java</code>, <code>xml</code>, <code>sql</code>, and <code>bash</code>.</p>
 </div>
 </li>
 </ol>
@@ -32756,7 +32792,7 @@ The server will return cellblocks compressed using this same compressor as long 
 <div id="footer">
 <div id="footer-text">
 Version 2.0.0-SNAPSHOT<br>
-Last updated 2015-11-04 09:07:46 +10:00
+Last updated 2015-11-05 09:17:27 +10:00
 </div>
 </div>
 </body>
