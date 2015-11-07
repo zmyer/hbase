@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsvParser.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -121,12 +121,20 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#args">args</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#DELETE_AFTER_LOAD_CONF">DELETE_AFTER_LOAD_CONF</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.junit.rules.ExpectedException</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#exception">exception</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#FAMILY">FAMILY</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -135,8 +143,16 @@ implements org.apache.hadoop.conf.Configurable</pre>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#NAME">NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#tn">tn</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
@@ -195,8 +211,20 @@ implements org.apache.hadoop.conf.Configurable</pre>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.util.Tool</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#doMROnTableTest(java.lang.String,%20int)">doMROnTableTest</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;data,
+                              int&nbsp;valueMultiplier)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#getConf()">getConf</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#getKVCountFromHfile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path)">getKVCountFromHfile</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                      org.apache.hadoop.fs.Path&nbsp;p)</code>
+<div class="block">Method returns the total KVs in given hfile</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
@@ -290,6 +318,25 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#testWithoutAnExistingTableAndCreateTableSetToNo()">testWithoutAnExistingTableAndCreateTableSetToNo</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#validateHFiles(org.apache.hadoop.fs.FileSystem,%20java.lang.String,%20java.lang.String,%20int)">validateHFiles</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;outputPath,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;family,
+                            int&nbsp;expectedKVCount)</code>
+<div class="block">Confirm ImportTsv via HFiles on fs.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#validateTable(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.TableName,%20java.lang.String,%20int,%20boolean)">validateTable</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                          org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;family,
+                          int&nbsp;valueMultiplier,
+                          boolean&nbsp;isDryRun)</code>
+<div class="block">Confirm ImportTsv via data in online table.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -312,6 +359,15 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.77">LOG</a></pre>
+</li>
+</ul>
 <a name="NAME">
 <!--   -->
 </a>
@@ -347,6 +403,34 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <h4>FORCE_COMBINER_CONF</h4>
 <pre>protected static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.87">FORCE_COMBINER_CONF</a></pre>
 <div class="block">Force use of combiner in doMROnTableTest. Boolean. Default is true.</div>
+</li>
+</ul>
+<a name="FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.89">FAMILY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TestImportTsv.FAMILY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="tn">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tn</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.90">tn</a></pre>
+</li>
+</ul>
+<a name="args">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>args</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.91">args</a></pre>
 </li>
 </ul>
 <a name="exception">
@@ -654,6 +738,19 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="doMROnTableTest(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doMROnTableTest</h4>
+<pre>private&nbsp;org.apache.hadoop.util.Tool&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.367">doMROnTableTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;data,
+                                          int&nbsp;valueMultiplier)
+                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
 <a name="doMROnTableTest(org.apache.hadoop.hbase.HBaseTestingUtility, org.apache.hadoop.hbase.TableName, java.lang.String, java.lang.String, java.util.Map)">
 <!--   -->
 </a>
@@ -673,7 +770,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <a name="doMROnTableTest(org.apache.hadoop.hbase.HBaseTestingUtility, org.apache.hadoop.hbase.TableName, java.lang.String, java.lang.String, java.util.Map, int, int)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>doMROnTableTest</h4>
 <pre>protected static&nbsp;org.apache.hadoop.util.Tool&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.384">doMROnTableTest</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
@@ -692,6 +789,55 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <dt><span class="strong">Returns:</span></dt><dd>The Tool instance used to run the test.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="validateTable(org.apache.hadoop.conf.Configuration, org.apache.hadoop.hbase.TableName, java.lang.String, int, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>validateTable</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.450">validateTable</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                 org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;family,
+                 int&nbsp;valueMultiplier,
+                 boolean&nbsp;isDryRun)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Confirm ImportTsv via data in online table.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="validateHFiles(org.apache.hadoop.fs.FileSystem, java.lang.String, java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>validateHFiles</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.501">validateHFiles</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;outputPath,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;family,
+                  int&nbsp;expectedKVCount)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Confirm ImportTsv via HFiles on fs.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getKVCountFromHfile(org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getKVCountFromHfile</h4>
+<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportTsv.html#line.544">getKVCountFromHfile</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                      org.apache.hadoop.fs.Path&nbsp;p)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Method returns the total KVs in given hfile</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fs</code> - File System</dd><dd><code>p</code> - HFile path</dd>
+<dt><span class="strong">Returns:</span></dt><dd>KV count in the given hfile</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>
@@ -720,7 +866,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportTsvParser.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

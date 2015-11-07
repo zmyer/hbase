@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.io.hfile.HFileReaderImpl.HFileScannerImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -123,12 +123,31 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderI
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.html" title="interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#dataBlockEncoder">dataBlockEncoder</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockDecodingContext.html" title="interface in org.apache.hadoop.hbase.io.encoding">HFileBlockDecodingContext</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#decodingCtx">decodingCtx</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.EncodedSeeker.html" title="interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoder.EncodedSeeker</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#seeker">seeker</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.io.hfile.HFileReaderImpl.HFileScannerImpl">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.io.hfile.<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl</a></h3>
-<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#blockFetches">blockFetches</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#cacheBlocks">cacheBlocks</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#curBlock">curBlock</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#isCompaction">isCompaction</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#nextIndexedKey">nextIndexedKey</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#pread">pread</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#prevBlocks">prevBlocks</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#reader">reader</a></code></li>
+<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#blockFetches">blockFetches</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#cacheBlocks">cacheBlocks</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#curBlock">curBlock</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#isCompaction">isCompaction</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#nextIndexedKey">nextIndexedKey</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#pair">pair</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#pread">pread</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#prevBlocks">prevBlocks</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#reader">reader</a></code></li>
 </ul>
 </li>
 </ul>
@@ -166,13 +185,21 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderI
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#assertValidSeek()">assertValidSeek</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#compareKey(org.apache.hadoop.hbase.CellComparator,%20org.apache.hadoop.hbase.Cell)">compareKey</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator,
                     <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#getCell()">getCell</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#getEncodedBuffer(org.apache.hadoop.hbase.io.hfile.HFileBlock)">getEncodedBuffer</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;newBlock)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
@@ -242,7 +269,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderI
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.io.hfile.<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl</a></h3>
-<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#assertSeeked()">assertSeeked</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#blockSeek(org.apache.hadoop.hbase.Cell,%20boolean)">blockSeek</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#checkKeyValueLen()">checkKeyValueLen</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#checkLen(int)">checkLen</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#close()">close</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getCellBufSize()">getCellBufSize</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getCurCellSize()">getCurCellSize</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getEffectiveDataBlockEncoding()">getEffectiveDataBlockEncoding</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getNextIndexedKey()">getNextIndexedKey</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getReader()">getReader</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#readAndUpdateNewBlock(long)">readAndUpdateNewBlock</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#readKeyValueLen()">readKeyValueLen</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#readMvccVersion(int)">readMvccVersion</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#readNextDataBlock()">readNextDataBlock</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#reseekTo(org.apache.hadoop.hbase.Cell)">reseekTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#seekBefore(org.apache.hadoop.hbase.Cell)">seekBefore</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#seekTo()">seekTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#seekTo(org.apache.hadoop.hbase.Cell)">seekTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#seekTo(org.apache.hadoop.hbase.Cell,%20boolean)">seekTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#shipped()">shipped</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#toString()">toString</a></code></li>
+<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#assertSeeked()">assertSeeked</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#blockSeek(org.apache.hadoop.hbase.Cell,%20boolean)">blockSeek</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#checkKeyValueLen()">checkKeyValueLen</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#checkLen(int)">checkLen</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#close()">close</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getCellBufSize()">getCellBufSize</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getCurCellSize()">getCurCellSize</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getEffectiveDataBlockEncoding()">getEffectiveDataBlockEncoding</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getNextIndexedKey()">getNextIndexedKey</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getReader()">getReader</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#readAndUpdateNewBlock(long)">readAndUpdateNewBlock</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#readKeyValueLen()">readKeyValueLen</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#readMvccVersion(int)">readMvccVersion</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#readNextDataBlock()">readNextDataBlock</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#reseekTo(org.apache.hadoop.hbase.Cell)">reseekTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#reset()">reset</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#seekBefore(org.apache.hadoop.hbase.Cell)">seekBefore</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#seekTo()">seekTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#seekTo(org.apache.hadoop.hbase.Cell)">seekTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#seekTo(org.apache.hadoop.hbase.Cell,%20boolean)">seekTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#shipped()">shipped</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#toString()">toString</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#updateCurrBlockRef(org.apache.hadoop.hbase.io.hfile.HFileBlock)">updateCurrBlockRef</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -259,6 +286,41 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderI
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="decodingCtx">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>decodingCtx</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockDecodingContext.html" title="interface in org.apache.hadoop.hbase.io.encoding">HFileBlockDecodingContext</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#line.1619">decodingCtx</a></pre>
+</li>
+</ul>
+<a name="seeker">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>seeker</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.EncodedSeeker.html" title="interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoder.EncodedSeeker</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#line.1620">seeker</a></pre>
+</li>
+</ul>
+<a name="dataBlockEncoder">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>dataBlockEncoder</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.html" title="interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoder</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#line.1621">dataBlockEncoder</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -332,6 +394,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderI
 <dt><span class="strong">Parameters:</span></dt><dd><code>newBlock</code> - the block to make current</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CorruptHFileException.html" title="class in org.apache.hadoop.hbase.io.hfile">CorruptHFileException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getEncodedBuffer(org.apache.hadoop.hbase.io.hfile.HFileBlock)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEncodedBuffer</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#line.1672">getEncodedBuffer</a>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;newBlock)</pre>
 </li>
 </ul>
 <a name="processFirstDataBlock()">
@@ -459,6 +530,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderI
 <dt><span class="strong">Returns:</span></dt><dd>value as a string</dd></dl>
 </li>
 </ul>
+<a name="assertValidSeek()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertValidSeek</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.EncodedScanner.html#line.1733">assertValidSeek</a>()</pre>
+</li>
+</ul>
 <a name="getFirstKeyCellInBlock(org.apache.hadoop.hbase.io.hfile.HFileBlock)">
 <!--   -->
 </a>
@@ -557,13 +637,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderI
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.io.hfile.HFileReaderImpl.HFileScannerImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

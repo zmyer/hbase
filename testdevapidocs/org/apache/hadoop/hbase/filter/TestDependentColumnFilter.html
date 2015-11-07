@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,65 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#BAD_VALS">BAD_VALS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#FAMILIES">FAMILIES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#MATCH_VAL">MATCH_VAL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#QUALIFIER">QUALIFIER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#region">region</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#ROWS">ROWS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#STAMP_BASE">STAMP_BASE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#STAMPS">STAMPS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#testVals">testVals</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -131,6 +190,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#addData()">addData</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#makeTestVals()">makeTestVals</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -162,6 +229,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Test for HBASE-8794.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#verifyScan(org.apache.hadoop.hbase.client.Scan,%20long,%20long)">verifyScan</a></strong>(org.apache.hadoop.hbase.client.Scan&nbsp;s,
+                    long&nbsp;expectedRows,
+                    long&nbsp;expectedCells)</code>
+<div class="block">This shouldn't be confused with TestFilter#verifyScan
+ as expectedKeys is not the per row total, but the scan total</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -178,6 +254,113 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.57">LOG</a></pre>
+</li>
+</ul>
+<a name="ROWS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROWS</h4>
+<pre>private static final&nbsp;byte[][] <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.58">ROWS</a></pre>
+</li>
+</ul>
+<a name="FAMILIES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILIES</h4>
+<pre>private static final&nbsp;byte[][] <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.61">FAMILIES</a></pre>
+</li>
+</ul>
+<a name="STAMP_BASE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STAMP_BASE</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.64">STAMP_BASE</a></pre>
+</li>
+</ul>
+<a name="STAMPS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STAMPS</h4>
+<pre>private static final&nbsp;long[] <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.65">STAMPS</a></pre>
+</li>
+</ul>
+<a name="QUALIFIER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>QUALIFIER</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.68">QUALIFIER</a></pre>
+</li>
+</ul>
+<a name="BAD_VALS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BAD_VALS</h4>
+<pre>private static final&nbsp;byte[][] <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.69">BAD_VALS</a></pre>
+</li>
+</ul>
+<a name="MATCH_VAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MATCH_VAL</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.72">MATCH_VAL</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.73">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="testVals">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testVals</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.75">testVals</a></pre>
+</li>
+</ul>
+<a name="region">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>region</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.76">region</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -223,6 +406,44 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="addData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addData</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.100">addData</a>()
+              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="makeTestVals()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeTestVals</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.127">makeTestVals</a>()</pre>
+</li>
+</ul>
+<a name="verifyScan(org.apache.hadoop.hbase.client.Scan, long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyScan</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestDependentColumnFilter.html#line.147">verifyScan</a>(org.apache.hadoop.hbase.client.Scan&nbsp;s,
+              long&nbsp;expectedRows,
+              long&nbsp;expectedCells)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">This shouldn't be confused with TestFilter#verifyScan
+ as expectedKeys is not the per row total, but the scan total</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>s</code> - </dd><dd><code>expectedRows</code> - </dd><dd><code>expectedCells</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testScans()">
@@ -322,13 +543,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

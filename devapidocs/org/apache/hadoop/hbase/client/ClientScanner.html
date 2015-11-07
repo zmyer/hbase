@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/ClientIdGenerator.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/client/ClientSideRegionScanner.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -141,7 +141,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#caching">caching</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.client.ScannerCallableWithReplicas</code></td>
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/ScannerCallableWithReplicas.html" title="class in org.apache.hadoop.hbase.client">ScannerCallableWithReplicas</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#callable">callable</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -157,40 +157,56 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#conf">conf</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#connection">connection</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#currentRegion">currentRegion</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#lastNext">lastNext</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#lastResult">lastResult</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#MAX_BYTE_ARRAY">MAX_BYTE_ARRAY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#maxScannerResultSize">maxScannerResultSize</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html?is-external=true" title="class or interface in java.util">LinkedList</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#partialResults">partialResults</a></strong></code>
 <div class="block">A list of partial results that have been returned from the server.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#partialResultsRow">partialResultsRow</a></strong></code>
 <div class="block">The row for which we are accumulating partial Results (i.e.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#pool">pool</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#primaryOperationTimeout">primaryOperationTimeout</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#retries">retries</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
@@ -207,6 +223,10 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#scannerTimeout">scannerTimeout</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#tableName">tableName</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -262,12 +282,39 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#addEstimatedSize(long)">addEstimatedSize</a></strong>(long&nbsp;estimatedHeapSizeOfResult)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#addResultsToList(java.util.List,%20org.apache.hadoop.hbase.client.Result[],%20int,%20int)">addResultsToList</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&gt;&nbsp;outputList,
+                                <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>[]&nbsp;inputArray,
+                                int&nbsp;start,
+                                int&nbsp;end)</code>
+<div class="block">Helper method for adding results between the indices [start, end) to the outputList</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#addToPartialResults(org.apache.hadoop.hbase.client.Result)">addToPartialResults</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;result)</code>
+<div class="block">A convenience method for adding a Result to our list of partials.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#calcEstimatedSize(org.apache.hadoop.hbase.client.Result)">calcEstimatedSize</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;rs)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#call(org.apache.hadoop.hbase.client.ScannerCallableWithReplicas,%20org.apache.hadoop.hbase.client.RpcRetryingCaller,%20int)">call</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/ScannerCallableWithReplicas.html" title="class in org.apache.hadoop.hbase.client">ScannerCallableWithReplicas</a>&nbsp;callable,
+        <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="interface in org.apache.hadoop.hbase.client">RpcRetryingCaller</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>[]&gt;&nbsp;caller,
+        int&nbsp;scannerTimeout)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#checkScanStopRow(byte[])">checkScanStopRow</a></strong>(byte[]&nbsp;endKey)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#clearPartialResults()">clearPartialResults</a></strong>()</code>
+<div class="block">Convenience method for clearing the list of partials and resetting the partialResultsRow.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -282,80 +329,90 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#doneWithRegion(long,%20int,%20boolean)">doneWithRegion</a></strong>(long&nbsp;remainingResultSize,
+                            int&nbsp;remainingRows,
+                            boolean&nbsp;regionHasMoreResults)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getCacheCount()">getCacheCount</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getCacheSize()">getCacheSize</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getCaching()">getCaching</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getConf()">getConf</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getConnection()">getConnection</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getMaxResultSize()">getMaxResultSize</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getPool()">getPool</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getPrimaryOperationTimeout()">getPrimaryOperationTimeout</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getResultsToAddToCache(org.apache.hadoop.hbase.client.Result[],%20boolean)">getResultsToAddToCache</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>[]&nbsp;resultsFromServer,
                                             boolean&nbsp;heartbeatMessage)</code>
 <div class="block">This method ensures all of our book keeping regarding partial results is kept up to date.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getRetries()">getRetries</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getScan()">getScan</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.client.ScannerCallableWithReplicas</code></td>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/ScannerCallableWithReplicas.html" title="class in org.apache.hadoop.hbase.client">ScannerCallableWithReplicas</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getScannerCallable(byte[],%20int)">getScannerCallable</a></strong>(byte[]&nbsp;localStartKey,
                                     int&nbsp;nbRows)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getScannerTimeout()">getScannerTimeout</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getTable()">getTable</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getTimestamp()">getTimestamp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected abstract void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#initCache()">initCache</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#initializeScannerInConstruction()">initializeScannerInConstruction</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#initSyncCache()">initSyncCache</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#isAnyRPCcancelled()">isAnyRPCcancelled</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
@@ -373,12 +430,17 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#nextWithSyncCache()">nextWithSyncCache</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#possiblyNextScanner(int,%20boolean)">possiblyNextScanner</a></strong>(int&nbsp;nbRows,
+                                      boolean&nbsp;done)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#renewLease()">renewLease</a></strong>()</code>
 <div class="block">Allow the client to renew the scanner's lease on the server.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#writeScanMetrics()">writeScanMetrics</a></strong>()</code>
 <div class="block">Publish the scan metrics.</div>
@@ -420,6 +482,24 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.57">LOG</a></pre>
+</li>
+</ul>
+<a name="MAX_BYTE_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MAX_BYTE_ARRAY</h4>
+<pre>static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.60">MAX_BYTE_ARRAY</a></pre>
+</li>
+</ul>
 <a name="scan">
 <!--   -->
 </a>
@@ -453,7 +533,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <ul class="blockList">
 <li class="blockList">
 <h4>callable</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.client.ScannerCallableWithReplicas <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.66">callable</a></pre>
+<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/ScannerCallableWithReplicas.html" title="class in org.apache.hadoop.hbase.client">ScannerCallableWithReplicas</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.66">callable</a></pre>
 </li>
 </ul>
 <a name="cache">
@@ -525,6 +605,24 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <pre>protected final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.84">maxScannerResultSize</a></pre>
 </li>
 </ul>
+<a name="connection">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>connection</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.85">connection</a></pre>
+</li>
+</ul>
+<a name="tableName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableName</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.86">tableName</a></pre>
+</li>
+</ul>
 <a name="scannerTimeout">
 <!--   -->
 </a>
@@ -577,6 +675,15 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <li class="blockList">
 <h4>primaryOperationTimeout</h4>
 <pre>protected final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.97">primaryOperationTimeout</a></pre>
+</li>
+</ul>
+<a name="retries">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>retries</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.98">retries</a></pre>
 </li>
 </ul>
 <a name="pool">
@@ -755,6 +862,19 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.211">checkScanStopRow</a>(byte[]&nbsp;endKey)</pre>
 </li>
 </ul>
+<a name="possiblyNextScanner(int, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>possiblyNextScanner</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.226">possiblyNextScanner</a>(int&nbsp;nbRows,
+                          boolean&nbsp;done)
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="nextScanner(int, boolean)">
 <!--   -->
 </a>
@@ -768,6 +888,31 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="isAnyRPCcancelled()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAnyRPCcancelled</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.299">isAnyRPCcancelled</a>()</pre>
+</li>
+</ul>
+<a name="call(org.apache.hadoop.hbase.client.ScannerCallableWithReplicas, org.apache.hadoop.hbase.client.RpcRetryingCaller, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>call</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.303">call</a>(<a href="../../../../../org/apache/hadoop/hbase/client/ScannerCallableWithReplicas.html" title="class in org.apache.hadoop.hbase.client">ScannerCallableWithReplicas</a>&nbsp;callable,
+            <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="interface in org.apache.hadoop.hbase.client">RpcRetryingCaller</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>[]&gt;&nbsp;caller,
+            int&nbsp;scannerTimeout)
+        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code></dd></dl>
+</li>
+</ul>
 <a name="getScannerCallable(byte[], int)">
 <!--   -->
 </a>
@@ -775,8 +920,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/AbstractClientSca
 <li class="blockList">
 <h4>getScannerCallable</h4>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-protected&nbsp;org.apache.hadoop.hbase.client.ScannerCallableWithReplicas&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.315">getScannerCallable</a>(byte[]&nbsp;localStartKey,
-                                                                                                      int&nbsp;nbRows)</pre>
+protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/ScannerCallableWithReplicas.html" title="class in org.apache.hadoop.hbase.client">ScannerCallableWithReplicas</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.315">getScannerCallable</a>(byte[]&nbsp;localStartKey,
+                                                                       int&nbsp;nbRows)</pre>
 </li>
 </ul>
 <a name="writeScanMetrics()">
@@ -840,6 +985,20 @@ protected&nbsp;org.apache.hadoop.hbase.client.ScannerCallableWithReplicas&nbsp;<
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="doneWithRegion(long, int, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doneWithRegion</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.539">doneWithRegion</a>(long&nbsp;remainingResultSize,
+                     int&nbsp;remainingRows,
+                     boolean&nbsp;regionHasMoreResults)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>remainingResultSize</code> - </dd><dd><code>remainingRows</code> - </dd><dd><code>regionHasMoreResults</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>true when the current region has been exhausted. When the current region has been
+         exhausted, the region must be changed before scanning can continue</dd></dl>
+</li>
+</ul>
 <a name="calcEstimatedSize(org.apache.hadoop.hbase.client.Result)">
 <!--   -->
 </a>
@@ -887,6 +1046,45 @@ protected&nbsp;org.apache.hadoop.hbase.client.ScannerCallableWithReplicas&nbsp;<
 <dt><span class="strong">Returns:</span></dt><dd>the list of results that should be added to the cache.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="addToPartialResults(org.apache.hadoop.hbase.client.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addToPartialResults</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.696">addToPartialResults</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;result)
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">A convenience method for adding a Result to our list of partials. This method ensure that only
+ Results that belong to the same row as the other partials can be added to the list.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>result</code> - The result that we want to add to our list of partial Results</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="clearPartialResults()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clearPartialResults</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.710">clearPartialResults</a>()</pre>
+<div class="block">Convenience method for clearing the list of partials and resetting the partialResultsRow.</div>
+</li>
+</ul>
+<a name="addResultsToList(java.util.List, org.apache.hadoop.hbase.client.Result[], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addResultsToList</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientScanner.html#line.722">addResultsToList</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&gt;&nbsp;outputList,
+                    <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>[]&nbsp;inputArray,
+                    int&nbsp;start,
+                    int&nbsp;end)</pre>
+<div class="block">Helper method for adding results between the indices [start, end) to the outputList</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>outputList</code> - the list that results will be added to</dd><dd><code>inputArray</code> - the array that results are taken from</dd><dd><code>start</code> - beginning index (inclusive)</dd><dd><code>end</code> - ending index (exclusive)</dd></dl>
 </li>
 </ul>
 <a name="close()">
@@ -950,7 +1148,7 @@ protected&nbsp;org.apache.hadoop.hbase.client.ScannerCallableWithReplicas&nbsp;<
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/ClientIdGenerator.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/client/ClientSideRegionScanner.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

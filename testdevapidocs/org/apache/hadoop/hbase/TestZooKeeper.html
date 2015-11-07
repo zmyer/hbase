@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/TestTimeout.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/TimedOutTestsListener.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.MockLoadBalancer.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/TestZooKeeper.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,48 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.MockLoadBalancer.html" title="class in org.apache.hadoop.hbase">TestZooKeeper.MockLoadBalancer</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -137,81 +179,118 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#after()">after</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#countListeners(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20java.lang.Class...)">countListeners</a></strong>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;watcher,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;...&nbsp;exclude)</code>
+<div class="block">Count listeners in zkw excluding provided classes</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#countPermanentListeners(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher)">countPermanentListeners</a></strong>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;watcher)</code>
+<div class="block">Count listeners in zkw excluding listeners, that belongs to workers or other
+ temporary processes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#getZooKeeperWatcher(org.apache.hadoop.hbase.client.Connection)">getZooKeeperWatcher</a></strong>(org.apache.hadoop.hbase.client.Connection&nbsp;c)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testClientSessionExpired()">testClientSessionExpired</a></strong>()</code>
 <div class="block">See HBASE-1232 and http://hbase.apache.org/book.html#trouble.zookeeper.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testClusterKey()">testClusterKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testClusterKeyWithMultiplePorts()">testClusterKeyWithMultiplePorts</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testCreateSilentIsReallySilent()">testCreateSilentIsReallySilent</a></strong>()</code>
 <div class="block">A test for HBASE-3238</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testCreateWithParents()">testCreateWithParents</a></strong>()</code>
 <div class="block">Create a znode with data</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testGetChildDataAndWatchForNewChildrenShouldNotThrowNPE()">testGetChildDataAndWatchForNewChildrenShouldNotThrowNPE</a></strong>()</code>
 <div class="block">Test should not fail with NPE when getChildDataAndWatchForNewChildren
  invoked with wrongNode</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testKey(java.lang.String,%20int,%20java.lang.String)">testKey</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ensemble,
+              int&nbsp;port,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testKey(java.lang.String,%20int,%20java.lang.String,%20java.lang.Boolean)">testKey</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ensemble,
+              int&nbsp;port,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;multiplePortSupport)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testLogSplittingAfterMasterRecoveryDueToZKExpiry()">testLogSplittingAfterMasterRecoveryDueToZKExpiry</a></strong>()</code>
 <div class="block">Tests whether the logs are split when master recovers from a expired zookeeper session and an
  RS goes down.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testMasterSessionExpired()">testMasterSessionExpired</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testMasterZKSessionRecoveryFailure()">testMasterZKSessionRecoveryFailure</a></strong>()</code>
 <div class="block">Master recovery when the znode already exists.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testMultipleZK()">testMultipleZK</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testRegionAssignmentAfterMasterRecoveryDueToZKExpiry()">testRegionAssignmentAfterMasterRecoveryDueToZKExpiry</a></strong>()</code>
 <div class="block">Tests that the master does not call retainAssignment after recovery from expired zookeeper
  session.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testRegionServerSessionExpired()">testRegionServerSessionExpired</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testSanity(java.lang.String)">testSanity</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName)</code>
+<div class="block">Make sure we can use the cluster</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -236,6 +315,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/TestZooKeeper.html#line.78">LOG</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../src-html/org/apache/hadoop/hbase/TestZooKeeper.html#line.81">TEST_UTIL</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -307,6 +412,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="getZooKeeperWatcher(org.apache.hadoop.hbase.client.Connection)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getZooKeeperWatcher</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestZooKeeper.html#line.129">getZooKeeperWatcher</a>(org.apache.hadoop.hbase.client.Connection&nbsp;c)
+                                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/NoSuchMethodException.html?is-external=true" title="class or interface in java.lang">NoSuchMethodException</a>,
+                                                                               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a>,
+                                                                               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/NoSuchMethodException.html?is-external=true" title="class or interface in java.lang">NoSuchMethodException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testClientSessionExpired()">
 <!--   -->
 </a>
@@ -357,6 +478,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Master recovery when the znode already exists. Internally, this
   test differs from <a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.html#testMasterSessionExpired()"><code>testMasterSessionExpired()</code></a> because here
   the master znode will exist in ZK.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testSanity(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testSanity</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestZooKeeper.html#line.249">testSanity</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Make sure we can use the cluster</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -430,6 +564,35 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="testKey(java.lang.String, int, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testKey</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestZooKeeper.html#line.375">testKey</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ensemble,
+           int&nbsp;port,
+           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)
+              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testKey(java.lang.String, int, java.lang.String, java.lang.Boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testKey</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestZooKeeper.html#line.380">testKey</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ensemble,
+           int&nbsp;port,
+           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode,
+           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;multiplePortSupport)
+              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testCreateSilentIsReallySilent()">
 <!--   -->
 </a>
@@ -477,6 +640,28 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="countPermanentListeners(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countPermanentListeners</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestZooKeeper.html#line.562">countPermanentListeners</a>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;watcher)</pre>
+<div class="block">Count listeners in zkw excluding listeners, that belongs to workers or other
+ temporary processes.</div>
+</li>
+</ul>
+<a name="countListeners(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher, java.lang.Class...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countListeners</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestZooKeeper.html#line.569">countListeners</a>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;watcher,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;...&nbsp;exclude)</pre>
+<div class="block">Count listeners in zkw excluding provided classes</div>
+</li>
+</ul>
 <a name="testLogSplittingAfterMasterRecoveryDueToZKExpiry()">
 <!--   -->
 </a>
@@ -518,7 +703,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/TestTimeout.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/TimedOutTestsListener.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TestZooKeeper.MockLoadBalancer.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/TestZooKeeper.html" target="_top">Frames</a></li>
@@ -542,14 +727,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

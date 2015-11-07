@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -115,6 +115,25 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html#value">value</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -147,10 +166,14 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html#compareTo(byte[])">compareTo</a></strong>(byte[]&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>abstract int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html#compareTo(byte[],%20int,%20int)">compareTo</a></strong>(byte[]&nbsp;value,
                   int&nbsp;offset,
@@ -159,13 +182,17 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
  copying byte[] unnecessarily.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html#compareTo(java.nio.ByteBuffer,%20int,%20int)">compareTo</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;value,
                   int&nbsp;offset,
                   int&nbsp;length)</code>
 <div class="block">Special compareTo method for subclasses, to avoid copying bytes unnecessarily.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.ByteArrayComparable</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html#convert()">convert</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
@@ -195,6 +222,23 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="value">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>value</h4>
+<pre>byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/ByteArrayComparable.html#line.41">value</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -239,6 +283,15 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <dl><dt><span class="strong">Returns:</span></dt><dd>The comparator serialized using pb</dd></dl>
 </li>
 </ul>
+<a name="convert()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>convert</h4>
+<pre>org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.ByteArrayComparable&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/ByteArrayComparable.html#line.60">convert</a>()</pre>
+</li>
+</ul>
 <a name="parseFrom(byte[])">
 <!--   -->
 </a>
@@ -251,6 +304,18 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <dt><span class="strong">Returns:</span></dt><dd>An instance of <a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter"><code>ByteArrayComparable</code></a> made from <code>bytes</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html" title="class in org.apache.hadoop.hbase.exceptions">DeserializationException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html#toByteArray()"><code>toByteArray()</code></a></dd></dl>
+</li>
+</ul>
+<a name="areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>areSerializedFieldsEqual</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/ByteArrayComparable.html#line.84">areSerializedFieldsEqual</a>(<a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>other</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if and only if the fields of the comparator that are serialized
+ are equal to the corresponding fields in other.  Used for testing.</dd></dl>
 </li>
 </ul>
 <a name="compareTo(byte[])">
@@ -349,13 +414,13 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

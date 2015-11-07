@@ -79,7 +79,7 @@
 <a class="jxr_linenumber" name="69" href="#69">69</a>    }
 <a class="jxr_linenumber" name="70" href="#70">70</a>  
 <a class="jxr_linenumber" name="71" href="#71">71</a>    @Override
-<a class="jxr_linenumber" name="72" href="#72">72</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">TruncateTableState</a> state)
+<a class="jxr_linenumber" name="72" href="#72">72</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, TruncateTableState state)
 <a class="jxr_linenumber" name="73" href="#73">73</a>        <strong class="jxr_keyword">throws</strong> InterruptedException {
 <a class="jxr_linenumber" name="74" href="#74">74</a>      <strong class="jxr_keyword">if</strong> (LOG.isTraceEnabled()) {
 <a class="jxr_linenumber" name="75" href="#75">75</a>        LOG.trace(<strong class="jxr_keyword">this</strong> + <span class="jxr_string">" execute state="</span> + state);
@@ -148,7 +148,7 @@
 <a class="jxr_linenumber" name="138" href="#138">138</a>   }
 <a class="jxr_linenumber" name="139" href="#139">139</a> 
 <a class="jxr_linenumber" name="140" href="#140">140</a>   @Override
-<a class="jxr_linenumber" name="141" href="#141">141</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">TruncateTableState</a> state) {
+<a class="jxr_linenumber" name="141" href="#141">141</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> TruncateTableState state) {
 <a class="jxr_linenumber" name="142" href="#142">142</a>     <strong class="jxr_keyword">if</strong> (state == TruncateTableState.TRUNCATE_TABLE_PRE_OPERATION) {
 <a class="jxr_linenumber" name="143" href="#143">143</a>       <em class="jxr_comment">// nothing to rollback, pre-truncate is just table-state checks.</em>
 <a class="jxr_linenumber" name="144" href="#144">144</a>       <em class="jxr_comment">// We can fail if the table does not exist or is not disabled.</em>
@@ -160,17 +160,17 @@
 <a class="jxr_linenumber" name="150" href="#150">150</a>   }
 <a class="jxr_linenumber" name="151" href="#151">151</a> 
 <a class="jxr_linenumber" name="152" href="#152">152</a>   @Override
-<a class="jxr_linenumber" name="153" href="#153">153</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">TruncateTableState</a> getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
+<a class="jxr_linenumber" name="153" href="#153">153</a>   <strong class="jxr_keyword">protected</strong> TruncateTableState getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
 <a class="jxr_linenumber" name="154" href="#154">154</a>     <strong class="jxr_keyword">return</strong> TruncateTableState.valueOf(stateId);
 <a class="jxr_linenumber" name="155" href="#155">155</a>   }
 <a class="jxr_linenumber" name="156" href="#156">156</a> 
 <a class="jxr_linenumber" name="157" href="#157">157</a>   @Override
-<a class="jxr_linenumber" name="158" href="#158">158</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">TruncateTableState</a> state) {
+<a class="jxr_linenumber" name="158" href="#158">158</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> TruncateTableState state) {
 <a class="jxr_linenumber" name="159" href="#159">159</a>     <strong class="jxr_keyword">return</strong> state.getNumber();
 <a class="jxr_linenumber" name="160" href="#160">160</a>   }
 <a class="jxr_linenumber" name="161" href="#161">161</a> 
 <a class="jxr_linenumber" name="162" href="#162">162</a>   @Override
-<a class="jxr_linenumber" name="163" href="#163">163</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">TruncateTableState</a> getInitialState() {
+<a class="jxr_linenumber" name="163" href="#163">163</a>   <strong class="jxr_keyword">protected</strong> TruncateTableState getInitialState() {
 <a class="jxr_linenumber" name="164" href="#164">164</a>     <strong class="jxr_keyword">return</strong> TruncateTableState.TRUNCATE_TABLE_PRE_OPERATION;
 <a class="jxr_linenumber" name="165" href="#165">165</a>   }
 <a class="jxr_linenumber" name="166" href="#166">166</a> 

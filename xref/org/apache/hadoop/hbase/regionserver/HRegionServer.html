@@ -923,7 +923,7 @@
 <a class="jxr_linenumber" name="913" href="#913">913</a>       <em class="jxr_comment">// Try and register with the Master; tell it we are here.  Break if</em>
 <a class="jxr_linenumber" name="914" href="#914">914</a>       <em class="jxr_comment">// server is stopped or the clusterup flag is down or hdfs went wacky.</em>
 <a class="jxr_linenumber" name="915" href="#915">915</a>       <strong class="jxr_keyword">while</strong> (keepLooping()) {
-<a class="jxr_linenumber" name="916" href="#916">916</a>         <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">RegionServerStartupResponse</a> w = reportForDuty();
+<a class="jxr_linenumber" name="916" href="#916">916</a>         RegionServerStartupResponse w = reportForDuty();
 <a class="jxr_linenumber" name="917" href="#917">917</a>         <strong class="jxr_keyword">if</strong> (w == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="918" href="#918">918</a>           LOG.warn(<span class="jxr_string">"reportForDuty failed; sleeping and then retrying."</span>);
 <a class="jxr_linenumber" name="919" href="#919">919</a>           <strong class="jxr_keyword">this</strong>.sleeper.sleep();
@@ -1347,7 +1347,7 @@
 <a class="jxr_linenumber" name="1337" href="#1337">1337</a> <em class="jxr_comment">   *</em>
 <a class="jxr_linenumber" name="1338" href="#1338">1338</a> <em class="jxr_comment">   * @param c Extra configuration.</em>
 <a class="jxr_linenumber" name="1339" href="#1339">1339</a> <em class="jxr_comment">   */</em>
-<a class="jxr_linenumber" name="1340" href="#1340">1340</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> handleReportForDutyResponse(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">RegionServerStartupResponse</a> c)
+<a class="jxr_linenumber" name="1340" href="#1340">1340</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> handleReportForDutyResponse(<strong class="jxr_keyword">final</strong> RegionServerStartupResponse c)
 <a class="jxr_linenumber" name="1341" href="#1341">1341</a>   <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1342" href="#1342">1342</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="1343" href="#1343">1343</a>       <strong class="jxr_keyword">for</strong> (NameStringPair e : c.getMapEntriesList()) {
@@ -1959,20 +1959,20 @@
 <a class="jxr_linenumber" name="1949" href="#1949">1949</a>   }
 <a class="jxr_linenumber" name="1950" href="#1950">1950</a> 
 <a class="jxr_linenumber" name="1951" href="#1951">1951</a>   @Override
-<a class="jxr_linenumber" name="1952" href="#1952">1952</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> reportRegionStateTransition(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">TransitionCode</a> code, HRegionInfo... hris) {
+<a class="jxr_linenumber" name="1952" href="#1952">1952</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> reportRegionStateTransition(TransitionCode code, HRegionInfo... hris) {
 <a class="jxr_linenumber" name="1953" href="#1953">1953</a>     <strong class="jxr_keyword">return</strong> reportRegionStateTransition(code, HConstants.NO_SEQNUM, hris);
 <a class="jxr_linenumber" name="1954" href="#1954">1954</a>   }
 <a class="jxr_linenumber" name="1955" href="#1955">1955</a> 
 <a class="jxr_linenumber" name="1956" href="#1956">1956</a>   @Override
 <a class="jxr_linenumber" name="1957" href="#1957">1957</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> reportRegionStateTransition(
-<a class="jxr_linenumber" name="1958" href="#1958">1958</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">TransitionCode</a> code, <strong class="jxr_keyword">long</strong> openSeqNum, HRegionInfo... hris) {
+<a class="jxr_linenumber" name="1958" href="#1958">1958</a>       TransitionCode code, <strong class="jxr_keyword">long</strong> openSeqNum, HRegionInfo... hris) {
 <a class="jxr_linenumber" name="1959" href="#1959">1959</a>     <strong class="jxr_keyword">return</strong> reportRegionStateTransition(
 <a class="jxr_linenumber" name="1960" href="#1960">1960</a>       <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html">RegionStateTransitionContext</a>(code, HConstants.NO_SEQNUM, -1, hris));
 <a class="jxr_linenumber" name="1961" href="#1961">1961</a>   }
 <a class="jxr_linenumber" name="1962" href="#1962">1962</a> 
 <a class="jxr_linenumber" name="1963" href="#1963">1963</a>   @Override
 <a class="jxr_linenumber" name="1964" href="#1964">1964</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> reportRegionStateTransition(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html">RegionStateTransitionContext</a> context) {
-<a class="jxr_linenumber" name="1965" href="#1965">1965</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">TransitionCode</a> code = context.getCode();
+<a class="jxr_linenumber" name="1965" href="#1965">1965</a>     TransitionCode code = context.getCode();
 <a class="jxr_linenumber" name="1966" href="#1966">1966</a>     <strong class="jxr_keyword">long</strong> openSeqNum = context.getOpenSeqNum();
 <a class="jxr_linenumber" name="1967" href="#1967">1967</a>     <strong class="jxr_keyword">long</strong> masterSystemTime = context.getMasterSystemTime();
 <a class="jxr_linenumber" name="1968" href="#1968">1968</a>     <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>[] hris = context.getHris();
@@ -2014,7 +2014,7 @@
 <a class="jxr_linenumber" name="2004" href="#2004">2004</a>     <strong class="jxr_keyword">for</strong> (HRegionInfo hri: hris) {
 <a class="jxr_linenumber" name="2005" href="#2005">2005</a>       transition.addRegionInfo(HRegionInfo.convert(hri));
 <a class="jxr_linenumber" name="2006" href="#2006">2006</a>     }
-<a class="jxr_linenumber" name="2007" href="#2007">2007</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">ReportRegionStateTransitionRequest</a> request = builder.build();
+<a class="jxr_linenumber" name="2007" href="#2007">2007</a>     ReportRegionStateTransitionRequest request = builder.build();
 <a class="jxr_linenumber" name="2008" href="#2008">2008</a>     <strong class="jxr_keyword">while</strong> (keepLooping()) {
 <a class="jxr_linenumber" name="2009" href="#2009">2009</a>       RegionServerStatusService.BlockingInterface rss = rssStub;
 <a class="jxr_linenumber" name="2010" href="#2010">2010</a>       <strong class="jxr_keyword">try</strong> {
@@ -2022,7 +2022,7 @@
 <a class="jxr_linenumber" name="2012" href="#2012">2012</a>           createRegionServerStatusStub();
 <a class="jxr_linenumber" name="2013" href="#2013">2013</a>           <strong class="jxr_keyword">continue</strong>;
 <a class="jxr_linenumber" name="2014" href="#2014">2014</a>         }
-<a class="jxr_linenumber" name="2015" href="#2015">2015</a>         <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">ReportRegionStateTransitionResponse</a> response =
+<a class="jxr_linenumber" name="2015" href="#2015">2015</a>         ReportRegionStateTransitionResponse response =
 <a class="jxr_linenumber" name="2016" href="#2016">2016</a>           rss.reportRegionStateTransition(<strong class="jxr_keyword">null</strong>, request);
 <a class="jxr_linenumber" name="2017" href="#2017">2017</a>         <strong class="jxr_keyword">if</strong> (response.hasErrorMessage()) {
 <a class="jxr_linenumber" name="2018" href="#2018">2018</a>           LOG.info(<span class="jxr_string">"Failed to transition "</span> + hris[0]
@@ -2305,10 +2305,10 @@
 <a class="jxr_linenumber" name="2295" href="#2295">2295</a> <em class="jxr_comment">   * null if we failed to register.</em>
 <a class="jxr_linenumber" name="2296" href="#2296">2296</a> <em class="jxr_comment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="2297" href="#2297">2297</a> <em class="jxr_comment">   */</em>
-<a class="jxr_linenumber" name="2298" href="#2298">2298</a>   <strong class="jxr_keyword">private</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">RegionServerStartupResponse</a> reportForDuty() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="2298" href="#2298">2298</a>   <strong class="jxr_keyword">private</strong> RegionServerStartupResponse reportForDuty() <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="2299" href="#2299">2299</a>     <a href="../../../../../org/apache/hadoop/hbase/ServerName.html">ServerName</a> masterServerName = createRegionServerStatusStub();
 <a class="jxr_linenumber" name="2300" href="#2300">2300</a>     <strong class="jxr_keyword">if</strong> (masterServerName == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="2301" href="#2301">2301</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">RegionServerStartupResponse</a> result = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="2301" href="#2301">2301</a>     RegionServerStartupResponse result = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="2302" href="#2302">2302</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="2303" href="#2303">2303</a>       rpcServices.requestCount.set(0);
 <a class="jxr_linenumber" name="2304" href="#2304">2304</a>       LOG.info(<span class="jxr_string">"reportForDuty to master="</span> + masterServerName + <span class="jxr_string">" with port="</span>
@@ -2340,9 +2340,9 @@
 <a class="jxr_linenumber" name="2330" href="#2330">2330</a>   }
 <a class="jxr_linenumber" name="2331" href="#2331">2331</a> 
 <a class="jxr_linenumber" name="2332" href="#2332">2332</a>   @Override
-<a class="jxr_linenumber" name="2333" href="#2333">2333</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">RegionStoreSequenceIds</a> getLastSequenceId(byte[] encodedRegionName) {
+<a class="jxr_linenumber" name="2333" href="#2333">2333</a>   <strong class="jxr_keyword">public</strong> RegionStoreSequenceIds getLastSequenceId(byte[] encodedRegionName) {
 <a class="jxr_linenumber" name="2334" href="#2334">2334</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="2335" href="#2335">2335</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">GetLastFlushedSequenceIdRequest</a> req =
+<a class="jxr_linenumber" name="2335" href="#2335">2335</a>       GetLastFlushedSequenceIdRequest req =
 <a class="jxr_linenumber" name="2336" href="#2336">2336</a>           RequestConverter.buildGetLastFlushedSequenceIdRequest(encodedRegionName);
 <a class="jxr_linenumber" name="2337" href="#2337">2337</a>       RegionServerStatusService.BlockingInterface rss = rssStub;
 <a class="jxr_linenumber" name="2338" href="#2338">2338</a>       <strong class="jxr_keyword">if</strong> (rss == <strong class="jxr_keyword">null</strong>) { <em class="jxr_comment">// Try to connect one more time</em>
@@ -2355,7 +2355,7 @@
 <a class="jxr_linenumber" name="2345" href="#2345">2345</a>               .build();
 <a class="jxr_linenumber" name="2346" href="#2346">2346</a>         }
 <a class="jxr_linenumber" name="2347" href="#2347">2347</a>       }
-<a class="jxr_linenumber" name="2348" href="#2348">2348</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">GetLastFlushedSequenceIdResponse</a> resp = rss.getLastFlushedSequenceId(<strong class="jxr_keyword">null</strong>, req);
+<a class="jxr_linenumber" name="2348" href="#2348">2348</a>       GetLastFlushedSequenceIdResponse resp = rss.getLastFlushedSequenceId(<strong class="jxr_keyword">null</strong>, req);
 <a class="jxr_linenumber" name="2349" href="#2349">2349</a>       <strong class="jxr_keyword">return</strong> RegionStoreSequenceIds.newBuilder()
 <a class="jxr_linenumber" name="2350" href="#2350">2350</a>           .setLastFlushedSequenceId(resp.getLastFlushedSequenceId())
 <a class="jxr_linenumber" name="2351" href="#2351">2351</a>           .addAllStoreSequenceId(resp.getStoreLastFlushedSequenceIdList()).build();
@@ -3254,12 +3254,12 @@
 <a class="jxr_linenumber" name="3244" href="#3244">3244</a>     <strong class="jxr_keyword">return</strong> result;
 <a class="jxr_linenumber" name="3245" href="#3245">3245</a>   }
 <a class="jxr_linenumber" name="3246" href="#3246">3246</a> 
-<a class="jxr_linenumber" name="3247" href="#3247">3247</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> execRegionServerService(
+<a class="jxr_linenumber" name="3247" href="#3247">3247</a>   <strong class="jxr_keyword">public</strong> CoprocessorServiceResponse execRegionServerService(
 <a class="jxr_linenumber" name="3248" href="#3248">3248</a>       @SuppressWarnings(<span class="jxr_string">"UnusedParameters"</span>) <strong class="jxr_keyword">final</strong> RpcController controller,
-<a class="jxr_linenumber" name="3249" href="#3249">3249</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceRequest</a> serviceRequest) <strong class="jxr_keyword">throws</strong> ServiceException {
+<a class="jxr_linenumber" name="3249" href="#3249">3249</a>       <strong class="jxr_keyword">final</strong> CoprocessorServiceRequest serviceRequest) <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="3250" href="#3250">3250</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="3251" href="#3251">3251</a>       <a href="../../../../../org/apache/hadoop/hbase/ipc/ServerRpcController.html">ServerRpcController</a> serviceController = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/ServerRpcController.html">ServerRpcController</a>();
-<a class="jxr_linenumber" name="3252" href="#3252">3252</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceCall</a> call = serviceRequest.getCall();
+<a class="jxr_linenumber" name="3252" href="#3252">3252</a>       CoprocessorServiceCall call = serviceRequest.getCall();
 <a class="jxr_linenumber" name="3253" href="#3253">3253</a>       String serviceName = call.getServiceName();
 <a class="jxr_linenumber" name="3254" href="#3254">3254</a>       String methodName = call.getMethodName();
 <a class="jxr_linenumber" name="3255" href="#3255">3255</a>       <strong class="jxr_keyword">if</strong> (!coprocessorServiceHandlers.containsKey(serviceName)) {

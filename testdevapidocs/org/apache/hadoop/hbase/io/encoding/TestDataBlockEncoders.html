@@ -118,8 +118,40 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#ENCODED_DATA_OFFSET">ENCODED_DATA_OFFSET</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.util.test.RedundantKVGenerator</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#generator">generator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#includesMemstoreTS">includesMemstoreTS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#includesTags">includesTags</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#NUM_RANDOM_SEEKS">NUM_RANDOM_SEEKS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#NUMBER_OF_KV">NUMBER_OF_KV</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#randomizer">randomizer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.junit.rules.TestRule</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#timeout">timeout</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#useOffheapData">useOffheapData</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -156,8 +188,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#checkSeekingConsistency(java.util.List,%20boolean,%20org.apache.hadoop.hbase.Cell)">checkSeekingConsistency</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.io.encoding.DataBlockEncoder.EncodedSeeker&gt;&nbsp;encodedSeekers,
+                                              boolean&nbsp;seekBefore,
+                                              org.apache.hadoop.hbase.Cell&nbsp;keyValue)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#encodeKeyValues(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding,%20java.util.List,%20org.apache.hadoop.hbase.io.encoding.HFileBlockEncodingContext,%20boolean)">encodeKeyValues</a></strong>(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding&nbsp;encoding,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;kvs,
+                              org.apache.hadoop.hbase.io.encoding.HFileBlockEncodingContext&nbsp;encodingContext,
+                              boolean&nbsp;useOffheapData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.io.encoding.HFileBlockEncodingContext</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#getEncodingContext(org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">getEncodingContext</a></strong>(org.apache.hadoop.hbase.io.compress.Compression.Algorithm&nbsp;algo,
+                                    org.apache.hadoop.hbase.io.encoding.DataBlockEncoding&nbsp;encoding)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#parameters()">parameters</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#testAlgorithm(byte[],%20java.nio.ByteBuffer,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoder)">testAlgorithm</a></strong>(byte[]&nbsp;encodedData,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;unencodedDataBuf,
+                          org.apache.hadoop.hbase.io.encoding.DataBlockEncoder&nbsp;encoder)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -166,35 +222,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#testEncodersOnDataset(java.util.List,%20boolean,%20boolean)">testEncodersOnDataset</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;kvList,
+                                          boolean&nbsp;includesMemstoreTS,
+                                          boolean&nbsp;includesTags)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#testExecutionOnSample()">testExecutionOnSample</a></strong>()</code>
 <div class="block">Test whether compression -> decompression gives the consistent results on
  pseudorandom sample.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#testFirstKeyInBlockOnSample()">testFirstKeyInBlockOnSample</a></strong>()</code>
 <div class="block">Test whether the decompression of first key is implemented correctly.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#testNegativeTimestamps()">testNegativeTimestamps</a></strong>()</code>
 <div class="block">Test KeyValues with negative timestamp.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#testNextOnSample()">testNextOnSample</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#testSeekingOnSample()">testSeekingOnSample</a></strong>()</code>
 <div class="block">Test seeking while file is encoded.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#testZeroByte()">testZeroByte</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -223,10 +285,82 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="timeout">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>timeout</h4>
 <pre>public final&nbsp;org.junit.rules.TestRule <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.70">timeout</a></pre>
+</li>
+</ul>
+<a name="NUMBER_OF_KV">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NUMBER_OF_KV</h4>
+<pre>private static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.73">NUMBER_OF_KV</a></pre>
+</li>
+</ul>
+<a name="NUM_RANDOM_SEEKS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NUM_RANDOM_SEEKS</h4>
+<pre>private static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.74">NUM_RANDOM_SEEKS</a></pre>
+</li>
+</ul>
+<a name="ENCODED_DATA_OFFSET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENCODED_DATA_OFFSET</h4>
+<pre>private static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.76">ENCODED_DATA_OFFSET</a></pre>
+</li>
+</ul>
+<a name="generator">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>generator</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.util.test.RedundantKVGenerator <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.79">generator</a></pre>
+</li>
+</ul>
+<a name="randomizer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>randomizer</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.80">randomizer</a></pre>
+</li>
+</ul>
+<a name="includesMemstoreTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>includesMemstoreTS</h4>
+<pre>private final&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.82">includesMemstoreTS</a></pre>
+</li>
+</ul>
+<a name="includesTags">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>includesTags</h4>
+<pre>private final&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.83">includesTags</a></pre>
+</li>
+</ul>
+<a name="useOffheapData">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>useOffheapData</h4>
+<pre>private final&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.84">useOffheapData</a></pre>
 </li>
 </ul>
 </li>
@@ -263,6 +397,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>parameters</h4>
 <pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.87">parameters</a>()</pre>
+</li>
+</ul>
+<a name="getEncodingContext(org.apache.hadoop.hbase.io.compress.Compression.Algorithm, org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEncodingContext</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.io.encoding.HFileBlockEncodingContext&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.98">getEncodingContext</a>(org.apache.hadoop.hbase.io.compress.Compression.Algorithm&nbsp;algo,
+                                                                               org.apache.hadoop.hbase.io.encoding.DataBlockEncoding&nbsp;encoding)</pre>
 </li>
 </ul>
 <a name="testEmptyKeyValues()">
@@ -318,6 +462,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="encodeKeyValues(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding, java.util.List, org.apache.hadoop.hbase.io.encoding.HFileBlockEncodingContext, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encodeKeyValues</h4>
+<pre>static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.243">encodeKeyValues</a>(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding&nbsp;encoding,
+                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;kvs,
+                         org.apache.hadoop.hbase.io.encoding.HFileBlockEncodingContext&nbsp;encodingContext,
+                         boolean&nbsp;useOffheapData)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testNextOnSample()">
 <!--   -->
 </a>
@@ -343,14 +502,53 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="checkSeekingConsistency(java.util.List, boolean, org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkSeekingConsistency</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.335">checkSeekingConsistency</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.io.encoding.DataBlockEncoder.EncodedSeeker&gt;&nbsp;encodedSeekers,
+                           boolean&nbsp;seekBefore,
+                           org.apache.hadoop.hbase.Cell&nbsp;keyValue)</pre>
+</li>
+</ul>
+<a name="testEncodersOnDataset(java.util.List, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testEncodersOnDataset</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.374">testEncodersOnDataset</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;kvList,
+                         boolean&nbsp;includesMemstoreTS,
+                         boolean&nbsp;includesTags)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testZeroByte()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testZeroByte</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.405">testZeroByte</a>()
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testAlgorithm(byte[], java.nio.ByteBuffer, org.apache.hadoop.hbase.io.encoding.DataBlockEncoder)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>testAlgorithm</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/TestDataBlockEncoders.html#line.425">testAlgorithm</a>(byte[]&nbsp;encodedData,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;unencodedDataBuf,
+                 org.apache.hadoop.hbase.io.encoding.DataBlockEncoder&nbsp;encoder)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>

@@ -111,6 +111,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a></code></td>
+<td class="colLast"><span class="strong">CloneSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/CloneSnapshotHandler.html#monitor">monitor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a></code></td>
+<td class="colLast"><span class="strong">RestoreSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/RestoreSnapshotHandler.html#monitor">monitor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a></code></td>
 <td class="colLast"><span class="strong">TakeSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TakeSnapshotHandler.html#monitor">monitor</a></strong></code>&nbsp;</td>
 </tr>
@@ -129,6 +137,12 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a></code></td>
+<td class="colLast"><span class="strong">Procedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Procedure.html#monitor">monitor</a></strong></code>
+<div class="block">monitor to check for errors</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a></code></td>
 <td class="colLast"><span class="strong">Subprocedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html#monitor">monitor</a></strong></code>
 <div class="block">monitor to check for errors</div>
@@ -159,6 +173,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/procedure/Procedure.html" title="class in org.apache.hadoop.hbase.procedure">Procedure</a></code></td>
+<td class="colLast"><span class="strong">ProcedureCoordinator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html#createProcedure(org.apache.hadoop.hbase.errorhandling.ForeignExceptionDispatcher,%20java.lang.String,%20byte[],%20java.util.List)">createProcedure</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a>&nbsp;fed,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;procName,
+                              byte[]&nbsp;procArgs,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;expectedMembers)</code>
+<div class="block">Exposed for hooking with unit tests.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/procedure/Procedure.html" title="class in org.apache.hadoop.hbase.procedure">Procedure</a></code></td>
 <td class="colLast"><span class="strong">ProcedureCoordinator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html#startProcedure(org.apache.hadoop.hbase.errorhandling.ForeignExceptionDispatcher,%20java.lang.String,%20byte[],%20java.util.List)">startProcedure</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a>&nbsp;fed,
                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;procName,
@@ -221,7 +244,7 @@
                                             long&nbsp;timeout,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;&nbsp;regions,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;table,
-                                            org.apache.hadoop.hbase.procedure.flush.RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool&nbsp;taskManager)</code>&nbsp;</td>
+                                            <a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool.html" title="class in org.apache.hadoop.hbase.procedure.flush">RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool</a>&nbsp;taskManager)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -243,7 +266,7 @@
                                                   long&nbsp;timeout,
                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;&nbsp;regions,
                                                   org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
-                                                  org.apache.hadoop.hbase.regionserver.snapshot.RegionServerSnapshotManager.SnapshotSubprocedurePool&nbsp;taskManager)</code>&nbsp;</td>
+                                                  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/RegionServerSnapshotManager.SnapshotSubprocedurePool.html" title="class in org.apache.hadoop.hbase.regionserver.snapshot">RegionServerSnapshotManager.SnapshotSubprocedurePool</a>&nbsp;taskManager)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -252,6 +275,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a> in <a href="../../../../../../org/apache/hadoop/hbase/snapshot/package-summary.html">org.apache.hadoop.hbase.snapshot</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/snapshot/package-summary.html">org.apache.hadoop.hbase.snapshot</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a></code></td>
+<td class="colLast"><span class="strong">RestoreSnapshotHelper.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/RestoreSnapshotHelper.html#monitor">monitor</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/snapshot/package-summary.html">org.apache.hadoop.hbase.snapshot</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignExceptionDispatcher</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>

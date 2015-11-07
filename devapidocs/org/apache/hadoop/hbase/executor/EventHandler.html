@@ -149,14 +149,26 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/executor/EventHandler.html#eventType">eventType</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/executor/EventHandler.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.htrace.Span</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/executor/EventHandler.html#parent">parent</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/executor/EventHandler.html#seqid">seqid</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/executor/EventHandler.html#seqids">seqids</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/executor/EventHandler.html#server">server</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/executor/EventHandler.html#waitingTimeForEvents">waitingTimeForEvents</a></strong></code>&nbsp;</td>
 </tr>
@@ -275,6 +287,15 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.55">LOG</a></pre>
+</li>
+</ul>
 <a name="eventType">
 <!--   -->
 </a>
@@ -302,13 +323,31 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <pre>protected static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.63">seqids</a></pre>
 </li>
 </ul>
+<a name="seqid">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>seqid</h4>
+<pre>private final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.66">seqid</a></pre>
+</li>
+</ul>
 <a name="waitingTimeForEvents">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitingTimeForEvents</h4>
+<pre>protected&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.69">waitingTimeForEvents</a></pre>
+</li>
+</ul>
+<a name="parent">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>waitingTimeForEvents</h4>
-<pre>protected&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.69">waitingTimeForEvents</a></pre>
+<h4>parent</h4>
+<pre>private final&nbsp;org.apache.htrace.Span <a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.71">parent</a></pre>
 </li>
 </ul>
 </li>

@@ -33,11 +33,11 @@
 <a class="jxr_linenumber" name="23" href="#23">23</a>  
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.HColumnDescriptor;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.HRegionLocation;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.RegionLocator;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Table;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.IOTests;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.MediumTests;
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.HBaseAdmin;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Admin;
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.RegionLocator;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Table;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.IOTests;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.MediumTests;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Result;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ResultScanner;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Scan;
@@ -77,7 +77,7 @@
 <a class="jxr_linenumber" name="67" href="#67">67</a>  
 <a class="jxr_linenumber" name="68" href="#68">68</a>    @Test(timeout=TIMEOUT_MS)
 <a class="jxr_linenumber" name="69" href="#69">69</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> loadTest() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="70" href="#70">70</a>      HBaseAdmin admin = TEST_UTIL.getHBaseAdmin();
+<a class="jxr_linenumber" name="70" href="#70">70</a>      Admin admin = TEST_UTIL.getHBaseAdmin();
 <a class="jxr_linenumber" name="71" href="#71">71</a>  
 <a class="jxr_linenumber" name="72" href="#72">72</a>      compression = Compression.Algorithm.GZ; <em class="jxr_comment">// used for table setup</em>
 <a class="jxr_linenumber" name="73" href="#73">73</a>      <strong class="jxr_keyword">super</strong>.loadTest();

@@ -119,7 +119,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.apache.hadoop.hbase.security.access.<a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.html" title="class in org.apache.hadoop.hbase.security.access">SecureTestUtil</a></h3>
-<code><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.MasterSyncObserver.html" title="class in org.apache.hadoop.hbase.security.access">SecureTestUtil.MasterSyncObserver</a></code></li>
+<code><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.AccessTestAction.html" title="interface in org.apache.hadoop.hbase.security.access">SecureTestUtil.AccessTestAction</a>, <a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.MasterSyncObserver.html" title="class in org.apache.hadoop.hbase.security.access">SecureTestUtil.MasterSyncObserver</a></code></li>
 </ul>
 </li>
 </ul>
@@ -136,8 +136,96 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.access.AccessController</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#ACCESS_CONTROLLER">ACCESS_CONTROLLER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.coprocessor.MasterCoprocessorEnvironment</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#CP_ENV">CP_ENV</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#RCP_ENV">RCP_ENV</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.coprocessor.RegionServerCoprocessorEnvironment</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#RSCP_ENV">RSCP_ENV</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#SUPERUSER">SUPERUSER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#TEST_FAMILY">TEST_FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#TEST_FAMILY2">TEST_FAMILY2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#TEST_Q1">TEST_Q1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#TEST_Q2">TEST_Q2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#TEST_Q3">TEST_Q3</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#TEST_Q4">TEST_Q4</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#TEST_ROW">TEST_ROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/TestTableName.html" title="class in org.apache.hadoop.hbase.util">TestTableName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#TEST_TABLE">TEST_TABLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#USER_ADMIN">USER_ADMIN</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#USER_CREATE">USER_CREATE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#USER_NONE">USER_NONE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#USER_OWNER">USER_OWNER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#USER_QUAL">USER_QUAL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#USER_RO">USER_RO</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#USER_RW">USER_RW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#ZERO">ZERO</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -248,13 +336,211 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.89">LOG</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.97">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="TEST_FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_FAMILY</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.99">TEST_FAMILY</a></pre>
+</li>
+</ul>
+<a name="TEST_FAMILY2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_FAMILY2</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.100">TEST_FAMILY2</a></pre>
+</li>
+</ul>
+<a name="TEST_ROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_ROW</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.101">TEST_ROW</a></pre>
+</li>
+</ul>
+<a name="TEST_Q1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_Q1</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.102">TEST_Q1</a></pre>
+</li>
+</ul>
+<a name="TEST_Q2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_Q2</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.103">TEST_Q2</a></pre>
+</li>
+</ul>
+<a name="TEST_Q3">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_Q3</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.104">TEST_Q3</a></pre>
+</li>
+</ul>
+<a name="TEST_Q4">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_Q4</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.105">TEST_Q4</a></pre>
+</li>
+</ul>
+<a name="ZERO">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ZERO</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.106">ZERO</a></pre>
+</li>
+</ul>
+<a name="CP_ENV">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CP_ENV</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.coprocessor.MasterCoprocessorEnvironment <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.108">CP_ENV</a></pre>
+</li>
+</ul>
+<a name="ACCESS_CONTROLLER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ACCESS_CONTROLLER</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.access.AccessController <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.109">ACCESS_CONTROLLER</a></pre>
+</li>
+</ul>
+<a name="RSCP_ENV">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RSCP_ENV</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.coprocessor.RegionServerCoprocessorEnvironment <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.110">RSCP_ENV</a></pre>
+</li>
+</ul>
+<a name="RCP_ENV">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RCP_ENV</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.111">RCP_ENV</a></pre>
+</li>
+</ul>
 <a name="TEST_TABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_TABLE</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/TestTableName.html" title="class in org.apache.hadoop.hbase.util">TestTableName</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.113">TEST_TABLE</a></pre>
+</li>
+</ul>
+<a name="SUPERUSER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SUPERUSER</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.118">SUPERUSER</a></pre>
+</li>
+</ul>
+<a name="USER_ADMIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_ADMIN</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.120">USER_ADMIN</a></pre>
+</li>
+</ul>
+<a name="USER_RW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_RW</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.122">USER_RW</a></pre>
+</li>
+</ul>
+<a name="USER_RO">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_RO</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.124">USER_RO</a></pre>
+</li>
+</ul>
+<a name="USER_OWNER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_OWNER</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.126">USER_OWNER</a></pre>
+</li>
+</ul>
+<a name="USER_CREATE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_CREATE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.128">USER_CREATE</a></pre>
+</li>
+</ul>
+<a name="USER_NONE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_NONE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.130">USER_NONE</a></pre>
+</li>
+</ul>
+<a name="USER_QUAL">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>TEST_TABLE</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/TestTableName.html" title="class in org.apache.hadoop.hbase.util">TestTableName</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.113">TEST_TABLE</a></pre>
+<h4>USER_QUAL</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestWithDisabledAuthorization.html#line.132">USER_QUAL</a></pre>
 </li>
 </ul>
 </li>

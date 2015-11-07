@@ -114,7 +114,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <div class="block">The main runner loop for the test. It uses
  <a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.html" title="class in org.apache.hadoop.hbase.test"><code>IntegrationTestBigLinkedList</code></a>
  for the generation and verification of the linked list. It is heavily based on
- <code>IntegrationTestBigLinkedList.Loop</code></div>
+ <a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Loop.html" title="class in org.apache.hadoop.hbase.test"><code>IntegrationTestBigLinkedList.Loop</code></a></div>
 </li>
 </ul>
 </div>
@@ -132,6 +132,14 @@ implements org.apache.hadoop.util.Tool</pre>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.html" title="class in org.apache.hadoop.hbase.test">IntegrationTestBigLinkedList</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestReplication.VerifyReplicationLoop.html#integrationTestBigLinkedList">integrationTestBigLinkedList</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestReplication.VerifyReplicationLoop.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestReplication.ClusterID.html" title="class in org.apache.hadoop.hbase.test">IntegrationTestReplication.ClusterID</a></code></td>
@@ -190,14 +198,14 @@ implements org.apache.hadoop.util.Tool</pre>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestReplication.VerifyReplicationLoop.html#runGenerator()">runGenerator</a></strong>()</code>
-<div class="block">Run the <code>IntegrationTestBigLinkedList.Generator</code> in the
+<div class="block">Run the <a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Generator.html" title="class in org.apache.hadoop.hbase.test"><code>IntegrationTestBigLinkedList.Generator</code></a> in the
  source cluster.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestReplication.VerifyReplicationLoop.html#runVerify(long)">runVerify</a></strong>(long&nbsp;expectedNumNodes)</code>
-<div class="block">Run the <code>IntegrationTestBigLinkedList.Verify</code>
+<div class="block">Run the <a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Verify.html" title="class in org.apache.hadoop.hbase.test"><code>IntegrationTestBigLinkedList.Verify</code></a>
  in the sink cluster.</div>
 </td>
 </tr>
@@ -248,6 +256,15 @@ implements org.apache.hadoop.util.Tool</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestReplication.VerifyReplicationLoop.html#line.168">LOG</a></pre>
+</li>
+</ul>
 <a name="source">
 <!--   -->
 </a>
@@ -260,10 +277,19 @@ implements org.apache.hadoop.util.Tool</pre>
 <a name="sink">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>sink</h4>
 <pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestReplication.ClusterID.html" title="class in org.apache.hadoop.hbase.test">IntegrationTestReplication.ClusterID</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestReplication.VerifyReplicationLoop.html#line.170">sink</a></pre>
+</li>
+</ul>
+<a name="integrationTestBigLinkedList">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>integrationTestBigLinkedList</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.html" title="class in org.apache.hadoop.hbase.test">IntegrationTestBigLinkedList</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestReplication.VerifyReplicationLoop.html#line.172">integrationTestBigLinkedList</a></pre>
 </li>
 </ul>
 </li>
@@ -327,7 +353,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <h4>runGenerator</h4>
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestReplication.VerifyReplicationLoop.html#line.262">runGenerator</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
-<div class="block">Run the <code>IntegrationTestBigLinkedList.Generator</code> in the
+<div class="block">Run the <a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Generator.html" title="class in org.apache.hadoop.hbase.test"><code>IntegrationTestBigLinkedList.Generator</code></a> in the
  source cluster. This assumes that the tables have been setup via setupTablesAndReplication.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -341,7 +367,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <h4>runVerify</h4>
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestReplication.VerifyReplicationLoop.html#line.285">runVerify</a>(long&nbsp;expectedNumNodes)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
-<div class="block">Run the <code>IntegrationTestBigLinkedList.Verify</code>
+<div class="block">Run the <a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Verify.html" title="class in org.apache.hadoop.hbase.test"><code>IntegrationTestBigLinkedList.Verify</code></a>
  in the sink cluster. If replication is working properly the data written at the source
  cluster should be available in the sink cluster after a reasonable gap</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>expectedNumNodes</code> - the number of nodes we are expecting to see in the sink cluster</dd>

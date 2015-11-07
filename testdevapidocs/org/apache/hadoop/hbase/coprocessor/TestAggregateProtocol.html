@@ -118,8 +118,54 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static org.apache.commons.logging.Log</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#myLog">myLog</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#ROW">ROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#ROWS">ROWS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#rowSeperator1">rowSeperator1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#rowSeperator2">rowSeperator2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#ROWSIZE">ROWSIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#TEST_FAMILY">TEST_FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#TEST_MULTI_CQ">TEST_MULTI_CQ</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#TEST_QUALIFIER">TEST_QUALIFIER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#TEST_TABLE">TEST_TABLE</a></strong></code>
+<div class="block">Creating the test infrastructure.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#util">util</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -154,201 +200,208 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#makeN(byte[],%20int)">makeN</a></strong>(byte[]&nbsp;base,
+          int&nbsp;n)</code>
+<div class="block">an infrastructure method to prepare rows for the testtable.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#setupBeforeClass()">setupBeforeClass</a></strong>()</code>
 <div class="block">A set up method to start the test cluster.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>
 <div class="block">Shutting down the cluster</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testAvgWithFilter()">testAvgWithFilter</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testAvgWithInvalidRange()">testAvgWithInvalidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testAvgWithValidRange()">testAvgWithValidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testAvgWithValidRange2()">testAvgWithValidRange2</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testAvgWithValidRange2WithNoCQ()">testAvgWithValidRange2WithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testAvgWithValidRangeWithNoCQ()">testAvgWithValidRangeWithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testAvgWithValidRangeWithNullCF()">testAvgWithValidRangeWithNullCF</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMaxWithFilter()">testMaxWithFilter</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMaxWithInvalidRange()">testMaxWithInvalidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMaxWithInvalidRange2()">testMaxWithInvalidRange2</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMaxWithValidRange()">testMaxWithValidRange</a></strong>()</code>
 <div class="block">give max for the entire table.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMaxWithValidRange2()">testMaxWithValidRange2</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMaxWithValidRange2WithNoCQ()">testMaxWithValidRange2WithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMaxWithValidRangeWithNoCQ()">testMaxWithValidRangeWithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMaxWithValidRangeWithNullCF()">testMaxWithValidRangeWithNullCF</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMedianWithValidRange()">testMedianWithValidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMinWithFilter()">testMinWithFilter</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMinWithInvalidRange()">testMinWithInvalidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMinWithInvalidRange2()">testMinWithInvalidRange2</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMinWithValidRange()">testMinWithValidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMinWithValidRange2()">testMinWithValidRange2</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMinWithValidRange2WithNoCQ()">testMinWithValidRange2WithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMinWithValidRangeWithNoCQ()">testMinWithValidRangeWithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testMinWithValidRangeWithNullCF()">testMinWithValidRangeWithNullCF</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testRowCountAllTable()">testRowCountAllTable</a></strong>()</code>
 <div class="block">This will test the row count on the entire table.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testRowCountWithInvalidRange1()">testRowCountWithInvalidRange1</a></strong>()</code>
 <div class="block">This will test the row count with startrow > endrow.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testRowCountWithInvalidRange2()">testRowCountWithInvalidRange2</a></strong>()</code>
 <div class="block">This will test the row count with startrow = endrow and they will be
  non-null.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testRowCountWithNullCQ()">testRowCountWithNullCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testRowCountWithPrefixFilter()">testRowCountWithPrefixFilter</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testRowCountWithValidRange()">testRowCountWithValidRange</a></strong>()</code>
 <div class="block">This will test rowcount with a valid range, i.e., a subset of rows.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testStdWithFilter()">testStdWithFilter</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testStdWithInvalidRange()">testStdWithInvalidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testStdWithValidRange()">testStdWithValidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testStdWithValidRange2()">testStdWithValidRange2</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testStdWithValidRange2WithNoCQ()">testStdWithValidRange2WithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testStdWithValidRangeWithNoCQ()">testStdWithValidRangeWithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testStdWithValidRangeWithNullCF()">testStdWithValidRangeWithNullCF</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testSumWithFilter()">testSumWithFilter</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testSumWithInvalidRange()">testSumWithInvalidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testSumWithValidRange()">testSumWithValidRange</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testSumWithValidRange2()">testSumWithValidRange2</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testSumWithValidRange2WithNoCQ()">testSumWithValidRange2WithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testSumWithValidRangeWithNoCQ()">testSumWithValidRangeWithNoCQ</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#testSumWithValidRangeWithNullCF()">testSumWithValidRangeWithNullCF</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -377,10 +430,113 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="myLog">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>myLog</h4>
 <pre>protected static&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.53">myLog</a></pre>
+</li>
+</ul>
+<a name="TEST_TABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_TABLE</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.58">TEST_TABLE</a></pre>
+<div class="block">Creating the test infrastructure.</div>
+</li>
+</ul>
+<a name="TEST_FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_FAMILY</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.60">TEST_FAMILY</a></pre>
+</li>
+</ul>
+<a name="TEST_QUALIFIER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_QUALIFIER</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.61">TEST_QUALIFIER</a></pre>
+</li>
+</ul>
+<a name="TEST_MULTI_CQ">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_MULTI_CQ</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.62">TEST_MULTI_CQ</a></pre>
+</li>
+</ul>
+<a name="ROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROW</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.64">ROW</a></pre>
+</li>
+</ul>
+<a name="ROWSIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROWSIZE</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.65">ROWSIZE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.coprocessor.TestAggregateProtocol.ROWSIZE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="rowSeperator1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowSeperator1</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.66">rowSeperator1</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.coprocessor.TestAggregateProtocol.rowSeperator1">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="rowSeperator2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowSeperator2</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.67">rowSeperator2</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.coprocessor.TestAggregateProtocol.rowSeperator2">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ROWS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROWS</h4>
+<pre>private static&nbsp;byte[][] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.68">ROWS</a></pre>
+</li>
+</ul>
+<a name="util">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>util</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.70">util</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private static&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.71">conf</a></pre>
 </li>
 </ul>
 </li>
@@ -433,6 +589,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Shutting down the cluster</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="makeN(byte[], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeN</h4>
+<pre>private static&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.html#line.122">makeN</a>(byte[]&nbsp;base,
+             int&nbsp;n)</pre>
+<div class="block">an infrastructure method to prepare rows for the testtable.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>base</code> - </dd><dd><code>n</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd></dd></dl>
 </li>
 </ul>
 <a name="testMedianWithValidRange()">

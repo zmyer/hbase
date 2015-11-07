@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.html" title="class in org.apache.hadoop.hbase.io.encoding"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffCompressionState.html" title="class in org.apache.hadoop.hbase.io.encoding"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockDecodingContext.html" title="interface in org.apache.hadoop.hbase.io.encoding"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -86,7 +86,12 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
+<li><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html" title="class in org.apache.hadoop.hbase.io.encoding">org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState</a></li>
+<li>
+<ul class="inheritance">
 <li>org.apache.hadoop.hbase.io.encoding.FastDiffDeltaEncoder.FastDiffSeekerState</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -100,13 +105,47 @@
 <hr>
 <br>
 <pre>protected static class <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.html#line.376">FastDiffDeltaEncoder.FastDiffSeekerState</a>
-extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html" title="class in org.apache.hadoop.hbase.io.encoding">BufferedDataBlockEncoder.SeekerState</a></pre>
 </li>
 </ul>
 </div>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#familyLengthWithSize">familyLengthWithSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#prevTimestampAndType">prevTimestampAndType</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#rowLengthWithSize">rowLengthWithSize</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.io.encoding.<a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html" title="class in org.apache.hadoop.hbase.io.encoding">BufferedDataBlockEncoder.SeekerState</a></h3>
+<code><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#currentBuffer">currentBuffer</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#currentKey">currentKey</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#keyBuffer">keyBuffer</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#keyLength">keyLength</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#lastCommonPrefix">lastCommonPrefix</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#memstoreTS">memstoreTS</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#nextKvOffset">nextKvOffset</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#tagCompressionContext">tagCompressionContext</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#tagsBuffer">tagsBuffer</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#tagsCompressedLength">tagsCompressedLength</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#tagsLength">tagsLength</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#tagsOffset">tagsOffset</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#uncompressTags">uncompressTags</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#valueLength">valueLength</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#valueOffset">valueOffset</a></code></li>
+</ul>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -139,12 +178,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#copyFromNext(org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState)">copyFromNext</a></strong>(org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState&nbsp;that)</code>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#copyFromNext(org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState)">copyFromNext</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html" title="class in org.apache.hadoop.hbase.io.encoding">BufferedDataBlockEncoder.SeekerState</a>&nbsp;that)</code>
 <div class="block">Copy the state from the next one into this instance (the previous state
  placeholder).</div>
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.io.encoding.<a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html" title="class in org.apache.hadoop.hbase.io.encoding">BufferedDataBlockEncoder.SeekerState</a></h3>
+<code><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#ensureSpaceForKey()">ensureSpaceForKey</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#ensureSpaceForTags()">ensureSpaceForTags</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#invalidate()">invalidate</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#isValid()">isValid</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#setKey(byte[],%20long)">setKey</a>, <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#toCell()">toCell</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
@@ -160,6 +206,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="prevTimestampAndType">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prevTimestampAndType</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#line.377">prevTimestampAndType</a></pre>
+</li>
+</ul>
+<a name="rowLengthWithSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowLengthWithSize</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#line.379">rowLengthWithSize</a></pre>
+</li>
+</ul>
+<a name="familyLengthWithSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>familyLengthWithSize</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#line.380">familyLengthWithSize</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -190,10 +271,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>copyFromNext</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#line.387">copyFromNext</a>(org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState&nbsp;that)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffSeekerState.html#line.387">copyFromNext</a>(<a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html" title="class in org.apache.hadoop.hbase.io.encoding">BufferedDataBlockEncoder.SeekerState</a>&nbsp;that)</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#copyFromNext(org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState)">BufferedDataBlockEncoder.SeekerState</a></code></strong></div>
 <div class="block">Copy the state from the next one into this instance (the previous state
  placeholder). Used to save the previous state when we are advancing the
  seeker to the next key/value.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html#copyFromNext(org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState)">copyFromNext</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.SeekerState.html" title="class in org.apache.hadoop.hbase.io.encoding">BufferedDataBlockEncoder.SeekerState</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -222,7 +308,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.html" title="class in org.apache.hadoop.hbase.io.encoding"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/FastDiffDeltaEncoder.FastDiffCompressionState.html" title="class in org.apache.hadoop.hbase.io.encoding"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockDecodingContext.html" title="interface in org.apache.hadoop.hbase.io.encoding"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -248,13 +334,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.io.encoding.BufferedDataBlockEncoder.SeekerState">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

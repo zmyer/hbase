@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -106,6 +106,159 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#averagePrefixLength">averagePrefixLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#averageQualifierLength">averageQualifierLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#averageSuffixLength">averageSuffixLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#baseTimestampDivide">baseTimestampDivide</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#chanceForSameQualifier">chanceForSameQualifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private float</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#chanceForSimilarQualifier">chanceForSimilarQualifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private float</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#chanceForZeroValue">chanceForZeroValue</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#columnFamilyLength">columnFamilyLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#commonPrefix">commonPrefix</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_AVERAGE_PREFIX_LENGTH">DEFAULT_AVERAGE_PREFIX_LENGTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_AVERAGE_QUALIFIER_LENGTH">DEFAULT_AVERAGE_QUALIFIER_LENGTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_AVERAGE_SUFFIX_LENGTH">DEFAULT_AVERAGE_SUFFIX_LENGTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_BASE_TIMESTAMP_DIVIDE">DEFAULT_BASE_TIMESTAMP_DIVIDE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static float</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_CHANCE_FOR_SAME_QUALIFIER">DEFAULT_CHANCE_FOR_SAME_QUALIFIER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static float</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_CHANCE_FOR_SIMILIAR_QUALIFIER">DEFAULT_CHANCE_FOR_SIMILIAR_QUALIFIER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static float</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_CHANCE_FOR_ZERO_VALUE">DEFAULT_CHANCE_FOR_ZERO_VALUE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_COLUMN_FAMILY_LENGTH">DEFAULT_COLUMN_FAMILY_LENGTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_COMMON_PREFIX">DEFAULT_COMMON_PREFIX</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_NUMBER_OF_ROW">DEFAULT_NUMBER_OF_ROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_NUMBER_OF_ROW_PREFIXES">DEFAULT_NUMBER_OF_ROW_PREFIXES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_PREFIX_LENGTH_VARIANCE">DEFAULT_PREFIX_LENGTH_VARIANCE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_QUALIFIER_LENGTH_VARIANCE">DEFAULT_QUALIFIER_LENGTH_VARIANCE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_SUFFIX_LENGTH_VARIANCE">DEFAULT_SUFFIX_LENGTH_VARIANCE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_TIMESTAMP_DIFF_SIZE">DEFAULT_TIMESTAMP_DIFF_SIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#DEFAULT_VALUE_LENGTH">DEFAULT_VALUE_LENGTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#family">family</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#numberOfRowPrefixes">numberOfRowPrefixes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#numberOfRows">numberOfRows</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#prefixLengthVariance">prefixLengthVariance</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#qualifierLengthVariance">qualifierLengthVariance</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#randomizer">randomizer</a></strong></code>
+<div class="block">Used to generate dataset</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#suffixLengthVariance">suffixLengthVariance</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#timestampDiffSize">timestampDiffSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#valueLength">valueLength</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -165,89 +318,93 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#generateRows()">generateRows</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#generateTestKeyValues(int)">generateTestKeyValues</a></strong>(int&nbsp;howMany)</code>
 <div class="block">Generate test data useful to test encoders.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#generateTestKeyValues(int,%20boolean)">generateTestKeyValues</a></strong>(int&nbsp;howMany,
                                           boolean&nbsp;useTags)</code>
 <div class="block">Generate test data useful to test encoders.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setAveragePrefixLength(int)">setAveragePrefixLength</a></strong>(int&nbsp;averagePrefixLength)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setAverageQualifierLength(int)">setAverageQualifierLength</a></strong>(int&nbsp;averageQualifierLength)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setAverageSuffixLength(int)">setAverageSuffixLength</a></strong>(int&nbsp;averageSuffixLength)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setBaseTimestampDivide(int)">setBaseTimestampDivide</a></strong>(int&nbsp;baseTimestampDivide)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setChanceForSameQualifier(float)">setChanceForSameQualifier</a></strong>(float&nbsp;chanceForSameQualifier)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setChanceForSimilarQualifier(float)">setChanceForSimilarQualifier</a></strong>(float&nbsp;chanceForSimiliarQualifier)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setChanceForZeroValue(float)">setChanceForZeroValue</a></strong>(float&nbsp;chanceForZeroValue)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setColumnFamilyLength(int)">setColumnFamilyLength</a></strong>(int&nbsp;columnFamilyLength)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setCommonPrefix(byte[])">setCommonPrefix</a></strong>(byte[]&nbsp;prefix)</code>
 <div class="block">get/set</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setFamily(byte[])">setFamily</a></strong>(byte[]&nbsp;family)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setNumberOfRowPrefixes(int)">setNumberOfRowPrefixes</a></strong>(int&nbsp;numberOfRowPrefixes)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setNumberOfRows(int)">setNumberOfRows</a></strong>(int&nbsp;numberOfRows)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setPrefixLengthVariance(int)">setPrefixLengthVariance</a></strong>(int&nbsp;prefixLengthVariance)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setQualifierLengthVariance(int)">setQualifierLengthVariance</a></strong>(int&nbsp;qualifierLengthVariance)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setRandomizer(java.util.Random)">setRandomizer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;randomizer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setSuffixLengthVariance(int)">setSuffixLengthVariance</a></strong>(int&nbsp;suffixLengthVariance)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setTimestampDiffSize(int)">setTimestampDiffSize</a></strong>(int&nbsp;timestampDiffSize)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setValueLength(int)">setValueLength</a></strong>(int&nbsp;valueLength)</code>&nbsp;</td>
 </tr>
@@ -267,6 +424,321 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="DEFAULT_COMMON_PREFIX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_COMMON_PREFIX</h4>
+<pre>static&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.46">DEFAULT_COMMON_PREFIX</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_NUMBER_OF_ROW_PREFIXES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_NUMBER_OF_ROW_PREFIXES</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.47">DEFAULT_NUMBER_OF_ROW_PREFIXES</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_AVERAGE_PREFIX_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_AVERAGE_PREFIX_LENGTH</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.48">DEFAULT_AVERAGE_PREFIX_LENGTH</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_PREFIX_LENGTH_VARIANCE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_PREFIX_LENGTH_VARIANCE</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.49">DEFAULT_PREFIX_LENGTH_VARIANCE</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_AVERAGE_SUFFIX_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_AVERAGE_SUFFIX_LENGTH</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.50">DEFAULT_AVERAGE_SUFFIX_LENGTH</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_SUFFIX_LENGTH_VARIANCE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_SUFFIX_LENGTH_VARIANCE</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.51">DEFAULT_SUFFIX_LENGTH_VARIANCE</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_NUMBER_OF_ROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_NUMBER_OF_ROW</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.52">DEFAULT_NUMBER_OF_ROW</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_CHANCE_FOR_SAME_QUALIFIER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_CHANCE_FOR_SAME_QUALIFIER</h4>
+<pre>static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.55">DEFAULT_CHANCE_FOR_SAME_QUALIFIER</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_CHANCE_FOR_SIMILIAR_QUALIFIER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_CHANCE_FOR_SIMILIAR_QUALIFIER</h4>
+<pre>static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.56">DEFAULT_CHANCE_FOR_SIMILIAR_QUALIFIER</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_AVERAGE_QUALIFIER_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_AVERAGE_QUALIFIER_LENGTH</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.57">DEFAULT_AVERAGE_QUALIFIER_LENGTH</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_QUALIFIER_LENGTH_VARIANCE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_QUALIFIER_LENGTH_VARIANCE</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.58">DEFAULT_QUALIFIER_LENGTH_VARIANCE</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_COLUMN_FAMILY_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_COLUMN_FAMILY_LENGTH</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.60">DEFAULT_COLUMN_FAMILY_LENGTH</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_VALUE_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_VALUE_LENGTH</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.61">DEFAULT_VALUE_LENGTH</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_CHANCE_FOR_ZERO_VALUE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_CHANCE_FOR_ZERO_VALUE</h4>
+<pre>static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.62">DEFAULT_CHANCE_FOR_ZERO_VALUE</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_BASE_TIMESTAMP_DIVIDE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_BASE_TIMESTAMP_DIVIDE</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.64">DEFAULT_BASE_TIMESTAMP_DIVIDE</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_TIMESTAMP_DIFF_SIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_TIMESTAMP_DIFF_SIZE</h4>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.65">DEFAULT_TIMESTAMP_DIFF_SIZE</a></pre>
+</li>
+</ul>
+<a name="randomizer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>randomizer</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.142">randomizer</a></pre>
+<div class="block">Used to generate dataset</div>
+</li>
+</ul>
+<a name="commonPrefix">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>commonPrefix</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.145">commonPrefix</a></pre>
+</li>
+</ul>
+<a name="numberOfRowPrefixes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numberOfRowPrefixes</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.146">numberOfRowPrefixes</a></pre>
+</li>
+</ul>
+<a name="averagePrefixLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>averagePrefixLength</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.147">averagePrefixLength</a></pre>
+</li>
+</ul>
+<a name="prefixLengthVariance">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prefixLengthVariance</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.148">prefixLengthVariance</a></pre>
+</li>
+</ul>
+<a name="averageSuffixLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>averageSuffixLength</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.149">averageSuffixLength</a></pre>
+</li>
+</ul>
+<a name="suffixLengthVariance">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>suffixLengthVariance</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.150">suffixLengthVariance</a></pre>
+</li>
+</ul>
+<a name="numberOfRows">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numberOfRows</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.151">numberOfRows</a></pre>
+</li>
+</ul>
+<a name="family">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>family</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.154">family</a></pre>
+</li>
+</ul>
+<a name="chanceForSameQualifier">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>chanceForSameQualifier</h4>
+<pre>private&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.157">chanceForSameQualifier</a></pre>
+</li>
+</ul>
+<a name="chanceForSimilarQualifier">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>chanceForSimilarQualifier</h4>
+<pre>private&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.158">chanceForSimilarQualifier</a></pre>
+</li>
+</ul>
+<a name="averageQualifierLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>averageQualifierLength</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.159">averageQualifierLength</a></pre>
+</li>
+</ul>
+<a name="qualifierLengthVariance">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qualifierLengthVariance</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.160">qualifierLengthVariance</a></pre>
+</li>
+</ul>
+<a name="columnFamilyLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>columnFamilyLength</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.162">columnFamilyLength</a></pre>
+</li>
+</ul>
+<a name="valueLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>valueLength</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.163">valueLength</a></pre>
+</li>
+</ul>
+<a name="chanceForZeroValue">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>chanceForZeroValue</h4>
+<pre>private&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.164">chanceForZeroValue</a></pre>
+</li>
+</ul>
+<a name="baseTimestampDivide">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>baseTimestampDivide</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.166">baseTimestampDivide</a></pre>
+</li>
+</ul>
+<a name="timestampDiffSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>timestampDiffSize</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.167">timestampDiffSize</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -317,6 +789,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="generateRows()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>generateRows</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.169">generateRows</a>()</pre>
+</li>
+</ul>
 <a name="generateTestKeyValues(int)">
 <!--   -->
 </a>
@@ -570,13 +1051,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

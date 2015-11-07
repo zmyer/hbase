@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -119,6 +119,49 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#connection">connection</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#lastRegion">lastRegion</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#operationTimeout">operationTimeout</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#row">row</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#rpcFactory">rpcFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#table">table</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -183,6 +226,77 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.50">LOG</a></pre>
+</li>
+</ul>
+<a name="connection">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>connection</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.52">connection</a></pre>
+</li>
+</ul>
+<a name="table">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>table</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.53">table</a></pre>
+</li>
+</ul>
+<a name="row">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>row</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.54">row</a></pre>
+</li>
+</ul>
+<a name="lastRegion">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastRegion</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.55">lastRegion</a></pre>
+</li>
+</ul>
+<a name="operationTimeout">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>operationTimeout</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.56">operationTimeout</a></pre>
+</li>
+</ul>
+<a name="rpcFactory">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>rpcFactory</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.58">rpcFactory</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -286,13 +400,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -121,6 +121,12 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
+<td class="colLast"><span class="strong">CompoundBloomFilter.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#reader">reader</a></strong></code>
+<div class="block">Used to load chunks on demand</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
 <td class="colLast"><span class="strong">HFileReaderImpl.HFileScannerImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#reader">reader</a></strong></code>&nbsp;</td>
 </tr>
@@ -150,12 +156,47 @@
                         org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
-<td class="colLast"><span class="strong">HFileReaderImpl.HFileScannerImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getReader()">getReader</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>(package private) static <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
+<td class="colLast"><span class="strong">HFile.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html#createReaderFromStream(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FSDataInputStream,%20long,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.conf.Configuration)">createReaderFromStream</a></strong>(org.apache.hadoop.fs.Path&nbsp;path,
+                                            org.apache.hadoop.fs.FSDataInputStream&nbsp;fsdis,
+                                            long&nbsp;size,
+                                            <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf,
+                                            org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
+<div class="block">This factory method is used only by unit tests</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
+<td class="colLast"><span class="strong">HFileReaderImpl.HFileScannerImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.html#getReader()">getReader</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
 <td class="colLast"><span class="strong">HFileScanner.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileScanner.html#getReader()">getReader</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
+<td class="colLast"><span class="strong">HFile.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html#pickReaderVersion(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.io.FSDataInputStreamWrapper,%20long,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.fs.HFileSystem,%20org.apache.hadoop.conf.Configuration)">pickReaderVersion</a></strong>(org.apache.hadoop.fs.Path&nbsp;path,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/FSDataInputStreamWrapper.html" title="class in org.apache.hadoop.hbase.io">FSDataInputStreamWrapper</a>&nbsp;fsdis,
+                                  long&nbsp;size,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/fs/HFileSystem.html" title="class in org.apache.hadoop.hbase.fs">HFileSystem</a>&nbsp;hfs,
+                                  org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
+<div class="block">Method returns the reader given the specified arguments.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">HFilePrettyPrinter.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFilePrettyPrinter.html#printMeta(org.apache.hadoop.hbase.io.hfile.HFile.Reader,%20java.util.Map)">printMeta</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a>&nbsp;reader,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt;&nbsp;fileInfo)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -191,6 +232,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a> in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
+<td class="colLast"><span class="strong">StoreFile.Reader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html#reader">reader</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>

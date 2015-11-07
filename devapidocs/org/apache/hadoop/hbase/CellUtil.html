@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/ChoreService.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/CellUtil.EmptyByteBufferedCell.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/CellUtil.html" target="_top">Frames</a></li>
@@ -60,15 +60,15 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -108,6 +108,94 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.EmptyByteBufferedCell.html" title="class in org.apache.hadoop.hbase">CellUtil.EmptyByteBufferedCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.EmptyCell.html" title="class in org.apache.hadoop.hbase">CellUtil.EmptyCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.FirstOnRowByteBufferedCell.html" title="class in org.apache.hadoop.hbase">CellUtil.FirstOnRowByteBufferedCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.FirstOnRowCell.html" title="class in org.apache.hadoop.hbase">CellUtil.FirstOnRowCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.FirstOnRowColByteBufferedCell.html" title="class in org.apache.hadoop.hbase">CellUtil.FirstOnRowColByteBufferedCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.FirstOnRowColCell.html" title="class in org.apache.hadoop.hbase">CellUtil.FirstOnRowColCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.FirstOnRowColTSByteBufferedCell.html" title="class in org.apache.hadoop.hbase">CellUtil.FirstOnRowColTSByteBufferedCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.FirstOnRowColTSCell.html" title="class in org.apache.hadoop.hbase">CellUtil.FirstOnRowColTSCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.FirstOnRowDeleteFamilyCell.html" title="class in org.apache.hadoop.hbase">CellUtil.FirstOnRowDeleteFamilyCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.LastOnRowByteBufferedCell.html" title="class in org.apache.hadoop.hbase">CellUtil.LastOnRowByteBufferedCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.LastOnRowCell.html" title="class in org.apache.hadoop.hbase">CellUtil.LastOnRowCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.LastOnRowColByteBufferedCell.html" title="class in org.apache.hadoop.hbase">CellUtil.LastOnRowColByteBufferedCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.LastOnRowColCell.html" title="class in org.apache.hadoop.hbase">CellUtil.LastOnRowColCell</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.html#CellUtil()">CellUtil</a></strong>()</code>
+<div class="block">Private constructor to keep this class from being instantiated.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -430,6 +518,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.html#getSumOfCellElementLengths(org.apache.hadoop.hbase.Cell)">getSumOfCellElementLengths</a></strong>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.html#getSumOfCellKeyElementLengths(org.apache.hadoop.hbase.Cell)">getSumOfCellKeyElementLengths</a></strong>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellUtil.html#getTagArray(org.apache.hadoop.hbase.Cell)">getTagArray</a></strong>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>
 <div class="block">Returns tag value in a new byte array.</div>
@@ -702,6 +798,24 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="CellUtil()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>CellUtil</h4>
+<pre>private&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/CellUtil.html#line.52">CellUtil</a>()</pre>
+<div class="block">Private constructor to keep this class from being instantiated.</div>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
@@ -1353,6 +1467,29 @@ public static&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/
 <dt><span class="strong">Returns:</span></dt><dd>Estimate of the <code>cell</code> size in bytes.</dd></dl>
 </li>
 </ul>
+<a name="getSumOfCellElementLengths(org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSumOfCellElementLengths</h4>
+<pre>private static&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/CellUtil.html#line.704">getSumOfCellElementLengths</a>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cell</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>Sum of the lengths of all the elements in a Cell; does not count in any infrastructure</dd></dl>
+</li>
+</ul>
+<a name="getSumOfCellKeyElementLengths(org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSumOfCellKeyElementLengths</h4>
+<pre>private static&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/CellUtil.html#line.713">getSumOfCellKeyElementLengths</a>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cell</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>Sum of all elements that make up a key; does not include infrastructure, tags or
+ values.</dd></dl>
+</li>
+</ul>
 <a name="estimatedSerializedSizeOfKey(org.apache.hadoop.hbase.Cell)">
 <!--   -->
 </a>
@@ -1828,7 +1965,7 @@ public static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hba
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/ChoreService.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/CellUtil.EmptyByteBufferedCell.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/CellUtil.html" target="_top">Frames</a></li>
@@ -1852,15 +1989,15 @@ public static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hba
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

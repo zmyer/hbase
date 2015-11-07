@@ -100,10 +100,18 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferArray.Visitor.html" title="interface in org.apache.hadoop.hbase.util">ByteBufferArray.Visitor</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></td>
 <td class="colLast">
 <div class="block">Lightweight, reusable class for specifying ranges of byte[]'s.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.Comparer.html" title="interface in org.apache.hadoop.hbase.util">Bytes.Comparer</a>&lt;T&gt;</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a></td>
@@ -166,6 +174,10 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Threads.PrintThreadInfoHelper.html" title="interface in org.apache.hadoop.hbase.util">Threads.PrintThreadInfoHelper</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/WeakObjectPool.ObjectFactory.html" title="interface in org.apache.hadoop.hbase.util">WeakObjectPool.ObjectFactory</a>&lt;K,V&gt;</td>
 <td class="colLast">
 <div class="block">An <code>ObjectFactory</code> object is used to create
@@ -275,17 +287,21 @@
  However, this ones keeps the list of the future, and allows to cancel them all.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/BoundedConcurrentLinkedQueue.html" title="class in org.apache.hadoop.hbase.util">BoundedConcurrentLinkedQueue</a>&lt;T&gt;</td>
 <td class="colLast">
 <div class="block">A ConcurrentLinkedQueue that enforces a maximum queue size.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/BoundedPriorityBlockingQueue.html" title="class in org.apache.hadoop.hbase.util">BoundedPriorityBlockingQueue</a>&lt;E&gt;</td>
 <td class="colLast">
 <div class="block">A generic bounded blocking Priority-Queue.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/BoundedPriorityBlockingQueue.PriorityQueue.html" title="class in org.apache.hadoop.hbase.util">BoundedPriorityBlockingQueue.PriorityQueue</a>&lt;E&gt;</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferArray.html" title="class in org.apache.hadoop.hbase.util">ByteBufferArray</a></td>
@@ -321,36 +337,43 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.LexicographicalComparerHolder.html" title="class in org.apache.hadoop.hbase.util">Bytes.LexicographicalComparerHolder</a></td>
+<td class="colLast">
+<div class="block">Provides a lexicographical comparer implementation; either a Java
+ implementation or a faster implementation based on <code>Unsafe</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.RowEndKeyComparator.html" title="class in org.apache.hadoop.hbase.util">Bytes.RowEndKeyComparator</a></td>
 <td class="colLast">
 <div class="block">A <a href="../../../../../org/apache/hadoop/hbase/util/Bytes.ByteArrayComparator.html" title="class in org.apache.hadoop.hbase.util"><code>Bytes.ByteArrayComparator</code></a> that treats the empty array as the largest value.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ByteStringer.html" title="class in org.apache.hadoop.hbase.util">ByteStringer</a></td>
 <td class="colLast">
 <div class="block">Hack to workaround HBASE-10304 issue that keeps bubbling up when a mapreduce context.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ChecksumFactory.html" title="class in org.apache.hadoop.hbase.util">ChecksumFactory</a></td>
 <td class="colLast">
 <div class="block">Utility class that is used to generate a Checksum object.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Classes.html" title="class in org.apache.hadoop.hbase.util">Classes</a></td>
 <td class="colLast">
 <div class="block">Utilities for class manipulation.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ClassLoaderBase.html" title="class in org.apache.hadoop.hbase.util">ClassLoaderBase</a></td>
 <td class="colLast">
 <div class="block">Base class loader that defines couple shared constants used by sub-classes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ClassSize.html" title="class in org.apache.hadoop.hbase.util">ClassSize</a></td>
 <td class="colLast">
 <div class="block">Class for determining the "size" of a class, an attempt to calculate the
@@ -359,35 +382,41 @@
  The core of this class is taken from the Derby project</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/CollectionBackedScanner.html" title="class in org.apache.hadoop.hbase.util">CollectionBackedScanner</a></td>
 <td class="colLast">
 <div class="block">Utility scanner that wraps a sortable collection and serves
  as a KeyValueScanner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/CollectionUtils.html" title="class in org.apache.hadoop.hbase.util">CollectionUtils</a></td>
 <td class="colLast">
 <div class="block">Utility methods for dealing with Collections, including treating null collections as empty.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/CompressionTest.html" title="class in org.apache.hadoop.hbase.util">CompressionTest</a></td>
 <td class="colLast">
 <div class="block">Compression validation test.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ConcatenatedLists.html" title="class in org.apache.hadoop.hbase.util">ConcatenatedLists</a>&lt;T&gt;</td>
 <td class="colLast">
 <div class="block">A collection class that contains multiple sub-lists, which allows us to not copy lists.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ConcurrentIndex.html" title="class in org.apache.hadoop.hbase.util">ConcurrentIndex</a>&lt;K,V&gt;</td>
 <td class="colLast">
 <div class="block">A simple concurrent map of sets.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ConcurrentIndex.DefaultValueSetFactory.html" title="class in org.apache.hadoop.hbase.util">ConcurrentIndex.DefaultValueSetFactory</a>&lt;V&gt;</td>
+<td class="colLast">
+<div class="block">Default factory class for the sets associated with given keys.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -403,17 +432,29 @@
 <div class="block">A utility to store user specific HConnections in memory.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/CoprocessorClassLoader.html" title="class in org.apache.hadoop.hbase.util">CoprocessorClassLoader</a></td>
 <td class="colLast">
 <div class="block">ClassLoader used to load classes for Coprocessor instances.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></td>
 <td class="colLast">
 <div class="block">High scalable counter.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Counter.Cell.html" title="class in org.apache.hadoop.hbase.util">Counter.Cell</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Counter.Container.html" title="class in org.apache.hadoop.hbase.util">Counter.Container</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Counter.IndexHolder.html" title="class in org.apache.hadoop.hbase.util">Counter.IndexHolder</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/DefaultEnvironmentEdge.html" title="class in org.apache.hadoop.hbase.util">DefaultEnvironmentEdge</a></td>
@@ -471,21 +512,34 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FastLongHistogram.Bins.html" title="class in org.apache.hadoop.hbase.util">FastLongHistogram.Bins</a></td>
+<td class="colLast">
+<div class="block">Bins is a class containing a list of buckets(or bins) for estimation histogram of some data.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ForeignExceptionUtil.html" title="class in org.apache.hadoop.hbase.util">ForeignExceptionUtil</a></td>
 <td class="colLast">
 <div class="block">Helper to convert Exceptions and StackTraces from/to protobuf.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FSHDFSUtils.html" title="class in org.apache.hadoop.hbase.util">FSHDFSUtils</a></td>
 <td class="colLast">
 <div class="block">Implementation for hdfs</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FSMapRUtils.html" title="class in org.apache.hadoop.hbase.util">FSMapRUtils</a></td>
 <td class="colLast">
 <div class="block"><a href="http://www.mapr.com/">MapR</a> implementation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FSRegionScanner.html" title="class in org.apache.hadoop.hbase.util">FSRegionScanner</a></td>
+<td class="colLast">
+<div class="block">Thread that walks over the filesystem, and computes the mappings
+ <Region -> BestHost> and <Region -> Map<HostName, fractional-locality-of-region>></div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -520,70 +574,82 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FSUtils.FileFilter.html" title="class in org.apache.hadoop.hbase.util">FSUtils.FileFilter</a></td>
+<td class="colLast">
+<div class="block">A <code>PathFilter</code> that returns only regular files.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FSUtils.HFileFilter.html" title="class in org.apache.hadoop.hbase.util">FSUtils.HFileFilter</a></td>
 <td class="colLast">
 <div class="block">Filter for HFiles that excludes reference files.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FSUtils.ReferenceFileFilter.html" title="class in org.apache.hadoop.hbase.util">FSUtils.ReferenceFileFilter</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FSUtils.RegionDirFilter.html" title="class in org.apache.hadoop.hbase.util">FSUtils.RegionDirFilter</a></td>
 <td class="colLast">
 <div class="block">Filter for all dirs that don't start with '.'</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FSUtils.UserTableDirFilter.html" title="class in org.apache.hadoop.hbase.util">FSUtils.UserTableDirFilter</a></td>
 <td class="colLast">
 <div class="block">A <code>PathFilter</code> that returns usertable directories.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/FSVisitor.html" title="class in org.apache.hadoop.hbase.util">FSVisitor</a></td>
 <td class="colLast">
 <div class="block">Utility methods for interacting with the hbase.root file system.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/GetJavaProperty.html" title="class in org.apache.hadoop.hbase.util">GetJavaProperty</a></td>
 <td class="colLast">
 <div class="block">A generic way for querying Java properties.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Hash.html" title="class in org.apache.hadoop.hbase.util">Hash</a></td>
 <td class="colLast">
 <div class="block">This class represents a common API for hashing functions.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HashedBytes.html" title="class in org.apache.hadoop.hbase.util">HashedBytes</a></td>
 <td class="colLast">
 <div class="block">This class encapsulates a byte array and overrides hashCode and equals so
  that it's identity is based on the data rather than the array instance.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" title="class in org.apache.hadoop.hbase.util">HasThread</a></td>
 <td class="colLast">
 <div class="block">Abstract class which contains a Thread and delegates the common Thread
  methods to that instance.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseConfTool.html" title="class in org.apache.hadoop.hbase.util">HBaseConfTool</a></td>
 <td class="colLast">
 <div class="block">Tool that prints out a configuration.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck</a></td>
 <td class="colLast">
 <div class="block">HBaseFsck (hbck) is a tool for checking and repairing region consistency and
  table integrity problems in a corrupted HBase.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HBaseFsckTool.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.HBaseFsckTool</a></td>
+<td class="colLast">
+<div class="block">This is a Tool wrapper that gathers -Dxxx=yyy configuration settings from the command line.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -592,42 +658,109 @@
 <div class="block">Maintain information about a particular region.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HdfsEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.HdfsEntry</a></td>
+<td class="colLast">
+<div class="block">Stores the regioninfo entries from HDFS</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.MetaEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.MetaEntry</a></td>
+<td class="colLast">
+<div class="block">Stores the regioninfo entries scanned from META</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.OnlineEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.OnlineEntry</a></td>
+<td class="colLast">
+<div class="block">Stores the regioninfo retrieved from Online region servers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.PrintingErrorReporter.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.PrintingErrorReporter</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.RegionBoundariesInformation.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.RegionBoundariesInformation</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.WorkItemHdfsDir.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.WorkItemHdfsDir</a></td>
+<td class="colLast">
+<div class="block">Contact hdfs and get all information about specified table directory into
+ regioninfo list.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.WorkItemHdfsRegionInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.WorkItemHdfsRegionInfo</a></td>
+<td class="colLast">
+<div class="block">Contact hdfs and get all information about specified table directory into
+ regioninfo list.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.WorkItemOverlapMerge.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.WorkItemOverlapMerge</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.WorkItemRegion.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.WorkItemRegion</a></td>
+<td class="colLast">
+<div class="block">Contact a region server and get all information from it</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsckRepair.html" title="class in org.apache.hadoop.hbase.util">HBaseFsckRepair</a></td>
 <td class="colLast">
 <div class="block">This class contains helper methods that repair parts of hbase's filesystem
  contents.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HFileArchiveUtil.html" title="class in org.apache.hadoop.hbase.util">HFileArchiveUtil</a></td>
 <td class="colLast">
 <div class="block">Helper class for all utilities related to archival/retrieval of HFiles</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HFileV1Detector.html" title="class in org.apache.hadoop.hbase.util">HFileV1Detector</a></td>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HMerge.html" title="class in org.apache.hadoop.hbase.util">HMerge</a></td>
 <td class="colLast">
-<div class="block">Tool to detect presence of any HFileV1 in the given directory.</div>
+<div class="block">A non-instantiable class that has a static method capable of compacting
+ a table by merging adjacent regions.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HMerge.Merger.html" title="class in org.apache.hadoop.hbase.util">HMerge.Merger</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HMerge.OnlineMerger.html" title="class in org.apache.hadoop.hbase.util">HMerge.OnlineMerger</a></td>
+<td class="colLast">
+<div class="block">Instantiated to compact a normal user table</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/HttpServerUtil.html" title="class in org.apache.hadoop.hbase.util">HttpServerUtil</a></td>
 <td class="colLast">
 <div class="block">HttpServer utility.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/IdLock.html" title="class in org.apache.hadoop.hbase.util">IdLock</a></td>
 <td class="colLast">
 <div class="block">Allows multiple concurrent clients to lock on a numeric id with a minimal
  memory overhead.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/IdLock.Entry.html" title="class in org.apache.hadoop.hbase.util">IdLock.Entry</a></td>
 <td class="colLast">
 <div class="block">An entry returned to the client as a lock object</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/IdReadWriteLock.html" title="class in org.apache.hadoop.hbase.util">IdReadWriteLock</a></td>
+<td class="colLast">
+<div class="block">Allows multiple concurrent clients to lock on a numeric id with ReentrantReadWriteLock.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -693,6 +826,10 @@
 <div class="block">Class which sets up a simple thread which runs in a loop sleeping
  for a short interval of time.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/JvmPauseMonitor.GcTimes.html" title="class in org.apache.hadoop.hbase.util">JvmPauseMonitor.GcTimes</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/JvmVersion.html" title="class in org.apache.hadoop.hbase.util">JvmVersion</a></td>
@@ -817,6 +954,13 @@
  of which are managed by a pool.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/PoolMap.ThreadLocalPool.html" title="class in org.apache.hadoop.hbase.util">PoolMap.ThreadLocalPool</a>&lt;R&gt;</td>
+<td class="colLast">
+<div class="block">The <code>ThreadLocalPool</code> represents a <a href="../../../../../org/apache/hadoop/hbase/util/PoolMap.Pool.html" title="interface in org.apache.hadoop.hbase.util"><code>PoolMap.Pool</code></a> that
+ builds on the <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ThreadLocal.html?is-external=true" title="class or interface in java.lang"><code>ThreadLocal</code></a> class.</div>
+</td>
+</tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/PrettyPrinter.html" title="class in org.apache.hadoop.hbase.util">PrettyPrinter</a></td>
 <td class="colLast">&nbsp;</td>
@@ -836,7 +980,7 @@
  line directly as a utility.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a></td>
 <td class="colLast">
 <div class="block">Builder for Region mover.Use the <a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#build()"><code>RegionMover.RegionMoverBuilder.build()</code></a> method to create <code>#RegionMover(String)</code>
@@ -931,6 +1075,14 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ShutdownHookManager.ShutdownHookManagerV1.html" title="class in org.apache.hadoop.hbase.util">ShutdownHookManager.ShutdownHookManagerV1</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ShutdownHookManager.ShutdownHookManagerV2.html" title="class in org.apache.hadoop.hbase.util">ShutdownHookManager.ShutdownHookManagerV2</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/SimpleByteRange.html" title="class in org.apache.hadoop.hbase.util">SimpleByteRange</a></td>
 <td class="colLast">
 <div class="block">A read only version of the <a href="../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util"><code>ByteRange</code></a>.</div>
@@ -995,23 +1147,27 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Threads.PrintThreadInfoLazyHolder.html" title="class in org.apache.hadoop.hbase.util">Threads.PrintThreadInfoLazyHolder</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Triple.html" title="class in org.apache.hadoop.hbase.util">Triple</a>&lt;A,B,C&gt;</td>
 <td class="colLast">
 <div class="block">Utility class to manage a triple.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/UnsafeAccess.html" title="class in org.apache.hadoop.hbase.util">UnsafeAccess</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/VersionInfo.html" title="class in org.apache.hadoop.hbase.util">VersionInfo</a></td>
 <td class="colLast">
 <div class="block">This class finds the package info for hbase and the VersionAnnotation
  information.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/WeakObjectPool.html" title="class in org.apache.hadoop.hbase.util">WeakObjectPool</a>&lt;K,V&gt;</td>
 <td class="colLast">
 <div class="block">A <code>WeakReference</code> based shared object pool.</div>
@@ -1046,6 +1202,14 @@
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.LexicographicalComparerHolder.PureJavaComparer.html" title="enum in org.apache.hadoop.hbase.util">Bytes.LexicographicalComparerHolder.PureJavaComparer</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.LexicographicalComparerHolder.UnsafeComparer.html" title="enum in org.apache.hadoop.hbase.util">Bytes.LexicographicalComparerHolder.UnsafeComparer</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a></td>
 <td class="colLast">

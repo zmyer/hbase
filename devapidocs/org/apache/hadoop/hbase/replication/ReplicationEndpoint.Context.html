@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -108,6 +108,53 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#clusterId">clusterId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/MetricsSource.html" title="class in org.apache.hadoop.hbase.replication.regionserver">MetricsSource</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#metrics">metrics</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#peerConfig">peerConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#peerId">peerId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeer.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationPeer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#replicationPeer">replicationPeer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/TableDescriptors.html" title="interface in org.apache.hadoop.hbase">TableDescriptors</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#tableDescriptors">tableDescriptors</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -192,6 +239,86 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#line.53">conf</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private final&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#line.54">fs</a></pre>
+</li>
+</ul>
+<a name="tableDescriptors">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableDescriptors</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/TableDescriptors.html" title="interface in org.apache.hadoop.hbase">TableDescriptors</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#line.55">tableDescriptors</a></pre>
+</li>
+</ul>
+<a name="peerConfig">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>peerConfig</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#line.56">peerConfig</a></pre>
+</li>
+</ul>
+<a name="replicationPeer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>replicationPeer</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeer.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationPeer</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#line.57">replicationPeer</a></pre>
+</li>
+</ul>
+<a name="peerId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>peerId</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#line.58">peerId</a></pre>
+</li>
+</ul>
+<a name="clusterId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clusterId</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#line.59">clusterId</a></pre>
+</li>
+</ul>
+<a name="metrics">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>metrics</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/MetricsSource.html" title="class in org.apache.hadoop.hbase.replication.regionserver">MetricsSource</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationEndpoint.Context.html#line.60">metrics</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -347,13 +474,13 @@ public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

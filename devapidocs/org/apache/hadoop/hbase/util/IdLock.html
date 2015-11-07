@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -135,6 +135,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </table>
 </li>
 </ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../../org/apache/hadoop/hbase/util/IdLock.Entry.html" title="class in org.apache.hadoop.hbase.util">IdLock.Entry</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/IdLock.html#map">map</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -165,12 +184,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/IdLock.html#assertMapEmpty()">assertMapEmpty</a></strong>()</code>
+<div class="block">For testing</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/util/IdLock.Entry.html" title="class in org.apache.hadoop.hbase.util">IdLock.Entry</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/IdLock.html#getLockEntry(long)">getLockEntry</a></strong>(long&nbsp;id)</code>
 <div class="block">Blocks until the lock corresponding to the given id is acquired.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/IdLock.html#releaseLockEntry(org.apache.hadoop.hbase.util.IdLock.Entry)">releaseLockEntry</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/IdLock.Entry.html" title="class in org.apache.hadoop.hbase.util">IdLock.Entry</a>&nbsp;entry)</code>
 <div class="block">Must be called in a finally block to decrease the internal counter and
@@ -178,7 +203,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  client.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/IdLock.html#waitForWaiters(long,%20int)">waitForWaiters</a></strong>(long&nbsp;id,
                             int&nbsp;numWaiters)</code>&nbsp;</td>
@@ -199,6 +224,23 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="map">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>map</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../../org/apache/hadoop/hbase/util/IdLock.Entry.html" title="class in org.apache.hadoop.hbase.util">IdLock.Entry</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/IdLock.html#line.61">map</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -249,6 +291,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  remove the monitor object for the given id if the caller is the last
  client.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>entry</code> - the return value of <a href="../../../../../org/apache/hadoop/hbase/util/IdLock.html#getLockEntry(long)"><code>getLockEntry(long)</code></a></dd></dl>
+</li>
+</ul>
+<a name="assertMapEmpty()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertMapEmpty</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/IdLock.html#line.120">assertMapEmpty</a>()</pre>
+<div class="block">For testing</div>
 </li>
 </ul>
 <a name="waitForWaiters(long, int)">
@@ -316,13 +368,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

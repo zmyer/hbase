@@ -75,38 +75,42 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase">org.apache.hadoop.hbase</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client</a></td>
 <td class="colLast">
 <div class="block">Provides HBase Client</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.coprocessor">org.apache.hadoop.hbase.coprocessor</a></td>
 <td class="colLast">
 <div class="block">Table of Contents</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.quotas">org.apache.hadoop.hbase.quotas</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.rest.client">org.apache.hadoop.hbase.rest.client</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.thrift2">org.apache.hadoop.hbase.thrift2</a></td>
 <td class="colLast">
 <div class="block">Provides an HBase <a href="http://thrift.apache.org/">Thrift</a>
@@ -118,6 +122,25 @@ service.</div>
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a> in <a href="../../../../../../org/apache/hadoop/hbase/package-summary.html">org.apache.hadoop.hbase</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/package-summary.html">org.apache.hadoop.hbase</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><span class="strong">MetaTableAccessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html#get(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Get)">get</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;t,
+      <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;g)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.client">
 <!--   -->
 </a>
@@ -290,6 +313,11 @@ service.</div>
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
 <td class="colLast"><span class="strong">HTableWrapper.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTableWrapper.html#get(org.apache.hadoop.hbase.client.Get)">get</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><span class="strong">HTable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTable.html#get(org.apache.hadoop.hbase.client.Get,%20boolean)">get</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
+      boolean&nbsp;checkExistenceOnly)</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -303,7 +331,7 @@ service.</div>
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>[]</code></td>
 <td class="colLast"><span class="strong">HTableWrapper.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTableWrapper.html#exists(java.util.List)">exists</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>Use <a href="../../../../../../org/apache/hadoop/hbase/client/HTableWrapper.html#existsAll(java.util.List)"><code>HTableWrapper.existsAll(java.util.List)</code></a>  instead.</i></div>
+<div class="block"><i>Use <a href="../../../../../../org/apache/hadoop/hbase/client/HTableWrapper.html#existsAll(java.util.List)"><code>HTableWrapper.existsAll(java.util.List)</code></a>  instead. since 2.0.  remove in 3.0</i></div>
 </div>
 </td>
 </tr>
@@ -470,14 +498,18 @@ service.</div>
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a></code></td>
-<td class="colLast"><span class="strong">QuotaTableUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaTableUtil.html#makeGetForNamespaceQuotas(java.lang.String)">makeGetForNamespaceQuotas</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespace)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a></code></td>
+<td class="colLast"><span class="strong">QuotaCache.Fetcher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.Fetcher.html#makeGet(java.util.Map.Entry)">makeGet</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.Fetcher.html" title="type parameter in QuotaCache.Fetcher">Key</a>,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.Fetcher.html" title="type parameter in QuotaCache.Fetcher">Value</a>&gt;&nbsp;entry)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a></code></td>
-<td class="colLast"><span class="strong">QuotaTableUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaTableUtil.html#makeGetForTableQuotas(org.apache.hadoop.hbase.TableName)">makeGetForTableQuotas</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">QuotaTableUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaTableUtil.html#makeGetForNamespaceQuotas(java.lang.String)">makeGetForNamespaceQuotas</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespace)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a></code></td>
+<td class="colLast"><span class="strong">QuotaTableUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaTableUtil.html#makeGetForTableQuotas(org.apache.hadoop.hbase.TableName)">makeGetForTableQuotas</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a></code></td>
 <td class="colLast"><span class="strong">QuotaTableUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaTableUtil.html#makeGetForUserQuotas(java.lang.String,%20java.lang.Iterable,%20java.lang.Iterable)">makeGetForUserQuotas</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&gt;&nbsp;tables,
@@ -512,23 +544,27 @@ service.</div>
           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.Fetcher.html" title="type parameter in QuotaCache.Fetcher">Key</a>,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.Fetcher.html" title="type parameter in QuotaCache.Fetcher">Value</a>&gt;</code></td>
+<td class="colLast"><span class="strong">QuotaCache.Fetcher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.Fetcher.html#fetchEntries(java.util.List)">fetchEntries</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static &lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaState.html" title="class in org.apache.hadoop.hbase.quotas">QuotaState</a>&gt;</code></td>
 <td class="colLast"><span class="strong">QuotaUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.html#fetchGlobalQuotas(java.lang.String,%20org.apache.hadoop.hbase.client.Connection,%20java.util.List,%20org.apache.hadoop.hbase.quotas.QuotaUtil.KeyFromRow)">fetchGlobalQuotas</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;type,
                                   <a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets,
-                                  org.apache.hadoop.hbase.quotas.QuotaUtil.KeyFromRow&lt;K&gt;&nbsp;kfr)</code>&nbsp;</td>
+                                  <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.KeyFromRow.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaUtil.KeyFromRow</a>&lt;K&gt;&nbsp;kfr)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaState.html" title="class in org.apache.hadoop.hbase.quotas">QuotaState</a>&gt;</code></td>
 <td class="colLast"><span class="strong">QuotaUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.html#fetchNamespaceQuotas(org.apache.hadoop.hbase.client.Connection,%20java.util.List)">fetchNamespaceQuotas</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaState.html" title="class in org.apache.hadoop.hbase.quotas">QuotaState</a>&gt;</code></td>
 <td class="colLast"><span class="strong">QuotaUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.html#fetchTableQuotas(org.apache.hadoop.hbase.client.Connection,%20java.util.List)">fetchTableQuotas</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html" title="class in org.apache.hadoop.hbase.quotas">UserQuotaState</a>&gt;</code></td>
 <td class="colLast"><span class="strong">QuotaUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.html#fetchUserQuotas(org.apache.hadoop.hbase.client.Connection,%20java.util.List)">fetchUserQuotas</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>&nbsp;</td>
@@ -570,23 +606,34 @@ service.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#get(org.apache.hadoop.hbase.client.Get,%20org.apache.hadoop.hbase.regionserver.HRegion,%20org.apache.hadoop.hbase.regionserver.RSRpcServices.RegionScannersCloseCallBack,%20org.apache.hadoop.hbase.ipc.RpcCallContext)">get</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
+      <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;region,
+      <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannersCloseCallBack.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannersCloseCallBack</a>&nbsp;closeCallBack,
+      <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallContext.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallContext</a>&nbsp;context)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postExists(org.apache.hadoop.hbase.client.Get,%20boolean)">postExists</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
                     boolean&nbsp;exists)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postGet(org.apache.hadoop.hbase.client.Get,%20java.util.List)">postGet</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;results)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preExists(org.apache.hadoop.hbase.client.Get)">preExists</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preGet(org.apache.hadoop.hbase.client.Get,%20java.util.List)">preGet</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;results)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#prepareGet(org.apache.hadoop.hbase.client.Get)">prepareGet</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -594,6 +641,13 @@ service.</div>
                                                                       <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv,
                                                                       byte[]&nbsp;byteNow,
                                                                       <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#updateDeleteLatestVersionTimeStamp(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.client.Get,%20int,%20byte[])">updateDeleteLatestVersionTimeStamp</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
+                                                                    <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
+                                                                    int&nbsp;count,
+                                                                    byte[]&nbsp;byteNow)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

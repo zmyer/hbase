@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepMapper.html" title="class in org.apache.hadoop.hbase.mob.mapreduce"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.SweepPartition.html" title="class in org.apache.hadoop.hbase.mob.mapreduce"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.MobFileStatus.html" title="class in org.apache.hadoop.hbase.mob.mapreduce"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html" target="_top">Frames</a></li>
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -131,6 +131,16 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;org.apache.hadoop.io.Text,<a href
 <th class="colLast" scope="col">Class and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.MobFileStatus.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">SweepReducer.MobFileStatus</a></strong></code>
+<div class="block">The mob file status used in the sweep reduecer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.PathPrefixFilter.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">SweepReducer.PathPrefixFilter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.SweepPartition.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">SweepReducer.SweepPartition</a></strong></code>
 <div class="block">The mob files which have the same start key and date are in the same partition.</div>
@@ -144,6 +154,69 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;org.apache.hadoop.io.Text,<a href
 <h3>Nested classes/interfaces inherited from class&nbsp;org.apache.hadoop.mapreduce.Reducer</h3>
 <code>org.apache.hadoop.mapreduce.Reducer.Context</code></li>
 </ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#cacheConfig">cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#compactionBegin">compactionBegin</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#family">family</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#familyDir">familyDir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">MemStoreWrapper</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#memstore">memstore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#mobCompactionDelay">mobCompactionDelay</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#mobTableDir">mobTableDir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client">BufferedMutator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#table">table</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.io.SequenceFile.Writer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#writer">writer</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 </li>
 </ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -176,6 +249,17 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;org.apache.hadoop.io.Text,<a href
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.SweepPartition.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">SweepReducer.SweepPartition</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#createPartition(org.apache.hadoop.hbase.mob.compactions.PartitionedMobCompactionRequest.CompactionPartitionId,%20org.apache.hadoop.mapreduce.Reducer.Context)">createPartition</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactionRequest.CompactionPartitionId.html" title="class in org.apache.hadoop.hbase.mob.compactions">PartitionedMobCompactionRequest.CompactionPartitionId</a>&nbsp;id,
+                              org.apache.hadoop.mapreduce.Reducer.Context&nbsp;context)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactionRequest.CompactionPartitionId.html" title="class in org.apache.hadoop.hbase.mob.compactions">PartitionedMobCompactionRequest.CompactionPartitionId</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#createPartitionId(java.lang.String)">createPartitionId</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileNameAsString)</code>
+<div class="block">Creates the partition id.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#run(org.apache.hadoop.mapreduce.Reducer.Context)">run</a></strong>(org.apache.hadoop.mapreduce.Reducer.Context&nbsp;context)</code>&nbsp;</td>
 </tr>
@@ -206,6 +290,122 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;org.apache.hadoop.io.Text,<a href
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.90">LOG</a></pre>
+</li>
+</ul>
+<a name="writer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writer</h4>
+<pre>private&nbsp;org.apache.hadoop.io.SequenceFile.Writer <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.92">writer</a></pre>
+</li>
+</ul>
+<a name="memstore">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>memstore</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">MemStoreWrapper</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.93">memstore</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.94">conf</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.95">fs</a></pre>
+</li>
+</ul>
+<a name="familyDir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>familyDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.97">familyDir</a></pre>
+</li>
+</ul>
+<a name="cacheConfig">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cacheConfig</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.98">cacheConfig</a></pre>
+</li>
+</ul>
+<a name="compactionBegin">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compactionBegin</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.99">compactionBegin</a></pre>
+</li>
+</ul>
+<a name="table">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>table</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client">BufferedMutator</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.100">table</a></pre>
+</li>
+</ul>
+<a name="family">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>family</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.101">family</a></pre>
+</li>
+</ul>
+<a name="mobCompactionDelay">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobCompactionDelay</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.102">mobCompactionDelay</a></pre>
+</li>
+</ul>
+<a name="mobTableDir">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>mobTableDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.103">mobTableDir</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -246,10 +446,23 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;org.apache.hadoop.io.Text,<a href
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
+<a name="createPartition(org.apache.hadoop.hbase.mob.compactions.PartitionedMobCompactionRequest.CompactionPartitionId, org.apache.hadoop.mapreduce.Reducer.Context)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createPartition</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.SweepPartition.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">SweepReducer.SweepPartition</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.146">createPartition</a>(<a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactionRequest.CompactionPartitionId.html" title="class in org.apache.hadoop.hbase.mob.compactions">PartitionedMobCompactionRequest.CompactionPartitionId</a>&nbsp;id,
+                                          org.apache.hadoop.mapreduce.Reducer.Context&nbsp;context)
+                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="run(org.apache.hadoop.mapreduce.Reducer.Context)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>run</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.152">run</a>(org.apache.hadoop.mapreduce.Reducer.Context&nbsp;context)
@@ -261,6 +474,18 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;org.apache.hadoop.io.Text,<a href
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createPartitionId(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createPartitionId</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactionRequest.CompactionPartitionId.html" title="class in org.apache.hadoop.hbase.mob.compactions">PartitionedMobCompactionRequest.CompactionPartitionId</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#line.401">createPartitionId</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileNameAsString)</pre>
+<div class="block">Creates the partition id.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fileNameAsString</code> - The current file name, in string.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The partition id.</dd></dl>
 </li>
 </ul>
 </li>
@@ -290,7 +515,7 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;org.apache.hadoop.io.Text,<a href
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepMapper.html" title="class in org.apache.hadoop.hbase.mob.mapreduce"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.SweepPartition.html" title="class in org.apache.hadoop.hbase.mob.mapreduce"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.MobFileStatus.html" title="class in org.apache.hadoop.hbase.mob.mapreduce"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html" target="_top">Frames</a></li>
@@ -315,13 +540,13 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;org.apache.hadoop.io.Text,<a href
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

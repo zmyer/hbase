@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyLoadBalancer.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionObserver.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.master.HMaster">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.master.HMaster">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -118,7 +118,7 @@
 </dl>
 <hr>
 <br>
-<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1203">TestAssignmentManagerOnCluster.MyMaster</a>
+<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1202">TestAssignmentManagerOnCluster.MyMaster</a>
 extends org.apache.hadoop.hbase.master.HMaster</pre>
 </li>
 </ul>
@@ -161,12 +161,23 @@ extends org.apache.hadoop.hbase.master.HMaster</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html#enabled">enabled</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.master.HMaster">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.master.HMaster</h3>
-<code>MASTER</code></li>
+<code>assignmentManager, balancer, catalogJanitorChore, coprocessorServiceHandlers, cpHost, initialized, loadBalancerTracker, MASTER, metricsMaster, mpmHost, regionServerTracker, rsFatals, serverManager, serviceStarted, snapshotManager</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegionServer">
@@ -221,7 +232,7 @@ extends org.apache.hadoop.hbase.master.HMaster</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.master.HMaster</h3>
-<code>abort, abortProcedure, addColumn, assignRegion, balance, balance, balanceSwitch, canCreateBaseZNode, canUpdateTableDescriptor, checkTableModifiable, configureInfoServer, constructMaster, createNamespace, createNamespaceSync, createRpcServices, createTable, deleteColumn, deleteNamespace, deleteTable, disableTable, dispatchMergingRegions, doMetrics, enableTable, getAssignmentManager, getAverageLoad, getClusterStatus, getDumpServlet, getFsTableDescriptors, getHFileCleaner, getLastMajorCompactionTimestamp, getLastMajorCompactionTimestampForRegion, getLoadBalancerClassName, getLoadedCoprocessors, getMasterActiveTime, getMasterCoprocessorHost, getMasterCoprocessors, getMasterFileSystem, getMasterProcedureExecutor, getMasterQuotaManager, getMasterRpcServices, getMasterStartTime, getMobCompactionState, getNamespaceDescriptor, getProcessName, getRegionNormalizerTracker, getRegionServerFatalLogBuffer, getRegionServerInfoPort, getRegionServerVersion, getServerManager, getServerName, getSnapshotManagerForTesting, getTableDescriptors, getTableNamespaceManager, getTableStateManager, getZooKeeper, isActiveMaster, isBalancerOn, isInitializationStartsMetaRegionAssignment, isInitialized, isNormalizerOn, listNamespaceDescriptors, listProcedures, listTableDescriptors, listTableDescriptorsByNamespace, listTableNames, listTableNamesByNamespace, login, main, modifyColumn, modifyNamespace, modifyTable, normalizeRegions, registerService, reportMobCompactionEnd, reportMobCompactionStart, requestMobCompaction, sendShutdownInterrupt, setCatalogJanitorEnabled, setServerCrashProcessingEnabled, shutdown, stopMaster, stopServiceThreads, truncateTable, waitForMasterActive</code></li>
+<code><clinit>, abort, abortProcedure, addColumn, assignMeta, assignRegion, balance, balance, balanceSwitch, canCreateBaseZNode, canUpdateTableDescriptor, checkInitialized, checkNamespaceManagerReady, checkServiceStarted, checkTableModifiable, configureInfoServer, constructMaster, createNamespace, createNamespaceSync, createRpcServices, createServerManager, createTable, deleteColumn, deleteNamespace, deleteTable, disableTable, dispatchMergingRegions, doMetrics, enableTable, getAssignmentManager, getAverageLoad, getClientIdAuditPrefix, getClusterStatus, getDumpServlet, getFsTableDescriptors, getHFileCleaner, getLastMajorCompactionTimestamp, getLastMajorCompactionTimestampForRegion, getLoadBalancerClassName, getLoadedCoprocessors, getMasterActiveTime, getMasterCoprocessorHost, getMasterCoprocessors, getMasterFileSystem, getMasterMetrics, getMasterProcedureExecutor, getMasterQuotaManager, getMasterRpcServices, getMasterStartTime, getMobCompactionState, getNamespaceDescriptor, getProcessName, getRegionNormalizerTracker, getRegionServerFatalLogBuffer, getRegionServerInfoPort, getRegionServerVersion, getRemoteInetAddress, getServerManager, getServerName, getSnapshotManagerForTesting, getTableDescriptors, getTableNamespaceManager, getTableRegionForRow, getTableStateManager, getZooKeeper, initializeZKBasedSystemTrackers, initNamespace, initQuotaManager, isActiveMaster, isBalancerOn, isCatalogJanitorEnabled, isInitializationStartsMetaRegionAssignment, isInitialized, isNormalizerOn, listNamespaceDescriptors, listProcedures, listTableDescriptors, listTableDescriptorsByNamespace, listTableNames, listTableNamesByNamespace, login, main, modifyColumn, modifyNamespace, modifyTable, move, normalizeRegions, registerService, reportMobCompactionEnd, reportMobCompactionStart, requestMobCompaction, sendShutdownInterrupt, setCatalogJanitorEnabled, setServerCrashProcessingEnabled, shutdown, stopMaster, stopServiceThreads, truncateTable, waitForMasterActive</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegionServer">
@@ -280,6 +291,23 @@ extends org.apache.hadoop.hbase.master.HMaster</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="enabled">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>enabled</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html#line.1203">enabled</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -292,7 +320,7 @@ extends org.apache.hadoop.hbase.master.HMaster</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestAssignmentManagerOnCluster.MyMaster</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html#line.1206">TestAssignmentManagerOnCluster.MyMaster</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html#line.1205">TestAssignmentManagerOnCluster.MyMaster</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                        org.apache.hadoop.hbase.CoordinatedStateManager&nbsp;cp)
                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                                org.apache.zookeeper.KeeperException,
@@ -317,7 +345,7 @@ extends org.apache.hadoop.hbase.master.HMaster</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isServerCrashProcessingEnabled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html#line.1213">isServerCrashProcessingEnabled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html#line.1212">isServerCrashProcessingEnabled</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code>isServerCrashProcessingEnabled</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.master.MasterServices</code></dd>
@@ -332,7 +360,7 @@ extends org.apache.hadoop.hbase.master.HMaster</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>enableSSH</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html#line.1217">enableSSH</a>(boolean&nbsp;enabled)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html#line.1216">enableSSH</a>(boolean&nbsp;enabled)</pre>
 </li>
 </ul>
 </li>
@@ -361,7 +389,7 @@ extends org.apache.hadoop.hbase.master.HMaster</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyLoadBalancer.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionObserver.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -387,13 +415,13 @@ extends org.apache.hadoop.hbase.master.HMaster</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.master.HMaster">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.master.HMaster">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

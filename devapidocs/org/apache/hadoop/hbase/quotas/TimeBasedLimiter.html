@@ -61,14 +61,14 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -111,6 +111,72 @@ implements <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.h
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.AvgOperationSize.html" title="class in org.apache.hadoop.hbase.quotas">OperationQuota.AvgOperationSize</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#avgOpSize">avgOpSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#readReqsLimiter">readReqsLimiter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#readSizeLimiter">readSizeLimiter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#reqSizeLimiter">reqSizeLimiter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#reqsLimiter">reqsLimiter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#writeReqsLimiter">writeReqsLimiter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#writeSizeLimiter">writeSizeLimiter</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#TimeBasedLimiter()">TimeBasedLimiter</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -150,27 +216,36 @@ implements <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.h
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#fromThrottle(org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Throttle)">fromThrottle</a></strong>(org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Throttle&nbsp;throttle)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#getAvgOperationSize(org.apache.hadoop.hbase.quotas.OperationQuota.OperationType)">getAvgOperationSize</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.OperationType.html" title="enum in org.apache.hadoop.hbase.quotas">OperationQuota.OperationType</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#getReadAvailable()">getReadAvailable</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#getWriteAvailable()">getWriteAvailable</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#grabQuota(long,%20long)">grabQuota</a></strong>(long&nbsp;writeSize,
                   long&nbsp;readSize)</code>
 <div class="block">Removes the specified write and read amount from the quota.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#isBypass()">isBypass</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#setFromTimedQuota(org.apache.hadoop.hbase.quotas.RateLimiter,%20org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.TimedQuota)">setFromTimedQuota</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a>&nbsp;limiter,
+                                  org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.TimedQuota&nbsp;timedQuota)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -196,12 +271,118 @@ implements <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.h
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private static final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.38">conf</a></pre>
+</li>
+</ul>
+<a name="reqsLimiter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reqsLimiter</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.39">reqsLimiter</a></pre>
+</li>
+</ul>
+<a name="reqSizeLimiter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reqSizeLimiter</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.40">reqSizeLimiter</a></pre>
+</li>
+</ul>
+<a name="writeReqsLimiter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeReqsLimiter</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.41">writeReqsLimiter</a></pre>
+</li>
+</ul>
+<a name="writeSizeLimiter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeSizeLimiter</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.42">writeSizeLimiter</a></pre>
+</li>
+</ul>
+<a name="readReqsLimiter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readReqsLimiter</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.43">readReqsLimiter</a></pre>
+</li>
+</ul>
+<a name="readSizeLimiter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readSizeLimiter</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.44">readSizeLimiter</a></pre>
+</li>
+</ul>
+<a name="avgOpSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>avgOpSize</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.AvgOperationSize.html" title="class in org.apache.hadoop.hbase.quotas">OperationQuota.AvgOperationSize</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.45">avgOpSize</a></pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="TimeBasedLimiter()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TimeBasedLimiter</h4>
+<pre>private&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.47">TimeBasedLimiter</a>()</pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="fromThrottle(org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Throttle)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fromThrottle</h4>
+<pre>static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.67">fromThrottle</a>(org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Throttle&nbsp;throttle)</pre>
+</li>
+</ul>
 <a name="update(org.apache.hadoop.hbase.quotas.TimeBasedLimiter)">
 <!--   -->
 </a>
@@ -209,6 +390,16 @@ implements <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.h
 <li class="blockList">
 <h4>update</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.102">update</a>(<a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html" title="class in org.apache.hadoop.hbase.quotas">TimeBasedLimiter</a>&nbsp;other)</pre>
+</li>
+</ul>
+<a name="setFromTimedQuota(org.apache.hadoop.hbase.quotas.RateLimiter, org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.TimedQuota)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFromTimedQuota</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#line.111">setFromTimedQuota</a>(<a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html" title="class in org.apache.hadoop.hbase.quotas">RateLimiter</a>&nbsp;limiter,
+                     org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.TimedQuota&nbsp;timedQuota)</pre>
 </li>
 </ul>
 <a name="checkQuota(long, long)">
@@ -414,14 +605,14 @@ implements <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.h
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

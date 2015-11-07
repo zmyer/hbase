@@ -93,7 +93,7 @@
 <a class="jxr_linenumber" name="83" href="#83">83</a>    <em class="jxr_comment">// entry in the wal, the inputstream's position is equal to walEditsStopOffset.</em>
 <a class="jxr_linenumber" name="84" href="#84">84</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">long</strong> walEditsStopOffset;
 <a class="jxr_linenumber" name="85" href="#85">85</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> trailerPresent;
-<a class="jxr_linenumber" name="86" href="#86">86</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALTrailer</a> trailer;
+<a class="jxr_linenumber" name="86" href="#86">86</a>    <strong class="jxr_keyword">protected</strong> WALTrailer trailer;
 <a class="jxr_linenumber" name="87" href="#87">87</a>    <em class="jxr_comment">// maximum size of the wal Trailer in bytes. If a user writes/reads a trailer with size larger</em>
 <a class="jxr_linenumber" name="88" href="#88">88</a>    <em class="jxr_comment">// than this size, it is written/read respectively, with a WARN message in the log.</em>
 <a class="jxr_linenumber" name="89" href="#89">89</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> trailerWarnSize;
@@ -353,7 +353,7 @@
 <a class="jxr_linenumber" name="343" href="#343">343</a>           <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> EOFException(<span class="jxr_string">"Partial PB while reading WAL, "</span> +
 <a class="jxr_linenumber" name="344" href="#344">344</a>               <span class="jxr_string">"probably an unexpected EOF, ignoring"</span>);
 <a class="jxr_linenumber" name="345" href="#345">345</a>         }
-<a class="jxr_linenumber" name="346" href="#346">346</a>         <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> walKey = builder.build();
+<a class="jxr_linenumber" name="346" href="#346">346</a>         WALKey walKey = builder.build();
 <a class="jxr_linenumber" name="347" href="#347">347</a>         entry.getKey().readFieldsFromPb(walKey, <strong class="jxr_keyword">this</strong>.byteStringUncompressor);
 <a class="jxr_linenumber" name="348" href="#348">348</a>         <strong class="jxr_keyword">if</strong> (!walKey.hasFollowingKvCount() || 0 == walKey.getFollowingKvCount()) {
 <a class="jxr_linenumber" name="349" href="#349">349</a>           LOG.trace(<span class="jxr_string">"WALKey has no KVs that follow it; trying the next one"</span>);

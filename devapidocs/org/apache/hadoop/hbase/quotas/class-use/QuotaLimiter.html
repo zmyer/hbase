@@ -95,6 +95,12 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/NoopQuotaLimiter.html" title="class in org.apache.hadoop.hbase.quotas">NoopQuotaLimiter</a></strong></code>
+<div class="block">Noop quota limiter returned when no limiter is associated to the user/table</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html" title="class in org.apache.hadoop.hbase.quotas">TimeBasedLimiter</a></strong></code>
 <div class="block">Simple time based limiter that checks the quota Throttle</div>
@@ -113,6 +119,31 @@
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
 <td class="colLast"><span class="strong">QuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaState.html#globalLimiter">globalLimiter</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
+<td class="colLast"><span class="strong">NoopQuotaLimiter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/NoopQuotaLimiter.html#instance">instance</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/quotas/package-summary.html">org.apache.hadoop.hbase.quotas</a> with type parameters of type <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;</code></td>
+<td class="colLast"><span class="strong">DefaultOperationQuota.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/DefaultOperationQuota.html#limiters">limiters</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;</code></td>
+<td class="colLast"><span class="strong">UserQuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html#namespaceLimiters">namespaceLimiters</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;</code></td>
+<td class="colLast"><span class="strong">UserQuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html#tableLimiters">tableLimiters</a></strong></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -127,40 +158,74 @@
 <td class="colLast"><span class="strong">QuotaLimiterFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiterFactory.html#fromThrottle(org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Throttle)">fromThrottle</a></strong>(org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Throttle&nbsp;throttle)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
+<td class="colLast"><span class="strong">TimeBasedLimiter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html#fromThrottle(org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Throttle)">fromThrottle</a></strong>(org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Throttle&nbsp;throttle)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
+<td class="colLast"><span class="strong">NoopQuotaLimiter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/NoopQuotaLimiter.html#get()">get</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
 <td class="colLast"><span class="strong">QuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaState.html#getGlobalLimiter()">getGlobalLimiter</a></strong>()</code>
 <div class="block">Return the limiter associated with this quota.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
+<td class="colLast"><span class="strong">QuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaState.html#getGlobalLimiterWithoutUpdatingLastQuery()">getGlobalLimiterWithoutUpdatingLastQuery</a></strong>()</code>
+<div class="block">Return the limiter associated with this quota without updating internal last query stats</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
 <td class="colLast"><span class="strong">QuotaCache.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.html#getNamespaceLimiter(java.lang.String)">getNamespaceLimiter</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespace)</code>
 <div class="block">Returns the limiter associated to the specified namespace.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
 <td class="colLast"><span class="strong">QuotaCache.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.html#getTableLimiter(org.apache.hadoop.hbase.TableName)">getTableLimiter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</code>
 <div class="block">Returns the limiter associated to the specified table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
 <td class="colLast"><span class="strong">UserQuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html#getTableLimiter(org.apache.hadoop.hbase.TableName)">getTableLimiter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</code>
 <div class="block">Return the limiter for the specified table associated with this quota.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
 <td class="colLast"><span class="strong">QuotaCache.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.html#getUserLimiter(org.apache.hadoop.security.UserGroupInformation,%20org.apache.hadoop.hbase.TableName)">getUserLimiter</a></strong>(org.apache.hadoop.security.UserGroupInformation&nbsp;ugi,
                             <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</code>
 <div class="block">Returns the limiter associated to the specified user/table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
 <td class="colLast"><span class="strong">QuotaLimiterFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiterFactory.html#update(org.apache.hadoop.hbase.quotas.QuotaLimiter,%20org.apache.hadoop.hbase.quotas.QuotaLimiter)">update</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&nbsp;a,
             <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&nbsp;b)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/quotas/package-summary.html">org.apache.hadoop.hbase.quotas</a> that return types with arguments of type <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private &lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;</code></td>
+<td class="colLast"><span class="strong">UserQuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html#setLimiter(java.util.Map,%20K,%20org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Quotas)">setLimiter</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;&nbsp;limiters,
+                    K&nbsp;key,
+                    org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Quotas&nbsp;quotas)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static &lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;</code></td>
+<td class="colLast"><span class="strong">UserQuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html#updateLimiters(java.util.Map,%20java.util.Map)">updateLimiters</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;&nbsp;map,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;&nbsp;otherMap)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -175,6 +240,31 @@
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></code></td>
 <td class="colLast"><span class="strong">QuotaLimiterFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiterFactory.html#update(org.apache.hadoop.hbase.quotas.QuotaLimiter,%20org.apache.hadoop.hbase.quotas.QuotaLimiter)">update</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&nbsp;a,
             <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&nbsp;b)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../../org/apache/hadoop/hbase/quotas/package-summary.html">org.apache.hadoop.hbase.quotas</a> with type arguments of type <a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private &lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;</code></td>
+<td class="colLast"><span class="strong">UserQuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html#setLimiter(java.util.Map,%20K,%20org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Quotas)">setLimiter</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;&nbsp;limiters,
+                    K&nbsp;key,
+                    org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Quotas&nbsp;quotas)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static &lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;</code></td>
+<td class="colLast"><span class="strong">UserQuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html#updateLimiters(java.util.Map,%20java.util.Map)">updateLimiters</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;&nbsp;map,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;&nbsp;otherMap)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static &lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;</code></td>
+<td class="colLast"><span class="strong">UserQuotaState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html#updateLimiters(java.util.Map,%20java.util.Map)">updateLimiters</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;&nbsp;map,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,<a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a>&gt;&nbsp;otherMap)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

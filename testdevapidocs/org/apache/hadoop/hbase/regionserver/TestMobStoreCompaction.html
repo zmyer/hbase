@@ -117,8 +117,52 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#COLUMN_FAMILY">COLUMN_FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#compactionThreshold">compactionThreshold</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HColumnDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#hcd">hcd</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#htd">htd</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#mobCellThreshold">mobCellThreshold</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>org.junit.rules.TestName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#name">name</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#region">region</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#STARTROW">STARTROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#UTIL">UTIL</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -151,6 +195,60 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#countMobCellsInMetadata()">countMobCellsInMetadata</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#countMobCellsInMobFiles(int)">countMobCellsInMobFiles</a></strong>(int&nbsp;expectedNumDelfiles)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#countMobFiles()">countMobFiles</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#countMobRows()">countMobRows</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#countReferencedMobFiles()">countReferencedMobFiles</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#countRows()">countRows</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#countRows(org.apache.hadoop.hbase.regionserver.InternalScanner)">countRows</a></strong>(org.apache.hadoop.hbase.regionserver.InternalScanner&nbsp;scanner)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#countStoreFiles()">countStoreFiles</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#createHFile(org.apache.hadoop.fs.Path,%20int,%20byte[])">createHFile</a></strong>(org.apache.hadoop.fs.Path&nbsp;path,
+                      int&nbsp;rowIdx,
+                      byte[]&nbsp;dummyData)</code>
+<div class="block">Create an HFile with the given number of bytes</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Put</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#createPut(int,%20byte[])">createPut</a></strong>(int&nbsp;rowIdx,
+                  byte[]&nbsp;dummyData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#init(org.apache.hadoop.conf.Configuration,%20long)">init</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+        long&nbsp;mobThreshold)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#makeDummyData(int)">makeDummyData</a></strong>(int&nbsp;size)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
@@ -211,10 +309,109 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="name">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>name</h4>
 <pre>public&nbsp;org.junit.rules.TestName <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.70">name</a></pre>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.71">LOG</a></pre>
+</li>
+</ul>
+<a name="UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.72">UTIL</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.73">conf</a></pre>
+</li>
+</ul>
+<a name="region">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>region</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.75">region</a></pre>
+</li>
+</ul>
+<a name="htd">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>htd</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.76">htd</a></pre>
+</li>
+</ul>
+<a name="hcd">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hcd</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HColumnDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.77">hcd</a></pre>
+</li>
+</ul>
+<a name="mobCellThreshold">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobCellThreshold</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.78">mobCellThreshold</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.80">fs</a></pre>
+</li>
+</ul>
+<a name="COLUMN_FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COLUMN_FAMILY</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.82">COLUMN_FAMILY</a></pre>
+</li>
+</ul>
+<a name="STARTROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STARTROW</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.83">STARTROW</a></pre>
+</li>
+</ul>
+<a name="compactionThreshold">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>compactionThreshold</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.84">compactionThreshold</a></pre>
 </li>
 </ul>
 </li>
@@ -262,6 +459,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>tearDownAfterClass</h4>
 <pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.94">tearDownAfterClass</a>()
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="init(org.apache.hadoop.conf.Configuration, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.98">init</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+        long&nbsp;mobThreshold)
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -321,13 +531,146 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testMajorCompactionAfterDelete()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testMajorCompactionAfterDelete</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.221">testMajorCompactionAfterDelete</a>()
                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="countStoreFiles()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countStoreFiles</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.275">countStoreFiles</a>()
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="countMobFiles()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countMobFiles</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.280">countMobFiles</a>()
+                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="countMobCellsInMetadata()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countMobCellsInMetadata</h4>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.289">countMobCellsInMetadata</a>()
+                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createPut(int, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createPut</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Put&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.308">createPut</a>(int&nbsp;rowIdx,
+                                           byte[]&nbsp;dummyData)
+                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createHFile(org.apache.hadoop.fs.Path, int, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createHFile</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.318">createHFile</a>(org.apache.hadoop.fs.Path&nbsp;path,
+               int&nbsp;rowIdx,
+               byte[]&nbsp;dummyData)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Create an HFile with the given number of bytes</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="countMobRows()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countMobRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.333">countMobRows</a>()
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="countRows()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.356">countRows</a>()
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="countRows(org.apache.hadoop.hbase.regionserver.InternalScanner)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.366">countRows</a>(org.apache.hadoop.hbase.regionserver.InternalScanner&nbsp;scanner)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="makeDummyData(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeDummyData</h4>
+<pre>private&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.379">makeDummyData</a>(int&nbsp;size)</pre>
+</li>
+</ul>
+<a name="countReferencedMobFiles()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countReferencedMobFiles</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.385">countReferencedMobFiles</a>()
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="countMobCellsInMobFiles(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>countMobCellsInMobFiles</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreCompaction.html#line.425">countMobCellsInMobFiles</a>(int&nbsp;expectedNumDelfiles)
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>

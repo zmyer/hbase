@@ -58,7 +58,7 @@
 <a class="jxr_linenumber" name="48" href="#48">48</a>      <strong class="jxr_keyword">if</strong> (!(r instanceof Result)) {
 <a class="jxr_linenumber" name="49" href="#49">49</a>        <strong class="jxr_keyword">return</strong> r;
 <a class="jxr_linenumber" name="50" href="#50">50</a>      }
-<a class="jxr_linenumber" name="51" href="#51">51</a>      <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">Result</a> result = (Result) r;
+<a class="jxr_linenumber" name="51" href="#51">51</a>      <a href="../../../../../org/apache/hadoop/hbase/client/Result.html">Result</a> result = (Result) r;
 <a class="jxr_linenumber" name="52" href="#52">52</a>      <em class="jxr_comment">// early exit if there are no stats to collect</em>
 <a class="jxr_linenumber" name="53" href="#53">53</a>      ClientProtos.RegionLoadStats stats = result.getStats();
 <a class="jxr_linenumber" name="54" href="#54">54</a>      <strong class="jxr_keyword">if</strong>(stats == <strong class="jxr_keyword">null</strong>){

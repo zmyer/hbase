@@ -90,6 +90,25 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a> in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> with type parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a>&gt;</code></td>
+<td class="colLast"><span class="strong">LruBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#map">map</a></strong></code>
+<div class="block">Concurrent map (the cache)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private com.google.common.collect.MinMaxPriorityQueue&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a>&gt;</code></td>
+<td class="colLast"><span class="strong">LruCachedBlockQueue.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlockQueue.html#queue">queue</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -108,6 +127,19 @@
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> that return types with arguments of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a>&gt;</code></td>
+<td class="colLast"><span class="strong">LruBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#getMapForTests()">getMapForTests</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
@@ -116,15 +148,19 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">LruBlockCache.BlockBucket.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.BlockBucket.html#add(org.apache.hadoop.hbase.io.hfile.LruCachedBlock)">add</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a>&nbsp;block)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">LruCachedBlockQueue.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlockQueue.html#add(org.apache.hadoop.hbase.io.hfile.LruCachedBlock)">add</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a>&nbsp;cb)</code>
 <div class="block">Attempt to add the specified cached block to this queue.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="strong">LruCachedBlock.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#compareTo(org.apache.hadoop.hbase.io.hfile.LruCachedBlock)">compareTo</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a>&nbsp;that)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><span class="strong">LruBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#evictBlock(org.apache.hadoop.hbase.io.hfile.LruCachedBlock,%20boolean)">evictBlock</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a>&nbsp;block,
                     boolean&nbsp;evictedByEvictionProcess)</code>
@@ -132,7 +168,7 @@
  block may be read again later</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><span class="strong">LruBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#updateSizeMetrics(org.apache.hadoop.hbase.io.hfile.LruCachedBlock,%20boolean)">updateSizeMetrics</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a>&nbsp;cb,
                                   boolean&nbsp;evict)</code>

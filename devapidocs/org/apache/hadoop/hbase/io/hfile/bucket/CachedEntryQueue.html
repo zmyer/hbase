@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -113,6 +113,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#cacheSize">cacheSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#maxSize">maxSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private com.google.common.collect.MinMaxPriorityQueue&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.BucketEntry</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#queue">queue</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -145,7 +172,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#add(java.util.Map.Entry)">add</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.BucketEntry&gt;&nbsp;entry)</code>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#add(java.util.Map.Entry)">add</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.BucketEntry</a>&gt;&nbsp;entry)</code>
 <div class="block">Attempt to add the specified entry to this queue.</div>
 </td>
 </tr>
@@ -156,11 +183,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.BucketEntry&gt;</code></td>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.BucketEntry</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#poll()">poll</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.BucketEntry&gt;</code></td>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.BucketEntry</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#pollLast()">pollLast</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
@@ -179,6 +206,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="queue">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>queue</h4>
+<pre>private&nbsp;com.google.common.collect.MinMaxPriorityQueue&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.BucketEntry</a>&gt;&gt; <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#line.46">queue</a></pre>
+</li>
+</ul>
+<a name="cacheSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cacheSize</h4>
+<pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#line.48">cacheSize</a></pre>
+</li>
+</ul>
+<a name="maxSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>maxSize</h4>
+<pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#line.49">maxSize</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -210,7 +272,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#line.80">add</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.BucketEntry&gt;&nbsp;entry)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#line.80">add</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.BucketEntry</a>&gt;&nbsp;entry)</pre>
 <div class="block">Attempt to add the specified entry to this queue.
  <p>
  If the queue is smaller than the max size, or if the specified element is
@@ -225,7 +287,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>poll</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.BucketEntry&gt;&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#line.103">poll</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.BucketEntry</a>&gt;&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#line.103">poll</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The next element in this queue, or <code>null</code> if the queue is
          empty.</dd></dl>
 </li>
@@ -236,7 +298,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>pollLast</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.BucketEntry&gt;&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#line.111">pollLast</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.BucketEntry</a>&gt;&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/CachedEntryQueue.html#line.111">pollLast</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The last element in this queue, or <code>null</code> if the queue is
          empty.</dd></dl>
 </li>
@@ -304,13 +366,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -106,6 +106,35 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#DRAINING_FLAG">DRAINING_FLAG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#FLAG_BIT_COUNT">FLAG_BIT_COUNT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#valueAndFlags">valueAndFlags</a></strong></code>
+<div class="block">Contains the number of outstanding operations, as well as flags.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -142,10 +171,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#dec(long)">dec</a></strong>(long&nbsp;valueAndFlags)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#endOp()">endOp</a></strong>()</code>
 <div class="block">Ends the operation.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#getValue(long)">getValue</a></strong>(long&nbsp;valueAndFlags)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#inc(long)">inc</a></strong>(long&nbsp;valueAndFlags)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#isDraining(long)">isDraining</a></strong>(long&nbsp;valueAndFlags)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -154,6 +199,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#stopAndDrainOps(boolean)">stopAndDrainOps</a></strong>(boolean&nbsp;ignoreRepeatedCalls)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/DrainBarrier.html#stopAndDrainOpsOnce()">stopAndDrainOpsOnce</a></strong>()</code>
 <div class="block">Blocks new operations from starting, waits for the current ones to drain.</div>
@@ -175,6 +224,49 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="valueAndFlags">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>valueAndFlags</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/DrainBarrier.html#line.40">valueAndFlags</a></pre>
+<div class="block">Contains the number of outstanding operations, as well as flags.
+ Initially, the number of operations is 1. Each beginOp increments, and endOp decrements it.
+ beginOp does not proceed when it sees the draining flag. When stop is called, it atomically
+ decrements the number of operations (the initial 1) and sets the draining flag. If stop did
+ the decrement to zero, that means there are no more operations outstanding, so stop is done.
+ Otherwise, stop blocks, and the endOp that decrements the count to 0 unblocks it.</div>
+</li>
+</ul>
+<a name="DRAINING_FLAG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DRAINING_FLAG</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/util/DrainBarrier.html#line.41">DRAINING_FLAG</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.DrainBarrier.DRAINING_FLAG">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FLAG_BIT_COUNT">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>FLAG_BIT_COUNT</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/DrainBarrier.html#line.42">FLAG_BIT_COUNT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.DrainBarrier.FLAG_BIT_COUNT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -238,7 +330,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="stopAndDrainOpsOnce()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>stopAndDrainOpsOnce</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/DrainBarrier.html#line.93">stopAndDrainOpsOnce</a>()
@@ -247,6 +339,57 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  Can only be called once.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - the wait for operations has been interrupted.</dd></dl>
+</li>
+</ul>
+<a name="stopAndDrainOps(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stopAndDrainOps</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/DrainBarrier.html#line.105">stopAndDrainOps</a>(boolean&nbsp;ignoreRepeatedCalls)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>ignoreRepeatedCalls</code> - If this is true and somebody already called stop, this method
+                            will return immediately if true; if this is false and somebody
+                            already called stop, it will assert.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="isDraining(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isDraining</h4>
+<pre>private static final&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/DrainBarrier.html#line.119">isDraining</a>(long&nbsp;valueAndFlags)</pre>
+</li>
+</ul>
+<a name="getValue(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getValue</h4>
+<pre>private static final&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/DrainBarrier.html#line.123">getValue</a>(long&nbsp;valueAndFlags)</pre>
+</li>
+</ul>
+<a name="inc(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>inc</h4>
+<pre>private static final&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/DrainBarrier.html#line.127">inc</a>(long&nbsp;valueAndFlags)</pre>
+</li>
+</ul>
+<a name="dec(long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>dec</h4>
+<pre>private static final&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/DrainBarrier.html#line.131">dec</a>(long&nbsp;valueAndFlags)</pre>
 </li>
 </ul>
 </li>
@@ -301,13 +444,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

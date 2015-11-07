@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitLogWorker.TaskExecutor.Status.html" title="enum in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitRequest.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.JournalEntry.html" title="interface in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -182,7 +182,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/region
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.html#execute(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">execute</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
               <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>use #execute(Server, RegionServerServices, User)</i></div>
+<div class="block"><i>use #execute(Server, RegionServerServices, User);  as of 1.0.2, remove in 3.0</i></div>
 </div>
 </td>
 </tr>
@@ -230,7 +230,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/region
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.html#rollback(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>use #rollback(Server, RegionServerServices, User)</i></div>
+<div class="block"><i>use #rollback(Server, RegionServerServices, User); as of 1.0.2, remove in 3.0</i></div>
 </div>
 </td>
 </tr>
@@ -282,7 +282,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/region
 <a href="../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/SplitTransaction.html#line.198">execute</a>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                                         <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use #execute(Server, RegionServerServices, User)</i></div>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use #execute(Server, RegionServerServices, User);  as of 1.0.2, remove in 3.0</i></div>
 <div class="block">Run the transaction.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>server</code> - Hosting server instance.  Can be null when testing.</dd><dd><code>services</code> - Used to online/offline regions.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Regions created</dd>
@@ -321,7 +321,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/region
 boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/SplitTransaction.html#line.224">rollback</a>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                           <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use #rollback(Server, RegionServerServices, User)</i></div>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use #rollback(Server, RegionServerServices, User); as of 1.0.2, remove in 3.0</i></div>
 <div class="block">Roll back a failed transaction</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>server</code> - Hosting server instance (May be null when testing).</dd><dd><code>services</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>True if we successfully rolled back, false if we got to the point
@@ -423,7 +423,7 @@ boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserv
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitLogWorker.TaskExecutor.Status.html" title="enum in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitRequest.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.JournalEntry.html" title="interface in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

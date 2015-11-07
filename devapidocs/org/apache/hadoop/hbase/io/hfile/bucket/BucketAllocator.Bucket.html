@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocatorException.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.BucketSizeInfo.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../../index.html?org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" target="_top">Frames</a></li>
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -107,6 +107,49 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#baseOffset">baseOffset</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#freeCount">freeCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#freeList">freeList</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#itemAllocationSize">itemAllocationSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#itemCount">itemCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#sizeIndex">sizeIndex</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#usedCount">usedCount</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -148,8 +191,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#free(long)">free</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#freeCount()">freeCount</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#freeListContains(int)">freeListContains</a></strong>(int&nbsp;blockNo)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
@@ -180,10 +231,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#isUninstantiated()">isUninstantiated</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#reconfigure(int,%20int[],%20long)">reconfigure</a></strong>(int&nbsp;sizeIndex,
+                      int[]&nbsp;bucketSizes,
+                      long&nbsp;bucketCapacity)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#sizeIndex()">sizeIndex</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#usedCount()">usedCount</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -203,6 +260,77 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="baseOffset">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>baseOffset</h4>
+<pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.55">baseOffset</a></pre>
+</li>
+</ul>
+<a name="itemAllocationSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>itemAllocationSize</h4>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.56">itemAllocationSize</a></pre>
+</li>
+</ul>
+<a name="sizeIndex">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sizeIndex</h4>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.56">sizeIndex</a></pre>
+</li>
+</ul>
+<a name="itemCount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>itemCount</h4>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.57">itemCount</a></pre>
+</li>
+</ul>
+<a name="freeList">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>freeList</h4>
+<pre>private&nbsp;int[] <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.58">freeList</a></pre>
+</li>
+</ul>
+<a name="freeCount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>freeCount</h4>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.59">freeCount</a></pre>
+</li>
+</ul>
+<a name="usedCount">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>usedCount</h4>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.59">usedCount</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -226,6 +354,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="reconfigure(int, int[], long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reconfigure</h4>
+<pre>void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.66">reconfigure</a>(int&nbsp;sizeIndex,
+               int[]&nbsp;bucketSizes,
+               long&nbsp;bucketCapacity)</pre>
+</li>
+</ul>
 <a name="isUninstantiated()">
 <!--   -->
 </a>
@@ -331,13 +470,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="addAllocation(long)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>addAllocation</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.132">addAllocation</a>(long&nbsp;offset)
                    throws <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocatorException.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocatorException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocatorException.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocatorException</a></code></dd></dl>
+</li>
+</ul>
+<a name="free(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>free</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.151">free</a>(long&nbsp;offset)</pre>
+</li>
+</ul>
+<a name="freeListContains(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>freeListContains</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html#line.164">freeListContains</a>(int&nbsp;blockNo)</pre>
 </li>
 </ul>
 </li>
@@ -367,7 +524,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocatorException.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.BucketSizeInfo.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../../index.html?org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" target="_top">Frames</a></li>
@@ -392,13 +549,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

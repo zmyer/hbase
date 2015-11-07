@@ -80,6 +80,10 @@
 <div class="block">Tools to help define network clients and servers.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -89,6 +93,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a> in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a></code></td>
+<td class="colLast"><span class="strong">RpcServer.Call.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Call.html#callback">callback</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -101,6 +118,87 @@
 <td class="colLast"><span class="strong">RpcCallContext.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallContext.html#setCallBack(org.apache.hadoop.hbase.ipc.RpcCallback)">setCallBack</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a>&nbsp;callback)</code>
 <div class="block">Sets a callback which has to be executed at the end of this RPC call.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RpcServer.Call.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Call.html#setCallBack(org.apache.hadoop.hbase.ipc.RpcCallback)">setCallBack</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a>&nbsp;callback)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that implement <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion.RegionScannerImpl</a></strong></code>
+<div class="block">RegionScannerImpl is used to combine scanners from multiple Stores (aka column families).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ReversedRegionScannerImpl.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedRegionScannerImpl</a></strong></code>
+<div class="block">ReversibleRegionScannerImpl extends from RegionScannerImpl, and is used to
+ support reversed scanning.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerCloseCallBack.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannerCloseCallBack</a></strong></code>
+<div class="block">An Rpc callback for closing a RegionScanner.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannersCloseCallBack.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannersCloseCallBack</a></strong></code>
+<div class="block">An RpcCallBack that creates a list of scanners that needs to perform callBack operation on
+ completion of multiGets.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerShippedCallBack.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannerShippedCallBack</a></strong></code>
+<div class="block">An Rpc callback for doing shipped() call on a RegionScanner.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.RegionScannerHolder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerHolder.html#closeCallBack">closeCallBack</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.RegionScannerHolder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerHolder.html#shippedCallback">shippedCallback</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerHolder.html#RSRpcServices.RegionScannerHolder(org.apache.hadoop.hbase.regionserver.RegionScanner,%20org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.ipc.RpcCallback,%20org.apache.hadoop.hbase.ipc.RpcCallback)">RSRpcServices.RegionScannerHolder</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;s,
+                                                                  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;r,
+                                                                  <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a>&nbsp;closeCallBack,
+                                                                  <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a>&nbsp;shippedCallback)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

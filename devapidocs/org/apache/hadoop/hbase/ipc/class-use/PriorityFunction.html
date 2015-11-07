@@ -97,6 +97,23 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a> in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a></code></td>
+<td class="colLast"><span class="strong">SimpleRpcScheduler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/SimpleRpcScheduler.html#priority">priority</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a></code></td>
+<td class="colLast"><span class="strong">SimpleRpcScheduler.CallPriorityComparator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/SimpleRpcScheduler.CallPriorityComparator.html#priority">priority</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -104,6 +121,10 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/SimpleRpcScheduler.CallPriorityComparator.html#SimpleRpcScheduler.CallPriorityComparator(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.ipc.PriorityFunction)">SimpleRpcScheduler.CallPriorityComparator</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                                                  <a href="../../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a>&nbsp;priority)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/SimpleRpcScheduler.html#SimpleRpcScheduler(org.apache.hadoop.conf.Configuration,%20int,%20int,%20int,%20org.apache.hadoop.hbase.ipc.PriorityFunction,%20org.apache.hadoop.hbase.Abortable,%20int)">SimpleRpcScheduler</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                     int&nbsp;handlerCount,
                                     int&nbsp;priorityHandlerCount,
@@ -112,7 +133,7 @@
                                     <a href="../../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;server,
                                     int&nbsp;highPriorityLevel)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/SimpleRpcScheduler.html#SimpleRpcScheduler(org.apache.hadoop.conf.Configuration,%20int,%20int,%20int,%20org.apache.hadoop.hbase.ipc.PriorityFunction,%20int)">SimpleRpcScheduler</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                     int&nbsp;handlerCount,
                                     int&nbsp;priorityHandlerCount,
@@ -185,6 +206,19 @@
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices</a></strong></code>
 <div class="block">Implements the regionserver RPC services.</div>
 </td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#priority">priority</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

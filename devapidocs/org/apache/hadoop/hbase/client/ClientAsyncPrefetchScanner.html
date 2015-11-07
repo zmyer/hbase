@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/BufferedMutatorParams.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/Cancellable.html" title="interface in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.PrefetchRunnable.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.client.ClientScanner">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -126,18 +126,80 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.htm
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.PrefetchRunnable.html" title="class in org.apache.hadoop.hbase.client">ClientAsyncPrefetchScanner.PrefetchRunnable</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="field_summary">
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#cacheCapacity">cacheCapacity</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#cacheSizeInBytes">cacheSizeInBytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#closingThreadId">closingThreadId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#DEFAULT_QUEUE_CAPACITY">DEFAULT_QUEUE_CAPACITY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#ESTIMATED_SINGLE_RESULT_SIZE">ESTIMATED_SINGLE_RESULT_SIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#exceptionsQueue">exceptionsQueue</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#NO_THREAD">NO_THREAD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.PrefetchRunnable.html" title="class in org.apache.hadoop.hbase.client">ClientAsyncPrefetchScanner.PrefetchRunnable</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#prefetchRunnable">prefetchRunnable</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#prefetchRunning">prefetchRunning</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.client.ClientScanner">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.client.<a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html" title="class in org.apache.hadoop.hbase.client">ClientScanner</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#cache">cache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#caching">caching</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#callable">callable</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#caller">caller</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#closed">closed</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#conf">conf</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#currentRegion">currentRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#lastNext">lastNext</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#lastResult">lastResult</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#maxScannerResultSize">maxScannerResultSize</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#partialResults">partialResults</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#partialResultsRow">partialResultsRow</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#pool">pool</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#primaryOperationTimeout">primaryOperationTimeout</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#rpcControllerFactory">rpcControllerFactory</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#scan">scan</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#scanMetricsPublished">scanMetricsPublished</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#scannerTimeout">scannerTimeout</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#cache">cache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#caching">caching</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#callable">callable</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#caller">caller</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#closed">closed</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#conf">conf</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#currentRegion">currentRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#lastNext">lastNext</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#lastResult">lastResult</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#MAX_BYTE_ARRAY">MAX_BYTE_ARRAY</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#maxScannerResultSize">maxScannerResultSize</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#partialResults">partialResults</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#partialResultsRow">partialResultsRow</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#pool">pool</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#primaryOperationTimeout">primaryOperationTimeout</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#rpcControllerFactory">rpcControllerFactory</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#scan">scan</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#scanMetricsPublished">scanMetricsPublished</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#scannerTimeout">scannerTimeout</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.client.AbstractClientScanner">
@@ -189,18 +251,42 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.htm
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#addEstimatedSize(long)">addEstimatedSize</a></strong>(long&nbsp;estimatedSize)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#calcCacheCapacity()">calcCacheCapacity</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#close()">close</a></strong>()</code>
 <div class="block">Closes the scanner and releases any resources it has allocated</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#getCacheCount()">getCacheCount</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#getCacheSizeInBytes()">getCacheSizeInBytes</a></strong>()</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#getCountThreshold()">getCountThreshold</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#getSizeThreshold()">getSizeThreshold</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#handleException()">handleException</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#initCache()">initCache</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#isPrefetchRunning()">isPrefetchRunning</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
@@ -208,13 +294,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.htm
 <div class="block">Grab the next row's worth of values.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#pollCache()">pollCache</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#prefetchCondition()">prefetchCondition</a></strong>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.client.ClientScanner">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.client.<a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html" title="class in org.apache.hadoop.hbase.client">ClientScanner</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#calcEstimatedSize(org.apache.hadoop.hbase.client.Result)">calcEstimatedSize</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#checkScanStopRow(byte[])">checkScanStopRow</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#createClosestRowBefore(byte[])">createClosestRowBefore</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getCacheSize()">getCacheSize</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getCaching()">getCaching</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getConf()">getConf</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getConnection()">getConnection</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getMaxResultSize()">getMaxResultSize</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getPool()">getPool</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getPrimaryOperationTimeout()">getPrimaryOperationTimeout</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getResultsToAddToCache(org.apache.hadoop.hbase.client.Result[],%20boolean)">getResultsToAddToCache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getRetries()">getRetries</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getScan()">getScan</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getScannerCallable(byte[],%20int)">getScannerCallable</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getScannerTimeout()">getScannerTimeout</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getTable()">getTable</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getTimestamp()">getTimestamp</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#initializeScannerInConstruction()">initializeScannerInConstruction</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#initSyncCache()">initSyncCache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#loadCache()">loadCache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#nextScanner(int,%20boolean)">nextScanner</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#nextWithSyncCache()">nextWithSyncCache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#renewLease()">renewLease</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#writeScanMetrics()">writeScanMetrics</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#calcEstimatedSize(org.apache.hadoop.hbase.client.Result)">calcEstimatedSize</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#call(org.apache.hadoop.hbase.client.ScannerCallableWithReplicas,%20org.apache.hadoop.hbase.client.RpcRetryingCaller,%20int)">call</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#checkScanStopRow(byte[])">checkScanStopRow</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#createClosestRowBefore(byte[])">createClosestRowBefore</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getCacheSize()">getCacheSize</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getCaching()">getCaching</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getConf()">getConf</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getConnection()">getConnection</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getMaxResultSize()">getMaxResultSize</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getPool()">getPool</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getPrimaryOperationTimeout()">getPrimaryOperationTimeout</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getResultsToAddToCache(org.apache.hadoop.hbase.client.Result[],%20boolean)">getResultsToAddToCache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getRetries()">getRetries</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getScan()">getScan</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getScannerCallable(byte[],%20int)">getScannerCallable</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getScannerTimeout()">getScannerTimeout</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getTable()">getTable</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#getTimestamp()">getTimestamp</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#initializeScannerInConstruction()">initializeScannerInConstruction</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#initSyncCache()">initSyncCache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#isAnyRPCcancelled()">isAnyRPCcancelled</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#loadCache()">loadCache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#nextScanner(int,%20boolean)">nextScanner</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#nextWithSyncCache()">nextWithSyncCache</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#renewLease()">renewLease</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#writeScanMetrics()">writeScanMetrics</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.client.AbstractClientScanner">
@@ -238,6 +332,98 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.htm
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ESTIMATED_SINGLE_RESULT_SIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ESTIMATED_SINGLE_RESULT_SIZE</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.47">ESTIMATED_SINGLE_RESULT_SIZE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.ClientAsyncPrefetchScanner.ESTIMATED_SINGLE_RESULT_SIZE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_QUEUE_CAPACITY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_QUEUE_CAPACITY</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.48">DEFAULT_QUEUE_CAPACITY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.ClientAsyncPrefetchScanner.DEFAULT_QUEUE_CAPACITY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="cacheCapacity">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cacheCapacity</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.50">cacheCapacity</a></pre>
+</li>
+</ul>
+<a name="cacheSizeInBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cacheSizeInBytes</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.51">cacheSizeInBytes</a></pre>
+</li>
+</ul>
+<a name="exceptionsQueue">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exceptionsQueue</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.53">exceptionsQueue</a></pre>
+</li>
+</ul>
+<a name="prefetchRunnable">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prefetchRunnable</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.PrefetchRunnable.html" title="class in org.apache.hadoop.hbase.client">ClientAsyncPrefetchScanner.PrefetchRunnable</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.55">prefetchRunnable</a></pre>
+</li>
+</ul>
+<a name="prefetchRunning">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prefetchRunning</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.60">prefetchRunning</a></pre>
+</li>
+</ul>
+<a name="closingThreadId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>closingThreadId</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.62">closingThreadId</a></pre>
+</li>
+</ul>
+<a name="NO_THREAD">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>NO_THREAD</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.63">NO_THREAD</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.ClientAsyncPrefetchScanner.NO_THREAD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -337,7 +523,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.htm
 <a name="addEstimatedSize(long)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>addEstimatedSize</h4>
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.151">addEstimatedSize</a>(long&nbsp;estimatedSize)</pre>
@@ -345,6 +531,81 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.htm
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#addEstimatedSize(long)">addEstimatedSize</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html" title="class in org.apache.hadoop.hbase.client">ClientScanner</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="handleException()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleException</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.155">handleException</a>()
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="isPrefetchRunning()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isPrefetchRunning</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.169">isPrefetchRunning</a>()</pre>
+</li>
+</ul>
+<a name="calcCacheCapacity()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>calcCacheCapacity</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.174">calcCacheCapacity</a>()</pre>
+</li>
+</ul>
+<a name="prefetchCondition()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prefetchCondition</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.190">prefetchCondition</a>()</pre>
+</li>
+</ul>
+<a name="getCountThreshold()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCountThreshold</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.197">getCountThreshold</a>()</pre>
+</li>
+</ul>
+<a name="getSizeThreshold()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSizeThreshold</h4>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.201">getSizeThreshold</a>()</pre>
+</li>
+</ul>
+<a name="getCacheSizeInBytes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCacheSizeInBytes</h4>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.205">getCacheSizeInBytes</a>()</pre>
+</li>
+</ul>
+<a name="pollCache()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>pollCache</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#line.209">pollCache</a>()</pre>
 </li>
 </ul>
 </li>
@@ -373,8 +634,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.htm
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/BufferedMutatorParams.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/Cancellable.html" title="interface in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.PrefetchRunnable.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html" target="_top">Frames</a></li>
@@ -398,14 +659,14 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.htm
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.client.ClientScanner">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

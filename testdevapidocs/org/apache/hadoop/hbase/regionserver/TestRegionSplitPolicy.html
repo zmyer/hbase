@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#htd">htd</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#mockRegion">mockRegion</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.Store&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#stores">stores</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#TABLENAME">TABLENAME</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -131,6 +166,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#assertWithinJitter(long,%20long)">assertWithinJitter</a></strong>(long&nbsp;maxSplitSize,
+                                    long&nbsp;sizeToCheck)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#doConstantSizePolicyTests(org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy)">doConstantSizePolicyTests</a></strong>(org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy&nbsp;policy)</code>
+<div class="block">Run through tests for a ConstantSizeRegionSplitPolicy</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -182,6 +228,59 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.46">conf</a></pre>
+</li>
+</ul>
+<a name="htd">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>htd</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.47">htd</a></pre>
+</li>
+</ul>
+<a name="mockRegion">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mockRegion</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.48">mockRegion</a></pre>
+</li>
+</ul>
+<a name="stores">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stores</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.Store&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.49">stores</a></pre>
+</li>
+</ul>
+<a name="TABLENAME">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TABLENAME</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.50">TABLENAME</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -238,6 +337,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="assertWithinJitter(long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertWithinJitter</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.151">assertWithinJitter</a>(long&nbsp;maxSplitSize,
+                      long&nbsp;sizeToCheck)</pre>
+</li>
+</ul>
 <a name="testCreateDefault()">
 <!--   -->
 </a>
@@ -273,6 +382,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="doConstantSizePolicyTests(org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doConstantSizePolicyTests</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.223">doConstantSizePolicyTests</a>(org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy&nbsp;policy)</pre>
+<div class="block">Run through tests for a ConstantSizeRegionSplitPolicy</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>policy</code> - </dd></dl>
 </li>
 </ul>
 <a name="testGetSplitPoint()">
@@ -351,13 +471,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -95,6 +95,10 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.mob.mapreduce">org.apache.hadoop.hbase.mob.mapreduce</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -119,6 +123,37 @@
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.NullTableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager.NullTableLockManager</a></strong></code>
 <div class="block">A null implementation</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.ZKTableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager.ZKTableLockManager</a></strong></code>
+<div class="block">ZooKeeper based TableLockManager</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/master/package-summary.html">org.apache.hadoop.hbase.master</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">AssignmentManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">ExpiredMobFileCleanerChore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/ExpiredMobFileCleanerChore.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">MasterMobCompactionThread.CompactionRunner.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterMobCompactionThread.CompactionRunner.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">MobCompactionChore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MobCompactionChore.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -180,6 +215,14 @@
 <div class="block">Constructs a new assignment manager.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterMobCompactionThread.CompactionRunner.html#MasterMobCompactionThread.CompactionRunner(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.TableName,%20java.util.List,%20org.apache.hadoop.hbase.master.TableLockManager,%20boolean,%20java.util.concurrent.ExecutorService)">MasterMobCompactionThread.CompactionRunner</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                                                                    <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&gt;&nbsp;hcds,
+                                                                                    <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a>&nbsp;tableLockManager,
+                                                                                    boolean&nbsp;allFiles,
+                                                                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;pool)</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -187,6 +230,27 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a> in <a href="../../../../../../org/apache/hadoop/hbase/master/handler/package-summary.html">org.apache.hadoop.hbase.master.handler</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/master/handler/package-summary.html">org.apache.hadoop.hbase.master.handler</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">CreateTableHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/CreateTableHandler.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">DisableTableHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/DisableTableHandler.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">EnableTableHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/EnableTableHandler.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/master/handler/package-summary.html">org.apache.hadoop.hbase.master.handler</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -221,6 +285,55 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a> in <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/package-summary.html">org.apache.hadoop.hbase.master.procedure</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/package-summary.html">org.apache.hadoop.hbase.master.procedure</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">MasterProcedureQueue.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#lockManager">lockManager</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/package-summary.html">org.apache.hadoop.hbase.master.procedure</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">MasterProcedureQueue.TableRunQueue.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html#releaseExclusiveLock(org.apache.hadoop.hbase.master.TableLockManager,%20org.apache.hadoop.hbase.TableName)">releaseExclusiveLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a>&nbsp;lockManager,
+                                        <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">MasterProcedureQueue.TableRunQueue.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html#releaseSharedLock(org.apache.hadoop.hbase.master.TableLockManager,%20org.apache.hadoop.hbase.TableName)">releaseSharedLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a>&nbsp;lockManager,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">MasterProcedureQueue.TableRunQueue.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html#releaseTableLock(org.apache.hadoop.hbase.master.TableLockManager,%20boolean)">releaseTableLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a>&nbsp;lockManager,
+                                boolean&nbsp;reset)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">MasterProcedureQueue.TableRunQueue.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html#tryExclusiveLock(org.apache.hadoop.hbase.master.TableLockManager,%20org.apache.hadoop.hbase.TableName,%20java.lang.String)">tryExclusiveLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a>&nbsp;lockManager,
+                                <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;purpose)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">MasterProcedureQueue.TableRunQueue.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html#trySharedLock(org.apache.hadoop.hbase.master.TableLockManager,%20org.apache.hadoop.hbase.TableName,%20java.lang.String)">trySharedLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a>&nbsp;lockManager,
+                          <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;purpose)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/package-summary.html">org.apache.hadoop.hbase.master.procedure</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -278,6 +391,24 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.mob.mapreduce">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a> in <a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/package-summary.html">org.apache.hadoop.hbase.mob.mapreduce</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/package-summary.html">org.apache.hadoop.hbase.mob.mapreduce</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">SweepJob.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
 <!--   -->
 </a>
@@ -290,6 +421,10 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><span class="strong">HMobStore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
 <td class="colLast"><span class="strong">HRegionServer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionServer.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
 </tr>

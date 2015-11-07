@@ -121,18 +121,38 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Admin</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#admin">admin</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#emptySnapshotName">emptySnapshotName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#FAMILY">FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#snapshotName">snapshotName</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.TableName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#tableName">tableName</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#tableNumFiles">tableNumFiles</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.junit.rules.TestRule</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#timeout">timeout</a></strong></code>&nbsp;</td>
 </tr>
@@ -177,73 +197,141 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#createTable()">createTable</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#getHdfsDestinationDir()">getHdfsDestinationDir</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#getLocalDestinationDir()">getLocalDestinationDir</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#listFiles(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)">listFiles</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                  org.apache.hadoop.fs.Path&nbsp;root,
+                  org.apache.hadoop.fs.Path&nbsp;dir)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#removeExportDir(org.apache.hadoop.fs.Path)">removeExportDir</a></strong>(org.apache.hadoop.fs.Path&nbsp;path)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#runExportAndInjectFailures(byte[],%20boolean)">runExportAndInjectFailures</a></strong>(byte[]&nbsp;snapshotName,
+                                                    boolean&nbsp;retry)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#setUp()">setUp</a></strong>()</code>
 <div class="block">Create a table and take a snapshot of the table used by the export test.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#setUpBaseConf(org.apache.hadoop.conf.Configuration)">setUpBaseConf</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#tearDown()">tearDown</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testBalanceSplit()">testBalanceSplit</a></strong>()</code>
 <div class="block">Verfy the result of getBalanceSplits() method.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testConsecutiveExports()">testConsecutiveExports</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testEmptyExportFileSystemState()">testEmptyExportFileSystemState</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testExportFailure()">testExportFailure</a></strong>()</code>
 <div class="block">Check that ExportSnapshot will return a failure if something fails.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testExportFileSystemState()">testExportFileSystemState</a></strong>()</code>
 <div class="block">Verify if exported snapshot and copied files matches the original one.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testExportFileSystemState(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20int)">testExportFileSystemState</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                                                  byte[]&nbsp;snapshotName,
+                                                  byte[]&nbsp;targetName,
+                                                  int&nbsp;filesExpected)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testExportFileSystemState(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20int,%20org.apache.hadoop.fs.Path,%20boolean)">testExportFileSystemState</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                                                  byte[]&nbsp;snapshotName,
+                                                  byte[]&nbsp;targetName,
+                                                  int&nbsp;filesExpected,
+                                                  org.apache.hadoop.fs.Path&nbsp;copyDir,
+                                                  boolean&nbsp;overwrite)</code>
+<div class="block">Test ExportSnapshot</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testExportFileSystemStateWithSkipTmp()">testExportFileSystemStateWithSkipTmp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testExportRetry()">testExportRetry</a></strong>()</code>
 <div class="block">Check that ExportSnapshot will succede if something fails but the retry succede.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testExportWithTargetName()">testExportWithTargetName</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testSnapshotWithRefsExportFileSystemState()">testSnapshotWithRefsExportFileSystemState</a></strong>()</code>
 <div class="block">Mock a snapshot with files in the archive dir,
  two regions, and one reference file.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testSnapshotWithRefsExportFileSystemState(org.apache.hadoop.hbase.snapshot.SnapshotTestingUtils.SnapshotMock.SnapshotBuilder)">testSnapshotWithRefsExportFileSystemState</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a>&nbsp;builder)</code>
+<div class="block">Generates a couple of regions for the specified SnapshotMock,
+ and then it will run the export and verification.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#verifyBalanceSplit(java.util.List,%20java.lang.String[],%20long)">verifyBalanceSplit</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.protobuf.generated.SnapshotProtos.SnapshotFileInfo,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&gt;&nbsp;split,
+                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;expected,
+                                    long&nbsp;expectedSize)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#verifySnapshot(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.TableName,%20java.lang.String)">verifySnapshot</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                            org.apache.hadoop.fs.Path&nbsp;rootDir,
+                            org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#verifySnapshotDir(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path)">verifySnapshotDir</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs1,
+                                  org.apache.hadoop.fs.Path&nbsp;root1,
+                                  org.apache.hadoop.fs.FileSystem&nbsp;fs2,
+                                  org.apache.hadoop.fs.Path&nbsp;root2)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -276,6 +364,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public final&nbsp;org.junit.rules.TestRule <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.67">timeout</a></pre>
 </li>
 </ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.69">LOG</a></pre>
+</li>
+</ul>
 <a name="TEST_UTIL">
 <!--   -->
 </a>
@@ -297,10 +394,46 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="tableName">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>tableName</h4>
 <pre>protected&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.75">tableName</a></pre>
+</li>
+</ul>
+<a name="emptySnapshotName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>emptySnapshotName</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.76">emptySnapshotName</a></pre>
+</li>
+</ul>
+<a name="snapshotName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>snapshotName</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.77">snapshotName</a></pre>
+</li>
+</ul>
+<a name="tableNumFiles">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableNumFiles</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.78">tableNumFiles</a></pre>
+</li>
+</ul>
+<a name="admin">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>admin</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Admin <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.79">admin</a></pre>
 </li>
 </ul>
 </li>
@@ -417,6 +550,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="verifyBalanceSplit(java.util.List, java.lang.String[], long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyBalanceSplit</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.183">verifyBalanceSplit</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.protobuf.generated.SnapshotProtos.SnapshotFileInfo,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&gt;&nbsp;split,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;expected,
+                      long&nbsp;expectedSize)</pre>
+</li>
+</ul>
 <a name="testExportFileSystemState()">
 <!--   -->
 </a>
@@ -492,6 +636,53 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="testSnapshotWithRefsExportFileSystemState(org.apache.hadoop.hbase.snapshot.SnapshotTestingUtils.SnapshotMock.SnapshotBuilder)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testSnapshotWithRefsExportFileSystemState</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.253">testSnapshotWithRefsExportFileSystemState</a>(<a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a>&nbsp;builder)
+                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Generates a couple of regions for the specified SnapshotMock,
+ and then it will run the export and verification.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testExportFileSystemState(org.apache.hadoop.hbase.TableName, byte[], byte[], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testExportFileSystemState</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.265">testExportFileSystemState</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                             byte[]&nbsp;snapshotName,
+                             byte[]&nbsp;targetName,
+                             int&nbsp;filesExpected)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testExportFileSystemState(org.apache.hadoop.hbase.TableName, byte[], byte[], int, org.apache.hadoop.fs.Path, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testExportFileSystemState</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.275">testExportFileSystemState</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                             byte[]&nbsp;snapshotName,
+                             byte[]&nbsp;targetName,
+                             int&nbsp;filesExpected,
+                             org.apache.hadoop.fs.Path&nbsp;copyDir,
+                             boolean&nbsp;overwrite)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Test ExportSnapshot</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
 <a name="testExportFailure()">
 <!--   -->
 </a>
@@ -518,13 +709,100 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="runExportAndInjectFailures(byte[], boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runExportAndInjectFailures</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.337">runExportAndInjectFailures</a>(byte[]&nbsp;snapshotName,
+                             boolean&nbsp;retry)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifySnapshotDir(org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifySnapshotDir</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.361">verifySnapshotDir</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs1,
+                     org.apache.hadoop.fs.Path&nbsp;root1,
+                     org.apache.hadoop.fs.FileSystem&nbsp;fs2,
+                     org.apache.hadoop.fs.Path&nbsp;root2)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="bypassRegion(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bypassRegion</h4>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.366">bypassRegion</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;regionInfo)</pre>
+</li>
+</ul>
+<a name="verifySnapshot(org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path, org.apache.hadoop.hbase.TableName, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifySnapshot</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.373">verifySnapshot</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                         org.apache.hadoop.fs.Path&nbsp;rootDir,
+                         org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="listFiles(org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>listFiles</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.411">listFiles</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                    org.apache.hadoop.fs.Path&nbsp;root,
+                    org.apache.hadoop.fs.Path&nbsp;dir)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getHdfsDestinationDir()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHdfsDestinationDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.429">getHdfsDestinationDir</a>()</pre>
+</li>
+</ul>
+<a name="getLocalDestinationDir()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocalDestinationDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.436">getLocalDestinationDir</a>()</pre>
+</li>
+</ul>
+<a name="removeExportDir(org.apache.hadoop.fs.Path)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>bypassRegion</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.366">bypassRegion</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;regionInfo)</pre>
+<h4>removeExportDir</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#line.442">removeExportDir</a>(org.apache.hadoop.fs.Path&nbsp;path)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>

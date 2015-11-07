@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.CustomObserver.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.MockedFailedDaughterOpen.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.CustomSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html" target="_top">Frames</a></li>
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -95,7 +95,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.120">TestSplitTransactionOnCluster</a>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.119">TestSplitTransactionOnCluster</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Like TestSplitTransaction in that we're testing <code>SplitTransactionImpl</code>
  only the below tests are against a running cluster where TestSplitTransaction
@@ -119,24 +119,85 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Class and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.CustomSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster.CustomSplitPolicy</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster.FailingSplitRegionObserver</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.MockedCoordinatedStateManager.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster.MockedCoordinatedStateManager</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.MockedRegionObserver.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster.MockedRegionObserver</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.MockedSplitTransaction.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster.MockedSplitTransaction</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.MyMaster.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster.MyMaster</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.MyMasterRpcServices.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster.MyMasterRpcServices</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.SplittingNodeCreationFailedException.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster.SplittingNodeCreationFailedException</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.UselessTestAbortable.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster.UselessTestAbortable</a></strong></code>
+<div class="block">Noop Abortable implementation used below in tests.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Admin</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#admin">admin</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#cluster">cluster</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#latch">latch</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#NB_SERVERS">NB_SERVERS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#secondSplit">secondSplit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#TESTING_UTIL">TESTING_UTIL</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -171,16 +232,78 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#after()">after</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private org.apache.hadoop.hbase.master.HMaster</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#abortAndWaitForMaster()">abortAndWaitForMaster</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#before()">before</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#after()">after</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#awaitDaughters(org.apache.hadoop.hbase.TableName,%20int)">awaitDaughters</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                            int&nbsp;numDaughters)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.HRegion&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#awaitTableRegions(org.apache.hadoop.hbase.TableName)">awaitTableRegions</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#before()">before</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.HRegion&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#checkAndGetDaughters(org.apache.hadoop.hbase.TableName)">checkAndGetDaughters</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#createTableAndWait(org.apache.hadoop.hbase.TableName,%20byte[])">createTableAndWait</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                                    byte[]&nbsp;cf)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#ensureTableRegionNotOnSameServerAsMeta(org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.HRegionInfo)">ensureTableRegionNotOnSameServerAsMeta</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+                                                                            org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</code>
+<div class="block">Ensure single table region is not on same server as the single hbase:meta table
+ region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#findSplittableRegion(java.util.List)">findSplittableRegion</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.HRegion&gt;&nbsp;regions)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#getAndCheckSingleTableRegion(java.util.List)">getAndCheckSingleTableRegion</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.HRegion&gt;&nbsp;regions)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegionServer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#getOtherRegionServer(org.apache.hadoop.hbase.MiniHBaseCluster,%20org.apache.hadoop.hbase.regionserver.HRegionServer)">getOtherRegionServer</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a>&nbsp;cluster,
+                                        org.apache.hadoop.hbase.regionserver.HRegionServer&nbsp;notThisOne)</code>
+<div class="block">Find regionserver other than the one passed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#insertData(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.client.Table)">insertData</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                    org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+                    org.apache.hadoop.hbase.client.Table&nbsp;t)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#printOutRegions(org.apache.hadoop.hbase.regionserver.HRegionServer,%20java.lang.String)">printOutRegions</a></strong>(org.apache.hadoop.hbase.regionserver.HRegionServer&nbsp;hrs,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#setup()">setup</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#split(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.HRegionServer,%20int)">split</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri,
+          org.apache.hadoop.hbase.regionserver.HRegionServer&nbsp;server,
+          int&nbsp;regionCount)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -228,39 +351,53 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testSplitFailedCompactionAndSplit()">testSplitFailedCompactionAndSplit</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testSplitBeforeSettingSplittingInZKInternals()">testSplitBeforeSettingSplittingInZKInternals</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testSplitHooksBeforeAndAfterPONR()">testSplitHooksBeforeAndAfterPONR</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testSplitFailedCompactionAndSplit()">testSplitFailedCompactionAndSplit</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testSplitHooksBeforeAndAfterPONR()">testSplitHooksBeforeAndAfterPONR</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testSplitRegionWithNoStoreFiles()">testSplitRegionWithNoStoreFiles</a></strong>()</code>
 <div class="block">If a table has regions that have no store files in a region, they should split successfully
  into two regions with no store files.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testSplitShouldNotThrowNPEEvenARegionHasEmptySplitFiles()">testSplitShouldNotThrowNPEEvenARegionHasEmptySplitFiles</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testSplitWithRegionReplicas()">testSplitWithRegionReplicas</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testSSHCleanupDaugtherRegionsOfAbortedSplit()">testSSHCleanupDaugtherRegionsOfAbortedSplit</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testStoreFileReferenceCreationWhenSplitPolicySaysToSkipRangeCheck()">testStoreFileReferenceCreationWhenSplitPolicySaysToSkipRangeCheck</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#testTableExistsIfTheSpecifiedTableRegionIsSplitParent()">testTableExistsIfTheSpecifiedTableRegionIsSplitParent</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#waitOnRIT(org.apache.hadoop.hbase.HRegionInfo)">waitOnRIT</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</code>
+<div class="block">Often region has not yet fully opened.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#waitUntilRegionServerDead()">waitUntilRegionServerDead</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -278,6 +415,78 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.120">LOG</a></pre>
+</li>
+</ul>
+<a name="admin">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>admin</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Admin <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.122">admin</a></pre>
+</li>
+</ul>
+<a name="cluster">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cluster</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.123">cluster</a></pre>
+</li>
+</ul>
+<a name="NB_SERVERS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NB_SERVERS</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.124">NB_SERVERS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestSplitTransactionOnCluster.NB_SERVERS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="latch">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>latch</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.125">latch</a></pre>
+</li>
+</ul>
+<a name="secondSplit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>secondSplit</h4>
+<pre>private static volatile&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.126">secondSplit</a></pre>
+</li>
+</ul>
+<a name="TESTING_UTIL">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TESTING_UTIL</h4>
+<pre>static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.128">TESTING_UTIL</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -290,7 +499,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestSplitTransactionOnCluster</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.120">TestSplitTransactionOnCluster</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.119">TestSplitTransactionOnCluster</a>()</pre>
 </li>
 </ul>
 </li>
@@ -307,7 +516,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>before</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.132">before</a>()
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.131">before</a>()
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -319,7 +528,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>after</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.137">after</a>()
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.136">after</a>()
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -331,7 +540,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setup</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.141">setup</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.140">setup</a>()
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -343,10 +552,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>tearDown</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.148">tearDown</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.147">tearDown</a>()
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getAndCheckSingleTableRegion(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAndCheckSingleTableRegion</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HRegionInfo&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.151">getAndCheckSingleTableRegion</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.HRegion&gt;&nbsp;regions)</pre>
+</li>
+</ul>
+<a name="waitOnRIT(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitOnRIT</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HRegionInfo&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.164">waitOnRIT</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</pre>
+<div class="block">Often region has not yet fully opened.  If we try to use it -- do a move for instance -- it
+ will fail silently if the region is not yet opened.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>hri</code> - Region to check if in Regions In Transition... wait until out of transition before
+ returning</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Passed in <code>hri</code></dd></dl>
 </li>
 </ul>
 <a name="testRITStateForRollback()">
@@ -355,7 +587,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRITStateForRollback</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.179">testRITStateForRollback</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.178">testRITStateForRollback</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -367,7 +599,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitFailedCompactionAndSplit</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.228">testSplitFailedCompactionAndSplit</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.227">testSplitFailedCompactionAndSplit</a>()
                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -379,7 +611,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRSSplitDaughtersAreOnlinedAfterShutdownHandling</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.294">testRSSplitDaughtersAreOnlinedAfterShutdownHandling</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.293">testRSSplitDaughtersAreOnlinedAfterShutdownHandling</a>()
                                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
                                                                 com.google.protobuf.ServiceException</pre>
@@ -397,7 +629,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testExistingZnodeBlocksSplitAndWeRollback</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.339">testExistingZnodeBlocksSplitAndWeRollback</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.338">testExistingZnodeBlocksSplitAndWeRollback</a>()
                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
                                                       org.apache.zookeeper.KeeperException.NodeExistsException,
@@ -417,7 +649,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testShutdownFixupWhenDaughterHasSplit</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.397">testShutdownFixupWhenDaughterHasSplit</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.396">testShutdownFixupWhenDaughterHasSplit</a>()
                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Test that if daughter split on us, we won't do the shutdown handler fixup
@@ -433,7 +665,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitShouldNotThrowNPEEvenARegionHasEmptySplitFiles</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.476">testSplitShouldNotThrowNPEEvenARegionHasEmptySplitFiles</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.475">testSplitShouldNotThrowNPEEvenARegionHasEmptySplitFiles</a>()
                                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -445,7 +677,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMasterRestartAtRegionSplitPendingCatalogJanitor</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.562">testMasterRestartAtRegionSplitPendingCatalogJanitor</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.561">testMasterRestartAtRegionSplitPendingCatalogJanitor</a>()
                                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
                                                                 org.apache.zookeeper.KeeperException.NodeExistsException,
@@ -467,7 +699,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitBeforeSettingSplittingInZK</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.624">testSplitBeforeSettingSplittingInZK</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.623">testSplitBeforeSettingSplittingInZK</a>()
                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>,
                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
                                                 org.apache.zookeeper.KeeperException</pre>
@@ -488,7 +720,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testTableExistsIfTheSpecifiedTableRegionIsSplitParent</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.630">testTableExistsIfTheSpecifiedTableRegionIsSplitParent</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.629">testTableExistsIfTheSpecifiedTableRegionIsSplitParent</a>()
                                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -500,10 +732,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitWithRegionReplicas</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.678">testSplitWithRegionReplicas</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.677">testSplitWithRegionReplicas</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="insertData(org.apache.hadoop.hbase.TableName, org.apache.hadoop.hbase.client.Admin, org.apache.hadoop.hbase.client.Table)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>insertData</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.752">insertData</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+              org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+              org.apache.hadoop.hbase.client.Table&nbsp;t)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testSplitRegionWithNoStoreFiles()">
@@ -512,7 +760,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitRegionWithNoStoreFiles</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.775">testSplitRegionWithNoStoreFiles</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.774">testSplitRegionWithNoStoreFiles</a>()
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">If a table has regions that have no store files in a region, they should split successfully
  into two regions with no store files.</div>
@@ -526,7 +774,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitAndRestartingMaster</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.860">testSplitAndRestartingMaster</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.859">testSplitAndRestartingMaster</a>()
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Not really restarting the master. Simulate it by clear of new region
  state since it is not persisted, will be lost after master restarts.</div>
@@ -540,7 +788,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitHooksBeforeAndAfterPONR</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.903">testSplitHooksBeforeAndAfterPONR</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.902">testSplitHooksBeforeAndAfterPONR</a>()
                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -552,8 +800,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSSHCleanupDaugtherRegionsOfAbortedSplit</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.959">testSSHCleanupDaugtherRegionsOfAbortedSplit</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.958">testSSHCleanupDaugtherRegionsOfAbortedSplit</a>()
                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testSplitBeforeSettingSplittingInZKInternals()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testSplitBeforeSettingSplittingInZKInternals</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1005">testSplitBeforeSettingSplittingInZKInternals</a>()
+                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -561,13 +821,174 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testStoreFileReferenceCreationWhenSplitPolicySaysToSkipRangeCheck()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testStoreFileReferenceCreationWhenSplitPolicySaysToSkipRangeCheck</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1044">testStoreFileReferenceCreationWhenSplitPolicySaysToSkipRangeCheck</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1043">testStoreFileReferenceCreationWhenSplitPolicySaysToSkipRangeCheck</a>()
                                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="findSplittableRegion(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findSplittableRegion</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1108">findSplittableRegion</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.HRegion&gt;&nbsp;regions)
+                                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkAndGetDaughters(org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkAndGetDaughters</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.HRegion&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1120">checkAndGetDaughters</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName)
+                                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="abortAndWaitForMaster()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>abortAndWaitForMaster</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.master.HMaster&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1133">abortAndWaitForMaster</a>()
+                                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="split(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.regionserver.HRegionServer, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>split</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1142">split</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri,
+         org.apache.hadoop.hbase.regionserver.HRegionServer&nbsp;server,
+         int&nbsp;regionCount)
+            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="ensureTableRegionNotOnSameServerAsMeta(org.apache.hadoop.hbase.client.Admin, org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ensureTableRegionNotOnSameServerAsMeta</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1166">ensureTableRegionNotOnSameServerAsMeta</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+                                         org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)
+                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                   org.apache.hadoop.hbase.MasterNotRunningException,
+                                                   org.apache.hadoop.hbase.ZooKeeperConnectionException,
+                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<div class="block">Ensure single table region is not on same server as the single hbase:meta table
+ region.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>admin</code> - </dd><dd><code>hri</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>Index of the server hosting the single table region</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>org.apache.hadoop.hbase.UnknownRegionException</code></dd>
+<dd><code>org.apache.hadoop.hbase.MasterNotRunningException</code></dd>
+<dd><code>org.apache.hadoop.hbase.ZooKeeperConnectionException</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getOtherRegionServer(org.apache.hadoop.hbase.MiniHBaseCluster, org.apache.hadoop.hbase.regionserver.HRegionServer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOtherRegionServer</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegionServer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1214">getOtherRegionServer</a>(<a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a>&nbsp;cluster,
+                                                                      org.apache.hadoop.hbase.regionserver.HRegionServer&nbsp;notThisOne)</pre>
+<div class="block">Find regionserver other than the one passed.
+ Can't rely on indexes into list of regionservers since crashed servers
+ occupy an index.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cluster</code> - </dd><dd><code>notThisOne</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>A regionserver that is not <code>notThisOne</code> or null if none
+ found</dd></dl>
+</li>
+</ul>
+<a name="printOutRegions(org.apache.hadoop.hbase.regionserver.HRegionServer, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>printOutRegions</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1225">printOutRegions</a>(org.apache.hadoop.hbase.regionserver.HRegionServer&nbsp;hrs,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="waitUntilRegionServerDead()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitUntilRegionServerDead</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1233">waitUntilRegionServerDead</a>()
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
+                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InterruptedIOException.html?is-external=true" title="class or interface in java.io">InterruptedIOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/InterruptedIOException.html?is-external=true" title="class or interface in java.io">InterruptedIOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="awaitDaughters(org.apache.hadoop.hbase.TableName, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>awaitDaughters</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1245">awaitDaughters</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                  int&nbsp;numDaughters)
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="awaitTableRegions(org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>awaitTableRegions</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.HRegion&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1256">awaitTableRegions</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName)
+                                                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createTableAndWait(org.apache.hadoop.hbase.TableName, byte[])">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createTableAndWait</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Table&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.1266">createTableAndWait</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                                                      byte[]&nbsp;cf)
+                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 </li>
@@ -596,8 +1017,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.CustomObserver.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.MockedFailedDaughterOpen.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.CustomSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html" target="_top">Frames</a></li>
@@ -622,13 +1043,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

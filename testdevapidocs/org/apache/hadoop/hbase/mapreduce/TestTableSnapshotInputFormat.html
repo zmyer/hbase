@@ -148,8 +148,16 @@ extends <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotI
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormat.html#bbb">bbb</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.junit.rules.TestRule</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormat.html#timeout">timeout</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormat.html#yyy">yyy</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -245,6 +253,14 @@ extends <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotI
                                               int&nbsp;numRegions,
                                               int&nbsp;expectedNumSplits)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormat.html#verifyWithMockedMapReduce(org.apache.hadoop.mapreduce.Job,%20int,%20int,%20byte[],%20byte[])">verifyWithMockedMapReduce</a></strong>(org.apache.hadoop.mapreduce.Job&nbsp;job,
+                                                  int&nbsp;numRegions,
+                                                  int&nbsp;expectedNumSplits,
+                                                  byte[]&nbsp;startRow,
+                                                  byte[]&nbsp;stopRow)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.mapreduce.TableSnapshotInputFormatTestBase">
@@ -277,10 +293,28 @@ extends <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotI
 <a name="timeout">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>timeout</h4>
 <pre>public final&nbsp;org.junit.rules.TestRule <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormat.html#line.59">timeout</a></pre>
+</li>
+</ul>
+<a name="bbb">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bbb</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormat.html#line.62">bbb</a></pre>
+</li>
+</ul>
+<a name="yyy">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>yyy</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormat.html#line.63">yyy</a></pre>
 </li>
 </ul>
 </li>
@@ -403,6 +437,24 @@ extends <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotI
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotInputFormatTestBase.html#testWithMockedMapReduce(org.apache.hadoop.hbase.HBaseTestingUtility,%20java.lang.String,%20int,%20int)">testWithMockedMapReduce</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotInputFormatTestBase.html" title="class in org.apache.hadoop.hbase.mapreduce">TableSnapshotInputFormatTestBase</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyWithMockedMapReduce(org.apache.hadoop.mapreduce.Job, int, int, byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyWithMockedMapReduce</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormat.html#line.221">verifyWithMockedMapReduce</a>(org.apache.hadoop.mapreduce.Job&nbsp;job,
+                             int&nbsp;numRegions,
+                             int&nbsp;expectedNumSplits,
+                             byte[]&nbsp;startRow,
+                             byte[]&nbsp;stopRow)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testWithMapReduceImpl(org.apache.hadoop.hbase.HBaseTestingUtility, org.apache.hadoop.hbase.TableName, java.lang.String, org.apache.hadoop.fs.Path, int, int, boolean)">

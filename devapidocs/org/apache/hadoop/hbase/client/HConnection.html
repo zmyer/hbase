@@ -95,7 +95,7 @@
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../org/apache/hadoop/hbase/client/CoprocessorHConnection.html" title="class in org.apache.hadoop.hbase.client">CoprocessorHConnection</a></dd>
+<dd><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html" title="class in org.apache.hadoop.hbase.client">ConnectionImplementation</a>, <a href="../../../../../org/apache/hadoop/hbase/client/ConnectionUtils.MasterlessConnection.html" title="class in org.apache.hadoop.hbase.client">ConnectionUtils.MasterlessConnection</a>, <a href="../../../../../org/apache/hadoop/hbase/client/CoprocessorHConnection.html" title="class in org.apache.hadoop.hbase.client">CoprocessorHConnection</a></dd>
 </dl>
 <hr>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
@@ -278,7 +278,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/Connection.html" 
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.MasterKeepAliveConnection</code></td>
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/MasterKeepAliveConnection.html" title="interface in org.apache.hadoop.hbase.client">MasterKeepAliveConnection</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html#getKeepAliveMasterService()">getKeepAliveMasterService</a></strong>()</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>Since 0.96.0</i></div>
@@ -1420,7 +1420,7 @@ void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConne
 org.apache.hadoop.hbase.protobuf.generated.MasterProtos.MasterService.BlockingInterface&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnection.html#line.434">getMaster</a>()
                                                                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>internal method, do not use thru HConnection</i></div>
-<div class="block">Returns a <code>MasterKeepAliveConnection</code> to the active master</div>
+<div class="block">Returns a <a href="../../../../../org/apache/hadoop/hbase/client/MasterKeepAliveConnection.html" title="interface in org.apache.hadoop.hbase.client"><code>MasterKeepAliveConnection</code></a> to the active master</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -1726,8 +1726,8 @@ void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConne
 <li class="blockList">
 <h4>getKeepAliveMasterService</h4>
 <pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-org.apache.hadoop.hbase.client.MasterKeepAliveConnection&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnection.html#line.611">getKeepAliveMasterService</a>()
-                                                                                   throws <a href="../../../../../org/apache/hadoop/hbase/MasterNotRunningException.html" title="class in org.apache.hadoop.hbase">MasterNotRunningException</a></pre>
+<a href="../../../../../org/apache/hadoop/hbase/client/MasterKeepAliveConnection.html" title="interface in org.apache.hadoop.hbase.client">MasterKeepAliveConnection</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnection.html#line.611">getKeepAliveMasterService</a>()
+                                                    throws <a href="../../../../../org/apache/hadoop/hbase/MasterNotRunningException.html" title="class in org.apache.hadoop.hbase">MasterNotRunningException</a></pre>
 <div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>Since 0.96.0</i></div>
 <div class="block">This function allows HBaseAdmin and potentially others to get a shared MasterService
  connection.</div>

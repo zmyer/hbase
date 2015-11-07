@@ -104,7 +104,7 @@
 <a class="jxr_linenumber" name="94" href="#94">94</a>    }
 <a class="jxr_linenumber" name="95" href="#95">95</a>  
 <a class="jxr_linenumber" name="96" href="#96">96</a>    @Override
-<a class="jxr_linenumber" name="97" href="#97">97</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteTableState</a> state)
+<a class="jxr_linenumber" name="97" href="#97">97</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, DeleteTableState state)
 <a class="jxr_linenumber" name="98" href="#98">98</a>        <strong class="jxr_keyword">throws</strong> InterruptedException {
 <a class="jxr_linenumber" name="99" href="#99">99</a>      <strong class="jxr_keyword">if</strong> (LOG.isTraceEnabled()) {
 <a class="jxr_linenumber" name="100" href="#100">100</a>       LOG.trace(<strong class="jxr_keyword">this</strong> + <span class="jxr_string">" execute state="</span> + state);
@@ -166,7 +166,7 @@
 <a class="jxr_linenumber" name="156" href="#156">156</a>   }
 <a class="jxr_linenumber" name="157" href="#157">157</a> 
 <a class="jxr_linenumber" name="158" href="#158">158</a>   @Override
-<a class="jxr_linenumber" name="159" href="#159">159</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteTableState</a> state) {
+<a class="jxr_linenumber" name="159" href="#159">159</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> DeleteTableState state) {
 <a class="jxr_linenumber" name="160" href="#160">160</a>     <strong class="jxr_keyword">if</strong> (state == DeleteTableState.DELETE_TABLE_PRE_OPERATION) {
 <a class="jxr_linenumber" name="161" href="#161">161</a>       <em class="jxr_comment">// nothing to rollback, pre-delete is just table-state checks.</em>
 <a class="jxr_linenumber" name="162" href="#162">162</a>       <em class="jxr_comment">// We can fail if the table does not exist or is not disabled.</em>
@@ -179,17 +179,17 @@
 <a class="jxr_linenumber" name="169" href="#169">169</a>   }
 <a class="jxr_linenumber" name="170" href="#170">170</a> 
 <a class="jxr_linenumber" name="171" href="#171">171</a>   @Override
-<a class="jxr_linenumber" name="172" href="#172">172</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteTableState</a> getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
+<a class="jxr_linenumber" name="172" href="#172">172</a>   <strong class="jxr_keyword">protected</strong> DeleteTableState getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
 <a class="jxr_linenumber" name="173" href="#173">173</a>     <strong class="jxr_keyword">return</strong> DeleteTableState.valueOf(stateId);
 <a class="jxr_linenumber" name="174" href="#174">174</a>   }
 <a class="jxr_linenumber" name="175" href="#175">175</a> 
 <a class="jxr_linenumber" name="176" href="#176">176</a>   @Override
-<a class="jxr_linenumber" name="177" href="#177">177</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteTableState</a> state) {
+<a class="jxr_linenumber" name="177" href="#177">177</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> DeleteTableState state) {
 <a class="jxr_linenumber" name="178" href="#178">178</a>     <strong class="jxr_keyword">return</strong> state.getNumber();
 <a class="jxr_linenumber" name="179" href="#179">179</a>   }
 <a class="jxr_linenumber" name="180" href="#180">180</a> 
 <a class="jxr_linenumber" name="181" href="#181">181</a>   @Override
-<a class="jxr_linenumber" name="182" href="#182">182</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteTableState</a> getInitialState() {
+<a class="jxr_linenumber" name="182" href="#182">182</a>   <strong class="jxr_keyword">protected</strong> DeleteTableState getInitialState() {
 <a class="jxr_linenumber" name="183" href="#183">183</a>     <strong class="jxr_keyword">return</strong> DeleteTableState.DELETE_TABLE_PRE_OPERATION;
 <a class="jxr_linenumber" name="184" href="#184">184</a>   }
 <a class="jxr_linenumber" name="185" href="#185">185</a> 

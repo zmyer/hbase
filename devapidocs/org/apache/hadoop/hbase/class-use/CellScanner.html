@@ -117,14 +117,18 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.replication.regionserver">org.apache.hadoop.hbase.replication.regionserver</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.wal">org.apache.hadoop.hbase.regionserver.wal</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.replication.regionserver">org.apache.hadoop.hbase.replication.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.wal">org.apache.hadoop.hbase.wal</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -244,12 +248,24 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/codec/CellCodec.CellDecoder.html" title="class in org.apache.hadoop.hbase.codec">CellCodec.CellDecoder</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/codec/CellCodecWithTags.CellDecoder.html" title="class in org.apache.hadoop.hbase.codec">CellCodecWithTags.CellDecoder</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/codec/KeyValueCodec.KeyValueDecoder.html" title="class in org.apache.hadoop.hbase.codec">KeyValueCodec.KeyValueDecoder</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/codec/KeyValueCodecWithTags.KeyValueDecoder.html" title="class in org.apache.hadoop.hbase.codec">KeyValueCodecWithTags.KeyValueDecoder</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/codec/MessageCodec.MessageDecoder.html" title="class in org.apache.hadoop.hbase.codec">MessageCodec.MessageDecoder</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -380,6 +396,32 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a> in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> declared as <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a></code></td>
+<td class="colLast"><span class="strong">Call.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/Call.html#cells">cells</a></strong></code>
+<div class="block">Optionally has cells when making call.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a></code></td>
+<td class="colLast"><span class="strong">PayloadCarryingRpcController.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html#cellScanner">cellScanner</a></strong></code>
+<div class="block">They are optionally set on construction, cleared after we make the call, and then optionally
+ set on response with the result.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a></code></td>
+<td class="colLast"><span class="strong">RpcServer.Call.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Call.html#cellScanner">cellScanner</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> that return <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -560,6 +602,13 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">RpcServer.Call.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Call.html#setResponse(java.lang.Object,%20org.apache.hadoop.hbase.CellScanner,%20java.lang.Throwable,%20java.lang.String)">setResponse</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;m,
+                      <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cells,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;t,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;errorMsg)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AsyncCall.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/AsyncCall.html#setSuccess(com.google.protobuf.Message,%20org.apache.hadoop.hbase.CellScanner)">setSuccess</a></strong>(com.google.protobuf.Message&nbsp;value,
                     <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellBlockScanner)</code>
@@ -586,6 +635,19 @@
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html#PayloadCarryingRpcController(org.apache.hadoop.hbase.CellScanner)">PayloadCarryingRpcController</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner)</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Call.html#RpcServer.Call(int,%20com.google.protobuf.BlockingService,%20com.google.protobuf.Descriptors.MethodDescriptor,%20org.apache.hadoop.hbase.protobuf.generated.RPCProtos.RequestHeader,%20com.google.protobuf.Message,%20org.apache.hadoop.hbase.CellScanner,%20org.apache.hadoop.hbase.ipc.RpcServer.Connection,%20org.apache.hadoop.hbase.ipc.RpcServer.Responder,%20long,%20org.apache.htrace.TraceInfo,%20java.net.InetAddress)">RpcServer.Call</a></strong>(int&nbsp;id,
+                            com.google.protobuf.BlockingService&nbsp;service,
+                            com.google.protobuf.Descriptors.MethodDescriptor&nbsp;md,
+                            org.apache.hadoop.hbase.protobuf.generated.RPCProtos.RequestHeader&nbsp;header,
+                            com.google.protobuf.Message&nbsp;param,
+                            <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+                            <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Connection.html" title="class in org.apache.hadoop.hbase.ipc">RpcServer.Connection</a>&nbsp;connection,
+                            <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Responder.html" title="class in org.apache.hadoop.hbase.ipc">RpcServer.Responder</a>&nbsp;responder,
+                            long&nbsp;size,
+                            org.apache.htrace.TraceInfo&nbsp;tinfo,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a>&nbsp;remoteAddress)</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -600,6 +662,72 @@
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#append(org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.quotas.OperationQuota,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto,%20org.apache.hadoop.hbase.CellScanner,%20long)">append</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
+            <a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.html" title="interface in org.apache.hadoop.hbase.quotas">OperationQuota</a>&nbsp;quota,
+            org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto&nbsp;m,
+            <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+            long&nbsp;nonceGroup)</code>
+<div class="block">Execute an append mutation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#checkAndRowMutate(org.apache.hadoop.hbase.regionserver.Region,%20java.util.List,%20org.apache.hadoop.hbase.CellScanner,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable)">checkAndRowMutate</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action&gt;&nbsp;actions,
+                                  <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+                                  byte[]&nbsp;row,
+                                  byte[]&nbsp;family,
+                                  byte[]&nbsp;qualifier,
+                                  <a href="../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
+                                  <a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator)</code>
+<div class="block">Mutate a list of rows atomically.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#doBatchOp(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder,%20org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.quotas.OperationQuota,%20java.util.List,%20org.apache.hadoop.hbase.CellScanner)">doBatchOp</a></strong>(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder&nbsp;builder,
+                  <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
+                  <a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.html" title="interface in org.apache.hadoop.hbase.quotas">OperationQuota</a>&nbsp;quota,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action&gt;&nbsp;mutations,
+                  <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cells)</code>
+<div class="block">Execute a list of Put/Delete mutations.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a>&gt;</code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#doNonAtomicRegionMutation(org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.quotas.OperationQuota,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction,%20org.apache.hadoop.hbase.CellScanner,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder,%20java.util.List,%20long,%20org.apache.hadoop.hbase.regionserver.RSRpcServices.RegionScannersCloseCallBack,%20org.apache.hadoop.hbase.ipc.RpcCallContext)">doNonAtomicRegionMutation</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.html" title="interface in org.apache.hadoop.hbase.quotas">OperationQuota</a>&nbsp;quota,
+                                                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction&nbsp;actions,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+                                                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder&nbsp;builder,
+                                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a>&gt;&nbsp;cellsToReturn,
+                                                  long&nbsp;nonceGroup,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannersCloseCallBack.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannersCloseCallBack</a>&nbsp;closeCallBack,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcCallContext.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallContext</a>&nbsp;context)</code>
+<div class="block">Run through the regionMutation <code>rm</code> and per Mutation, do the work, and then when
+ done, add an instance of a <code>ClientProtos.ResultOrException</code> that corresponds to each Mutation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#increment(org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.quotas.OperationQuota,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto,%20org.apache.hadoop.hbase.CellScanner,%20long)">increment</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
+                  <a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.html" title="interface in org.apache.hadoop.hbase.quotas">OperationQuota</a>&nbsp;quota,
+                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto&nbsp;mutation,
+                  <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cells,
+                  long&nbsp;nonceGroup)</code>
+<div class="block">Execute an increment mutation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats</code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#mutateRows(org.apache.hadoop.hbase.regionserver.Region,%20java.util.List,%20org.apache.hadoop.hbase.CellScanner)">mutateRows</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action&gt;&nbsp;actions,
+                    <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner)</code>
+<div class="block">Mutate a list of rows atomically.</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionServerCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerCoprocessorHost.html#postReplicateLogEntries(java.util.List,%20org.apache.hadoop.hbase.CellScanner)">postReplicateLogEntries</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WALEntry&gt;&nbsp;entries,
@@ -616,6 +744,28 @@
                                       <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cells)</code>
 <div class="block">Carry on the list of log entries down to the sink</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver.wal">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a> in <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/package-summary.html">org.apache.hadoop.hbase.regionserver.wal</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/package-summary.html">org.apache.hadoop.hbase.regionserver.wal</a> that implement <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/SecureWALCellCodec.EncryptedKvDecoder.html" title="class in org.apache.hadoop.hbase.regionserver.wal">SecureWALCellCodec.EncryptedKvDecoder</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCellCodec.CompressedKvDecoder.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALCellCodec.CompressedKvDecoder</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

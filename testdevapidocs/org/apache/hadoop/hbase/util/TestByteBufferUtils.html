@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/TestBoundedPriorityBlockingQueue.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/TestBoundedPriorityBlockingQueue.TestObjectComparator.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBuffUtils.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#array">array</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#MAX_VLONG_LENGTH">MAX_VLONG_LENGTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testNumbers">testNumbers</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -133,26 +160,45 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#addNumber(java.util.Set,%20long)">addNumber</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;a,
+                  long&nbsp;l)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#fillArray(byte[],%20byte)">fillArray</a></strong>(byte[]&nbsp;bb,
+                  byte&nbsp;b)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#fillBB(java.nio.ByteBuffer,%20byte)">fillBB</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bb,
+            byte&nbsp;b)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#setUp()">setUp</a></strong>()</code>
 <div class="block">Create an array with sample data.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testArePartEqual()">testArePartEqual</a></strong>()</code>
 <div class="block">Test if we are comparing equal bytes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testCompareTo()">testCompareTo</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testCompressedInt()">testCompressedInt</a></strong>()</code>
 <div class="block">Test 7-bit encoding of integers.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testCompressedInt(int)">testCompressedInt</a></strong>(int&nbsp;value)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -209,14 +255,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testReadWriteVLong()">testReadWriteVLong</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testPutInt(int)">testPutInt</a></strong>(int&nbsp;value)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testToBytes()">testToBytes</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testReadWriteVLong()">testReadWriteVLong</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testToBytes()">testToBytes</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBufferUtils.html#testToPrimitiveTypes()">testToPrimitiveTypes</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -236,6 +286,42 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="array">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>array</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.47">array</a></pre>
+</li>
+</ul>
+<a name="MAX_VLONG_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MAX_VLONG_LENGTH</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.60">MAX_VLONG_LENGTH</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.TestByteBufferUtils.MAX_VLONG_LENGTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="testNumbers">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>testNumbers</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.61">testNumbers</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -267,6 +353,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>setUp</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.53">setUp</a>()</pre>
 <div class="block">Create an array with sample data.</div>
+</li>
+</ul>
+<a name="addNumber(java.util.Set, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addNumber</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.63">addNumber</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;a,
+             long&nbsp;l)</pre>
 </li>
 </ul>
 <a name="testReadWriteVLong()">
@@ -389,6 +485,27 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Test serializing int to bytes</div>
 </li>
 </ul>
+<a name="testCompressedInt(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testCompressedInt</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.285">testCompressedInt</a>(int&nbsp;value)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testPutInt(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testPutInt</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.298">testPutInt</a>(int&nbsp;value)</pre>
+</li>
+</ul>
 <a name="testToBytes()">
 <!--   -->
 </a>
@@ -428,10 +545,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testCompareTo()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testCompareTo</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.377">testCompareTo</a>()</pre>
+</li>
+</ul>
+<a name="fillBB(java.nio.ByteBuffer, byte)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fillBB</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.392">fillBB</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bb,
+          byte&nbsp;b)</pre>
+</li>
+</ul>
+<a name="fillArray(byte[], byte)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>fillArray</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteBufferUtils.html#line.398">fillArray</a>(byte[]&nbsp;bb,
+             byte&nbsp;b)</pre>
 </li>
 </ul>
 </li>
@@ -460,7 +597,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/TestBoundedPriorityBlockingQueue.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/TestBoundedPriorityBlockingQueue.TestObjectComparator.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/TestByteBuffUtils.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -486,13 +623,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

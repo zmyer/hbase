@@ -243,32 +243,40 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#EMPTY_ARRAY_LIST">EMPTY_ARRAY_LIST</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#FAMILY_LENGTH_SIZE">FAMILY_LENGTH_SIZE</a></strong></code>
 <div class="block">Size of the family length field in bytes</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#KEY_INFRASTRUCTURE_SIZE">KEY_INFRASTRUCTURE_SIZE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#KEY_LENGTH_SIZE">KEY_LENGTH_SIZE</a></strong></code>
 <div class="block">Size of the key length field in bytes</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#KEYVALUE_INFRASTRUCTURE_SIZE">KEYVALUE_INFRASTRUCTURE_SIZE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#KEYVALUE_WITH_TAGS_INFRASTRUCTURE_SIZE">KEYVALUE_WITH_TAGS_INFRASTRUCTURE_SIZE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#length">length</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a></code></td>
@@ -277,6 +285,10 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#MAX_TAGS_LENGTH">MAX_TAGS_LENGTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/KeyValue.KVComparator.html" title="class in org.apache.hadoop.hbase">KeyValue.KVComparator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#META_COMPARATOR">META_COMPARATOR</a></strong></code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
@@ -284,29 +296,33 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
 </div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#offset">offset</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/KeyValue.KVComparator.html" title="class in org.apache.hadoop.hbase">KeyValue.KVComparator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#RAW_COMPARATOR">RAW_COMPARATOR</a></strong></code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#ROW_KEY_OFFSET">ROW_KEY_OFFSET</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#ROW_LENGTH_SIZE">ROW_LENGTH_SIZE</a></strong></code>
 <div class="block">Size of the row length field in bytes</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#ROW_OFFSET">ROW_OFFSET</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#seqId">seqId</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
@@ -634,27 +650,99 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#calculateHashForKey(org.apache.hadoop.hbase.Cell)">calculateHashForKey</a></strong>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#checkForTagsLength(int)">checkForTagsLength</a></strong>(int&nbsp;tagsLength)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#checkParameters(byte[],%20int,%20byte[],%20int,%20int,%20int)">checkParameters</a></strong>(byte[]&nbsp;row,
+                              int&nbsp;rlength,
+                              byte[]&nbsp;family,
+                              int&nbsp;flength,
+                              int&nbsp;qlength,
+                              int&nbsp;vlength)</code>
+<div class="block">Checks the parameters passed to a constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#clone()">clone</a></strong>()</code>
 <div class="block">Clones a KeyValue.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#cloneAndAddTags(org.apache.hadoop.hbase.Cell,%20java.util.List)">cloneAndAddTags</a></strong>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;c,
                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;newTags)</code>
 <div class="block">Create a new KeyValue by copying existing cell and adding new tags</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#create(java.io.DataInput)">create</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#create(int,%20java.io.DataInput)">create</a></strong>(int&nbsp;length,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in)</code>
 <div class="block">Create a KeyValue reading <code>length</code> from <code>in</code></div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#createByteArray(byte[],%20int,%20int,%20byte[],%20int,%20int,%20byte[],%20int,%20int,%20long,%20org.apache.hadoop.hbase.KeyValue.Type,%20byte[],%20int,%20int,%20byte[],%20int,%20int)">createByteArray</a></strong>(byte[]&nbsp;row,
+                              int&nbsp;roffset,
+                              int&nbsp;rlength,
+                              byte[]&nbsp;family,
+                              int&nbsp;foffset,
+                              int&nbsp;flength,
+                              byte[]&nbsp;qualifier,
+                              int&nbsp;qoffset,
+                              int&nbsp;qlength,
+                              long&nbsp;timestamp,
+                              <a href="../../../../org/apache/hadoop/hbase/KeyValue.Type.html" title="enum in org.apache.hadoop.hbase">KeyValue.Type</a>&nbsp;type,
+                              byte[]&nbsp;value,
+                              int&nbsp;voffset,
+                              int&nbsp;vlength,
+                              byte[]&nbsp;tags,
+                              int&nbsp;tagsOffset,
+                              int&nbsp;tagsLength)</code>
+<div class="block">Write KeyValue format into a byte array.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#createByteArray(byte[],%20int,%20int,%20byte[],%20int,%20int,%20java.lang.Object,%20int,%20int,%20long,%20org.apache.hadoop.hbase.KeyValue.Type,%20java.lang.Object,%20int,%20int,%20java.util.List)">createByteArray</a></strong>(byte[]&nbsp;row,
+                              int&nbsp;roffset,
+                              int&nbsp;rlength,
+                              byte[]&nbsp;family,
+                              int&nbsp;foffset,
+                              int&nbsp;flength,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;qualifier,
+                              int&nbsp;qoffset,
+                              int&nbsp;qlength,
+                              long&nbsp;timestamp,
+                              <a href="../../../../org/apache/hadoop/hbase/KeyValue.Type.html" title="enum in org.apache.hadoop.hbase">KeyValue.Type</a>&nbsp;type,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value,
+                              int&nbsp;voffset,
+                              int&nbsp;vlength,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;tags)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#createEmptyByteArray(int,%20int,%20int,%20long,%20org.apache.hadoop.hbase.KeyValue.Type,%20int,%20int)">createEmptyByteArray</a></strong>(int&nbsp;rlength,
+                                        int&nbsp;flength,
+                                        int&nbsp;qlength,
+                                        long&nbsp;timestamp,
+                                        <a href="../../../../org/apache/hadoop/hbase/KeyValue.Type.html" title="enum in org.apache.hadoop.hbase">KeyValue.Type</a>&nbsp;type,
+                                        int&nbsp;vlength,
+                                        int&nbsp;tagsLength)</code>
+<div class="block">Create an empty byte[] representing a KeyValue
+ All lengths are preset and can be filled in later.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -728,12 +816,16 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getFamilyOffset()">getFamilyOffset</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getFamilyOffset(int)">getFamilyOffset</a></strong>(int&nbsp;rlength)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getKey()">getKey</a></strong>()</code>
 <div class="block">Do not use unless you have to.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getKeyDataStructureSize(int,%20int,%20int)">getKeyDataStructureSize</a></strong>(int&nbsp;rlength,
                                               int&nbsp;flength,
@@ -742,19 +834,19 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
  characteristics would take up in its underlying data structure for the key.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getKeyLength()">getKeyLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getKeyOffset()">getKeyOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getKeyString()">getKeyString</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getKeyValueDataStructureSize(int,%20int,%20int)">getKeyValueDataStructureSize</a></strong>(int&nbsp;klength,
                                                         int&nbsp;vlength,
@@ -763,7 +855,7 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
  characteristics would take up for its underlying data structure.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getKeyValueDataStructureSize(int,%20int,%20int,%20int)">getKeyValueDataStructureSize</a></strong>(int&nbsp;rlength,
                                                         int&nbsp;flength,
@@ -773,7 +865,7 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
  characteristics would take up for its underlying data structure.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getKeyValueDataStructureSize(int,%20int,%20int,%20int,%20int)">getKeyValueDataStructureSize</a></strong>(int&nbsp;rlength,
                                                         int&nbsp;flength,
@@ -784,9 +876,17 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
  characteristics would take up for its underlying data structure.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getLength()">getLength</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getLength(byte[],%20int)">getLength</a></strong>(byte[]&nbsp;bytes,
+                  int&nbsp;offset)</code>
+<div class="block">Determines the total length of the KeyValue stored in the specified
+ byte array and offset.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
@@ -803,8 +903,17 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getQualifierLength()">getQualifierLength</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getQualifierLength(int,%20int)">getQualifierLength</a></strong>(int&nbsp;rlength,
+                                    int&nbsp;flength)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getQualifierOffset()">getQualifierOffset</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getQualifierOffset(int)">getQualifierOffset</a></strong>(int&nbsp;foffset)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
@@ -853,8 +962,16 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getTimestamp()">getTimestamp</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getTimestamp(int)">getTimestamp</a></strong>(int&nbsp;keylength)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getTimestampOffset()">getTimestampOffset</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getTimestampOffset(int)">getTimestampOffset</a></strong>(int&nbsp;keylength)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>byte</code></td>
@@ -1058,6 +1175,24 @@ implements <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interf
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="EMPTY_ARRAY_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EMPTY_ARRAY_LIST</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.86">EMPTY_ARRAY_LIST</a></pre>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.88">LOG</a></pre>
+</li>
+</ul>
 <a name="COLUMN_FAMILY_DELIMITER">
 <!--   -->
 </a>
@@ -1243,6 +1378,16 @@ public static final&nbsp;<a href="../../../../org/apache/hadoop/hbase/KeyValue.K
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.KeyValue.KEYVALUE_WITH_TAGS_INFRASTRUCTURE_SIZE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="MAX_TAGS_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MAX_TAGS_LENGTH</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.158">MAX_TAGS_LENGTH</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.KeyValue.MAX_TAGS_LENGTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="LOWESTKEY">
 <!--   -->
 </a>
@@ -1276,10 +1421,19 @@ public static final&nbsp;<a href="../../../../org/apache/hadoop/hbase/KeyValue.K
 <a name="length">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>length</h4>
 <pre>protected&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.284">length</a></pre>
+</li>
+</ul>
+<a name="seqId">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>seqId</h4>
+<pre>private&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.311">seqId</a></pre>
 </li>
 </ul>
 </li>
@@ -1880,6 +2034,44 @@ public static final&nbsp;<a href="../../../../org/apache/hadoop/hbase/KeyValue.K
 </dl>
 </li>
 </ul>
+<a name="createEmptyByteArray(int, int, int, long, org.apache.hadoop.hbase.KeyValue.Type, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createEmptyByteArray</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.770">createEmptyByteArray</a>(int&nbsp;rlength,
+                          int&nbsp;flength,
+                          int&nbsp;qlength,
+                          long&nbsp;timestamp,
+                          <a href="../../../../org/apache/hadoop/hbase/KeyValue.Type.html" title="enum in org.apache.hadoop.hbase">KeyValue.Type</a>&nbsp;type,
+                          int&nbsp;vlength,
+                          int&nbsp;tagsLength)</pre>
+<div class="block">Create an empty byte[] representing a KeyValue
+ All lengths are preset and can be filled in later.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>rlength</code> - </dd><dd><code>flength</code> - </dd><dd><code>qlength</code> - </dd><dd><code>timestamp</code> - </dd><dd><code>type</code> - </dd><dd><code>vlength</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>The newly created byte array.</dd></dl>
+</li>
+</ul>
+<a name="checkParameters(byte[], int, byte[], int, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkParameters</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.828">checkParameters</a>(byte[]&nbsp;row,
+                   int&nbsp;rlength,
+                   byte[]&nbsp;family,
+                   int&nbsp;flength,
+                   int&nbsp;qlength,
+                   int&nbsp;vlength)
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></pre>
+<div class="block">Checks the parameters passed to a constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>row</code> - row key</dd><dd><code>rlength</code> - row length</dd><dd><code>family</code> - family name</dd><dd><code>flength</code> - family length</dd><dd><code>qlength</code> - qualifier length</dd><dd><code>vlength</code> - value length</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - an illegal value was passed</dd></dl>
+</li>
+</ul>
 <a name="writeByteArray(byte[], int, byte[], int, int, byte[], int, int, byte[], int, int, long, org.apache.hadoop.hbase.KeyValue.Type, byte[], int, int, org.apache.hadoop.hbase.Tag[])">
 <!--   -->
 </a>
@@ -1911,6 +2103,67 @@ public static final&nbsp;<a href="../../../../org/apache/hadoop/hbase/KeyValue.K
  remaining in the buffer</dd></dl>
 </li>
 </ul>
+<a name="checkForTagsLength(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkForTagsLength</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.937">checkForTagsLength</a>(int&nbsp;tagsLength)</pre>
+</li>
+</ul>
+<a name="createByteArray(byte[], int, int, byte[], int, int, byte[], int, int, long, org.apache.hadoop.hbase.KeyValue.Type, byte[], int, int, byte[], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createByteArray</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.961">createByteArray</a>(byte[]&nbsp;row,
+                     int&nbsp;roffset,
+                     int&nbsp;rlength,
+                     byte[]&nbsp;family,
+                     int&nbsp;foffset,
+                     int&nbsp;flength,
+                     byte[]&nbsp;qualifier,
+                     int&nbsp;qoffset,
+                     int&nbsp;qlength,
+                     long&nbsp;timestamp,
+                     <a href="../../../../org/apache/hadoop/hbase/KeyValue.Type.html" title="enum in org.apache.hadoop.hbase">KeyValue.Type</a>&nbsp;type,
+                     byte[]&nbsp;value,
+                     int&nbsp;voffset,
+                     int&nbsp;vlength,
+                     byte[]&nbsp;tags,
+                     int&nbsp;tagsOffset,
+                     int&nbsp;tagsLength)</pre>
+<div class="block">Write KeyValue format into a byte array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>row</code> - row key</dd><dd><code>roffset</code> - row offset</dd><dd><code>rlength</code> - row length</dd><dd><code>family</code> - family name</dd><dd><code>foffset</code> - family offset</dd><dd><code>flength</code> - family length</dd><dd><code>qualifier</code> - column qualifier</dd><dd><code>qoffset</code> - qualifier offset</dd><dd><code>qlength</code> - qualifier length</dd><dd><code>timestamp</code> - version timestamp</dd><dd><code>type</code> - key type</dd><dd><code>value</code> - column value</dd><dd><code>voffset</code> - value offset</dd><dd><code>vlength</code> - value length</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The newly created byte array.</dd></dl>
+</li>
+</ul>
+<a name="createByteArray(byte[], int, int, byte[], int, int, java.lang.Object, int, int, long, org.apache.hadoop.hbase.KeyValue.Type, java.lang.Object, int, int, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createByteArray</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1004">createByteArray</a>(byte[]&nbsp;row,
+                     int&nbsp;roffset,
+                     int&nbsp;rlength,
+                     byte[]&nbsp;family,
+                     int&nbsp;foffset,
+                     int&nbsp;flength,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;qualifier,
+                     int&nbsp;qoffset,
+                     int&nbsp;qlength,
+                     long&nbsp;timestamp,
+                     <a href="../../../../org/apache/hadoop/hbase/KeyValue.Type.html" title="enum in org.apache.hadoop.hbase">KeyValue.Type</a>&nbsp;type,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value,
+                     int&nbsp;voffset,
+                     int&nbsp;vlength,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;tags)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>qualifier</code> - can be a ByteBuffer or a byte[], or null.</dd><dd><code>value</code> - can be a ByteBuffer or a byte[], or null.</dd></dl>
+</li>
+</ul>
 <a name="equals(java.lang.Object)">
 <!--   -->
 </a>
@@ -1937,6 +2190,15 @@ public static final&nbsp;<a href="../../../../org/apache/hadoop/hbase/KeyValue.K
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="calculateHashForKey(org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>calculateHashForKey</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1081">calculateHashForKey</a>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</pre>
 </li>
 </ul>
 <a name="clone()">
@@ -2059,6 +2321,20 @@ public&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/Ke
 <h4>getLength</h4>
 <pre>public&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1248">getLength</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>Length of bytes this KeyValue occupies in <a href="../../../../org/apache/hadoop/hbase/KeyValue.html#getBuffer()"><code>getBuffer()</code></a>.</dd></dl>
+</li>
+</ul>
+<a name="getLength(byte[], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLength</h4>
+<pre>private static&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1265">getLength</a>(byte[]&nbsp;bytes,
+            int&nbsp;offset)</pre>
+<div class="block">Determines the total length of the KeyValue stored in the specified
+ byte array and offset.  Includes all headers.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>bytes</code> - byte array</dd><dd><code>offset</code> - offset to start of the KeyValue</dd>
+<dt><span class="strong">Returns:</span></dt><dd>length of entire KeyValue, in bytes</dd></dl>
 </li>
 </ul>
 <a name="getKeyOffset()">
@@ -2203,6 +2479,16 @@ public&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/Ke
 <dt><span class="strong">Returns:</span></dt><dd>Family offset</dd></dl>
 </li>
 </ul>
+<a name="getFamilyOffset(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFamilyOffset</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1358">getFamilyOffset</a>(int&nbsp;rlength)</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Family offset</dd></dl>
+</li>
+</ul>
 <a name="getFamilyLength()">
 <!--   -->
 </a>
@@ -2255,6 +2541,16 @@ public&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/Ke
 <dt><span class="strong">Returns:</span></dt><dd>Qualifier offset</dd></dl>
 </li>
 </ul>
+<a name="getQualifierOffset(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getQualifierOffset</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1396">getQualifierOffset</a>(int&nbsp;foffset)</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Qualifier offset</dd></dl>
+</li>
+</ul>
 <a name="getQualifierLength()">
 <!--   -->
 </a>
@@ -2268,6 +2564,17 @@ public&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/Ke
 <dt><span class="strong">Returns:</span></dt><dd>Qualifier length</dd></dl>
 </li>
 </ul>
+<a name="getQualifierLength(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getQualifierLength</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1411">getQualifierLength</a>(int&nbsp;rlength,
+                     int&nbsp;flength)</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Qualifier length</dd></dl>
+</li>
+</ul>
 <a name="getTimestampOffset()">
 <!--   -->
 </a>
@@ -2276,6 +2583,17 @@ public&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/Ke
 <h4>getTimestampOffset</h4>
 <pre>public&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1418">getTimestampOffset</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>Timestamp offset</dd></dl>
+</li>
+</ul>
+<a name="getTimestampOffset(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTimestampOffset</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1426">getTimestampOffset</a>(int&nbsp;keylength)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>keylength</code> - Pass if you have it to save on a int creation.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Timestamp offset</dd></dl>
 </li>
 </ul>
 <a name="isLatestTimestamp()">
@@ -2354,6 +2672,17 @@ public&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/Ke
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../org/apache/hadoop/hbase/Cell.html#getTimestamp()">getTimestamp</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>Timestamp</dd></dl>
+</li>
+</ul>
+<a name="getTimestamp(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTimestamp</h4>
+<pre>long&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/KeyValue.html#line.1495">getTimestamp</a>(int&nbsp;keylength)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>keylength</code> - Pass if you have it to save on a int creation.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Timestamp</dd></dl>
 </li>
 </ul>

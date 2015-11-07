@@ -139,6 +139,19 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#internalRestoreSnapshot(java.lang.String,%20org.apache.hadoop.hbase.TableName)">internalRestoreSnapshot</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
+                                              <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>
+<div class="block">Execute Restore/Clone snapshot and wait for the server to complete (blocking).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.MasterProtos.RestoreSnapshotResponse</code></td>
+<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#internalRestoreSnapshotAsync(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription)">internalRestoreSnapshotAsync</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot)</code>
+<div class="block">Execute Restore/Clone snapshot and wait for the server to complete (asynchronous)</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">Admin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html#restoreSnapshot(byte[])">restoreSnapshot</a></strong>(byte[]&nbsp;snapshotName)</code>
 <div class="block">Restore the specified snapshot on the original table.</div>

@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TableState.State.html" title="enum in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHRegionInfo.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/client/WrongRowIOException.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -149,6 +149,9 @@ extends <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" t
 </div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#UnmodifyableHTableDescriptor(org.apache.hadoop.hbase.HTableDescriptor)">UnmodifyableHTableDescriptor</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc)</code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -171,47 +174,51 @@ extends <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" t
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#getUnmodifyableFamilies(org.apache.hadoop.hbase.HTableDescriptor)">getUnmodifyableFamilies</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#modifyFamily(org.apache.hadoop.hbase.HColumnDescriptor)">modifyFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>
 <div class="block">Modifies the existing column family.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#removeFamily(byte[])">removeFamily</a></strong>(byte[]&nbsp;column)</code>
 <div class="block">Removes the HColumnDescriptor with name specified by the parameter column
  from the table descriptor</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#setMaxFileSize(long)">setMaxFileSize</a></strong>(long&nbsp;maxFileSize)</code>
 <div class="block">Sets the maximum size upto which a region can grow to after which a region
  split is triggered.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#setMemStoreFlushSize(long)">setMemStoreFlushSize</a></strong>(long&nbsp;memstoreFlushSize)</code>
 <div class="block">Represents the maximum size of the memstore after which the contents of the
  memstore are flushed to the filesystem.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#setReadOnly(boolean)">setReadOnly</a></strong>(boolean&nbsp;readOnly)</code>
 <div class="block">Setting the table as read only sets all the columns in the table as read
  only.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#setValue(byte[],%20byte[])">setValue</a></strong>(byte[]&nbsp;key,
                 byte[]&nbsp;value)</code>
 <div class="block">Setter for storing metadata as a (key, value) pair in <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html#values"><code>HTableDescriptor.values</code></a> map</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#setValue(java.lang.String,%20java.lang.String)">setValue</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
@@ -250,7 +257,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" t
 <a name="UnmodifyableHTableDescriptor()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>UnmodifyableHTableDescriptor</h4>
 <pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
@@ -258,6 +265,15 @@ public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Unmo
 <div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>As of release 2.0.0. This will be removed in HBase 3.0.0.
               Use <a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#UnmodifyableHTableDescriptor(org.apache.hadoop.hbase.HTableDescriptor)"><code>UnmodifyableHTableDescriptor(HTableDescriptor)</code></a>.</i></div>
 <div class="block">Default constructor.</div>
+</li>
+</ul>
+<a name="UnmodifyableHTableDescriptor(org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>UnmodifyableHTableDescriptor</h4>
+<pre><a href="../../../../../src-html/org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#line.47">UnmodifyableHTableDescriptor</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc)</pre>
 </li>
 </ul>
 </li>
@@ -268,6 +284,15 @@ public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Unmo
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getUnmodifyableFamilies(org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUnmodifyableFamilies</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#line.56">getUnmodifyableFamilies</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc)</pre>
+</li>
+</ul>
 <a name="addFamily(org.apache.hadoop.hbase.HColumnDescriptor)">
 <!--   -->
 </a>
@@ -433,7 +458,7 @@ public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Unmo
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TableState.State.html" title="enum in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHRegionInfo.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/client/WrongRowIOException.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

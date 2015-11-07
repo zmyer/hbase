@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestClientExponentialBackoff.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestClientOperationInterrupt.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.FakeServer.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/TestClientNoCluster.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -115,6 +115,57 @@ implements org.apache.hadoop.util.Tool</pre>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.FakeServer.html" title="class in org.apache.hadoop.hbase.client">TestClientNoCluster.FakeServer</a></strong></code>
+<div class="block">Fake 'server'.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.ManyServersManyRegionsConnection.html" title="class in org.apache.hadoop.hbase.client">TestClientNoCluster.ManyServersManyRegionsConnection</a></strong></code>
+<div class="block">Fake many regionservers and many regions on a connection implementation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.MetaRowsComparator.html" title="class in org.apache.hadoop.hbase.client">TestClientNoCluster.MetaRowsComparator</a></strong></code>
+<div class="block">Comparator for meta row keys.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.RegionServerStoppedOnScannerOpenConnection.html" title="class in org.apache.hadoop.hbase.client">TestClientNoCluster.RegionServerStoppedOnScannerOpenConnection</a></strong></code>
+<div class="block">Override to shutdown going to zookeeper for cluster id and meta location.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.RpcTimeoutConnection.html" title="class in org.apache.hadoop.hbase.client">TestClientNoCluster.RpcTimeoutConnection</a></strong></code>
+<div class="block">Override to check we are setting rpc timeout right.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.SimpleRegistry.html" title="class in org.apache.hadoop.hbase.client">TestClientNoCluster.SimpleRegistry</a></strong></code>
+<div class="block">Simple cluster registry inserted in place of our usual zookeeper based one.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="field_summary">
@@ -128,8 +179,32 @@ implements org.apache.hadoop.util.Tool</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#BIG_USER_TABLE">BIG_USER_TABLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static com.google.protobuf.ByteString</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#CATALOG_FAMILY_BYTESTRING">CATALOG_FAMILY_BYTESTRING</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static org.apache.hadoop.hbase.ServerName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#META_SERVERNAME">META_SERVERNAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static com.google.protobuf.ByteString</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#REGIONINFO_QUALIFIER_BYTESTRING">REGIONINFO_QUALIFIER_BYTESTRING</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static com.google.protobuf.ByteString</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#SERVER_QUALIFIER_BYTESTRING">SERVER_QUALIFIER_BYTESTRING</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -164,38 +239,112 @@ implements org.apache.hadoop.util.Tool</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#cycle(int,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.client.Connection)">cycle</a></strong>(int&nbsp;id,
+          org.apache.hadoop.conf.Configuration&nbsp;c,
+          org.apache.hadoop.hbase.client.Connection&nbsp;sharedConnection)</code>
+<div class="block">Code for each 'client' to run.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponse</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#doMetaGetResponse(java.util.SortedMap,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequest)">doMetaGetResponse</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;byte[],org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName&gt;&gt;&nbsp;meta,
+                                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequest&nbsp;request)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#doMetaScanResponse(java.util.SortedMap,%20java.util.concurrent.atomic.AtomicLong,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest)">doMetaScanResponse</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;byte[],org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName&gt;&gt;&nbsp;meta,
+                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;sequenceids,
+                                    org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest&nbsp;request)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiResponse</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#doMultiResponse(java.util.SortedMap,%20java.util.concurrent.atomic.AtomicLong,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequest)">doMultiResponse</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;byte[],org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName&gt;&gt;&nbsp;meta,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;sequenceids,
+                              org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequest&nbsp;request)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#format(long)">format</a></strong>(long&nbsp;number)</code>
+<div class="block">Format passed integer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell.Builder</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#getBaseCellBuilder(com.google.protobuf.ByteString)">getBaseCellBuilder</a></strong>(com.google.protobuf.ByteString&nbsp;row)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#getRegionInfo(com.google.protobuf.ByteString,%20org.apache.hadoop.hbase.HRegionInfo)">getRegionInfo</a></strong>(com.google.protobuf.ByteString&nbsp;row,
+                          org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#getServer(com.google.protobuf.ByteString,%20org.apache.hadoop.hbase.ServerName)">getServer</a></strong>(com.google.protobuf.ByteString&nbsp;row,
+                  org.apache.hadoop.hbase.ServerName&nbsp;sn)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#getStartCode(com.google.protobuf.ByteString)">getStartCode</a></strong>(com.google.protobuf.ByteString&nbsp;row)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#isMetaRegion(byte[],%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.RegionSpecifierType)">isMetaRegion</a></strong>(byte[]&nbsp;name,
+                        org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.RegionSpecifierType&nbsp;type)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#main(java.lang.String[])">main</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>
 <div class="block">Run a client instance against a faked up server.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.HRegionInfo[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#makeHRegionInfos(byte[],%20int,%20long)">makeHRegionInfos</a></strong>(byte[]&nbsp;tableName,
+                                int&nbsp;count,
+                                long&nbsp;namespaceSpan)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;byte[],org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#makeMeta(byte[],%20int,%20long,%20int)">makeMeta</a></strong>(byte[]&nbsp;tableName,
+                int&nbsp;regionCount,
+                long&nbsp;namespaceSpan,
+                int&nbsp;serverCount)</code>
+<div class="block">Create up a map that is keyed by meta row name and whose value is the HRegionInfo and
+ ServerName to return for this row.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.ServerName[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#makeServerNames(int)">makeServerNames</a></strong>(int&nbsp;count)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#run(java.lang.String[])">run</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;arg0)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#testDoNotRetryMetaTableAccessor()">testDoNotRetryMetaTableAccessor</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#testDoNotRetryOnScanNext()">testDoNotRetryOnScanNext</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#testRegionServerStoppedOnScannerOpen()">testRegionServerStoppedOnScannerOpen</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#testRpcTimeout()">testRpcTimeout</a></strong>()</code>
 <div class="block">Test that operation timeout prevails over rpc default timeout and retries, etc.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.html#testTimeoutAndRetries()">testTimeoutAndRetries</a></strong>()</code>
 <div class="block">Remove the @Ignore to try out timeout and retry asettings</div>
@@ -237,13 +386,67 @@ implements org.apache.hadoop.util.Tool</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.99">LOG</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.100">conf</a></pre>
+</li>
+</ul>
 <a name="META_SERVERNAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>META_SERVERNAME</h4>
+<pre>public static final&nbsp;org.apache.hadoop.hbase.ServerName <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.101">META_SERVERNAME</a></pre>
+</li>
+</ul>
+<a name="CATALOG_FAMILY_BYTESTRING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CATALOG_FAMILY_BYTESTRING</h4>
+<pre>private static final&nbsp;com.google.protobuf.ByteString <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.542">CATALOG_FAMILY_BYTESTRING</a></pre>
+</li>
+</ul>
+<a name="REGIONINFO_QUALIFIER_BYTESTRING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>REGIONINFO_QUALIFIER_BYTESTRING</h4>
+<pre>private static final&nbsp;com.google.protobuf.ByteString <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.544">REGIONINFO_QUALIFIER_BYTESTRING</a></pre>
+</li>
+</ul>
+<a name="SERVER_QUALIFIER_BYTESTRING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SERVER_QUALIFIER_BYTESTRING</h4>
+<pre>private static final&nbsp;com.google.protobuf.ByteString <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.546">SERVER_QUALIFIER_BYTESTRING</a></pre>
+</li>
+</ul>
+<a name="BIG_USER_TABLE">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>META_SERVERNAME</h4>
-<pre>public static final&nbsp;org.apache.hadoop.hbase.ServerName <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.101">META_SERVERNAME</a></pre>
+<h4>BIG_USER_TABLE</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.579">BIG_USER_TABLE</a></pre>
 </li>
 </ul>
 </li>
@@ -345,6 +548,157 @@ implements org.apache.hadoop.util.Tool</pre>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="doMultiResponse(java.util.SortedMap, java.util.concurrent.atomic.AtomicLong, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequest)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doMultiResponse</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiResponse&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.366">doMultiResponse</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;byte[],org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName&gt;&gt;&nbsp;meta,
+                                                                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;sequenceids,
+                                                                                    org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequest&nbsp;request)</pre>
+</li>
+</ul>
+<a name="doMetaScanResponse(java.util.SortedMap, java.util.concurrent.atomic.AtomicLong, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doMetaScanResponse</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.483">doMetaScanResponse</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;byte[],org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName&gt;&gt;&nbsp;meta,
+                                                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;sequenceids,
+                                                                                      org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest&nbsp;request)</pre>
+</li>
+</ul>
+<a name="doMetaGetResponse(java.util.SortedMap, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequest)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doMetaGetResponse</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponse&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.512">doMetaGetResponse</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;byte[],org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName&gt;&gt;&nbsp;meta,
+                                                                                    org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequest&nbsp;request)</pre>
+</li>
+</ul>
+<a name="isMetaRegion(byte[], org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.RegionSpecifierType)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMetaRegion</h4>
+<pre>static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.532">isMetaRegion</a>(byte[]&nbsp;name,
+                   org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.RegionSpecifierType&nbsp;type)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - region name or encoded region name.</dd><dd><code>type</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>True if we are dealing with a hbase:meta region.</dd></dl>
+</li>
+</ul>
+<a name="getBaseCellBuilder(com.google.protobuf.ByteString)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBaseCellBuilder</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell.Builder&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.549">getBaseCellBuilder</a>(com.google.protobuf.ByteString&nbsp;row)</pre>
+</li>
+</ul>
+<a name="getRegionInfo(com.google.protobuf.ByteString, org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRegionInfo</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.557">getRegionInfo</a>(com.google.protobuf.ByteString&nbsp;row,
+                                                                       org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</pre>
+</li>
+</ul>
+<a name="getServer(com.google.protobuf.ByteString, org.apache.hadoop.hbase.ServerName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getServer</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.564">getServer</a>(com.google.protobuf.ByteString&nbsp;row,
+                                                                   org.apache.hadoop.hbase.ServerName&nbsp;sn)</pre>
+</li>
+</ul>
+<a name="getStartCode(com.google.protobuf.ByteString)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStartCode</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.571">getStartCode</a>(com.google.protobuf.ByteString&nbsp;row)</pre>
+</li>
+</ul>
+<a name="format(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>format</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.588">format</a>(long&nbsp;number)</pre>
+<div class="block">Format passed integer.  Zero-pad.
+ Copied from hbase-server PE class and small amendment.  Make them share.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>number</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>Returns zero-prefixed 10-byte wide decimal version of passed
+ number (Does absolute in case number is negative).</dd></dl>
+</li>
+</ul>
+<a name="makeHRegionInfos(byte[], int, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeHRegionInfos</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.HRegionInfo[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.603">makeHRegionInfos</a>(byte[]&nbsp;tableName,
+                                                     int&nbsp;count,
+                                                     long&nbsp;namespaceSpan)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>count</code> - </dd><dd><code>namespaceSpan</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>count</code> regions</dd></dl>
+</li>
+</ul>
+<a name="makeServerNames(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeServerNames</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.ServerName[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.626">makeServerNames</a>(int&nbsp;count)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>count</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>Return <code>count</code> servernames.</dd></dl>
+</li>
+</ul>
+<a name="makeMeta(byte[], int, long, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeMeta</h4>
+<pre>static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;byte[],org.apache.hadoop.hbase.util.Pair&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.650">makeMeta</a>(byte[]&nbsp;tableName,
+                                                                                                                                   int&nbsp;regionCount,
+                                                                                                                                   long&nbsp;namespaceSpan,
+                                                                                                                                   int&nbsp;serverCount)</pre>
+<div class="block">Create up a map that is keyed by meta row name and whose value is the HRegionInfo and
+ ServerName to return for this row.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Map with faked hbase:meta content in it.</dd></dl>
+</li>
+</ul>
+<a name="cycle(int, org.apache.hadoop.conf.Configuration, org.apache.hadoop.hbase.client.Connection)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cycle</h4>
+<pre>static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestClientNoCluster.html#line.675">cycle</a>(int&nbsp;id,
+         org.apache.hadoop.conf.Configuration&nbsp;c,
+         org.apache.hadoop.hbase.client.Connection&nbsp;sharedConnection)
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Code for each 'client' to run.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>id</code> - </dd><dd><code>c</code> - </dd><dd><code>sharedConnection</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="run(java.lang.String[])">
 <!--   -->
 </a>
@@ -401,7 +755,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestClientExponentialBackoff.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestClientOperationInterrupt.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestClientNoCluster.FakeServer.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/TestClientNoCluster.html" target="_top">Frames</a></li>
@@ -425,7 +779,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

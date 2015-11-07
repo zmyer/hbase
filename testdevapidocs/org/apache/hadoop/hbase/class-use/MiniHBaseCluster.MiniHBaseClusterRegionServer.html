@@ -79,10 +79,14 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.master">org.apache.hadoop.hbase.master</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.master">org.apache.hadoop.hbase.master</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -108,6 +112,10 @@
 <div class="block">A private regionserver class with a dummy method for testing casts</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/TestMovedRegionsCleaner.TestMockRegionServer.html" title="class in org.apache.hadoop.hbase">TestMovedRegionsCleaner.TestMockRegionServer</a></strong></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -118,6 +126,13 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">MiniHBaseCluster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#init(int,%20int,%20java.lang.Class,%20java.lang.Class)">init</a></strong>(int&nbsp;nMasterNodes,
+        int&nbsp;nRegionNodes,
+        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends org.apache.hadoop.hbase.master.HMaster&gt;&nbsp;masterClass,
+        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster.MiniHBaseClusterRegionServer</a>&gt;&nbsp;regionserverClass)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a></code></td>
 <td class="colLast"><span class="strong">HBaseTestingUtility.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html#startMiniCluster(int,%20int,%20int,%20java.lang.String[],%20java.lang.Class,%20java.lang.Class)">startMiniCluster</a></strong>(int&nbsp;numMasters,
                                 int&nbsp;numSlaves,
@@ -126,7 +141,7 @@
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends org.apache.hadoop.hbase.master.HMaster&gt;&nbsp;masterClass,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster.MiniHBaseClusterRegionServer</a>&gt;&nbsp;regionserverClass)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a></code></td>
 <td class="colLast"><span class="strong">HBaseTestingUtility.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html#startMiniCluster(int,%20int,%20int,%20java.lang.String[],%20java.lang.Class,%20java.lang.Class,%20boolean)">startMiniCluster</a></strong>(int&nbsp;numMasters,
                                 int&nbsp;numSlaves,
@@ -139,7 +154,7 @@
  number of datanodes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a></code></td>
 <td class="colLast"><span class="strong">HBaseTestingUtility.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html#startMiniCluster(int,%20int,%20java.lang.String[],%20java.lang.Class,%20java.lang.Class)">startMiniCluster</a></strong>(int&nbsp;numMasters,
                                 int&nbsp;numSlaves,
@@ -149,7 +164,7 @@
 <div class="block">Start up a minicluster of hbase, optionally dfs, and zookeeper.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a></code></td>
 <td class="colLast"><span class="strong">HBaseTestingUtility.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html#startMiniHBaseCluster(int,%20int,%20java.lang.Class,%20java.lang.Class,%20boolean)">startMiniHBaseCluster</a></strong>(int&nbsp;numMasters,
                                           int&nbsp;numSlaves,
@@ -173,6 +188,24 @@
                                 int&nbsp;numRegionServers,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends org.apache.hadoop.hbase.master.HMaster&gt;&nbsp;masterClass,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster.MiniHBaseClusterRegionServer</a>&gt;&nbsp;regionserverClass)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.client">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster.MiniHBaseClusterRegionServer</a> in <a href="../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subclasses, and an explanation">
+<caption><span>Subclasses of <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster.MiniHBaseClusterRegionServer</a> in <a href="../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestClientScannerRPCTimeout.RegionServerWithScanTimeout.html" title="class in org.apache.hadoop.hbase.client">TestClientScannerRPCTimeout.RegionServerWithScanTimeout</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

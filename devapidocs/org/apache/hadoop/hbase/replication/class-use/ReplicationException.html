@@ -222,18 +222,24 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">ReplicationPeersZKImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#addExistingPeers()">addExistingPeers</a></strong>()</code>
+<div class="block">A private method used during initialization.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ReplicationQueues.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#addLog(java.lang.String,%20java.lang.String)">addLog</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
 <div class="block">Add a new WAL file to the given queue.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ReplicationQueuesZKImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#addLog(java.lang.String,%20java.lang.String)">addLog</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ReplicationPeers.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeers.html#addPeer(java.lang.String,%20org.apache.hadoop.hbase.replication.ReplicationPeerConfig,%20java.lang.String)">addPeer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId,
               <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a>&nbsp;peerConfig,
@@ -241,16 +247,33 @@
 <div class="block">Add a new remote slave cluster for replication.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ReplicationPeersZKImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#addPeer(java.lang.String,%20org.apache.hadoop.hbase.replication.ReplicationPeerConfig,%20java.lang.String)">addPeer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
               <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a>&nbsp;peerConfig,
               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableCFs)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">ReplicationPeersZKImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#changePeerState(java.lang.String,%20org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationState.State)">changePeerState</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
+                              org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationState.State&nbsp;state)</code>
+<div class="block">Update the state znode of a peer cluster.</div>
+</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">ReplicationPeersZKImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#checkQueuesDeleted(java.lang.String)">checkQueuesDeleted</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">ReplicationPeersZKImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#createAndAddPeer(java.lang.String)">createAndAddPeer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>
 <div class="block">Attempt to connect to a new remote slave cluster.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerZKImpl.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerZKImpl</a></code></td>
+<td class="colLast"><span class="strong">ReplicationPeersZKImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#createPeer(java.lang.String)">createPeer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>
+<div class="block">Helper method to connect to a peer</div>
 </td>
 </tr>
 <tr class="rowColor">

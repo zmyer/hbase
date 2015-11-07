@@ -147,6 +147,15 @@ extends junit.framework.TestCase</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestBytes.html#bytesWithOffset(byte[])">bytesWithOffset</a></strong>(byte[]&nbsp;src)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestBytes.html#checkTestIncrementBytes(long,%20long)">checkTestIncrementBytes</a></strong>(long&nbsp;val,
+                                              long&nbsp;amount)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestBytes.html#testAdd()">testAdd</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -269,6 +278,10 @@ extends junit.framework.TestCase</pre>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestBytes.html#testZero()">testZero</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestBytes.html#verifyReversibleForBytes(byte[])">verifyReversibleForBytes</a></strong>(byte[]&nbsp;originalBytes)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -433,6 +446,15 @@ extends junit.framework.TestCase</pre>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="bytesWithOffset(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bytesWithOffset</h4>
+<pre>private&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestBytes.html#line.188">bytesWithOffset</a>(byte[]&nbsp;src)</pre>
+</li>
+</ul>
 <a name="testToBytesForByteBuffer()">
 <!--   -->
 </a>
@@ -511,6 +533,15 @@ extends junit.framework.TestCase</pre>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestBytes.html#line.312">testToStringBytesBinaryReversible</a>()</pre>
 </li>
 </ul>
+<a name="verifyReversibleForBytes(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyReversibleForBytes</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestBytes.html#line.327">verifyReversibleForBytes</a>(byte[]&nbsp;originalBytes)</pre>
+</li>
+</ul>
 <a name="testStartsWith()">
 <!--   -->
 </a>
@@ -528,6 +559,19 @@ extends junit.framework.TestCase</pre>
 <h4>testIncrementBytes</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestBytes.html#line.344">testIncrementBytes</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkTestIncrementBytes(long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkTestIncrementBytes</h4>
+<pre>private static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestBytes.html#line.365">checkTestIncrementBytes</a>(long&nbsp;val,
+                              long&nbsp;amount)
+                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>

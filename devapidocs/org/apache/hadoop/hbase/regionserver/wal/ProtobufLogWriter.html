@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogReader.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogReader.WALHdrResult.html" title="enum in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ReaderBase.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -139,8 +139,24 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/Writ
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#compressor">compressor</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.fs.FSDataOutputStream</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#output">output</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#trailer">trailer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#trailerWarnSize">trailerWarnSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#trailerWritten">trailerWritten</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -191,36 +207,48 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/Writ
                             org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALHeader.Builder&nbsp;builder)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#buildWALTrailer(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer.Builder)">buildWALTrailer</a></strong>(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer.Builder&nbsp;builder)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#close()">close</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCellCodec.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALCellCodec</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#getCodec(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">getCodec</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a>&nbsp;compressionContext)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#getLength()">getLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.fs.FSDataOutputStream</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#getStream()">getStream</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#init(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.conf.Configuration,%20boolean)">init</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
         org.apache.hadoop.fs.Path&nbsp;path,
         org.apache.hadoop.conf.Configuration&nbsp;conf,
         boolean&nbsp;overwritable)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#initAfterHeader(boolean)">initAfterHeader</a></strong>(boolean&nbsp;doCompress)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#setWALTrailer(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer)">setWALTrailer</a></strong>(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer&nbsp;walTrailer)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#sync()">sync</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#writeWALTrailer()">writeWALTrailer</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -251,6 +279,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/Writ
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#line.47">LOG</a></pre>
+</li>
+</ul>
 <a name="output">
 <!--   -->
 </a>
@@ -272,10 +309,37 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/Writ
 <a name="compressor">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>compressor</h4>
 <pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCellCodec.ByteStringCompressor.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">WALCellCodec.ByteStringCompressor</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#line.50">compressor</a></pre>
+</li>
+</ul>
+<a name="trailerWritten">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>trailerWritten</h4>
+<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#line.51">trailerWritten</a></pre>
+</li>
+</ul>
+<a name="trailer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>trailer</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#line.52">trailer</a></pre>
+</li>
+</ul>
+<a name="trailerWarnSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>trailerWarnSize</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#line.55">trailerWarnSize</a></pre>
 </li>
 </ul>
 </li>
@@ -385,6 +449,24 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/Writ
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="buildWALTrailer(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer.Builder)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildWALTrailer</h4>
+<pre>org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#line.140">buildWALTrailer</a>(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer.Builder&nbsp;builder)</pre>
+</li>
+</ul>
+<a name="writeWALTrailer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeWALTrailer</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#line.144">writeWALTrailer</a>()</pre>
+</li>
+</ul>
 <a name="sync()">
 <!--   -->
 </a>
@@ -412,10 +494,19 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/Writ
 <a name="getStream()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getStream</h4>
 <pre>public&nbsp;org.apache.hadoop.fs.FSDataOutputStream&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#line.184">getStream</a>()</pre>
+</li>
+</ul>
+<a name="setWALTrailer(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setWALTrailer</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html#line.188">setWALTrailer</a>(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALTrailer&nbsp;walTrailer)</pre>
 </li>
 </ul>
 </li>
@@ -444,7 +535,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/Writ
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogReader.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogReader.WALHdrResult.html" title="enum in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ReaderBase.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

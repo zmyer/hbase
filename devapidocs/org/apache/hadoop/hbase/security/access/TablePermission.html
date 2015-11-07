@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/security/access/TableAuthManager.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/security/access/TableAuthManager.PermissionCache.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.security.access.Permission">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.security.access.Permission">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -147,6 +147,29 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permi
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html#family">family</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html#namespace">namespace</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html#qualifier">qualifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html#table">table</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.security.access.Permission">
 <!--   -->
@@ -367,6 +390,50 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permi
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="table">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>table</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TablePermission.html#line.40">table</a></pre>
+</li>
+</ul>
+<a name="family">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>family</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TablePermission.html#line.41">family</a></pre>
+</li>
+</ul>
+<a name="qualifier">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qualifier</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TablePermission.html#line.42">qualifier</a></pre>
+</li>
+</ul>
+<a name="namespace">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>namespace</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TablePermission.html#line.46">namespace</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -747,7 +814,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permi
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/security/access/TableAuthManager.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/security/access/TableAuthManager.PermissionCache.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -773,13 +840,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permi
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.security.access.Permission">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.security.access.Permission">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

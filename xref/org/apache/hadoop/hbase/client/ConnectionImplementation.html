@@ -849,7 +849,7 @@
 <a class="jxr_linenumber" name="839" href="#839">839</a>     <em class="jxr_comment">// without knowing the precise region names.</em>
 <a class="jxr_linenumber" name="840" href="#840">840</a>     byte[] metaKey = HRegionInfo.createRegionName(tableName, row, HConstants.NINES, false);
 <a class="jxr_linenumber" name="841" href="#841">841</a> 
-<a class="jxr_linenumber" name="842" href="#842">842</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">Scan</a> s = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">Scan</a>();
+<a class="jxr_linenumber" name="842" href="#842">842</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html">Scan</a> s = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html">Scan</a>();
 <a class="jxr_linenumber" name="843" href="#843">843</a>     s.setReversed(<strong class="jxr_keyword">true</strong>);
 <a class="jxr_linenumber" name="844" href="#844">844</a>     s.setStartRow(metaKey);
 <a class="jxr_linenumber" name="845" href="#845">845</a>     s.setSmall(<strong class="jxr_keyword">true</strong>);
@@ -879,7 +879,7 @@
 <a class="jxr_linenumber" name="869" href="#869">869</a> 
 <a class="jxr_linenumber" name="870" href="#870">870</a>       <em class="jxr_comment">// Query the meta region</em>
 <a class="jxr_linenumber" name="871" href="#871">871</a>       <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="872" href="#872">872</a>         <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">Result</a> regionInfoRow = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="872" href="#872">872</a>         <a href="../../../../../org/apache/hadoop/hbase/client/Result.html">Result</a> regionInfoRow = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="873" href="#873">873</a>         <a href="../../../../../org/apache/hadoop/hbase/client/ReversedClientScanner.html">ReversedClientScanner</a> rcs = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="874" href="#874">874</a>         <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="875" href="#875">875</a>           rcs = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/ClientSmallReversedScanner.html">ClientSmallReversedScanner</a>(conf, s, TableName.META_TABLE_NAME, <strong class="jxr_keyword">this</strong>,
@@ -1588,14 +1588,14 @@
 <a class="jxr_linenumber" name="1578" href="#1578">1578</a>       }
 <a class="jxr_linenumber" name="1579" href="#1579">1579</a> 
 <a class="jxr_linenumber" name="1580" href="#1580">1580</a>       @Override
-<a class="jxr_linenumber" name="1581" href="#1581">1581</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">NormalizeResponse</a> normalize(RpcController controller,
-<a class="jxr_linenumber" name="1582" href="#1582">1582</a>           <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">NormalizeRequest</a> request) <strong class="jxr_keyword">throws</strong> ServiceException {
+<a class="jxr_linenumber" name="1581" href="#1581">1581</a>       <strong class="jxr_keyword">public</strong> NormalizeResponse normalize(RpcController controller,
+<a class="jxr_linenumber" name="1582" href="#1582">1582</a>           NormalizeRequest request) <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="1583" href="#1583">1583</a>         <strong class="jxr_keyword">return</strong> stub.normalize(controller, request);
 <a class="jxr_linenumber" name="1584" href="#1584">1584</a>       }
 <a class="jxr_linenumber" name="1585" href="#1585">1585</a> 
 <a class="jxr_linenumber" name="1586" href="#1586">1586</a>       @Override
-<a class="jxr_linenumber" name="1587" href="#1587">1587</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">SetNormalizerRunningResponse</a> setNormalizerRunning(
-<a class="jxr_linenumber" name="1588" href="#1588">1588</a>           RpcController controller, <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">SetNormalizerRunningRequest</a> request)
+<a class="jxr_linenumber" name="1587" href="#1587">1587</a>       <strong class="jxr_keyword">public</strong> SetNormalizerRunningResponse setNormalizerRunning(
+<a class="jxr_linenumber" name="1588" href="#1588">1588</a>           RpcController controller, SetNormalizerRunningRequest request)
 <a class="jxr_linenumber" name="1589" href="#1589">1589</a>           <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="1590" href="#1590">1590</a>         <strong class="jxr_keyword">return</strong> stub.setNormalizerRunning(controller, request);
 <a class="jxr_linenumber" name="1591" href="#1591">1591</a>       }
@@ -1810,20 +1810,20 @@
 <a class="jxr_linenumber" name="1800" href="#1800">1800</a>       }
 <a class="jxr_linenumber" name="1801" href="#1801">1801</a> 
 <a class="jxr_linenumber" name="1802" href="#1802">1802</a>       @Override
-<a class="jxr_linenumber" name="1803" href="#1803">1803</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">IsBalancerEnabledResponse</a> isBalancerEnabled(RpcController controller,
-<a class="jxr_linenumber" name="1804" href="#1804">1804</a>           <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">IsBalancerEnabledRequest</a> request) <strong class="jxr_keyword">throws</strong> ServiceException {
+<a class="jxr_linenumber" name="1803" href="#1803">1803</a>       <strong class="jxr_keyword">public</strong> IsBalancerEnabledResponse isBalancerEnabled(RpcController controller,
+<a class="jxr_linenumber" name="1804" href="#1804">1804</a>           IsBalancerEnabledRequest request) <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="1805" href="#1805">1805</a>         <strong class="jxr_keyword">return</strong> stub.isBalancerEnabled(controller, request);
 <a class="jxr_linenumber" name="1806" href="#1806">1806</a>       }
 <a class="jxr_linenumber" name="1807" href="#1807">1807</a> 
 <a class="jxr_linenumber" name="1808" href="#1808">1808</a>       @Override
-<a class="jxr_linenumber" name="1809" href="#1809">1809</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">IsNormalizerEnabledResponse</a> isNormalizerEnabled(RpcController controller,
-<a class="jxr_linenumber" name="1810" href="#1810">1810</a>           <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">IsNormalizerEnabledRequest</a> request) <strong class="jxr_keyword">throws</strong> ServiceException {
+<a class="jxr_linenumber" name="1809" href="#1809">1809</a>       <strong class="jxr_keyword">public</strong> IsNormalizerEnabledResponse isNormalizerEnabled(RpcController controller,
+<a class="jxr_linenumber" name="1810" href="#1810">1810</a>           IsNormalizerEnabledRequest request) <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="1811" href="#1811">1811</a>         <strong class="jxr_keyword">return</strong> stub.isNormalizerEnabled(controller, request);
 <a class="jxr_linenumber" name="1812" href="#1812">1812</a>       }
 <a class="jxr_linenumber" name="1813" href="#1813">1813</a> 
 <a class="jxr_linenumber" name="1814" href="#1814">1814</a>       @Override
-<a class="jxr_linenumber" name="1815" href="#1815">1815</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">SecurityCapabilitiesResponse</a> getSecurityCapabilities(RpcController controller,
-<a class="jxr_linenumber" name="1816" href="#1816">1816</a>           <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">SecurityCapabilitiesRequest</a> request) <strong class="jxr_keyword">throws</strong> ServiceException {
+<a class="jxr_linenumber" name="1815" href="#1815">1815</a>       <strong class="jxr_keyword">public</strong> SecurityCapabilitiesResponse getSecurityCapabilities(RpcController controller,
+<a class="jxr_linenumber" name="1816" href="#1816">1816</a>           SecurityCapabilitiesRequest request) <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="1817" href="#1817">1817</a>         <strong class="jxr_keyword">return</strong> stub.getSecurityCapabilities(controller, request);
 <a class="jxr_linenumber" name="1818" href="#1818">1818</a>       }
 <a class="jxr_linenumber" name="1819" href="#1819">1819</a>     };
@@ -2335,10 +2335,10 @@
 <a class="jxr_linenumber" name="2325" href="#2325">2325</a>   }
 <a class="jxr_linenumber" name="2326" href="#2326">2326</a> 
 <a class="jxr_linenumber" name="2327" href="#2327">2327</a>   @Override
-<a class="jxr_linenumber" name="2328" href="#2328">2328</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableState</a> getTableState(<a href="../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="2328" href="#2328">2328</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/client/TableState.html">TableState</a> getTableState(<a href="../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="2329" href="#2329">2329</a>     <strong class="jxr_keyword">if</strong> (<strong class="jxr_keyword">this</strong>.closed) <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(toString() + <span class="jxr_string">" closed"</span>);
 <a class="jxr_linenumber" name="2330" href="#2330">2330</a> 
-<a class="jxr_linenumber" name="2331" href="#2331">2331</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableState</a> tableState = MetaTableAccessor.getTableState(<strong class="jxr_keyword">this</strong>, tableName);
+<a class="jxr_linenumber" name="2331" href="#2331">2331</a>     <a href="../../../../../org/apache/hadoop/hbase/client/TableState.html">TableState</a> tableState = MetaTableAccessor.getTableState(<strong class="jxr_keyword">this</strong>, tableName);
 <a class="jxr_linenumber" name="2332" href="#2332">2332</a>     <strong class="jxr_keyword">if</strong> (tableState == <strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="2333" href="#2333">2333</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/TableNotFoundException.html">TableNotFoundException</a>(tableName);
 <a class="jxr_linenumber" name="2334" href="#2334">2334</a>     <strong class="jxr_keyword">return</strong> tableState;

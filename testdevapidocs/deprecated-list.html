@@ -87,11 +87,6 @@
 <div class="block"><i>Write junit4 unit tests using <a href="org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase"><code>HBaseTestingUtility</code></a></i></div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/MapFilePerformanceEvaluation.html" title="class in org.apache.hadoop.hbase">org.apache.hadoop.hbase.MapFilePerformanceEvaluation</a>
-<div class="block"><i>HBase does not use MapFiles any more.</i></div>
-</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -109,7 +104,12 @@
 <tbody>
 <tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/codec/CodecPerformance.html#LOG">org.apache.hadoop.hbase.codec.CodecPerformance.LOG</a>
-<div class="block"><i>LOG variable would be made private.</i></div>
+<div class="block"><i>LOG variable would be made private. since 1.2, remove in 3.0</i></div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="org/apache/hadoop/hbase/HBaseTestingUtility.html#TEST_DIRECTORY_KEY">org.apache.hadoop.hbase.HBaseTestingUtility.TEST_DIRECTORY_KEY</a>
+<div class="block"><i>can be used only with mini dfs</i></div>
 </td>
 </tr>
 </tbody>
@@ -140,44 +140,39 @@
 <td class="colOne"><a href="org/apache/hadoop/hbase/HBaseTestingUtility.html#createTableDescriptor(java.lang.String,%20int,%20int,%20int,%20org.apache.hadoop.hbase.KeepDeletedCells)">org.apache.hadoop.hbase.HBaseTestingUtility.createTableDescriptor(String, int, int, int, KeepDeletedCells)</a></td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/PerformanceEvaluation.html#generateValue(java.util.Random)">org.apache.hadoop.hbase.PerformanceEvaluation.generateValue(Random)</a>
-<div class="block"><i>Use <a href="org/apache/hadoop/hbase/PerformanceEvaluation.html#generateData(java.util.Random,%20int)"><code>PerformanceEvaluation.generateData(java.util.Random, int)</code></a> instead.</i></div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postAddColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.postAddColumn(ObserverContext<MasterCoprocessorEnvironment>, TableName, HColumnDescriptor)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postAddColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.postAddColumnHandler(ObserverContext<MasterCoprocessorEnvironment>, TableName, HColumnDescriptor)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDeleteColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20byte[])">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.postDeleteColumn(ObserverContext<MasterCoprocessorEnvironment>, TableName, byte[])</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDeleteColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20byte[])">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.postDeleteColumnHandler(ObserverContext<MasterCoprocessorEnvironment>, TableName, byte[])</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postModifyColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.postModifyColumn(ObserverContext<MasterCoprocessorEnvironment>, TableName, HColumnDescriptor)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postModifyColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.postModifyColumnHandler(ObserverContext<MasterCoprocessorEnvironment>, TableName, HColumnDescriptor)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preAddColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.preAddColumn(ObserverContext<MasterCoprocessorEnvironment>, TableName, HColumnDescriptor)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preAddColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.preAddColumnHandler(ObserverContext<MasterCoprocessorEnvironment>, TableName, HColumnDescriptor)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDeleteColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20byte[])">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.preDeleteColumn(ObserverContext<MasterCoprocessorEnvironment>, TableName, byte[])</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDeleteColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20byte[])">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.preDeleteColumnHandler(ObserverContext<MasterCoprocessorEnvironment>, TableName, byte[])</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preModifyColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.preModifyColumn(ObserverContext<MasterCoprocessorEnvironment>, TableName, HColumnDescriptor)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preModifyColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">org.apache.hadoop.hbase.coprocessor.TestMasterObserver.CPMasterObserver.preModifyColumnHandler(ObserverContext<MasterCoprocessorEnvironment>, TableName, HColumnDescriptor)</a></td>
 </tr>
 </tbody>

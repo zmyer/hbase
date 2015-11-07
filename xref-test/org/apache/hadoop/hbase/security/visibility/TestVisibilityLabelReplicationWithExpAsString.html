@@ -47,10 +47,10 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.HConstants;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.HTableDescriptor;
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.Tag;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Connection;
-<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
-<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Get;
-<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.HBaseAdmin;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Admin;
+<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Connection;
+<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Get;
 <a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Result;
 <a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Table;
 <a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.replication.ReplicationAdmin;
@@ -151,10 +151,10 @@
 <a class="jxr_linenumber" name="141" href="#141">141</a>     HColumnDescriptor desc = <strong class="jxr_keyword">new</strong> HColumnDescriptor(fam);
 <a class="jxr_linenumber" name="142" href="#142">142</a>     desc.setScope(HConstants.REPLICATION_SCOPE_GLOBAL);
 <a class="jxr_linenumber" name="143" href="#143">143</a>     table.addFamily(desc);
-<a class="jxr_linenumber" name="144" href="#144">144</a>     <strong class="jxr_keyword">try</strong> (HBaseAdmin hBaseAdmin = TEST_UTIL.getHBaseAdmin()) {
+<a class="jxr_linenumber" name="144" href="#144">144</a>     <strong class="jxr_keyword">try</strong> (Admin hBaseAdmin = TEST_UTIL.getHBaseAdmin()) {
 <a class="jxr_linenumber" name="145" href="#145">145</a>       hBaseAdmin.createTable(table);
 <a class="jxr_linenumber" name="146" href="#146">146</a>     }
-<a class="jxr_linenumber" name="147" href="#147">147</a>     <strong class="jxr_keyword">try</strong> (HBaseAdmin hBaseAdmin1 = TEST_UTIL1.getHBaseAdmin()){
+<a class="jxr_linenumber" name="147" href="#147">147</a>     <strong class="jxr_keyword">try</strong> (Admin hBaseAdmin1 = TEST_UTIL1.getHBaseAdmin()){
 <a class="jxr_linenumber" name="148" href="#148">148</a>       hBaseAdmin1.createTable(table);
 <a class="jxr_linenumber" name="149" href="#149">149</a>     }
 <a class="jxr_linenumber" name="150" href="#150">150</a>     addLabels();

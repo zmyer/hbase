@@ -144,11 +144,43 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#autoFlush">autoFlush</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#cleanupConnectionOnClose">cleanupConnectionOnClose</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#cleanupPoolOnClose">cleanupPoolOnClose</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#closed">closed</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#configuration">configuration</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#connection">connection</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#defaultConsistency">defaultConsistency</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.client.AsyncProcess</code></td>
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/HRegionLocator.html" title="class in org.apache.hadoop.hbase.client">HRegionLocator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#locator">locator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/AsyncProcess.html" title="class in org.apache.hadoop.hbase.client">AsyncProcess</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#multiAp">multiAp</a></strong></code>
 <div class="block">The Async process for batch</div>
 </td>
@@ -158,12 +190,36 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#mutator">mutator</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#operationTimeout">operationTimeout</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#pool">pool</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#rpcCallerFactory">rpcCallerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#scannerCaching">scannerCaching</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#scannerMaxResultSize">scannerMaxResultSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/TableConfiguration.html" title="class in org.apache.hadoop.hbase.client">TableConfiguration</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#tableConfiguration">tableConfiguration</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#tableName">tableName</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -373,15 +429,25 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private &lt;V&gt;&nbsp;V</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#executeMasterCallable(org.apache.hadoop.hbase.client.MasterCallable)">executeMasterCallable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/MasterCallable.html" title="class in org.apache.hadoop.hbase.client">MasterCallable</a>&lt;V&gt;&nbsp;callable)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#exists(org.apache.hadoop.hbase.client.Get)">exists</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)</code>
 <div class="block">Test for the existence of columns in the table, as specified by the Get.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#existsAll(java.util.List)">existsAll</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>
 <div class="block">Test for the existence of columns in the table, as specified by the Gets.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#finishSetup()">finishSetup</a></strong>()</code>
+<div class="block">setup this HTable's parameter based on the passed configuration</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -397,10 +463,19 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#get(org.apache.hadoop.hbase.client.Get,%20boolean)">get</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
+      boolean&nbsp;checkExistenceOnly)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#get(java.util.List)">get</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>
 <div class="block">Extracts certain cells from the given rows, in batch.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client">BufferedMutator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getBufferedMutator()">getBufferedMutator</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.conf.Configuration</code></td>
@@ -421,6 +496,25 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getDefaultExecutor(org.apache.hadoop.conf.Configuration)">getDefaultExecutor</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase">HRegionLocation</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getKeysAndRegionsInRange(byte[],%20byte[],%20boolean)">getKeysAndRegionsInRange</a></strong>(byte[]&nbsp;startKey,
+                                                byte[]&nbsp;endKey,
+                                                boolean&nbsp;includeEndKey)</code>
+<div class="block">Get the corresponding start keys and regions for an arbitrary range of
+ keys.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase">HRegionLocation</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getKeysAndRegionsInRange(byte[],%20byte[],%20boolean,%20boolean)">getKeysAndRegionsInRange</a></strong>(byte[]&nbsp;startKey,
+                                                byte[]&nbsp;endKey,
+                                                boolean&nbsp;includeEndKey,
+                                                boolean&nbsp;reload)</code>
+<div class="block">Get the corresponding start keys and regions for an arbitrary range of
+ keys.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getMaxKeyValueSize(org.apache.hadoop.conf.Configuration)">getMaxKeyValueSize</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
@@ -435,27 +529,38 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getOperationTimeout()">getOperationTimeout</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getPool()">getPool</a></strong>()</code>
+<div class="block">The pool is used for mutli requests for this HTable</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/RegionLocator.html" title="interface in org.apache.hadoop.hbase.client">RegionLocator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getRegionLocator()">getRegionLocator</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getScanner(byte[])">getScanner</a></strong>(byte[]&nbsp;family)</code>
 <div class="block">The underlying <a href="../../../../../org/apache/hadoop/hbase/client/HTable.html" title="class in org.apache.hadoop.hbase.client"><code>HTable</code></a> must not be closed.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getScanner(byte[],%20byte[])">getScanner</a></strong>(byte[]&nbsp;family,
                     byte[]&nbsp;qualifier)</code>
 <div class="block">The underlying <a href="../../../../../org/apache/hadoop/hbase/client/HTable.html" title="class in org.apache.hadoop.hbase.client"><code>HTable</code></a> must not be closed.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getScanner(org.apache.hadoop.hbase.client.Scan)">getScanner</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</code>
 <div class="block">The underlying <a href="../../../../../org/apache/hadoop/hbase/client/HTable.html" title="class in org.apache.hadoop.hbase.client"><code>HTable</code></a> must not be closed.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html#getStartKeysInRange(byte[],%20byte[])">getStartKeysInRange</a></strong>(byte[]&nbsp;start,
+                                      byte[]&nbsp;end)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
@@ -598,6 +703,15 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.102">LOG</a></pre>
+</li>
+</ul>
 <a name="connection">
 <!--   -->
 </a>
@@ -607,6 +721,33 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 <pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.103">connection</a></pre>
 </li>
 </ul>
+<a name="tableName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableName</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.104">tableName</a></pre>
+</li>
+</ul>
+<a name="configuration">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>configuration</h4>
+<pre>private volatile&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.105">configuration</a></pre>
+</li>
+</ul>
+<a name="tableConfiguration">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableConfiguration</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/TableConfiguration.html" title="class in org.apache.hadoop.hbase.client">TableConfiguration</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.106">tableConfiguration</a></pre>
+</li>
+</ul>
 <a name="mutator">
 <!--   -->
 </a>
@@ -614,6 +755,24 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 <li class="blockList">
 <h4>mutator</h4>
 <pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/BufferedMutatorImpl.html" title="class in org.apache.hadoop.hbase.client">BufferedMutatorImpl</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.107">mutator</a></pre>
+</li>
+</ul>
+<a name="autoFlush">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>autoFlush</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.108">autoFlush</a></pre>
+</li>
+</ul>
+<a name="closed">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>closed</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.109">closed</a></pre>
 </li>
 </ul>
 <a name="scannerCaching">
@@ -634,14 +793,86 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/HTableInterfac
 <pre>protected&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.111">scannerMaxResultSize</a></pre>
 </li>
 </ul>
+<a name="pool">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pool</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.112">pool</a></pre>
+</li>
+</ul>
+<a name="operationTimeout">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>operationTimeout</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.113">operationTimeout</a></pre>
+</li>
+</ul>
+<a name="cleanupPoolOnClose">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cleanupPoolOnClose</h4>
+<pre>private final&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.114">cleanupPoolOnClose</a></pre>
+</li>
+</ul>
+<a name="cleanupConnectionOnClose">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cleanupConnectionOnClose</h4>
+<pre>private final&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.115">cleanupConnectionOnClose</a></pre>
+</li>
+</ul>
+<a name="defaultConsistency">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>defaultConsistency</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.116">defaultConsistency</a></pre>
+</li>
+</ul>
+<a name="locator">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>locator</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/HRegionLocator.html" title="class in org.apache.hadoop.hbase.client">HRegionLocator</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.117">locator</a></pre>
+</li>
+</ul>
 <a name="multiAp">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>multiAp</h4>
+<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/AsyncProcess.html" title="class in org.apache.hadoop.hbase.client">AsyncProcess</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.120">multiAp</a></pre>
+<div class="block">The Async process for batch</div>
+</li>
+</ul>
+<a name="rpcCallerFactory">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rpcCallerFactory</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.121">rpcCallerFactory</a></pre>
+</li>
+</ul>
+<a name="rpcControllerFactory">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>multiAp</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.client.AsyncProcess <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.120">multiAp</a></pre>
-<div class="block">The Async process for batch</div>
+<h4>rpcControllerFactory</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.122">rpcControllerFactory</a></pre>
 </li>
 </ul>
 </li>
@@ -714,6 +945,19 @@ public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/c
 <h4>getMaxKeyValueSize</h4>
 <pre>public static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.198">getMaxKeyValueSize</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>maxKeyValueSize from configuration.</dd></dl>
+</li>
+</ul>
+<a name="finishSetup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>finishSetup</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.205">finishSetup</a>()
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">setup this HTable's parameter based on the passed configuration</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="getConfiguration()">
@@ -792,6 +1036,59 @@ public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.h
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if a remote or network exception occurs.</dd></dl>
 </li>
 </ul>
+<a name="executeMasterCallable(org.apache.hadoop.hbase.client.MasterCallable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>executeMasterCallable</h4>
+<pre>private&nbsp;&lt;V&gt;&nbsp;V&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.272">executeMasterCallable</a>(<a href="../../../../../org/apache/hadoop/hbase/client/MasterCallable.html" title="class in org.apache.hadoop.hbase.client">MasterCallable</a>&lt;V&gt;&nbsp;callable)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getKeysAndRegionsInRange(byte[], byte[], boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeysAndRegionsInRange</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase">HRegionLocation</a>&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.292">getKeysAndRegionsInRange</a>(byte[]&nbsp;startKey,
+                                                                byte[]&nbsp;endKey,
+                                                                boolean&nbsp;includeEndKey)
+                                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Get the corresponding start keys and regions for an arbitrary range of
+ keys.
+ <p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>startKey</code> - Starting row in range, inclusive</dd><dd><code>endKey</code> - Ending row in range</dd><dd><code>includeEndKey</code> - true if endRow is inclusive, false if exclusive</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A pair of list of start keys and list of HRegionLocations that
+         contain the specified range</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if a remote or network exception occurs</dd></dl>
+</li>
+</ul>
+<a name="getKeysAndRegionsInRange(byte[], byte[], boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeysAndRegionsInRange</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase">HRegionLocation</a>&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.310">getKeysAndRegionsInRange</a>(byte[]&nbsp;startKey,
+                                                                byte[]&nbsp;endKey,
+                                                                boolean&nbsp;includeEndKey,
+                                                                boolean&nbsp;reload)
+                                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Get the corresponding start keys and regions for an arbitrary range of
+ keys.
+ <p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>startKey</code> - Starting row in range, inclusive</dd><dd><code>endKey</code> - Ending row in range</dd><dd><code>includeEndKey</code> - true if endRow is inclusive, false if exclusive</dd><dd><code>reload</code> - true to reload information or false to use cached information</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A pair of list of start keys and list of HRegionLocations that
+         contain the specified range</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if a remote or network exception occurs</dd></dl>
+</li>
+</ul>
 <a name="getScanner(org.apache.hadoop.hbase.client.Scan)">
 <!--   -->
 </a>
@@ -868,6 +1165,19 @@ public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.h
  contain any <a href="../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase"><code>KeyValue</code></a>, as indicated by <a href="../../../../../org/apache/hadoop/hbase/client/Result.html#isEmpty()"><code>Result.isEmpty()</code></a>.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if a remote or network exception occurs.</dd></dl>
+</li>
+</ul>
+<a name="get(org.apache.hadoop.hbase.client.Get, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.416">get</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
+         boolean&nbsp;checkExistenceOnly)
+            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="get(java.util.List)">
@@ -1524,6 +1834,17 @@ public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.h
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if a remote or network exception occurs.</dd></dl>
 </li>
 </ul>
+<a name="getPool()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPool</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.1085">getPool</a>()</pre>
+<div class="block">The pool is used for mutli requests for this HTable</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the pool used for mutli</dd></dl>
+</li>
+</ul>
 <a name="clearRegionCache()">
 <!--   -->
 </a>
@@ -1632,6 +1953,19 @@ public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.h
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd></dl>
 </li>
 </ul>
+<a name="getStartKeysInRange(byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStartKeysInRange</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.1170">getStartKeysInRange</a>(byte[]&nbsp;start,
+                               byte[]&nbsp;end)
+                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="setOperationTimeout(int)">
 <!--   -->
 </a>
@@ -1734,10 +2068,22 @@ public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.h
 <a name="getRegionLocator()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getRegionLocator</h4>
 <pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/RegionLocator.html" title="interface in org.apache.hadoop.hbase.client">RegionLocator</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.1303">getRegionLocator</a>()</pre>
+</li>
+</ul>
+<a name="getBufferedMutator()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getBufferedMutator</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client">BufferedMutator</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HTable.html#line.1308">getBufferedMutator</a>()
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>

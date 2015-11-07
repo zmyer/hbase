@@ -105,13 +105,8 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/mapreduce/HFileOutputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce.HFileOutputFormat</a>
-<div class="block"><i>use <a href="org/apache/hadoop/hbase/mapreduce/HFileOutputFormat2.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>HFileOutputFormat2</code></a> instead.</i></div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/mapreduce/HLogInputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce.HLogInputFormat</a>
-<div class="block"><i>use <a href="org/apache/hadoop/hbase/mapreduce/WALInputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>WALInputFormat</code></a></i></div>
+<div class="block"><i>use <a href="org/apache/hadoop/hbase/mapreduce/WALInputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>WALInputFormat</code></a>.  Remove in hadoop 3.0</i></div>
 </td>
 </tr>
 </tbody>
@@ -164,7 +159,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/mapreduce/TableSplit.html#LOG">org.apache.hadoop.hbase.mapreduce.TableSplit.LOG</a>
-<div class="block"><i>LOG variable would be made private.</i></div>
+<div class="block"><i>LOG variable would be made private. fix in hbase 3.0</i></div>
 </td>
 </tr>
 <tr class="altColor">
@@ -210,16 +205,6 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#addLabel(org.apache.hadoop.conf.Configuration,%20java.lang.String)">org.apache.hadoop.hbase.security.visibility.VisibilityClient.addLabel(Configuration, String)</a>
-<div class="block"><i>Use <a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#addLabel(org.apache.hadoop.hbase.client.Connection,%20java.lang.String)"><code>VisibilityClient.addLabel(Connection,String)</code></a> instead.</i></div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#addLabels(org.apache.hadoop.conf.Configuration,%20java.lang.String[])">org.apache.hadoop.hbase.security.visibility.VisibilityClient.addLabels(Configuration, String[])</a>
-<div class="block"><i>Use <a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#addLabels(org.apache.hadoop.hbase.client.Connection,%20java.lang.String[])"><code>VisibilityClient.addLabels(Connection,String[])</code></a> instead.</i></div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/replication/ReplicationAdmin.html#addPeer(java.lang.String,%20java.lang.String)">org.apache.hadoop.hbase.client.replication.ReplicationAdmin.addPeer(String, String)</a>
 <div class="block"><i>Use addPeer(String, ReplicationPeerConfig, Map) instead.</i></div>
 </td>
@@ -243,33 +228,23 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#clearAuths(org.apache.hadoop.conf.Configuration,%20java.lang.String[],%20java.lang.String)">org.apache.hadoop.hbase.security.visibility.VisibilityClient.clearAuths(Configuration, String[], String)</a>
-<div class="block"><i>Use <a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#clearAuths(org.apache.hadoop.hbase.client.Connection,%20java.lang.String[],%20java.lang.String)"><code>VisibilityClient.clearAuths(Connection,String[],String)</code></a> instead.</i></div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#clearCaches(org.apache.hadoop.hbase.ServerName)">org.apache.hadoop.hbase.client.HConnection.clearCaches(ServerName)</a>
 <div class="block"><i>internal method, do not use thru HConnection</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#clearRegionCache()">org.apache.hadoop.hbase.client.HConnection.clearRegionCache()</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#clearRegionCache(byte[])">org.apache.hadoop.hbase.client.HConnection.clearRegionCache(byte[])</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#clearRegionCache(org.apache.hadoop.hbase.TableName)">org.apache.hadoop.hbase.client.HConnection.clearRegionCache(TableName)</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/mapreduce/HFileOutputFormat2.html#configureIncrementalLoad(org.apache.hadoop.mapreduce.Job,%20org.apache.hadoop.hbase.client.HTable)">org.apache.hadoop.hbase.mapreduce.HFileOutputFormat2.configureIncrementalLoad(Job, HTable)</a>
-<div class="block"><i>Use <a href="org/apache/hadoop/hbase/mapreduce/HFileOutputFormat2.html#configureIncrementalLoad(org.apache.hadoop.mapreduce.Job,%20org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.RegionLocator)"><code>HFileOutputFormat2.configureIncrementalLoad(Job, Table, RegionLocator)</code></a> instead.</i></div>
 </td>
 </tr>
 <tr class="altColor">
@@ -308,196 +283,176 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#getAuths(org.apache.hadoop.conf.Configuration,%20java.lang.String)">org.apache.hadoop.hbase.security.visibility.VisibilityClient.getAuths(Configuration, String)</a>
-<div class="block"><i>Use <a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#getAuths(org.apache.hadoop.hbase.client.Connection,%20java.lang.String)"><code>VisibilityClient.getAuths(Connection,String)</code></a> instead.</i></div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getClient(org.apache.hadoop.hbase.ServerName)">org.apache.hadoop.hbase.client.HConnection.getClient(ServerName)</a>
 <div class="block"><i>internal method, do not use thru HConnection</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HColumnDescriptor.html#getCompactionCompression()">org.apache.hadoop.hbase.HColumnDescriptor.getCompactionCompression()</a>
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
              (<a href="https://issues.apache.org/jira/browse/HBASE-13655">HBASE-13655</a>).
              Use <a href="org/apache/hadoop/hbase/HColumnDescriptor.html#getCompactionCompressionType()"><code>HColumnDescriptor.getCompactionCompressionType()</code></a>.</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HRegionInfo.html#getComparator()">org.apache.hadoop.hbase.HRegionInfo.getComparator()</a>
 <div class="block"><i>Use Region#getCellComparator().  deprecated for hbase 2.0, remove for hbase 3.0</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HColumnDescriptor.html#getCompression()">org.apache.hadoop.hbase.HColumnDescriptor.getCompression()</a>
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
              (<a href="https://issues.apache.org/jira/browse/HBASE-13655">HBASE-13655</a>).
              Use <a href="org/apache/hadoop/hbase/HColumnDescriptor.html#getCompressionType()"><code>HColumnDescriptor.getCompressionType()</code></a>.</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getCurrentNrHRS()">org.apache.hadoop.hbase.client.HConnection.getCurrentNrHRS()</a>
 <div class="block"><i>This method will be changed from public to package protected.</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/ClusterStatus.html#getDeadServers()">org.apache.hadoop.hbase.ClusterStatus.getDeadServers()</a>
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
              (<a href="https://issues.apache.org/jira/browse/HBASE-13656">HBASE-13656</a>).
              Use <a href="org/apache/hadoop/hbase/ClusterStatus.html#getDeadServersSize()"><code>ClusterStatus.getDeadServersSize()</code></a>.</i></div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getHTable()">org.apache.hadoop.hbase.mapreduce.TableInputFormatBase.getHTable()</a>
-<div class="block"><i>use <a href="org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getTable()"><code>TableInputFormatBase.getTable()</code></a></i></div>
-</td>
-</tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/mapred/TableInputFormatBase.html#getHTable()">org.apache.hadoop.hbase.mapred.TableInputFormatBase.getHTable()</a>
-<div class="block"><i>use <a href="org/apache/hadoop/hbase/mapred/TableInputFormatBase.html#getTable()"><code>TableInputFormatBase.getTable()</code></a></i></div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getHTableDescriptor(byte[])">org.apache.hadoop.hbase.client.HConnection.getHTableDescriptor(byte[])</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getHTableDescriptor(org.apache.hadoop.hbase.TableName)">org.apache.hadoop.hbase.client.HConnection.getHTableDescriptor(TableName)</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getHTableDescriptors(java.util.List)">org.apache.hadoop.hbase.client.HConnection.getHTableDescriptors(List<String>)</a>
 <div class="block"><i>since 0.96.0</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getHTableDescriptorsByTableName(java.util.List)">org.apache.hadoop.hbase.client.HConnection.getHTableDescriptorsByTableName(List<TableName>)</a>
 <div class="block"><i>Use <a href="org/apache/hadoop/hbase/client/Admin.html#getTableDescriptor(org.apache.hadoop.hbase.TableName)"><code>Admin.getTableDescriptor(TableName)</code></a> instead.</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getKeepAliveMasterService()">org.apache.hadoop.hbase.client.HConnection.getKeepAliveMasterService()</a>
 <div class="block"><i>Since 0.96.0</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getMaster()">org.apache.hadoop.hbase.client.HConnection.getMaster()</a>
 <div class="block"><i>internal method, do not use thru HConnection</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HTableDescriptor.html#getName()">org.apache.hadoop.hbase.HTableDescriptor.getName()</a>
 <div class="block"><i>Use <a href="org/apache/hadoop/hbase/HTableDescriptor.html#getTableName()"><code>HTableDescriptor.getTableName()</code></a> instead</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getNonceGenerator()">org.apache.hadoop.hbase.client.HConnection.getNonceGenerator()</a>
 <div class="block"><i>internal method, do not use thru HConnection</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HTableDescriptor.html#getOwnerString()">org.apache.hadoop.hbase.HTableDescriptor.getOwnerString()</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/CellUtil.html#getQualifierBufferShallowCopy(org.apache.hadoop.hbase.Cell)">org.apache.hadoop.hbase.CellUtil.getQualifierBufferShallowCopy(Cell)</a>
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0.</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getRegionCachePrefetch(byte[])">org.apache.hadoop.hbase.client.HConnection.getRegionCachePrefetch(byte[])</a>
 <div class="block"><i>always return false since 0.99</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getRegionCachePrefetch(org.apache.hadoop.hbase.TableName)">org.apache.hadoop.hbase.client.HConnection.getRegionCachePrefetch(TableName)</a>
 <div class="block"><i>always return false since 0.99</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getRegionLocation(byte[],%20byte[],%20boolean)">org.apache.hadoop.hbase.client.HConnection.getRegionLocation(byte[], byte[], boolean)</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getRegionLocation(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean)">org.apache.hadoop.hbase.client.HConnection.getRegionLocation(TableName, byte[], boolean)</a>
 <div class="block"><i>internal method, do not use thru HConnection</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/TableName.html#getRowComparator()">org.apache.hadoop.hbase.TableName.getRowComparator()</a>
 <div class="block"><i>The comparator is an internal property of the table. Should
  not have been exposed here</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/util/Bytes.html#getSize()">org.apache.hadoop.hbase.util.Bytes.getSize()</a>
 <div class="block"><i>use <a href="org/apache/hadoop/hbase/util/Bytes.html#getLength()"><code>Bytes.getLength()</code></a> instead</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/io/ImmutableBytesWritable.html#getSize()">org.apache.hadoop.hbase.io.ImmutableBytesWritable.getSize()</a>
 <div class="block"><i>use <a href="org/apache/hadoop/hbase/io/ImmutableBytesWritable.html#getLength()"><code>ImmutableBytesWritable.getLength()</code></a> instead</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HTableDescriptor.html#getTableDir(org.apache.hadoop.fs.Path,%20byte[])">org.apache.hadoop.hbase.HTableDescriptor.getTableDir(Path, byte[])</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#getTableNames()">org.apache.hadoop.hbase.client.HConnection.getTableNames()</a>
 <div class="block"><i>Use <a href="org/apache/hadoop/hbase/client/Admin.html#listTableNames()"><code>Admin.listTableNames()</code></a> instead.</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/Table.html#getWriteBufferSize()">org.apache.hadoop.hbase.client.Table.getWriteBufferSize()</a>
 <div class="block"><i>as of 1.0.1 (should not have been in 1.0.0). Replaced by <a href="org/apache/hadoop/hbase/client/BufferedMutator.html#getWriteBufferSize()"><code>BufferedMutator.getWriteBufferSize()</code></a></i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/Get.html#isClosestRowBefore()">org.apache.hadoop.hbase.client.Get.isClosestRowBefore()</a>
 <div class="block"><i>since 2.0.0 and will be removed in 3.0.0</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#isDeadServer(org.apache.hadoop.hbase.ServerName)">org.apache.hadoop.hbase.client.HConnection.isDeadServer(ServerName)</a>
 <div class="block"><i>internal method, do not use thru HConnection</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#isMasterRunning()">org.apache.hadoop.hbase.client.HConnection.isMasterRunning()</a>
 <div class="block"><i>internal method, do not use thru HConnection</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#isTableAvailable(byte[])">org.apache.hadoop.hbase.client.HConnection.isTableAvailable(byte[])</a>
 <div class="block"><i>instead use <a href="org/apache/hadoop/hbase/client/HConnection.html#isTableAvailable(org.apache.hadoop.hbase.TableName)"><code>HConnection.isTableAvailable(TableName)</code></a></i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#isTableAvailable(byte[],%20byte[][])">org.apache.hadoop.hbase.client.HConnection.isTableAvailable(byte[], byte[][])</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#isTableAvailable(org.apache.hadoop.hbase.TableName,%20byte[][])">org.apache.hadoop.hbase.client.HConnection.isTableAvailable(TableName, byte[][])</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#isTableDisabled(byte[])">org.apache.hadoop.hbase.client.HConnection.isTableDisabled(byte[])</a>
 <div class="block"><i>instead use <a href="org/apache/hadoop/hbase/client/HConnection.html#isTableDisabled(org.apache.hadoop.hbase.TableName)"><code>HConnection.isTableDisabled(TableName)</code></a></i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#isTableEnabled(byte[])">org.apache.hadoop.hbase.client.HConnection.isTableEnabled(byte[])</a>
 <div class="block"><i>instead use <a href="org/apache/hadoop/hbase/client/HConnection.html#isTableEnabled(org.apache.hadoop.hbase.TableName)"><code>HConnection.isTableEnabled(TableName)</code></a></i></div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#listLabels(org.apache.hadoop.conf.Configuration,%20java.lang.String)">org.apache.hadoop.hbase.security.visibility.VisibilityClient.listLabels(Configuration, String)</a>
-<div class="block"><i>Use <a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#listLabels(org.apache.hadoop.hbase.client.Connection,%20java.lang.String)"><code>VisibilityClient.listLabels(Connection,String)</code></a> instead.</i></div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -562,26 +517,6 @@
              (<a href="https://issues.apache.org/jira/browse/HBASE-1989">HBASE-1989</a>).
              This will be removed in HBase 3.0.0.
              Use <a href="org/apache/hadoop/hbase/client/Admin.html#modifyColumnFamily(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>Admin.modifyColumnFamily(TableName, HColumnDescriptor)</code></a>.</i></div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/token/TokenUtil.html#obtainAndCacheToken(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.security.UserGroupInformation)">org.apache.hadoop.hbase.security.token.TokenUtil.obtainAndCacheToken(Configuration, UserGroupInformation)</a>
-<div class="block"><i>Replaced by <a href="org/apache/hadoop/hbase/security/token/TokenUtil.html#obtainAndCacheToken(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.security.User)"><code>TokenUtil.obtainAndCacheToken(Connection,User)</code></a></i></div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/token/TokenUtil.html#obtainToken(org.apache.hadoop.conf.Configuration)">org.apache.hadoop.hbase.security.token.TokenUtil.obtainToken(Configuration)</a>
-<div class="block"><i>Replaced by <a href="org/apache/hadoop/hbase/security/token/TokenUtil.html#obtainToken(org.apache.hadoop.hbase.client.Connection)"><code>TokenUtil.obtainToken(Connection)</code></a></i></div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/token/TokenUtil.html#obtainTokenForJob(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.security.UserGroupInformation,%20org.apache.hadoop.mapreduce.Job)">org.apache.hadoop.hbase.security.token.TokenUtil.obtainTokenForJob(Configuration, UserGroupInformation, Job)</a>
-<div class="block"><i>Replaced by <a href="org/apache/hadoop/hbase/security/token/TokenUtil.html#obtainTokenForJob(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.security.User,%20org.apache.hadoop.mapreduce.Job)"><code>TokenUtil.obtainTokenForJob(Connection,User,Job)</code></a></i></div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/token/TokenUtil.html#obtainTokenForJob(org.apache.hadoop.mapred.JobConf,%20org.apache.hadoop.security.UserGroupInformation)">org.apache.hadoop.hbase.security.token.TokenUtil.obtainTokenForJob(JobConf, UserGroupInformation)</a>
-<div class="block"><i>Replaced by <a href="org/apache/hadoop/hbase/security/token/TokenUtil.html#obtainTokenForJob(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.mapred.JobConf,%20org.apache.hadoop.hbase.security.User)"><code>TokenUtil.obtainTokenForJob(Connection,JobConf,User)</code></a></i></div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -650,94 +585,69 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#reverseDNS(java.net.InetAddress)">org.apache.hadoop.hbase.mapreduce.TableInputFormatBase.reverseDNS(InetAddress)</a>
-<div class="block"><i>mistakenly made public in 0.98.7. scope will change to package-private</i></div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#setAuths(org.apache.hadoop.conf.Configuration,%20java.lang.String[],%20java.lang.String)">org.apache.hadoop.hbase.security.visibility.VisibilityClient.setAuths(Configuration, String[], String)</a>
-<div class="block"><i>Use <a href="org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#setAuths(org.apache.hadoop.hbase.client.Connection,%20java.lang.String[],%20java.lang.String)"><code>VisibilityClient.setAuths(Connection,String[],String)</code></a> instead.</i></div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/Get.html#setClosestRowBefore(boolean)">org.apache.hadoop.hbase.client.Get.setClosestRowBefore(boolean)</a>
 <div class="block"><i>since 2.0.0 and will be removed in 3.0.0</i></div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#setHTable(org.apache.hadoop.hbase.client.HTable)">org.apache.hadoop.hbase.mapreduce.TableInputFormatBase.setHTable(HTable)</a>
-<div class="block"><i>Use <a href="org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#initializeTable(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.TableName)"><code>TableInputFormatBase.initializeTable(Connection, TableName)</code></a> instead.</i></div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/mapred/TableInputFormatBase.html#setHTable(org.apache.hadoop.hbase.client.HTable)">org.apache.hadoop.hbase.mapred.TableInputFormatBase.setHTable(HTable)</a>
-<div class="block"><i>use <a href="org/apache/hadoop/hbase/mapred/TableInputFormatBase.html#initializeTable(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.TableName)"><code>TableInputFormatBase.initializeTable(Connection,TableName)</code></a></i></div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><a href="org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#setHTable(org.apache.hadoop.hbase.client.Table)">org.apache.hadoop.hbase.mapreduce.TableRecordReader.setHTable(Table)</a>
-<div class="block"><i>Use setTable() instead.</i></div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HTableDescriptor.html#setName(byte[])">org.apache.hadoop.hbase.HTableDescriptor.setName(byte[])</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HTableDescriptor.html#setName(org.apache.hadoop.hbase.TableName)">org.apache.hadoop.hbase.HTableDescriptor.setName(TableName)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HTableDescriptor.html#setOwner(org.apache.hadoop.hbase.security.User)">org.apache.hadoop.hbase.HTableDescriptor.setOwner(User)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/HTableDescriptor.html#setOwnerString(java.lang.String)">org.apache.hadoop.hbase.HTableDescriptor.setOwnerString(String)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/replication/ReplicationAdmin.html#setPeerTableCFs(java.lang.String,%20java.lang.String)">org.apache.hadoop.hbase.client.replication.ReplicationAdmin.setPeerTableCFs(String, String)</a>
 <div class="block"><i>use <a href="org/apache/hadoop/hbase/client/replication/ReplicationAdmin.html#setPeerTableCFs(java.lang.String,%20java.util.Map)"><code>ReplicationAdmin.setPeerTableCFs(String, Map)</code></a></i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#setRegionCachePrefetch(byte[],%20boolean)">org.apache.hadoop.hbase.client.HConnection.setRegionCachePrefetch(byte[], boolean)</a>
 <div class="block"><i>does nothing since 0.99</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#setRegionCachePrefetch(org.apache.hadoop.hbase.TableName,%20boolean)">org.apache.hadoop.hbase.client.HConnection.setRegionCachePrefetch(TableName, boolean)</a>
 <div class="block"><i>does nothing since since 0.99</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/Table.html#setWriteBufferSize(long)">org.apache.hadoop.hbase.client.Table.setWriteBufferSize(long)</a>
 <div class="block"><i>as of 1.0.1 (should not have been in 1.0.0). Replaced by <a href="org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client"><code>BufferedMutator</code></a> and
  <a href="org/apache/hadoop/hbase/client/BufferedMutatorParams.html#writeBufferSize(long)"><code>BufferedMutatorParams.writeBufferSize(long)</code></a></i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/util/Bytes.html#toIntUnsafe(byte[],%20int)">org.apache.hadoop.hbase.util.Bytes.toIntUnsafe(byte[], int)</a>
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0.</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/util/Bytes.html#toLongUnsafe(byte[],%20int)">org.apache.hadoop.hbase.util.Bytes.toLongUnsafe(byte[], int)</a>
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0.</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/util/Bytes.html#toShortUnsafe(byte[],%20int)">org.apache.hadoop.hbase.util.Bytes.toShortUnsafe(byte[], int)</a>
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0.</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#updateCachedLocations(byte[],%20byte[],%20java.lang.Object,%20org.apache.hadoop.hbase.HRegionLocation)">org.apache.hadoop.hbase.client.HConnection.updateCachedLocations(byte[], byte[], Object, HRegionLocation)</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#updateCachedLocations(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20java.lang.Object,%20org.apache.hadoop.hbase.ServerName)">org.apache.hadoop.hbase.client.HConnection.updateCachedLocations(TableName, byte[], byte[], Object, ServerName)</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/client/HConnection.html#updateCachedLocations(org.apache.hadoop.hbase.TableName,%20byte[],%20java.lang.Object,%20org.apache.hadoop.hbase.HRegionLocation)">org.apache.hadoop.hbase.client.HConnection.updateCachedLocations(TableName, byte[], Object, HRegionLocation)</a>
 <div class="block"><i>internal method, do not use through HConnection</i></div>
 </td>

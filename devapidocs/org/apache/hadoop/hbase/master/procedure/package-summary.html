@@ -79,16 +79,20 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ProcedureSyncWait.Predicate.html" title="interface in org.apache.hadoop.hbase.master.procedure">ProcedureSyncWait.Predicate</a>&lt;T&gt;</td>
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ProcedureSyncWait.Predicate.html" title="interface in org.apache.hadoop.hbase.master.procedure">ProcedureSyncWait.Predicate</a>&lt;T&gt;</td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">ServerProcedureInterface</a></td>
 <td class="colLast">
 <div class="block">Procedures that handle servers -- e.g.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">TableProcedureInterface</a></td>
 <td class="colLast">
 <div class="block">Procedures that operates on a specific Table (e.g.</div>
@@ -142,35 +146,59 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DisableTableProcedure.BulkDisabler.html" title="class in org.apache.hadoop.hbase.master.procedure">DisableTableProcedure.BulkDisabler</a></td>
+<td class="colLast">
+<div class="block">Run bulk disable.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/EnableTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">EnableTableProcedure</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterDDLOperationHelper.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterDDLOperationHelper</a></td>
 <td class="colLast">
 <div class="block">Helper class for schema change procedures</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureConstants.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureConstants</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.MasterProcedureStoreListener.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv.MasterProcedureStoreListener</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.WALStoreLeaseRecovery.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv.WALStoreLeaseRecovery</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue</a></td>
 <td class="colLast">
 <div class="block">ProcedureRunnableSet for the Master Procedures.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.AbstractRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.AbstractRunQueue</a></td>
+<td class="colLast">
+<div class="block">Base abstract class for RunQueue implementations.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.ServerRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.ServerRunQueue</a></td>
+<td class="colLast">
+<div class="block">Run Queue for Server procedures.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.TableRunQueue</a></td>
+<td class="colLast">
+<div class="block">Run Queue for a Table.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -205,18 +233,22 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ProcedurePrepareLatch.NoopLatch.html" title="class in org.apache.hadoop.hbase.master.procedure">ProcedurePrepareLatch.NoopLatch</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ProcedureSyncWait.html" title="class in org.apache.hadoop.hbase.master.procedure">ProcedureSyncWait</a></td>
 <td class="colLast">
 <div class="block">Helper to synchronously wait on conditions.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">ServerCrashProcedure</a></td>
 <td class="colLast">
 <div class="block">Handle crashed server.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TruncateTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">TruncateTableProcedure</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -232,6 +264,10 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DisableTableProcedure.MarkRegionOfflineOpResult.html" title="enum in org.apache.hadoop.hbase.master.procedure">DisableTableProcedure.MarkRegionOfflineOpResult</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.TableOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure">TableProcedureInterface.TableOperationType</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>

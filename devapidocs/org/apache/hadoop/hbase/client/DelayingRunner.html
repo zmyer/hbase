@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -120,6 +120,45 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/MultiAction.html" title="class in org.apache.hadoop.hbase.client">MultiAction</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html" title="type parameter in DelayingRunner">T</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html#actions">actions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html#runnable">runnable</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html#sleepLock">sleepLock</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html#sleepTime">sleepTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html#triggerWake">triggerWake</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -170,6 +209,12 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html#setRunner(java.lang.Runnable)">setRunner</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runner)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html#sleep()">sleep</a></strong>()</code>
+<div class="block">Sleep for an expected amount of time.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -186,6 +231,68 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/client/DelayingRunner.html#line.43">LOG</a></pre>
+</li>
+</ul>
+<a name="sleepLock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sleepLock</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/DelayingRunner.html#line.45">sleepLock</a></pre>
+</li>
+</ul>
+<a name="triggerWake">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>triggerWake</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/client/DelayingRunner.html#line.46">triggerWake</a></pre>
+</li>
+</ul>
+<a name="sleepTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sleepTime</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/client/DelayingRunner.html#line.47">sleepTime</a></pre>
+</li>
+</ul>
+<a name="actions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>actions</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MultiAction.html" title="class in org.apache.hadoop.hbase.client">MultiAction</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/DelayingRunner.html" title="type parameter in DelayingRunner">T</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/DelayingRunner.html#line.48">actions</a></pre>
+</li>
+</ul>
+<a name="runnable">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>runnable</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/DelayingRunner.html#line.49">runnable</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -230,6 +337,22 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true#run()" title="class or interface in java.lang">run</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="sleep()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sleep</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/DelayingRunner.html#line.83">sleep</a>()</pre>
+<div class="block">Sleep for an expected amount of time.
+ <p>
+ This is nearly a copy of what the Sleeper does, but with the ability to know if you
+ got interrupted while sleeping.
+ </p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if the sleep completely entirely successfully,
+ but otherwise <tt>false</tt> if the sleep was interrupted.</dd></dl>
 </li>
 </ul>
 <a name="add(java.util.Map.Entry)">
@@ -311,13 +434,13 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

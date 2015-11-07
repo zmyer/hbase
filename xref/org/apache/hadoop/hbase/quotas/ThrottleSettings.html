@@ -47,7 +47,7 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>      <strong class="jxr_keyword">this</strong>.proto = proto;
 <a class="jxr_linenumber" name="38" href="#38">38</a>    }
 <a class="jxr_linenumber" name="39" href="#39">39</a>  
-<a class="jxr_linenumber" name="40" href="#40">40</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">ThrottleType</a> getThrottleType() {
+<a class="jxr_linenumber" name="40" href="#40">40</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottleType.html">ThrottleType</a> getThrottleType() {
 <a class="jxr_linenumber" name="41" href="#41">41</a>      <strong class="jxr_keyword">return</strong> ProtobufUtil.toThrottleType(proto.getType());
 <a class="jxr_linenumber" name="42" href="#42">42</a>    }
 <a class="jxr_linenumber" name="43" href="#43">43</a>  
@@ -55,13 +55,13 @@
 <a class="jxr_linenumber" name="45" href="#45">45</a>      <strong class="jxr_keyword">return</strong> proto.hasTimedQuota() ? proto.getTimedQuota().getSoftLimit() : -1;
 <a class="jxr_linenumber" name="46" href="#46">46</a>    }
 <a class="jxr_linenumber" name="47" href="#47">47</a>  
-<a class="jxr_linenumber" name="48" href="#48">48</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TimeUnit</a> getTimeUnit() {
+<a class="jxr_linenumber" name="48" href="#48">48</a>    <strong class="jxr_keyword">public</strong> TimeUnit getTimeUnit() {
 <a class="jxr_linenumber" name="49" href="#49">49</a>      <strong class="jxr_keyword">return</strong> proto.hasTimedQuota() ?
 <a class="jxr_linenumber" name="50" href="#50">50</a>        ProtobufUtil.toTimeUnit(proto.getTimedQuota().getTimeUnit()) : <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="51" href="#51">51</a>    }
 <a class="jxr_linenumber" name="52" href="#52">52</a>  
 <a class="jxr_linenumber" name="53" href="#53">53</a>    @Override
-<a class="jxr_linenumber" name="54" href="#54">54</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">QuotaType</a> getQuotaType() {
+<a class="jxr_linenumber" name="54" href="#54">54</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaType.html">QuotaType</a> getQuotaType() {
 <a class="jxr_linenumber" name="55" href="#55">55</a>      <strong class="jxr_keyword">return</strong> QuotaType.THROTTLE;
 <a class="jxr_linenumber" name="56" href="#56">56</a>    }
 <a class="jxr_linenumber" name="57" href="#57">57</a>  
@@ -111,7 +111,7 @@
 <a class="jxr_linenumber" name="101" href="#101">101</a> 
 <a class="jxr_linenumber" name="102" href="#102">102</a>   <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottleSettings.html">ThrottleSettings</a> fromTimedQuota(<strong class="jxr_keyword">final</strong> String userName,
 <a class="jxr_linenumber" name="103" href="#103">103</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> String namespace,
-<a class="jxr_linenumber" name="104" href="#104">104</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">ThrottleType</a> type, QuotaProtos.TimedQuota timedQuota) {
+<a class="jxr_linenumber" name="104" href="#104">104</a>       <a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottleType.html">ThrottleType</a> type, QuotaProtos.TimedQuota timedQuota) {
 <a class="jxr_linenumber" name="105" href="#105">105</a>     QuotaProtos.ThrottleRequest.Builder builder = QuotaProtos.ThrottleRequest.newBuilder();
 <a class="jxr_linenumber" name="106" href="#106">106</a>     builder.setType(ProtobufUtil.toProtoThrottleType(type));
 <a class="jxr_linenumber" name="107" href="#107">107</a>     builder.setTimedQuota(timedQuota);

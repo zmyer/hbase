@@ -473,10 +473,10 @@
 <span class="sourceLineNo">465</span>        onlineRegions.contains(info));<a name="line.465"></a>
 <span class="sourceLineNo">466</span>  }<a name="line.466"></a>
 <span class="sourceLineNo">467</span><a name="line.467"></a>
-<span class="sourceLineNo">468</span>  private HBaseAdmin createTable(byte[] TABLENAME) throws IOException {<a name="line.468"></a>
-<span class="sourceLineNo">469</span>    HBaseAdmin admin = TEST_UTIL.getHBaseAdmin();<a name="line.469"></a>
+<span class="sourceLineNo">468</span>  private Admin createTable(TableName tableName) throws IOException {<a name="line.468"></a>
+<span class="sourceLineNo">469</span>    Admin admin = TEST_UTIL.getHBaseAdmin();<a name="line.469"></a>
 <span class="sourceLineNo">470</span><a name="line.470"></a>
-<span class="sourceLineNo">471</span>    HTableDescriptor htd = new HTableDescriptor(TableName.valueOf(TABLENAME));<a name="line.471"></a>
+<span class="sourceLineNo">471</span>    HTableDescriptor htd = new HTableDescriptor(tableName);<a name="line.471"></a>
 <span class="sourceLineNo">472</span>    HColumnDescriptor hcd = new HColumnDescriptor("value");<a name="line.472"></a>
 <span class="sourceLineNo">473</span><a name="line.473"></a>
 <span class="sourceLineNo">474</span>    htd.addFamily(hcd);<a name="line.474"></a>
@@ -525,10 +525,10 @@
 <span class="sourceLineNo">517</span><a name="line.517"></a>
 <span class="sourceLineNo">518</span>  @Test (timeout=300000)<a name="line.518"></a>
 <span class="sourceLineNo">519</span>  public void testMoveToPreviouslyAssignedRS() throws IOException, InterruptedException {<a name="line.519"></a>
-<span class="sourceLineNo">520</span>    byte[] tableName = Bytes.toBytes("testMoveToPreviouslyAssignedRS");<a name="line.520"></a>
-<span class="sourceLineNo">521</span>    MiniHBaseCluster cluster = TEST_UTIL.getHBaseCluster();<a name="line.521"></a>
-<span class="sourceLineNo">522</span>    HMaster master = cluster.getMaster();<a name="line.522"></a>
-<span class="sourceLineNo">523</span>    HBaseAdmin localAdmin = createTable(tableName);<a name="line.523"></a>
+<span class="sourceLineNo">520</span>    MiniHBaseCluster cluster = TEST_UTIL.getHBaseCluster();<a name="line.520"></a>
+<span class="sourceLineNo">521</span>    HMaster master = cluster.getMaster();<a name="line.521"></a>
+<span class="sourceLineNo">522</span>    TableName tableName = TableName.valueOf("testMoveToPreviouslyAssignedRS");<a name="line.522"></a>
+<span class="sourceLineNo">523</span>    Admin localAdmin = createTable(tableName);<a name="line.523"></a>
 <span class="sourceLineNo">524</span>    List&lt;HRegionInfo&gt; tableRegions = localAdmin.getTableRegions(tableName);<a name="line.524"></a>
 <span class="sourceLineNo">525</span>    HRegionInfo hri = tableRegions.get(0);<a name="line.525"></a>
 <span class="sourceLineNo">526</span>    AssignmentManager am = master.getAssignmentManager();<a name="line.526"></a>

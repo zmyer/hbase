@@ -231,13 +231,25 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterBase.
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterChunk.html#allocBloom()">allocBloom</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterChunk.html#bloomCheck(java.nio.ByteBuffer)">bloomCheck</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bloom)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterChunk.html#compactBloom()">compactBloom</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterChunk.html" title="class in org.apache.hadoop.hbase.util">BloomFilterChunk</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterChunk.html#createAnother()">createAnother</a></strong>()</code>
 <div class="block">Creates another similar Bloom filter.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterChunk.html#get(int,%20java.nio.ByteBuffer,%20int)">get</a></strong>(int&nbsp;pos,
+      <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bloomBuf,
+      int&nbsp;bloomOffset)</code>
+<div class="block">Check if bit at specified index is 1.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -259,6 +271,16 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterBase.
 <tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterChunk.html#getMaxKeys()">getMaxKeys</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterChunk.html#sanityCheck()">sanityCheck</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterChunk.html#set(long)">set</a></strong>(long&nbsp;pos)</code>
+<div class="block">Set the bit at the specified index to 1.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -462,6 +484,30 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterBase.
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/BloomFilterChunk.html#line.131">allocBloom</a>()</pre>
 </li>
 </ul>
+<a name="sanityCheck()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sanityCheck</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/BloomFilterChunk.html#line.139">sanityCheck</a>()
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code></dd></dl>
+</li>
+</ul>
+<a name="bloomCheck(java.nio.ByteBuffer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bloomCheck</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/BloomFilterChunk.html#line.157">bloomCheck</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bloom)
+          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code></dd></dl>
+</li>
+</ul>
 <a name="add(byte[])">
 <!--   -->
 </a>
@@ -480,6 +526,31 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/BloomFilterBase.
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/BloomFilterChunk.html#line.168">add</a>(byte[]&nbsp;buf,
        int&nbsp;offset,
        int&nbsp;len)</pre>
+</li>
+</ul>
+<a name="set(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>set</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/BloomFilterChunk.html#line.192">set</a>(long&nbsp;pos)</pre>
+<div class="block">Set the bit at the specified index to 1.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pos</code> - index of bit</dd></dl>
+</li>
+</ul>
+<a name="get(int, java.nio.ByteBuffer, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get</h4>
+<pre>static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/BloomFilterChunk.html#line.206">get</a>(int&nbsp;pos,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bloomBuf,
+          int&nbsp;bloomOffset)</pre>
+<div class="block">Check if bit at specified index is 1.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pos</code> - index of bit</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if bit at specified index is 1, false if 0.</dd></dl>
 </li>
 </ul>
 <a name="getKeyCount()">

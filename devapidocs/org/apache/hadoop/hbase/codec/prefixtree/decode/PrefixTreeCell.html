@@ -258,154 +258,158 @@ implements <a href="../../../../../../../org/apache/hadoop/hbase/SettableSequenc
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#calculateHashForKey(org.apache.hadoop.hbase.Cell)">calculateHashForKey</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#compareTo(org.apache.hadoop.hbase.Cell)">compareTo</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#equals(java.lang.Object)">equals</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getFamilyArray()">getFamilyArray</a></strong>()</code>
 <div class="block">Contiguous bytes composed of legal HDFS filename characters which may start at any index in the
  containing array.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getFamilyByteBuffer()">getFamilyByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getFamilyLength()">getFamilyLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getFamilyOffset()">getFamilyOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getFamilyPosition()">getFamilyPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getKeyValueString()">getKeyValueString</a></strong>()</code>
 <div class="block">Need this separate method so we can call it from subclasses' toString()
  methods</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getQualifierArray()">getQualifierArray</a></strong>()</code>
 <div class="block">Contiguous raw bytes that may start at any index in the containing array.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getQualifierByteBuffer()">getQualifierByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getQualifierLength()">getQualifierLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getQualifierOffset()">getQualifierOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getQualifierPosition()">getQualifierPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getRowArray()">getRowArray</a></strong>()</code>
 <div class="block">Contiguous raw bytes that may start at any index in the containing array.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getRowByteBuffer()">getRowByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>short</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getRowLength()">getRowLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getRowOffset()">getRowOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getRowPosition()">getRowPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getSequenceId()">getSequenceId</a></strong>()</code>
 <div class="block">A region-specific unique monotonically increasing sequence ID given to each Cell.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getTagsArray()">getTagsArray</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getTagsByteBuffer()">getTagsByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getTagsLength()">getTagsLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getTagsOffset()">getTagsOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getTagsPosition()">getTagsPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getTimestamp()">getTimestamp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getTypeByte()">getTypeByte</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getValueArray()">getValueArray</a></strong>()</code>
 <div class="block">Contiguous raw bytes that may start at any index in the containing array.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getValueByteBuffer()">getValueByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getValueLength()">getValueLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getValueOffset()">getValueOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#getValuePosition()">getValuePosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#hashCode()">hashCode</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#setSequenceId(long)">setSequenceId</a></strong>(long&nbsp;seqId)</code>
 <div class="block">Sets with the given seqId.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#toString()">toString</a></strong>()</code>
 <div class="block">For debugging.</div>
@@ -697,6 +701,15 @@ implements <a href="../../../../../../../org/apache/hadoop/hbase/SettableSequenc
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="calculateHashForKey(org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>calculateHashForKey</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeCell.html#line.119">calculateHashForKey</a>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</pre>
 </li>
 </ul>
 <a name="compareTo(org.apache.hadoop.hbase.Cell)">

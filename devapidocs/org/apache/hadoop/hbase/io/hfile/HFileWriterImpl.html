@@ -123,28 +123,38 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.BlockWritable.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.BlockWritable</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#additionalLoadOnOpenData">additionalLoadOnOpenData</a></strong></code>
+<div class="block">Additional data items to be written to the "load-on-open" section.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileDataBlockEncoder.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileDataBlockEncoder</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#blockEncoder">blockEncoder</a></strong></code>
 <div class="block">The data block encoding which will be used.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#cacheConf">cacheConf</a></strong></code>
 <div class="block">Cache configuration for caching data on write.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#closeOutputStream">closeOutputStream</a></strong></code>
 <div class="block">True if we opened the <code>outputStream</code> (and so will close it).</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#comparator">comparator</a></strong></code>
 <div class="block">Key comparator.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexWriter.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexWriter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#dataBlockIndexWriter">dataBlockIndexWriter</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
@@ -165,14 +175,26 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#firstDataBlockOffset">firstDataBlockOffset</a></strong></code>
+<div class="block">The offset of the first data block or -1 if the file is empty.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.Writer.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock.Writer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#fsBlockWriter">fsBlockWriter</a></strong></code>
 <div class="block">block writer</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContext</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#hFileContext">hFileContext</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/InlineBlockWriter.html" title="interface in org.apache.hadoop.hbase.io.hfile">InlineBlockWriter</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#inlineBlockWriters">inlineBlockWriters</a></strong></code>
+<div class="block">Inline block writers for multi-level block index and compound Blooms.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
@@ -193,14 +215,32 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#lastCellOfPreviousBlock">lastCellOfPreviousBlock</a></strong></code>
+<div class="block">The last(stop) Cell of the previous data block.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#lastDataBlockOffset">lastDataBlockOffset</a></strong></code>
 <div class="block">The offset of the last data block or 0 if the file is empty.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#maxMemstoreTS">maxMemstoreTS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#maxTagsLength">maxTagsLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexWriter.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexWriter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#metaBlockIndexWriter">metaBlockIndexWriter</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.io.Writable&gt;</code></td>
@@ -295,58 +335,63 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#addBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter,%20org.apache.hadoop.hbase.io.hfile.BlockType)">addBloomFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw,
+                            <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockType.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockType</a>&nbsp;blockType)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#addDeleteFamilyBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter)">addDeleteFamilyBloomFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw)</code>
 <div class="block">Store delete family Bloom filter in the file, which is only supported in
  HFile V2.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#addGeneralBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter)">addGeneralBloomFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw)</code>
 <div class="block">Store general Bloom filter in the file.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#addInlineBlockWriter(org.apache.hadoop.hbase.io.hfile.InlineBlockWriter)">addInlineBlockWriter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/InlineBlockWriter.html" title="interface in org.apache.hadoop.hbase.io.hfile">InlineBlockWriter</a>&nbsp;ibw)</code>
 <div class="block">Adds an inline block writer such as a multi-level block index writer or
  a compound Bloom filter writer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#append(org.apache.hadoop.hbase.Cell)">append</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>
 <div class="block">Add key/value to file.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#appendFileInfo(byte[],%20byte[])">appendFileInfo</a></strong>(byte[]&nbsp;k,
                             byte[]&nbsp;v)</code>
 <div class="block">Add to the file info.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#appendMetaBlock(java.lang.String,%20org.apache.hadoop.io.Writable)">appendMetaBlock</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;metaBlockName,
                               org.apache.hadoop.io.Writable&nbsp;content)</code>
 <div class="block">Add a meta block to the end of the file.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#checkBlockBoundary()">checkBlockBoundary</a></strong>()</code>
 <div class="block">At a block boundary, write all the inline blocks and opens new block.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#checkKey(org.apache.hadoop.hbase.Cell)">checkKey</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>
 <div class="block">Checks that the given Cell's key does not violate the key order.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#checkValue(byte[],%20int,%20int)">checkValue</a></strong>(byte[]&nbsp;value,
                     int&nbsp;offset,
@@ -354,15 +399,15 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <div class="block">Checks the given value for validity.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#close()">close</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/io/compress/Compression.Algorithm.html" title="enum in org.apache.hadoop.hbase.io.compress">Compression.Algorithm</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#compressionByName(java.lang.String)">compressionByName</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;algoName)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static org.apache.hadoop.fs.FSDataOutputStream</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#createOutputStream(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20java.net.InetSocketAddress[])">createOutputStream</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                     org.apache.hadoop.fs.FileSystem&nbsp;fs,
@@ -371,31 +416,43 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <div class="block">A helper method to create HFile output streams in constructors</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#doCacheOnWrite(long)">doCacheOnWrite</a></strong>(long&nbsp;offset)</code>
+<div class="block">Caches the last written HFile block.</div>
+</td>
+</tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#finishClose(org.apache.hadoop.hbase.io.hfile.FixedFileTrailer)">finishClose</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/FixedFileTrailer.html" title="class in org.apache.hadoop.hbase.io.hfile">FixedFileTrailer</a>&nbsp;trailer)</code>&nbsp;</td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#finishBlock()">finishBlock</a></strong>()</code>
+<div class="block">Clean up the current data block</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#finishFileInfo()">finishFileInfo</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#finishClose(org.apache.hadoop.hbase.io.hfile.FixedFileTrailer)">finishClose</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/FixedFileTrailer.html" title="class in org.apache.hadoop.hbase.io.hfile">FixedFileTrailer</a>&nbsp;trailer)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#finishFileInfo()">finishFileInfo</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#finishInit(org.apache.hadoop.conf.Configuration)">finishInit</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Additional initialization steps</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContext</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#getFileContext()">getFileContext</a></strong>()</code>
 <div class="block">Return the file context for the HFile this writer belongs to</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#getMajorVersion()">getMajorVersion</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#getMidpoint(org.apache.hadoop.hbase.CellComparator,%20org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell)">getMidpoint</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator,
                       <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
@@ -403,6 +460,15 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <div class="block">Try to return a Cell that falls between <code>left</code> and
  <code>right</code> but that is shorter; i.e.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#getMinimumMidpointArray(byte[],%20int,%20int,%20byte[],%20int,%20int)">getMinimumMidpointArray</a></strong>(byte[]&nbsp;leftArray,
+                                              int&nbsp;leftOffset,
+                                              int&nbsp;leftLength,
+                                              byte[]&nbsp;rightArray,
+                                              int&nbsp;rightOffset,
+                                              int&nbsp;rightLength)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
@@ -430,6 +496,12 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
  the file info, and writes the file info into the given data output.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#writeInlineBlocks(boolean)">writeInlineBlocks</a></strong>(boolean&nbsp;closing)</code>
+<div class="block">Gives inline block writers an opportunity to contribute blocks.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -452,6 +524,15 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.58">LOG</a></pre>
+</li>
+</ul>
 <a name="lastCell">
 <!--   -->
 </a>
@@ -624,6 +705,15 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <pre>protected final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContext</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.118">hFileContext</a></pre>
 </li>
 </ul>
+<a name="maxTagsLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxTagsLength</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.120">maxTagsLength</a></pre>
+</li>
+</ul>
 <a name="KEY_VALUE_VERSION">
 <!--   -->
 </a>
@@ -645,6 +735,16 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.io.hfile.HFileWriterImpl.KEY_VALUE_VER_WITH_MEMSTORE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="inlineBlockWriters">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>inlineBlockWriters</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/InlineBlockWriter.html" title="interface in org.apache.hadoop.hbase.io.hfile">InlineBlockWriter</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.129">inlineBlockWriters</a></pre>
+<div class="block">Inline block writers for multi-level block index and compound Blooms.</div>
+</li>
+</ul>
 <a name="fsBlockWriter">
 <!--   -->
 </a>
@@ -655,6 +755,34 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <div class="block">block writer</div>
 </li>
 </ul>
+<a name="dataBlockIndexWriter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dataBlockIndexWriter</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexWriter.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexWriter</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.134">dataBlockIndexWriter</a></pre>
+</li>
+</ul>
+<a name="metaBlockIndexWriter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>metaBlockIndexWriter</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexWriter.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexWriter</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.135">metaBlockIndexWriter</a></pre>
+</li>
+</ul>
+<a name="firstDataBlockOffset">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>firstDataBlockOffset</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.138">firstDataBlockOffset</a></pre>
+<div class="block">The offset of the first data block or -1 if the file is empty.</div>
+</li>
+</ul>
 <a name="lastDataBlockOffset">
 <!--   -->
 </a>
@@ -663,6 +791,27 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <h4>lastDataBlockOffset</h4>
 <pre>protected&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.141">lastDataBlockOffset</a></pre>
 <div class="block">The offset of the last data block or 0 if the file is empty.</div>
+</li>
+</ul>
+<a name="lastCellOfPreviousBlock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastCellOfPreviousBlock</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.147">lastCellOfPreviousBlock</a></pre>
+<div class="block">The last(stop) Cell of the previous data block.
+ This reference should be short-lived since we write hfiles in a burst.</div>
+</li>
+</ul>
+<a name="additionalLoadOnOpenData">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>additionalLoadOnOpenData</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.BlockWritable.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.BlockWritable</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.150">additionalLoadOnOpenData</a></pre>
+<div class="block">Additional data items to be written to the "load-on-open" section.</div>
 </li>
 </ul>
 <a name="maxMemstoreTS">
@@ -845,6 +994,19 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="finishBlock()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>finishBlock</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.309">finishBlock</a>()
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Clean up the current data block</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="getMidpoint(org.apache.hadoop.hbase.CellComparator, org.apache.hadoop.hbase.Cell, org.apache.hadoop.hbase.Cell)">
 <!--   -->
 </a>
@@ -860,6 +1022,49 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
  always work. In this case we'll just return the <code>right</code> cell.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>comparator</code> - Comparator to use.</dd><dd><code>left</code> - </dd><dd><code>right</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>A cell that sorts between <code>left</code> and <code>right</code>.</dd></dl>
+</li>
+</ul>
+<a name="getMinimumMidpointArray(byte[], int, int, byte[], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMinimumMidpointArray</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.430">getMinimumMidpointArray</a>(byte[]&nbsp;leftArray,
+                             int&nbsp;leftOffset,
+                             int&nbsp;leftLength,
+                             byte[]&nbsp;rightArray,
+                             int&nbsp;rightOffset,
+                             int&nbsp;rightLength)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>leftArray</code> - </dd><dd><code>leftOffset</code> - </dd><dd><code>leftLength</code> - </dd><dd><code>rightArray</code> - </dd><dd><code>rightOffset</code> - </dd><dd><code>rightLength</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>Return a new array that is between left and right and minimally
+         sized else just return null as indicator that we could not create a
+         mid point.</dd></dl>
+</li>
+</ul>
+<a name="writeInlineBlocks(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeInlineBlocks</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.459">writeInlineBlocks</a>(boolean&nbsp;closing)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Gives inline block writers an opportunity to contribute blocks.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="doCacheOnWrite(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doCacheOnWrite</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.483">doCacheOnWrite</a>(long&nbsp;offset)</pre>
+<div class="block">Caches the last written HFile block.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>offset</code> - the offset of the block we want to cache. Used to determine
+          the cache key.</dd></dl>
 </li>
 </ul>
 <a name="newBlock()">
@@ -957,6 +1162,16 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Wri
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Writer.html#addDeleteFamilyBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter)">addDeleteFamilyBloomFilter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Writer.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Writer</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="addBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter, org.apache.hadoop.hbase.io.hfile.BlockType)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addBloomFilter</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#line.626">addBloomFilter</a>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw,
+                  <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockType.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockType</a>&nbsp;blockType)</pre>
 </li>
 </ul>
 <a name="getFileContext()">

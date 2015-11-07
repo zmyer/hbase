@@ -91,14 +91,18 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.tool">org.apache.hadoop.hbase.tool</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -139,6 +143,27 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a> in <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/package-summary.html">org.apache.hadoop.hbase.coprocessor</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/package-summary.html">org.apache.hadoop.hbase.coprocessor</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></code></td>
+<td class="colLast"><span class="strong">AggregateImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#env">env</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></code></td>
+<td class="colLast"><span class="strong">BaseRowProcessorEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRowProcessorEndpoint.html#env">env</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></code></td>
+<td class="colLast"><span class="strong">MultiRowMutationEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/MultiRowMutationEndpoint.html#env">env</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Method parameters in <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/package-summary.html">org.apache.hadoop.hbase.coprocessor</a> with type arguments of type <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -1388,6 +1413,23 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a> in <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/example/package-summary.html">org.apache.hadoop.hbase.coprocessor.example</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/example/package-summary.html">org.apache.hadoop.hbase.coprocessor.example</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></code></td>
+<td class="colLast"><span class="strong">BulkDeleteEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/example/BulkDeleteEndpoint.html#env">env</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></code></td>
+<td class="colLast"><span class="strong">RowCountEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/example/RowCountEndpoint.html#env">env</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/example/package-summary.html">org.apache.hadoop.hbase.coprocessor.example</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -1436,10 +1478,156 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that implement <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionEnvironment.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionEnvironment</a></strong></code>
+<div class="block">Encapsulation of the environment of each coprocessor</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with type arguments of type <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><span class="strong">RegionCoprocessorHost.CoprocessorOperation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.CoprocessorOperation.html#call(org.apache.hadoop.hbase.Coprocessor,%20org.apache.hadoop.hbase.coprocessor.ObserverContext)">call</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;observer,
+        <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RegionCoprocessorHost.RegionOperation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionOperation.html#call(org.apache.hadoop.hbase.Coprocessor,%20org.apache.hadoop.hbase.coprocessor.ObserverContext)">call</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;observer,
+        <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RegionCoprocessorHost.EndpointOperation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.EndpointOperation.html#call(org.apache.hadoop.hbase.Coprocessor,%20org.apache.hadoop.hbase.coprocessor.ObserverContext)">call</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;observer,
+        <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><span class="strong">RegionCoprocessorHost.EndpointOperation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.EndpointOperation.html#call(org.apache.hadoop.hbase.coprocessor.EndpointObserver,%20org.apache.hadoop.hbase.coprocessor.ObserverContext)">call</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/EndpointObserver.html" title="interface in org.apache.hadoop.hbase.coprocessor">EndpointObserver</a>&nbsp;observer,
+        <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><span class="strong">RegionCoprocessorHost.RegionOperation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionOperation.html#call(org.apache.hadoop.hbase.coprocessor.RegionObserver,%20org.apache.hadoop.hbase.coprocessor.ObserverContext)">call</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionObserver</a>&nbsp;observer,
+        <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.security.access">
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a> in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></code></td>
+<td class="colLast"><span class="strong">SecureBulkLoadEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#env">env</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#regionEnv">regionEnv</a></strong></code>
+<div class="block">defined only for Endpoint implementation, so it can have way to
+   access region services</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#checkCoveringPermission(org.apache.hadoop.hbase.security.access.AccessController.OpType,%20org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment,%20byte[],%20java.util.Map,%20long,%20org.apache.hadoop.hbase.security.access.Permission.Action...)">checkCoveringPermission</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.OpType.html" title="enum in org.apache.hadoop.hbase.security.access">AccessController.OpType</a>&nbsp;request,
+                                              <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;e,
+                                              byte[]&nbsp;row,
+                                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],? extends <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;?&gt;&gt;&nbsp;familyMap,
+                                              long&nbsp;opTs,
+                                              <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.Action.html" title="enum in org.apache.hadoop.hbase.security.access">Permission.Action</a>...&nbsp;actions)</code>
+<div class="block">Determine if cell ACLs covered by the operation grant access.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a></code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#getRegion(org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment)">getRegion</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#getTableName(org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment)">getTableName</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#hasFamilyQualifierPermission(org.apache.hadoop.hbase.security.User,%20org.apache.hadoop.hbase.security.access.Permission.Action,%20org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment,%20java.util.Map)">hasFamilyQualifierPermission</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user,
+                                                        <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.Action.html" title="enum in org.apache.hadoop.hbase.security.access">Permission.Action</a>&nbsp;perm,
+                                                        <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;env,
+                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],? extends <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;byte[]&gt;&gt;&nbsp;familyMap)</code>
+<div class="block">Returns <code>true</code> if the current user is allowed the given action
+ over at least one of the column qualifiers in the given column families.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#initialize(org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment)">initialize</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/security/access/AuthResult.html" title="class in org.apache.hadoop.hbase.security.access">AuthResult</a></code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#permissionGranted(org.apache.hadoop.hbase.security.access.AccessController.OpType,%20org.apache.hadoop.hbase.security.User,%20org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment,%20java.util.Map,%20org.apache.hadoop.hbase.security.access.Permission.Action...)">permissionGranted</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.OpType.html" title="enum in org.apache.hadoop.hbase.security.access">AccessController.OpType</a>&nbsp;opType,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;e,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],? extends <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;?&gt;&gt;&nbsp;families,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.Action.html" title="enum in org.apache.hadoop.hbase.security.access">Permission.Action</a>...&nbsp;actions)</code>
+<div class="block">Check the current user for authorization to perform a specific action
+ against the given set of row data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/security/access/AuthResult.html" title="class in org.apache.hadoop.hbase.security.access">AuthResult</a></code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#permissionGranted(java.lang.String,%20org.apache.hadoop.hbase.security.User,%20org.apache.hadoop.hbase.security.access.Permission.Action,%20org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment,%20java.util.Map)">permissionGranted</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;request,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.Action.html" title="enum in org.apache.hadoop.hbase.security.access">Permission.Action</a>&nbsp;permRequest,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;e,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],? extends <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;?&gt;&gt;&nbsp;families)</code>
+<div class="block">Check the current user for authorization to perform a specific action
+ against the given set of row data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#updateACL(org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment,%20java.util.Map)">updateACL</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;e,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&gt;&nbsp;familyMap)</code>
+<div class="block">Writes all table ACLs for the tables in the given Map up into ZooKeeper
+ znodes.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Method parameters in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a> with type arguments of type <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -1448,13 +1636,19 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#internalPreRead(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Query,%20org.apache.hadoop.hbase.security.access.AccessController.OpType)">internalPreRead</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
+                              <a href="../../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a>&nbsp;query,
+                              <a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.OpType.html" title="enum in org.apache.hadoop.hbase.security.access">AccessController.OpType</a>&nbsp;opType)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#postDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                     <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
                     <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
                     <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#postEndpointInvocation(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20com.google.protobuf.Service,%20java.lang.String,%20com.google.protobuf.Message,%20com.google.protobuf.Message.Builder)">postEndpointInvocation</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                             com.google.protobuf.Service&nbsp;service,
@@ -1462,11 +1656,11 @@
                                             com.google.protobuf.Message&nbsp;request,
                                             com.google.protobuf.Message.Builder&nbsp;responseBuilder)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#postLogReplay(org.apache.hadoop.hbase.coprocessor.ObserverContext)">postLogReplay</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#postMutationBeforeWAL(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.coprocessor.RegionObserver.MutationType,%20org.apache.hadoop.hbase.client.Mutation,%20org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell)">postMutationBeforeWAL</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                           <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.MutationType.html" title="enum in org.apache.hadoop.hbase.coprocessor">RegionObserver.MutationType</a>&nbsp;opType,
@@ -1474,51 +1668,51 @@
                                           <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;oldCell,
                                           <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;newCell)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#postOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext)">postOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#postPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
               <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
               <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#postScannerClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner)">postScannerClose</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#postScannerFilterRow(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.Cell,%20boolean)">postScannerFilterRow</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
                                         <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s,
                                         <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;curRowCell,
                                         boolean&nbsp;hasMore)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#postScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.RegionScanner)">postScannerOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                               <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preAppend(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Append)">preAppend</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                   <a href="../../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a>&nbsp;append)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preAppendAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Append)">preAppendAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                           <a href="../../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a>&nbsp;append)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preBatchMutate(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.MiniBatchOperationInProgress)">preBatchMutate</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MiniBatchOperationInProgress.html" title="class in org.apache.hadoop.hbase.regionserver">MiniBatchOperationInProgress</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&gt;&nbsp;miniBatchOp)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preBulkLoadHFile(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20java.util.List)">preBulkLoadHFile</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&nbsp;familyPaths)</code>
@@ -1527,7 +1721,7 @@
  request.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preCheckAndDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">preCheckAndDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                   byte[]&nbsp;row,
@@ -1538,7 +1732,7 @@
                                   <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
                                   boolean&nbsp;result)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preCheckAndDeleteAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">preCheckAndDeleteAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                                           byte[]&nbsp;row,
@@ -1549,7 +1743,7 @@
                                                           <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
                                                           boolean&nbsp;result)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preCheckAndPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">preCheckAndPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                             byte[]&nbsp;row,
@@ -1560,7 +1754,7 @@
                             <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
                             boolean&nbsp;result)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preCheckAndPutAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">preCheckAndPutAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                                     byte[]&nbsp;row,
@@ -1571,7 +1765,7 @@
                                                     <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
                                                     boolean&nbsp;result)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preCleanupBulkLoad(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.protobuf.generated.SecureBulkLoadProtos.CleanupBulkLoadRequest)">preCleanupBulkLoad</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                     org.apache.hadoop.hbase.protobuf.generated.SecureBulkLoadProtos.CleanupBulkLoadRequest&nbsp;request)</code>
@@ -1579,59 +1773,59 @@
  SecureBulkLoadProtocol.cleanupBulkLoad()</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20boolean)">preClose</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
                 boolean&nbsp;abortRequested)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preCompact(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.ScanType)">preCompact</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
                     <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                     <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
                     <a href="../../../../../../org/apache/hadoop/hbase/regionserver/ScanType.html" title="enum in org.apache.hadoop.hbase.regionserver">ScanType</a>&nbsp;scanType)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">preDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                   <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
                   <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
                   <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>com.google.protobuf.Message</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preEndpointInvocation(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20com.google.protobuf.Service,%20java.lang.String,%20com.google.protobuf.Message)">preEndpointInvocation</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                           com.google.protobuf.Service&nbsp;service,
                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;methodName,
                                           com.google.protobuf.Message&nbsp;request)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preExists(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Get,%20boolean)">preExists</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                   <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
                   boolean&nbsp;exists)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preFlush(org.apache.hadoop.hbase.coprocessor.ObserverContext)">preFlush</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preGetOp(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Get,%20java.util.List)">preGetOp</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                 <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;result)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preIncrement(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Increment)">preIncrement</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                         <a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a>&nbsp;increment)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preIncrementAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Increment)">preIncrementAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                                 <a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a>&nbsp;increment)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preIncrementColumnValue(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20long,%20boolean)">preIncrementColumnValue</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                               byte[]&nbsp;row,
@@ -1640,11 +1834,11 @@
                                               long&nbsp;amount,
                                               boolean&nbsp;writeToWAL)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext)">preOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#prePrepareBulkLoad(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.protobuf.generated.SecureBulkLoadProtos.PrepareBulkLoadRequest)">prePrepareBulkLoad</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                     org.apache.hadoop.hbase.protobuf.generated.SecureBulkLoadProtos.PrepareBulkLoadRequest&nbsp;request)</code>
@@ -1652,19 +1846,19 @@
  SecureBulkLoadProtocol.prepareBulkLoad()</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#prePut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">prePut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
             <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
             <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preScannerClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner)">preScannerClose</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preScannerNext(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20java.util.List,%20int,%20boolean)">preScannerNext</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s,
@@ -1672,17 +1866,17 @@
                             int&nbsp;limit,
                             boolean&nbsp;hasNext)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.RegionScanner)">preScannerOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                             <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext)">preSplit</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#preSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[])">preSplit</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
                 byte[]&nbsp;splitRow)</code>&nbsp;</td>
@@ -1710,6 +1904,10 @@
 <td class="colLast"><span class="strong">VisibilityLabelService.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityLabelService.html#init(org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment)">init</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;e)</code>
 <div class="block">System calls this after opening of regions.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">VisibilityController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityController.html#initVisibilityLabelService(org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment)">initVisibilityLabelService</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&nbsp;env)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

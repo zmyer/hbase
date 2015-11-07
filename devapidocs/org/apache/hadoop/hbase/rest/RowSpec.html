@@ -120,12 +120,44 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static long</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#DEFAULT_END_TIMESTAMP">DEFAULT_END_TIMESTAMP</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html?is-external=true" title="class or interface in java.util">TreeSet</a>&lt;byte[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#columns">columns</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#DEFAULT_END_TIMESTAMP">DEFAULT_END_TIMESTAMP</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#DEFAULT_START_TIMESTAMP">DEFAULT_START_TIMESTAMP</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#endRow">endRow</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#endTime">endTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#labels">labels</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#maxValues">maxValues</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#maxVersions">maxVersions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#row">row</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#startTime">startTime</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -249,6 +281,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#isSingleRow()">isSingleRow</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#parseColumns(java.lang.String,%20int)">parseColumns</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+                        int&nbsp;i)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#parseQueryParams(java.lang.String,%20int)">parseQueryParams</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+                                int&nbsp;i)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#parseRowKeys(java.lang.String,%20int)">parseRowKeys</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+                        int&nbsp;i)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#parseTimestamp(java.lang.String,%20int)">parseTimestamp</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+                            int&nbsp;i)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/RowSpec.html#setEndTime(long)">setEndTime</a></strong>(long&nbsp;endTime)</code>&nbsp;</td>
 </tr>
@@ -303,11 +355,83 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="DEFAULT_END_TIMESTAMP">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_END_TIMESTAMP</h4>
 <pre>public static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.43">DEFAULT_END_TIMESTAMP</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.rest.RowSpec.DEFAULT_END_TIMESTAMP">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="row">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>row</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.45">row</a></pre>
+</li>
+</ul>
+<a name="endRow">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endRow</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.46">endRow</a></pre>
+</li>
+</ul>
+<a name="columns">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>columns</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html?is-external=true" title="class or interface in java.util">TreeSet</a>&lt;byte[]&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.47">columns</a></pre>
+</li>
+</ul>
+<a name="labels">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>labels</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.49">labels</a></pre>
+</li>
+</ul>
+<a name="startTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startTime</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.50">startTime</a></pre>
+</li>
+</ul>
+<a name="endTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endTime</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.51">endTime</a></pre>
+</li>
+</ul>
+<a name="maxVersions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxVersions</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.52">maxVersions</a></pre>
+</li>
+</ul>
+<a name="maxValues">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>maxValues</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.53">maxValues</a></pre>
 </li>
 </ul>
 </li>
@@ -381,6 +505,55 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="parseRowKeys(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parseRowKeys</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.66">parseRowKeys</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+               int&nbsp;i)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code></dd></dl>
+</li>
+</ul>
+<a name="parseColumns(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parseColumns</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.113">parseColumns</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+               int&nbsp;i)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code></dd></dl>
+</li>
+</ul>
+<a name="parseTimestamp(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parseTimestamp</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.149">parseTimestamp</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+                 int&nbsp;i)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code></dd></dl>
+</li>
+</ul>
+<a name="parseQueryParams(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parseQueryParams</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/rest/RowSpec.html#line.204">parseQueryParams</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+                   int&nbsp;i)</pre>
+</li>
+</ul>
 <a name="isSingleRow()">
 <!--   -->
 </a>

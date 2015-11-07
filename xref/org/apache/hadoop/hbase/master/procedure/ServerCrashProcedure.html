@@ -176,7 +176,7 @@
 <a class="jxr_linenumber" name="166" href="#166">166</a>   }
 <a class="jxr_linenumber" name="167" href="#167">167</a> 
 <a class="jxr_linenumber" name="168" href="#168">168</a>   @Override
-<a class="jxr_linenumber" name="169" href="#169">169</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">ServerCrashState</a> state)
+<a class="jxr_linenumber" name="169" href="#169">169</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, ServerCrashState state)
 <a class="jxr_linenumber" name="170" href="#170">170</a>   <strong class="jxr_keyword">throws</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureYieldException.html">ProcedureYieldException</a> {
 <a class="jxr_linenumber" name="171" href="#171">171</a>     <strong class="jxr_keyword">if</strong> (LOG.isTraceEnabled()) {
 <a class="jxr_linenumber" name="172" href="#172">172</a>       LOG.trace(state);
@@ -522,24 +522,24 @@
 <a class="jxr_linenumber" name="512" href="#512">512</a>   }
 <a class="jxr_linenumber" name="513" href="#513">513</a> 
 <a class="jxr_linenumber" name="514" href="#514">514</a>   @Override
-<a class="jxr_linenumber" name="515" href="#515">515</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">ServerCrashState</a> state)
+<a class="jxr_linenumber" name="515" href="#515">515</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, ServerCrashState state)
 <a class="jxr_linenumber" name="516" href="#516">516</a>   <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="517" href="#517">517</a>     <em class="jxr_comment">// Can't rollback.</em>
 <a class="jxr_linenumber" name="518" href="#518">518</a>     <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> UnsupportedOperationException(<span class="jxr_string">"unhandled state="</span> + state);
 <a class="jxr_linenumber" name="519" href="#519">519</a>   }
 <a class="jxr_linenumber" name="520" href="#520">520</a> 
 <a class="jxr_linenumber" name="521" href="#521">521</a>   @Override
-<a class="jxr_linenumber" name="522" href="#522">522</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">ServerCrashState</a> getState(<strong class="jxr_keyword">int</strong> stateId) {
+<a class="jxr_linenumber" name="522" href="#522">522</a>   <strong class="jxr_keyword">protected</strong> ServerCrashState getState(<strong class="jxr_keyword">int</strong> stateId) {
 <a class="jxr_linenumber" name="523" href="#523">523</a>     <strong class="jxr_keyword">return</strong> ServerCrashState.valueOf(stateId);
 <a class="jxr_linenumber" name="524" href="#524">524</a>   }
 <a class="jxr_linenumber" name="525" href="#525">525</a> 
 <a class="jxr_linenumber" name="526" href="#526">526</a>   @Override
-<a class="jxr_linenumber" name="527" href="#527">527</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">ServerCrashState</a> state) {
+<a class="jxr_linenumber" name="527" href="#527">527</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(ServerCrashState state) {
 <a class="jxr_linenumber" name="528" href="#528">528</a>     <strong class="jxr_keyword">return</strong> state.getNumber();
 <a class="jxr_linenumber" name="529" href="#529">529</a>   }
 <a class="jxr_linenumber" name="530" href="#530">530</a> 
 <a class="jxr_linenumber" name="531" href="#531">531</a>   @Override
-<a class="jxr_linenumber" name="532" href="#532">532</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">ServerCrashState</a> getInitialState() {
+<a class="jxr_linenumber" name="532" href="#532">532</a>   <strong class="jxr_keyword">protected</strong> ServerCrashState getInitialState() {
 <a class="jxr_linenumber" name="533" href="#533">533</a>     <strong class="jxr_keyword">return</strong> ServerCrashState.SERVER_CRASH_START;
 <a class="jxr_linenumber" name="534" href="#534">534</a>   }
 <a class="jxr_linenumber" name="535" href="#535">535</a> 
@@ -757,7 +757,7 @@
 <a class="jxr_linenumber" name="747" href="#747">747</a> <em class="jxr_javadoccomment">   * stuck waiting for regions to online so it can replay edits.</em>
 <a class="jxr_linenumber" name="748" href="#748">748</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="749" href="#749">749</a>   @Override
-<a class="jxr_linenumber" name="750" href="#750">750</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">boolean</strong> isYieldBeforeExecuteFromState(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">ServerCrashState</a> state) {
+<a class="jxr_linenumber" name="750" href="#750">750</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">boolean</strong> isYieldBeforeExecuteFromState(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, ServerCrashState state) {
 <a class="jxr_linenumber" name="751" href="#751">751</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="752" href="#752">752</a>   }
 <a class="jxr_linenumber" name="753" href="#753">753</a> }

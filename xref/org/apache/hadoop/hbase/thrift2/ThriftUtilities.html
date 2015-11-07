@@ -94,7 +94,7 @@
 <a class="jxr_linenumber" name="84" href="#84">84</a>  <em class="jxr_javadoccomment">   *</em>
 <a class="jxr_linenumber" name="85" href="#85">85</a>  <em class="jxr_javadoccomment">   * @throws IOException if an invalid time range or max version parameter is given</em>
 <a class="jxr_linenumber" name="86" href="#86">86</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="87" href="#87">87</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Get.html">Get</a> getFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TGet.html">TGet</a> in) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="87" href="#87">87</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Get.html">Get</a> getFromThrift(TGet in) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="88" href="#88">88</a>      <a href="../../../../../org/apache/hadoop/hbase/client/Get.html">Get</a> out = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Get.html">Get</a>(in.getRow());
 <a class="jxr_linenumber" name="89" href="#89">89</a>  
 <a class="jxr_linenumber" name="90" href="#90">90</a>      <em class="jxr_comment">// Timestamp overwrites time range if both are set</em>
@@ -149,7 +149,7 @@
 <a class="jxr_linenumber" name="139" href="#139">139</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> List&lt;Get&gt; getsFromThrift(List&lt;TGet&gt; in) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="140" href="#140">140</a>     List&lt;Get&gt; out = <strong class="jxr_keyword">new</strong> ArrayList&lt;Get&gt;(in.size());
 <a class="jxr_linenumber" name="141" href="#141">141</a>     <strong class="jxr_keyword">for</strong> (TGet get : in) {
-<a class="jxr_linenumber" name="142" href="#142">142</a>       out.add(getFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/THBaseService.html">get</a>));
+<a class="jxr_linenumber" name="142" href="#142">142</a>       out.add(getFromThrift(get));
 <a class="jxr_linenumber" name="143" href="#143">143</a>     }
 <a class="jxr_linenumber" name="144" href="#144">144</a>     <strong class="jxr_keyword">return</strong> out;
 <a class="jxr_linenumber" name="145" href="#145">145</a>   }
@@ -161,16 +161,16 @@
 <a class="jxr_linenumber" name="151" href="#151">151</a> <em class="jxr_javadoccomment">   *</em>
 <a class="jxr_linenumber" name="152" href="#152">152</a> <em class="jxr_javadoccomment">   * @return converted result, returns an empty result if the input is &lt;code&gt;null&lt;/code&gt;</em>
 <a class="jxr_linenumber" name="153" href="#153">153</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="154" href="#154">154</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TResult.html">TResult</a> resultFromHBase(<a href="../../../../../org/apache/hadoop/hbase/client/Result.html">Result</a> in) {
+<a class="jxr_linenumber" name="154" href="#154">154</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> TResult resultFromHBase(<a href="../../../../../org/apache/hadoop/hbase/client/Result.html">Result</a> in) {
 <a class="jxr_linenumber" name="155" href="#155">155</a>     <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a>[] raw = in.rawCells();
-<a class="jxr_linenumber" name="156" href="#156">156</a>     <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TResult.html">TResult</a> out = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TResult.html">TResult</a>();
+<a class="jxr_linenumber" name="156" href="#156">156</a>     TResult out = <strong class="jxr_keyword">new</strong> TResult();
 <a class="jxr_linenumber" name="157" href="#157">157</a>     byte[] row = in.getRow();
 <a class="jxr_linenumber" name="158" href="#158">158</a>     <strong class="jxr_keyword">if</strong> (row != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="159" href="#159">159</a>       out.setRow(in.getRow());
 <a class="jxr_linenumber" name="160" href="#160">160</a>     }
 <a class="jxr_linenumber" name="161" href="#161">161</a>     List&lt;TColumnValue&gt; columnValues = <strong class="jxr_keyword">new</strong> ArrayList&lt;TColumnValue&gt;();
 <a class="jxr_linenumber" name="162" href="#162">162</a>     <strong class="jxr_keyword">for</strong> (Cell kv : raw) {
-<a class="jxr_linenumber" name="163" href="#163">163</a>       <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TColumnValue.html">TColumnValue</a> col = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TColumnValue.html">TColumnValue</a>();
+<a class="jxr_linenumber" name="163" href="#163">163</a>       TColumnValue col = <strong class="jxr_keyword">new</strong> TColumnValue();
 <a class="jxr_linenumber" name="164" href="#164">164</a>       col.setFamily(CellUtil.cloneFamily(kv));
 <a class="jxr_linenumber" name="165" href="#165">165</a>       col.setQualifier(CellUtil.cloneQualifier(kv));
 <a class="jxr_linenumber" name="166" href="#166">166</a>       col.setTimestamp(kv.getTimestamp());
@@ -208,7 +208,7 @@
 <a class="jxr_linenumber" name="198" href="#198">198</a> <em class="jxr_javadoccomment">   *</em>
 <a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_javadoccomment">   * @return converted &lt;code&gt;Put&lt;/code&gt;</em>
 <a class="jxr_linenumber" name="200" href="#200">200</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="201" href="#201">201</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Put.html">Put</a> putFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TPut.html">TPut</a> in) {
+<a class="jxr_linenumber" name="201" href="#201">201</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Put.html">Put</a> putFromThrift(TPut in) {
 <a class="jxr_linenumber" name="202" href="#202">202</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Put.html">Put</a> out;
 <a class="jxr_linenumber" name="203" href="#203">203</a> 
 <a class="jxr_linenumber" name="204" href="#204">204</a>     <strong class="jxr_keyword">if</strong> (in.isSetTimestamp()) {
@@ -255,7 +255,7 @@
 <a class="jxr_linenumber" name="245" href="#245">245</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> List&lt;Put&gt; putsFromThrift(List&lt;TPut&gt; in) {
 <a class="jxr_linenumber" name="246" href="#246">246</a>     List&lt;Put&gt; out = <strong class="jxr_keyword">new</strong> ArrayList&lt;Put&gt;(in.size());
 <a class="jxr_linenumber" name="247" href="#247">247</a>     <strong class="jxr_keyword">for</strong> (TPut put : in) {
-<a class="jxr_linenumber" name="248" href="#248">248</a>       out.add(putFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/THBaseService.html">put</a>));
+<a class="jxr_linenumber" name="248" href="#248">248</a>       out.add(putFromThrift(put));
 <a class="jxr_linenumber" name="249" href="#249">249</a>     }
 <a class="jxr_linenumber" name="250" href="#250">250</a>     <strong class="jxr_keyword">return</strong> out;
 <a class="jxr_linenumber" name="251" href="#251">251</a>   }
@@ -267,7 +267,7 @@
 <a class="jxr_linenumber" name="257" href="#257">257</a> <em class="jxr_javadoccomment">   *</em>
 <a class="jxr_linenumber" name="258" href="#258">258</a> <em class="jxr_javadoccomment">   * @return converted &lt;code&gt;Delete&lt;/code&gt;</em>
 <a class="jxr_linenumber" name="259" href="#259">259</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="260" href="#260">260</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html">Delete</a> deleteFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TDelete.html">TDelete</a> in) {
+<a class="jxr_linenumber" name="260" href="#260">260</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html">Delete</a> deleteFromThrift(TDelete in) {
 <a class="jxr_linenumber" name="261" href="#261">261</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html">Delete</a> out;
 <a class="jxr_linenumber" name="262" href="#262">262</a> 
 <a class="jxr_linenumber" name="263" href="#263">263</a>     <strong class="jxr_keyword">if</strong> (in.isSetColumns()) {
@@ -333,8 +333,8 @@
 <a class="jxr_linenumber" name="323" href="#323">323</a>     <strong class="jxr_keyword">return</strong> out;
 <a class="jxr_linenumber" name="324" href="#324">324</a>   }
 <a class="jxr_linenumber" name="325" href="#325">325</a> 
-<a class="jxr_linenumber" name="326" href="#326">326</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TDelete.html">TDelete</a> deleteFromHBase(<a href="../../../../../org/apache/hadoop/hbase/client/Delete.html">Delete</a> in) {
-<a class="jxr_linenumber" name="327" href="#327">327</a>     <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TDelete.html">TDelete</a> out = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TDelete.html">TDelete</a>(ByteBuffer.wrap(in.getRow()));
+<a class="jxr_linenumber" name="326" href="#326">326</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> TDelete deleteFromHBase(<a href="../../../../../org/apache/hadoop/hbase/client/Delete.html">Delete</a> in) {
+<a class="jxr_linenumber" name="327" href="#327">327</a>     TDelete out = <strong class="jxr_keyword">new</strong> TDelete(ByteBuffer.wrap(in.getRow()));
 <a class="jxr_linenumber" name="328" href="#328">328</a> 
 <a class="jxr_linenumber" name="329" href="#329">329</a>     List&lt;TColumn&gt; columns = <strong class="jxr_keyword">new</strong> ArrayList&lt;TColumn&gt;();
 <a class="jxr_linenumber" name="330" href="#330">330</a>     <strong class="jxr_keyword">long</strong> rowTimestamp = in.getTimeStamp();
@@ -345,7 +345,7 @@
 <a class="jxr_linenumber" name="335" href="#335">335</a>     <em class="jxr_comment">// Map&lt;family, List&lt;KeyValue&gt;&gt;</em>
 <a class="jxr_linenumber" name="336" href="#336">336</a>     <strong class="jxr_keyword">for</strong> (Map.Entry&lt;byte[], List&lt;org.apache.hadoop.hbase.Cell&gt;&gt; familyEntry:
 <a class="jxr_linenumber" name="337" href="#337">337</a>         in.getFamilyCellMap().entrySet()) {
-<a class="jxr_linenumber" name="338" href="#338">338</a>       <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TColumn.html">TColumn</a> column = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TColumn.html">TColumn</a>(ByteBuffer.wrap(familyEntry.getKey()));
+<a class="jxr_linenumber" name="338" href="#338">338</a>       TColumn column = <strong class="jxr_keyword">new</strong> TColumn(ByteBuffer.wrap(familyEntry.getKey()));
 <a class="jxr_linenumber" name="339" href="#339">339</a>       <strong class="jxr_keyword">for</strong> (org.apache.hadoop.hbase.Cell cell: familyEntry.getValue()) {
 <a class="jxr_linenumber" name="340" href="#340">340</a>         byte[] family = CellUtil.cloneFamily(cell);
 <a class="jxr_linenumber" name="341" href="#341">341</a>         byte[] qualifier = CellUtil.cloneQualifier(cell);
@@ -374,7 +374,7 @@
 <a class="jxr_linenumber" name="364" href="#364">364</a> <em class="jxr_javadoccomment">   *</em>
 <a class="jxr_linenumber" name="365" href="#365">365</a> <em class="jxr_javadoccomment">   * @return converted &lt;code&gt;RowMutations&lt;/code&gt;</em>
 <a class="jxr_linenumber" name="366" href="#366">366</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="367" href="#367">367</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/RowMutations.html">RowMutations</a> rowMutationsFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TRowMutations.html">TRowMutations</a> in) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="367" href="#367">367</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/RowMutations.html">RowMutations</a> rowMutationsFromThrift(TRowMutations in) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="368" href="#368">368</a>     <a href="../../../../../org/apache/hadoop/hbase/client/RowMutations.html">RowMutations</a> out = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/RowMutations.html">RowMutations</a>(in.getRow());
 <a class="jxr_linenumber" name="369" href="#369">369</a>     List&lt;TMutation&gt; mutations = in.getMutations();
 <a class="jxr_linenumber" name="370" href="#370">370</a>     <strong class="jxr_keyword">for</strong> (TMutation mutation : mutations) {
@@ -388,7 +388,7 @@
 <a class="jxr_linenumber" name="378" href="#378">378</a>     <strong class="jxr_keyword">return</strong> out;
 <a class="jxr_linenumber" name="379" href="#379">379</a>   }
 <a class="jxr_linenumber" name="380" href="#380">380</a> 
-<a class="jxr_linenumber" name="381" href="#381">381</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html">Scan</a> scanFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TScan.html">TScan</a> in) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="381" href="#381">381</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html">Scan</a> scanFromThrift(TScan in) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="382" href="#382">382</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html">Scan</a> out = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html">Scan</a>();
 <a class="jxr_linenumber" name="383" href="#383">383</a> 
 <a class="jxr_linenumber" name="384" href="#384">384</a>     <strong class="jxr_keyword">if</strong> (in.isSetStartRow())
@@ -411,7 +411,7 @@
 <a class="jxr_linenumber" name="401" href="#401">401</a>       }
 <a class="jxr_linenumber" name="402" href="#402">402</a>     }
 <a class="jxr_linenumber" name="403" href="#403">403</a> 
-<a class="jxr_linenumber" name="404" href="#404">404</a>     <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TTimeRange.html">TTimeRange</a> timeRange = in.getTimeRange();
+<a class="jxr_linenumber" name="404" href="#404">404</a>     TTimeRange timeRange = in.getTimeRange();
 <a class="jxr_linenumber" name="405" href="#405">405</a>     <strong class="jxr_keyword">if</strong> (timeRange != <strong class="jxr_keyword">null</strong> &amp;&amp;
 <a class="jxr_linenumber" name="406" href="#406">406</a>         timeRange.isSetMinStamp() &amp;&amp; timeRange.isSetMaxStamp()) {
 <a class="jxr_linenumber" name="407" href="#407">407</a>       out.setTimeRange(timeRange.getMinStamp(), timeRange.getMaxStamp());
@@ -441,7 +441,7 @@
 <a class="jxr_linenumber" name="431" href="#431">431</a>     <strong class="jxr_keyword">return</strong> out;
 <a class="jxr_linenumber" name="432" href="#432">432</a>   }
 <a class="jxr_linenumber" name="433" href="#433">433</a> 
-<a class="jxr_linenumber" name="434" href="#434">434</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> incrementFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TIncrement.html">TIncrement</a> in) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="434" href="#434">434</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> incrementFromThrift(TIncrement in) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="435" href="#435">435</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> out = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a>(in.getRow());
 <a class="jxr_linenumber" name="436" href="#436">436</a>     <strong class="jxr_keyword">for</strong> (TColumnIncrement column : in.getColumns()) {
 <a class="jxr_linenumber" name="437" href="#437">437</a>       out.addColumn(column.getFamily(), column.getQualifier(), column.getAmount());
@@ -462,7 +462,7 @@
 <a class="jxr_linenumber" name="452" href="#452">452</a>     <strong class="jxr_keyword">return</strong> out;
 <a class="jxr_linenumber" name="453" href="#453">453</a>   }
 <a class="jxr_linenumber" name="454" href="#454">454</a> 
-<a class="jxr_linenumber" name="455" href="#455">455</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> appendFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TAppend.html">TAppend</a> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/THBaseService.html">append</a>) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="455" href="#455">455</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> appendFromThrift(TAppend append) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="456" href="#456">456</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> out = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a>(append.getRow());
 <a class="jxr_linenumber" name="457" href="#457">457</a>     <strong class="jxr_keyword">for</strong> (TColumnValue column : append.getColumns()) {
 <a class="jxr_linenumber" name="458" href="#458">458</a>       out.add(column.getFamily(), column.getQualifier(), column.getValue());
@@ -483,13 +483,13 @@
 <a class="jxr_linenumber" name="473" href="#473">473</a>     <strong class="jxr_keyword">return</strong> out;
 <a class="jxr_linenumber" name="474" href="#474">474</a>   }
 <a class="jxr_linenumber" name="475" href="#475">475</a> 
-<a class="jxr_linenumber" name="476" href="#476">476</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/THRegionLocation.html">THRegionLocation</a> regionLocationFromHBase(<a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html">HRegionLocation</a> hrl) {
+<a class="jxr_linenumber" name="476" href="#476">476</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> THRegionLocation regionLocationFromHBase(<a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html">HRegionLocation</a> hrl) {
 <a class="jxr_linenumber" name="477" href="#477">477</a>     <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri = hrl.getRegionInfo();
 <a class="jxr_linenumber" name="478" href="#478">478</a>     <a href="../../../../../org/apache/hadoop/hbase/ServerName.html">ServerName</a> serverName = hrl.getServerName();
 <a class="jxr_linenumber" name="479" href="#479">479</a> 
-<a class="jxr_linenumber" name="480" href="#480">480</a>     <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/THRegionInfo.html">THRegionInfo</a> thRegionInfo = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/THRegionInfo.html">THRegionInfo</a>();
-<a class="jxr_linenumber" name="481" href="#481">481</a>     <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/THRegionLocation.html">THRegionLocation</a> thRegionLocation = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/THRegionLocation.html">THRegionLocation</a>();
-<a class="jxr_linenumber" name="482" href="#482">482</a>     <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TServerName.html">TServerName</a> tServerName = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TServerName.html">TServerName</a>();
+<a class="jxr_linenumber" name="480" href="#480">480</a>     THRegionInfo thRegionInfo = <strong class="jxr_keyword">new</strong> THRegionInfo();
+<a class="jxr_linenumber" name="481" href="#481">481</a>     THRegionLocation thRegionLocation = <strong class="jxr_keyword">new</strong> THRegionLocation();
+<a class="jxr_linenumber" name="482" href="#482">482</a>     TServerName tServerName = <strong class="jxr_keyword">new</strong> TServerName();
 <a class="jxr_linenumber" name="483" href="#483">483</a> 
 <a class="jxr_linenumber" name="484" href="#484">484</a>     tServerName.setHostName(serverName.getHostname());
 <a class="jxr_linenumber" name="485" href="#485">485</a>     tServerName.setPort(serverName.getPort());
@@ -531,7 +531,7 @@
 <a class="jxr_linenumber" name="521" href="#521">521</a>     }
 <a class="jxr_linenumber" name="522" href="#522">522</a>   }
 <a class="jxr_linenumber" name="523" href="#523">523</a> 
-<a class="jxr_linenumber" name="524" href="#524">524</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Durability.html">Durability</a> durabilityFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift2/generated/TDurability.html">TDurability</a> tDurability) {
+<a class="jxr_linenumber" name="524" href="#524">524</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Durability.html">Durability</a> durabilityFromThrift(TDurability tDurability) {
 <a class="jxr_linenumber" name="525" href="#525">525</a>     <strong class="jxr_keyword">switch</strong> (tDurability.getValue()) {
 <a class="jxr_linenumber" name="526" href="#526">526</a>       <strong class="jxr_keyword">case</strong> 1: <strong class="jxr_keyword">return</strong> Durability.SKIP_WAL;
 <a class="jxr_linenumber" name="527" href="#527">527</a>       <strong class="jxr_keyword">case</strong> 2: <strong class="jxr_keyword">return</strong> Durability.ASYNC_WAL;

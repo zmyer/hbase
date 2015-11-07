@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,61 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#info0">info0</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#info1">info1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#info2">info2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#info9">info9</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#regionId1">regionId1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#regionId2">regionId2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.ServerName</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#sn0">sn0</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.ServerName</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#sn1">sn1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.ServerName</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#sn2">sn2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.ServerName</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#sn3">sn3</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -133,34 +188,58 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#hri(int)">hri</a></strong>(int&nbsp;replicaId)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#hri(long,%20int)">hri</a></strong>(long&nbsp;regionId,
+      int&nbsp;replicaId)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HRegionLocation</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#hrl(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.ServerName)">hrl</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri,
+      org.apache.hadoop.hbase.ServerName&nbsp;sn)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HRegionLocation</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#hrl(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.ServerName,%20long)">hrl</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri,
+      org.apache.hadoop.hbase.ServerName&nbsp;sn,
+      long&nbsp;seqNum)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.RegionLocations</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#hrll(org.apache.hadoop.hbase.HRegionLocation...)">hrll</a></strong>(org.apache.hadoop.hbase.HRegionLocation...&nbsp;locations)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#testConstructWithNullElements()">testConstructWithNullElements</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#testMergeLocations()">testMergeLocations</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#testMergeLocationsWithDifferentRegionId()">testMergeLocationsWithDifferentRegionId</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#testRemove()">testRemove</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#testRemoveByServer()">testRemoveByServer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#testSizeMethods()">testSizeMethods</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#testUpdateLocation()">testUpdateLocation</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestRegionLocations.html#testUpdateLocationWithDifferentRegionId()">testUpdateLocationWithDifferentRegionId</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -180,6 +259,104 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="sn0">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sn0</h4>
+<pre>org.apache.hadoop.hbase.ServerName <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.35">sn0</a></pre>
+</li>
+</ul>
+<a name="sn1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sn1</h4>
+<pre>org.apache.hadoop.hbase.ServerName <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.36">sn1</a></pre>
+</li>
+</ul>
+<a name="sn2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sn2</h4>
+<pre>org.apache.hadoop.hbase.ServerName <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.37">sn2</a></pre>
+</li>
+</ul>
+<a name="sn3">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sn3</h4>
+<pre>org.apache.hadoop.hbase.ServerName <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.38">sn3</a></pre>
+</li>
+</ul>
+<a name="info0">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>info0</h4>
+<pre>org.apache.hadoop.hbase.HRegionInfo <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.40">info0</a></pre>
+</li>
+</ul>
+<a name="info1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>info1</h4>
+<pre>org.apache.hadoop.hbase.HRegionInfo <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.41">info1</a></pre>
+</li>
+</ul>
+<a name="info2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>info2</h4>
+<pre>org.apache.hadoop.hbase.HRegionInfo <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.42">info2</a></pre>
+</li>
+</ul>
+<a name="info9">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>info9</h4>
+<pre>org.apache.hadoop.hbase.HRegionInfo <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.43">info9</a></pre>
+</li>
+</ul>
+<a name="regionId1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regionId1</h4>
+<pre>long <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.45">regionId1</a></pre>
+</li>
+</ul>
+<a name="regionId2">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>regionId2</h4>
+<pre>long <a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.46">regionId2</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -210,6 +387,55 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>testSizeMethods</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.49">testSizeMethods</a>()</pre>
+</li>
+</ul>
+<a name="hri(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hri</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HRegionInfo&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.78">hri</a>(int&nbsp;replicaId)</pre>
+</li>
+</ul>
+<a name="hri(long, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hri</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HRegionInfo&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.82">hri</a>(long&nbsp;regionId,
+                                      int&nbsp;replicaId)</pre>
+</li>
+</ul>
+<a name="hrl(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.ServerName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hrl</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HRegionLocation&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.90">hrl</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri,
+                                          org.apache.hadoop.hbase.ServerName&nbsp;sn)</pre>
+</li>
+</ul>
+<a name="hrl(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.ServerName, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hrl</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HRegionLocation&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.94">hrl</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri,
+                                          org.apache.hadoop.hbase.ServerName&nbsp;sn,
+                                          long&nbsp;seqNum)</pre>
+</li>
+</ul>
+<a name="hrll(org.apache.hadoop.hbase.HRegionLocation...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hrll</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.RegionLocations&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestRegionLocations.html#line.98">hrll</a>(org.apache.hadoop.hbase.HRegionLocation...&nbsp;locations)</pre>
 </li>
 </ul>
 <a name="testRemoveByServer()">
@@ -327,13 +553,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -81,6 +81,13 @@
  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>BlockCache</code></a>.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.io.hfile.bucket">org.apache.hadoop.hbase.io.hfile.bucket</a></td>
+<td class="colLast">
+<div class="block">Provides <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket"><code>BucketCache</code></a>, an implementation of
+ <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>BlockCache</code></a>.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -90,6 +97,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a> in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a></code></td>
+<td class="colLast"><span class="strong">LruCachedBlock.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#priority">priority</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -117,6 +137,37 @@
 <div class="block">Returns an array containing the constants of this enum type, in
 the order they are declared.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.io.hfile.bucket">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a> in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a></code></td>
+<td class="colLast"><span class="strong">BucketCache.BucketEntry.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html#priority">priority</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a></code></td>
+<td class="colLast"><span class="strong">BucketCache.BucketEntry.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html#getPriority()">getPriority</a></strong>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

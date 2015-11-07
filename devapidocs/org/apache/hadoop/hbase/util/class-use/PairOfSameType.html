@@ -127,20 +127,28 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;</code></td>
-<td class="colLast"><span class="strong">SplitTransaction.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.html#execute(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">execute</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
-              <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>use #execute(Server, RegionServerServices, User)</i></div>
-</div>
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;</code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#createDaughters(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.security.User)">createDaughters</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                              <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
+                              <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>
+<div class="block">Prepare the regions and region files.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;</code></td>
+<td class="colLast"><span class="strong">SplitTransaction.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.html#execute(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">execute</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+              <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use #execute(Server, RegionServerServices, User);  as of 1.0.2, remove in 3.0</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;</code></td>
 <td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#execute(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">execute</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;</code></td>
 <td class="colLast"><span class="strong">SplitTransaction.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.html#execute(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.security.User)">execute</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
@@ -148,17 +156,33 @@
 <div class="block">Run the transaction.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;</code></td>
 <td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#execute(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.security.User)">execute</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
               <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;</code></td>
 <td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#stepsBeforePONR(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20boolean)">stepsBeforePONR</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
                               boolean&nbsp;testing)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#stepsAfterPONR(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.util.PairOfSameType,%20org.apache.hadoop.hbase.security.User)">stepsAfterPONR</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                            <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
+                            <a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;&nbsp;regions,
+                            <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

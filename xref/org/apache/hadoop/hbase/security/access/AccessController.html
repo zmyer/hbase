@@ -1044,7 +1044,7 @@
 <a class="jxr_linenumber" name="1034" href="#1034">1034</a>         <em class="jxr_comment">// default the table owner to current user, if not specified.</em>
 <a class="jxr_linenumber" name="1035" href="#1035">1035</a>         <strong class="jxr_keyword">if</strong> (owner == <strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="1036" href="#1036">1036</a>           owner = getActiveUser().getShortName();
-<a class="jxr_linenumber" name="1037" href="#1037">1037</a>         <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a> userperm = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a>(Bytes.toBytes(owner),
+<a class="jxr_linenumber" name="1037" href="#1037">1037</a>         <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a> userperm = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a>(Bytes.toBytes(owner),
 <a class="jxr_linenumber" name="1038" href="#1038">1038</a>             desc.getTableName(), <strong class="jxr_keyword">null</strong>, Action.values());
 <a class="jxr_linenumber" name="1039" href="#1039">1039</a>         <em class="jxr_comment">// switch to the real hbase master user for doing the RPC on the ACL table</em>
 <a class="jxr_linenumber" name="1040" href="#1040">1040</a>         User.runAsLoginUser(<strong class="jxr_keyword">new</strong> PrivilegedExceptionAction&lt;Void&gt;() {
@@ -1132,7 +1132,7 @@
 <a class="jxr_linenumber" name="1122" href="#1122">1122</a>     User.runAsLoginUser(<strong class="jxr_keyword">new</strong> PrivilegedExceptionAction&lt;Void&gt;() {
 <a class="jxr_linenumber" name="1123" href="#1123">1123</a>       @Override
 <a class="jxr_linenumber" name="1124" href="#1124">1124</a>       <strong class="jxr_keyword">public</strong> Void run() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="1125" href="#1125">1125</a>         <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a> userperm = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a>(Bytes.toBytes(owner),
+<a class="jxr_linenumber" name="1125" href="#1125">1125</a>         <a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a> userperm = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a>(Bytes.toBytes(owner),
 <a class="jxr_linenumber" name="1126" href="#1126">1126</a>             htd.getTableName(), <strong class="jxr_keyword">null</strong>, Action.values());
 <a class="jxr_linenumber" name="1127" href="#1127">1127</a>         AccessControlLists.addUserPermission(conf, userperm);
 <a class="jxr_linenumber" name="1128" href="#1128">1128</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
@@ -1309,7 +1309,7 @@
 <a class="jxr_linenumber" name="1299" href="#1299">1299</a> 
 <a class="jxr_linenumber" name="1300" href="#1300">1300</a>   @Override
 <a class="jxr_linenumber" name="1301" href="#1301">1301</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preSnapshot(<strong class="jxr_keyword">final</strong> ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="1302" href="#1302">1302</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">SnapshotDescription</a> snapshot, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a> hTableDescriptor)
+<a class="jxr_linenumber" name="1302" href="#1302">1302</a>       <strong class="jxr_keyword">final</strong> SnapshotDescription snapshot, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a> hTableDescriptor)
 <a class="jxr_linenumber" name="1303" href="#1303">1303</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1304" href="#1304">1304</a>     requirePermission(<span class="jxr_string">"snapshot"</span>, hTableDescriptor.getTableName(), <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="1305" href="#1305">1305</a>       Permission.Action.ADMIN);
@@ -1317,7 +1317,7 @@
 <a class="jxr_linenumber" name="1307" href="#1307">1307</a> 
 <a class="jxr_linenumber" name="1308" href="#1308">1308</a>   @Override
 <a class="jxr_linenumber" name="1309" href="#1309">1309</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preListSnapshot(ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="1310" href="#1310">1310</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">SnapshotDescription</a> snapshot) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="1310" href="#1310">1310</a>       <strong class="jxr_keyword">final</strong> SnapshotDescription snapshot) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1311" href="#1311">1311</a>     <strong class="jxr_keyword">if</strong> (SnapshotDescriptionUtils.isSnapshotOwner(snapshot, getActiveUser())) {
 <a class="jxr_linenumber" name="1312" href="#1312">1312</a>       <em class="jxr_comment">// list it, if user is the owner of snapshot</em>
 <a class="jxr_linenumber" name="1313" href="#1313">1313</a>       <em class="jxr_comment">// TODO: We are not logging this for audit</em>
@@ -1328,14 +1328,14 @@
 <a class="jxr_linenumber" name="1318" href="#1318">1318</a> 
 <a class="jxr_linenumber" name="1319" href="#1319">1319</a>   @Override
 <a class="jxr_linenumber" name="1320" href="#1320">1320</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preCloneSnapshot(<strong class="jxr_keyword">final</strong> ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="1321" href="#1321">1321</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">SnapshotDescription</a> snapshot, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a> hTableDescriptor)
+<a class="jxr_linenumber" name="1321" href="#1321">1321</a>       <strong class="jxr_keyword">final</strong> SnapshotDescription snapshot, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a> hTableDescriptor)
 <a class="jxr_linenumber" name="1322" href="#1322">1322</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1323" href="#1323">1323</a>     requirePermission(<span class="jxr_string">"clone"</span>, Action.ADMIN);
 <a class="jxr_linenumber" name="1324" href="#1324">1324</a>   }
 <a class="jxr_linenumber" name="1325" href="#1325">1325</a> 
 <a class="jxr_linenumber" name="1326" href="#1326">1326</a>   @Override
 <a class="jxr_linenumber" name="1327" href="#1327">1327</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preRestoreSnapshot(<strong class="jxr_keyword">final</strong> ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="1328" href="#1328">1328</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">SnapshotDescription</a> snapshot, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a> hTableDescriptor)
+<a class="jxr_linenumber" name="1328" href="#1328">1328</a>       <strong class="jxr_keyword">final</strong> SnapshotDescription snapshot, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a> hTableDescriptor)
 <a class="jxr_linenumber" name="1329" href="#1329">1329</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1330" href="#1330">1330</a>     <strong class="jxr_keyword">if</strong> (SnapshotDescriptionUtils.isSnapshotOwner(snapshot, getActiveUser())) {
 <a class="jxr_linenumber" name="1331" href="#1331">1331</a>       requirePermission(<span class="jxr_string">"restoreSnapshot"</span>, hTableDescriptor.getTableName(), <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
@@ -1347,7 +1347,7 @@
 <a class="jxr_linenumber" name="1337" href="#1337">1337</a> 
 <a class="jxr_linenumber" name="1338" href="#1338">1338</a>   @Override
 <a class="jxr_linenumber" name="1339" href="#1339">1339</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preDeleteSnapshot(<strong class="jxr_keyword">final</strong> ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="1340" href="#1340">1340</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">SnapshotDescription</a> snapshot) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="1340" href="#1340">1340</a>       <strong class="jxr_keyword">final</strong> SnapshotDescription snapshot) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1341" href="#1341">1341</a>     <strong class="jxr_keyword">if</strong> (SnapshotDescriptionUtils.isSnapshotOwner(snapshot, getActiveUser())) {
 <a class="jxr_linenumber" name="1342" href="#1342">1342</a>       <em class="jxr_comment">// Snapshot owner is allowed to delete the snapshot</em>
 <a class="jxr_linenumber" name="1343" href="#1343">1343</a>       <em class="jxr_comment">// TODO: We are not logging this for audit</em>
@@ -2153,7 +2153,7 @@
 <a class="jxr_linenumber" name="2143" href="#2143">2143</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="2144" href="#2144">2144</a>   @Override
 <a class="jxr_linenumber" name="2145" href="#2145">2145</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> prePrepareBulkLoad(ObserverContext&lt;RegionCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="2146" href="#2146">2146</a>                                  <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/SecureBulkLoadProtos.html">PrepareBulkLoadRequest</a> request) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="2146" href="#2146">2146</a>                                  PrepareBulkLoadRequest request) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="2147" href="#2147">2147</a>     requireAccess(<span class="jxr_string">"prePareBulkLoad"</span>,
 <a class="jxr_linenumber" name="2148" href="#2148">2148</a>         ctx.getEnvironment().getRegion().getTableDesc().getTableName(), Action.CREATE);
 <a class="jxr_linenumber" name="2149" href="#2149">2149</a>   }
@@ -2167,7 +2167,7 @@
 <a class="jxr_linenumber" name="2157" href="#2157">2157</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="2158" href="#2158">2158</a>   @Override
 <a class="jxr_linenumber" name="2159" href="#2159">2159</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preCleanupBulkLoad(ObserverContext&lt;RegionCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="2160" href="#2160">2160</a>                                  <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/SecureBulkLoadProtos.html">CleanupBulkLoadRequest</a> request) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="2160" href="#2160">2160</a>                                  CleanupBulkLoadRequest request) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="2161" href="#2161">2161</a>     requireAccess(<span class="jxr_string">"preCleanupBulkLoad"</span>,
 <a class="jxr_linenumber" name="2162" href="#2162">2162</a>         ctx.getEnvironment().getRegion().getTableDesc().getTableName(), Action.CREATE);
 <a class="jxr_linenumber" name="2163" href="#2163">2163</a>   }
@@ -2193,13 +2193,13 @@
 <a class="jxr_linenumber" name="2183" href="#2183">2183</a>       Service service, String methodName, Message request, Message.Builder responseBuilder)
 <a class="jxr_linenumber" name="2184" href="#2184">2184</a>       <strong class="jxr_keyword">throws</strong> IOException { }
 <a class="jxr_linenumber" name="2185" href="#2185">2185</a> 
-<a class="jxr_linenumber" name="2186" href="#2186">2186</a>   <em class="jxr_comment">/*<em class="jxr_comment"> ---- Protobuf <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">AccessControlService</a> implementation ---- */</em></em>
+<a class="jxr_linenumber" name="2186" href="#2186">2186</a>   <em class="jxr_comment">/*<em class="jxr_comment"> ---- Protobuf AccessControlService implementation ---- */</em></em>
 <a class="jxr_linenumber" name="2187" href="#2187">2187</a> 
 <a class="jxr_linenumber" name="2188" href="#2188">2188</a>   @Override
 <a class="jxr_linenumber" name="2189" href="#2189">2189</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> grant(RpcController controller,
 <a class="jxr_linenumber" name="2190" href="#2190">2190</a>                     AccessControlProtos.GrantRequest request,
 <a class="jxr_linenumber" name="2191" href="#2191">2191</a>                     RpcCallback&lt;AccessControlProtos.GrantResponse&gt; done) {
-<a class="jxr_linenumber" name="2192" href="#2192">2192</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a> perm = ProtobufUtil.toUserPermission(request.getUserPermission());
+<a class="jxr_linenumber" name="2192" href="#2192">2192</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a> perm = ProtobufUtil.toUserPermission(request.getUserPermission());
 <a class="jxr_linenumber" name="2193" href="#2193">2193</a>     AccessControlProtos.GrantResponse response = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="2194" href="#2194">2194</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="2195" href="#2195">2195</a>       <em class="jxr_comment">// verify it's only running at .acl.</em>
@@ -2250,7 +2250,7 @@
 <a class="jxr_linenumber" name="2240" href="#2240">2240</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> revoke(RpcController controller,
 <a class="jxr_linenumber" name="2241" href="#2241">2241</a>                      AccessControlProtos.RevokeRequest request,
 <a class="jxr_linenumber" name="2242" href="#2242">2242</a>                      RpcCallback&lt;AccessControlProtos.RevokeResponse&gt; done) {
-<a class="jxr_linenumber" name="2243" href="#2243">2243</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a> perm = ProtobufUtil.toUserPermission(request.getUserPermission());
+<a class="jxr_linenumber" name="2243" href="#2243">2243</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a> perm = ProtobufUtil.toUserPermission(request.getUserPermission());
 <a class="jxr_linenumber" name="2244" href="#2244">2244</a>     AccessControlProtos.RevokeResponse response = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="2245" href="#2245">2245</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="2246" href="#2246">2246</a>       <em class="jxr_comment">// only allowed to be called on _acl_ region</em>
@@ -2341,7 +2341,7 @@
 <a class="jxr_linenumber" name="2331" href="#2331">2331</a>           <em class="jxr_comment">// Also using acl as table name to be inline  with the results of global admin and will</em>
 <a class="jxr_linenumber" name="2332" href="#2332">2332</a>           <em class="jxr_comment">// help in avoiding any leakage of information about being superusers.</em>
 <a class="jxr_linenumber" name="2333" href="#2333">2333</a>           <strong class="jxr_keyword">for</strong> (String user: Superusers.getSuperUsers()) {
-<a class="jxr_linenumber" name="2334" href="#2334">2334</a>             perms.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a>(user.getBytes(), AccessControlLists.ACL_TABLE_NAME, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="2334" href="#2334">2334</a>             perms.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a>(user.getBytes(), AccessControlLists.ACL_TABLE_NAME, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="2335" href="#2335">2335</a>                 Action.values()));
 <a class="jxr_linenumber" name="2336" href="#2336">2336</a>           }
 <a class="jxr_linenumber" name="2337" href="#2337">2337</a>         }
@@ -2361,7 +2361,7 @@
 <a class="jxr_linenumber" name="2351" href="#2351">2351</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> checkPermissions(RpcController controller,
 <a class="jxr_linenumber" name="2352" href="#2352">2352</a>                                AccessControlProtos.CheckPermissionsRequest request,
 <a class="jxr_linenumber" name="2353" href="#2353">2353</a>                                RpcCallback&lt;AccessControlProtos.CheckPermissionsResponse&gt; done) {
-<a class="jxr_linenumber" name="2354" href="#2354">2354</a>     <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">Permission</a>[] permissions = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">Permission</a>[request.getPermissionCount()];
+<a class="jxr_linenumber" name="2354" href="#2354">2354</a>     <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.html">Permission</a>[] permissions = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.html">Permission</a>[request.getPermissionCount()];
 <a class="jxr_linenumber" name="2355" href="#2355">2355</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i=0; i &lt; request.getPermissionCount(); i++) {
 <a class="jxr_linenumber" name="2356" href="#2356">2356</a>       permissions[i] = ProtobufUtil.toPermission(request.getPermission(i));
 <a class="jxr_linenumber" name="2357" href="#2357">2357</a>     }
@@ -2373,7 +2373,7 @@
 <a class="jxr_linenumber" name="2363" href="#2363">2363</a>         <strong class="jxr_keyword">if</strong> (permission instanceof TablePermission) {
 <a class="jxr_linenumber" name="2364" href="#2364">2364</a>           <em class="jxr_comment">// Check table permissions</em>
 <a class="jxr_linenumber" name="2365" href="#2365">2365</a> 
-<a class="jxr_linenumber" name="2366" href="#2366">2366</a>           <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">TablePermission</a> tperm = (TablePermission) permission;
+<a class="jxr_linenumber" name="2366" href="#2366">2366</a>           <a href="../../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html">TablePermission</a> tperm = (TablePermission) permission;
 <a class="jxr_linenumber" name="2367" href="#2367">2367</a>           <strong class="jxr_keyword">for</strong> (Action action : permission.getActions()) {
 <a class="jxr_linenumber" name="2368" href="#2368">2368</a>             <strong class="jxr_keyword">if</strong> (!tperm.getTableName().equals(tableName)) {
 <a class="jxr_linenumber" name="2369" href="#2369">2369</a>               <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorException.html">CoprocessorException</a>(AccessController.<strong class="jxr_keyword">class</strong>, String.format(<span class="jxr_string">"This method "</span>
@@ -2593,31 +2593,31 @@
 <a class="jxr_linenumber" name="2583" href="#2583">2583</a> 
 <a class="jxr_linenumber" name="2584" href="#2584">2584</a>   @Override
 <a class="jxr_linenumber" name="2585" href="#2585">2585</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preSetUserQuota(<strong class="jxr_keyword">final</strong> ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="2586" href="#2586">2586</a>       <strong class="jxr_keyword">final</strong> String userName, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">Quotas</a> quotas) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="2586" href="#2586">2586</a>       <strong class="jxr_keyword">final</strong> String userName, <strong class="jxr_keyword">final</strong> Quotas quotas) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="2587" href="#2587">2587</a>     requirePermission(<span class="jxr_string">"setUserQuota"</span>, Action.ADMIN);
 <a class="jxr_linenumber" name="2588" href="#2588">2588</a>   }
 <a class="jxr_linenumber" name="2589" href="#2589">2589</a> 
 <a class="jxr_linenumber" name="2590" href="#2590">2590</a>   @Override
 <a class="jxr_linenumber" name="2591" href="#2591">2591</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preSetUserQuota(<strong class="jxr_keyword">final</strong> ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="2592" href="#2592">2592</a>       <strong class="jxr_keyword">final</strong> String userName, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">Quotas</a> quotas) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="2592" href="#2592">2592</a>       <strong class="jxr_keyword">final</strong> String userName, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> Quotas quotas) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="2593" href="#2593">2593</a>     requirePermission(<span class="jxr_string">"setUserTableQuota"</span>, tableName, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>, Action.ADMIN);
 <a class="jxr_linenumber" name="2594" href="#2594">2594</a>   }
 <a class="jxr_linenumber" name="2595" href="#2595">2595</a> 
 <a class="jxr_linenumber" name="2596" href="#2596">2596</a>   @Override
 <a class="jxr_linenumber" name="2597" href="#2597">2597</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preSetUserQuota(<strong class="jxr_keyword">final</strong> ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="2598" href="#2598">2598</a>       <strong class="jxr_keyword">final</strong> String userName, <strong class="jxr_keyword">final</strong> String namespace, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">Quotas</a> quotas) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="2598" href="#2598">2598</a>       <strong class="jxr_keyword">final</strong> String userName, <strong class="jxr_keyword">final</strong> String namespace, <strong class="jxr_keyword">final</strong> Quotas quotas) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="2599" href="#2599">2599</a>     requirePermission(<span class="jxr_string">"setUserNamespaceQuota"</span>, Action.ADMIN);
 <a class="jxr_linenumber" name="2600" href="#2600">2600</a>   }
 <a class="jxr_linenumber" name="2601" href="#2601">2601</a> 
 <a class="jxr_linenumber" name="2602" href="#2602">2602</a>   @Override
 <a class="jxr_linenumber" name="2603" href="#2603">2603</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preSetTableQuota(<strong class="jxr_keyword">final</strong> ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="2604" href="#2604">2604</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">Quotas</a> quotas) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="2604" href="#2604">2604</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> Quotas quotas) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="2605" href="#2605">2605</a>     requirePermission(<span class="jxr_string">"setTableQuota"</span>, tableName, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>, Action.ADMIN);
 <a class="jxr_linenumber" name="2606" href="#2606">2606</a>   }
 <a class="jxr_linenumber" name="2607" href="#2607">2607</a> 
 <a class="jxr_linenumber" name="2608" href="#2608">2608</a>   @Override
 <a class="jxr_linenumber" name="2609" href="#2609">2609</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preSetNamespaceQuota(<strong class="jxr_keyword">final</strong> ObserverContext&lt;MasterCoprocessorEnvironment&gt; ctx,
-<a class="jxr_linenumber" name="2610" href="#2610">2610</a>       <strong class="jxr_keyword">final</strong> String namespace, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">Quotas</a> quotas) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="2610" href="#2610">2610</a>       <strong class="jxr_keyword">final</strong> String namespace, <strong class="jxr_keyword">final</strong> Quotas quotas) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="2611" href="#2611">2611</a>     requirePermission(<span class="jxr_string">"setNamespaceQuota"</span>, Action.ADMIN);
 <a class="jxr_linenumber" name="2612" href="#2612">2612</a>   }
 <a class="jxr_linenumber" name="2613" href="#2613">2613</a> 

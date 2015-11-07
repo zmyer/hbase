@@ -75,20 +75,46 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.snapshot">org.apache.hadoop.hbase.master.snapshot</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.master">org.apache.hadoop.hbase.master</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure">org.apache.hadoop.hbase.procedure</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.snapshot">org.apache.hadoop.hbase.master.snapshot</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure">org.apache.hadoop.hbase.procedure</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure.flush">org.apache.hadoop.hbase.procedure.flush</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.snapshot">org.apache.hadoop.hbase.regionserver.snapshot</a></td>
 <td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.master">
+<!--   -->
+</a>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/apache/hadoop/hbase/procedure/package-summary.html">org.apache.hadoop.hbase.procedure</a> used by <a href="../../../../../org/apache/hadoop/hbase/master/package-summary.html">org.apache.hadoop.hbase.master</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/MasterProcedureManagerHost.html#org.apache.hadoop.hbase.master">MasterProcedureManagerHost</a>
+<div class="block">Provides the globally barriered procedure framework and environment for
+ master oriented operations.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -201,6 +227,16 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/Procedure.html#org.apache.hadoop.hbase.procedure.flush">Procedure</a>
+<div class="block">A globally-barriered distributed procedure.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/ProcedureCoordinator.html#org.apache.hadoop.hbase.procedure.flush">ProcedureCoordinator</a>
+<div class="block">This is the master side of a distributed complex procedure execution.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/ProcedureManager.html#org.apache.hadoop.hbase.procedure.flush">ProcedureManager</a>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -209,19 +245,43 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/ProcedureMemberRpcs.html#org.apache.hadoop.hbase.procedure.flush">ProcedureMemberRpcs</a>
+<div class="block">This is the notification interface for Procedures that encapsulates message passing from
+ members to a coordinator.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/RegionServerProcedureManager.html#org.apache.hadoop.hbase.procedure.flush">RegionServerProcedureManager</a>
 <div class="block">A life-cycle management interface for globally barriered procedures on
  region servers.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/Subprocedure.html#org.apache.hadoop.hbase.procedure.flush">Subprocedure</a>
 <div class="block">Distributed procedure member's Subprocedure.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/SubprocedureFactory.html#org.apache.hadoop.hbase.procedure.flush">SubprocedureFactory</a>
 <div class="block">Task builder to build instances of a <a href="../../../../../org/apache/hadoop/hbase/procedure/ProcedureMember.html" title="class in org.apache.hadoop.hbase.procedure"><code>ProcedureMember</code></a>'s <a href="../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html" title="class in org.apache.hadoop.hbase.procedure"><code>Subprocedure</code></a>s.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/apache/hadoop/hbase/procedure/package-summary.html">org.apache.hadoop.hbase.procedure</a> used by <a href="../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/RegionServerProcedureManagerHost.html#org.apache.hadoop.hbase.regionserver">RegionServerProcedureManagerHost</a>
+<div class="block">Provides the globally barriered procedure framework and environment
+ for region server oriented operations.</div>
 </td>
 </tr>
 </tbody>
@@ -245,17 +305,23 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/ProcedureMemberRpcs.html#org.apache.hadoop.hbase.regionserver.snapshot">ProcedureMemberRpcs</a>
+<div class="block">This is the notification interface for Procedures that encapsulates message passing from
+ members to a coordinator.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/RegionServerProcedureManager.html#org.apache.hadoop.hbase.regionserver.snapshot">RegionServerProcedureManager</a>
 <div class="block">A life-cycle management interface for globally barriered procedures on
  region servers.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/Subprocedure.html#org.apache.hadoop.hbase.regionserver.snapshot">Subprocedure</a>
 <div class="block">Distributed procedure member's Subprocedure.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/procedure/class-use/SubprocedureFactory.html#org.apache.hadoop.hbase.regionserver.snapshot">SubprocedureFactory</a>
 <div class="block">Task builder to build instances of a <a href="../../../../../org/apache/hadoop/hbase/procedure/ProcedureMember.html" title="class in org.apache.hadoop.hbase.procedure"><code>ProcedureMember</code></a>'s <a href="../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html" title="class in org.apache.hadoop.hbase.procedure"><code>Subprocedure</code></a>s.</div>
 </td>

@@ -51,7 +51,7 @@
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="42" href="#42">42</a>  @InterfaceAudience.Public
 <a class="jxr_linenumber" name="43" href="#43">43</a>  @InterfaceStability.Evolving
-<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ServerLoad</a> {
+<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../org/apache/hadoop/hbase/ServerLoad.html">ServerLoad</a> {
 <a class="jxr_linenumber" name="45" href="#45">45</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> stores = 0;
 <a class="jxr_linenumber" name="46" href="#46">46</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> storefiles = 0;
 <a class="jxr_linenumber" name="47" href="#47">47</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> storeUncompressedSizeMB = 0;
@@ -66,7 +66,7 @@
 <a class="jxr_linenumber" name="56" href="#56">56</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">long</strong> totalCompactingKVs = 0;
 <a class="jxr_linenumber" name="57" href="#57">57</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">long</strong> currentCompactedKVs = 0;
 <a class="jxr_linenumber" name="58" href="#58">58</a>  
-<a class="jxr_linenumber" name="59" href="#59">59</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ServerLoad</a>(ClusterStatusProtos.ServerLoad serverLoad) {
+<a class="jxr_linenumber" name="59" href="#59">59</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/ServerLoad.html">ServerLoad</a>(ClusterStatusProtos.ServerLoad serverLoad) {
 <a class="jxr_linenumber" name="60" href="#60">60</a>      <strong class="jxr_keyword">this</strong>.serverLoad = serverLoad;
 <a class="jxr_linenumber" name="61" href="#61">61</a>      <strong class="jxr_keyword">for</strong> (ClusterStatusProtos.RegionLoad rl: serverLoad.getRegionLoadsList()) {
 <a class="jxr_linenumber" name="62" href="#62">62</a>        stores += rl.getStores();
@@ -88,7 +88,7 @@
 <a class="jxr_linenumber" name="78" href="#78">78</a>  
 <a class="jxr_linenumber" name="79" href="#79">79</a>    <em class="jxr_comment">// NOTE: Function name cannot start with "get" because then an OpenDataException is thrown because</em>
 <a class="jxr_linenumber" name="80" href="#80">80</a>    <em class="jxr_comment">// HBaseProtos.ServerLoad cannot be converted to an open data type(see HBASE-5967).</em>
-<a class="jxr_linenumber" name="81" href="#81">81</a>    <em class="jxr_comment">/*<em class="jxr_comment"> @return the underlying <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ServerLoad</a> protobuf object */</em></em>
+<a class="jxr_linenumber" name="81" href="#81">81</a>    <em class="jxr_comment">/*<em class="jxr_comment"> @return the underlying <a href="../../../../org/apache/hadoop/hbase/ServerLoad.html">ServerLoad</a> protobuf object */</em></em>
 <a class="jxr_linenumber" name="82" href="#82">82</a>    <strong class="jxr_keyword">public</strong> ClusterStatusProtos.ServerLoad obtainServerLoadPB() {
 <a class="jxr_linenumber" name="83" href="#83">83</a>      <strong class="jxr_keyword">return</strong> serverLoad;
 <a class="jxr_linenumber" name="84" href="#84">84</a>    }
@@ -202,7 +202,7 @@
 <a class="jxr_linenumber" name="192" href="#192">192</a> <em class="jxr_javadoccomment">   * Call directly from client such as hbase shell</em>
 <a class="jxr_linenumber" name="193" href="#193">193</a> <em class="jxr_javadoccomment">   * @return ReplicationLoadSink</em>
 <a class="jxr_linenumber" name="194" href="#194">194</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="195" href="#195">195</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ReplicationLoadSink</a> getReplicationLoadSink() {
+<a class="jxr_linenumber" name="195" href="#195">195</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/replication/ReplicationLoadSink.html">ReplicationLoadSink</a> getReplicationLoadSink() {
 <a class="jxr_linenumber" name="196" href="#196">196</a>     <strong class="jxr_keyword">if</strong> (serverLoad.hasReplLoadSink()) {
 <a class="jxr_linenumber" name="197" href="#197">197</a>       <strong class="jxr_keyword">return</strong> ProtobufUtil.toReplicationLoadSink(serverLoad.getReplLoadSink());
 <a class="jxr_linenumber" name="198" href="#198">198</a>     } <strong class="jxr_keyword">else</strong> {
@@ -234,7 +234,7 @@
 <a class="jxr_linenumber" name="224" href="#224">224</a>     Map&lt;byte[], RegionLoad&gt; regionLoads =
 <a class="jxr_linenumber" name="225" href="#225">225</a>       <strong class="jxr_keyword">new</strong> TreeMap&lt;byte[], RegionLoad&gt;(Bytes.BYTES_COMPARATOR);
 <a class="jxr_linenumber" name="226" href="#226">226</a>     <strong class="jxr_keyword">for</strong> (ClusterStatusProtos.RegionLoad rl : serverLoad.getRegionLoadsList()) {
-<a class="jxr_linenumber" name="227" href="#227">227</a>       <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">RegionLoad</a> regionLoad = <strong class="jxr_keyword">new</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">RegionLoad</a>(rl);
+<a class="jxr_linenumber" name="227" href="#227">227</a>       <a href="../../../../org/apache/hadoop/hbase/RegionLoad.html">RegionLoad</a> regionLoad = <strong class="jxr_keyword">new</strong> <a href="../../../../org/apache/hadoop/hbase/RegionLoad.html">RegionLoad</a>(rl);
 <a class="jxr_linenumber" name="228" href="#228">228</a>       regionLoads.put(regionLoad.getName(), regionLoad);
 <a class="jxr_linenumber" name="229" href="#229">229</a>     }
 <a class="jxr_linenumber" name="230" href="#230">230</a>     <strong class="jxr_keyword">return</strong> regionLoads;
@@ -331,8 +331,8 @@
 <a class="jxr_linenumber" name="321" href="#321">321</a>     <strong class="jxr_keyword">return</strong> sb.toString();
 <a class="jxr_linenumber" name="322" href="#322">322</a>   }
 <a class="jxr_linenumber" name="323" href="#323">323</a> 
-<a class="jxr_linenumber" name="324" href="#324">324</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ServerLoad</a> EMPTY_SERVERLOAD =
-<a class="jxr_linenumber" name="325" href="#325">325</a>     <strong class="jxr_keyword">new</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ServerLoad</a>(ClusterStatusProtos.ServerLoad.newBuilder().build());
+<a class="jxr_linenumber" name="324" href="#324">324</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/ServerLoad.html">ServerLoad</a> EMPTY_SERVERLOAD =
+<a class="jxr_linenumber" name="325" href="#325">325</a>     <strong class="jxr_keyword">new</strong> <a href="../../../../org/apache/hadoop/hbase/ServerLoad.html">ServerLoad</a>(ClusterStatusProtos.ServerLoad.newBuilder().build());
 <a class="jxr_linenumber" name="326" href="#326">326</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>

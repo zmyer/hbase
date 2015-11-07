@@ -88,6 +88,10 @@
  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>BlockCache</code></a>.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -107,6 +111,33 @@
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CombinedBlockCache.CombinedCacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CombinedBlockCache.CombinedCacheStats</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></code></td>
+<td class="colLast"><span class="strong">CombinedBlockCache.CombinedCacheStats.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CombinedBlockCache.CombinedCacheStats.html#bucketCacheStats">bucketCacheStats</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></code></td>
+<td class="colLast"><span class="strong">MemcachedBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#cacheStats">cacheStats</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></code></td>
+<td class="colLast"><span class="strong">CombinedBlockCache.CombinedCacheStats.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CombinedBlockCache.CombinedCacheStats.html#lruCacheStats">lruCacheStats</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></code></td>
+<td class="colLast"><span class="strong">LruBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#stats">stats</a></strong></code>
+<div class="block">Cache statistics</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -136,6 +167,18 @@
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></code></td>
 <td class="colLast"><span class="strong">MemcachedBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#getStats()">getStats</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CombinedBlockCache.CombinedCacheStats.html#CombinedBlockCache.CombinedCacheStats(org.apache.hadoop.hbase.io.hfile.CacheStats,%20org.apache.hadoop.hbase.io.hfile.CacheStats)">CombinedBlockCache.CombinedCacheStats</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a>&nbsp;lbcStats,
+                                                                          <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a>&nbsp;fcStats)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -169,6 +212,24 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></code></td>
 <td class="colLast"><span class="strong">BucketCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html#getStats()">getStats</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a> in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a></code></td>
+<td class="colLast"><span class="strong">MetricsRegionServerWrapperImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerWrapperImpl.html#cacheStats">cacheStats</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

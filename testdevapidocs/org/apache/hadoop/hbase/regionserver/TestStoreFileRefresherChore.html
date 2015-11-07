@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileInfo.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileScannerWithTagCompression.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.FailingHRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,52 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.FailingHRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">TestStoreFileRefresherChore.FailingHRegionFileSystem</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.StaleStorefileRefresherChore.html" title="class in org.apache.hadoop.hbase.regionserver">TestStoreFileRefresherChore.StaleStorefileRefresherChore</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#testDir">testDir</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -133,12 +179,40 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#getTableDesc(org.apache.hadoop.hbase.TableName,%20byte[]...)">getTableDesc</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                        byte[]...&nbsp;families)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.Region</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#initHRegion(org.apache.hadoop.hbase.HTableDescriptor,%20byte[],%20byte[],%20int)">initHRegion</a></strong>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd,
+                      byte[]&nbsp;startKey,
+                      byte[]&nbsp;stopKey,
+                      int&nbsp;replicaId)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#putData(org.apache.hadoop.hbase.regionserver.Region,%20int,%20int,%20byte[],%20byte[]...)">putData</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region,
+              int&nbsp;startRow,
+              int&nbsp;numRows,
+              byte[]&nbsp;qf,
+              byte[]...&nbsp;families)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#testIsStale()">testIsStale</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#verifyData(org.apache.hadoop.hbase.regionserver.Region,%20int,%20int,%20byte[],%20byte[]...)">verifyData</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;newReg,
+                    int&nbsp;startRow,
+                    int&nbsp;numRows,
+                    byte[]&nbsp;qf,
+                    byte[]...&nbsp;families)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -156,6 +230,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#line.61">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="testDir">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>testDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#line.62">testDir</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -187,6 +287,63 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>setUp</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#line.65">setUp</a>()
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getTableDesc(org.apache.hadoop.hbase.TableName, byte[]...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTableDesc</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HTableDescriptor&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#line.71">getTableDesc</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                                                    byte[]...&nbsp;families)</pre>
+</li>
+</ul>
+<a name="initHRegion(org.apache.hadoop.hbase.HTableDescriptor, byte[], byte[], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initHRegion</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.Region&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#line.97">initHRegion</a>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd,
+                                                      byte[]&nbsp;startKey,
+                                                      byte[]&nbsp;stopKey,
+                                                      int&nbsp;replicaId)
+                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="putData(org.apache.hadoop.hbase.regionserver.Region, int, int, byte[], byte[]...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>putData</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#line.118">putData</a>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region,
+           int&nbsp;startRow,
+           int&nbsp;numRows,
+           byte[]&nbsp;qf,
+           byte[]...&nbsp;families)
+              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyData(org.apache.hadoop.hbase.regionserver.Region, int, int, byte[], byte[]...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyData</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html#line.130">verifyData</a>(org.apache.hadoop.hbase.regionserver.Region&nbsp;newReg,
+              int&nbsp;startRow,
+              int&nbsp;numRows,
+              byte[]&nbsp;qf,
+              byte[]...&nbsp;families)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -230,7 +387,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileInfo.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileScannerWithTagCompression.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.FailingHRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestStoreFileRefresherChore.html" target="_top">Frames</a></li>
@@ -254,14 +411,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -98,6 +98,10 @@
 <dd><a href="../../../../org/apache/hadoop/hbase/ClassFinder.ClassFilter.html" title="interface in org.apache.hadoop.hbase">ClassFinder.ClassFilter</a></dd>
 </dl>
 <dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../org/apache/hadoop/hbase/IntegrationTestsDriver.IntegrationTestFilter.html" title="class in org.apache.hadoop.hbase">IntegrationTestsDriver.IntegrationTestFilter</a></dd>
+</dl>
+<dl>
 <dt>Enclosing class:</dt>
 <dd><a href="../../../../org/apache/hadoop/hbase/ClassTestFinder.html" title="class in org.apache.hadoop.hbase">ClassTestFinder</a></dd>
 </dl>
@@ -112,6 +116,25 @@ implements <a href="../../../../org/apache/hadoop/hbase/ClassFinder.ClassFilter.
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ClassTestFinder.TestClassFilter.html#categoryAnnotation">categoryAnnotation</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -148,6 +171,14 @@ implements <a href="../../../../org/apache/hadoop/hbase/ClassFinder.ClassFilter.
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ClassTestFinder.TestClassFilter.html#isCandidateClass(java.lang.Class)">isCandidateClass</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;c)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ClassTestFinder.TestClassFilter.html#isCategorizedClass(java.lang.Class)">isCategorizedClass</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;c)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ClassTestFinder.TestClassFilter.html#isTestClass(java.lang.Class)">isTestClass</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;c)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -164,6 +195,23 @@ implements <a href="../../../../org/apache/hadoop/hbase/ClassFinder.ClassFilter.
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="categoryAnnotation">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>categoryAnnotation</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/ClassTestFinder.TestClassFilter.html#line.76">categoryAnnotation</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -199,7 +247,7 @@ implements <a href="../../../../org/apache/hadoop/hbase/ClassFinder.ClassFilter.
 <a name="isCandidateClass(java.lang.Class)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>isCandidateClass</h4>
 <pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ClassTestFinder.TestClassFilter.html#line.86">isCandidateClass</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;c)</pre>
@@ -207,6 +255,24 @@ implements <a href="../../../../org/apache/hadoop/hbase/ClassFinder.ClassFilter.
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../org/apache/hadoop/hbase/ClassFinder.ClassFilter.html#isCandidateClass(java.lang.Class)">isCandidateClass</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClassFinder.ClassFilter.html" title="interface in org.apache.hadoop.hbase">ClassFinder.ClassFilter</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="isTestClass(java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isTestClass</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ClassTestFinder.TestClassFilter.html#line.90">isTestClass</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;c)</pre>
+</li>
+</ul>
+<a name="isCategorizedClass(java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isCategorizedClass</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ClassTestFinder.TestClassFilter.html#line.108">isCategorizedClass</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;c)</pre>
 </li>
 </ul>
 </li>
@@ -261,13 +327,13 @@ implements <a href="../../../../org/apache/hadoop/hbase/ClassFinder.ClassFilter.
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

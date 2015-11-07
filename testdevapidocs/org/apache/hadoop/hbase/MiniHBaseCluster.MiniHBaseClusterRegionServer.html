@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.SingleFileSystemShutdownThread.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" target="_top">Frames</a></li>
@@ -109,7 +109,7 @@
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html" title="class in org.apache.hadoop.hbase.master">TestAssignmentManagerOnCluster.MyRegionServer</a>, <a href="../../../../org/apache/hadoop/hbase/TestLocalHBaseCluster.MyHRegionServer.html" title="class in org.apache.hadoop.hbase">TestLocalHBaseCluster.MyHRegionServer</a>, <a href="../../../../org/apache/hadoop/hbase/master/TestMetaShutdownHandler.MyRegionServer.html" title="class in org.apache.hadoop.hbase.master">TestMetaShutdownHandler.MyRegionServer</a>, <a href="../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.MyRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionServerReportForDuty.MyRegionServer</a>, <a href="../../../../org/apache/hadoop/hbase/regionserver/TestRSKilledWhenInitializing.MockedRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">TestRSKilledWhenInitializing.MockedRegionServer</a></dd>
+<dd><a href="../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html" title="class in org.apache.hadoop.hbase.master">TestAssignmentManagerOnCluster.MyRegionServer</a>, <a href="../../../../org/apache/hadoop/hbase/client/TestClientScannerRPCTimeout.RegionServerWithScanTimeout.html" title="class in org.apache.hadoop.hbase.client">TestClientScannerRPCTimeout.RegionServerWithScanTimeout</a>, <a href="../../../../org/apache/hadoop/hbase/TestLocalHBaseCluster.MyHRegionServer.html" title="class in org.apache.hadoop.hbase">TestLocalHBaseCluster.MyHRegionServer</a>, <a href="../../../../org/apache/hadoop/hbase/master/TestMetaShutdownHandler.MyRegionServer.html" title="class in org.apache.hadoop.hbase.master">TestMetaShutdownHandler.MyRegionServer</a>, <a href="../../../../org/apache/hadoop/hbase/TestMovedRegionsCleaner.TestMockRegionServer.html" title="class in org.apache.hadoop.hbase">TestMovedRegionsCleaner.TestMockRegionServer</a>, <a href="../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.MyRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionServerReportForDuty.MyRegionServer</a>, <a href="../../../../org/apache/hadoop/hbase/regionserver/TestRSKilledWhenInitializing.MockedRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">TestRSKilledWhenInitializing.MockedRegionServer</a></dd>
 </dl>
 <dl>
 <dt>Enclosing class:</dt>
@@ -164,8 +164,16 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#shutdownThread">shutdownThread</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#TEST_SKIP_CLOSE">TEST_SKIP_CLOSE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#user">user</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -213,16 +221,25 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#abortRegionServer(java.lang.String,%20java.lang.Throwable)">abortRegionServer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;reason,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#handleReportForDutyResponse(org.apache.hadoop.hbase.protobuf.generated.RegionServerStatusProtos.RegionServerStartupResponse)">handleReportForDutyResponse</a></strong>(org.apache.hadoop.hbase.protobuf.generated.RegionServerStatusProtos.RegionServerStartupResponse&nbsp;c)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#kill()">kill</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#run()">run</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#runRegionServer()">runRegionServer</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -260,6 +277,24 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="shutdownThread">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shutdownThread</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a> <a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#line.109">shutdownThread</a></pre>
+</li>
+</ul>
+<a name="user">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>user</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#line.110">user</a></pre>
+</li>
+</ul>
 <a name="TEST_SKIP_CLOSE">
 <!--   -->
 </a>
@@ -330,6 +365,15 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 </dl>
 </li>
 </ul>
+<a name="runRegionServer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runRegionServer</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#line.155">runRegionServer</a>()</pre>
+</li>
+</ul>
 <a name="kill()">
 <!--   -->
 </a>
@@ -346,7 +390,7 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <a name="abort(java.lang.String, java.lang.Throwable)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>abort</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#line.164">abort</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;reason,
@@ -357,6 +401,16 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <dt><strong>Overrides:</strong></dt>
 <dd><code>abort</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.HRegionServer</code></dd>
 </dl>
+</li>
+</ul>
+<a name="abortRegionServer(java.lang.String, java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>abortRegionServer</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html#line.173">abortRegionServer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;reason,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</pre>
 </li>
 </ul>
 </li>
@@ -386,7 +440,7 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.SingleFileSystemShutdownThread.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" target="_top">Frames</a></li>

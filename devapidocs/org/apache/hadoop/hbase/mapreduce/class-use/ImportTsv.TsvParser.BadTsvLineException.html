@@ -98,21 +98,25 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.mapreduce.ImportTsv.TsvParser.ParsedLine</code></td>
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><span class="strong">ImportTsv.TsvParser.ParsedLine.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/ImportTsv.TsvParser.ParsedLine.html#getTimestamp(long)">getTimestamp</a></strong>(long&nbsp;ts)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/ImportTsv.TsvParser.ParsedLine.html" title="class in org.apache.hadoop.hbase.mapreduce">ImportTsv.TsvParser.ParsedLine</a></code></td>
 <td class="colLast"><span class="strong">ImportTsv.TsvParser.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/ImportTsv.TsvParser.html#parse(byte[],%20int)">parse</a></strong>(byte[]&nbsp;lineBytes,
           int&nbsp;length)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
 <td class="colLast"><span class="strong">ImportTsv.TsvParser.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/ImportTsv.TsvParser.html#parseRowKey(byte[],%20int)">parseRowKey</a></strong>(byte[]&nbsp;lineBytes,
                       int&nbsp;length)</code>
 <div class="block">Return starting position and length of row key from the specified line bytes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><span class="strong">TsvImporterMapper.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html#populatePut(byte[],%20org.apache.hadoop.hbase.mapreduce.ImportTsv.TsvParser.ParsedLine,%20org.apache.hadoop.hbase.client.Put,%20int)">populatePut</a></strong>(byte[]&nbsp;lineBytes,
-                      org.apache.hadoop.hbase.mapreduce.ImportTsv.TsvParser.ParsedLine&nbsp;parsed,
+                      <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/ImportTsv.TsvParser.ParsedLine.html" title="class in org.apache.hadoop.hbase.mapreduce">ImportTsv.TsvParser.ParsedLine</a>&nbsp;parsed,
                       <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
                       int&nbsp;i)</code>&nbsp;</td>
 </tr>

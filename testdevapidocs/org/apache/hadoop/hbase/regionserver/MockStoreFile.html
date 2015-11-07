@@ -61,14 +61,14 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFile">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFile">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -130,6 +130,45 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#ageInDisk">ageInDisk</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#entryCount">entryCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isRef">isRef</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#length">length</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#metadata">metadata</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#sequenceid">sequenceid</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#splitPoint">splitPoint</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.regionserver.TimeRangeTracker</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#timeRangeTracker">timeRangeTracker</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFile">
 <!--   -->
@@ -137,6 +176,28 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile</h3>
 <code>BLOOM_FILTER_TYPE_KEY, BULKLOAD_TASK_KEY, BULKLOAD_TIME_KEY, DELETE_FAMILY_COUNT, EARLIEST_PUT_TS, EXCLUDE_FROM_MINOR_COMPACTION_KEY, MAJOR_COMPACTION_KEY, MAX_SEQ_ID_KEY, MOB_CELLS_COUNT, SKIP_RESET_SEQ_ID, TIMERANGE_KEY</code></li>
 </ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#MockStoreFile(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.fs.Path,%20long,%20long,%20boolean,%20long)">MockStoreFile</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;testUtil,
+                          org.apache.hadoop.fs.Path&nbsp;testPath,
+                          long&nbsp;length,
+                          long&nbsp;ageInDisk,
+                          boolean&nbsp;isRef,
+                          long&nbsp;sequenceid)</code>&nbsp;</td>
+</tr>
+</table>
 </li>
 </ul>
 <!-- ========== METHOD SUMMARY =========== -->
@@ -152,16 +213,24 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getFileSplitPoint(org.apache.hadoop.hbase.CellComparator)">getFileSplitPoint</a></strong>(org.apache.hadoop.hbase.CellComparator&nbsp;comparator)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getMaxSequenceId()">getMaxSequenceId</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getMetadataValue(byte[])">getMetadataValue</a></strong>(byte[]&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.regionserver.StoreFile.Reader</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getReader()">getReader</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isBulkLoadResult()">isBulkLoadResult</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -172,9 +241,21 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isReference()">isReference</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setEntries(long)">setEntries</a></strong>(long&nbsp;entryCount)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setLength(long)">setLength</a></strong>(long&nbsp;newLen)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setMetadataValue(byte[],%20byte[])">setMetadataValue</a></strong>(byte[]&nbsp;key,
                                 byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setTimeRangeTracker(org.apache.hadoop.hbase.regionserver.TimeRangeTracker)">setTimeRangeTracker</a></strong>(org.apache.hadoop.hbase.regionserver.TimeRangeTracker&nbsp;timeRangeTracker)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -182,7 +263,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile</h3>
-<code>closeReader, createReader, createReader, deleteReader, excludeFromMinorCompaction, getBulkLoadTimestamp, getComparator, getFileInfo, getFirstKey, getHDFSBlockDistribution, getLastKey, getMaxMemstoreTS, getMaxMemstoreTSInList, getMaxSequenceIdInList, getMinimumTimestamp, getModificationTimeStamp, getPath, getQualifiedPath, getUniqueFile, setMaxMemstoreTS, toString, toStringDetailed</code></li>
+<code><clinit>, closeReader, createReader, createReader, deleteReader, excludeFromMinorCompaction, getBulkLoadTimestamp, getComparator, getFileInfo, getFirstKey, getHDFSBlockDistribution, getLastKey, getMaxMemstoreTS, getMaxMemstoreTSInList, getMaxSequenceIdInList, getMinimumTimestamp, getModificationTimeStamp, getPath, getQualifiedPath, getUniqueFile, setMaxMemstoreTS, toString, toStringDetailed</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -199,12 +280,141 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="length">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>length</h4>
+<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.33">length</a></pre>
+</li>
+</ul>
+<a name="isRef">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRef</h4>
+<pre>boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.34">isRef</a></pre>
+</li>
+</ul>
+<a name="ageInDisk">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ageInDisk</h4>
+<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.35">ageInDisk</a></pre>
+</li>
+</ul>
+<a name="sequenceid">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sequenceid</h4>
+<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.36">sequenceid</a></pre>
+</li>
+</ul>
+<a name="metadata">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>metadata</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.37">metadata</a></pre>
+</li>
+</ul>
+<a name="splitPoint">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>splitPoint</h4>
+<pre>byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.38">splitPoint</a></pre>
+</li>
+</ul>
+<a name="timeRangeTracker">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>timeRangeTracker</h4>
+<pre>org.apache.hadoop.hbase.regionserver.TimeRangeTracker <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.39">timeRangeTracker</a></pre>
+</li>
+</ul>
+<a name="entryCount">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>entryCount</h4>
+<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.40">entryCount</a></pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="MockStoreFile(org.apache.hadoop.hbase.HBaseTestingUtility, org.apache.hadoop.fs.Path, long, long, boolean, long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>MockStoreFile</h4>
+<pre><a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.42">MockStoreFile</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;testUtil,
+             org.apache.hadoop.fs.Path&nbsp;testPath,
+             long&nbsp;length,
+             long&nbsp;ageInDisk,
+             boolean&nbsp;isRef,
+             long&nbsp;sequenceid)
+        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="setLength(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLength</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.52">setLength</a>(long&nbsp;newLen)</pre>
+</li>
+</ul>
+<a name="getFileSplitPoint(org.apache.hadoop.hbase.CellComparator)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFileSplitPoint</h4>
+<pre>byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.57">getFileSplitPoint</a>(org.apache.hadoop.hbase.CellComparator&nbsp;comparator)
+                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getFileSplitPoint</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="getMaxSequenceId()">
 <!--   -->
 </a>
@@ -244,6 +454,19 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 </dl>
 </li>
 </ul>
+<a name="isBulkLoadResult()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isBulkLoadResult</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.77">isBulkLoadResult</a>()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>isBulkLoadResult</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+</dl>
+</li>
+</ul>
 <a name="getMetadataValue(byte[])">
 <!--   -->
 </a>
@@ -265,6 +488,24 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <h4>setMetadataValue</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.86">setMetadataValue</a>(byte[]&nbsp;key,
                     byte[]&nbsp;value)</pre>
+</li>
+</ul>
+<a name="setTimeRangeTracker(org.apache.hadoop.hbase.regionserver.TimeRangeTracker)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTimeRangeTracker</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.90">setTimeRangeTracker</a>(org.apache.hadoop.hbase.regionserver.TimeRangeTracker&nbsp;timeRangeTracker)</pre>
+</li>
+</ul>
+<a name="setEntries(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setEntries</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.94">setEntries</a>(long&nbsp;entryCount)</pre>
 </li>
 </ul>
 <a name="getReader()">
@@ -332,14 +573,14 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFile">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFile">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

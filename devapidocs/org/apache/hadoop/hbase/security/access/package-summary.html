@@ -96,42 +96,63 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessControlFilter.html" title="class in org.apache.hadoop.hbase.security.access">AccessControlFilter</a></td>
+<td class="colLast">
+<div class="block"><strong>NOTE: for internal use only by AccessController implementation</strong></div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html" title="class in org.apache.hadoop.hbase.security.access">AccessController</a></td>
 <td class="colLast">
 <div class="block">Provides basic authorization checks for data access and administrative
  operations.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessControlLists.html" title="class in org.apache.hadoop.hbase.security.access">AccessControlLists</a></td>
 <td class="colLast">
 <div class="block">Maintains lists of permission grants to users and groups to allow for
  authorization checks by <a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html" title="class in org.apache.hadoop.hbase.security.access"><code>AccessController</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/AuthResult.html" title="class in org.apache.hadoop.hbase.security.access">AuthResult</a></td>
 <td class="colLast">
 <div class="block">Represents the result of an authorization check for logging and error
  reporting.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/AuthResult.Params.html" title="class in org.apache.hadoop.hbase.security.access">AuthResult.Params</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/HbaseObjectWritableFor96Migration.html" title="class in org.apache.hadoop.hbase.security.access">HbaseObjectWritableFor96Migration</a></td>
+<td class="colLast">Deprecated
+<div class="block"><i>This class is needed migrating TablePermissions written with
+ Writables.</i></div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/HbaseObjectWritableFor96Migration.NullInstance.html" title="class in org.apache.hadoop.hbase.security.access">HbaseObjectWritableFor96Migration.NullInstance</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a></td>
 <td class="colLast">
 <div class="block">Base permissions instance representing the ability to perform a given set
  of actions.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html" title="class in org.apache.hadoop.hbase.security.access">SecureBulkLoadEndpoint</a></td>
 <td class="colLast">
 <div class="block">Coprocessor service for bulk loads in secure mode.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.SecureBulkLoadListener.html" title="class in org.apache.hadoop.hbase.security.access">SecureBulkLoadEndpoint.SecureBulkLoadListener</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/TableAuthManager.html" title="class in org.apache.hadoop.hbase.security.access">TableAuthManager</a></td>
@@ -140,6 +161,10 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/TableAuthManager.PermissionCache.html" title="class in org.apache.hadoop.hbase.security.access">TableAuthManager.PermissionCache</a>&lt;T extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&gt;</td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html" title="class in org.apache.hadoop.hbase.security.access">TablePermission</a></td>
 <td class="colLast">
 <div class="block">Represents an authorization for access for the given actions, optionally
@@ -147,14 +172,14 @@
  given table.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html" title="class in org.apache.hadoop.hbase.security.access">UserPermission</a></td>
 <td class="colLast">
 <div class="block">Represents an authorization for access over the given table, column family
  plus qualifier, for the given user.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/ZKPermissionWatcher.html" title="class in org.apache.hadoop.hbase.security.access">ZKPermissionWatcher</a></td>
 <td class="colLast">
 <div class="block">Handles synchronization of access control list entries and updates
@@ -172,6 +197,14 @@
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessControlFilter.Strategy.html" title="enum in org.apache.hadoop.hbase.security.access">AccessControlFilter.Strategy</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.OpType.html" title="enum in org.apache.hadoop.hbase.security.access">AccessController.OpType</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.Action.html" title="enum in org.apache.hadoop.hbase.security.access">Permission.Action</a></td>
 <td class="colLast">&nbsp;</td>

@@ -190,19 +190,11 @@ extends org.apache.hadoop.mapreduce.RecordReader&lt;<a href="../../../../../org/
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#setHTable(org.apache.hadoop.hbase.client.Table)">setHTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;htable)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>Use setTable() instead.</i></div>
-</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#setScan(org.apache.hadoop.hbase.client.Scan)">setScan</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</code>
 <div class="block">Sets the scan defining the actual details like columns etc.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#setTable(org.apache.hadoop.hbase.client.Table)">setTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)</code>&nbsp;</td>
 </tr>
@@ -259,26 +251,13 @@ extends org.apache.hadoop.mapreduce.RecordReader&lt;<a href="../../../../../org/
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - When restarting fails.</dd></dl>
 </li>
 </ul>
-<a name="setHTable(org.apache.hadoop.hbase.client.Table)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setHTable</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.62">setHTable</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;htable)</pre>
-<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>Use setTable() instead.</i></div>
-<div class="block">Sets the HBase table.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>htable</code> - The table to scan.</dd></dl>
-</li>
-</ul>
 <a name="setTable(org.apache.hadoop.hbase.client.Table)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setTable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.69">setTable</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.57">setTable</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>table</code> - the <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client"><code>Table</code></a> to scan.</dd></dl>
 </li>
 </ul>
@@ -288,7 +267,7 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/m
 <ul class="blockList">
 <li class="blockList">
 <h4>setScan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.78">setScan</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.66">setScan</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</pre>
 <div class="block">Sets the scan defining the actual details like columns etc.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>scan</code> - The scan to set.</dd></dl>
 </li>
@@ -299,7 +278,7 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/m
 <ul class="blockList">
 <li class="blockList">
 <h4>close</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.88">close</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.76">close</a>()</pre>
 <div class="block">Closes the split.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -317,7 +296,7 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/m
 <ul class="blockList">
 <li class="blockList">
 <h4>getCurrentKey</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/io/ImmutableBytesWritable.html" title="class in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.101">getCurrentKey</a>()
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/io/ImmutableBytesWritable.html" title="class in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.89">getCurrentKey</a>()
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Returns the current key.</div>
@@ -336,7 +315,7 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/m
 <ul class="blockList">
 <li class="blockList">
 <h4>getCurrentValue</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.115">getCurrentValue</a>()
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.103">getCurrentValue</a>()
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Returns the current value.</div>
@@ -355,7 +334,7 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/m
 <ul class="blockList">
 <li class="blockList">
 <h4>initialize</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.131">initialize</a>(org.apache.hadoop.mapreduce.InputSplit&nbsp;inputsplit,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.119">initialize</a>(org.apache.hadoop.mapreduce.InputSplit&nbsp;inputsplit,
               org.apache.hadoop.mapreduce.TaskAttemptContext&nbsp;context)
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
@@ -377,7 +356,7 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/m
 <ul class="blockList">
 <li class="blockList">
 <h4>nextKeyValue</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.146">nextKeyValue</a>()
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.134">nextKeyValue</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Positions the record reader to the next record.</div>
@@ -396,7 +375,7 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/m
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getProgress</h4>
-<pre>public&nbsp;float&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.157">getProgress</a>()</pre>
+<pre>public&nbsp;float&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReader.html#line.145">getProgress</a>()</pre>
 <div class="block">The current progress of the record reader through its data.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>

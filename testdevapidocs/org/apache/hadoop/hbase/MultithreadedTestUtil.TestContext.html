@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -107,6 +107,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#err">err</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#stopped">stopped</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestThread.html" title="class in org.apache.hadoop.hbase">MultithreadedTestUtil.TestThread</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#testThreads">testThreads</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#threadDoneCount">threadDoneCount</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -141,34 +176,38 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#addThread(org.apache.hadoop.hbase.MultithreadedTestUtil.TestThread)">addThread</a></strong>(<a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestThread.html" title="class in org.apache.hadoop.hbase">MultithreadedTestUtil.TestThread</a>&nbsp;t)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#checkException()">checkException</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#getConf()">getConf</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#setStopFlag(boolean)">setStopFlag</a></strong>(boolean&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#shouldRun()">shouldRun</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#startThreads()">startThreads</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#stop()">stop</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#threadDone()">threadDone</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#threadFailed(java.lang.Throwable)">threadFailed</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;t)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#waitFor(long)">waitFor</a></strong>(long&nbsp;millis)</code>&nbsp;</td>
 </tr>
@@ -188,6 +227,59 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../src-html/org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#line.37">conf</a></pre>
+</li>
+</ul>
+<a name="err">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>err</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a> <a href="../../../../src-html/org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#line.38">err</a></pre>
+</li>
+</ul>
+<a name="stopped">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stopped</h4>
+<pre>private&nbsp;boolean <a href="../../../../src-html/org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#line.39">stopped</a></pre>
+</li>
+</ul>
+<a name="threadDoneCount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>threadDoneCount</h4>
+<pre>private&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#line.40">threadDoneCount</a></pre>
+</li>
+</ul>
+<a name="testThreads">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>testThreads</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.TestThread.html" title="class in org.apache.hadoop.hbase">MultithreadedTestUtil.TestThread</a>&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#line.41">testThreads</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -255,6 +347,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>waitFor</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#line.65">waitFor</a>(long&nbsp;millis)
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkException()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkException</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/MultithreadedTestUtil.TestContext.html#line.76">checkException</a>()
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -353,13 +457,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

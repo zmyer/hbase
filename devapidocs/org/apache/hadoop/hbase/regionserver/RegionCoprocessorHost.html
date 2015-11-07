@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.RowLock.html" title="interface in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransaction.html" title="interface in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -86,7 +86,7 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">org.apache.hadoop.hbase.coprocessor.CoprocessorHost</a>&lt;org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionEnvironment&gt;</li>
+<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">org.apache.hadoop.hbase.coprocessor.CoprocessorHost</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionEnvironment.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionEnvironment</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost</li>
@@ -103,7 +103,7 @@
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.LimitedPrivate.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.LimitedPrivate</a>(<a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.LimitedPrivate.html#value()">value</a>="Coprocesssor")
 <a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceStability.Evolving.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceStability.Evolving</a>
 public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.92">RegionCoprocessorHost</a>
-extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorHost</a>&lt;org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionEnvironment&gt;</pre>
+extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorHost</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionEnvironment.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionEnvironment</a>&gt;</pre>
 <div class="block">Implements the coprocessor environment and runtime support for coprocessors
  loaded within a <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver"><code>Region</code></a>.</div>
 </li>
@@ -118,6 +118,43 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <!--   -->
 </a>
 <h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.CoprocessorOperation</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.EndpointOperation.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.EndpointOperation</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.EndpointOperationWithResult.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.EndpointOperationWithResult</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.EndpointOperationWithResult.html" title="type parameter in RegionCoprocessorHost.EndpointOperationWithResult">T</a>&gt;</strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionEnvironment.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionEnvironment</a></strong></code>
+<div class="block">Encapsulation of the environment of each coprocessor</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionOperation.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionOperation</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionOperationWithResult.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionOperationWithResult</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionOperationWithResult.html" title="type parameter in RegionCoprocessorHost.RegionOperationWithResult">T</a>&gt;</strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.TableCoprocessorAttribute.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.TableCoprocessorAttribute</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">
 <!--   -->
@@ -133,6 +170,37 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#hasCustomPostScannerFilterRow">hasCustomPostScannerFilterRow</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#region">region</a></strong></code>
+<div class="block">The region</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#rsServices">rsServices</a></strong></code>
+<div class="block">The region server services</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.collections.map.ReferenceMap</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#sharedDataMap">sharedDataMap</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">
 <!--   -->
@@ -176,7 +244,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionEnvironment</code></td>
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionEnvironment.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionEnvironment</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#createEnvironment(java.lang.Class,%20org.apache.hadoop.hbase.Coprocessor,%20int,%20int,%20org.apache.hadoop.conf.Configuration)">createEnvironment</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;implClass,
                                   <a href="../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;instance,
                                   int&nbsp;priority,
@@ -184,6 +252,47 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
                                   org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Called when a new Coprocessor class is loaded</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#execOperation(boolean,%20org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.CoprocessorOperation)">execOperation</a></strong>(boolean&nbsp;earlyExit,
+                          <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.CoprocessorOperation</a>&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#execOperation(org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.CoprocessorOperation)">execOperation</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.CoprocessorOperation</a>&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#execOperationWithResult(boolean,%20T,%20org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionOperationWithResult)">execOperationWithResult</a></strong>(boolean&nbsp;ifBypass,
+                                              T&nbsp;defaultValue,
+                                              <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionOperationWithResult.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionOperationWithResult</a>&lt;T&gt;&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#execOperationWithResult(T,%20org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.EndpointOperationWithResult)">execOperationWithResult</a></strong>(T&nbsp;defaultValue,
+                                              <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.EndpointOperationWithResult.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.EndpointOperationWithResult</a>&lt;T&gt;&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#execOperationWithResult(T,%20org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionOperationWithResult)">execOperationWithResult</a></strong>(T&nbsp;defaultValue,
+                                              <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionOperationWithResult.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionOperationWithResult</a>&lt;T&gt;&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.TableCoprocessorAttribute.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.TableCoprocessorAttribute</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#getTableCoprocessorAttrsFromSchema(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HTableDescriptor)">getTableCoprocessorAttrsFromSchema</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#handleCoprocessorThrowableNoRethrow(org.apache.hadoop.hbase.CoprocessorEnvironment,%20java.lang.Throwable)">handleCoprocessorThrowableNoRethrow</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/CoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase">CoprocessorEnvironment</a>&nbsp;env,
+                                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;e)</code>
+<div class="block">HBASE-4014 : This is used by coprocessor hooks which are not declared to throw exceptions.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#loadTableCoprocessors(org.apache.hadoop.conf.Configuration)">loadTableCoprocessors</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -384,7 +493,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
                             <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html" title="class in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
                             <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>use <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postWALRestore(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>postWALRestore(HRegionInfo, WALKey, WALEdit)</code></a></i></div>
+<div class="block"><i>use <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postWALRestore(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>postWALRestore(HRegionInfo, WALKey, WALEdit)</code></a>; as of 2.0, remove in 3.0</i></div>
 </div>
 </td>
 </tr>
@@ -617,7 +726,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
                           <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html" title="class in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
                           <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>use <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preWALRestore(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>preWALRestore(HRegionInfo, WALKey, WALEdit)</code></a></i></div>
+<div class="block"><i>use <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preWALRestore(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>preWALRestore(HRegionInfo, WALKey, WALEdit)</code></a>; as of 2.0, remove in 3.0</i></div>
 </div>
 </td>
 </tr>
@@ -657,6 +766,61 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.95">LOG</a></pre>
+</li>
+</ul>
+<a name="sharedDataMap">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sharedDataMap</h4>
+<pre>private static&nbsp;org.apache.commons.collections.map.ReferenceMap <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.97">sharedDataMap</a></pre>
+</li>
+</ul>
+<a name="hasCustomPostScannerFilterRow">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasCustomPostScannerFilterRow</h4>
+<pre>private final&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.101">hasCustomPostScannerFilterRow</a></pre>
+</li>
+</ul>
+<a name="rsServices">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rsServices</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.198">rsServices</a></pre>
+<div class="block">The region server services</div>
+</li>
+</ul>
+<a name="region">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>region</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.200">region</a></pre>
+<div class="block">The region</div>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -684,6 +848,16 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getTableCoprocessorAttrsFromSchema(org.apache.hadoop.conf.Configuration, org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTableCoprocessorAttrsFromSchema</h4>
+<pre>static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.TableCoprocessorAttribute.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.TableCoprocessorAttribute</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.266">getTableCoprocessorAttrsFromSchema</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                                                       <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</pre>
+</li>
+</ul>
 <a name="testTableCoprocessorAttrs(org.apache.hadoop.conf.Configuration, org.apache.hadoop.hbase.HTableDescriptor)">
 <!--   -->
 </a>
@@ -700,23 +874,51 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="loadTableCoprocessors(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loadTableCoprocessors</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.357">loadTableCoprocessors</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+</li>
+</ul>
 <a name="createEnvironment(java.lang.Class, org.apache.hadoop.hbase.Coprocessor, int, int, org.apache.hadoop.conf.Configuration)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createEnvironment</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionEnvironment&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.392">createEnvironment</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;implClass,
-                                                                                             <a href="../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;instance,
-                                                                                             int&nbsp;priority,
-                                                                                             int&nbsp;seq,
-                                                                                             org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionEnvironment.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionEnvironment</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.392">createEnvironment</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;implClass,
+                                                        <a href="../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;instance,
+                                                        int&nbsp;priority,
+                                                        int&nbsp;seq,
+                                                        org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html#createEnvironment(java.lang.Class,%20org.apache.hadoop.hbase.Coprocessor,%20int,%20int,%20org.apache.hadoop.conf.Configuration)">CoprocessorHost</a></code></strong></div>
 <div class="block">Called when a new Coprocessor class is loaded</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html#createEnvironment(java.lang.Class,%20org.apache.hadoop.hbase.Coprocessor,%20int,%20int,%20org.apache.hadoop.conf.Configuration)">createEnvironment</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorHost</a>&lt;org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionEnvironment&gt;</code></dd>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html#createEnvironment(java.lang.Class,%20org.apache.hadoop.hbase.Coprocessor,%20int,%20int,%20org.apache.hadoop.conf.Configuration)">createEnvironment</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorHost</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionEnvironment.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionEnvironment</a>&gt;</code></dd>
 </dl>
+</li>
+</ul>
+<a name="handleCoprocessorThrowableNoRethrow(org.apache.hadoop.hbase.CoprocessorEnvironment, java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleCoprocessorThrowableNoRethrow</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.433">handleCoprocessorThrowableNoRethrow</a>(<a href="../../../../../org/apache/hadoop/hbase/CoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase">CoprocessorEnvironment</a>&nbsp;env,
+                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;e)</pre>
+<div class="block">HBASE-4014 : This is used by coprocessor hooks which are not declared to throw exceptions.
+
+ For example, <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preOpen()"><code>preOpen()</code></a> and
+ <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postOpen()"><code>postOpen()</code></a> are such hooks.
+
+ See also
+ <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html#handleCoprocessorThrowable(org.apache.hadoop.hbase.CoprocessorEnvironment,%20java.lang.Throwable)"><code>CoprocessorHost.handleCoprocessorThrowable(
+    CoprocessorEnvironment, Throwable)</code></a></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>env</code> - The coprocessor that threw the exception.</dd><dd><code>e</code> - The exception that was thrown.</dd></dl>
 </li>
 </ul>
 <a name="preOpen()">
@@ -1571,7 +1773,7 @@ public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbas
                                <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html" title="class in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
                                <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preWALRestore(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>preWALRestore(HRegionInfo, WALKey, WALEdit)</code></a></i></div>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preWALRestore(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>preWALRestore(HRegionInfo, WALKey, WALEdit)</code></a>; as of 2.0, remove in 3.0</i></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if default behavior should be bypassed, false otherwise</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1603,7 +1805,7 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/r
                              <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html" title="class in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
                              <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postWALRestore(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>postWALRestore(HRegionInfo, WALKey, WALEdit)</code></a></i></div>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postWALRestore(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>postWALRestore(HRegionInfo, WALKey, WALEdit)</code></a>; as of 2.0, remove in 3.0</i></div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -1748,11 +1950,82 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/r
 <a name="postInstantiateDeleteTracker(org.apache.hadoop.hbase.regionserver.DeleteTracker)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>postInstantiateDeleteTracker</h4>
 <pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/DeleteTracker.html" title="interface in org.apache.hadoop.hbase.regionserver">DeleteTracker</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.1616">postInstantiateDeleteTracker</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/DeleteTracker.html" title="interface in org.apache.hadoop.hbase.regionserver">DeleteTracker</a>&nbsp;tracker)
                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="execOperation(org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.CoprocessorOperation)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>execOperation</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.1675">execOperation</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.CoprocessorOperation</a>&nbsp;ctx)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="execOperationWithResult(java.lang.Object,org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionOperationWithResult)">
+<!--   -->
+</a><a name="execOperationWithResult(T, org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionOperationWithResult)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>execOperationWithResult</h4>
+<pre>private&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.1680">execOperationWithResult</a>(T&nbsp;defaultValue,
+                            <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionOperationWithResult.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionOperationWithResult</a>&lt;T&gt;&nbsp;ctx)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="execOperationWithResult(boolean,java.lang.Object,org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionOperationWithResult)">
+<!--   -->
+</a><a name="execOperationWithResult(boolean, T, org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.RegionOperationWithResult)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>execOperationWithResult</h4>
+<pre>private&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.1688">execOperationWithResult</a>(boolean&nbsp;ifBypass,
+                            T&nbsp;defaultValue,
+                            <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.RegionOperationWithResult.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.RegionOperationWithResult</a>&lt;T&gt;&nbsp;ctx)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="execOperationWithResult(java.lang.Object,org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.EndpointOperationWithResult)">
+<!--   -->
+</a><a name="execOperationWithResult(T, org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.EndpointOperationWithResult)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>execOperationWithResult</h4>
+<pre>private&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.1700">execOperationWithResult</a>(T&nbsp;defaultValue,
+                            <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.EndpointOperationWithResult.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.EndpointOperationWithResult</a>&lt;T&gt;&nbsp;ctx)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="execOperation(boolean, org.apache.hadoop.hbase.regionserver.RegionCoprocessorHost.CoprocessorOperation)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>execOperation</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#line.1708">execOperation</a>(boolean&nbsp;earlyExit,
+                    <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost.CoprocessorOperation</a>&nbsp;ctx)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -1784,7 +2057,7 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/r
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.RowLock.html" title="interface in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransaction.html" title="interface in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html" target="_top">Frames</a></li>
@@ -1808,14 +2081,14 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/r
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

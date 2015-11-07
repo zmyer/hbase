@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.CustomSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.MockedCoordinatedStateManager.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -108,7 +108,7 @@
 </dl>
 <hr>
 <br>
-<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.273">TestSplitTransactionOnCluster.FailingSplitRegionObserver</a>
+<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html#line.272">TestSplitTransactionOnCluster.FailingSplitRegionObserver</a>
 extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 </li>
 </ul>
@@ -144,6 +144,17 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html#latch">latch</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.Coprocessor">
 <!--   -->
@@ -215,6 +226,23 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="latch">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>latch</h4>
+<pre>volatile&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html#line.273">latch</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -227,7 +255,7 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestSplitTransactionOnCluster.FailingSplitRegionObserver</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html#line.273">TestSplitTransactionOnCluster.FailingSplitRegionObserver</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html#line.272">TestSplitTransactionOnCluster.FailingSplitRegionObserver</a>()</pre>
 </li>
 </ul>
 </li>
@@ -244,7 +272,7 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>start</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html#line.276">start</a>(org.apache.hadoop.hbase.CoprocessorEnvironment&nbsp;e)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html#line.275">start</a>(org.apache.hadoop.hbase.CoprocessorEnvironment&nbsp;e)
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -261,7 +289,7 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>preSplitBeforePONR</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html#line.280">preSplitBeforePONR</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;ctx,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.FailingSplitRegionObserver.html#line.279">preSplitBeforePONR</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;ctx,
                       byte[]&nbsp;splitKey,
                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Mutation&gt;&nbsp;metaEntries)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -300,7 +328,7 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.CustomSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.MockedCoordinatedStateManager.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -326,13 +354,13 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

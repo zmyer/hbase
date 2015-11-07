@@ -46,8 +46,8 @@
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.MetaTableAccessor;
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.MiniHBaseCluster;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.TableName;
-<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Delete;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.HBaseAdmin;
+<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Admin;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Delete;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Result;
 <a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ResultScanner;
 <a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Table;
@@ -92,7 +92,7 @@
 <a class="jxr_linenumber" name="82" href="#82">82</a>      <strong class="jxr_keyword">final</strong> TableName tableName = TableName.valueOf(<span class="jxr_string">"testEnableTableWithNoRegionServers"</span>);
 <a class="jxr_linenumber" name="83" href="#83">83</a>      <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html">MiniHBaseCluster</a> cluster = TEST_UTIL.getHBaseCluster();
 <a class="jxr_linenumber" name="84" href="#84">84</a>      <strong class="jxr_keyword">final</strong> HMaster m = cluster.getMaster();
-<a class="jxr_linenumber" name="85" href="#85">85</a>      <strong class="jxr_keyword">final</strong> HBaseAdmin admin = TEST_UTIL.getHBaseAdmin();
+<a class="jxr_linenumber" name="85" href="#85">85</a>      <strong class="jxr_keyword">final</strong> Admin admin = TEST_UTIL.getHBaseAdmin();
 <a class="jxr_linenumber" name="86" href="#86">86</a>      <strong class="jxr_keyword">final</strong> HTableDescriptor desc = <strong class="jxr_keyword">new</strong> HTableDescriptor(tableName);
 <a class="jxr_linenumber" name="87" href="#87">87</a>      desc.addFamily(<strong class="jxr_keyword">new</strong> HColumnDescriptor(FAMILYNAME));
 <a class="jxr_linenumber" name="88" href="#88">88</a>      admin.createTable(desc);
@@ -153,7 +153,7 @@
 <a class="jxr_linenumber" name="143" href="#143">143</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testDeleteForSureClearsAllTableRowsFromMeta()
 <a class="jxr_linenumber" name="144" href="#144">144</a>   <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
 <a class="jxr_linenumber" name="145" href="#145">145</a>     <strong class="jxr_keyword">final</strong> TableName tableName = TableName.valueOf(<span class="jxr_string">"testDeleteForSureClearsAllTableRowsFromMeta"</span>);
-<a class="jxr_linenumber" name="146" href="#146">146</a>     <strong class="jxr_keyword">final</strong> HBaseAdmin admin = TEST_UTIL.getHBaseAdmin();
+<a class="jxr_linenumber" name="146" href="#146">146</a>     <strong class="jxr_keyword">final</strong> Admin admin = TEST_UTIL.getHBaseAdmin();
 <a class="jxr_linenumber" name="147" href="#147">147</a>     <strong class="jxr_keyword">final</strong> HTableDescriptor desc = <strong class="jxr_keyword">new</strong> HTableDescriptor(tableName);
 <a class="jxr_linenumber" name="148" href="#148">148</a>     desc.addFamily(<strong class="jxr_keyword">new</strong> HColumnDescriptor(FAMILYNAME));
 <a class="jxr_linenumber" name="149" href="#149">149</a>     <strong class="jxr_keyword">try</strong> {
@@ -221,53 +221,43 @@
 <a class="jxr_linenumber" name="211" href="#211">211</a>     }
 <a class="jxr_linenumber" name="212" href="#212">212</a>   }
 <a class="jxr_linenumber" name="213" href="#213">213</a> 
-<a class="jxr_linenumber" name="214" href="#214">214</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> createTable(<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> testUtil, HTableDescriptor htd,
-<a class="jxr_linenumber" name="215" href="#215">215</a>     byte [][] splitKeys)
+<a class="jxr_linenumber" name="214" href="#214">214</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> createTable(<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> testUtil,
+<a class="jxr_linenumber" name="215" href="#215">215</a>     HTableDescriptor htd, byte [][] splitKeys)
 <a class="jxr_linenumber" name="216" href="#216">216</a>   <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="217" href="#217">217</a>     createTable(testUtil, testUtil.getHBaseAdmin(), htd, splitKeys);
-<a class="jxr_linenumber" name="218" href="#218">218</a>   }
-<a class="jxr_linenumber" name="219" href="#219">219</a> 
-<a class="jxr_linenumber" name="220" href="#220">220</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> createTable(<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> testUtil, HBaseAdmin admin,
-<a class="jxr_linenumber" name="221" href="#221">221</a>     HTableDescriptor htd, byte [][] splitKeys)
-<a class="jxr_linenumber" name="222" href="#222">222</a>   <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="223" href="#223">223</a>     <em class="jxr_comment">// NOTE: We need a latch because admin is not sync,</em>
-<a class="jxr_linenumber" name="224" href="#224">224</a>     <em class="jxr_comment">// so the postOp coprocessor method may be called after the admin operation returned.</em>
-<a class="jxr_linenumber" name="225" href="#225">225</a>     <a href="../../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html">MasterSyncObserver</a> observer = (MasterSyncObserver)testUtil.getHBaseCluster().getMaster()
-<a class="jxr_linenumber" name="226" href="#226">226</a>       .getMasterCoprocessorHost().findCoprocessor(MasterSyncObserver.<strong class="jxr_keyword">class</strong>.getName());
-<a class="jxr_linenumber" name="227" href="#227">227</a>     observer.tableCreationLatch = <strong class="jxr_keyword">new</strong> CountDownLatch(1);
-<a class="jxr_linenumber" name="228" href="#228">228</a>     <strong class="jxr_keyword">if</strong> (splitKeys != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="229" href="#229">229</a>       admin.createTable(htd, splitKeys);
-<a class="jxr_linenumber" name="230" href="#230">230</a>     } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="231" href="#231">231</a>       admin.createTable(htd);
-<a class="jxr_linenumber" name="232" href="#232">232</a>     }
-<a class="jxr_linenumber" name="233" href="#233">233</a>     observer.tableCreationLatch.await();
-<a class="jxr_linenumber" name="234" href="#234">234</a>     observer.tableCreationLatch = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="235" href="#235">235</a>     testUtil.waitUntilAllRegionsAssigned(htd.getTableName());
-<a class="jxr_linenumber" name="236" href="#236">236</a>   }
-<a class="jxr_linenumber" name="237" href="#237">237</a> 
-<a class="jxr_linenumber" name="238" href="#238">238</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> deleteTable(<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> testUtil, TableName tableName)
-<a class="jxr_linenumber" name="239" href="#239">239</a>   <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="240" href="#240">240</a>     deleteTable(testUtil, testUtil.getHBaseAdmin(), tableName);
-<a class="jxr_linenumber" name="241" href="#241">241</a>   }
-<a class="jxr_linenumber" name="242" href="#242">242</a> 
-<a class="jxr_linenumber" name="243" href="#243">243</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> deleteTable(<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> testUtil, HBaseAdmin admin,
-<a class="jxr_linenumber" name="244" href="#244">244</a>     TableName tableName)
-<a class="jxr_linenumber" name="245" href="#245">245</a>   <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="246" href="#246">246</a>     <em class="jxr_comment">// NOTE: We need a latch because admin is not sync,</em>
-<a class="jxr_linenumber" name="247" href="#247">247</a>     <em class="jxr_comment">// so the postOp coprocessor method may be called after the admin operation returned.</em>
-<a class="jxr_linenumber" name="248" href="#248">248</a>     <a href="../../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html">MasterSyncObserver</a> observer = (MasterSyncObserver)testUtil.getHBaseCluster().getMaster()
-<a class="jxr_linenumber" name="249" href="#249">249</a>       .getMasterCoprocessorHost().findCoprocessor(MasterSyncObserver.<strong class="jxr_keyword">class</strong>.getName());
-<a class="jxr_linenumber" name="250" href="#250">250</a>     observer.tableDeletionLatch = <strong class="jxr_keyword">new</strong> CountDownLatch(1);
-<a class="jxr_linenumber" name="251" href="#251">251</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="252" href="#252">252</a>       admin.disableTable(tableName);
-<a class="jxr_linenumber" name="253" href="#253">253</a>     } <strong class="jxr_keyword">catch</strong> (Exception e) {
-<a class="jxr_linenumber" name="254" href="#254">254</a>       LOG.debug(<span class="jxr_string">"Table: "</span> + tableName + <span class="jxr_string">" already disabled, so just deleting it."</span>);
-<a class="jxr_linenumber" name="255" href="#255">255</a>     }
-<a class="jxr_linenumber" name="256" href="#256">256</a>     admin.deleteTable(tableName);
-<a class="jxr_linenumber" name="257" href="#257">257</a>     observer.tableDeletionLatch.await();
-<a class="jxr_linenumber" name="258" href="#258">258</a>     observer.tableDeletionLatch = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="259" href="#259">259</a>   }
-<a class="jxr_linenumber" name="260" href="#260">260</a> }
+<a class="jxr_linenumber" name="217" href="#217">217</a>     <em class="jxr_comment">// NOTE: We need a latch because admin is not sync,</em>
+<a class="jxr_linenumber" name="218" href="#218">218</a>     <em class="jxr_comment">// so the postOp coprocessor method may be called after the admin operation returned.</em>
+<a class="jxr_linenumber" name="219" href="#219">219</a>     <a href="../../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html">MasterSyncObserver</a> observer = (MasterSyncObserver)testUtil.getHBaseCluster().getMaster()
+<a class="jxr_linenumber" name="220" href="#220">220</a>       .getMasterCoprocessorHost().findCoprocessor(MasterSyncObserver.<strong class="jxr_keyword">class</strong>.getName());
+<a class="jxr_linenumber" name="221" href="#221">221</a>     observer.tableCreationLatch = <strong class="jxr_keyword">new</strong> CountDownLatch(1);
+<a class="jxr_linenumber" name="222" href="#222">222</a>     Admin admin = testUtil.getHBaseAdmin();
+<a class="jxr_linenumber" name="223" href="#223">223</a>     <strong class="jxr_keyword">if</strong> (splitKeys != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="224" href="#224">224</a>       admin.createTable(htd, splitKeys);
+<a class="jxr_linenumber" name="225" href="#225">225</a>     } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="226" href="#226">226</a>       admin.createTable(htd);
+<a class="jxr_linenumber" name="227" href="#227">227</a>     }
+<a class="jxr_linenumber" name="228" href="#228">228</a>     observer.tableCreationLatch.await();
+<a class="jxr_linenumber" name="229" href="#229">229</a>     observer.tableCreationLatch = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="230" href="#230">230</a>     testUtil.waitUntilAllRegionsAssigned(htd.getTableName());
+<a class="jxr_linenumber" name="231" href="#231">231</a>   }
+<a class="jxr_linenumber" name="232" href="#232">232</a> 
+<a class="jxr_linenumber" name="233" href="#233">233</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> deleteTable(<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> testUtil, TableName tableName)
+<a class="jxr_linenumber" name="234" href="#234">234</a>   <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="235" href="#235">235</a>     <em class="jxr_comment">// NOTE: We need a latch because admin is not sync,</em>
+<a class="jxr_linenumber" name="236" href="#236">236</a>     <em class="jxr_comment">// so the postOp coprocessor method may be called after the admin operation returned.</em>
+<a class="jxr_linenumber" name="237" href="#237">237</a>     <a href="../../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html">MasterSyncObserver</a> observer = (MasterSyncObserver)testUtil.getHBaseCluster().getMaster()
+<a class="jxr_linenumber" name="238" href="#238">238</a>       .getMasterCoprocessorHost().findCoprocessor(MasterSyncObserver.<strong class="jxr_keyword">class</strong>.getName());
+<a class="jxr_linenumber" name="239" href="#239">239</a>     observer.tableDeletionLatch = <strong class="jxr_keyword">new</strong> CountDownLatch(1);
+<a class="jxr_linenumber" name="240" href="#240">240</a>     Admin admin = testUtil.getHBaseAdmin();
+<a class="jxr_linenumber" name="241" href="#241">241</a>     <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="242" href="#242">242</a>       admin.disableTable(tableName);
+<a class="jxr_linenumber" name="243" href="#243">243</a>     } <strong class="jxr_keyword">catch</strong> (Exception e) {
+<a class="jxr_linenumber" name="244" href="#244">244</a>       LOG.debug(<span class="jxr_string">"Table: "</span> + tableName + <span class="jxr_string">" already disabled, so just deleting it."</span>);
+<a class="jxr_linenumber" name="245" href="#245">245</a>     }
+<a class="jxr_linenumber" name="246" href="#246">246</a>     admin.deleteTable(tableName);
+<a class="jxr_linenumber" name="247" href="#247">247</a>     observer.tableDeletionLatch.await();
+<a class="jxr_linenumber" name="248" href="#248">248</a>     observer.tableDeletionLatch = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="249" href="#249">249</a>   }
+<a class="jxr_linenumber" name="250" href="#250">250</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

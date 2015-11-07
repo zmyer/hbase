@@ -53,11 +53,11 @@
 <span class="sourceLineNo">045</span>import org.apache.hadoop.hbase.Tag;<a name="line.45"></a>
 <span class="sourceLineNo">046</span>import org.apache.hadoop.hbase.TagRewriteCell;<a name="line.46"></a>
 <span class="sourceLineNo">047</span>import org.apache.hadoop.hbase.TagType;<a name="line.47"></a>
-<span class="sourceLineNo">048</span>import org.apache.hadoop.hbase.client.Connection;<a name="line.48"></a>
-<span class="sourceLineNo">049</span>import org.apache.hadoop.hbase.client.ConnectionFactory;<a name="line.49"></a>
-<span class="sourceLineNo">050</span>import org.apache.hadoop.hbase.client.Durability;<a name="line.50"></a>
-<span class="sourceLineNo">051</span>import org.apache.hadoop.hbase.client.Get;<a name="line.51"></a>
-<span class="sourceLineNo">052</span>import org.apache.hadoop.hbase.client.HBaseAdmin;<a name="line.52"></a>
+<span class="sourceLineNo">048</span>import org.apache.hadoop.hbase.client.Admin;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>import org.apache.hadoop.hbase.client.Connection;<a name="line.49"></a>
+<span class="sourceLineNo">050</span>import org.apache.hadoop.hbase.client.ConnectionFactory;<a name="line.50"></a>
+<span class="sourceLineNo">051</span>import org.apache.hadoop.hbase.client.Durability;<a name="line.51"></a>
+<span class="sourceLineNo">052</span>import org.apache.hadoop.hbase.client.Get;<a name="line.52"></a>
 <span class="sourceLineNo">053</span>import org.apache.hadoop.hbase.client.Put;<a name="line.53"></a>
 <span class="sourceLineNo">054</span>import org.apache.hadoop.hbase.client.Result;<a name="line.54"></a>
 <span class="sourceLineNo">055</span>import org.apache.hadoop.hbase.client.ResultScanner;<a name="line.55"></a>
@@ -194,7 +194,7 @@
 <span class="sourceLineNo">186</span>    // Wait for the labels table to become available<a name="line.186"></a>
 <span class="sourceLineNo">187</span>    TEST_UTIL.waitTableEnabled(LABELS_TABLE_NAME.getName(), 50000);<a name="line.187"></a>
 <span class="sourceLineNo">188</span>    TEST_UTIL1.startMiniCluster(1);<a name="line.188"></a>
-<span class="sourceLineNo">189</span>    HBaseAdmin hBaseAdmin = TEST_UTIL.getHBaseAdmin();<a name="line.189"></a>
+<span class="sourceLineNo">189</span>    Admin hBaseAdmin = TEST_UTIL.getHBaseAdmin();<a name="line.189"></a>
 <span class="sourceLineNo">190</span>    HTableDescriptor table = new HTableDescriptor(TABLE_NAME);<a name="line.190"></a>
 <span class="sourceLineNo">191</span>    HColumnDescriptor desc = new HColumnDescriptor(fam);<a name="line.191"></a>
 <span class="sourceLineNo">192</span>    desc.setScope(HConstants.REPLICATION_SCOPE_GLOBAL);<a name="line.192"></a>
@@ -206,7 +206,7 @@
 <span class="sourceLineNo">198</span>        hBaseAdmin.close();<a name="line.198"></a>
 <span class="sourceLineNo">199</span>      }<a name="line.199"></a>
 <span class="sourceLineNo">200</span>    }<a name="line.200"></a>
-<span class="sourceLineNo">201</span>    HBaseAdmin hBaseAdmin1 = TEST_UTIL1.getHBaseAdmin();<a name="line.201"></a>
+<span class="sourceLineNo">201</span>    Admin hBaseAdmin1 = TEST_UTIL1.getHBaseAdmin();<a name="line.201"></a>
 <span class="sourceLineNo">202</span>    try {<a name="line.202"></a>
 <span class="sourceLineNo">203</span>      hBaseAdmin1.createTable(table);<a name="line.203"></a>
 <span class="sourceLineNo">204</span>    } finally {<a name="line.204"></a>

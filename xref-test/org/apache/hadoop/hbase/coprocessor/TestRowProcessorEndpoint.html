@@ -172,7 +172,7 @@
 <a class="jxr_linenumber" name="162" href="#162">162</a>         RowProcessorService.newBlockingStub(channel);
 <a class="jxr_linenumber" name="163" href="#163">163</a>     ProcessRequest request = RowProcessorClient.getRowProcessorPB(processor);
 <a class="jxr_linenumber" name="164" href="#164">164</a>     ProcessResponse protoResult = service.process(<strong class="jxr_keyword">null</strong>, request);
-<a class="jxr_linenumber" name="165" href="#165">165</a>     <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">FriendsOfFriendsProcessorResponse</a> response =
+<a class="jxr_linenumber" name="165" href="#165">165</a>     FriendsOfFriendsProcessorResponse response =
 <a class="jxr_linenumber" name="166" href="#166">166</a>         FriendsOfFriendsProcessorResponse.parseFrom(protoResult.getRowProcessorResult());
 <a class="jxr_linenumber" name="167" href="#167">167</a>     Set&lt;String&gt; result = <strong class="jxr_keyword">new</strong> HashSet&lt;String&gt;();
 <a class="jxr_linenumber" name="168" href="#168">168</a>     result.addAll(response.getResultList());
@@ -215,7 +215,7 @@
 <a class="jxr_linenumber" name="205" href="#205">205</a>         RowProcessorService.newBlockingStub(channel);
 <a class="jxr_linenumber" name="206" href="#206">206</a>     ProcessRequest request = RowProcessorClient.getRowProcessorPB(processor);
 <a class="jxr_linenumber" name="207" href="#207">207</a>     ProcessResponse protoResult = service.process(<strong class="jxr_keyword">null</strong>, request);
-<a class="jxr_linenumber" name="208" href="#208">208</a>     <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">IncCounterProcessorResponse</a> response = <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">IncCounterProcessorResponse</a>
+<a class="jxr_linenumber" name="208" href="#208">208</a>     IncCounterProcessorResponse response = IncCounterProcessorResponse
 <a class="jxr_linenumber" name="209" href="#209">209</a>         .parseFrom(protoResult.getRowProcessorResult());
 <a class="jxr_linenumber" name="210" href="#210">210</a>     Integer result = response.getResponse();
 <a class="jxr_linenumber" name="211" href="#211">211</a>     <strong class="jxr_keyword">return</strong> result;
@@ -329,7 +329,7 @@
 <a class="jxr_linenumber" name="319" href="#319">319</a>       }
 <a class="jxr_linenumber" name="320" href="#320">320</a> 
 <a class="jxr_linenumber" name="321" href="#321">321</a>       @Override
-<a class="jxr_linenumber" name="322" href="#322">322</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">IncCounterProcessorResponse</a> getResult() {
+<a class="jxr_linenumber" name="322" href="#322">322</a>       <strong class="jxr_keyword">public</strong> IncCounterProcessorResponse getResult() {
 <a class="jxr_linenumber" name="323" href="#323">323</a>         IncCounterProcessorResponse.Builder i = IncCounterProcessorResponse.newBuilder();
 <a class="jxr_linenumber" name="324" href="#324">324</a>         i.setResponse(counter);
 <a class="jxr_linenumber" name="325" href="#325">325</a>         <strong class="jxr_keyword">return</strong> i.build();
@@ -375,7 +375,7 @@
 <a class="jxr_linenumber" name="365" href="#365">365</a>       }
 <a class="jxr_linenumber" name="366" href="#366">366</a> 
 <a class="jxr_linenumber" name="367" href="#367">367</a>       @Override
-<a class="jxr_linenumber" name="368" href="#368">368</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">IncCounterProcessorRequest</a> getRequestData() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="368" href="#368">368</a>       <strong class="jxr_keyword">public</strong> IncCounterProcessorRequest getRequestData() <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="369" href="#369">369</a>         IncCounterProcessorRequest.Builder builder = IncCounterProcessorRequest.newBuilder();
 <a class="jxr_linenumber" name="370" href="#370">370</a>         builder.setCounter(counter);
 <a class="jxr_linenumber" name="371" href="#371">371</a>         builder.setRow(ByteStringer.wrap(row));
@@ -383,7 +383,7 @@
 <a class="jxr_linenumber" name="373" href="#373">373</a>       }
 <a class="jxr_linenumber" name="374" href="#374">374</a> 
 <a class="jxr_linenumber" name="375" href="#375">375</a>       @Override
-<a class="jxr_linenumber" name="376" href="#376">376</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> initialize(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">IncCounterProcessorRequest</a> msg) {
+<a class="jxr_linenumber" name="376" href="#376">376</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> initialize(IncCounterProcessorRequest msg) {
 <a class="jxr_linenumber" name="377" href="#377">377</a>         <strong class="jxr_keyword">this</strong>.row = msg.getRow().toByteArray();
 <a class="jxr_linenumber" name="378" href="#378">378</a>         <strong class="jxr_keyword">this</strong>.counter = msg.getCounter();
 <a class="jxr_linenumber" name="379" href="#379">379</a>       }
@@ -412,7 +412,7 @@
 <a class="jxr_linenumber" name="402" href="#402">402</a>       }
 <a class="jxr_linenumber" name="403" href="#403">403</a> 
 <a class="jxr_linenumber" name="404" href="#404">404</a>       @Override
-<a class="jxr_linenumber" name="405" href="#405">405</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">FriendsOfFriendsProcessorResponse</a> getResult() {
+<a class="jxr_linenumber" name="405" href="#405">405</a>       <strong class="jxr_keyword">public</strong> FriendsOfFriendsProcessorResponse getResult() {
 <a class="jxr_linenumber" name="406" href="#406">406</a>         FriendsOfFriendsProcessorResponse.Builder builder = 
 <a class="jxr_linenumber" name="407" href="#407">407</a>             FriendsOfFriendsProcessorResponse.newBuilder();
 <a class="jxr_linenumber" name="408" href="#408">408</a>         builder.addAllResult(result);
@@ -454,18 +454,18 @@
 <a class="jxr_linenumber" name="444" href="#444">444</a>       }
 <a class="jxr_linenumber" name="445" href="#445">445</a> 
 <a class="jxr_linenumber" name="446" href="#446">446</a>       @Override
-<a class="jxr_linenumber" name="447" href="#447">447</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">FriendsOfFriendsProcessorRequest</a> getRequestData() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="447" href="#447">447</a>       <strong class="jxr_keyword">public</strong> FriendsOfFriendsProcessorRequest getRequestData() <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="448" href="#448">448</a>         FriendsOfFriendsProcessorRequest.Builder builder =
 <a class="jxr_linenumber" name="449" href="#449">449</a>             FriendsOfFriendsProcessorRequest.newBuilder();
 <a class="jxr_linenumber" name="450" href="#450">450</a>         builder.setPerson(ByteStringer.wrap(person));
 <a class="jxr_linenumber" name="451" href="#451">451</a>         builder.setRow(ByteStringer.wrap(row));
 <a class="jxr_linenumber" name="452" href="#452">452</a>         builder.addAllResult(result);
-<a class="jxr_linenumber" name="453" href="#453">453</a>         <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">FriendsOfFriendsProcessorRequest</a> f = builder.build();
+<a class="jxr_linenumber" name="453" href="#453">453</a>         FriendsOfFriendsProcessorRequest f = builder.build();
 <a class="jxr_linenumber" name="454" href="#454">454</a>         <strong class="jxr_keyword">return</strong> f;
 <a class="jxr_linenumber" name="455" href="#455">455</a>       }
 <a class="jxr_linenumber" name="456" href="#456">456</a> 
 <a class="jxr_linenumber" name="457" href="#457">457</a>       @Override
-<a class="jxr_linenumber" name="458" href="#458">458</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> initialize(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">FriendsOfFriendsProcessorRequest</a> request) 
+<a class="jxr_linenumber" name="458" href="#458">458</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> initialize(FriendsOfFriendsProcessorRequest request) 
 <a class="jxr_linenumber" name="459" href="#459">459</a>           <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="460" href="#460">460</a>         <strong class="jxr_keyword">this</strong>.person = request.getPerson().toByteArray();
 <a class="jxr_linenumber" name="461" href="#461">461</a>         <strong class="jxr_keyword">this</strong>.row = request.getRow().toByteArray();
@@ -504,7 +504,7 @@
 <a class="jxr_linenumber" name="494" href="#494">494</a>       }
 <a class="jxr_linenumber" name="495" href="#495">495</a> 
 <a class="jxr_linenumber" name="496" href="#496">496</a>       @Override
-<a class="jxr_linenumber" name="497" href="#497">497</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">RowSwapProcessorResponse</a> getResult() {
+<a class="jxr_linenumber" name="497" href="#497">497</a>       <strong class="jxr_keyword">public</strong> RowSwapProcessorResponse getResult() {
 <a class="jxr_linenumber" name="498" href="#498">498</a>         <strong class="jxr_keyword">return</strong> RowSwapProcessorResponse.getDefaultInstance();
 <a class="jxr_linenumber" name="499" href="#499">499</a>       }
 <a class="jxr_linenumber" name="500" href="#500">500</a> 
@@ -564,7 +564,7 @@
 <a class="jxr_linenumber" name="554" href="#554">554</a>       }
 <a class="jxr_linenumber" name="555" href="#555">555</a> 
 <a class="jxr_linenumber" name="556" href="#556">556</a>       @Override
-<a class="jxr_linenumber" name="557" href="#557">557</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">RowSwapProcessorRequest</a> getRequestData() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="557" href="#557">557</a>       <strong class="jxr_keyword">public</strong> RowSwapProcessorRequest getRequestData() <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="558" href="#558">558</a>         RowSwapProcessorRequest.Builder builder = RowSwapProcessorRequest.newBuilder();
 <a class="jxr_linenumber" name="559" href="#559">559</a>         builder.setRow1(ByteStringer.wrap(row1));
 <a class="jxr_linenumber" name="560" href="#560">560</a>         builder.setRow2(ByteStringer.wrap(row2));
@@ -572,7 +572,7 @@
 <a class="jxr_linenumber" name="562" href="#562">562</a>       }
 <a class="jxr_linenumber" name="563" href="#563">563</a> 
 <a class="jxr_linenumber" name="564" href="#564">564</a>       @Override
-<a class="jxr_linenumber" name="565" href="#565">565</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> initialize(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">RowSwapProcessorRequest</a> msg) {
+<a class="jxr_linenumber" name="565" href="#565">565</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> initialize(RowSwapProcessorRequest msg) {
 <a class="jxr_linenumber" name="566" href="#566">566</a>         <strong class="jxr_keyword">this</strong>.row1 = msg.getRow1().toByteArray();
 <a class="jxr_linenumber" name="567" href="#567">567</a>         <strong class="jxr_keyword">this</strong>.row2 = msg.getRow2().toByteArray();
 <a class="jxr_linenumber" name="568" href="#568">568</a>       }
@@ -598,7 +598,7 @@
 <a class="jxr_linenumber" name="588" href="#588">588</a>       }
 <a class="jxr_linenumber" name="589" href="#589">589</a> 
 <a class="jxr_linenumber" name="590" href="#590">590</a>       @Override
-<a class="jxr_linenumber" name="591" href="#591">591</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">TimeoutProcessorResponse</a> getResult() {
+<a class="jxr_linenumber" name="591" href="#591">591</a>       <strong class="jxr_keyword">public</strong> TimeoutProcessorResponse getResult() {
 <a class="jxr_linenumber" name="592" href="#592">592</a>         <strong class="jxr_keyword">return</strong> TimeoutProcessorResponse.getDefaultInstance();
 <a class="jxr_linenumber" name="593" href="#593">593</a>       }
 <a class="jxr_linenumber" name="594" href="#594">594</a> 
@@ -624,14 +624,14 @@
 <a class="jxr_linenumber" name="614" href="#614">614</a>       }
 <a class="jxr_linenumber" name="615" href="#615">615</a> 
 <a class="jxr_linenumber" name="616" href="#616">616</a>       @Override
-<a class="jxr_linenumber" name="617" href="#617">617</a>       <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">TimeoutProcessorRequest</a> getRequestData() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="617" href="#617">617</a>       <strong class="jxr_keyword">public</strong> TimeoutProcessorRequest getRequestData() <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="618" href="#618">618</a>         TimeoutProcessorRequest.Builder builder = TimeoutProcessorRequest.newBuilder();
 <a class="jxr_linenumber" name="619" href="#619">619</a>         builder.setRow(ByteStringer.wrap(row));
 <a class="jxr_linenumber" name="620" href="#620">620</a>         <strong class="jxr_keyword">return</strong> builder.build();
 <a class="jxr_linenumber" name="621" href="#621">621</a>       }
 <a class="jxr_linenumber" name="622" href="#622">622</a> 
 <a class="jxr_linenumber" name="623" href="#623">623</a>       @Override
-<a class="jxr_linenumber" name="624" href="#624">624</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> initialize(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/protobuf/generated/IncrementCounterProcessorTestProtos.html">TimeoutProcessorRequest</a> msg) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="624" href="#624">624</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> initialize(TimeoutProcessorRequest msg) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="625" href="#625">625</a>         <strong class="jxr_keyword">this</strong>.row = msg.getRow().toByteArray();
 <a class="jxr_linenumber" name="626" href="#626">626</a>       }
 <a class="jxr_linenumber" name="627" href="#627">627</a>     }

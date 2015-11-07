@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,29 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#configuration">configuration</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#megabyte">megabyte</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -133,19 +156,48 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Admin</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#mockAdmin(org.apache.hadoop.hbase.ServerLoad...)">mockAdmin</a></strong>(org.apache.hadoop.hbase.ServerLoad...&nbsp;servers)</code>
+<div class="block">Creates mock returning ClusterStatus info about given servers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.ClusterStatus</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#mockCluster(org.apache.hadoop.hbase.ServerLoad[])">mockCluster</a></strong>(org.apache.hadoop.hbase.ServerLoad[]&nbsp;servers)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.RegionLoad</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#mockRegion(java.lang.String,%20int)">mockRegion</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionName,
+                    int&nbsp;fileSizeMb)</code>
+<div class="block">Creates mock of region with given name and size.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.RegionLocator</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#mockRegionLocator(java.lang.String...)">mockRegionLocator</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;regionNames)</code>
+<div class="block">Makes some table with given region names.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.ServerLoad</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#mockServer(org.apache.hadoop.hbase.RegionLoad...)">mockServer</a></strong>(org.apache.hadoop.hbase.RegionLoad...&nbsp;regions)</code>
+<div class="block">Creates mock of region server with given regions</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#testDisabled()">testDisabled</a></strong>()</code>
 <div class="block">When calculator is disabled, it should return 0 for each request.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#testLargeRegion()">testLargeRegion</a></strong>()</code>
 <div class="block">When size of region in megabytes is larger than largest possible integer there could be
  error caused by lost of precision.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#testSimpleTestCase()">testSimpleTestCase</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -165,6 +217,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="configuration">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>configuration</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#line.49">configuration</a></pre>
+</li>
+</ul>
+<a name="megabyte">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>megabyte</h4>
+<pre>private final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#line.50">megabyte</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.TestRegionSizeCalculator.megabyte">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -217,7 +296,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testDisabled()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testDisabled</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#line.102">testDisabled</a>()
@@ -225,6 +304,63 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">When calculator is disabled, it should return 0 for each request.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="mockRegionLocator(java.lang.String...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mockRegionLocator</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.RegionLocator&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#line.127">mockRegionLocator</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;regionNames)
+                                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Makes some table with given region names.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="mockAdmin(org.apache.hadoop.hbase.ServerLoad...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mockAdmin</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Admin&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#line.145">mockAdmin</a>(org.apache.hadoop.hbase.ServerLoad...&nbsp;servers)
+                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Creates mock returning ClusterStatus info about given servers.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="mockRegion(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mockRegion</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.RegionLoad&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#line.159">mockRegion</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionName,
+                                            int&nbsp;fileSizeMb)</pre>
+<div class="block">Creates mock of region with given name and size.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fileSizeMb</code> - number of megabytes occupied by region in file store in megabytes</dd></dl>
+</li>
+</ul>
+<a name="mockCluster(org.apache.hadoop.hbase.ServerLoad[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mockCluster</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.ClusterStatus&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#line.167">mockCluster</a>(org.apache.hadoop.hbase.ServerLoad[]&nbsp;servers)</pre>
+</li>
+</ul>
+<a name="mockServer(org.apache.hadoop.hbase.RegionLoad...)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>mockServer</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.ServerLoad&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestRegionSizeCalculator.html#line.185">mockServer</a>(org.apache.hadoop.hbase.RegionLoad...&nbsp;regions)</pre>
+<div class="block">Creates mock of region server with given regions</div>
 </li>
 </ul>
 </li>
@@ -279,13 +415,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

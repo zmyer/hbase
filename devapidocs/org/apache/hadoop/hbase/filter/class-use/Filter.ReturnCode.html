@@ -81,6 +81,18 @@
  <a href="../../../../../../org/apache/hadoop/hbase/client/ResultScanner.html#next()"><code>ResultScanner.next()</code></a>.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -90,6 +102,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a> in <a href="../../../../../../org/apache/hadoop/hbase/filter/package-summary.html">org.apache.hadoop.hbase.filter</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/filter/package-summary.html">org.apache.hadoop.hbase.filter</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></code></td>
+<td class="colLast"><span class="strong">MultiRowRangeFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/MultiRowRangeFilter.html#currentReturnCode">currentReturnCode</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/filter/package-summary.html">org.apache.hadoop.hbase.filter</a> that return <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -223,6 +248,64 @@
 <div class="block">Returns an array containing the constants of this enum type, in
 the order they are declared.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></code></td>
+<td class="colLast"><span class="strong">MobReferenceOnlyFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MobReferenceOnlyFilter.html#filterKeyValue(org.apache.hadoop.hbase.Cell)">filterKeyValue</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.security.access">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a> in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a> that return <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></code></td>
+<td class="colLast"><span class="strong">AccessControlFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessControlFilter.html#filterKeyValue(org.apache.hadoop.hbase.Cell)">filterKeyValue</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.security.visibility">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a> in <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a> that return <a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></code></td>
+<td class="colLast"><span class="strong">VisibilityController.DeleteVersionVisibilityExpressionFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityController.DeleteVersionVisibilityExpressionFilter.html#filterKeyValue(org.apache.hadoop.hbase.Cell)">filterKeyValue</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></code></td>
+<td class="colLast"><span class="strong">VisibilityLabelFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityLabelFilter.html#filterKeyValue(org.apache.hadoop.hbase.Cell)">filterKeyValue</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

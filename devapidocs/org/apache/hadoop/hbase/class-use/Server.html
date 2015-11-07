@@ -169,6 +169,10 @@
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
 <td class="colLast"><span class="strong">ZkCoordinatedStateManager.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coordination/ZkCoordinatedStateManager.html#server">server</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">ZKSplitLogManagerCoordination.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coordination/ZKSplitLogManagerCoordination.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -242,6 +246,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a> in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> declared as <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">RpcServer.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RpcServer.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -307,8 +324,48 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">ActiveMasterManager.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ActiveMasterManager.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">MasterFileSystem.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterFileSystem.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">ServerManager.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ServerManager.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
 <td class="colLast"><span class="strong">BulkAssigner.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/BulkAssigner.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">CatalogJanitor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/CatalogJanitor.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">RegionStateStore.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStateStore.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">SplitLogManager.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/SplitLogManager.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/master/package-summary.html">org.apache.hadoop.hbase.master</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/master/ServerManager.html" title="class in org.apache.hadoop.hbase.master">ServerManager</a></code></td>
+<td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#createServerManager(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices)">createServerManager</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;master,
+                                      <a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>
+<div class="block">Create a <a href="../../../../../org/apache/hadoop/hbase/master/ServerManager.html" title="class in org.apache.hadoop.hbase.master"><code>ServerManager</code></a> instance.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -319,12 +376,21 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/BulkAssigner.html#BulkAssigner(org.apache.hadoop.hbase.Server)">BulkAssigner</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ActiveMasterManager.html#ActiveMasterManager(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20org.apache.hadoop.hbase.ServerName,%20org.apache.hadoop.hbase.Server)">ActiveMasterManager</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;watcher,
+                                      <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn,
+                                      <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;master)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/BulkAssigner.html#BulkAssigner(org.apache.hadoop.hbase.Server)">BulkAssigner</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/BulkReOpen.html#BulkReOpen(org.apache.hadoop.hbase.Server,%20java.util.Map,%20org.apache.hadoop.hbase.master.AssignmentManager)">BulkReOpen</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;serverToRegions,
                     <a href="../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html" title="class in org.apache.hadoop.hbase.master">AssignmentManager</a>&nbsp;am)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/CatalogJanitor.html#CatalogJanitor(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices)">CatalogJanitor</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                            <a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/GeneralBulkAssigner.html#GeneralBulkAssigner(org.apache.hadoop.hbase.Server,%20java.util.Map,%20org.apache.hadoop.hbase.master.AssignmentManager,%20boolean)">GeneralBulkAssigner</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
@@ -337,10 +403,18 @@
                                 <a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStateStore.html#RegionStateStore(org.apache.hadoop.hbase.Server)">RegionStateStore</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ServerManager.html#ServerManager(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices)">ServerManager</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;master,
                           <a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>
 <div class="block">Constructor.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ServerManager.html#ServerManager(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices,%20boolean)">ServerManager</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;master,
+                          <a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services,
+                          boolean&nbsp;connect)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/SplitLogManager.html#SplitLogManager(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.Stoppable,%20org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.ServerName)">SplitLogManager</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
@@ -373,20 +447,24 @@
                                     <a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/handler/DisableTableHandler.BulkDisabler.html#DisableTableHandler.BulkDisabler(org.apache.hadoop.hbase.Server,%20java.util.List)">DisableTableHandler.BulkDisabler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                                                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/handler/DisableTableHandler.html#DisableTableHandler(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.master.AssignmentManager,%20org.apache.hadoop.hbase.master.TableLockManager,%20boolean)">DisableTableHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                                       <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                       <a href="../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html" title="class in org.apache.hadoop.hbase.master">AssignmentManager</a>&nbsp;assignmentManager,
                                       <a href="../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a>&nbsp;tableLockManager,
                                       boolean&nbsp;skipTableStateCheck)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/handler/EnableTableHandler.html#EnableTableHandler(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.master.AssignmentManager,%20org.apache.hadoop.hbase.master.TableLockManager,%20boolean)">EnableTableHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                                     <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                     <a href="../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html" title="class in org.apache.hadoop.hbase.master">AssignmentManager</a>&nbsp;assignmentManager,
                                     <a href="../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a>&nbsp;tableLockManager,
                                     boolean&nbsp;skipTableStateCheck)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#TableEventHandler(org.apache.hadoop.hbase.executor.EventType,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices)">TableEventHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/executor/EventType.html" title="enum in org.apache.hadoop.hbase.executor">EventType</a>&nbsp;eventType,
                                   <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                   <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
@@ -435,6 +513,35 @@
 </tr>
 </tbody>
 </table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">HeapMemoryManager.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryManager.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">LogRoller.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">RegionMergeTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.DaughterOpener.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.DaughterOpener.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -479,6 +586,22 @@
             <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerAccounting.html" title="class in org.apache.hadoop.hbase.regionserver">RegionServerAccounting</a>&nbsp;regionServerAccounting)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;</code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#createDaughters(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.security.User)">createDaughters</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                              <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
+                              <a href="../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>
+<div class="block">Prepare the regions and region files.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion</a></code></td>
+<td class="colLast"><span class="strong">RegionMergeTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html#createMergedRegion(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.security.User)">createMergedRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                                    <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
+                                    <a href="../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>
+<div class="block">Prepare the merged region and region files.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a></code></td>
 <td class="colLast"><span class="strong">RegionMergeTransaction.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransaction.html#execute(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">execute</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
               <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>
@@ -497,7 +620,7 @@
 <td class="colLast"><span class="strong">SplitTransaction.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.html#execute(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">execute</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
               <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>use #execute(Server, RegionServerServices, User)</i></div>
+<div class="block"><i>use #execute(Server, RegionServerServices, User);  as of 1.0.2, remove in 3.0</i></div>
 </div>
 </td>
 </tr>
@@ -544,6 +667,30 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#openDaughterRegion(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.Region)">openDaughterRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                                    <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;daughter)</code>
+<div class="block">Open daughter regions, add them to online list and update meta.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#openDaughters(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.regionserver.Region)">openDaughters</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                          <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
+                          <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;a,
+                          <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;b)</code>
+<div class="block">Perform time consuming opening of the daughter regions.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">RegionMergeTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html#openMergedRegion(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.regionserver.HRegion)">openMergedRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                                <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
+                                <a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;merged)</code>
+<div class="block">Perform time consuming opening of the merged region.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionMergeTransaction.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransaction.html#rollback(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>
@@ -552,26 +699,26 @@
 </div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionMergeTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html#rollback(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">SplitTransaction.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.html#rollback(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>use #rollback(Server, RegionServerServices, User)</i></div>
+<div class="block"><i>use #rollback(Server, RegionServerServices, User); as of 1.0.2, remove in 3.0</i></div>
 </div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#rollback(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionMergeTransaction.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransaction.html#rollback(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.security.User)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
@@ -579,13 +726,13 @@
 <div class="block">Roll back a failed transaction</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionMergeTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html#rollback(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.security.User)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
                 <a href="../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">SplitTransaction.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.html#rollback(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.security.User)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
@@ -593,17 +740,24 @@
 <div class="block">Roll back a failed transaction</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#rollback(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.security.User)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
                 <a href="../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionMergeTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html#stepsAfterPONR(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.regionserver.HRegion,%20org.apache.hadoop.hbase.security.User)">stepsAfterPONR</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                             <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
                             <a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;mergedRegion,
+                            <a href="../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#stepsAfterPONR(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.util.PairOfSameType,%20org.apache.hadoop.hbase.security.User)">stepsAfterPONR</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                            <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
+                            <a href="../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;&nbsp;regions,
                             <a href="../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -627,21 +781,31 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryManager.html#HeapMemoryManager(org.apache.hadoop.hbase.io.hfile.ResizableBlockCache,%20org.apache.hadoop.hbase.regionserver.FlushRequester,%20org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerAccounting)">HeapMemoryManager</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/io/hfile/ResizableBlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">ResizableBlockCache</a>&nbsp;blockCache,
+                                  <a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a>&nbsp;memStoreFlusher,
+                                  <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                                  <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerAccounting.html" title="class in org.apache.hadoop.hbase.regionserver">RegionServerAccounting</a>&nbsp;regionServerAccounting)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#LogRoller(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices)">LogRoller</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                   <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitLogWorker.html#SplitLogWorker(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.regionserver.LastSequenceId,%20org.apache.hadoop.hbase.wal.WALFactory)">SplitLogWorker</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;hserver,
                             org.apache.hadoop.conf.Configuration&nbsp;conf,
                             <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;server,
                             <a href="../../../../../org/apache/hadoop/hbase/regionserver/LastSequenceId.html" title="interface in org.apache.hadoop.hbase.regionserver">LastSequenceId</a>&nbsp;sequenceIdChecker,
                             <a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a>&nbsp;factory)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitLogWorker.html#SplitLogWorker(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.regionserver.SplitLogWorker.TaskExecutor)">SplitLogWorker</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;hserver,
                             org.apache.hadoop.conf.Configuration&nbsp;conf,
                             <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;server,
                             <a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitLogWorker.TaskExecutor.html" title="interface in org.apache.hadoop.hbase.regionserver">SplitLogWorker.TaskExecutor</a>&nbsp;splitTaskExecutor)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.DaughterOpener.html#SplitTransactionImpl.DaughterOpener(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.Region)">SplitTransactionImpl.DaughterOpener</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;s,
+                                                                      <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;r)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -650,6 +814,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a> in <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/package-summary.html">org.apache.hadoop.hbase.regionserver.handler</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/package-summary.html">org.apache.hadoop.hbase.regionserver.handler</a> declared as <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">OpenRegionHandler.PostOpenDeployTasksThread.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/OpenRegionHandler.PostOpenDeployTasksThread.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/package-summary.html">org.apache.hadoop.hbase.regionserver.handler</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -687,13 +864,20 @@
                               long&nbsp;masterSystemTime)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/OpenRegionHandler.PostOpenDeployTasksThread.html#OpenRegionHandler.PostOpenDeployTasksThread(org.apache.hadoop.hbase.regionserver.HRegion,%20org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20java.util.concurrent.atomic.AtomicBoolean,%20long)">OpenRegionHandler.PostOpenDeployTasksThread</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;region,
+                                                                                      <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                                                                                      <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services,
+                                                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a>&nbsp;signaller,
+                                                                                      long&nbsp;masterSystemTime)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/OpenRegionHandler.html#OpenRegionHandler(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.HTableDescriptor,%20long)">OpenRegionHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                                   <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;rsServices,
                                   <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
                                   <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
                                   long&nbsp;masterSystemTime)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/OpenRegionHandler.html#OpenRegionHandler(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.HTableDescriptor,%20long,%20org.apache.hadoop.hbase.executor.EventType)">OpenRegionHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                                   <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;rsServices,
                                   <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
@@ -701,7 +885,7 @@
                                   long&nbsp;masterSystemTime,
                                   <a href="../../../../../org/apache/hadoop/hbase/executor/EventType.html" title="enum in org.apache.hadoop.hbase.executor">EventType</a>&nbsp;eventType)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/RegionReplicaFlushHandler.html#RegionReplicaFlushHandler(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20int,%20org.apache.hadoop.hbase.regionserver.HRegion)">RegionReplicaFlushHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                                                   <a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
                                                   <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a>&nbsp;rpcRetryingCallerFactory,
@@ -709,7 +893,7 @@
                                                   int&nbsp;operationTimeout,
                                                   <a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;region)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#WALSplitterHandler(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.coordination.SplitLogWorkerCoordination,%20org.apache.hadoop.hbase.coordination.SplitLogWorkerCoordination.SplitTaskDetails,%20org.apache.hadoop.hbase.util.CancelableProgressable,%20java.util.concurrent.atomic.AtomicInteger,%20org.apache.hadoop.hbase.regionserver.SplitLogWorker.TaskExecutor,%20org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.SplitLogTask.RecoveryMode)">WALSplitterHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                                     <a href="../../../../../org/apache/hadoop/hbase/coordination/SplitLogWorkerCoordination.html" title="interface in org.apache.hadoop.hbase.coordination">SplitLogWorkerCoordination</a>&nbsp;coordination,
                                     <a href="../../../../../org/apache/hadoop/hbase/coordination/SplitLogWorkerCoordination.SplitTaskDetails.html" title="interface in org.apache.hadoop.hbase.coordination">SplitLogWorkerCoordination.SplitTaskDetails</a>&nbsp;splitDetails,
@@ -725,6 +909,36 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a> in <a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a> that implement <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationSyncUp.DummyServer.html" title="class in org.apache.hadoop.hbase.replication.regionserver">ReplicationSyncUp.DummyServer</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a> declared as <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">Replication.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/Replication.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">ReplicationSourceManager.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationSourceManager.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -790,6 +1004,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a> in <a href="../../../../../org/apache/hadoop/hbase/zookeeper/package-summary.html">org.apache.hadoop.hbase.zookeeper</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/zookeeper/package-summary.html">org.apache.hadoop.hbase.zookeeper</a> declared as <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><span class="strong">RegionServerTracker.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/RegionServerTracker.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../org/apache/hadoop/hbase/zookeeper/package-summary.html">org.apache.hadoop.hbase.zookeeper</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>

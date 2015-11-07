@@ -75,56 +75,43 @@
 <span class="sourceLineNo">067</span>  private final HRegionServer server;<a name="line.67"></a>
 <span class="sourceLineNo">068</span><a name="line.68"></a>
 <span class="sourceLineNo">069</span>  /**<a name="line.69"></a>
-<span class="sourceLineNo">070</span>   * Legacy constructor<a name="line.70"></a>
-<span class="sourceLineNo">071</span>   * @param delegate<a name="line.71"></a>
-<span class="sourceLineNo">072</span>   * @param server<a name="line.72"></a>
-<span class="sourceLineNo">073</span>   * @throws IOException if we cannot create the connection<a name="line.73"></a>
-<span class="sourceLineNo">074</span>   * @deprecated delegate is not used<a name="line.74"></a>
-<span class="sourceLineNo">075</span>   */<a name="line.75"></a>
-<span class="sourceLineNo">076</span>  @Deprecated<a name="line.76"></a>
-<span class="sourceLineNo">077</span>  public CoprocessorHConnection(ClusterConnection delegate, HRegionServer server)<a name="line.77"></a>
-<span class="sourceLineNo">078</span>      throws IOException {<a name="line.78"></a>
-<span class="sourceLineNo">079</span>    this(server);<a name="line.79"></a>
-<span class="sourceLineNo">080</span>  }<a name="line.80"></a>
-<span class="sourceLineNo">081</span><a name="line.81"></a>
-<span class="sourceLineNo">082</span>  /**<a name="line.82"></a>
-<span class="sourceLineNo">083</span>   * Constructor that uses server configuration<a name="line.83"></a>
-<span class="sourceLineNo">084</span>   * @param server<a name="line.84"></a>
-<span class="sourceLineNo">085</span>   * @throws IOException if we cannot create the connection<a name="line.85"></a>
-<span class="sourceLineNo">086</span>   */<a name="line.86"></a>
-<span class="sourceLineNo">087</span>  public CoprocessorHConnection(HRegionServer server) throws IOException {<a name="line.87"></a>
-<span class="sourceLineNo">088</span>    this(server.getConfiguration(), server);<a name="line.88"></a>
-<span class="sourceLineNo">089</span>  }<a name="line.89"></a>
-<span class="sourceLineNo">090</span><a name="line.90"></a>
-<span class="sourceLineNo">091</span>  /**<a name="line.91"></a>
-<span class="sourceLineNo">092</span>   * Constructor that accepts custom configuration<a name="line.92"></a>
-<span class="sourceLineNo">093</span>   * @param conf<a name="line.93"></a>
-<span class="sourceLineNo">094</span>   * @param server<a name="line.94"></a>
-<span class="sourceLineNo">095</span>   * @throws IOException if we cannot create the connection<a name="line.95"></a>
-<span class="sourceLineNo">096</span>   */<a name="line.96"></a>
-<span class="sourceLineNo">097</span>  public CoprocessorHConnection(Configuration conf, HRegionServer server) throws IOException {<a name="line.97"></a>
-<span class="sourceLineNo">098</span>    super(conf, null, UserProvider.instantiate(conf).getCurrent());<a name="line.98"></a>
-<span class="sourceLineNo">099</span>    this.server = server;<a name="line.99"></a>
-<span class="sourceLineNo">100</span>    this.serverName = server.getServerName();<a name="line.100"></a>
-<span class="sourceLineNo">101</span>  }<a name="line.101"></a>
-<span class="sourceLineNo">102</span><a name="line.102"></a>
-<span class="sourceLineNo">103</span>  @Override<a name="line.103"></a>
-<span class="sourceLineNo">104</span>  public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface<a name="line.104"></a>
-<span class="sourceLineNo">105</span>      getClient(ServerName serverName) throws IOException {<a name="line.105"></a>
-<span class="sourceLineNo">106</span>    // client is trying to reach off-server, so we can't do anything special<a name="line.106"></a>
-<span class="sourceLineNo">107</span>    if (!this.serverName.equals(serverName)) {<a name="line.107"></a>
-<span class="sourceLineNo">108</span>      return super.getClient(serverName);<a name="line.108"></a>
-<span class="sourceLineNo">109</span>    }<a name="line.109"></a>
-<span class="sourceLineNo">110</span>    // the client is attempting to write to the same regionserver, we can short-circuit to our<a name="line.110"></a>
-<span class="sourceLineNo">111</span>    // local regionserver<a name="line.111"></a>
-<span class="sourceLineNo">112</span>    return server.getRSRpcServices();<a name="line.112"></a>
-<span class="sourceLineNo">113</span>  }<a name="line.113"></a>
-<span class="sourceLineNo">114</span><a name="line.114"></a>
-<span class="sourceLineNo">115</span>  @Override<a name="line.115"></a>
-<span class="sourceLineNo">116</span>  public NonceGenerator getNonceGenerator() {<a name="line.116"></a>
-<span class="sourceLineNo">117</span>    return NO_NONCE_GEN; // don't use nonces for coprocessor connection<a name="line.117"></a>
-<span class="sourceLineNo">118</span>  }<a name="line.118"></a>
-<span class="sourceLineNo">119</span>}<a name="line.119"></a>
+<span class="sourceLineNo">070</span>   * Constructor that uses server configuration<a name="line.70"></a>
+<span class="sourceLineNo">071</span>   * @param server<a name="line.71"></a>
+<span class="sourceLineNo">072</span>   * @throws IOException if we cannot create the connection<a name="line.72"></a>
+<span class="sourceLineNo">073</span>   */<a name="line.73"></a>
+<span class="sourceLineNo">074</span>  public CoprocessorHConnection(HRegionServer server) throws IOException {<a name="line.74"></a>
+<span class="sourceLineNo">075</span>    this(server.getConfiguration(), server);<a name="line.75"></a>
+<span class="sourceLineNo">076</span>  }<a name="line.76"></a>
+<span class="sourceLineNo">077</span><a name="line.77"></a>
+<span class="sourceLineNo">078</span>  /**<a name="line.78"></a>
+<span class="sourceLineNo">079</span>   * Constructor that accepts custom configuration<a name="line.79"></a>
+<span class="sourceLineNo">080</span>   * @param conf<a name="line.80"></a>
+<span class="sourceLineNo">081</span>   * @param server<a name="line.81"></a>
+<span class="sourceLineNo">082</span>   * @throws IOException if we cannot create the connection<a name="line.82"></a>
+<span class="sourceLineNo">083</span>   */<a name="line.83"></a>
+<span class="sourceLineNo">084</span>  public CoprocessorHConnection(Configuration conf, HRegionServer server) throws IOException {<a name="line.84"></a>
+<span class="sourceLineNo">085</span>    super(conf, null, UserProvider.instantiate(conf).getCurrent());<a name="line.85"></a>
+<span class="sourceLineNo">086</span>    this.server = server;<a name="line.86"></a>
+<span class="sourceLineNo">087</span>    this.serverName = server.getServerName();<a name="line.87"></a>
+<span class="sourceLineNo">088</span>  }<a name="line.88"></a>
+<span class="sourceLineNo">089</span><a name="line.89"></a>
+<span class="sourceLineNo">090</span>  @Override<a name="line.90"></a>
+<span class="sourceLineNo">091</span>  public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface<a name="line.91"></a>
+<span class="sourceLineNo">092</span>      getClient(ServerName serverName) throws IOException {<a name="line.92"></a>
+<span class="sourceLineNo">093</span>    // client is trying to reach off-server, so we can't do anything special<a name="line.93"></a>
+<span class="sourceLineNo">094</span>    if (!this.serverName.equals(serverName)) {<a name="line.94"></a>
+<span class="sourceLineNo">095</span>      return super.getClient(serverName);<a name="line.95"></a>
+<span class="sourceLineNo">096</span>    }<a name="line.96"></a>
+<span class="sourceLineNo">097</span>    // the client is attempting to write to the same regionserver, we can short-circuit to our<a name="line.97"></a>
+<span class="sourceLineNo">098</span>    // local regionserver<a name="line.98"></a>
+<span class="sourceLineNo">099</span>    return server.getRSRpcServices();<a name="line.99"></a>
+<span class="sourceLineNo">100</span>  }<a name="line.100"></a>
+<span class="sourceLineNo">101</span><a name="line.101"></a>
+<span class="sourceLineNo">102</span>  @Override<a name="line.102"></a>
+<span class="sourceLineNo">103</span>  public NonceGenerator getNonceGenerator() {<a name="line.103"></a>
+<span class="sourceLineNo">104</span>    return NO_NONCE_GEN; // don't use nonces for coprocessor connection<a name="line.104"></a>
+<span class="sourceLineNo">105</span>  }<a name="line.105"></a>
+<span class="sourceLineNo">106</span>}<a name="line.106"></a>
 
 
 

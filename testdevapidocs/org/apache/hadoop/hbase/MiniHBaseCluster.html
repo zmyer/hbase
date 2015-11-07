@@ -136,6 +136,12 @@ extends <a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="c
 <div class="block">Subclass so can get at protected methods (none at moment).</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.SingleFileSystemShutdownThread.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster.SingleFileSystemShutdownThread</a></strong></code>
+<div class="block">Alternate shutdown hook.</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -154,6 +160,14 @@ extends <a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="c
 <tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.LocalHBaseCluster</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#hbaseCluster">hbaseCluster</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#index">index</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -367,65 +381,72 @@ extends <a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="c
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#getServerWithMeta()">getServerWithMeta</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#init(int,%20int,%20java.lang.Class,%20java.lang.Class)">init</a></strong>(int&nbsp;nMasterNodes,
+        int&nbsp;nRegionNodes,
+        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends org.apache.hadoop.hbase.master.HMaster&gt;&nbsp;masterClass,
+        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster.MiniHBaseClusterRegionServer</a>&gt;&nbsp;regionserverClass)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#join()">join</a></strong>()</code>
 <div class="block">Wait for Mini HBase Cluster to shut down.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#killAll()">killAll</a></strong>()</code>
 <div class="block">Do a simulated kill all masters and regionservers.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#killDataNode(org.apache.hadoop.hbase.ServerName)">killDataNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
 <div class="block">Kills the datanode process if this is a distributed cluster, otherwise,
  this causes master to exit doing basic clean up only.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#killMaster(org.apache.hadoop.hbase.ServerName)">killMaster</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
 <div class="block">Kills the master process if this is a distributed cluster, otherwise,
  this causes master to exit doing basic clean up only.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#killRegionServer(org.apache.hadoop.hbase.ServerName)">killRegionServer</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
 <div class="block">Kills the region server process if this is a distributed cluster, otherwise
  this causes the region server to exit doing basic clean up only.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#killZkNode(org.apache.hadoop.hbase.ServerName)">killZkNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
 <div class="block">Kills the zookeeper node process if this is a distributed cluster, otherwise,
  this causes master to exit doing basic clean up only.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#shutdown()">shutdown</a></strong>()</code>
 <div class="block">Shut down the mini HBase cluster</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#startDataNode(org.apache.hadoop.hbase.ServerName)">startDataNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
 <div class="block">Starts a new datanode on the given hostname or if this is a mini/local cluster,
  silently logs warning message.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#startMaster()">startMaster</a></strong>()</code>
 <div class="block">Starts a master thread running</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#startMaster(java.lang.String,%20int)">startMaster</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
                       int&nbsp;port)</code>
@@ -433,13 +454,13 @@ extends <a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="c
  starts a master locally.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.util.JVMClusterUtil.RegionServerThread</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#startRegionServer()">startRegionServer</a></strong>()</code>
 <div class="block">Starts a region server thread running</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#startRegionServer(java.lang.String,%20int)">startRegionServer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
                                   int&nbsp;port)</code>
@@ -447,7 +468,7 @@ extends <a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="c
  starts a region server locally.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#startZkNode(java.lang.String,%20int)">startZkNode</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
                       int&nbsp;port)</code>
@@ -455,120 +476,120 @@ extends <a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="c
  silently logs warning message.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#stopDataNode(org.apache.hadoop.hbase.ServerName)">stopDataNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
 <div class="block">Stops the datanode if this is a distributed cluster, otherwise
  silently logs warning message.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#stopMaster(int)">stopMaster</a></strong>(int&nbsp;serverNumber)</code>
 <div class="block">Shut down the specified master cleanly</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#stopMaster(int,%20boolean)">stopMaster</a></strong>(int&nbsp;serverNumber,
                     boolean&nbsp;shutdownFS)</code>
 <div class="block">Shut down the specified master cleanly</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#stopMaster(org.apache.hadoop.hbase.ServerName)">stopMaster</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
 <div class="block">Stops the given master, by attempting a gradual stop.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.util.JVMClusterUtil.RegionServerThread</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#stopRegionServer(int)">stopRegionServer</a></strong>(int&nbsp;serverNumber)</code>
 <div class="block">Shut down the specified region server cleanly</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.util.JVMClusterUtil.RegionServerThread</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#stopRegionServer(int,%20boolean)">stopRegionServer</a></strong>(int&nbsp;serverNumber,
                                 boolean&nbsp;shutdownFS)</code>
 <div class="block">Shut down the specified region server cleanly</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#stopRegionServer(org.apache.hadoop.hbase.ServerName)">stopRegionServer</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
 <div class="block">Stops the given region server, by attempting a gradual stop.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#stopZkNode(org.apache.hadoop.hbase.ServerName)">stopZkNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
 <div class="block">Stops the region zookeeper if this is a distributed cluster, otherwise
  silently logs warning message.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitForActiveAndReadyMaster(long)">waitForActiveAndReadyMaster</a></strong>(long&nbsp;timeout)</code>
 <div class="block">Blocks until there is an active master and that master has completed
  initialization.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitForDataNodeToStart(org.apache.hadoop.hbase.ServerName,%20long)">waitForDataNodeToStart</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
                                             long&nbsp;timeout)</code>
 <div class="block">Wait for the specified datanode to join the cluster</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitForDataNodeToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForDataNodeToStop</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
                                           long&nbsp;timeout)</code>
 <div class="block">Wait for the specified datanode to stop the thread / process.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitForMasterToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForMasterToStop</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
                                       long&nbsp;timeout)</code>
 <div class="block">Wait for the specified master to stop the thread / process.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitForRegionServerToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForRegionServerToStop</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
                                                   long&nbsp;timeout)</code>
 <div class="block">Wait for the specified region server to stop the thread / process.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitForZkNodeToStart(org.apache.hadoop.hbase.ServerName,%20long)">waitForZkNodeToStart</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
                                         long&nbsp;timeout)</code>
 <div class="block">Wait for the specified zookeeper node to join the cluster</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitForZkNodeToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForZkNodeToStop</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
                                       long&nbsp;timeout)</code>
 <div class="block">Wait for the specified zookeeper node to stop the thread / process.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitOnMaster(int)">waitOnMaster</a></strong>(int&nbsp;serverNumber)</code>
 <div class="block">Wait for the specified master to stop.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitOnRegionServer(int)">waitOnRegionServer</a></strong>(int&nbsp;serverNumber)</code>
 <div class="block">Wait for the specified region server to stop.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html#waitUntilShutDown()">waitUntilShutDown</a></strong>()</code>
 <div class="block">Wait for HBase Cluster to shut down.</div>
@@ -603,13 +624,31 @@ extends <a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="c
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.html#line.56">LOG</a></pre>
+</li>
+</ul>
 <a name="hbaseCluster">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hbaseCluster</h4>
+<pre>public&nbsp;org.apache.hadoop.hbase.LocalHBaseCluster <a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.html#line.57">hbaseCluster</a></pre>
+</li>
+</ul>
+<a name="index">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>hbaseCluster</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.LocalHBaseCluster <a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.html#line.57">hbaseCluster</a></pre>
+<h4>index</h4>
+<pre>private static&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.html#line.58">index</a></pre>
 </li>
 </ul>
 </li>
@@ -688,6 +727,23 @@ extends <a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="c
 <li class="blockList">
 <h4>getConfiguration</h4>
 <pre>public&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.html#line.98">getConfiguration</a>()</pre>
+</li>
+</ul>
+<a name="init(int, int, java.lang.Class, java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/MiniHBaseCluster.html#line.201">init</a>(int&nbsp;nMasterNodes,
+        int&nbsp;nRegionNodes,
+        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends org.apache.hadoop.hbase.master.HMaster&gt;&nbsp;masterClass,
+        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster.MiniHBaseClusterRegionServer</a>&gt;&nbsp;regionserverClass)
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 <a name="startRegionServer(java.lang.String, int)">

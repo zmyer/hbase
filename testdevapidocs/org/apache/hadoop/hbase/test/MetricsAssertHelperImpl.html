@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -128,6 +128,33 @@ implements <a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHel
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.MockRecordBuilder.html" title="class in org.apache.hadoop.hbase.test">MetricsAssertHelperImpl.MockRecordBuilder</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#counters">counters</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#gauges">gauges</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#tags">tags</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -242,31 +269,43 @@ implements <a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHel
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#canonicalizeMetricName(java.lang.String)">canonicalizeMetricName</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;in)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#getCounter(java.lang.String,%20org.apache.hadoop.hbase.metrics.BaseSource)">getCounter</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                     org.apache.hadoop.hbase.metrics.BaseSource&nbsp;source)</code>
 <div class="block">Get the value of a counter.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#getGaugeDouble(java.lang.String,%20org.apache.hadoop.hbase.metrics.BaseSource)">getGaugeDouble</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                             org.apache.hadoop.hbase.metrics.BaseSource&nbsp;source)</code>
 <div class="block">Get the value of a gauge as a double.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#getGaugeLong(java.lang.String,%20org.apache.hadoop.hbase.metrics.BaseSource)">getGaugeLong</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                         org.apache.hadoop.hbase.metrics.BaseSource&nbsp;source)</code>
 <div class="block">Get the value of a gauge as a long.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#getMetrics(org.apache.hadoop.hbase.metrics.BaseSource)">getMetrics</a></strong>(org.apache.hadoop.hbase.metrics.BaseSource&nbsp;source)</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#init()">init</a></strong>()</code>
 <div class="block">Init helper.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#reset()">reset</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -284,6 +323,41 @@ implements <a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHel
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="tags">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tags</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#line.39">tags</a></pre>
+</li>
+</ul>
+<a name="gauges">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>gauges</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#line.40">gauges</a></pre>
+</li>
+</ul>
+<a name="counters">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>counters</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#line.41">counters</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -542,7 +616,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHel
 <a name="getGaugeLong(java.lang.String, org.apache.hadoop.hbase.metrics.BaseSource)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getGaugeLong</h4>
 <pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#line.216">getGaugeLong</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -555,6 +629,33 @@ implements <a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHel
 <dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - name of the gauge.</dd><dd><code>source</code> - The BaseSource<code>BaseSource</code> that will provide the tags,
                gauges, and counters.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>long value of the gauge.</dd></dl>
+</li>
+</ul>
+<a name="reset()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reset</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#line.224">reset</a>()</pre>
+</li>
+</ul>
+<a name="getMetrics(org.apache.hadoop.hbase.metrics.BaseSource)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMetrics</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#line.230">getMetrics</a>(org.apache.hadoop.hbase.metrics.BaseSource&nbsp;source)</pre>
+</li>
+</ul>
+<a name="canonicalizeMetricName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>canonicalizeMetricName</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/MetricsAssertHelperImpl.html#line.241">canonicalizeMetricName</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;in)</pre>
 </li>
 </ul>
 </li>
@@ -609,13 +710,13 @@ implements <a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHel
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

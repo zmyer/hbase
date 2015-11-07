@@ -52,7 +52,7 @@
 <a class="jxr_linenumber" name="42" href="#42">42</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="43" href="#43">43</a>  @InterfaceAudience.Public
 <a class="jxr_linenumber" name="44" href="#44">44</a>  @InterfaceStability.Stable
-<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">TimestampsFilter</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/FilterBase.html">FilterBase</a> {
+<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/TimestampsFilter.html">TimestampsFilter</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/FilterBase.html">FilterBase</a> {
 <a class="jxr_linenumber" name="46" href="#46">46</a>  
 <a class="jxr_linenumber" name="47" href="#47">47</a>    TreeSet&lt;Long&gt; timestamps;
 <a class="jxr_linenumber" name="48" href="#48">48</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> MAX_LOG_TIMESTAMPS = 5;
@@ -68,7 +68,7 @@
 <a class="jxr_linenumber" name="58" href="#58">58</a>  <em class="jxr_javadoccomment">   *</em>
 <a class="jxr_linenumber" name="59" href="#59">59</a>  <em class="jxr_javadoccomment">   * @param timestamps</em>
 <a class="jxr_linenumber" name="60" href="#60">60</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="61" href="#61">61</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">TimestampsFilter</a>(List&lt;Long&gt; timestamps) {
+<a class="jxr_linenumber" name="61" href="#61">61</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/TimestampsFilter.html">TimestampsFilter</a>(List&lt;Long&gt; timestamps) {
 <a class="jxr_linenumber" name="62" href="#62">62</a>      <strong class="jxr_keyword">for</strong> (Long timestamp : timestamps) {
 <a class="jxr_linenumber" name="63" href="#63">63</a>        Preconditions.checkArgument(timestamp &gt;= 0, <span class="jxr_string">"must be positive %s"</span>, timestamp);
 <a class="jxr_linenumber" name="64" href="#64">64</a>      }
@@ -117,13 +117,13 @@
 <a class="jxr_linenumber" name="107" href="#107">107</a>     <strong class="jxr_keyword">return</strong> ReturnCode.SKIP;
 <a class="jxr_linenumber" name="108" href="#108">108</a>   }
 <a class="jxr_linenumber" name="109" href="#109">109</a> 
-<a class="jxr_linenumber" name="110" href="#110">110</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">Filter</a> createFilterFromArguments(ArrayList&lt;byte []&gt; filterArguments) {
+<a class="jxr_linenumber" name="110" href="#110">110</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html">Filter</a> createFilterFromArguments(ArrayList&lt;byte []&gt; filterArguments) {
 <a class="jxr_linenumber" name="111" href="#111">111</a>     ArrayList&lt;Long&gt; timestamps = <strong class="jxr_keyword">new</strong> ArrayList&lt;Long&gt;();
 <a class="jxr_linenumber" name="112" href="#112">112</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i&lt;filterArguments.size(); i++) {
 <a class="jxr_linenumber" name="113" href="#113">113</a>       <strong class="jxr_keyword">long</strong> timestamp = ParseFilter.convertByteArrayToLong(filterArguments.get(i));
 <a class="jxr_linenumber" name="114" href="#114">114</a>       timestamps.add(timestamp);
 <a class="jxr_linenumber" name="115" href="#115">115</a>     }
-<a class="jxr_linenumber" name="116" href="#116">116</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">TimestampsFilter</a>(timestamps);
+<a class="jxr_linenumber" name="116" href="#116">116</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/TimestampsFilter.html">TimestampsFilter</a>(timestamps);
 <a class="jxr_linenumber" name="117" href="#117">117</a>   }
 <a class="jxr_linenumber" name="118" href="#118">118</a> 
 <a class="jxr_linenumber" name="119" href="#119">119</a>   <em class="jxr_javadoccomment">/**</em>
@@ -142,7 +142,7 @@
 <a class="jxr_linenumber" name="132" href="#132">132</a> <em class="jxr_javadoccomment">   * @throws DeserializationException</em>
 <a class="jxr_linenumber" name="133" href="#133">133</a> <em class="jxr_javadoccomment">   * @see #toByteArray</em>
 <a class="jxr_linenumber" name="134" href="#134">134</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="135" href="#135">135</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">TimestampsFilter</a> parseFrom(<strong class="jxr_keyword">final</strong> byte [] pbBytes)
+<a class="jxr_linenumber" name="135" href="#135">135</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/TimestampsFilter.html">TimestampsFilter</a> parseFrom(<strong class="jxr_keyword">final</strong> byte [] pbBytes)
 <a class="jxr_linenumber" name="136" href="#136">136</a>   <strong class="jxr_keyword">throws</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a> {
 <a class="jxr_linenumber" name="137" href="#137">137</a>     FilterProtos.TimestampsFilter proto;
 <a class="jxr_linenumber" name="138" href="#138">138</a>     <strong class="jxr_keyword">try</strong> {
@@ -150,7 +150,7 @@
 <a class="jxr_linenumber" name="140" href="#140">140</a>     } <strong class="jxr_keyword">catch</strong> (InvalidProtocolBufferException e) {
 <a class="jxr_linenumber" name="141" href="#141">141</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a>(e);
 <a class="jxr_linenumber" name="142" href="#142">142</a>     }
-<a class="jxr_linenumber" name="143" href="#143">143</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">TimestampsFilter</a>(proto.getTimestampsList());
+<a class="jxr_linenumber" name="143" href="#143">143</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/TimestampsFilter.html">TimestampsFilter</a>(proto.getTimestampsList());
 <a class="jxr_linenumber" name="144" href="#144">144</a>   }
 <a class="jxr_linenumber" name="145" href="#145">145</a> 
 <a class="jxr_linenumber" name="146" href="#146">146</a>   <em class="jxr_javadoccomment">/**</em>
@@ -158,11 +158,11 @@
 <a class="jxr_linenumber" name="148" href="#148">148</a> <em class="jxr_javadoccomment">   * @return true if and only if the fields of the filter that are serialized</em>
 <a class="jxr_linenumber" name="149" href="#149">149</a> <em class="jxr_javadoccomment">   * are equal to the corresponding fields in other.  Used for testing.</em>
 <a class="jxr_linenumber" name="150" href="#150">150</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="151" href="#151">151</a>   <strong class="jxr_keyword">boolean</strong> areSerializedFieldsEqual(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">Filter</a> o) {
+<a class="jxr_linenumber" name="151" href="#151">151</a>   <strong class="jxr_keyword">boolean</strong> areSerializedFieldsEqual(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html">Filter</a> o) {
 <a class="jxr_linenumber" name="152" href="#152">152</a>     <strong class="jxr_keyword">if</strong> (o == <strong class="jxr_keyword">this</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="153" href="#153">153</a>     <strong class="jxr_keyword">if</strong> (!(o instanceof TimestampsFilter)) <strong class="jxr_keyword">return</strong> false;
 <a class="jxr_linenumber" name="154" href="#154">154</a> 
-<a class="jxr_linenumber" name="155" href="#155">155</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">TimestampsFilter</a> other = (TimestampsFilter)o;
+<a class="jxr_linenumber" name="155" href="#155">155</a>     <a href="../../../../../org/apache/hadoop/hbase/filter/TimestampsFilter.html">TimestampsFilter</a> other = (TimestampsFilter)o;
 <a class="jxr_linenumber" name="156" href="#156">156</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.getTimestamps().equals(other.getTimestamps());
 <a class="jxr_linenumber" name="157" href="#157">157</a>   }
 <a class="jxr_linenumber" name="158" href="#158">158</a> 

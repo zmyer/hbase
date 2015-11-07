@@ -239,6 +239,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Sets given labels globally authorized for the user.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsResponse</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#setOrClearAuths(org.apache.hadoop.hbase.client.Connection,%20java.lang.String[],%20java.lang.String,%20boolean)">setOrClearAuths</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;auths,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user,
+                              boolean&nbsp;setOrClear)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -485,7 +492,7 @@ public static&nbsp;org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsPr
 <a name="clearAuths(org.apache.hadoop.hbase.client.Connection, java.lang.String[], java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>clearAuths</h4>
 <pre>public static&nbsp;org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsResponse&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#line.328">clearAuths</a>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
@@ -496,6 +503,25 @@ public static&nbsp;org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsPr
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>connection</code> - </dd><dd><code>auths</code> - </dd><dd><code>user</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>VisibilityLabelsResponse</dd>
 <dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd></dl>
+</li>
+</ul>
+<a name="setOrClearAuths(org.apache.hadoop.hbase.client.Connection, java.lang.String[], java.lang.String, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setOrClearAuths</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsResponse&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#line.333">setOrClearAuths</a>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
+                                                                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;auths,
+                                                                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user,
+                                                                                                         boolean&nbsp;setOrClear)
+                                                                                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                                                                          com.google.protobuf.ServiceException,
+                                                                                                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code>com.google.protobuf.ServiceException</code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd></dl>
 </li>
 </ul>

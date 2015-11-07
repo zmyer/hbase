@@ -120,8 +120,28 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/rest/client/Cluster.html" title="class in org.apache.hadoop.hbase.rest.client">Cluster</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#cluster">cluster</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static org.apache.commons.httpclient.Header[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#EMPTY_HEADER_ARRAY">EMPTY_HEADER_ARRAY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#extraHeaders">extraHeaders</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.commons.httpclient.HttpClient</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#httpClient">httpClient</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#sslEnabled">sslEnabled</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -292,6 +312,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#initialize(org.apache.hadoop.hbase.rest.client.Cluster,%20boolean)">initialize</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/rest/client/Cluster.html" title="class in org.apache.hadoop.hbase.rest.client">Cluster</a>&nbsp;cluster,
+                    boolean&nbsp;sslEnabled)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Response.html" title="class in org.apache.hadoop.hbase.rest.client">Response</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#post(org.apache.hadoop.hbase.rest.client.Cluster,%20java.lang.String,%20org.apache.commons.httpclient.Header[],%20byte[])">post</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/rest/client/Cluster.html" title="class in org.apache.hadoop.hbase.rest.client">Cluster</a>&nbsp;cluster,
         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
@@ -300,7 +325,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Send a POST request</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Response.html" title="class in org.apache.hadoop.hbase.rest.client">Response</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#post(org.apache.hadoop.hbase.rest.client.Cluster,%20java.lang.String,%20java.lang.String,%20byte[])">post</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/rest/client/Cluster.html" title="class in org.apache.hadoop.hbase.rest.client">Cluster</a>&nbsp;cluster,
         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
@@ -309,7 +334,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Send a POST request</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Response.html" title="class in org.apache.hadoop.hbase.rest.client">Response</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#post(java.lang.String,%20org.apache.commons.httpclient.Header[],%20byte[])">post</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
         org.apache.commons.httpclient.Header[]&nbsp;headers,
@@ -317,7 +342,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Send a POST request</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Response.html" title="class in org.apache.hadoop.hbase.rest.client">Response</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#post(java.lang.String,%20java.lang.String,%20byte[])">post</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentType,
@@ -325,7 +350,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Send a POST request</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Response.html" title="class in org.apache.hadoop.hbase.rest.client">Response</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#put(org.apache.hadoop.hbase.rest.client.Cluster,%20java.lang.String,%20org.apache.commons.httpclient.Header[],%20byte[])">put</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/rest/client/Cluster.html" title="class in org.apache.hadoop.hbase.rest.client">Cluster</a>&nbsp;cluster,
       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
@@ -334,7 +359,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Send a PUT request</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Response.html" title="class in org.apache.hadoop.hbase.rest.client">Response</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#put(org.apache.hadoop.hbase.rest.client.Cluster,%20java.lang.String,%20java.lang.String,%20byte[])">put</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/rest/client/Cluster.html" title="class in org.apache.hadoop.hbase.rest.client">Cluster</a>&nbsp;cluster,
       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
@@ -343,7 +368,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Send a PUT request</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Response.html" title="class in org.apache.hadoop.hbase.rest.client">Response</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#put(java.lang.String,%20org.apache.commons.httpclient.Header[],%20byte[])">put</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
       org.apache.commons.httpclient.Header[]&nbsp;headers,
@@ -351,7 +376,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Send a PUT request</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Response.html" title="class in org.apache.hadoop.hbase.rest.client">Response</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#put(java.lang.String,%20java.lang.String,%20byte[])">put</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentType,
@@ -359,17 +384,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Send a PUT request</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#removeExtraHeader(java.lang.String)">removeExtraHeader</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Remove an extra header.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#setCluster(org.apache.hadoop.hbase.rest.client.Cluster)">setCluster</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/rest/client/Cluster.html" title="class in org.apache.hadoop.hbase.rest.client">Cluster</a>&nbsp;cluster)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/Client.html#shutdown()">shutdown</a></strong>()</code>
 <div class="block">Shut down the client.</div>
@@ -400,10 +425,55 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="EMPTY_HEADER_ARRAY">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>EMPTY_HEADER_ARRAY</h4>
 <pre>public static final&nbsp;org.apache.commons.httpclient.Header[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/Client.html#line.54">EMPTY_HEADER_ARRAY</a></pre>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/Client.html#line.56">LOG</a></pre>
+</li>
+</ul>
+<a name="httpClient">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>httpClient</h4>
+<pre>private&nbsp;org.apache.commons.httpclient.HttpClient <a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/Client.html#line.58">httpClient</a></pre>
+</li>
+</ul>
+<a name="cluster">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cluster</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/rest/client/Cluster.html" title="class in org.apache.hadoop.hbase.rest.client">Cluster</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/Client.html#line.59">cluster</a></pre>
+</li>
+</ul>
+<a name="sslEnabled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sslEnabled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/Client.html#line.60">sslEnabled</a></pre>
+</li>
+</ul>
+<a name="extraHeaders">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>extraHeaders</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/Client.html#line.62">extraHeaders</a></pre>
 </li>
 </ul>
 </li>
@@ -455,6 +525,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="initialize(org.apache.hadoop.hbase.rest.client.Cluster, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initialize</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/Client.html#line.71">initialize</a>(<a href="../../../../../../org/apache/hadoop/hbase/rest/client/Cluster.html" title="class in org.apache.hadoop.hbase.rest.client">Cluster</a>&nbsp;cluster,
+              boolean&nbsp;sslEnabled)</pre>
+</li>
+</ul>
 <a name="shutdown()">
 <!--   -->
 </a>

@@ -221,6 +221,10 @@ implements <a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtre
 <div class="block">Try to position the scanner in the row before the current row.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeArrayReversibleScanner.html#previousRowInternal()">previousRowInternal</a></strong>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.codec.prefixtree.decode.PrefixTreeArrayScanner">
@@ -336,6 +340,15 @@ implements <a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtre
          false if there were no previous cells, meaning getCurrentCell() will return null.
          Scanner position will be
          <a href="../../../../../../../org/apache/hadoop/hbase/codec/prefixtree/scanner/CellScannerPosition.html#BEFORE_FIRST"><code>CellScannerPosition.BEFORE_FIRST</code></a></dd></dl>
+</li>
+</ul>
+<a name="previousRowInternal()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>previousRowInternal</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeArrayReversibleScanner.html#line.88">previousRowInternal</a>()</pre>
 </li>
 </ul>
 <a name="isDirectlyAfterNub()">

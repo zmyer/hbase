@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.HBaseTestCase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -128,6 +128,37 @@ extends <a href="../../../../../org/apache/hadoop/hbase/HBaseTestCase.html" titl
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#BLOCK_SIZE">BLOCK_SIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#COL">COL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#END_KEY">END_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#FAMILY">FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#START_KEY">START_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.HBaseTestCase">
 <!--   -->
@@ -167,17 +198,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/HBaseTestCase.html" titl
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#_testBlocksScanned(org.apache.hadoop.hbase.HTableDescriptor)">_testBlocksScanned</a></strong>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;table)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#setUp()">setUp</a></strong>()</code>
 <div class="block">Note that this method must be called after the mini hdfs cluster has
  started or we end up with a local file system.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#testBlocksScanned()">testBlocksScanned</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#testBlocksScannedWithEncoding()">testBlocksScannedWithEncoding</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -211,6 +246,68 @@ extends <a href="../../../../../org/apache/hadoop/hbase/HBaseTestCase.html" titl
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#line.45">FAMILY</a></pre>
+</li>
+</ul>
+<a name="COL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COL</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#line.46">COL</a></pre>
+</li>
+</ul>
+<a name="START_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_KEY</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#line.47">START_KEY</a></pre>
+</li>
+</ul>
+<a name="END_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>END_KEY</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#line.48">END_KEY</a></pre>
+</li>
+</ul>
+<a name="BLOCK_SIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BLOCK_SIZE</h4>
+<pre>private static&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#line.49">BLOCK_SIZE</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#line.51">TEST_UTIL</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -267,11 +364,23 @@ extends <a href="../../../../../org/apache/hadoop/hbase/HBaseTestCase.html" titl
 <a name="testBlocksScannedWithEncoding()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testBlocksScannedWithEncoding</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#line.76">testBlocksScannedWithEncoding</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="_testBlocksScanned(org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>_testBlocksScanned</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestBlocksScanned.html#line.91">_testBlocksScanned</a>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;table)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -328,13 +437,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/HBaseTestCase.html" titl
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.HBaseTestCase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

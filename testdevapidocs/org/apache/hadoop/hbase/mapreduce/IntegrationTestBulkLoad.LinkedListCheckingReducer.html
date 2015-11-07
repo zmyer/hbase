@@ -164,6 +164,11 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;<a href="../../../../../org/apach
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/IntegrationTestBulkLoad.LinkedListCheckingReducer.html#logError(java.lang.String,%20org.apache.hadoop.mapreduce.Reducer.Context)">logError</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msg,
+                org.apache.hadoop.mapreduce.Reducer.Context&nbsp;context)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/IntegrationTestBulkLoad.LinkedListCheckingReducer.html#reduce(org.apache.hadoop.hbase.mapreduce.IntegrationTestBulkLoad.LinkKey,%20java.lang.Iterable,%20org.apache.hadoop.mapreduce.Reducer.Context)">reduce</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/mapreduce/IntegrationTestBulkLoad.LinkKey.html" title="class in org.apache.hadoop.hbase.mapreduce">IntegrationTestBulkLoad.LinkKey</a>&nbsp;key,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/mapreduce/IntegrationTestBulkLoad.LinkChain.html" title="class in org.apache.hadoop.hbase.mapreduce">IntegrationTestBulkLoad.LinkChain</a>&gt;&nbsp;values,
@@ -218,7 +223,7 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;<a href="../../../../../org/apach
 <a name="reduce(org.apache.hadoop.hbase.mapreduce.IntegrationTestBulkLoad.LinkKey, java.lang.Iterable, org.apache.hadoop.mapreduce.Reducer.Context)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>reduce</h4>
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/IntegrationTestBulkLoad.LinkedListCheckingReducer.html#line.620">reduce</a>(<a href="../../../../../org/apache/hadoop/hbase/mapreduce/IntegrationTestBulkLoad.LinkKey.html" title="class in org.apache.hadoop.hbase.mapreduce">IntegrationTestBulkLoad.LinkKey</a>&nbsp;key,
@@ -232,6 +237,19 @@ extends org.apache.hadoop.mapreduce.Reducer&lt;<a href="../../../../../org/apach
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="logError(java.lang.String, org.apache.hadoop.mapreduce.Reducer.Context)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>logError</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/IntegrationTestBulkLoad.LinkedListCheckingReducer.html#line.659">logError</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msg,
+            org.apache.hadoop.mapreduce.Reducer.Context&nbsp;context)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>

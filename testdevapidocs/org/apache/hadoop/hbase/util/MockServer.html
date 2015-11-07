@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/LoadTestTool.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/LoadTestTool.WorkerThread.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -109,6 +109,45 @@ implements org.apache.hadoop.hbase.Server</pre>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MockServer.html#aborted">aborted</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MockServer.html#htu">htu</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MockServer.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.ServerName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MockServer.html#NAME">NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MockServer.html#stopped">stopped</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MockServer.html#zk">zk</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -206,6 +245,68 @@ implements org.apache.hadoop.hbase.Server</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MockServer.html#line.39">LOG</a></pre>
+</li>
+</ul>
+<a name="NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NAME</h4>
+<pre>static final&nbsp;org.apache.hadoop.hbase.ServerName <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MockServer.html#line.40">NAME</a></pre>
+</li>
+</ul>
+<a name="stopped">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stopped</h4>
+<pre>boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MockServer.html#line.42">stopped</a></pre>
+</li>
+</ul>
+<a name="aborted">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>aborted</h4>
+<pre>boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MockServer.html#line.43">aborted</a></pre>
+</li>
+</ul>
+<a name="zk">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>zk</h4>
+<pre>final&nbsp;org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MockServer.html#line.44">zk</a></pre>
+</li>
+</ul>
+<a name="htu">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>htu</h4>
+<pre>final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MockServer.html#line.45">htu</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -434,7 +535,7 @@ implements org.apache.hadoop.hbase.Server</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/LoadTestTool.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/LoadTestTool.WorkerThread.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -460,13 +561,13 @@ implements org.apache.hadoop.hbase.Server</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

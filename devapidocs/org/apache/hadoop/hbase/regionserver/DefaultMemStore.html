@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultHeapMemoryTuner.StepDirection.html" title="enum in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.MemStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -155,12 +155,80 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreLAB.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStoreLAB</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#allocator">allocator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/regionserver/CellSkipListSet.html" title="class in org.apache.hadoop.hbase.regionserver">CellSkipListSet</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#cellSet">cellSet</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#comparator">comparator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#DEEP_OVERHEAD">DEEP_OVERHEAD</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#FIXED_OVERHEAD">FIXED_OVERHEAD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#MSLAB_CLASS_NAME">MSLAB_CLASS_NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#size">size</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/regionserver/CellSkipListSet.html" title="class in org.apache.hadoop.hbase.regionserver">CellSkipListSet</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#snapshot">snapshot</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreLAB.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStoreLAB</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#snapshotAllocator">snapshotAllocator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#snapshotId">snapshotId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#snapshotSize">snapshotSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#snapshotTimeRangeTracker">snapshotTimeRangeTracker</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#tagsPresent">tagsPresent</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#timeOfOldestEdit">timeOfOldestEdit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#timeRangeTracker">timeRangeTracker</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#USEMSLAB_DEFAULT">USEMSLAB_DEFAULT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#USEMSLAB_KEY">USEMSLAB_KEY</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -209,16 +277,24 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#addToCellSet(org.apache.hadoop.hbase.Cell)">addToCellSet</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#clearSnapshot(long)">clearSnapshot</a></strong>(long&nbsp;id)</code>
 <div class="block">The passed snapshot was successfully persisted; it can be let go.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#delete(org.apache.hadoop.hbase.Cell)">delete</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;deleteCell)</code>
 <div class="block">Write a delete</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#dump()">dump</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
@@ -227,21 +303,51 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#getLowest(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell)">getLowest</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;a,
+                  <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;b)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#getNextRow(org.apache.hadoop.hbase.Cell)">getNextRow</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#getNextRow(org.apache.hadoop.hbase.Cell,%20java.util.NavigableSet)">getNextRow</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;set)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#getScanners(long)">getScanners</a></strong>(long&nbsp;readPt)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#getSnapshotSize()">getSnapshotSize</a></strong>()</code>
 <div class="block">Return the size of the snapshot(s) if any</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#heapSize()">heapSize</a></strong>()</code>
 <div class="block">Get the entire heap usage for this MemStore not including keys in the
  snapshot.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#heapSizeChange(org.apache.hadoop.hbase.Cell,%20boolean)">heapSizeChange</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
+                            boolean&nbsp;notpresent)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#internalAdd(org.apache.hadoop.hbase.Cell)">internalAdd</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;toAdd)</code>
+<div class="block">Internal version of add() that doesn't clone Cells with the
+ allocator, and doesn't take the lock.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#keySize()">keySize</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
@@ -251,33 +357,45 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#maybeCloneWithAllocator(org.apache.hadoop.hbase.Cell)">maybeCloneWithAllocator</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#removeFromCellSet(org.apache.hadoop.hbase.Cell)">removeFromCellSet</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#rollback(org.apache.hadoop.hbase.Cell)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>
 <div class="block">Remove n key from the memstore.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#setOldestEditTimeToNow()">setOldestEditTimeToNow</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#shouldSeek(org.apache.hadoop.hbase.client.Scan,%20long)">shouldSeek</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                     long&nbsp;oldestUnexpiredTS)</code>
 <div class="block">Check if this memstore may contain the required keys</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#size()">size</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#snapshot()">snapshot</a></strong>()</code>
 <div class="block">Creates a snapshot of the current memstore.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#timeOfOldestEdit()">timeOfOldestEdit</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#updateColumnValue(byte[],%20byte[],%20byte[],%20long,%20long)">updateColumnValue</a></strong>(byte[]&nbsp;row,
                                   byte[]&nbsp;family,
@@ -285,6 +403,14 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
                                   long&nbsp;newValue,
                                   long&nbsp;now)</code>
 <div class="block">Only used by tests.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#upsert(org.apache.hadoop.hbase.Cell,%20long)">upsert</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
+            long&nbsp;readpoint)</code>
+<div class="block">Inserts the specified KeyValue into MemStore and deletes any existing
+ versions of the same row/family/qualifier as the specified KeyValue.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -316,6 +442,162 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.69">LOG</a></pre>
+</li>
+</ul>
+<a name="USEMSLAB_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USEMSLAB_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.70">USEMSLAB_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DefaultMemStore.USEMSLAB_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="USEMSLAB_DEFAULT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USEMSLAB_DEFAULT</h4>
+<pre>private static final&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.71">USEMSLAB_DEFAULT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DefaultMemStore.USEMSLAB_DEFAULT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MSLAB_CLASS_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MSLAB_CLASS_NAME</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.72">MSLAB_CLASS_NAME</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DefaultMemStore.MSLAB_CLASS_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.74">conf</a></pre>
+</li>
+</ul>
+<a name="cellSet">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cellSet</h4>
+<pre>volatile&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/CellSkipListSet.html" title="class in org.apache.hadoop.hbase.regionserver">CellSkipListSet</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.81">cellSet</a></pre>
+</li>
+</ul>
+<a name="snapshot">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>snapshot</h4>
+<pre>volatile&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/CellSkipListSet.html" title="class in org.apache.hadoop.hbase.regionserver">CellSkipListSet</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.84">snapshot</a></pre>
+</li>
+</ul>
+<a name="comparator">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>comparator</h4>
+<pre>final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.86">comparator</a></pre>
+</li>
+</ul>
+<a name="size">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>size</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.89">size</a></pre>
+</li>
+</ul>
+<a name="snapshotSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>snapshotSize</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.90">snapshotSize</a></pre>
+</li>
+</ul>
+<a name="timeOfOldestEdit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>timeOfOldestEdit</h4>
+<pre>volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.93">timeOfOldestEdit</a></pre>
+</li>
+</ul>
+<a name="timeRangeTracker">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>timeRangeTracker</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.95">timeRangeTracker</a></pre>
+</li>
+</ul>
+<a name="snapshotTimeRangeTracker">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>snapshotTimeRangeTracker</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.96">snapshotTimeRangeTracker</a></pre>
+</li>
+</ul>
+<a name="allocator">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allocator</h4>
+<pre>volatile&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreLAB.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStoreLAB</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.98">allocator</a></pre>
+</li>
+</ul>
+<a name="snapshotAllocator">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>snapshotAllocator</h4>
+<pre>volatile&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreLAB.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStoreLAB</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.99">snapshotAllocator</a></pre>
+</li>
+</ul>
+<a name="snapshotId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>snapshotId</h4>
+<pre>volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.100">snapshotId</a></pre>
+</li>
+</ul>
+<a name="tagsPresent">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tagsPresent</h4>
+<pre>volatile&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.101">tagsPresent</a></pre>
+</li>
+</ul>
 <a name="FIXED_OVERHEAD">
 <!--   -->
 </a>
@@ -372,6 +654,15 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="dump()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dump</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.133">dump</a>()</pre>
+</li>
+</ul>
 <a name="snapshot()">
 <!--   -->
 </a>
@@ -465,6 +756,55 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <dt><span class="strong">Returns:</span></dt><dd>Oldest timestamp of all the Cells in the MemStore</dd></dl>
 </li>
 </ul>
+<a name="addToCellSet(org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addToCellSet</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.236">addToCellSet</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;e)</pre>
+</li>
+</ul>
+<a name="removeFromCellSet(org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeFromCellSet</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.249">removeFromCellSet</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;e)</pre>
+</li>
+</ul>
+<a name="setOldestEditTimeToNow()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOldestEditTimeToNow</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.255">setOldestEditTimeToNow</a>()</pre>
+</li>
+</ul>
+<a name="internalAdd(org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>internalAdd</h4>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.267">internalAdd</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;toAdd)</pre>
+<div class="block">Internal version of add() that doesn't clone Cells with the
+ allocator, and doesn't take the lock.
+
+ Callers should ensure they already have the read lock taken</div>
+</li>
+</ul>
+<a name="maybeCloneWithAllocator(org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maybeCloneWithAllocator</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.274">maybeCloneWithAllocator</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</pre>
+</li>
+</ul>
 <a name="rollback(org.apache.hadoop.hbase.Cell)">
 <!--   -->
 </a>
@@ -496,6 +836,38 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore.html#delete(org.apache.hadoop.hbase.Cell)">delete</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStore</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>deleteCell</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>approximate size of the passed key and value.</dd></dl>
+</li>
+</ul>
+<a name="getNextRow(org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNextRow</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.343">getNextRow</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cell</code> - Find the row that comes after this one.  If null, we return the
+ first.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Next row or null if none found.</dd></dl>
+</li>
+</ul>
+<a name="getLowest(org.apache.hadoop.hbase.Cell, org.apache.hadoop.hbase.Cell)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLowest</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.352">getLowest</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;a,
+             <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;b)</pre>
+</li>
+</ul>
+<a name="getNextRow(org.apache.hadoop.hbase.Cell, java.util.NavigableSet)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNextRow</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.368">getNextRow</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;set)</pre>
 </li>
 </ul>
 <a name="updateColumnValue(byte[], byte[], byte[], long, long)">
@@ -551,6 +923,27 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <dt><span class="strong">Returns:</span></dt><dd>change in memstore size</dd></dl>
 </li>
 </ul>
+<a name="upsert(org.apache.hadoop.hbase.Cell, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>upsert</h4>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.490">upsert</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
+          long&nbsp;readpoint)</pre>
+<div class="block">Inserts the specified KeyValue into MemStore and deletes any existing
+ versions of the same row/family/qualifier as the specified KeyValue.
+ <p>
+ First, the specified KeyValue is inserted into the Memstore.
+ <p>
+ If there are any existing KeyValues in this MemStore with the same row,
+ family, and qualifier, they are removed.
+ <p>
+ Callers must hold the read lock.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cell</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>change in size of MemStore</dd></dl>
+</li>
+</ul>
 <a name="getScanners(long)">
 <!--   -->
 </a>
@@ -575,6 +968,25 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <div class="block">Check if this memstore may contain the required keys</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>scan</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>False if the key definitely does not exist in this Memstore</dd></dl>
+</li>
+</ul>
+<a name="heapSizeChange(org.apache.hadoop.hbase.Cell, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>heapSizeChange</h4>
+<pre>static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.921">heapSizeChange</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
+                  boolean&nbsp;notpresent)</pre>
+</li>
+</ul>
+<a name="keySize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>keySize</h4>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.926">keySize</a>()</pre>
 </li>
 </ul>
 <a name="heapSize()">
@@ -646,7 +1058,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultHeapMemoryTuner.StepDirection.html" title="enum in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.MemStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

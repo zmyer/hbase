@@ -7718,7 +7718,7 @@ hash-joins). So which is the best approach? It depends on what you are trying to
 <h2 id="_acid"><a class="anchor" href="#_acid"></a>31. ACID</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See <a href="http://hbase.apache.org/acid-semantics.html">ACID Semantics</a>.
+<p>See <a href="/acid-semantics.html">ACID Semantics</a>.
 Lars Hofhansl has also written a note on <a href="http://hadoop-hbase.blogspot.com/2012/03/acid-in-hbase.html">ACID in HBase</a>.</p>
 </div>
 </div>
@@ -11785,7 +11785,7 @@ The correct way to apply cell level labels is to do so in the application code w
 <div class="paragraph">
 <p><a href="#reading_cells_with_labels">[reading_cells_with_labels]</a>
 ==== Reading Cells with Labels
-When you issue a Scan or Get, HBase uses your default set of authorizations to filter out cells that you do not have access to. A superuser can set the default set of authorizations for a given user by using the <code>set_auths</code> HBase Shell command or the <a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#setAuths(org.apache.hadoop.conf.Configuration,%20java.lang.String\">],%20java.lang.String)[VisibilityClient.setAuths()</a> method.</p>
+When you issue a Scan or Get, HBase uses your default set of authorizations to filter out cells that you do not have access to. A superuser can set the default set of authorizations for a given user by using the <code>set_auths</code> HBase Shell command or the <a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#setAuths(org.apache.hadoop.hbase.client.Connection,%20java.lang.String" class="bare">http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#setAuths(org.apache.hadoop.hbase.client.Connection,%20java.lang.String</a>,%20java.lang.String)[VisibilityClient.setAuths()] method.</p>
 </div>
 <div class="paragraph">
 <p>You can specify a different authorization during the Scan or Get, by passing the AUTHORIZATIONS option in HBase Shell, or the <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Scan.html#setAuthorizations%28org.apache.hadoop.hbase.security.visibility.Authorizations%29">setAuthorizations()</a> method if you use the API. This authorization will be combined with your default set as an additional filter. It will further filter your results, rather than giving you additional authorization.</p>
@@ -12114,7 +12114,8 @@ Next, configure fallback to the old master key in the <em>hbase-site.xml</em> fi
 <h3 id="hbase.secure.bulkload"><a class="anchor" href="#hbase.secure.bulkload"></a>59.5. Secure Bulk Load</h3>
 <div class="paragraph">
 <p>Bulk loading in secure mode is a bit more involved than normal setup, since the client has to transfer the ownership of the files generated from the MapReduce job to HBase.
-Secure bulk loading is implemented by a coprocessor, named <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html">SecureBulkLoadEndpoint</a>, which uses a staging directory configured by the configuration property <code>hbase.bulkload.staging.dir</code>, which defaults to <em>/tmp/hbase-staging/</em>.</p>
+Secure bulk loading is implemented by a coprocessor, named link:http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html
+[SecureBulkLoadEndpoint], which uses a staging directory configured by the configuration property <code>hbase.bulkload.staging.dir</code>, which defaults to <em>/tmp/hbase-staging/</em>.</p>
 </div>
 <div class="ulist">
 <div class="title">Secure Bulk Load Algorithm</div>
@@ -12503,7 +12504,10 @@ If a region has both an empty start and an empty end key, it is the only region 
 </table>
 </div>
 <div class="paragraph">
-<p>In the (hopefully unlikely) event that programmatic processing of catalog metadata is required, see the <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/util/Writables.html#getHRegionInfo%28byte" class="bare">http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/util/Writables.html#getHRegionInfo%28byte</a>%29[Writables] utility.</p>
+<p>In the (hopefully unlikely) event that programmatic processing of catalog metadata
+is required, see the
+<a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/util/Writables.html#getHRegionInfo%28byte" class="bare">http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/util/Writables.html#getHRegionInfo%28byte</a>%29[Writables]
+utility.</p>
 </div>
 </div>
 <div class="sect2">
@@ -12628,13 +12632,13 @@ Please use <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/clie
 <div class="sect2">
 <h3 id="client.writebuffer"><a class="anchor" href="#client.writebuffer"></a>63.2. WriteBuffer and Batch Methods</h3>
 <div class="paragraph">
-<p>In HBase 1.0 and later, <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/HTable.html">HTable</a> is deprecated in favor of <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Table.html">Table</a>. <code>Table</code> does not use autoflush. To do buffered writes, use the BufferedMutator class.</p>
+<p>In HBase 1.0 and later, <a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/client/HTable.html">HTable</a> is deprecated in favor of <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Table.html">Table</a>. <code>Table</code> does not use autoflush. To do buffered writes, use the BufferedMutator class.</p>
 </div>
 <div class="paragraph">
 <p>Before a <code>Table</code> or <code>HTable</code> instance is discarded, invoke either <code>close()</code> or <code>flushCommits()</code>, so `Put`s will not be lost.</p>
 </div>
 <div class="paragraph">
-<p>For additional information on write durability, review the <a href="../acid-semantics.html">ACID semantics</a> page.</p>
+<p>For additional information on write durability, review the <a href="/acid-semantics.html">ACID semantics</a> page.</p>
 </div>
 <div class="paragraph">
 <p>For fine-grained control of batching of <code>Put</code>s or <code>Delete</code>s, see the <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Table.html#batch%28java.util.List%29">batch</a> methods on Table.</p>
@@ -13295,7 +13299,7 @@ Let us call this deploy format, <em>Raw L1+L2</em>.</p>
 </div>
 <div class="paragraph">
 <p>Other BucketCache configs include: specifying a location to persist cache to across restarts, how many threads to use writing the cache, etc.
-See the <a href="https://hbase.apache.org/apidocs/org/apache/hadoop/hbase/io/hfile/CacheConfig.html">CacheConfig.html</a> class for configuration options and descriptions.</p>
+See the <a href="https://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/io/hfile/CacheConfig.html">CacheConfig.html</a> class for configuration options and descriptions.</p>
 </div>
 <div class="sect5">
 <h6 id="_bucketcache_example_configuration"><a class="anchor" href="#_bucketcache_example_configuration"></a>BucketCache Example Configuration</h6>
@@ -14289,8 +14293,10 @@ See <a href="#disable.splitting">Managed Splitting</a> for how to manually manag
 <div class="sect3">
 <h4 id="_custom_split_policies"><a class="anchor" href="#_custom_split_policies"></a>67.4.1. Custom Split Policies</h4>
 <div class="paragraph">
-<p>You can override the default split policy using a custom <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html">RegionSplitPolicy</a>(HBase 0.94+). Typically a custom split policy should extend
-HBase&#8217;s default split policy: <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/regionserver/IncreasingToUpperBoundRegionSplitPolicy.html">IncreasingToUpperBoundRegionSplitPolicy</a>.</p>
+<p>You can override the default split policy using a custom
+<a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html">RegionSplitPolicy</a>(HBase 0.94+).
+Typically a custom split policy should extend HBase&#8217;s default split policy:
+<a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/regionserver/IncreasingToUpperBoundRegionSplitPolicy.html">IncreasingToUpperBoundRegionSplitPolicy</a>.</p>
 </div>
 <div class="paragraph">
 <p>The policy can set globally through the HBase configuration or on a per-table
@@ -14323,7 +14329,10 @@ admin.createTable(tableDesc);
 </div>
 </div>
 <div class="paragraph">
-<p>The default split policy can be overwritten using a custom <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html">RegionSplitPolicy(HBase 0.94+)</a>. Typically a custom split policy should extend HBase&#8217;s default split policy: <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html">ConstantSizeRegionSplitPolicy</a>.</p>
+<p>The default split policy can be overwritten using a custom
+link:http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html
+[RegionSplitPolicy(HBase 0.94+)]. Typically a custom split policy should extend HBase&#8217;s default split policy:
+<a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html">ConstantSizeRegionSplitPolicy</a>.</p>
 </div>
 <div class="paragraph">
 <p>The policy can be set globally through the HBaseConfiguration used or on a per table basis:</p>
@@ -14411,9 +14420,15 @@ For instance, the following command creates a table with regions that split at e
 <p>The RegionSplitter tool is provided with HBase, and uses a <em>SplitAlgorithm</em> to determine split points for you.
 As parameters, you give it the algorithm, desired number of regions, and column families.
 It includes two split algorithms.
-The first is the <code><a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/util/RegionSplitter.HexStringSplit.html">HexStringSplit</a></code> algorithm, which assumes the row keys are hexadecimal strings.
-The second, <code><a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/util/RegionSplitter.UniformSplit.html">UniformSplit</a></code>, assumes the row keys are random byte arrays.
-You will probably need to develop your own <code><a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/util/RegionSplitter.SplitAlgorithm.html">SplitAlgorithm</a></code>, using the provided ones as models.</p>
+The first is the
+<code><a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/util/RegionSplitter.HexStringSplit.html">HexStringSplit</a></code>
+algorithm, which assumes the row keys are hexadecimal strings.
+The second,
+<code><a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/util/RegionSplitter.UniformSplit.html">UniformSplit</a></code>,
+assumes the row keys are random byte arrays.
+You will probably need to develop your own
+<code><a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/util/RegionSplitter.SplitAlgorithm.html">SplitAlgorithm</a></code>,
+using the provided ones as models.</p>
 </dd>
 </dl>
 </div>
@@ -17247,12 +17262,13 @@ libraryDependencies ++= Seq(
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="scala">import org.apache.hadoop.hbase.HBaseConfiguration
-import org.apache.hadoop.hbase.client.{HBaseAdmin,HTable,Put,Get}
+import org.apache.hadoop.hbase.client.{Connection,ConnectionFactory,HBaseAdmin,HTable,Put,Get}
 import org.apache.hadoop.hbase.util.Bytes
 
 
 val conf = new HBaseConfiguration()
-val admin = new HBaseAdmin(conf)
+val connection = ConnectionFactory.createConnection(conf);
+val admin = connection.getAdmin();
 
 // list the tables
 val listtables=admin.listTables()
@@ -18921,10 +18937,11 @@ coprocessor.jar| org.myname.hbase.Coprocessor.RegionObserverExample|1073741823|'
 <p><strong>Using setValue()</strong> method of HTableDescriptor: This is done entirely in Java as follows:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">String</span> tableName = <span class="string"><span class="delimiter">&quot;</span><span class="content">users</span><span class="delimiter">&quot;</span></span>;
+<pre class="CodeRay highlight"><code data-lang="java">TableName tableName = TableName.valueOf(<span class="string"><span class="delimiter">&quot;</span><span class="content">users</span><span class="delimiter">&quot;</span></span>);
 <span class="predefined-type">String</span> path = <span class="string"><span class="delimiter">&quot;</span><span class="content">hdfs://&lt;namenode&gt;:&lt;port&gt;/user/&lt;hadoop-user&gt;/coprocessor.jar</span><span class="delimiter">&quot;</span></span>;
 <span class="predefined-type">Configuration</span> conf = HBaseConfiguration.create();
-HBaseAdmin admin = <span class="keyword">new</span> HBaseAdmin(conf);
+<span class="predefined-type">Connection</span> connection = ConnectionFactory.createConnection(conf);
+Admin admin = connection.getAdmin();
 admin.disableTable(tableName);
 HTableDescriptor hTableDescriptor = <span class="keyword">new</span> HTableDescriptor(tableName);
 HColumnDescriptor columnFamily1 = <span class="keyword">new</span> HColumnDescriptor(<span class="string"><span class="delimiter">&quot;</span><span class="content">personalDet</span><span class="delimiter">&quot;</span></span>);
@@ -19004,10 +19021,11 @@ Coprocessor either in setValue() or addCoprocessor() methods. This will remove t
 attached to this table, if any. For example:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">String</span> tableName = <span class="string"><span class="delimiter">&quot;</span><span class="content">users</span><span class="delimiter">&quot;</span></span>;
+<pre class="CodeRay highlight"><code data-lang="java">TableName tableName = TableName.valueOf(<span class="string"><span class="delimiter">&quot;</span><span class="content">users</span><span class="delimiter">&quot;</span></span>);
 <span class="predefined-type">String</span> path = <span class="string"><span class="delimiter">&quot;</span><span class="content">hdfs://&lt;namenode&gt;:&lt;port&gt;/user/&lt;hadoop-user&gt;/coprocessor.jar</span><span class="delimiter">&quot;</span></span>;
 <span class="predefined-type">Configuration</span> conf = HBaseConfiguration.create();
-HBaseAdmin admin = <span class="keyword">new</span> HBaseAdmin(conf);
+<span class="predefined-type">Connection</span> connection = ConnectionFactory.createConnection(conf);
+Admin admin = connection.getAdmin();
 admin.disableTable(tableName);
 HTableDescriptor hTableDescriptor = <span class="keyword">new</span> HTableDescriptor(tableName);
 HColumnDescriptor columnFamily1 = <span class="keyword">new</span> HColumnDescriptor(<span class="string"><span class="delimiter">&quot;</span><span class="content">personalDet</span><span class="delimiter">&quot;</span></span>);
@@ -19117,7 +19135,7 @@ Following are the implementation steps:</p>
 <ol class="arabic">
 <li>
 <p>Write a class that extends the
-<a href="https://hbase.apache.org/apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html">BaseRegionObserver</a>
+<a href="https://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html">BaseRegionObserver</a>
 class.</p>
 </li>
 <li>
@@ -19729,7 +19747,8 @@ tableDesc.addFamily(cfDesc);
 </div>
 </div>
 <div class="paragraph">
-<p>See the API documentation for <a href="https://hbase.apache.org/apidocs/org/apache/hadoop/hbase/io/hfile/CacheConfig.html">CacheConfig</a>.</p>
+<p>See the API documentation for
+<a href="https://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/io/hfile/CacheConfig.html">CacheConfig</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -23442,10 +23461,14 @@ See <a href="https://issues.apache.org/jira/browse/HBASE-4391">HBASE-4391 Add ab
 <div class="sect2">
 <h3 id="compaction.tool"><a class="anchor" href="#compaction.tool"></a>126.16. Offline Compaction Tool</h3>
 <div class="paragraph">
-<p>See the usage for the <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/regionserver/CompactionTool.html">Compaction
-          Tool</a>.
-Run it like this ./bin/hbase
-          org.apache.hadoop.hbase.regionserver.CompactionTool</p>
+<p>See the usage for the
+<a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/regionserver/CompactionTool.html">CompactionTool</a>.
+Run it like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ ./bin/hbase org.apache.hadoop.hbase.regionserver.CompactionTool</code></pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -26216,13 +26239,6 @@ You can use maven profile  <code>compile-thrift</code> to do this.</p>
 Its not an error.
 It is <a href="http://jira.codehaus.org/browse/MSITE-286">officially
                         ugly</a> though.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="build.snappy"><a class="anchor" href="#build.snappy"></a>140.1.8. Building in snappy compression support</h4>
-<div class="paragraph">
-<p>Pass <code>-Psnappy</code> to trigger the <code>hadoop-snappy</code> maven profile for building Google Snappy native libraries into HBase.
-See also <a href="#snappy.compression.installation">snappy.compression.installation</a></p>
 </div>
 </div>
 </div>
@@ -31971,7 +31987,7 @@ The length can be calculated from entryOffsets.</p>
 <div class="sect3">
 <h4 id="_file_info_format_in_versions_1_and_2"><a class="anchor" href="#_file_info_format_in_versions_1_and_2"></a>H.2.8. File Info format in versions 1 and 2</h4>
 <div class="paragraph">
-<p>The file info block is a serialized <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/io/HbaseMapWritable.html">HbaseMapWritable</a> (essentially a map from byte arrays to byte arrays) with the following keys, among others.
+<p>The file info block is a serialized <a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/io/HbaseMapWritable.html">HbaseMapWritable</a> (essentially a map from byte arrays to byte arrays) with the following keys, among others.
 StoreFile-level logic adds more keys to this.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
@@ -32792,7 +32808,7 @@ The server will return cellblocks compressed using this same compressor as long 
 <div id="footer">
 <div id="footer-text">
 Version 2.0.0-SNAPSHOT<br>
-Last updated 2015-11-05 09:17:27 +10:00
+Last updated 2015-11-07 15:37:35 +10:00
 </div>
 </div>
 </body>

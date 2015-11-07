@@ -152,6 +152,31 @@
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a></code></td>
 <td class="colLast"><span class="strong">AbstractRpcClient.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AbstractRpcClient.html#codec">codec</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a></code></td>
+<td class="colLast"><span class="strong">RpcClientImpl.Connection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClientImpl.Connection.html#codec">codec</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a></code></td>
+<td class="colLast"><span class="strong">RpcServer.Connection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Connection.html#codec">codec</a></strong></code>
+<div class="block">Codec the client asked use.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> that return <a href="../../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a></code></td>
+<td class="colLast"><span class="strong">AbstractRpcClient.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AbstractRpcClient.html#getCodec()">getCodec</a></strong>()</code>
+<div class="block">Encapsulate the ugly casting and RuntimeException conversion in private method.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -201,6 +226,19 @@
                                 org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor)</code>
 <div class="block">Creates a connection.</div>
 </td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClientImpl.Connection.html#RpcClientImpl.Connection(org.apache.hadoop.hbase.ipc.ConnectionId,%20org.apache.hadoop.hbase.codec.Codec,%20org.apache.hadoop.io.compress.CompressionCodec)">RpcClientImpl.Connection</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/ipc/ConnectionId.html" title="class in org.apache.hadoop.hbase.ipc">ConnectionId</a>&nbsp;remoteId,
+                                                <a href="../../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
+                                                org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

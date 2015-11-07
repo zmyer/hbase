@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -95,14 +95,14 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd>org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStrategy</dd>
+<dd><a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html" title="interface in org.apache.hadoop.hbase.wal">RegionGroupingProvider.RegionGroupingStrategy</a></dd>
 </dl>
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
 public class <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#line.34">BoundedGroupingStrategy</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStrategy</pre>
+implements <a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html" title="interface in org.apache.hadoop.hbase.wal">RegionGroupingProvider.RegionGroupingStrategy</a></pre>
 <div class="block">A WAL grouping strategy that limits the number of wal groups to
  "hbase.wal.regiongrouping.numgroups".</div>
 </li>
@@ -117,12 +117,39 @@ implements org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStra
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#counter">counter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#DEFAULT_NUM_REGION_GROUPS">DEFAULT_NUM_REGION_GROUPS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#groupNameCache">groupNameCache</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#groupNames">groupNames</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#NUM_REGION_GROUPS">NUM_REGION_GROUPS</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStrategy">
 <!--   -->
 </a>
-<h3>Fields inherited from interface&nbsp;org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStrategy</h3>
-<code>GROUP_NAME_DELIMITER</code></li>
+<h3>Fields inherited from interface&nbsp;org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html" title="interface in org.apache.hadoop.hbase.wal">RegionGroupingProvider.RegionGroupingStrategy</a></h3>
+<code><a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html#GROUP_NAME_DELIMITER">GROUP_NAME_DELIMITER</a></code></li>
 </ul>
 </li>
 </ul>
@@ -183,6 +210,61 @@ implements org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStra
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="NUM_REGION_GROUPS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NUM_REGION_GROUPS</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#line.36">NUM_REGION_GROUPS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.wal.BoundedGroupingStrategy.NUM_REGION_GROUPS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_NUM_REGION_GROUPS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_NUM_REGION_GROUPS</h4>
+<pre>static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#line.37">DEFAULT_NUM_REGION_GROUPS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.wal.BoundedGroupingStrategy.DEFAULT_NUM_REGION_GROUPS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="groupNameCache">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>groupNameCache</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#line.39">groupNameCache</a></pre>
+</li>
+</ul>
+<a name="counter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>counter</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#line.41">counter</a></pre>
+</li>
+</ul>
+<a name="groupNames">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>groupNames</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#line.42">groupNames</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -214,11 +296,11 @@ implements org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStra
 <h4>group</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html#line.45">group</a>(byte[]&nbsp;identifier,
            byte[]&nbsp;namespace)</pre>
-<div class="block"><strong>Description copied from interface:&nbsp;<code>org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStrategy</code></strong></div>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html#group(byte[],%20byte[])">RegionGroupingProvider.RegionGroupingStrategy</a></code></strong></div>
 <div class="block">Given an identifier and a namespace, pick a group.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>group</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStrategy</code></dd>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html#group(byte[],%20byte[])">group</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html" title="interface in org.apache.hadoop.hbase.wal">RegionGroupingProvider.RegionGroupingStrategy</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -232,7 +314,7 @@ implements org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStra
         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerId)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>init</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStrategy</code></dd>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html#init(org.apache.hadoop.conf.Configuration,%20java.lang.String)">init</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html" title="interface in org.apache.hadoop.hbase.wal">RegionGroupingProvider.RegionGroupingStrategy</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -288,13 +370,13 @@ implements org.apache.hadoop.hbase.wal.RegionGroupingProvider.RegionGroupingStra
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

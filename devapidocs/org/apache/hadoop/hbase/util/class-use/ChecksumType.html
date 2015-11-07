@@ -98,6 +98,27 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a> in <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a></code></td>
+<td class="colLast"><span class="strong">HFileContext.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html#checksumType">checksumType</a></strong></code>
+<div class="block">the checksum type</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a></code></td>
+<td class="colLast"><span class="strong">HFileContextBuilder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContextBuilder.html#checksumType">checksumType</a></strong></code>
+<div class="block">the checksum type</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> that return <a href="../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -119,8 +140,42 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><span class="strong">ChecksumUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/ChecksumUtil.html#generateChecksums(byte[],%20int,%20int,%20byte[],%20int,%20org.apache.hadoop.hbase.util.ChecksumType,%20int)">generateChecksums</a></strong>(byte[]&nbsp;indata,
+                                  int&nbsp;startOffset,
+                                  int&nbsp;endOffset,
+                                  byte[]&nbsp;outdata,
+                                  int&nbsp;outOffset,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a>&nbsp;checksumType,
+                                  int&nbsp;bytesPerChecksum)</code>
+<div class="block">Generates a checksum for all the data in indata.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContextBuilder.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContextBuilder</a></code></td>
 <td class="colLast"><span class="strong">HFileContextBuilder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContextBuilder.html#withChecksumType(org.apache.hadoop.hbase.util.ChecksumType)">withChecksumType</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a>&nbsp;checkSumType)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html#HFileContext(boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20boolean,%20org.apache.hadoop.hbase.util.ChecksumType,%20int,%20int,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context,%20long,%20java.lang.String)">HFileContext</a></strong>(boolean&nbsp;useHBaseChecksum,
+                        boolean&nbsp;includesMvcc,
+                        boolean&nbsp;includesTags,
+                        <a href="../../../../../../org/apache/hadoop/hbase/io/compress/Compression.Algorithm.html" title="enum in org.apache.hadoop.hbase.io.compress">Compression.Algorithm</a>&nbsp;compressAlgo,
+                        boolean&nbsp;compressTags,
+                        <a href="../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a>&nbsp;checksumType,
+                        int&nbsp;bytesPerChecksum,
+                        int&nbsp;blockSize,
+                        <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;encoding,
+                        <a href="../../../../../../org/apache/hadoop/hbase/io/crypto/Encryption.Context.html" title="class in org.apache.hadoop.hbase.io.crypto">Encryption.Context</a>&nbsp;cryptoContext,
+                        long&nbsp;fileCreateTime,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hfileName)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

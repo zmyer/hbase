@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -106,6 +106,69 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#endRow">endRow</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#htable">htable</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#lastSuccessfulRow">lastSuccessfulRow</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#logPerRowCount">logPerRowCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#logScannerActivity">logScannerActivity</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#rowcount">rowcount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#scanner">scanner</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#startRow">startRow</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#timestamp">timestamp</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#trrInputColumns">trrInputColumns</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#trrRowFilter">trrRowFilter</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -156,39 +219,43 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#getProgress()">getProgress</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#getStartRow()">getStartRow</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#init()">init</a></strong>()</code>
 <div class="block">Build the scanner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#next(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result)">next</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/io/ImmutableBytesWritable.html" title="class in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
         <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#restart(byte[])">restart</a></strong>(byte[]&nbsp;firstRow)</code>
 <div class="block">Restart from survivable exceptions by creating a new scanner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#setEndRow(byte[])">setEndRow</a></strong>(byte[]&nbsp;endRow)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#setHTable(org.apache.hadoop.hbase.client.Table)">setHTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;htable)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#setInputColumns(byte[][])">setInputColumns</a></strong>(byte[][]&nbsp;inputColumns)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#setRowFilter(org.apache.hadoop.hbase.filter.Filter)">setRowFilter</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;rowFilter)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#setStartRow(byte[])">setStartRow</a></strong>(byte[]&nbsp;startRow)</code>&nbsp;</td>
 </tr>
@@ -208,6 +275,122 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.48">LOG</a></pre>
+</li>
+</ul>
+<a name="startRow">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startRow</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.50">startRow</a></pre>
+</li>
+</ul>
+<a name="endRow">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endRow</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.51">endRow</a></pre>
+</li>
+</ul>
+<a name="lastSuccessfulRow">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastSuccessfulRow</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.52">lastSuccessfulRow</a></pre>
+</li>
+</ul>
+<a name="trrRowFilter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>trrRowFilter</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.53">trrRowFilter</a></pre>
+</li>
+</ul>
+<a name="scanner">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanner</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.54">scanner</a></pre>
+</li>
+</ul>
+<a name="htable">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>htable</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.55">htable</a></pre>
+</li>
+</ul>
+<a name="trrInputColumns">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>trrInputColumns</h4>
+<pre>private&nbsp;byte[][] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.56">trrInputColumns</a></pre>
+</li>
+</ul>
+<a name="timestamp">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>timestamp</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.57">timestamp</a></pre>
+</li>
+</ul>
+<a name="rowcount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowcount</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.58">rowcount</a></pre>
+</li>
+</ul>
+<a name="logScannerActivity">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logScannerActivity</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.59">logScannerActivity</a></pre>
+</li>
+</ul>
+<a name="logPerRowCount">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>logPerRowCount</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.60">logPerRowCount</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -256,6 +439,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Build the scanner. Not done in constructor to allow for extension.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getStartRow()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStartRow</h4>
+<pre>byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TableRecordReaderImpl.html#line.113">getStartRow</a>()</pre>
 </li>
 </ul>
 <a name="setHTable(org.apache.hadoop.hbase.client.Table)">
@@ -422,13 +614,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

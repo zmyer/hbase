@@ -2242,7 +2242,7 @@
 <a class="jxr_linenumber" name="2232" href="#2232">2232</a> <em class="jxr_javadoccomment">   * @return a RegionStoreSequenceIds object</em>
 <a class="jxr_linenumber" name="2233" href="#2233">2233</a> <em class="jxr_javadoccomment">   * @throws DeserializationException</em>
 <a class="jxr_linenumber" name="2234" href="#2234">2234</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2235" href="#2235">2235</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">RegionStoreSequenceIds</a> parseRegionStoreSequenceIds(<strong class="jxr_keyword">final</strong> byte[] bytes)
+<a class="jxr_linenumber" name="2235" href="#2235">2235</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> RegionStoreSequenceIds parseRegionStoreSequenceIds(<strong class="jxr_keyword">final</strong> byte[] bytes)
 <a class="jxr_linenumber" name="2236" href="#2236">2236</a>       <strong class="jxr_keyword">throws</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a> {
 <a class="jxr_linenumber" name="2237" href="#2237">2237</a>     <strong class="jxr_keyword">if</strong> (bytes == <strong class="jxr_keyword">null</strong> || !ProtobufUtil.isPBMagicPrefix(bytes)) {
 <a class="jxr_linenumber" name="2238" href="#2238">2238</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a>(<span class="jxr_string">"Unable to parse RegionStoreSequenceIds."</span>);
@@ -2250,7 +2250,7 @@
 <a class="jxr_linenumber" name="2240" href="#2240">2240</a>     RegionStoreSequenceIds.Builder regionSequenceIdsBuilder =
 <a class="jxr_linenumber" name="2241" href="#2241">2241</a>         ClusterStatusProtos.RegionStoreSequenceIds.newBuilder();
 <a class="jxr_linenumber" name="2242" href="#2242">2242</a>     <strong class="jxr_keyword">int</strong> pblen = ProtobufUtil.lengthOfPBMagic();
-<a class="jxr_linenumber" name="2243" href="#2243">2243</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">RegionStoreSequenceIds</a> storeIds = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="2243" href="#2243">2243</a>     RegionStoreSequenceIds storeIds = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="2244" href="#2244">2244</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="2245" href="#2245">2245</a>       ProtobufUtil.mergeFrom(regionSequenceIdsBuilder, bytes, pblen, bytes.length - pblen);
 <a class="jxr_linenumber" name="2246" href="#2246">2246</a>       storeIds = regionSequenceIdsBuilder.build();

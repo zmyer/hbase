@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.SingleFileSystemShutdownThread.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -137,8 +137,48 @@ implements org.apache.hadoop.hbase.regionserver.RegionServerServices</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#abortRequested">abortRequested</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.fs.HFileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#hfs">hfs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static org.apache.commons.logging.Log</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.regionserver.Region&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#regions">regions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentSkipListMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentSkipListMap</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#rit">rit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.ipc.RpcServerInterface</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#rpcServer">rpcServer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#running">running</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.ServerName</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#serverName">serverName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#stopping">stopping</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#zkw">zkw</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -155,7 +195,17 @@ implements org.apache.hadoop.hbase.regionserver.RegionServerServices</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#MockRegionServerServices()">MockRegionServerServices</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#MockRegionServerServices(org.apache.hadoop.conf.Configuration)">MockRegionServerServices</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#MockRegionServerServices(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher)">MockRegionServerServices</a></strong>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;zkw)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/MockRegionServerServices.html#MockRegionServerServices(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20org.apache.hadoop.hbase.ServerName)">MockRegionServerServices</a></strong>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;zkw,
+                                                org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -371,10 +421,100 @@ implements org.apache.hadoop.hbase.regionserver.RegionServerServices</pre>
 <a name="LOG">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
 <pre>protected static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.61">LOG</a></pre>
+</li>
+</ul>
+<a name="regions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regions</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.regionserver.Region&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.62">regions</a></pre>
+</li>
+</ul>
+<a name="rit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rit</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentSkipListMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentSkipListMap</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.63">rit</a></pre>
+</li>
+</ul>
+<a name="hfs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hfs</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.fs.HFileSystem <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.65">hfs</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.66">conf</a></pre>
+</li>
+</ul>
+<a name="zkw">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>zkw</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.67">zkw</a></pre>
+</li>
+</ul>
+<a name="serverName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverName</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.ServerName <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.68">serverName</a></pre>
+</li>
+</ul>
+<a name="rpcServer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rpcServer</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.ipc.RpcServerInterface <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.69">rpcServer</a></pre>
+</li>
+</ul>
+<a name="abortRequested">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>abortRequested</h4>
+<pre>private volatile&nbsp;boolean <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.70">abortRequested</a></pre>
+</li>
+</ul>
+<a name="stopping">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stopping</h4>
+<pre>private volatile&nbsp;boolean <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.71">stopping</a></pre>
+</li>
+</ul>
+<a name="running">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>running</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.72">running</a></pre>
 </li>
 </ul>
 </li>
@@ -385,6 +525,34 @@ implements org.apache.hadoop.hbase.regionserver.RegionServerServices</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
+<a name="MockRegionServerServices(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MockRegionServerServices</h4>
+<pre><a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.74">MockRegionServerServices</a>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;zkw)</pre>
+</li>
+</ul>
+<a name="MockRegionServerServices(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher, org.apache.hadoop.hbase.ServerName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MockRegionServerServices</h4>
+<pre><a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.78">MockRegionServerServices</a>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;zkw,
+                        org.apache.hadoop.hbase.ServerName&nbsp;serverName)</pre>
+</li>
+</ul>
+<a name="MockRegionServerServices()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MockRegionServerServices</h4>
+<pre><a href="../../../../src-html/org/apache/hadoop/hbase/MockRegionServerServices.html#line.84">MockRegionServerServices</a>()</pre>
+</li>
+</ul>
 <a name="MockRegionServerServices(org.apache.hadoop.conf.Configuration)">
 <!--   -->
 </a>
@@ -984,7 +1152,7 @@ implements org.apache.hadoop.hbase.regionserver.RegionServerServices</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/MiniHBaseCluster.SingleFileSystemShutdownThread.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

@@ -249,6 +249,11 @@ extends <a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperNodeT
  path.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/MasterAddressTracker.html#toByteArray(org.apache.hadoop.hbase.ServerName,%20int)">toByteArray</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn,
+                      int&nbsp;infoPort)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.zookeeper.ZooKeeperNodeTracker">
@@ -432,6 +437,19 @@ extends <a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperNodeT
 <pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/zookeeper/MasterAddressTracker.html#line.219">hasMaster</a>()</pre>
 <div class="block">Check if there is a master available.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if there is a master set, false if not.</dd></dl>
+</li>
+</ul>
+<a name="toByteArray(org.apache.hadoop.hbase.ServerName, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toByteArray</h4>
+<pre>static&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/zookeeper/MasterAddressTracker.html#line.228">toByteArray</a>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn,
+                 int&nbsp;infoPort)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>sn</code> - must not be null</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Content of the master znode as a serialized pb with the pb
+ magic as prefix.</dd></dl>
 </li>
 </ul>
 <a name="parse(byte[])">

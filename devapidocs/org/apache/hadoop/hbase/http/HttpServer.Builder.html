@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.ListenerInfo.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/http/HttpServer.Builder.html" target="_top">Frames</a></li>
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -108,6 +108,119 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.security.authorize.AccessControlList</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#adminsAcl">adminsAcl</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#appDir">appDir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#bindAddress">bindAddress</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.mortbay.jetty.Connector</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#connector">connector</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#endpoints">endpoints</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#findPort">findPort</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#hostName">hostName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#keyPassword">keyPassword</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#keyStore">keyStore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#keyStorePassword">keyStorePassword</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#keyStoreType">keyStoreType</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#keytabConfKey">keytabConfKey</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#logDir">logDir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#name">name</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#needsClientAuth">needsClientAuth</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#pathSpecs">pathSpecs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#port">port</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#securityEnabled">securityEnabled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#trustStore">trustStore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#trustStorePassword">trustStorePassword</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#trustStoreType">trustStoreType</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html#usernameConfKey">usernameConfKey</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -250,6 +363,227 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="endpoints">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endpoints</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.152">endpoints</a></pre>
+</li>
+</ul>
+<a name="connector">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>connector</h4>
+<pre>private&nbsp;org.mortbay.jetty.Connector <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.153">connector</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.154">conf</a></pre>
+</li>
+</ul>
+<a name="pathSpecs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pathSpecs</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.155">pathSpecs</a></pre>
+</li>
+</ul>
+<a name="adminsAcl">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>adminsAcl</h4>
+<pre>private&nbsp;org.apache.hadoop.security.authorize.AccessControlList <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.156">adminsAcl</a></pre>
+</li>
+</ul>
+<a name="securityEnabled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>securityEnabled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.157">securityEnabled</a></pre>
+</li>
+</ul>
+<a name="usernameConfKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>usernameConfKey</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.158">usernameConfKey</a></pre>
+</li>
+</ul>
+<a name="keytabConfKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>keytabConfKey</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.159">keytabConfKey</a></pre>
+</li>
+</ul>
+<a name="needsClientAuth">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>needsClientAuth</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.160">needsClientAuth</a></pre>
+</li>
+</ul>
+<a name="hostName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hostName</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.162">hostName</a></pre>
+</li>
+</ul>
+<a name="appDir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>appDir</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.163">appDir</a></pre>
+</li>
+</ul>
+<a name="logDir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logDir</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.164">logDir</a></pre>
+</li>
+</ul>
+<a name="findPort">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findPort</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.165">findPort</a></pre>
+</li>
+</ul>
+<a name="trustStore">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>trustStore</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.167">trustStore</a></pre>
+</li>
+</ul>
+<a name="trustStorePassword">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>trustStorePassword</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.168">trustStorePassword</a></pre>
+</li>
+</ul>
+<a name="trustStoreType">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>trustStoreType</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.169">trustStoreType</a></pre>
+</li>
+</ul>
+<a name="keyStore">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>keyStore</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.171">keyStore</a></pre>
+</li>
+</ul>
+<a name="keyStorePassword">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>keyStorePassword</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.172">keyStorePassword</a></pre>
+</li>
+</ul>
+<a name="keyStoreType">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>keyStoreType</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.173">keyStoreType</a></pre>
+</li>
+</ul>
+<a name="keyPassword">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>keyPassword</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.176">keyPassword</a></pre>
+</li>
+</ul>
+<a name="name">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>name</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.179">name</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="bindAddress">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bindAddress</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.181">bindAddress</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="port">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>port</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.Builder.html#line.183">port</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -507,7 +841,7 @@ public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Buil
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.ListenerInfo.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/http/HttpServer.Builder.html" target="_top">Frames</a></li>
@@ -532,13 +866,13 @@ public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Buil
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

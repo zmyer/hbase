@@ -145,6 +145,22 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#FS_PERMS">FS_PERMS</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#fsPerms">fsPerms</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#isForce">isForce</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#masterPrincipal">masterPrincipal</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#PRINCIPAL_ARG">PRINCIPAL_ARG</a></strong></code>&nbsp;</td>
 </tr>
@@ -157,6 +173,18 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#SKIP_CHECK_ZK">SKIP_CHECK_ZK</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#skipFSCheck">skipFSCheck</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#skipZKCheck">skipZKCheck</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#superUser">superUser</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#SUPERUSER_ARG">SUPERUSER_ARG</a></strong></code>&nbsp;</td>
 </tr>
@@ -204,20 +232,44 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#addOptions()">addOptions</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#assertZnodePerms(org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper,%20java.lang.String,%20boolean)">assertZnodePerms</a></strong>(org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper&nbsp;zk,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode,
+                                boolean&nbsp;expectedWorldReadable)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#checkZnodePermsRecursive(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper,%20java.lang.String)">checkZnodePermsRecursive</a></strong>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;watcher,
+                                                org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper&nbsp;zk,
+                                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#doWork()">doWork</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#getShortUserName(java.lang.String)">getShortUserName</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;principal)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#main(java.lang.String[])">main</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#processOptions(org.apache.commons.cli.CommandLine)">processOptions</a></strong>(org.apache.commons.cli.CommandLine&nbsp;cmd)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#setConf(org.apache.hadoop.conf.Configuration)">setConf</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#testFSPerms()">testFSPerms</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#testZNodeACLs()">testZNodeACLs</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -248,6 +300,69 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.70">LOG</a></pre>
+</li>
+</ul>
+<a name="superUser">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>superUser</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.71">superUser</a></pre>
+</li>
+</ul>
+<a name="masterPrincipal">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>masterPrincipal</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.72">masterPrincipal</a></pre>
+</li>
+</ul>
+<a name="isForce">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isForce</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.73">isForce</a></pre>
+</li>
+</ul>
+<a name="fsPerms">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fsPerms</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.74">fsPerms</a></pre>
+</li>
+</ul>
+<a name="skipFSCheck">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>skipFSCheck</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.75">skipFSCheck</a></pre>
+</li>
+</ul>
+<a name="skipZKCheck">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>skipZKCheck</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.76">skipZKCheck</a></pre>
+</li>
+</ul>
 <a name="FORCE_CHECK_ARG">
 <!--   -->
 </a>
@@ -374,6 +489,15 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 </dl>
 </li>
 </ul>
+<a name="getShortUserName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getShortUserName</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.111">getShortUserName</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;principal)</pre>
+</li>
+</ul>
 <a name="doWork()">
 <!--   -->
 </a>
@@ -387,6 +511,66 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <dd><code>doWork</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.util.AbstractHBaseTool</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testZNodeACLs()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testZNodeACLs</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.138">testZNodeACLs</a>()
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                           org.apache.zookeeper.KeeperException,
+                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code>org.apache.zookeeper.KeeperException</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkZnodePermsRecursive(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher, org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkZnodePermsRecursive</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.156">checkZnodePermsRecursive</a>(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;watcher,
+                            org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper&nbsp;zk,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)
+                               throws org.apache.zookeeper.KeeperException,
+                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>org.apache.zookeeper.KeeperException</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertZnodePerms(org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper, java.lang.String, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertZnodePerms</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.177">assertZnodePerms</a>(org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper&nbsp;zk,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode,
+                    boolean&nbsp;expectedWorldReadable)
+                       throws org.apache.zookeeper.KeeperException,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>org.apache.zookeeper.KeeperException</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testFSPerms()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testFSPerms</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestZKAndFSPermissions.html#line.207">testFSPerms</a>()
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="main(java.lang.String[])">

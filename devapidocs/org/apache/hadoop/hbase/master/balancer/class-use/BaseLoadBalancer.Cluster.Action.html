@@ -129,6 +129,43 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) abstract <a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a></code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.CandidateGenerator.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.CandidateGenerator.html#generate(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster)">generate</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a></code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.RandomCandidateGenerator.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.RandomCandidateGenerator.html#generate(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster)">generate</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a></code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.LoadCandidateGenerator.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.LoadCandidateGenerator.html#generate(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster)">generate</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a></code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.LocalityBasedCandidateGenerator.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.LocalityBasedCandidateGenerator.html#generate(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster)">generate</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a></code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.RegionReplicaCandidateGenerator.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.RegionReplicaCandidateGenerator.html#generate(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster)">generate</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a></code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.RegionReplicaRackCandidateGenerator.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.RegionReplicaRackCandidateGenerator.html#generate(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster)">generate</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a></code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.CandidateGenerator.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.CandidateGenerator.html#getAction(int,%20int,%20int,%20int)">getAction</a></strong>(int&nbsp;fromServer,
+                  int&nbsp;fromRegion,
+                  int&nbsp;toServer,
+                  int&nbsp;toRegion)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a></code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.CandidateGenerator.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.CandidateGenerator.html#pickRandomRegions(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster,%20int,%20int)">pickRandomRegions</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster,
+                                  int&nbsp;thisServer,
+                                  int&nbsp;otherServer)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a></code></td>
 <td class="colLast"><span class="strong">BaseLoadBalancer.Cluster.Action.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html#undoAction()">undoAction</a></strong>()</code>
 <div class="block">Returns an Action which would undo this action</div>
@@ -160,6 +197,13 @@
 <td class="colLast"><span class="strong">BaseLoadBalancer.Cluster.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html#doAction(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster.Action)">doAction</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a>&nbsp;action)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.CostFunction.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.CostFunction.html#postAction(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster.Action)">postAction</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a>&nbsp;action)</code>
+<div class="block">Called once per cluster Action to give the cost function
+ an opportunity to update it's state.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><span class="strong">StochasticLoadBalancer.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.html#updateCostsWithAction(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster,%20org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster.Action)">updateCostsWithAction</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster,
                                           <a href="../../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.Action.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster.Action</a>&nbsp;action)</code>&nbsp;</td>

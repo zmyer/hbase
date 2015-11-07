@@ -97,12 +97,12 @@
 <a class="jxr_linenumber" name="87" href="#87">87</a>              .setRequest(request.toByteString()).build();
 <a class="jxr_linenumber" name="88" href="#88">88</a>      RegionServerCallable&lt;CoprocessorServiceResponse&gt; callable =
 <a class="jxr_linenumber" name="89" href="#89">89</a>          <strong class="jxr_keyword">new</strong> RegionServerCallable&lt;CoprocessorServiceResponse&gt;(connection, table, row) {
-<a class="jxr_linenumber" name="90" href="#90">90</a>            <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> call(<strong class="jxr_keyword">int</strong> callTimeout) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="90" href="#90">90</a>            <strong class="jxr_keyword">public</strong> CoprocessorServiceResponse call(<strong class="jxr_keyword">int</strong> callTimeout) <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="91" href="#91">91</a>              byte[] regionName = getLocation().getRegionInfo().getRegionName();
 <a class="jxr_linenumber" name="92" href="#92">92</a>              <strong class="jxr_keyword">return</strong> ProtobufUtil.execService(getStub(), call, regionName);
 <a class="jxr_linenumber" name="93" href="#93">93</a>            }
 <a class="jxr_linenumber" name="94" href="#94">94</a>          };
-<a class="jxr_linenumber" name="95" href="#95">95</a>      <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> result = rpcFactory.&lt;CoprocessorServiceResponse&gt; newCaller()
+<a class="jxr_linenumber" name="95" href="#95">95</a>      CoprocessorServiceResponse result = rpcFactory.&lt;CoprocessorServiceResponse&gt; newCaller()
 <a class="jxr_linenumber" name="96" href="#96">96</a>          .callWithRetries(callable, operationTimeout);
 <a class="jxr_linenumber" name="97" href="#97">97</a>      Message response = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="98" href="#98">98</a>      <strong class="jxr_keyword">if</strong> (result.getValue().hasValue()) {

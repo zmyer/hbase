@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -104,6 +104,49 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.procedure.ProcedureCoordinator</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#coordinator">coordinator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.master.MetricsMaster</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#metrics">metrics</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.master.MasterFileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#mfs">mfs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.executor.ExecutorService</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#pool">pool</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.master.MasterServices</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#services">services</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#UTIL">UTIL</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -134,10 +177,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.master.snapshot.SnapshotManager</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#getNewManager()">getNewManager</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.master.snapshot.SnapshotManager</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#getNewManager(org.apache.hadoop.conf.Configuration)">getNewManager</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#isSnapshotSupported(org.apache.hadoop.hbase.master.snapshot.SnapshotManager)">isSnapshotSupported</a></strong>(org.apache.hadoop.hbase.master.snapshot.SnapshotManager&nbsp;manager)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#testInProcess()">testInProcess</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#testSnapshotSupportConfiguration()">testSnapshotSupportConfiguration</a></strong>()</code>
 <div class="block">Verify the snapshot support based on the configuration.</div>
@@ -159,6 +214,77 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.51">UTIL</a></pre>
+</li>
+</ul>
+<a name="services">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>services</h4>
+<pre>org.apache.hadoop.hbase.master.MasterServices <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.53">services</a></pre>
+</li>
+</ul>
+<a name="metrics">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>metrics</h4>
+<pre>org.apache.hadoop.hbase.master.MetricsMaster <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.54">metrics</a></pre>
+</li>
+</ul>
+<a name="coordinator">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>coordinator</h4>
+<pre>org.apache.hadoop.hbase.procedure.ProcedureCoordinator <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.55">coordinator</a></pre>
+</li>
+</ul>
+<a name="pool">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pool</h4>
+<pre>org.apache.hadoop.hbase.executor.ExecutorService <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.56">pool</a></pre>
+</li>
+</ul>
+<a name="mfs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mfs</h4>
+<pre>org.apache.hadoop.hbase.master.MasterFileSystem <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.57">mfs</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>fs</h4>
+<pre>org.apache.hadoop.fs.FileSystem <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.58">fs</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -182,6 +308,34 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getNewManager()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNewManager</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.master.snapshot.SnapshotManager&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.67">getNewManager</a>()
+                                                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                              org.apache.zookeeper.KeeperException</pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code>org.apache.zookeeper.KeeperException</code></dd></dl>
+</li>
+</ul>
+<a name="getNewManager(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNewManager</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.master.snapshot.SnapshotManager&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.71">getNewManager</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+                                                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                              org.apache.zookeeper.KeeperException</pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code>org.apache.zookeeper.KeeperException</code></dd></dl>
+</li>
+</ul>
 <a name="testInProcess()">
 <!--   -->
 </a>
@@ -199,7 +353,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testSnapshotSupportConfiguration()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testSnapshotSupportConfiguration</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.101">testSnapshotSupportConfiguration</a>()
@@ -207,6 +361,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Verify the snapshot support based on the configuration.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="isSnapshotSupported(org.apache.hadoop.hbase.master.snapshot.SnapshotManager)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isSnapshotSupported</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.html#line.153">isSnapshotSupported</a>(org.apache.hadoop.hbase.master.snapshot.SnapshotManager&nbsp;manager)</pre>
 </li>
 </ul>
 </li>
@@ -261,13 +424,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

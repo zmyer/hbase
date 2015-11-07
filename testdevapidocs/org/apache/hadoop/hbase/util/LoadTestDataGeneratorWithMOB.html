@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.util.test.LoadTestDataGenerator">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -120,6 +120,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/LoadTestDataGeneratorWithMOB.html#mobColumnFamily">mobColumnFamily</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.util.test.LoadTestKVGenerator</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/LoadTestDataGeneratorWithMOB.html#mobKvGenerator">mobKvGenerator</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.util.test.LoadTestDataGenerator">
 <!--   -->
@@ -166,6 +181,12 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/LoadTestDataGeneratorWithMOB.html#configureMob(byte[],%20int,%20int)">configureMob</a></strong>(byte[]&nbsp;mobColumnFamily,
+                        int&nbsp;minMobDataSize,
+                        int&nbsp;maxMobDataSize)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/LoadTestDataGeneratorWithMOB.html#generateValue(byte[],%20byte[],%20byte[])">generateValue</a></strong>(byte[]&nbsp;rowKey,
                           byte[]&nbsp;cf,
@@ -173,7 +194,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction
 <div class="block">Generates a value to be used for a particular row/cf/column.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/LoadTestDataGeneratorWithMOB.html#initialize(java.lang.String[])">initialize</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>
 <div class="block">initialize the LoadTestDataGenerator</div>
@@ -209,6 +230,32 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="mobColumnFamily">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobColumnFamily</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/util/LoadTestDataGeneratorWithMOB.html#line.30">mobColumnFamily</a></pre>
+</li>
+</ul>
+<a name="mobKvGenerator">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>mobKvGenerator</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.util.test.LoadTestKVGenerator <a href="../../../../../src-html/org/apache/hadoop/hbase/util/LoadTestDataGeneratorWithMOB.html#line.31">mobKvGenerator</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -258,6 +305,17 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html#initialize(java.lang.String[])">initialize</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html" title="class in org.apache.hadoop.hbase.util.test">LoadTestDataGenerator</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>args</code> - init args</dd></dl>
+</li>
+</ul>
+<a name="configureMob(byte[], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>configureMob</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/LoadTestDataGeneratorWithMOB.html#line.59">configureMob</a>(byte[]&nbsp;mobColumnFamily,
+                int&nbsp;minMobDataSize,
+                int&nbsp;maxMobDataSize)</pre>
 </li>
 </ul>
 <a name="generateValue(byte[], byte[], byte[])">
@@ -330,13 +388,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.util.test.LoadTestDataGenerator">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

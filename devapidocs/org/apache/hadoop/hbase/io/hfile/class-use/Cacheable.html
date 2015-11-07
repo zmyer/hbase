@@ -127,6 +127,36 @@
 </tr>
 </tbody>
 </table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></code></td>
+<td class="colLast"><span class="strong">LruCachedBlock.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#buf">buf</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> with type parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheableDeserializer.html" title="interface in org.apache.hadoop.hbase.io.hfile">CacheableDeserializer</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HFileBlock.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html#blockDeserializer">blockDeserializer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheableDeserializer.html" title="interface in org.apache.hadoop.hbase.io.hfile">CacheableDeserializer</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="strong">CacheableDeserializerIdManager.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheableDeserializerIdManager.html#registeredDeserializers">registeredDeserializers</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -275,6 +305,11 @@
                     boolean&nbsp;cacheDataInL1)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><span class="strong">LruBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#compare(org.apache.hadoop.hbase.io.hfile.Cacheable,%20org.apache.hadoop.hbase.io.hfile.Cacheable)">compare</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&nbsp;left,
+              <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&nbsp;right)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">BlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#returnBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20org.apache.hadoop.hbase.io.hfile.Cacheable)">returnBlock</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;cacheKey,
                       <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&nbsp;block)</code>
@@ -282,17 +317,17 @@
  is over.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">CombinedBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CombinedBlockCache.html#returnBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20org.apache.hadoop.hbase.io.hfile.Cacheable)">returnBlock</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;cacheKey,
                       <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">LruBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#returnBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20org.apache.hadoop.hbase.io.hfile.Cacheable)">returnBlock</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;cacheKey,
                       <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MemcachedBlockCache.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#returnBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20org.apache.hadoop.hbase.io.hfile.Cacheable)">returnBlock</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;cacheKey,
                       <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&nbsp;block)</code>&nbsp;</td>
@@ -339,6 +374,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a> in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></code></td>
+<td class="colLast"><span class="strong">BucketCache.RAMQueueEntry.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html#data">data</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -357,11 +405,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></code></td>
+<td class="colLast"><span class="strong">BucketCache.RAMQueueEntry.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html#getData()">getData</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></code></td>
 <td class="colLast"><span class="strong">ByteBufferIOEngine.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/ByteBufferIOEngine.html#read(long,%20int,%20org.apache.hadoop.hbase.io.hfile.CacheableDeserializer)">read</a></strong>(long&nbsp;offset,
         int&nbsp;length,
         <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheableDeserializer.html" title="interface in org.apache.hadoop.hbase.io.hfile">CacheableDeserializer</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&gt;&nbsp;deserializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></code></td>
 <td class="colLast"><span class="strong">FileIOEngine.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/FileIOEngine.html#read(long,%20int,%20org.apache.hadoop.hbase.io.hfile.CacheableDeserializer)">read</a></strong>(long&nbsp;offset,
         int&nbsp;length,
@@ -369,13 +421,26 @@
 <div class="block">Transfers data from file to the given byte buffer</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></code></td>
 <td class="colLast"><span class="strong">IOEngine.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/IOEngine.html#read(long,%20int,%20org.apache.hadoop.hbase.io.hfile.CacheableDeserializer)">read</a></strong>(long&nbsp;offset,
         int&nbsp;length,
         <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheableDeserializer.html" title="interface in org.apache.hadoop.hbase.io.hfile">CacheableDeserializer</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&gt;&nbsp;deserializer)</code>
 <div class="block">Transfers data from IOEngine to a Cacheable object.</div>
 </td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a> that return types with arguments of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheableDeserializer.html" title="interface in org.apache.hadoop.hbase.io.hfile">CacheableDeserializer</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&gt;</code></td>
+<td class="colLast"><span class="strong">BucketCache.BucketEntry.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html#deserializerReference(org.apache.hadoop.hbase.io.hfile.bucket.UniqueIndexMap)">deserializerReference</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/UniqueIndexMap.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">UniqueIndexMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;deserialiserMap)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -446,6 +511,25 @@
         <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheableDeserializer.html" title="interface in org.apache.hadoop.hbase.io.hfile">CacheableDeserializer</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&gt;&nbsp;deserializer)</code>
 <div class="block">Transfers data from IOEngine to a Cacheable object.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">BucketCache.BucketEntry.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.BucketEntry.html#setDeserialiserReference(org.apache.hadoop.hbase.io.hfile.CacheableDeserializer,%20org.apache.hadoop.hbase.io.hfile.bucket.UniqueIndexMap)">setDeserialiserReference</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheableDeserializer.html" title="interface in org.apache.hadoop.hbase.io.hfile">CacheableDeserializer</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&gt;&nbsp;deserializer,
+                                                <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/UniqueIndexMap.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">UniqueIndexMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;deserialiserMap)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html#BucketCache.RAMQueueEntry(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20org.apache.hadoop.hbase.io.hfile.Cacheable,%20long,%20boolean)">BucketCache.RAMQueueEntry</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;bck,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&nbsp;data,
+                                                  long&nbsp;accessCounter,
+                                                  boolean&nbsp;inMemory)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

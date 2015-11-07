@@ -133,6 +133,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionStates.html#createFakeRegion()">createFakeRegion</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.ServerName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionStates.html#mockServer(java.lang.String,%20int)">mockServer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fakeHost,
+                    int&nbsp;fakePort)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionStates.html#testCanMakeProgressThoughMetaIsDown()">testCanMakeProgressThoughMetaIsDown</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -198,13 +207,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testWeDontReturnDrainingServersForOurBalancePlans()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testWeDontReturnDrainingServersForOurBalancePlans</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionStates.html#line.102">testWeDontReturnDrainingServersForOurBalancePlans</a>()
                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="createFakeRegion()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFakeRegion</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HRegionInfo&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionStates.html#line.132">createFakeRegion</a>()</pre>
+</li>
+</ul>
+<a name="mockServer(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>mockServer</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.ServerName&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionStates.html#line.138">mockServer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fakeHost,
+                                            int&nbsp;fakePort)</pre>
 </li>
 </ul>
 </li>

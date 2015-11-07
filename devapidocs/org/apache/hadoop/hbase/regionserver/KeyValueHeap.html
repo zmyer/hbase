@@ -202,6 +202,12 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <div class="block">Constructor.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#KeyValueHeap(java.util.List,%20org.apache.hadoop.hbase.regionserver.KeyValueHeap.KVScannerComparator)">KeyValueHeap</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;scanners,
+                        <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.KVScannerComparator.html" title="class in org.apache.hadoop.hbase.regionserver">KeyValueHeap.KVScannerComparator</a>&nbsp;comparator)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -222,6 +228,17 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#close()">close</a></strong>()</code>
 <div class="block">Close the KeyValue scanner.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#generalizedSeek(boolean,%20org.apache.hadoop.hbase.Cell,%20boolean,%20boolean)">generalizedSeek</a></strong>(boolean&nbsp;isLazy,
+                              <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;seekKey,
+                              boolean&nbsp;forward,
+                              boolean&nbsp;useBloom)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#getCurrentForTesting()">getCurrentForTesting</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html?is-external=true" title="class or interface in java.util">PriorityQueue</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;</code></td>
@@ -396,7 +413,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <a name="KeyValueHeap(java.util.List, org.apache.hadoop.hbase.CellComparator)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>KeyValueHeap</h4>
 <pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.75">KeyValueHeap</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;scanners,
@@ -404,6 +421,21 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Constructor.  This KeyValueHeap will handle closing of passed in
  KeyValueScanners.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>scanners</code> - </dd><dd><code>comparator</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="KeyValueHeap(java.util.List, org.apache.hadoop.hbase.regionserver.KeyValueHeap.KVScannerComparator)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>KeyValueHeap</h4>
+<pre><a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.86">KeyValueHeap</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;scanners,
+            <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.KVScannerComparator.html" title="class in org.apache.hadoop.hbase.regionserver">KeyValueHeap.KVScannerComparator</a>&nbsp;comparator)
+       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Constructor.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>scanners</code> - </dd><dd><code>comparator</code> - </dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -586,6 +618,24 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="generalizedSeek(boolean, org.apache.hadoop.hbase.Cell, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>generalizedSeek</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.290">generalizedSeek</a>(boolean&nbsp;isLazy,
+                      <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;seekKey,
+                      boolean&nbsp;forward,
+                      boolean&nbsp;useBloom)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>isLazy</code> - whether we are trying to seek to exactly the given row/col.
+          Enables Bloom filter and most-recent-file-first optimizations for
+          multi-column get/scan queries.</dd><dd><code>seekKey</code> - key to seek to</dd><dd><code>forward</code> - whether to seek forward (also known as reseek)</dd><dd><code>useBloom</code> - whether to optimize seeks using Bloom filters</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="pollRealKV()">
 <!--   -->
 </a>
@@ -633,6 +683,15 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#getSequenceID()">getSequenceID</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="getCurrentForTesting()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrentForTesting</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.412">getCurrentForTesting</a>()</pre>
 </li>
 </ul>
 <a name="getNextIndexedKey()">

@@ -239,7 +239,7 @@
 <a class="jxr_linenumber" name="229" href="#229">229</a>     }
 <a class="jxr_linenumber" name="230" href="#230">230</a> 
 <a class="jxr_linenumber" name="231" href="#231">231</a>     @Override
-<a class="jxr_linenumber" name="232" href="#232">232</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestDelayedRpcProtos.html">TestResponse</a> test(<strong class="jxr_keyword">final</strong> RpcController rpcController, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestDelayedRpcProtos.html">TestArg</a> testArg)
+<a class="jxr_linenumber" name="232" href="#232">232</a>     <strong class="jxr_keyword">public</strong> TestResponse test(<strong class="jxr_keyword">final</strong> RpcController rpcController, <strong class="jxr_keyword">final</strong> TestArg testArg)
 <a class="jxr_linenumber" name="233" href="#233">233</a>     <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="234" href="#234">234</a>       <strong class="jxr_keyword">boolean</strong> delay = testArg.getDelay();
 <a class="jxr_linenumber" name="235" href="#235">235</a>       TestResponse.Builder responseBuilder = TestResponse.newBuilder();
@@ -358,7 +358,7 @@
 <a class="jxr_linenumber" name="348" href="#348">348</a>     }
 <a class="jxr_linenumber" name="349" href="#349">349</a> 
 <a class="jxr_linenumber" name="350" href="#350">350</a>     @Override
-<a class="jxr_linenumber" name="351" href="#351">351</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestDelayedRpcProtos.html">TestResponse</a> test(RpcController rpcController, <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestDelayedRpcProtos.html">TestArg</a> arg)
+<a class="jxr_linenumber" name="351" href="#351">351</a>     <strong class="jxr_keyword">public</strong> TestResponse test(RpcController rpcController, TestArg arg)
 <a class="jxr_linenumber" name="352" href="#352">352</a>     <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="353" href="#353">353</a>       LOG.info(<span class="jxr_string">"In faulty test, delay="</span> + arg.getDelay());
 <a class="jxr_linenumber" name="354" href="#354">354</a>       <strong class="jxr_keyword">if</strong> (!arg.getDelay()) <strong class="jxr_keyword">return</strong> TestResponse.newBuilder().setResponse(UNDELAYED).build();

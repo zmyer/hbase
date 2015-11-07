@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -164,6 +164,41 @@ extends <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaExceededExce
 </table>
 </li>
 </ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html#MSG_TYPE">MSG_TYPE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html#MSG_WAIT">MSG_WAIT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html#serialVersionUID">serialVersionUID</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.Type.html" title="enum in org.apache.hadoop.hbase.quotas">ThrottlingException.Type</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html#type">type</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html#waitInterval">waitInterval</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -231,8 +266,17 @@ extends <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaExceededExce
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html#throwRequestSizeExceeded(long)">throwRequestSizeExceeded</a></strong>(long&nbsp;waitInterval)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html#throwThrottlingException(org.apache.hadoop.hbase.quotas.ThrottlingException.Type,%20long)">throwThrottlingException</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.Type.html" title="enum in org.apache.hadoop.hbase.quotas">ThrottlingException.Type</a>&nbsp;type,
+                                                long&nbsp;waitInterval)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html#throwWriteSizeExceeded(long)">throwWriteSizeExceeded</a></strong>(long&nbsp;waitInterval)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html#timeFromString(java.lang.String)">timeFromString</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;timeDiff)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -257,6 +301,61 @@ extends <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaExceededExce
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="serialVersionUID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serialVersionUID</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/ThrottlingException.html#line.37">serialVersionUID</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.quotas.ThrottlingException.serialVersionUID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MSG_TYPE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MSG_TYPE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/ThrottlingException.html#line.50">MSG_TYPE</a></pre>
+</li>
+</ul>
+<a name="MSG_WAIT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MSG_WAIT</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/ThrottlingException.html#line.59">MSG_WAIT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.quotas.ThrottlingException.MSG_WAIT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="waitInterval">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitInterval</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/ThrottlingException.html#line.61">waitInterval</a></pre>
+</li>
+</ul>
+<a name="type">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>type</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.Type.html" title="enum in org.apache.hadoop.hbase.quotas">ThrottlingException.Type</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/ThrottlingException.html#line.62">type</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -381,13 +480,35 @@ extends <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaExceededExce
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html" title="class in org.apache.hadoop.hbase.quotas">ThrottlingException</a></code></dd></dl>
 </li>
 </ul>
+<a name="throwThrottlingException(org.apache.hadoop.hbase.quotas.ThrottlingException.Type, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>throwThrottlingException</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/ThrottlingException.html#line.124">throwThrottlingException</a>(<a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.Type.html" title="enum in org.apache.hadoop.hbase.quotas">ThrottlingException.Type</a>&nbsp;type,
+                            long&nbsp;waitInterval)
+                                      throws <a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html" title="class in org.apache.hadoop.hbase.quotas">ThrottlingException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottlingException.html" title="class in org.apache.hadoop.hbase.quotas">ThrottlingException</a></code></dd></dl>
+</li>
+</ul>
 <a name="formatTime(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>formatTime</h4>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/ThrottlingException.html#line.130">formatTime</a>(long&nbsp;timeDiff)</pre>
+</li>
+</ul>
+<a name="timeFromString(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>formatTime</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/ThrottlingException.html#line.130">formatTime</a>(long&nbsp;timeDiff)</pre>
+<h4>timeFromString</h4>
+<pre>private static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/ThrottlingException.html#line.150">timeFromString</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;timeDiff)</pre>
 </li>
 </ul>
 </li>
@@ -442,13 +563,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaExceededExce
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

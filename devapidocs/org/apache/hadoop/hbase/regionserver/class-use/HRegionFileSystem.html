@@ -78,6 +78,10 @@
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.snapshot">org.apache.hadoop.hbase.snapshot</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -87,6 +91,23 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a></code></td>
+<td class="colLast"><span class="strong">HStore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -137,6 +158,53 @@
               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;rsServices)</code>
 <div class="block">HRegion constructor.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.snapshot">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a> in <a href="../../../../../../org/apache/hadoop/hbase/snapshot/package-summary.html">org.apache.hadoop.hbase.snapshot</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/snapshot/package-summary.html">org.apache.hadoop.hbase.snapshot</a> that return <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a></code></td>
+<td class="colLast"><span class="strong">SnapshotManifestV1.ManifestBuilder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotManifestV1.ManifestBuilder.html#regionOpen(org.apache.hadoop.hbase.HRegionInfo)">regionOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/snapshot/package-summary.html">org.apache.hadoop.hbase.snapshot</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">SnapshotManifestV1.ManifestBuilder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotManifestV1.ManifestBuilder.html#familyClose(org.apache.hadoop.hbase.regionserver.HRegionFileSystem,%20org.apache.hadoop.fs.Path)">familyClose</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a>&nbsp;region,
+                      org.apache.hadoop.fs.Path&nbsp;family)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><span class="strong">SnapshotManifestV1.ManifestBuilder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotManifestV1.ManifestBuilder.html#familyOpen(org.apache.hadoop.hbase.regionserver.HRegionFileSystem,%20byte[])">familyOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a>&nbsp;snapshotRegionFs,
+                    byte[]&nbsp;familyName)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">SnapshotManifestV1.ManifestBuilder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotManifestV1.ManifestBuilder.html#regionClose(org.apache.hadoop.hbase.regionserver.HRegionFileSystem)">regionClose</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a>&nbsp;region)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">SnapshotManifestV1.ManifestBuilder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotManifestV1.ManifestBuilder.html#storeFile(org.apache.hadoop.hbase.regionserver.HRegionFileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.regionserver.StoreFileInfo)">storeFile</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionFileSystem.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionFileSystem</a>&nbsp;region,
+                  org.apache.hadoop.fs.Path&nbsp;familyDir,
+                  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileInfo.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileInfo</a>&nbsp;storeFile)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

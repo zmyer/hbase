@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureFairRunQueues.html" title="class in org.apache.hadoop.hbase.procedure2"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureFairRunQueues.TestRunQueue.html" title="class in org.apache.hadoop.hbase.procedure2"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html" title="class in org.apache.hadoop.hbase.procedure2"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -124,12 +124,71 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestMultiStepProcedure.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestMultiStepProcedure</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestSingleStepProcedure.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestSingleStepProcedure</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestSingleStepProcedure.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestSingleStepProcedure</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestStateMachineProcedure.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestStateMachineProcedure</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HBaseCommonTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseCommonTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#htu">htu</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#logDir">logDir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#PROCEDURE_EXECUTOR_SLOTS">PROCEDURE_EXECUTOR_SLOTS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#procEnv">procEnv</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.procedure2.ProcedureExecutor&lt;<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#procExecutor">procExecutor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#procSleepInterval">procSleepInterval</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.procedure2.store.ProcedureStore</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#procStore">procStore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#testDir">testDir</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -162,6 +221,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#dumpLogDirState()">dumpLogDirState</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#restart()">restart</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -203,6 +270,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#testStateMachineRollbackRecovery()">testStateMachineRollbackRecovery</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#waitProcedure(long)">waitProcedure</a></strong>(long&nbsp;procId)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -219,6 +290,105 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.51">LOG</a></pre>
+</li>
+</ul>
+<a name="PROCEDURE_EXECUTOR_SLOTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROCEDURE_EXECUTOR_SLOTS</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.53">PROCEDURE_EXECUTOR_SLOTS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.PROCEDURE_EXECUTOR_SLOTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="procEnv">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>procEnv</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.55">procEnv</a></pre>
+</li>
+</ul>
+<a name="procExecutor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>procExecutor</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.procedure2.ProcedureExecutor&lt;<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.56">procExecutor</a></pre>
+</li>
+</ul>
+<a name="procStore">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>procStore</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.procedure2.store.ProcedureStore <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.57">procStore</a></pre>
+</li>
+</ul>
+<a name="procSleepInterval">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>procSleepInterval</h4>
+<pre>private static&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.58">procSleepInterval</a></pre>
+</li>
+</ul>
+<a name="htu">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>htu</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseCommonTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseCommonTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.60">htu</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.61">fs</a></pre>
+</li>
+</ul>
+<a name="testDir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.62">testDir</a></pre>
+</li>
+</ul>
+<a name="logDir">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>logDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.63">logDir</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -264,6 +434,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="restart()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>restart</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.89">restart</a>()
+              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
 <a name="testNoopLoad()">
@@ -353,13 +535,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testStateMachineRollbackRecovery()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testStateMachineRollbackRecovery</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.461">testStateMachineRollbackRecovery</a>()
                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="waitProcedure(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitProcedure</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.513">waitProcedure</a>(long&nbsp;procId)</pre>
+</li>
+</ul>
+<a name="dumpLogDirState()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>dumpLogDirState</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.518">dumpLogDirState</a>()</pre>
 </li>
 </ul>
 </li>
@@ -388,7 +588,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureFairRunQueues.html" title="class in org.apache.hadoop.hbase.procedure2"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureFairRunQueues.TestRunQueue.html" title="class in org.apache.hadoop.hbase.procedure2"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html" title="class in org.apache.hadoop.hbase.procedure2"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -414,13 +614,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

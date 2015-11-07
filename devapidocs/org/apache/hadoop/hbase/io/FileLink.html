@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/io/CellOutputStream.html" title="interface in org.apache.hadoop.hbase.io"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/io/FSDataInputStreamWrapper.html" title="class in org.apache.hadoop.hbase.io"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/io/FileLink.FileLinkInputStream.html" title="class in org.apache.hadoop.hbase.io"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/io/FileLink.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -156,6 +156,28 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/FileLink.FileLinkInputStream.html" title="class in org.apache.hadoop.hbase.io">FileLink.FileLinkInputStream</a></strong></code>
+<div class="block">FileLink InputStream that handles the switch between the original path
+ and the alternative locations, when the file is moved.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="field_summary">
@@ -173,6 +195,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/FileLink.html#BACK_REFERENCES_DIRECTORY_PREFIX">BACK_REFERENCES_DIRECTORY_PREFIX</a></strong></code>
 <div class="block">Define the Back-reference directory name prefix: .links-&lt;hfile&gt;/</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/FileLink.html#locations">locations</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/FileLink.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -309,15 +339,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/io/FileLink.html#line.92">LOG</a></pre>
+</li>
+</ul>
 <a name="BACK_REFERENCES_DIRECTORY_PREFIX">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>BACK_REFERENCES_DIRECTORY_PREFIX</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/io/FileLink.html#line.95">BACK_REFERENCES_DIRECTORY_PREFIX</a></pre>
 <div class="block">Define the Back-reference directory name prefix: .links-&lt;hfile&gt;/</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.io.FileLink.BACK_REFERENCES_DIRECTORY_PREFIX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="locations">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>locations</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path[] <a href="../../../../../src-html/org/apache/hadoop/hbase/io/FileLink.html#line.311">locations</a></pre>
 </li>
 </ul>
 </li>
@@ -572,7 +620,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/io/CellOutputStream.html" title="interface in org.apache.hadoop.hbase.io"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/io/FSDataInputStreamWrapper.html" title="class in org.apache.hadoop.hbase.io"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/io/FileLink.FileLinkInputStream.html" title="class in org.apache.hadoop.hbase.io"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/io/FileLink.html" target="_top">Frames</a></li>
@@ -596,7 +644,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

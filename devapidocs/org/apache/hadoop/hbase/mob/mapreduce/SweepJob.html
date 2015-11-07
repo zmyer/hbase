@@ -123,6 +123,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.DummyMobAbortable.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">SweepJob.DummyMobAbortable</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.IndexedResult.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">SweepJob.IndexedResult</a></strong></code>
+<div class="block">A result with index.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.MergeSortReader.html" title="class in org.apache.hadoop.hbase.mob.mapreduce">SweepJob.MergeSortReader</a></strong></code>
+<div class="block">Merge sort reader.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.SweepCounter.html" title="enum in org.apache.hadoop.hbase.mob.mapreduce">SweepJob.SweepCounter</a></strong></code>
 <div class="block">The counter used in sweep job.</div>
@@ -144,20 +156,80 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#cacheConfig">cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#compactionStartTime">compactionStartTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#CREDENTIALS_LOCATION">CREDENTIALS_LOCATION</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#MOB_SWEEP_JOB_DELAY">MOB_SWEEP_JOB_DELAY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#ONE_DAY">ONE_DAY</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#SCAN_CACHING">SCAN_CACHING</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#SWEEP_JOB_ID">SWEEP_JOB_ID</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#SWEEP_JOB_SERVERNAME">SWEEP_JOB_SERVERNAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#SWEEP_JOB_TABLE_NODE">SWEEP_JOB_TABLE_NODE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#WORKING_ALLNAMES_DIR">WORKING_ALLNAMES_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#WORKING_ALLNAMES_FILE_KEY">WORKING_ALLNAMES_FILE_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#WORKING_DIR_KEY">WORKING_DIR_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#WORKING_FILES_DIR_KEY">WORKING_FILES_DIR_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#WORKING_VISITED_DIR">WORKING_VISITED_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#WORKING_VISITED_DIR_KEY">WORKING_VISITED_DIR_KEY</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -193,6 +265,57 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#cleanup(org.apache.hadoop.mapreduce.Job,%20org.apache.hadoop.hbase.TableName,%20java.lang.String)">cleanup</a></strong>(org.apache.hadoop.mapreduce.Job&nbsp;job,
+              <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</code>
+<div class="block">Deletes the working directory.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#getCurrentServerName(org.apache.hadoop.conf.Configuration)">getCurrentServerName</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#getCustomJobName(java.lang.String,%20org.apache.hadoop.hbase.TableName,%20java.lang.String)">getCustomJobName</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;className,
+                                <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</code>
+<div class="block">Gets a customized job name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#getUnusedFiles(org.apache.hadoop.conf.Configuration)">getUnusedFiles</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
+<div class="block">Gets the unused mob files.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.mapreduce.Job</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#prepareJob(org.apache.hadoop.hbase.TableName,%20java.lang.String,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.conf.Configuration)">prepareJob</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName,
+                    <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                    org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
+<div class="block">Prepares a map reduce job.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#removeUnusedFiles(org.apache.hadoop.mapreduce.Job,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">removeUnusedFiles</a></strong>(org.apache.hadoop.mapreduce.Job&nbsp;job,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;hcd)</code>
+<div class="block">Archives unused mob files.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#submit(org.apache.hadoop.mapreduce.Job,%20org.apache.hadoop.hbase.TableName,%20java.lang.String)">submit</a></strong>(org.apache.hadoop.mapreduce.Job&nbsp;job,
+            <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</code>
+<div class="block">Submits a job.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#sweep(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">sweep</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
           <a href="../../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>
@@ -221,6 +344,113 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private final&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.85">fs</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.86">conf</a></pre>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.87">LOG</a></pre>
+</li>
+</ul>
+<a name="SWEEP_JOB_ID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SWEEP_JOB_ID</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.88">SWEEP_JOB_ID</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.SWEEP_JOB_ID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SWEEP_JOB_SERVERNAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SWEEP_JOB_SERVERNAME</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.89">SWEEP_JOB_SERVERNAME</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.SWEEP_JOB_SERVERNAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SWEEP_JOB_TABLE_NODE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SWEEP_JOB_TABLE_NODE</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.90">SWEEP_JOB_TABLE_NODE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.SWEEP_JOB_TABLE_NODE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="WORKING_DIR_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WORKING_DIR_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.91">WORKING_DIR_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.WORKING_DIR_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="WORKING_ALLNAMES_FILE_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WORKING_ALLNAMES_FILE_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.92">WORKING_ALLNAMES_FILE_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.WORKING_ALLNAMES_FILE_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="WORKING_VISITED_DIR_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WORKING_VISITED_DIR_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.93">WORKING_VISITED_DIR_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.WORKING_VISITED_DIR_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="WORKING_ALLNAMES_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WORKING_ALLNAMES_DIR</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.94">WORKING_ALLNAMES_DIR</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.WORKING_ALLNAMES_DIR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="WORKING_VISITED_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WORKING_VISITED_DIR</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.95">WORKING_VISITED_DIR</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.WORKING_VISITED_DIR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="WORKING_FILES_DIR_KEY">
 <!--   -->
 </a>
@@ -251,14 +481,51 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.ONE_DAY">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="compactionStartTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compactionStartTime</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.100">compactionStartTime</a></pre>
+</li>
+</ul>
 <a name="CREDENTIALS_LOCATION">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>CREDENTIALS_LOCATION</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.101">CREDENTIALS_LOCATION</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.CREDENTIALS_LOCATION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="cacheConfig">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cacheConfig</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.102">cacheConfig</a></pre>
+</li>
+</ul>
+<a name="SCAN_CACHING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SCAN_CACHING</h4>
+<pre>static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.103">SCAN_CACHING</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.mob.mapreduce.SweepJob.SCAN_CACHING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="tableLockManager">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>tableLockManager</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.104">tableLockManager</a></pre>
 </li>
 </ul>
 </li>
@@ -287,10 +554,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getCurrentServerName(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrentServerName</h4>
+<pre>static&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.115">getCurrentServerName</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="sweep(org.apache.hadoop.hbase.TableName, org.apache.hadoop.hbase.HColumnDescriptor)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>sweep</h4>
 <pre>public&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.152">sweep</a>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
@@ -317,6 +596,101 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
 <dd><code>org.apache.zookeeper.KeeperException</code></dd></dl>
+</li>
+</ul>
+<a name="prepareJob(org.apache.hadoop.hbase.TableName, java.lang.String, org.apache.hadoop.hbase.client.Scan, org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prepareJob</h4>
+<pre>private&nbsp;org.apache.hadoop.mapreduce.Job&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.250">prepareJob</a>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
+                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName,
+                                         <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                                         org.apache.hadoop.conf.Configuration&nbsp;conf)
+                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Prepares a map reduce job.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tn</code> - The current table name.</dd><dd><code>familyName</code> - The current family name.</dd><dd><code>scan</code> - The current scan.</dd><dd><code>conf</code> - The current configuration.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A map reduce job.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getCustomJobName(java.lang.String, org.apache.hadoop.hbase.TableName, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCustomJobName</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.280">getCustomJobName</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;className,
+                      <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</pre>
+<div class="block">Gets a customized job name.
+ It's className-mapperClassName-reducerClassName-tableName-familyName.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>className</code> - The current class name.</dd><dd><code>tableName</code> - The current table name.</dd><dd><code>familyName</code> - The current family name.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The customized job name.</dd></dl>
+</li>
+</ul>
+<a name="submit(org.apache.hadoop.mapreduce.Job, org.apache.hadoop.hbase.TableName, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>submit</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.298">submit</a>(org.apache.hadoop.mapreduce.Job&nbsp;job,
+          <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)
+             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Submits a job.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>job</code> - The current job.</dd><dd><code>tn</code> - The current table name.</dd><dd><code>familyName</code> - The current family name.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getUnusedFiles(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUnusedFiles</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.370">getUnusedFiles</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Gets the unused mob files.
+ Compare the file which contains all the existing mob files and the visited files,
+ find out the unused mob file and archive them.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - The current configuration.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The unused mob files.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="removeUnusedFiles(org.apache.hadoop.mapreduce.Job, org.apache.hadoop.hbase.TableName, org.apache.hadoop.hbase.HColumnDescriptor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeUnusedFiles</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.421">removeUnusedFiles</a>(org.apache.hadoop.mapreduce.Job&nbsp;job,
+                     <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
+                     <a href="../../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;hcd)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Archives unused mob files.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>job</code> - The current job.</dd><dd><code>tn</code> - The current table name.</dd><dd><code>hcd</code> - The descriptor of the current column family.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="cleanup(org.apache.hadoop.mapreduce.Job, org.apache.hadoop.hbase.TableName, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>cleanup</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#line.448">cleanup</a>(org.apache.hadoop.mapreduce.Job&nbsp;job,
+           <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
+           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</pre>
+<div class="block">Deletes the working directory.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>job</code> - The current job.</dd><dd><code>familyName</code> - The family to cleanup</dd></dl>
 </li>
 </ul>
 </li>

@@ -90,6 +90,36 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReader</a> in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> that implement <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReader</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReaderImpl.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReaderImpl</a></strong></code>
+<div class="block">Reads version 2 blocks from the filesystem.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReader</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReader</a></code></td>
+<td class="colLast"><span class="strong">HFileReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.html#fsBlockReader">fsBlockReader</a></strong></code>
+<div class="block">Filesystem-level block reader.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReader</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -105,6 +135,22 @@
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReader</a></code></td>
 <td class="colLast"><span class="strong">HFileReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.html#getUncachedBlockReader()">getUncachedBlockReader</a></strong>()</code>
 <div class="block">For testing</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReader</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
+<td class="colLast"><span class="strong">HFileBlock.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html#unpack(org.apache.hadoop.hbase.io.hfile.HFileContext,%20org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader)">unpack</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContext</a>&nbsp;fileContext,
+            <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReader</a>&nbsp;reader)</code>
+<div class="block">Retrieves the decompressed/decrypted view of this block.</div>
 </td>
 </tr>
 </tbody>

@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.metrics.BaseSourceImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -124,6 +124,49 @@ implements <a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourc
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#fDel">fDel</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#fGet">fGet</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#fPut">fPut</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#fScan">fScan</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#request">request</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#sucDel">sucDel</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#sucGet">sucGet</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#sucPut">sucPut</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#sucScan">sucScan</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.metrics.BaseSourceImpl">
 <!--   -->
@@ -272,6 +315,95 @@ implements <a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourc
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="request">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>request</h4>
+<pre>private&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#line.34">request</a></pre>
+</li>
+</ul>
+<a name="sucGet">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sucGet</h4>
+<pre>private&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#line.35">sucGet</a></pre>
+</li>
+</ul>
+<a name="sucPut">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sucPut</h4>
+<pre>private&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#line.36">sucPut</a></pre>
+</li>
+</ul>
+<a name="sucDel">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sucDel</h4>
+<pre>private&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#line.37">sucDel</a></pre>
+</li>
+</ul>
+<a name="sucScan">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sucScan</h4>
+<pre>private&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#line.38">sucScan</a></pre>
+</li>
+</ul>
+<a name="fGet">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fGet</h4>
+<pre>private&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#line.39">fGet</a></pre>
+</li>
+</ul>
+<a name="fPut">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fPut</h4>
+<pre>private&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#line.40">fPut</a></pre>
+</li>
+</ul>
+<a name="fDel">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fDel</h4>
+<pre>private&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#line.41">fDel</a></pre>
+</li>
+</ul>
+<a name="fScan">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>fScan</h4>
+<pre>private&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/rest/MetricsRESTSourceImpl.html#line.42">fScan</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -511,13 +643,13 @@ implements <a href="../../../../../org/apache/hadoop/hbase/rest/MetricsRESTSourc
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.metrics.BaseSourceImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

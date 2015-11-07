@@ -90,6 +90,10 @@
 <div class="block">Tools to help define network clients and servers.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -208,6 +212,59 @@
 <tbody>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html#PayloadCarryingRpcController(java.util.List)">PayloadCarryingRpcController</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a>&gt;&nbsp;cellIterables)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a> in <a href="../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return types with arguments of type <a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a>&gt;</code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#doNonAtomicRegionMutation(org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.quotas.OperationQuota,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction,%20org.apache.hadoop.hbase.CellScanner,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder,%20java.util.List,%20long,%20org.apache.hadoop.hbase.regionserver.RSRpcServices.RegionScannersCloseCallBack,%20org.apache.hadoop.hbase.ipc.RpcCallContext)">doNonAtomicRegionMutation</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.html" title="interface in org.apache.hadoop.hbase.quotas">OperationQuota</a>&nbsp;quota,
+                                                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction&nbsp;actions,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+                                                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder&nbsp;builder,
+                                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a>&gt;&nbsp;cellsToReturn,
+                                                  long&nbsp;nonceGroup,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannersCloseCallBack.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannersCloseCallBack</a>&nbsp;closeCallBack,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcCallContext.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallContext</a>&nbsp;context)</code>
+<div class="block">Run through the regionMutation <code>rm</code> and per Mutation, do the work, and then when
+ done, add an instance of a <code>ClientProtos.ResultOrException</code> that corresponds to each Mutation.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with type arguments of type <a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a>&gt;</code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#doNonAtomicRegionMutation(org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.quotas.OperationQuota,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction,%20org.apache.hadoop.hbase.CellScanner,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder,%20java.util.List,%20long,%20org.apache.hadoop.hbase.regionserver.RSRpcServices.RegionScannersCloseCallBack,%20org.apache.hadoop.hbase.ipc.RpcCallContext)">doNonAtomicRegionMutation</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.html" title="interface in org.apache.hadoop.hbase.quotas">OperationQuota</a>&nbsp;quota,
+                                                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction&nbsp;actions,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+                                                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder&nbsp;builder,
+                                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/CellScannable.html" title="interface in org.apache.hadoop.hbase">CellScannable</a>&gt;&nbsp;cellsToReturn,
+                                                  long&nbsp;nonceGroup,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannersCloseCallBack.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannersCloseCallBack</a>&nbsp;closeCallBack,
+                                                  <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcCallContext.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallContext</a>&nbsp;context)</code>
+<div class="block">Run through the regionMutation <code>rm</code> and per Mutation, do the work, and then when
+ done, add an instance of a <code>ClientProtos.ResultOrException</code> that corresponds to each Mutation.</div>
+</td>
 </tr>
 </tbody>
 </table>

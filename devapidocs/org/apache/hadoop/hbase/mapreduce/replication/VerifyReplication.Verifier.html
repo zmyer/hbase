@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -144,6 +144,37 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/TableMapper
 </ul>
 </li>
 </ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#connection">connection</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#currentCompareRowInPeerTable">currentCompareRowInPeerTable</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#replicatedScanner">replicatedScanner</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#replicatedTable">replicatedTable</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -178,6 +209,12 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/TableMapper
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#cleanup(org.apache.hadoop.mapreduce.Mapper.Context)">cleanup</a></strong>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#logFailRowAndIncreaseCounter(org.apache.hadoop.mapreduce.Mapper.Context,%20org.apache.hadoop.hbase.mapreduce.replication.VerifyReplication.Verifier.Counters,%20org.apache.hadoop.hbase.client.Result)">logFailRowAndIncreaseCounter</a></strong>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context,
+                                                        <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.Counters.html" title="enum in org.apache.hadoop.hbase.mapreduce.replication">VerifyReplication.Verifier.Counters</a>&nbsp;counter,
+                                                        <a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;row)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#map(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.mapreduce.Mapper.Context)">map</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/ImmutableBytesWritable.html" title="class in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;row,
       <a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;value,
@@ -209,6 +246,50 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/TableMapper
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="connection">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>connection</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#line.93">connection</a></pre>
+</li>
+</ul>
+<a name="replicatedTable">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>replicatedTable</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#line.94">replicatedTable</a></pre>
+</li>
+</ul>
+<a name="replicatedScanner">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>replicatedScanner</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#line.95">replicatedScanner</a></pre>
+</li>
+</ul>
+<a name="currentCompareRowInPeerTable">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>currentCompareRowInPeerTable</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#line.96">currentCompareRowInPeerTable</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -250,6 +331,17 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/TableMapper
 <dt><span class="strong">Parameters:</span></dt><dd><code>row</code> - The current table row key.</dd><dd><code>value</code> - The columns.</dd><dd><code>context</code> - The current context.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - When something is broken with the data.</dd></dl>
+</li>
+</ul>
+<a name="logFailRowAndIncreaseCounter(org.apache.hadoop.mapreduce.Mapper.Context, org.apache.hadoop.hbase.mapreduce.replication.VerifyReplication.Verifier.Counters, org.apache.hadoop.hbase.client.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logFailRowAndIncreaseCounter</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.html#line.172">logFailRowAndIncreaseCounter</a>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context,
+                                <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.Verifier.Counters.html" title="enum in org.apache.hadoop.hbase.mapreduce.replication">VerifyReplication.Verifier.Counters</a>&nbsp;counter,
+                                <a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;row)</pre>
 </li>
 </ul>
 <a name="cleanup(org.apache.hadoop.mapreduce.Mapper.Context)">
@@ -317,13 +409,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/TableMapper
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

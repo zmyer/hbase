@@ -315,7 +315,7 @@
 <span class="sourceLineNo">307</span>      assertTrue(compactingRegion.countStoreFiles() &gt; 1);<a name="line.307"></a>
 <span class="sourceLineNo">308</span>      final byte REGION_NAME[] = compactingRegion.getRegionInfo().getRegionName();<a name="line.308"></a>
 <span class="sourceLineNo">309</span>      LOG.info("Asking for compaction");<a name="line.309"></a>
-<span class="sourceLineNo">310</span>      ((HBaseAdmin)admin).majorCompact(TABLE_NAME.getName());<a name="line.310"></a>
+<span class="sourceLineNo">310</span>      admin.majorCompact(TABLE_NAME);<a name="line.310"></a>
 <span class="sourceLineNo">311</span>      LOG.info("Waiting for compaction to be about to start");<a name="line.311"></a>
 <span class="sourceLineNo">312</span>      compactingRegion.waitForCompactionToBlock();<a name="line.312"></a>
 <span class="sourceLineNo">313</span>      LOG.info("Starting a new server");<a name="line.313"></a>
@@ -356,7 +356,7 @@
 <span class="sourceLineNo">348</span>      // If we survive the split keep going...<a name="line.348"></a>
 <span class="sourceLineNo">349</span>      // Now we make sure that the region isn't totally confused.  Load up more rows.<a name="line.349"></a>
 <span class="sourceLineNo">350</span>      TEST_UTIL.loadNumericRows(table, FAMILY, FIRST_BATCH_COUNT, FIRST_BATCH_COUNT + SECOND_BATCH_COUNT);<a name="line.350"></a>
-<span class="sourceLineNo">351</span>      ((HBaseAdmin)admin).majorCompact(TABLE_NAME.getName());<a name="line.351"></a>
+<span class="sourceLineNo">351</span>      admin.majorCompact(TABLE_NAME);<a name="line.351"></a>
 <span class="sourceLineNo">352</span>      startWaitTime = System.currentTimeMillis();<a name="line.352"></a>
 <span class="sourceLineNo">353</span>      while (newRegion.compactCount == 0) {<a name="line.353"></a>
 <span class="sourceLineNo">354</span>        Thread.sleep(1000);<a name="line.354"></a>

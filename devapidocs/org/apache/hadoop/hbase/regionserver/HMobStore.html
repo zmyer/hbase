@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemStoreLAB.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemStoreLAB.Chunk.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HStore">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -133,12 +133,91 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#cellsCountCompactedFromMob">cellsCountCompactedFromMob</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#cellsCountCompactedToMob">cellsCountCompactedToMob</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#cellsSizeCompactedFromMob">cellsSizeCompactedFromMob</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#cellsSizeCompactedToMob">cellsSizeCompactedToMob</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#family">family</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#homePath">homePath</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/util/IdLock.html" title="class in org.apache.hadoop.hbase.util">IdLock</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#keyLock">keyLock</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#map">map</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/mob/MobCacheConfig.html" title="class in org.apache.hadoop.hbase.mob">MobCacheConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#mobCacheConfig">mobCacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#mobFamilyPath">mobFamilyPath</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#mobFlushCount">mobFlushCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#mobFlushedCellsCount">mobFlushedCellsCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#mobFlushedCellsSize">mobFlushedCellsSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#mobScanCellsCount">mobScanCellsCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#mobScanCellsSize">mobScanCellsSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#tableLockManager">tableLockManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#tableLockName">tableLockName</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HStore">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html" title="class in org.apache.hadoop.hbase.regionserver">HStore</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#BLOCKING_STOREFILES_KEY">BLOCKING_STOREFILES_KEY</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#blocksize">blocksize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#bytesPerChecksum">bytesPerChecksum</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#cacheConf">cacheConf</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#checksumType">checksumType</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#COMPACTCHECKER_INTERVAL_MULTIPLIER_KEY">COMPACTCHECKER_INTERVAL_MULTIPLIER_KEY</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#conf">conf</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#cryptoContext">cryptoContext</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#DEEP_OVERHEAD">DEEP_OVERHEAD</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#DEFAULT_BLOCKING_STOREFILE_COUNT">DEFAULT_BLOCKING_STOREFILE_COUNT</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#DEFAULT_COMPACTCHECKER_INTERVAL_MULTIPLIER">DEFAULT_COMPACTCHECKER_INTERVAL_MULTIPLIER</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#FIXED_OVERHEAD">FIXED_OVERHEAD</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#memstore">memstore</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#region">region</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#BLOCKING_STOREFILES_KEY">BLOCKING_STOREFILES_KEY</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#blocksize">blocksize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#bytesPerChecksum">bytesPerChecksum</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#cacheConf">cacheConf</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#checksumType">checksumType</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#closeCheckInterval">closeCheckInterval</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#COMPACTCHECKER_INTERVAL_MULTIPLIER_KEY">COMPACTCHECKER_INTERVAL_MULTIPLIER_KEY</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#conf">conf</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#cryptoContext">cryptoContext</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#DEEP_OVERHEAD">DEEP_OVERHEAD</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#DEFAULT_BLOCKING_STOREFILE_COUNT">DEFAULT_BLOCKING_STOREFILE_COUNT</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#DEFAULT_COMPACTCHECKER_INTERVAL_MULTIPLIER">DEFAULT_COMPACTCHECKER_INTERVAL_MULTIPLIER</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#filesCompacting">filesCompacting</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#FIXED_OVERHEAD">FIXED_OVERHEAD</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#forceMajor">forceMajor</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#lock">lock</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#memstore">memstore</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#region">region</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#storeEngine">storeEngine</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.Store">
@@ -303,6 +382,23 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#getTempDir()">getTempDir</a></strong>()</code>
+<div class="block">Gets the temp directory.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#readCell(java.util.List,%20java.lang.String,%20org.apache.hadoop.hbase.Cell,%20boolean,%20long,%20boolean)">readCell</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;&nbsp;locations,
+                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileName,
+                <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;search,
+                boolean&nbsp;cacheMobBlocks,
+                long&nbsp;readPt,
+                boolean&nbsp;readEmptyValueOnMobCellMiss)</code>
+<div class="block">Reads the cell from a mob file.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#resolve(org.apache.hadoop.hbase.Cell,%20boolean)">resolve</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;reference,
               boolean&nbsp;cacheBlocks)</code>
@@ -354,13 +450,19 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#updateMobScanCellsSize(long)">updateMobScanCellsSize</a></strong>(long&nbsp;size)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#validateMobFile(org.apache.hadoop.fs.Path)">validateMobFile</a></strong>(org.apache.hadoop.fs.Path&nbsp;path)</code>
+<div class="block">Validates a mob file by opening and closing it.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.HStore">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html" title="class in org.apache.hadoop.hbase.regionserver">HStore</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#add(org.apache.hadoop.hbase.Cell)">add</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#addChangedReaderObserver(org.apache.hadoop.hbase.regionserver.ChangedReadersObserver)">addChangedReaderObserver</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#areWritesEnabled()">areWritesEnabled</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#assertBulkLoadHFileOk(org.apache.hadoop.fs.Path)">assertBulkLoadHFileOk</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#bulkLoadHFile(org.apache.hadoop.hbase.regionserver.StoreFileInfo)">bulkLoadHFile</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#bulkLoadHFile(java.lang.String,%20long)">bulkLoadHFile</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#cancelRequestedCompaction(org.apache.hadoop.hbase.regionserver.compactions.CompactionContext)">cancelRequestedCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#canSplit()">canSplit</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#close()">close</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#compact(org.apache.hadoop.hbase.regionserver.compactions.CompactionContext,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController,%20org.apache.hadoop.hbase.security.User)">compact</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#compactRecentForTestingAssumingDefaultPolicy(int)">compactRecentForTestingAssumingDefaultPolicy</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#completeCompaction(java.util.Collection)">completeCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#completeCompaction(java.util.Collection,%20boolean)">completeCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#createFlushContext(long)">createFlushContext</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#createWriterInTmp(long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20boolean,%20boolean,%20boolean)">createWriterInTmp</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#createWriterInTmp(long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20boolean,%20boolean,%20boolean,%20boolean)">createWriterInTmp</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#delete(org.apache.hadoop.hbase.KeyValue)">delete</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#deleteChangedReaderObserver(org.apache.hadoop.hbase.regionserver.ChangedReadersObserver)">deleteChangedReaderObserver</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#deregisterChildren(org.apache.hadoop.hbase.conf.ConfigurationManager)">deregisterChildren</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#determineTTLFromFamily(org.apache.hadoop.hbase.HColumnDescriptor)">determineTTLFromFamily</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#flushCache(long,%20org.apache.hadoop.hbase.regionserver.MemStoreSnapshot,%20org.apache.hadoop.hbase.monitoring.MonitoredTask)">flushCache</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getBlockingFileCount()">getBlockingFileCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getBytesPerChecksum(org.apache.hadoop.conf.Configuration)">getBytesPerChecksum</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCacheConfig()">getCacheConfig</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getChecksumType(org.apache.hadoop.conf.Configuration)">getChecksumType</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCloseCheckInterval()">getCloseCheckInterval</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getColumnFamilyName()">getColumnFamilyName</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactedCellsCount()">getCompactedCellsCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactedCellsSize()">getCompactedCellsSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactionCheckMultiplier()">getCompactionCheckMultiplier</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactionPressure()">getCompactionPressure</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactionProgress()">getCompactionProgress</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactPriority()">getCompactPriority</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getComparator()">getComparator</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCoprocessorHost()">getCoprocessorHost</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getDataBlockEncoder()">getDataBlockEncoder</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFamily()">getFamily</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFileSystem()">getFileSystem</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFlushableSize()">getFlushableSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFlushedCellsCount()">getFlushedCellsCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFlushedCellsSize()">getFlushedCellsSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getHRegion()">getHRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getLastCompactSize()">getLastCompactSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMajorCompactedCellsCount()">getMajorCompactedCellsCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMajorCompactedCellsSize()">getMajorCompactedCellsSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMaxMemstoreTS()">getMaxMemstoreTS</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMaxSequenceId()">getMaxSequenceId</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMemstoreFlushSize()">getMemstoreFlushSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMemStoreSize()">getMemStoreSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getOffPeakHours()">getOffPeakHours</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getRegionFileSystem()">getRegionFileSystem</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getRegionInfo()">getRegionInfo</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getScanInfo()">getScanInfo</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getScanner(org.apache.hadoop.hbase.client.Scan,%20java.util.NavigableSet,%20long)">getScanner</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getScanners(boolean,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.regionserver.ScanQueryMatcher,%20byte[],%20byte[],%20long)">getScanners</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getSize()">getSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getSmallestReadPoint()">getSmallestReadPoint</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getSnapshotSize()">getSnapshotSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getSplitPoint()">getSplitPoint</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreEngine()">getStoreEngine</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStorefiles()">getStorefiles</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStorefilesCount()">getStorefilesCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStorefilesIndexSize()">getStorefilesIndexSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStorefilesSize()">getStorefilesSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreFileTtl()">getStoreFileTtl</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreHomedir(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.HRegionInfo,%20byte[])">getStoreHomedir</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreHomedir(org.apache.hadoop.fs.Path,%20java.lang.String,%20byte[])">getStoreHomedir</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreSizeUncompressed()">getStoreSizeUncompressed</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getTableName()">getTableName</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getTotalStaticBloomSize()">getTotalStaticBloomSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getTotalStaticIndexSize()">getTotalStaticIndexSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#hasReferences()">hasReferences</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#hasTooManyStoreFiles()">hasTooManyStoreFiles</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#heapSize()">heapSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#isMajorCompaction()">isMajorCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#isPrimaryReplicaStore()">isPrimaryReplicaStore</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#needsCompaction()">needsCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#onConfigurationChange(org.apache.hadoop.conf.Configuration)">onConfigurationChange</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#refreshStoreFiles()">refreshStoreFiles</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#refreshStoreFiles(java.util.Collection)">refreshStoreFiles</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#registerChildren(org.apache.hadoop.hbase.conf.ConfigurationManager)">registerChildren</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#replayCompactionMarker(org.apache.hadoop.hbase.protobuf.generated.WALProtos.CompactionDescriptor,%20boolean,%20boolean)">replayCompactionMarker</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#requestCompaction()">requestCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#requestCompaction(int,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)">requestCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#requestCompaction(int,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest,%20org.apache.hadoop.hbase.security.User)">requestCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#rollback(org.apache.hadoop.hbase.Cell)">rollback</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#throttleCompaction(long)">throttleCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#timeOfOldestEdit()">timeOfOldestEdit</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#toString()">toString</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#triggerMajorCompaction()">triggerMajorCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#updateColumnValue(byte[],%20byte[],%20byte[],%20long)">updateColumnValue</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#upsert(java.lang.Iterable,%20long)">upsert</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#add(org.apache.hadoop.hbase.Cell)">add</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#addChangedReaderObserver(org.apache.hadoop.hbase.regionserver.ChangedReadersObserver)">addChangedReaderObserver</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#areWritesEnabled()">areWritesEnabled</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#assertBulkLoadHFileOk(org.apache.hadoop.fs.Path)">assertBulkLoadHFileOk</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#bulkLoadHFile(org.apache.hadoop.hbase.regionserver.StoreFileInfo)">bulkLoadHFile</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#bulkLoadHFile(java.lang.String,%20long)">bulkLoadHFile</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#cancelRequestedCompaction(org.apache.hadoop.hbase.regionserver.compactions.CompactionContext)">cancelRequestedCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#canSplit()">canSplit</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#close()">close</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#compact(org.apache.hadoop.hbase.regionserver.compactions.CompactionContext,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController,%20org.apache.hadoop.hbase.security.User)">compact</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#compactRecentForTestingAssumingDefaultPolicy(int)">compactRecentForTestingAssumingDefaultPolicy</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#completeCompaction(java.util.Collection)">completeCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#completeCompaction(java.util.Collection,%20boolean)">completeCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#createFlushContext(long)">createFlushContext</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#createWriterInTmp(long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20boolean,%20boolean,%20boolean)">createWriterInTmp</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#createWriterInTmp(long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20boolean,%20boolean,%20boolean,%20boolean)">createWriterInTmp</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#delete(org.apache.hadoop.hbase.KeyValue)">delete</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#deleteChangedReaderObserver(org.apache.hadoop.hbase.regionserver.ChangedReadersObserver)">deleteChangedReaderObserver</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#deregisterChildren(org.apache.hadoop.hbase.conf.ConfigurationManager)">deregisterChildren</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#determineTTLFromFamily(org.apache.hadoop.hbase.HColumnDescriptor)">determineTTLFromFamily</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#flushCache(long,%20org.apache.hadoop.hbase.regionserver.MemStoreSnapshot,%20org.apache.hadoop.hbase.monitoring.MonitoredTask)">flushCache</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getBlockingFileCount()">getBlockingFileCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getBytesPerChecksum(org.apache.hadoop.conf.Configuration)">getBytesPerChecksum</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCacheConfig()">getCacheConfig</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getChecksumType(org.apache.hadoop.conf.Configuration)">getChecksumType</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCloseCheckInterval()">getCloseCheckInterval</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getColumnFamilyName()">getColumnFamilyName</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactedCellsCount()">getCompactedCellsCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactedCellsSize()">getCompactedCellsSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactionCheckMultiplier()">getCompactionCheckMultiplier</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactionPressure()">getCompactionPressure</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactionProgress()">getCompactionProgress</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCompactPriority()">getCompactPriority</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getComparator()">getComparator</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getCoprocessorHost()">getCoprocessorHost</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getDataBlockEncoder()">getDataBlockEncoder</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFamily()">getFamily</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFileSystem()">getFileSystem</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFlushableSize()">getFlushableSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFlushedCellsCount()">getFlushedCellsCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getFlushedCellsSize()">getFlushedCellsSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getHRegion()">getHRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getLastCompactSize()">getLastCompactSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMajorCompactedCellsCount()">getMajorCompactedCellsCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMajorCompactedCellsSize()">getMajorCompactedCellsSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMaxMemstoreTS()">getMaxMemstoreTS</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMaxSequenceId()">getMaxSequenceId</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMemstoreFlushSize()">getMemstoreFlushSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getMemStoreSize()">getMemStoreSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getOffPeakHours()">getOffPeakHours</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getRegionFileSystem()">getRegionFileSystem</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getRegionInfo()">getRegionInfo</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getScanInfo()">getScanInfo</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getScanner(org.apache.hadoop.hbase.client.Scan,%20java.util.NavigableSet,%20long)">getScanner</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getScanners(boolean,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.regionserver.ScanQueryMatcher,%20byte[],%20byte[],%20long)">getScanners</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getSize()">getSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getSmallestReadPoint()">getSmallestReadPoint</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getSnapshotSize()">getSnapshotSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getSplitPoint()">getSplitPoint</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreEngine()">getStoreEngine</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStorefiles()">getStorefiles</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStorefilesCount()">getStorefilesCount</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStorefilesIndexSize()">getStorefilesIndexSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStorefilesSize()">getStorefilesSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreFileTtl()">getStoreFileTtl</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreHomedir(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.HRegionInfo,%20byte[])">getStoreHomedir</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreHomedir(org.apache.hadoop.fs.Path,%20java.lang.String,%20byte[])">getStoreHomedir</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getStoreSizeUncompressed()">getStoreSizeUncompressed</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getTableName()">getTableName</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getTotalStaticBloomSize()">getTotalStaticBloomSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#getTotalStaticIndexSize()">getTotalStaticIndexSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#hasReferences()">hasReferences</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#hasTooManyStoreFiles()">hasTooManyStoreFiles</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#heapSize()">heapSize</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#isCellTTLExpired(org.apache.hadoop.hbase.Cell,%20long,%20long)">isCellTTLExpired</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#isMajorCompaction()">isMajorCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#isPrimaryReplicaStore()">isPrimaryReplicaStore</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#moveFileIntoPlace(org.apache.hadoop.fs.Path)">moveFileIntoPlace</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#needsCompaction()">needsCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#onConfigurationChange(org.apache.hadoop.conf.Configuration)">onConfigurationChange</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#refreshStoreFiles()">refreshStoreFiles</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#refreshStoreFiles(java.util.Collection)">refreshStoreFiles</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#registerChildren(org.apache.hadoop.hbase.conf.ConfigurationManager)">registerChildren</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#replaceStoreFiles(java.util.Collection,%20java.util.Collection)">replaceStoreFiles</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#replayCompactionMarker(org.apache.hadoop.hbase.protobuf.generated.WALProtos.CompactionDescriptor,%20boolean,%20boolean)">replayCompactionMarker</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#requestCompaction()">requestCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#requestCompaction(int,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)">requestCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#requestCompaction(int,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest,%20org.apache.hadoop.hbase.security.User)">requestCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#rollback(org.apache.hadoop.hbase.Cell)">rollback</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#setDataBlockEncoderInTest(org.apache.hadoop.hbase.io.hfile.HFileDataBlockEncoder)">setDataBlockEncoderInTest</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#setScanInfo(org.apache.hadoop.hbase.regionserver.ScanInfo)">setScanInfo</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#snapshot()">snapshot</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#throttleCompaction(long)">throttleCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#timeOfOldestEdit()">timeOfOldestEdit</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#toString()">toString</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#triggerMajorCompaction()">triggerMajorCompaction</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#updateColumnValue(byte[],%20byte[],%20byte[],%20long)">updateColumnValue</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#upsert(java.lang.Iterable,%20long)">upsert</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#versionsToReturn(int)">versionsToReturn</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -377,6 +479,176 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.85">LOG</a></pre>
+</li>
+</ul>
+<a name="mobCacheConfig">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobCacheConfig</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/mob/MobCacheConfig.html" title="class in org.apache.hadoop.hbase.mob">MobCacheConfig</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.86">mobCacheConfig</a></pre>
+</li>
+</ul>
+<a name="homePath">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>homePath</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.87">homePath</a></pre>
+</li>
+</ul>
+<a name="mobFamilyPath">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobFamilyPath</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.88">mobFamilyPath</a></pre>
+</li>
+</ul>
+<a name="cellsCountCompactedToMob">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cellsCountCompactedToMob</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.89">cellsCountCompactedToMob</a></pre>
+</li>
+</ul>
+<a name="cellsCountCompactedFromMob">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cellsCountCompactedFromMob</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.90">cellsCountCompactedFromMob</a></pre>
+</li>
+</ul>
+<a name="cellsSizeCompactedToMob">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cellsSizeCompactedToMob</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.91">cellsSizeCompactedToMob</a></pre>
+</li>
+</ul>
+<a name="cellsSizeCompactedFromMob">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cellsSizeCompactedFromMob</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.92">cellsSizeCompactedFromMob</a></pre>
+</li>
+</ul>
+<a name="mobFlushCount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobFlushCount</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.93">mobFlushCount</a></pre>
+</li>
+</ul>
+<a name="mobFlushedCellsCount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobFlushedCellsCount</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.94">mobFlushedCellsCount</a></pre>
+</li>
+</ul>
+<a name="mobFlushedCellsSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobFlushedCellsSize</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.95">mobFlushedCellsSize</a></pre>
+</li>
+</ul>
+<a name="mobScanCellsCount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobScanCellsCount</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.96">mobScanCellsCount</a></pre>
+</li>
+</ul>
+<a name="mobScanCellsSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobScanCellsSize</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.97">mobScanCellsSize</a></pre>
+</li>
+</ul>
+<a name="family">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>family</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.98">family</a></pre>
+</li>
+</ul>
+<a name="tableLockManager">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableLockManager</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.99">tableLockManager</a></pre>
+</li>
+</ul>
+<a name="tableLockName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableLockName</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.100">tableLockName</a></pre>
+</li>
+</ul>
+<a name="map">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>map</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.101">map</a></pre>
+</li>
+</ul>
+<a name="keyLock">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>keyLock</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/IdLock.html" title="class in org.apache.hadoop.hbase.util">IdLock</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.102">keyLock</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -470,6 +742,17 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="getTempDir()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTempDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.177">getTempDir</a>()</pre>
+<div class="block">Gets the temp directory.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The temp directory.</dd></dl>
+</li>
+</ul>
 <a name="createWriterInTmp(java.util.Date, long, org.apache.hadoop.hbase.io.compress.Compression.Algorithm, byte[])">
 <!--   -->
 </a>
@@ -560,6 +843,20 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="validateMobFile(org.apache.hadoop.fs.Path)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>validateMobFile</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.296">validateMobFile</a>(org.apache.hadoop.fs.Path&nbsp;path)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Validates a mob file by opening and closing it.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>path</code> - the path to the mob file</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="resolve(org.apache.hadoop.hbase.Cell, boolean)">
 <!--   -->
 </a>
@@ -592,6 +889,31 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>reference</code> - The cell found in the HBase, its value is a path to a mob file.</dd><dd><code>cacheBlocks</code> - Whether the scanner should cache blocks.</dd><dd><code>readPt</code> - the read point.</dd><dd><code>readEmptyValueOnMobCellMiss</code> - Whether return null value when the mob file is
         missing or corrupt.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>The cell found in the mob file.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="readCell(java.util.List, java.lang.String, org.apache.hadoop.hbase.Cell, boolean, long, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readCell</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HMobStore.html#line.394">readCell</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;&nbsp;locations,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileName,
+            <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;search,
+            boolean&nbsp;cacheMobBlocks,
+            long&nbsp;readPt,
+            boolean&nbsp;readEmptyValueOnMobCellMiss)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Reads the cell from a mob file.
+ The mob file might be located in different directories.
+ 1. The working directory.
+ 2. The archive directory.
+ Reads the cell from the files located in both of the above directories.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>locations</code> - The possible locations where the mob files are saved.</dd><dd><code>fileName</code> - The file to be read.</dd><dd><code>search</code> - The cell to be searched.</dd><dd><code>cacheMobBlocks</code> - Whether the scanner should cache blocks.</dd><dd><code>readPt</code> - the read point.</dd><dd><code>readEmptyValueOnMobCellMiss</code> - Whether return null value when the mob file is
+        missing or corrupt.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The found cell. Null if there's no such a cell.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -822,7 +1144,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemStoreLAB.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemStoreLAB.Chunk.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -848,13 +1170,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HStore">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

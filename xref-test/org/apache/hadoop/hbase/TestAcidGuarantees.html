@@ -38,10 +38,10 @@
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.conf.Configuration;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.MultithreadedTestUtil.RepeatingTestThread;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.MultithreadedTestUtil.TestContext;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Connection;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
-<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Get;
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.HBaseAdmin;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Admin;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Connection;
+<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Get;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Put;
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Result;
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ResultScanner;
@@ -314,7 +314,7 @@
 <a class="jxr_linenumber" name="304" href="#304">304</a>     }
 <a class="jxr_linenumber" name="305" href="#305">305</a>     <em class="jxr_comment">// Add a flusher</em>
 <a class="jxr_linenumber" name="306" href="#306">306</a>     ctx.addThread(<strong class="jxr_keyword">new</strong> <a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.html">RepeatingTestThread</a>(ctx) {
-<a class="jxr_linenumber" name="307" href="#307">307</a>       HBaseAdmin admin = util.getHBaseAdmin();
+<a class="jxr_linenumber" name="307" href="#307">307</a>       Admin admin = util.getHBaseAdmin();
 <a class="jxr_linenumber" name="308" href="#308">308</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> doAnAction() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="309" href="#309">309</a>         <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="310" href="#310">310</a>           admin.flush(TABLE_NAME);

@@ -980,7 +980,7 @@
 <a class="jxr_linenumber" name="970" href="#970">970</a>       storeFiles.put(store.getFamily().getName(), storeFileNames);
 <a class="jxr_linenumber" name="971" href="#971">971</a>     }
 <a class="jxr_linenumber" name="972" href="#972">972</a> 
-<a class="jxr_linenumber" name="973" href="#973">973</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">RegionEventDescriptor</a> regionOpenDesc = ProtobufUtil.toRegionEventDescriptor(
+<a class="jxr_linenumber" name="973" href="#973">973</a>     RegionEventDescriptor regionOpenDesc = ProtobufUtil.toRegionEventDescriptor(
 <a class="jxr_linenumber" name="974" href="#974">974</a>       RegionEventDescriptor.EventType.REGION_OPEN, getRegionInfo(), openSeqId,
 <a class="jxr_linenumber" name="975" href="#975">975</a>       getRegionServerServices().getServerName(), storeFiles);
 <a class="jxr_linenumber" name="976" href="#976">976</a>     WALUtil.writeRegionEventMarker(wal, getTableDesc(), getRegionInfo(), regionOpenDesc, mvcc);
@@ -996,7 +996,7 @@
 <a class="jxr_linenumber" name="986" href="#986">986</a>       storeFiles.put(store.getFamily().getName(), storeFileNames);
 <a class="jxr_linenumber" name="987" href="#987">987</a>     }
 <a class="jxr_linenumber" name="988" href="#988">988</a> 
-<a class="jxr_linenumber" name="989" href="#989">989</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">RegionEventDescriptor</a> regionEventDesc = ProtobufUtil.toRegionEventDescriptor(
+<a class="jxr_linenumber" name="989" href="#989">989</a>     RegionEventDescriptor regionEventDesc = ProtobufUtil.toRegionEventDescriptor(
 <a class="jxr_linenumber" name="990" href="#990">990</a>       RegionEventDescriptor.EventType.REGION_CLOSE, getRegionInfo(), mvcc.getReadPoint(),
 <a class="jxr_linenumber" name="991" href="#991">991</a>       getRegionServerServices().getServerName(), storeFiles);
 <a class="jxr_linenumber" name="992" href="#992">992</a>     WALUtil.writeRegionEventMarker(wal, getTableDesc(), getRegionInfo(), regionEventDesc, mvcc);
@@ -2226,7 +2226,7 @@
 <a class="jxr_linenumber" name="2216" href="#2216">2216</a> 
 <a class="jxr_linenumber" name="2217" href="#2217">2217</a>         <em class="jxr_comment">// write the snapshot start to WAL</em>
 <a class="jxr_linenumber" name="2218" href="#2218">2218</a>         <strong class="jxr_keyword">if</strong> (wal != <strong class="jxr_keyword">null</strong> &amp;&amp; !writestate.readOnly) {
-<a class="jxr_linenumber" name="2219" href="#2219">2219</a>           <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> desc = ProtobufUtil.toFlushDescriptor(FlushAction.START_FLUSH,
+<a class="jxr_linenumber" name="2219" href="#2219">2219</a>           FlushDescriptor desc = ProtobufUtil.toFlushDescriptor(FlushAction.START_FLUSH,
 <a class="jxr_linenumber" name="2220" href="#2220">2220</a>             getRegionInfo(), flushOpSeqId, committedFiles);
 <a class="jxr_linenumber" name="2221" href="#2221">2221</a>           <em class="jxr_comment">// no sync. Sync is below where we do not hold the updates lock</em>
 <a class="jxr_linenumber" name="2222" href="#2222">2222</a>           trxId = WALUtil.writeFlushMarker(wal, <strong class="jxr_keyword">this</strong>.htableDescriptor, getRegionInfo(),
@@ -2241,7 +2241,7 @@
 <a class="jxr_linenumber" name="2231" href="#2231">2231</a>         <strong class="jxr_keyword">if</strong> (wal != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="2232" href="#2232">2232</a>           <strong class="jxr_keyword">if</strong> (trxId &gt; 0) { <em class="jxr_comment">// check whether we have already written START_FLUSH to WAL</em>
 <a class="jxr_linenumber" name="2233" href="#2233">2233</a>             <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="2234" href="#2234">2234</a>               <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> desc = ProtobufUtil.toFlushDescriptor(FlushAction.ABORT_FLUSH,
+<a class="jxr_linenumber" name="2234" href="#2234">2234</a>               FlushDescriptor desc = ProtobufUtil.toFlushDescriptor(FlushAction.ABORT_FLUSH,
 <a class="jxr_linenumber" name="2235" href="#2235">2235</a>                 getRegionInfo(), flushOpSeqId, committedFiles);
 <a class="jxr_linenumber" name="2236" href="#2236">2236</a>               WALUtil.writeFlushMarker(wal, <strong class="jxr_keyword">this</strong>.htableDescriptor, getRegionInfo(),
 <a class="jxr_linenumber" name="2237" href="#2237">2237</a>                 desc, false, mvcc);
@@ -2308,7 +2308,7 @@
 <a class="jxr_linenumber" name="2298" href="#2298">2298</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="2299" href="#2299">2299</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> writeFlushRequestMarkerToWAL(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html">WAL</a> wal, <strong class="jxr_keyword">boolean</strong> writeFlushWalMarker) {
 <a class="jxr_linenumber" name="2300" href="#2300">2300</a>     <strong class="jxr_keyword">if</strong> (writeFlushWalMarker &amp;&amp; wal != <strong class="jxr_keyword">null</strong> &amp;&amp; !writestate.readOnly) {
-<a class="jxr_linenumber" name="2301" href="#2301">2301</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> desc = ProtobufUtil.toFlushDescriptor(FlushAction.CANNOT_FLUSH,
+<a class="jxr_linenumber" name="2301" href="#2301">2301</a>       FlushDescriptor desc = ProtobufUtil.toFlushDescriptor(FlushAction.CANNOT_FLUSH,
 <a class="jxr_linenumber" name="2302" href="#2302">2302</a>         getRegionInfo(), -1, <strong class="jxr_keyword">new</strong> TreeMap&lt;byte[], List&lt;Path&gt;&gt;(Bytes.BYTES_COMPARATOR));
 <a class="jxr_linenumber" name="2303" href="#2303">2303</a>       <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="2304" href="#2304">2304</a>         WALUtil.writeFlushMarker(wal, <strong class="jxr_keyword">this</strong>.htableDescriptor, getRegionInfo(),
@@ -2378,7 +2378,7 @@
 <a class="jxr_linenumber" name="2368" href="#2368">2368</a> 
 <a class="jxr_linenumber" name="2369" href="#2369">2369</a>       <strong class="jxr_keyword">if</strong> (wal != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="2370" href="#2370">2370</a>         <em class="jxr_comment">// write flush marker to WAL. If fail, we should throw DroppedSnapshotException</em>
-<a class="jxr_linenumber" name="2371" href="#2371">2371</a>         <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> desc = ProtobufUtil.toFlushDescriptor(FlushAction.COMMIT_FLUSH,
+<a class="jxr_linenumber" name="2371" href="#2371">2371</a>         FlushDescriptor desc = ProtobufUtil.toFlushDescriptor(FlushAction.COMMIT_FLUSH,
 <a class="jxr_linenumber" name="2372" href="#2372">2372</a>           getRegionInfo(), flushOpSeqId, committedFiles);
 <a class="jxr_linenumber" name="2373" href="#2373">2373</a>         WALUtil.writeFlushMarker(wal, <strong class="jxr_keyword">this</strong>.htableDescriptor, getRegionInfo(),
 <a class="jxr_linenumber" name="2374" href="#2374">2374</a>           desc, <strong class="jxr_keyword">true</strong>, mvcc);
@@ -2392,7 +2392,7 @@
 <a class="jxr_linenumber" name="2382" href="#2382">2382</a>       <em class="jxr_comment">// all and sundry.</em>
 <a class="jxr_linenumber" name="2383" href="#2383">2383</a>       <strong class="jxr_keyword">if</strong> (wal != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="2384" href="#2384">2384</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="2385" href="#2385">2385</a>           <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> desc = ProtobufUtil.toFlushDescriptor(FlushAction.ABORT_FLUSH,
+<a class="jxr_linenumber" name="2385" href="#2385">2385</a>           FlushDescriptor desc = ProtobufUtil.toFlushDescriptor(FlushAction.ABORT_FLUSH,
 <a class="jxr_linenumber" name="2386" href="#2386">2386</a>             getRegionInfo(), flushOpSeqId, committedFiles);
 <a class="jxr_linenumber" name="2387" href="#2387">2387</a>           WALUtil.writeFlushMarker(wal, <strong class="jxr_keyword">this</strong>.htableDescriptor, getRegionInfo(),
 <a class="jxr_linenumber" name="2388" href="#2388">2388</a>             desc, false, mvcc);
@@ -2472,7 +2472,7 @@
 <a class="jxr_linenumber" name="2462" href="#2462">2462</a>     <em class="jxr_comment">// a timeout. May happen in tests after we tightened the semantic via HBASE-14317.</em>
 <a class="jxr_linenumber" name="2463" href="#2463">2463</a>     <em class="jxr_comment">// Also, the getSequenceId blocks on a latch. There is no global list of outstanding latches</em>
 <a class="jxr_linenumber" name="2464" href="#2464">2464</a>     <em class="jxr_comment">// so if an abort or stop, there is no way to call them in.</em>
-<a class="jxr_linenumber" name="2465" href="#2465">2465</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> key = <strong class="jxr_keyword">this</strong>.appendEmptyEdit(wal);
+<a class="jxr_linenumber" name="2465" href="#2465">2465</a>     <a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html">WALKey</a> key = <strong class="jxr_keyword">this</strong>.appendEmptyEdit(wal);
 <a class="jxr_linenumber" name="2466" href="#2466">2466</a>     mvcc.complete(key.getWriteEntry());
 <a class="jxr_linenumber" name="2467" href="#2467">2467</a>     <strong class="jxr_keyword">return</strong> key.getSequenceId(<strong class="jxr_keyword">this</strong>.maxWaitForSeqId);
 <a class="jxr_linenumber" name="2468" href="#2468">2468</a>   }
@@ -2907,7 +2907,7 @@
 <a class="jxr_linenumber" name="2897" href="#2897">2897</a>     <strong class="jxr_keyword">int</strong> lastIndexExclusive = firstIndex;
 <a class="jxr_linenumber" name="2898" href="#2898">2898</a>     <strong class="jxr_keyword">boolean</strong> success = false;
 <a class="jxr_linenumber" name="2899" href="#2899">2899</a>     <strong class="jxr_keyword">int</strong> noOfPuts = 0, noOfDeletes = 0;
-<a class="jxr_linenumber" name="2900" href="#2900">2900</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> walKey = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="2900" href="#2900">2900</a>     <a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html">WALKey</a> walKey = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="2901" href="#2901">2901</a>     <strong class="jxr_keyword">long</strong> mvccNum = 0;
 <a class="jxr_linenumber" name="2902" href="#2902">2902</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="2903" href="#2903">2903</a>       <em class="jxr_comment">// ------------------------------------</em>
@@ -3521,7 +3521,7 @@
 <a class="jxr_linenumber" name="3511" href="#3511">3511</a> <em class="jxr_javadoccomment">   *   bail out.  This is allowed to be null and will just be ignored in that case.</em>
 <a class="jxr_linenumber" name="3512" href="#3512">3512</a> <em class="jxr_javadoccomment">   * @throws IOException if there is an external or internal error causing the snapshot to fail</em>
 <a class="jxr_linenumber" name="3513" href="#3513">3513</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="3514" href="#3514">3514</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> addRegionToSnapshot(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">SnapshotDescription</a> desc,
+<a class="jxr_linenumber" name="3514" href="#3514">3514</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> addRegionToSnapshot(SnapshotDescription desc,
 <a class="jxr_linenumber" name="3515" href="#3515">3515</a>       <a href="../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionSnare.html">ForeignExceptionSnare</a> exnSnare) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="3516" href="#3516">3516</a>     Path rootDir = FSUtils.getRootDir(conf);
 <a class="jxr_linenumber" name="3517" href="#3517">3517</a>     Path snapshotDir = SnapshotDescriptionUtils.getWorkingSnapshotDir(desc, rootDir);
@@ -3935,7 +3935,7 @@
 <a class="jxr_linenumber" name="3925" href="#3925">3925</a>       String fakeFamilyName = WALSplitter.getRegionDirRecoveredEditsDir(regiondir).getName();
 <a class="jxr_linenumber" name="3926" href="#3926">3926</a>       Set&lt;StoreFile&gt; fakeStoreFiles = <strong class="jxr_keyword">new</strong> HashSet&lt;StoreFile&gt;(files.size());
 <a class="jxr_linenumber" name="3927" href="#3927">3927</a>       <strong class="jxr_keyword">for</strong> (Path file: files) {
-<a class="jxr_linenumber" name="3928" href="#3928">3928</a>         fakeStoreFiles.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/SnapshotProtos.html">StoreFile</a>(getRegionFileSystem().getFileSystem(), file, <strong class="jxr_keyword">this</strong>.conf,
+<a class="jxr_linenumber" name="3928" href="#3928">3928</a>         fakeStoreFiles.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html">StoreFile</a>(getRegionFileSystem().getFileSystem(), file, <strong class="jxr_keyword">this</strong>.conf,
 <a class="jxr_linenumber" name="3929" href="#3929">3929</a>           <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>));
 <a class="jxr_linenumber" name="3930" href="#3930">3930</a>       }
 <a class="jxr_linenumber" name="3931" href="#3931">3931</a>       getRegionFileSystem().removeStoreFiles(fakeFamilyName, fakeStoreFiles);
@@ -3991,7 +3991,7 @@
 <a class="jxr_linenumber" name="3981" href="#3981">3981</a>         <strong class="jxr_keyword">long</strong> lastReport = EnvironmentEdgeManager.currentTime();
 <a class="jxr_linenumber" name="3982" href="#3982">3982</a> 
 <a class="jxr_linenumber" name="3983" href="#3983">3983</a>         <strong class="jxr_keyword">while</strong> ((entry = reader.next()) != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="3984" href="#3984">3984</a>           <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> key = entry.getKey();
+<a class="jxr_linenumber" name="3984" href="#3984">3984</a>           <a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html">WALKey</a> key = entry.getKey();
 <a class="jxr_linenumber" name="3985" href="#3985">3985</a>           <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html">WALEdit</a> val = entry.getEdit();
 <a class="jxr_linenumber" name="3986" href="#3986">3986</a> 
 <a class="jxr_linenumber" name="3987" href="#3987">3987</a>           <strong class="jxr_keyword">if</strong> (ng != <strong class="jxr_keyword">null</strong>) { <em class="jxr_comment">// some test, or nonces disabled</em>
@@ -4058,7 +4058,7 @@
 <a class="jxr_linenumber" name="4048" href="#4048">4048</a>             <em class="jxr_comment">// METACOLUMN info such as HBASE::CACHEFLUSH entries</em>
 <a class="jxr_linenumber" name="4049" href="#4049">4049</a>             <strong class="jxr_keyword">if</strong> (CellUtil.matchingFamily(cell, WALEdit.METAFAMILY)) {
 <a class="jxr_linenumber" name="4050" href="#4050">4050</a>               <em class="jxr_comment">//this is a special edit, we should handle it</em>
-<a class="jxr_linenumber" name="4051" href="#4051">4051</a>               <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">CompactionDescriptor</a> compaction = WALEdit.getCompaction(cell);
+<a class="jxr_linenumber" name="4051" href="#4051">4051</a>               CompactionDescriptor compaction = WALEdit.getCompaction(cell);
 <a class="jxr_linenumber" name="4052" href="#4052">4052</a>               <strong class="jxr_keyword">if</strong> (compaction != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="4053" href="#4053">4053</a>                 <em class="jxr_comment">//replay the compaction</em>
 <a class="jxr_linenumber" name="4054" href="#4054">4054</a>                 replayWALCompactionMarker(compaction, false, <strong class="jxr_keyword">true</strong>, Long.MAX_VALUE);
@@ -4144,7 +4144,7 @@
 <a class="jxr_linenumber" name="4134" href="#4134">4134</a> <em class="jxr_javadoccomment">   * that was not finished.  We could find one recovering a WAL after a regionserver crash.</em>
 <a class="jxr_linenumber" name="4135" href="#4135">4135</a> <em class="jxr_javadoccomment">   * See HBASE-2331.</em>
 <a class="jxr_linenumber" name="4136" href="#4136">4136</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="4137" href="#4137">4137</a>   <strong class="jxr_keyword">void</strong> replayWALCompactionMarker(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">CompactionDescriptor</a> compaction, <strong class="jxr_keyword">boolean</strong> pickCompactionFiles,
+<a class="jxr_linenumber" name="4137" href="#4137">4137</a>   <strong class="jxr_keyword">void</strong> replayWALCompactionMarker(CompactionDescriptor compaction, <strong class="jxr_keyword">boolean</strong> pickCompactionFiles,
 <a class="jxr_linenumber" name="4138" href="#4138">4138</a>       <strong class="jxr_keyword">boolean</strong> removeFiles, <strong class="jxr_keyword">long</strong> replaySeqId)
 <a class="jxr_linenumber" name="4139" href="#4139">4139</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="4140" href="#4140">4140</a>     checkTargetRegion(compaction.getEncodedRegionName().toByteArray(),
@@ -4197,7 +4197,7 @@
 <a class="jxr_linenumber" name="4187" href="#4187">4187</a>     }
 <a class="jxr_linenumber" name="4188" href="#4188">4188</a>   }
 <a class="jxr_linenumber" name="4189" href="#4189">4189</a> 
-<a class="jxr_linenumber" name="4190" href="#4190">4190</a>   <strong class="jxr_keyword">void</strong> replayWALFlushMarker(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> flush, <strong class="jxr_keyword">long</strong> replaySeqId) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="4190" href="#4190">4190</a>   <strong class="jxr_keyword">void</strong> replayWALFlushMarker(FlushDescriptor flush, <strong class="jxr_keyword">long</strong> replaySeqId) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="4191" href="#4191">4191</a>     checkTargetRegion(flush.getEncodedRegionName().toByteArray(),
 <a class="jxr_linenumber" name="4192" href="#4192">4192</a>       <span class="jxr_string">"Flush marker from WAL "</span>, flush);
 <a class="jxr_linenumber" name="4193" href="#4193">4193</a> 
@@ -4212,7 +4212,7 @@
 <a class="jxr_linenumber" name="4202" href="#4202">4202</a> 
 <a class="jxr_linenumber" name="4203" href="#4203">4203</a>     startRegionOperation(Operation.REPLAY_EVENT); <em class="jxr_comment">// use region close lock to guard against close</em>
 <a class="jxr_linenumber" name="4204" href="#4204">4204</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="4205" href="#4205">4205</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushAction</a> action = flush.getAction();
+<a class="jxr_linenumber" name="4205" href="#4205">4205</a>       FlushAction action = flush.getAction();
 <a class="jxr_linenumber" name="4206" href="#4206">4206</a>       <strong class="jxr_keyword">switch</strong> (action) {
 <a class="jxr_linenumber" name="4207" href="#4207">4207</a>       <strong class="jxr_keyword">case</strong> START_FLUSH:
 <a class="jxr_linenumber" name="4208" href="#4208">4208</a>         replayWALFlushStartMarker(flush);
@@ -4244,7 +4244,7 @@
 <a class="jxr_linenumber" name="4234" href="#4234">4234</a> <em class="jxr_javadoccomment">   * edit (because the events may be coming out of order).</em>
 <a class="jxr_linenumber" name="4235" href="#4235">4235</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="4236" href="#4236">4236</a>   @VisibleForTesting
-<a class="jxr_linenumber" name="4237" href="#4237">4237</a>   <a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html">PrepareFlushResult</a> replayWALFlushStartMarker(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> flush) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="4237" href="#4237">4237</a>   <a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html">PrepareFlushResult</a> replayWALFlushStartMarker(FlushDescriptor flush) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="4238" href="#4238">4238</a>     <strong class="jxr_keyword">long</strong> flushSeqId = flush.getFlushSequenceNumber();
 <a class="jxr_linenumber" name="4239" href="#4239">4239</a> 
 <a class="jxr_linenumber" name="4240" href="#4240">4240</a>     HashSet&lt;Store&gt; storesToFlush = <strong class="jxr_keyword">new</strong> HashSet&lt;Store&gt;();
@@ -4355,7 +4355,7 @@
 <a class="jxr_linenumber" name="4345" href="#4345">4345</a>   }
 <a class="jxr_linenumber" name="4346" href="#4346">4346</a> 
 <a class="jxr_linenumber" name="4347" href="#4347">4347</a>   @VisibleForTesting
-<a class="jxr_linenumber" name="4348" href="#4348">4348</a>   <strong class="jxr_keyword">void</strong> replayWALFlushCommitMarker(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> flush) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="4348" href="#4348">4348</a>   <strong class="jxr_keyword">void</strong> replayWALFlushCommitMarker(FlushDescriptor flush) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="4349" href="#4349">4349</a>     <a href="../../../../../org/apache/hadoop/hbase/monitoring/MonitoredTask.html">MonitoredTask</a> status = TaskMonitor.get().createStatus(<span class="jxr_string">"Committing flush "</span> + <strong class="jxr_keyword">this</strong>);
 <a class="jxr_linenumber" name="4350" href="#4350">4350</a> 
 <a class="jxr_linenumber" name="4351" href="#4351">4351</a>     <em class="jxr_comment">// check whether we have the memstore snapshot with the corresponding seqId. Replay to</em>
@@ -4480,7 +4480,7 @@
 <a class="jxr_linenumber" name="4470" href="#4470">4470</a> <em class="jxr_javadoccomment">   * @param dropMemstoreSnapshot</em>
 <a class="jxr_linenumber" name="4471" href="#4471">4471</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="4472" href="#4472">4472</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="4473" href="#4473">4473</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> replayFlushInStores(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> flush, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html">PrepareFlushResult</a> prepareFlushResult,
+<a class="jxr_linenumber" name="4473" href="#4473">4473</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> replayFlushInStores(FlushDescriptor flush, <a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html">PrepareFlushResult</a> prepareFlushResult,
 <a class="jxr_linenumber" name="4474" href="#4474">4474</a>       <strong class="jxr_keyword">boolean</strong> dropMemstoreSnapshot)
 <a class="jxr_linenumber" name="4475" href="#4475">4475</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="4476" href="#4476">4476</a>     <strong class="jxr_keyword">for</strong> (StoreFlushDescriptor storeFlush : flush.getStoreFlushesList()) {
@@ -4561,13 +4561,13 @@
 <a class="jxr_linenumber" name="4551" href="#4551">4551</a>     <strong class="jxr_keyword">return</strong> snapshotSize;
 <a class="jxr_linenumber" name="4552" href="#4552">4552</a>   }
 <a class="jxr_linenumber" name="4553" href="#4553">4553</a> 
-<a class="jxr_linenumber" name="4554" href="#4554">4554</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> replayWALFlushAbortMarker(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> flush) {
+<a class="jxr_linenumber" name="4554" href="#4554">4554</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> replayWALFlushAbortMarker(FlushDescriptor flush) {
 <a class="jxr_linenumber" name="4555" href="#4555">4555</a>     <em class="jxr_comment">// nothing to do for now. A flush abort will cause a RS abort which means that the region</em>
 <a class="jxr_linenumber" name="4556" href="#4556">4556</a>     <em class="jxr_comment">// will be opened somewhere else later. We will see the region open event soon, and replaying</em>
 <a class="jxr_linenumber" name="4557" href="#4557">4557</a>     <em class="jxr_comment">// that will drop the snapshot</em>
 <a class="jxr_linenumber" name="4558" href="#4558">4558</a>   }
 <a class="jxr_linenumber" name="4559" href="#4559">4559</a> 
-<a class="jxr_linenumber" name="4560" href="#4560">4560</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> replayWALFlushCannotFlushMarker(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> flush, <strong class="jxr_keyword">long</strong> replaySeqId) {
+<a class="jxr_linenumber" name="4560" href="#4560">4560</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> replayWALFlushCannotFlushMarker(FlushDescriptor flush, <strong class="jxr_keyword">long</strong> replaySeqId) {
 <a class="jxr_linenumber" name="4561" href="#4561">4561</a>     <strong class="jxr_keyword">synchronized</strong> (writestate) {
 <a class="jxr_linenumber" name="4562" href="#4562">4562</a>       <strong class="jxr_keyword">if</strong> (<strong class="jxr_keyword">this</strong>.lastReplayedOpenRegionSeqId &gt; replaySeqId) {
 <a class="jxr_linenumber" name="4563" href="#4563">4563</a>         LOG.warn(getRegionInfo().getEncodedName() + <span class="jxr_string">" : "</span>
@@ -4591,7 +4591,7 @@
 <a class="jxr_linenumber" name="4581" href="#4581">4581</a>     <strong class="jxr_keyword">return</strong> prepareFlushResult;
 <a class="jxr_linenumber" name="4582" href="#4582">4582</a>   }
 <a class="jxr_linenumber" name="4583" href="#4583">4583</a> 
-<a class="jxr_linenumber" name="4584" href="#4584">4584</a>   <strong class="jxr_keyword">void</strong> replayWALRegionEventMarker(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">RegionEventDescriptor</a> regionEvent) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="4584" href="#4584">4584</a>   <strong class="jxr_keyword">void</strong> replayWALRegionEventMarker(RegionEventDescriptor regionEvent) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="4585" href="#4585">4585</a>     checkTargetRegion(regionEvent.getEncodedRegionName().toByteArray(),
 <a class="jxr_linenumber" name="4586" href="#4586">4586</a>       <span class="jxr_string">"RegionEvent marker from WAL "</span>, regionEvent);
 <a class="jxr_linenumber" name="4587" href="#4587">4587</a> 
@@ -6776,7 +6776,7 @@
 <a class="jxr_linenumber" name="6766" href="#6766">6766</a>     List&lt;Mutation&gt; mutations = <strong class="jxr_keyword">new</strong> ArrayList&lt;Mutation&gt;();
 <a class="jxr_linenumber" name="6767" href="#6767">6767</a>     Collection&lt;byte[]&gt; rowsToLock = processor.getRowsToLock();
 <a class="jxr_linenumber" name="6768" href="#6768">6768</a>     <strong class="jxr_keyword">long</strong> mvccNum = 0;
-<a class="jxr_linenumber" name="6769" href="#6769">6769</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> walKey = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="6769" href="#6769">6769</a>     <a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html">WALKey</a> walKey = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="6770" href="#6770">6770</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="6771" href="#6771">6771</a>       <em class="jxr_comment">// 2. Acquire the row lock(s)</em>
 <a class="jxr_linenumber" name="6772" href="#6772">6772</a>       acquiredRowLocks = <strong class="jxr_keyword">new</strong> ArrayList&lt;RowLock&gt;(rowsToLock.size());
@@ -7017,7 +7017,7 @@
 <a class="jxr_linenumber" name="7007" href="#7007">7007</a>     startRegionOperation(op);
 <a class="jxr_linenumber" name="7008" href="#7008">7008</a>     <strong class="jxr_keyword">this</strong>.writeRequestsCount.increment();
 <a class="jxr_linenumber" name="7009" href="#7009">7009</a>     <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html">RowLock</a> rowLock = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="7010" href="#7010">7010</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> walKey = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="7010" href="#7010">7010</a>     <a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html">WALKey</a> walKey = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="7011" href="#7011">7011</a>     MultiVersionConcurrencyControl.WriteEntry writeEntry = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="7012" href="#7012">7012</a>     <strong class="jxr_keyword">boolean</strong> doRollBackMemstore = false;
 <a class="jxr_linenumber" name="7013" href="#7013">7013</a>     <strong class="jxr_keyword">try</strong> {
@@ -7260,7 +7260,7 @@
 <a class="jxr_linenumber" name="7250" href="#7250">7250</a>     startRegionOperation(op);
 <a class="jxr_linenumber" name="7251" href="#7251">7251</a>     <strong class="jxr_keyword">this</strong>.writeRequestsCount.increment();
 <a class="jxr_linenumber" name="7252" href="#7252">7252</a>     <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html">RowLock</a> rowLock = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="7253" href="#7253">7253</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> walKey = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="7253" href="#7253">7253</a>     <a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html">WALKey</a> walKey = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="7254" href="#7254">7254</a>     MultiVersionConcurrencyControl.WriteEntry writeEntry = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="7255" href="#7255">7255</a>     <strong class="jxr_keyword">boolean</strong> doRollBackMemstore = false;
 <a class="jxr_linenumber" name="7256" href="#7256">7256</a>     <a href="../../../../../org/apache/hadoop/hbase/io/TimeRange.html">TimeRange</a> tr = mutation.getTimeRange();
@@ -7540,7 +7540,7 @@
 <a class="jxr_linenumber" name="7530" href="#7530">7530</a>   }
 <a class="jxr_linenumber" name="7531" href="#7531">7531</a> 
 <a class="jxr_linenumber" name="7532" href="#7532">7532</a>   @Override
-<a class="jxr_linenumber" name="7533" href="#7533">7533</a>   <strong class="jxr_keyword">public</strong> Message execService(RpcController controller, <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceCall</a> call)
+<a class="jxr_linenumber" name="7533" href="#7533">7533</a>   <strong class="jxr_keyword">public</strong> Message execService(RpcController controller, CoprocessorServiceCall call)
 <a class="jxr_linenumber" name="7534" href="#7534">7534</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="7535" href="#7535">7535</a>     String serviceName = call.getServiceName();
 <a class="jxr_linenumber" name="7536" href="#7536">7536</a>     String methodName = call.getMethodName();
@@ -8008,7 +8008,7 @@
 <a class="jxr_linenumber" name="7998" href="#7998">7998</a>   }
 <a class="jxr_linenumber" name="7999" href="#7999">7999</a> 
 <a class="jxr_linenumber" name="8000" href="#8000">8000</a>   @Override
-<a class="jxr_linenumber" name="8001" href="#8001">8001</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">CompactionState</a> getCompactionState() {
+<a class="jxr_linenumber" name="8001" href="#8001">8001</a>   <strong class="jxr_keyword">public</strong> CompactionState getCompactionState() {
 <a class="jxr_linenumber" name="8002" href="#8002">8002</a>     <strong class="jxr_keyword">boolean</strong> hasMajor = majorInProgress.get() &gt; 0, hasMinor = minorInProgress.get() &gt; 0;
 <a class="jxr_linenumber" name="8003" href="#8003">8003</a>     <strong class="jxr_keyword">return</strong> (hasMajor ? (hasMinor ? CompactionState.MAJOR_AND_MINOR : CompactionState.MAJOR)
 <a class="jxr_linenumber" name="8004" href="#8004">8004</a>         : (hasMinor ? CompactionState.MINOR : CompactionState.NONE));
@@ -8046,10 +8046,10 @@
 <a class="jxr_linenumber" name="8036" href="#8036">8036</a> <em class="jxr_javadoccomment">   * @return Return the key used appending with no sync and no append.</em>
 <a class="jxr_linenumber" name="8037" href="#8037">8037</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="8038" href="#8038">8038</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="8039" href="#8039">8039</a>   <strong class="jxr_keyword">private</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> appendEmptyEdit(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html">WAL</a> wal) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="8039" href="#8039">8039</a>   <strong class="jxr_keyword">private</strong> <a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html">WALKey</a> appendEmptyEdit(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html">WAL</a> wal) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="8040" href="#8040">8040</a>     <em class="jxr_comment">// we use HLogKey here instead of WALKey directly to support legacy coprocessors.</em>
 <a class="jxr_linenumber" name="8041" href="#8041">8041</a>     @SuppressWarnings(<span class="jxr_string">"deprecation"</span>)
-<a class="jxr_linenumber" name="8042" href="#8042">8042</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> key = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html">HLogKey</a>(getRegionInfo().getEncodedNameAsBytes(),
+<a class="jxr_linenumber" name="8042" href="#8042">8042</a>     <a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html">WALKey</a> key = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html">HLogKey</a>(getRegionInfo().getEncodedNameAsBytes(),
 <a class="jxr_linenumber" name="8043" href="#8043">8043</a>       getRegionInfo().getTable(), WALKey.NO_SEQUENCE_ID, 0, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="8044" href="#8044">8044</a>       HConstants.NO_NONCE, HConstants.NO_NONCE, getMVCC());
 <a class="jxr_linenumber" name="8045" href="#8045">8045</a> 

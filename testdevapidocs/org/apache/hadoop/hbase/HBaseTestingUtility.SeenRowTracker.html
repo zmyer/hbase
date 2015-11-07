@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -99,7 +99,7 @@
 </dl>
 <hr>
 <br>
-<pre>public static class <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.html#line.1966">HBaseTestingUtility.SeenRowTracker</a>
+<pre>public static class <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.html#line.1967">HBaseTestingUtility.SeenRowTracker</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">A tracker for tracking and validating table rows
  generated with <code>HBaseTestingUtility#loadTable(HTable, byte[])</code></div>
@@ -109,6 +109,37 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#dim">dim</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) int[][][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#seenRows">seenRows</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#startRow">startRow</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#stopRow">stopRow</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -144,6 +175,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#addRow(byte[])">addRow</a></strong>(byte[]&nbsp;row)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#i(byte)">i</a></strong>(byte&nbsp;b)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#reset()">reset</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#validate()">validate</a></strong>()</code>
 <div class="block">Validate that all the rows between startRow and stopRow are seen exactly once, and
@@ -166,6 +205,50 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="dim">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dim</h4>
+<pre>int <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1968">dim</a></pre>
+</li>
+</ul>
+<a name="seenRows">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>seenRows</h4>
+<pre>int[][][] <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1969">seenRows</a></pre>
+</li>
+</ul>
+<a name="startRow">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startRow</h4>
+<pre>byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1970">startRow</a></pre>
+</li>
+</ul>
+<a name="stopRow">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>stopRow</h4>
+<pre>byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1971">stopRow</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -178,7 +261,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>HBaseTestingUtility.SeenRowTracker</h4>
-<pre>public&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1972">HBaseTestingUtility.SeenRowTracker</a>(byte[]&nbsp;startRow,
+<pre>public&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1973">HBaseTestingUtility.SeenRowTracker</a>(byte[]&nbsp;startRow,
                                   byte[]&nbsp;stopRow)</pre>
 </li>
 </ul>
@@ -190,13 +273,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="reset()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reset</h4>
+<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1978">reset</a>()</pre>
+</li>
+</ul>
+<a name="i(byte)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>i</h4>
+<pre>int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1984">i</a>(byte&nbsp;b)</pre>
+</li>
+</ul>
 <a name="addRow(byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addRow</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1987">addRow</a>(byte[]&nbsp;row)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1988">addRow</a>(byte[]&nbsp;row)</pre>
 </li>
 </ul>
 <a name="validate()">
@@ -205,7 +306,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>validate</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1994">validate</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html#line.1995">validate</a>()</pre>
 <div class="block">Validate that all the rows between startRow and stopRow are seen exactly once, and
  all other rows none</div>
 </li>
@@ -262,13 +363,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

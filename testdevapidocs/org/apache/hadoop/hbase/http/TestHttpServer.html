@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.http.HttpServerFunctionalTest">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -168,6 +168,29 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#baseUrl">baseUrl</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#MAX_THREADS">MAX_THREADS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.http.HttpServer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.http.HttpServerFunctionalTest">
 <!--   -->
@@ -207,29 +230,46 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#cleanup()">cleanup</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private org.apache.hadoop.hbase.http.HttpServer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#checkBindAddress(java.lang.String,%20int,%20boolean)">checkBindAddress</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;host,
+                                int&nbsp;port,
+                                boolean&nbsp;findPort)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#setup()">setup</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#cleanup()">cleanup</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#getHttpStatusCode(java.lang.String,%20java.lang.String)">getHttpStatusCode</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;urlstring,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;userName)</code>
+<div class="block">Access a URL and get the corresponding return Http status code.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#parse(java.lang.String)">parse</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;jsonString)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#setup()">setup</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testAuthorizationOfDefaultServlets()">testAuthorizationOfDefaultServlets</a></strong>()</code>
 <div class="block">Verify the administrator access for /logs, /stacks, /conf, /logLevel and
  /metrics servlets.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testBindAddress()">testBindAddress</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testContentTypes()">testContentTypes</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testDisabledAuthorizationOfDefaultServlets()">testDisabledAuthorizationOfDefaultServlets</a></strong>()</code>
 <div class="block">Verify the access for /logs, /stacks, /conf, /logLevel and /metrics
@@ -237,59 +277,59 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
  enabled.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testEcho()">testEcho</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testEchoMap()">testEchoMap</a></strong>()</code>
 <div class="block">Test the echo map servlet that uses getParameterMap.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testHasAdministratorAccess()">testHasAdministratorAccess</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testHttpServerBuilderWithExternalConnector()">testHttpServerBuilderWithExternalConnector</a></strong>()</code>
 <div class="block">HTTPServer.Builder should proceed if a external connector is available.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testJersey()">testJersey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testLongHeader()">testLongHeader</a></strong>()</code>
 <div class="block">Test that verifies headers can be up to 64K long.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testMaxThreads()">testMaxThreads</a></strong>()</code>
 <div class="block">Test the maximum number of threads cannot be exceeded.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testNoCacheHeader()">testNoCacheHeader</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testRequestQuoterWithNotNull()">testRequestQuoterWithNotNull</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testRequestQuoterWithNull()">testRequestQuoterWithNull</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testRequiresAuthorizationAccess()">testRequiresAuthorizationAccess</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServer.html#testXFrameHeaderSameOrigin()">testXFrameHeaderSameOrigin</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -323,6 +363,51 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServer.html#line.78">LOG</a></pre>
+</li>
+</ul>
+<a name="server">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>server</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.http.HttpServer <a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServer.html#line.79">server</a></pre>
+</li>
+</ul>
+<a name="baseUrl">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>baseUrl</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServer.html#line.80">baseUrl</a></pre>
+</li>
+</ul>
+<a name="MAX_THREADS">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>MAX_THREADS</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServer.html#line.81">MAX_THREADS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.http.TestHttpServer.MAX_THREADS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -436,6 +521,24 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="getHttpStatusCode(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHttpStatusCode</h4>
+<pre>static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServer.html#line.331">getHttpStatusCode</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;urlstring,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;userName)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Access a URL and get the corresponding return Http status code. The URL
+ will be accessed as the passed user, by sending user.name request
+ parameter.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>urlstring</code> - </dd><dd><code>userName</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testDisabledAuthorizationOfDefaultServlets()">
 <!--   -->
 </a>
@@ -489,6 +592,15 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="parse(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parse</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServer.html#line.462">parse</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;jsonString)</pre>
+</li>
+</ul>
 <a name="testJersey()">
 <!--   -->
 </a>
@@ -533,6 +645,20 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <h4>testBindAddress</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServer.html#line.537">testBindAddress</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkBindAddress(java.lang.String, int, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkBindAddress</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.http.HttpServer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServer.html#line.560">checkBindAddress</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;host,
+                                                       int&nbsp;port,
+                                                       boolean&nbsp;findPort)
+                                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -626,13 +752,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.http.HttpServerFunctionalTest">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

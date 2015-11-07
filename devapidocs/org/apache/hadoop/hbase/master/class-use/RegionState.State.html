@@ -91,6 +91,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a> in <a href="../../../../../../org/apache/hadoop/hbase/master/package-summary.html">org.apache.hadoop.hbase.master</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/master/package-summary.html">org.apache.hadoop.hbase.master</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a></code></td>
+<td class="colLast"><span class="strong">RegionState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.html#state">state</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/master/package-summary.html">org.apache.hadoop.hbase.master</a> that return <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -105,16 +118,23 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a></code></td>
+<td class="colLast"><span class="strong">RegionStateStore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionStateStore.html#getRegionState(org.apache.hadoop.hbase.client.Result,%20int)">getRegionState</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;r,
+                            int&nbsp;replicaId)</code>
+<div class="block">Pull the region state from a catalog table <a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client"><code>Result</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a></code></td>
 <td class="colLast"><span class="strong">RegionState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.html#getState()">getState</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a></code></td>
 <td class="colLast"><span class="strong">RegionState.State.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html#valueOf(java.lang.String)">valueOf</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>[]</code></td>
 <td class="colLast"><span class="strong">RegionState.State.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html#values()">values</a></strong>()</code>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -155,20 +175,32 @@ the order they are declared.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static boolean</code></td>
+<td class="colLast"><span class="strong">RegionStates.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionStates.html#isOneOfStates(org.apache.hadoop.hbase.master.RegionState,%20org.apache.hadoop.hbase.master.RegionState.State...)">isOneOfStates</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&nbsp;regionState,
+                          <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>...&nbsp;states)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionStates.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionStates.html#isRegionInState(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.master.RegionState.State...)">isRegionInState</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                               <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>...&nbsp;states)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionStates.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionStates.html#isRegionInState(java.lang.String,%20org.apache.hadoop.hbase.master.RegionState.State...)">isRegionInState</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedName,
                               <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>...&nbsp;states)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><span class="strong">RegionState.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.html#isUnassignable(org.apache.hadoop.hbase.master.RegionState.State)">isUnassignable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>&nbsp;state)</code>
 <div class="block">Check if a region state is one of offline states that
  can't transition to pending_close/closing (unassign/offline)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">AssignmentManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html#regionOffline(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.master.RegionState.State)">regionOffline</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
+                          <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>&nbsp;state)</code>
+<div class="block">A region is offline.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -190,6 +222,15 @@ the order they are declared.</div>
 <td class="colLast"><span class="strong">RegionStates.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionStates.html#updateRegionState(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.master.RegionState.State,%20org.apache.hadoop.hbase.ServerName)">updateRegionState</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                                   <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>&nbsp;state,
                                   <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
+<div class="block">Update a region state.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
+<td class="colLast"><span class="strong">RegionStates.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionStates.html#updateRegionState(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.master.RegionState.State,%20org.apache.hadoop.hbase.ServerName,%20long)">updateRegionState</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>&nbsp;state,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                                  long&nbsp;openSeqNum)</code>
 <div class="block">Update a region state.</div>
 </td>
 </tr>

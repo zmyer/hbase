@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.MasterEnvironment.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/master/MasterFileSystem.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -124,6 +124,29 @@ extends <a href="../../../../../org/apache/hadoop/hbase/monitoring/StateDumpServ
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterDumpServlet.html#LINE">LINE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterDumpServlet.html#serialVersionUID">serialVersionUID</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -157,6 +180,16 @@ extends <a href="../../../../../org/apache/hadoop/hbase/monitoring/StateDumpServ
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterDumpServlet.html#doGet(javax.servlet.http.HttpServletRequest,%20javax.servlet.http.HttpServletResponse)">doGet</a></strong>(javax.servlet.http.HttpServletRequest&nbsp;request,
           javax.servlet.http.HttpServletResponse&nbsp;response)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterDumpServlet.html#dumpRIT(org.apache.hadoop.hbase.master.HMaster,%20java.io.PrintWriter)">dumpRIT</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html?is-external=true" title="class or interface in java.io">PrintWriter</a>&nbsp;out)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterDumpServlet.html#dumpServers(org.apache.hadoop.hbase.master.HMaster,%20java.io.PrintWriter)">dumpServers</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html?is-external=true" title="class or interface in java.io">PrintWriter</a>&nbsp;out)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -195,6 +228,34 @@ extends <a href="../../../../../org/apache/hadoop/hbase/monitoring/StateDumpServ
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="serialVersionUID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serialVersionUID</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterDumpServlet.html#line.43">serialVersionUID</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.master.MasterDumpServlet.serialVersionUID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LINE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>LINE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterDumpServlet.html#line.44">LINE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.master.MasterDumpServlet.LINE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -221,7 +282,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/monitoring/StateDumpServ
 <a name="doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>doGet</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterDumpServlet.html#line.48">doGet</a>(javax.servlet.http.HttpServletRequest&nbsp;request,
@@ -232,6 +293,26 @@ extends <a href="../../../../../org/apache/hadoop/hbase/monitoring/StateDumpServ
 <dd><code>doGet</code>&nbsp;in class&nbsp;<code>javax.servlet.http.HttpServlet</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="dumpRIT(org.apache.hadoop.hbase.master.HMaster, java.io.PrintWriter)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dumpRIT</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterDumpServlet.html#line.112">dumpRIT</a>(<a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master,
+           <a href="http://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html?is-external=true" title="class or interface in java.io">PrintWriter</a>&nbsp;out)</pre>
+</li>
+</ul>
+<a name="dumpServers(org.apache.hadoop.hbase.master.HMaster, java.io.PrintWriter)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>dumpServers</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterDumpServlet.html#line.128">dumpServers</a>(<a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html?is-external=true" title="class or interface in java.io">PrintWriter</a>&nbsp;out)</pre>
 </li>
 </ul>
 </li>
@@ -260,7 +341,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/monitoring/StateDumpServ
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.MasterEnvironment.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/master/MasterFileSystem.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -286,13 +367,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/monitoring/StateDumpServ
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

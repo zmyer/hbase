@@ -237,42 +237,34 @@ extends org.apache.hadoop.mapreduce.InputFormat&lt;<a href="../../../../../org/a
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.client.HTable</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getHTable()">getHTable</a></strong>()</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>use <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getTable()"><code>getTable()</code></a></i></div>
-</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/RegionLocator.html" title="interface in org.apache.hadoop.hbase.client">RegionLocator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getRegionLocator()">getRegionLocator</a></strong>()</code>
 <div class="block">Allows subclasses to get the <a href="../../../../../org/apache/hadoop/hbase/client/RegionLocator.html" title="interface in org.apache.hadoop.hbase.client"><code>RegionLocator</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getScan()">getScan</a></strong>()</code>
 <div class="block">Gets the scan defining the actual details like columns etc.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.mapreduce.InputSplit&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getSplits(org.apache.hadoop.mapreduce.JobContext)">getSplits</a></strong>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)</code>
 <div class="block">Calculates the splits that will serve as input for the map tasks.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;byte[][],byte[][]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getStartEndKeys()">getStartEndKeys</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getTable()">getTable</a></strong>()</code>
 <div class="block">Allows subclasses to get the <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client"><code>Table</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#includeRegionInSplit(byte[],%20byte[])">includeRegionInSplit</a></strong>(byte[]&nbsp;startKey,
                                         byte[]&nbsp;endKey)</code>
@@ -280,42 +272,26 @@ extends org.apache.hadoop.mapreduce.InputFormat&lt;<a href="../../../../../org/a
  the regions of a table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#initialize(org.apache.hadoop.mapreduce.JobContext)">initialize</a></strong>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)</code>
 <div class="block">Handle subclass specific set up.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#initializeTable(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.TableName)">initializeTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
                               <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>
 <div class="block">Allows subclasses to initialize the table information.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#reverseDNS(java.net.InetAddress)">reverseDNS</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a>&nbsp;ipAddress)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>mistakenly made public in 0.98.7. scope will change to package-private</i></div>
-</div>
-</td>
-</tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#setHTable(org.apache.hadoop.hbase.client.HTable)">setHTable</a></strong>(org.apache.hadoop.hbase.client.HTable&nbsp;table)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>Use <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#initializeTable(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.TableName)"><code>initializeTable(Connection, TableName)</code></a> instead.</i></div>
-</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#setScan(org.apache.hadoop.hbase.client.Scan)">setScan</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</code>
 <div class="block">Sets the scan defining the actual details like columns etc.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#setTableRecordReader(org.apache.hadoop.hbase.mapreduce.TableRecordReader)">setTableRecordReader</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce">TableRecordReader</a>&nbsp;tableRecordReader)</code>
 <div class="block">Allows subclasses to set the <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>TableRecordReader</code></a>.</div>
@@ -457,29 +433,13 @@ extends org.apache.hadoop.mapreduce.InputFormat&lt;<a href="../../../../../org/a
    org.apache.hadoop.mapreduce.JobContext)</code></dd></dl>
 </li>
 </ul>
-<a name="reverseDNS(java.net.InetAddress)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>reverseDNS</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.351">reverseDNS</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a>&nbsp;ipAddress)
-                  throws <a href="http://docs.oracle.com/javase/7/docs/api/javax/naming/NamingException.html?is-external=true" title="class or interface in javax.naming">NamingException</a>,
-                         <a href="http://docs.oracle.com/javase/7/docs/api/java/net/UnknownHostException.html?is-external=true" title="class or interface in java.net">UnknownHostException</a></pre>
-<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>mistakenly made public in 0.98.7. scope will change to package-private</i></div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/javax/naming/NamingException.html?is-external=true" title="class or interface in javax.naming">NamingException</a></code></dd>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/net/UnknownHostException.html?is-external=true" title="class or interface in java.net">UnknownHostException</a></code></dd></dl>
-</li>
-</ul>
 <a name="includeRegionInSplit(byte[], byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>includeRegionInSplit</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.556">includeRegionInSplit</a>(byte[]&nbsp;startKey,
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.552">includeRegionInSplit</a>(byte[]&nbsp;startKey,
                            byte[]&nbsp;endKey)</pre>
 <div class="block">Test if the given region is to be included in the InputSplit while splitting
  the regions of a table.
@@ -497,25 +457,13 @@ public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.h
 <dt><span class="strong">Returns:</span></dt><dd>true, if this region needs to be included as part of the input (default).</dd></dl>
 </li>
 </ul>
-<a name="getHTable()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getHTable</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-protected&nbsp;org.apache.hadoop.hbase.client.HTable&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.566">getHTable</a>()</pre>
-<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#getTable()"><code>getTable()</code></a></i></div>
-<div class="block">Allows subclasses to get the <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client"><code>Table</code></a>.</div>
-</li>
-</ul>
 <a name="getRegionLocator()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getRegionLocator</h4>
-<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/RegionLocator.html" title="interface in org.apache.hadoop.hbase.client">RegionLocator</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.573">getRegionLocator</a>()</pre>
+<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/RegionLocator.html" title="interface in org.apache.hadoop.hbase.client">RegionLocator</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.559">getRegionLocator</a>()</pre>
 <div class="block">Allows subclasses to get the <a href="../../../../../org/apache/hadoop/hbase/client/RegionLocator.html" title="interface in org.apache.hadoop.hbase.client"><code>RegionLocator</code></a>.</div>
 </li>
 </ul>
@@ -525,7 +473,7 @@ protected&nbsp;org.apache.hadoop.hbase.client.HTable&nbsp;<a href="../../../../.
 <ul class="blockList">
 <li class="blockList">
 <h4>getTable</h4>
-<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.583">getTable</a>()</pre>
+<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.569">getTable</a>()</pre>
 <div class="block">Allows subclasses to get the <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client"><code>Table</code></a>.</div>
 </li>
 </ul>
@@ -535,27 +483,8 @@ protected&nbsp;org.apache.hadoop.hbase.client.HTable&nbsp;<a href="../../../../.
 <ul class="blockList">
 <li class="blockList">
 <h4>getAdmin</h4>
-<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.593">getAdmin</a>()</pre>
+<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.579">getAdmin</a>()</pre>
 <div class="block">Allows subclasses to get the <a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client"><code>Admin</code></a>.</div>
-</li>
-</ul>
-<a name="setHTable(org.apache.hadoop.hbase.client.HTable)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setHTable</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.611">setHTable</a>(org.apache.hadoop.hbase.client.HTable&nbsp;table)
-                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>Use <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#initializeTable(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.TableName)"><code>initializeTable(Connection, TableName)</code></a> instead.</i></div>
-<div class="block">Allows subclasses to set the <code>HTable</code>.
-
- Will attempt to reuse the underlying Connection for our own needs, including
- retreiving an Admin interface to the HBase cluster.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>table</code> - The table to get the data from.</dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="initializeTable(org.apache.hadoop.hbase.client.Connection, org.apache.hadoop.hbase.TableName)">
@@ -564,7 +493,7 @@ protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbas
 <ul class="blockList">
 <li class="blockList">
 <h4>initializeTable</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.625">initializeTable</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.593">initializeTable</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
                    <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Allows subclasses to initialize the table information.</div>
@@ -579,7 +508,7 @@ protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbas
 <ul class="blockList">
 <li class="blockList">
 <h4>getScan</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.641">getScan</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.609">getScan</a>()</pre>
 <div class="block">Gets the scan defining the actual details like columns etc.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The internal scan instance.</dd></dl>
 </li>
@@ -590,7 +519,7 @@ protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbas
 <ul class="blockList">
 <li class="blockList">
 <h4>setScan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.651">setScan</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.619">setScan</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</pre>
 <div class="block">Sets the scan defining the actual details like columns etc.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>scan</code> - The scan to set.</dd></dl>
 </li>
@@ -601,7 +530,7 @@ protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbas
 <ul class="blockList">
 <li class="blockList">
 <h4>setTableRecordReader</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.661">setTableRecordReader</a>(<a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce">TableRecordReader</a>&nbsp;tableRecordReader)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.629">setTableRecordReader</a>(<a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce">TableRecordReader</a>&nbsp;tableRecordReader)</pre>
 <div class="block">Allows subclasses to set the <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>TableRecordReader</code></a>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableRecordReader</code> - A different <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>TableRecordReader</code></a>
    implementation.</dd></dl>
@@ -613,7 +542,7 @@ protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbas
 <ul class="blockList">
 <li class="blockList">
 <h4>initialize</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.680">initialize</a>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.648">initialize</a>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Handle subclass specific set up.
  Each of the entry points used by the MapReduce framework,
@@ -637,7 +566,7 @@ protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbas
 <ul class="blockListLast">
 <li class="blockList">
 <h4>closeTable</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.689">closeTable</a>()
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#line.657">closeTable</a>()
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Close the Table and related objects that were initialized via
  <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#initializeTable(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.TableName)"><code>initializeTable(Connection, TableName)</code></a>.</div>

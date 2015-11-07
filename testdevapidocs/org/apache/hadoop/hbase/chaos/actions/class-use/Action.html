@@ -82,6 +82,10 @@
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.chaos.policies">org.apache.hadoop.hbase.chaos.policies</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.mttr">org.apache.hadoop.hbase.mttr</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -309,6 +313,44 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a> in <a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/package-summary.html">org.apache.hadoop.hbase.chaos.policies</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/package-summary.html">org.apache.hadoop.hbase.chaos.policies</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></code></td>
+<td class="colLast"><span class="strong">TwoConcurrentActionPolicy.ActionRunner.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/TwoConcurrentActionPolicy.ActionRunner.html#action">action</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>[]</code></td>
+<td class="colLast"><span class="strong">TwoConcurrentActionPolicy.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/TwoConcurrentActionPolicy.html#actionsOne">actionsOne</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>[]</code></td>
+<td class="colLast"><span class="strong">TwoConcurrentActionPolicy.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/TwoConcurrentActionPolicy.html#actionsTwo">actionsTwo</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/package-summary.html">org.apache.hadoop.hbase.chaos.policies</a> with type parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>&gt;</code></td>
+<td class="colLast"><span class="strong">DoActionsOncePolicy.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/DoActionsOncePolicy.html#actions">actions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.util.Pair&lt;<a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&gt;</code></td>
+<td class="colLast"><span class="strong">PeriodicRandomActionPolicy.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/PeriodicRandomActionPolicy.html#actions">actions</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/package-summary.html">org.apache.hadoop.hbase.chaos.policies</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -324,11 +366,14 @@
                                                     <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>...&nbsp;actions)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/TwoConcurrentActionPolicy.ActionRunner.html#TwoConcurrentActionPolicy.ActionRunner(org.apache.hadoop.hbase.chaos.actions.Action)">TwoConcurrentActionPolicy.ActionRunner</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>&nbsp;action)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/TwoConcurrentActionPolicy.html#TwoConcurrentActionPolicy(long,%20org.apache.hadoop.hbase.chaos.actions.Action[],%20org.apache.hadoop.hbase.chaos.actions.Action[])">TwoConcurrentActionPolicy</a></strong>(long&nbsp;sleepTime,
                                                   <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>[]&nbsp;actionsOne,
                                                   <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>[]&nbsp;actionsTwo)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/TwoConcurrentActionPolicy.html#TwoConcurrentActionPolicy(long,%20org.apache.hadoop.hbase.chaos.actions.Action[],%20org.apache.hadoop.hbase.chaos.actions.Action[])">TwoConcurrentActionPolicy</a></strong>(long&nbsp;sleepTime,
                                                   <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>[]&nbsp;actionsOne,
                                                   <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>[]&nbsp;actionsTwo)</code>&nbsp;</td>
@@ -348,6 +393,57 @@
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/chaos/policies/PeriodicRandomActionPolicy.html#PeriodicRandomActionPolicy(long,%20java.util.List)">PeriodicRandomActionPolicy</a></strong>(long&nbsp;periodMs,
                                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.util.Pair&lt;<a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&gt;&nbsp;actions)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.mttr">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a> in <a href="../../../../../../../org/apache/hadoop/hbase/mttr/package-summary.html">org.apache.hadoop.hbase.mttr</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/mttr/package-summary.html">org.apache.hadoop.hbase.mttr</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></code></td>
+<td class="colLast"><span class="strong">IntegrationTestMTTR.ActionCallable.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mttr/IntegrationTestMTTR.ActionCallable.html#action">action</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></code></td>
+<td class="colLast"><span class="strong">IntegrationTestMTTR.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mttr/IntegrationTestMTTR.html#moveMetaRegionsAction">moveMetaRegionsAction</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></code></td>
+<td class="colLast"><span class="strong">IntegrationTestMTTR.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mttr/IntegrationTestMTTR.html#moveRegionAction">moveRegionAction</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></code></td>
+<td class="colLast"><span class="strong">IntegrationTestMTTR.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mttr/IntegrationTestMTTR.html#restartMasterAction">restartMasterAction</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></code></td>
+<td class="colLast"><span class="strong">IntegrationTestMTTR.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mttr/IntegrationTestMTTR.html#restartMetaAction">restartMetaAction</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></code></td>
+<td class="colLast"><span class="strong">IntegrationTestMTTR.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mttr/IntegrationTestMTTR.html#restartRSAction">restartRSAction</a></strong></code>
+<div class="block">All of the chaos monkey actions used.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../../org/apache/hadoop/hbase/mttr/package-summary.html">org.apache.hadoop.hbase.mttr</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mttr/IntegrationTestMTTR.ActionCallable.html#IntegrationTestMTTR.ActionCallable(org.apache.hadoop.hbase.chaos.actions.Action)">IntegrationTestMTTR.ActionCallable</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.html" title="class in org.apache.hadoop.hbase.chaos.actions">Action</a>&nbsp;action)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

@@ -75,20 +75,26 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client</a></td>
+<td class="colLast">
+<div class="block">Provides HBase Client</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.coprocessor">org.apache.hadoop.hbase.coprocessor</a></td>
 <td class="colLast">
 <div class="block">Table of Contents</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -97,6 +103,24 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.client">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a> in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
+<td class="colLast"><span class="strong">ClientSideRegionScanner.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClientSideRegionScanner.html#scanner">scanner</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.coprocessor">
 <!--   -->
 </a>
@@ -180,6 +204,66 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that implement <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion.RegionScannerImpl</a></strong></code>
+<div class="block">RegionScannerImpl is used to combine scanners from multiple Stores (aka column families).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ReversedRegionScannerImpl.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedRegionScannerImpl</a></strong></code>
+<div class="block">ReversibleRegionScannerImpl extends from RegionScannerImpl, and is used to
+ support reversed scanning.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.RegionScannerHolder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerHolder.html#s">s</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.RegionScannerCloseCallBack.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerCloseCallBack.html#scanner">scanner</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.RegionScannerShippedCallBack.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerShippedCallBack.html#scanner">scanner</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with type parameters of type <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#scannerReadPoints">scannerReadPoints</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&gt;</code></td>
+<td class="colLast"><span class="strong">RSRpcServices.RegionScannersCloseCallBack.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannersCloseCallBack.html#scanners">scanners</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -188,39 +272,43 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#getScanner(long)">getScanner</a></strong>(long&nbsp;scannerId)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#getScanner(org.apache.hadoop.hbase.client.Scan)">getScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">Region.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html#getScanner(org.apache.hadoop.hbase.client.Scan)">getScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</code>
 <div class="block">Return an iterator that scans over the HRegion, returning the indicated
  columns and rows specified by the <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client"><code>Scan</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#getScanner(org.apache.hadoop.hbase.client.Scan,%20boolean)">getScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                     boolean&nbsp;copyCellsFromSharedMem)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#getScanner(org.apache.hadoop.hbase.client.Scan,%20java.util.List,%20boolean)">getScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;additionalScanners,
                     boolean&nbsp;copyCellsFromSharedMem)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#instantiateRegionScanner(org.apache.hadoop.hbase.client.Scan,%20java.util.List,%20boolean)">instantiateRegionScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;additionalScanners,
                                                 boolean&nbsp;copyCellsFromSharedMem)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postScannerOpen(org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.RegionScanner)">postScannerOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preScannerOpen(org.apache.hadoop.hbase.client.Scan)">preScannerOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</code>&nbsp;</td>
 </tr>
@@ -234,9 +322,41 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSRpcServices.RegionScannersCloseCallBack.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannersCloseCallBack.html#addScanner(org.apache.hadoop.hbase.regionserver.RegionScanner)">addScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;scanner)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerHolder.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannerHolder</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#addScanner(java.lang.String,%20org.apache.hadoop.hbase.regionserver.RegionScanner,%20org.apache.hadoop.hbase.regionserver.Region)">addScanner</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;scannerName,
+                    <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;s,
+                    <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;r)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postScannerOpen(org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.RegionScanner)">postScannerOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;s)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerCloseCallBack.html#RSRpcServices.RegionScannerCloseCallBack(org.apache.hadoop.hbase.regionserver.RegionScanner)">RSRpcServices.RegionScannerCloseCallBack</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;scanner)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerHolder.html#RSRpcServices.RegionScannerHolder(org.apache.hadoop.hbase.regionserver.RegionScanner,%20org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.ipc.RpcCallback,%20org.apache.hadoop.hbase.ipc.RpcCallback)">RSRpcServices.RegionScannerHolder</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;s,
+                                                                  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;r,
+                                                                  <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a>&nbsp;closeCallBack,
+                                                                  <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcCallback.html" title="interface in org.apache.hadoop.hbase.ipc">RpcCallback</a>&nbsp;shippedCallback)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerShippedCallBack.html#RSRpcServices.RegionScannerShippedCallBack(java.lang.String,%20org.apache.hadoop.hbase.regionserver.RegionScanner,%20org.apache.hadoop.hbase.regionserver.Leases.Lease)">RSRpcServices.RegionScannerShippedCallBack</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;scannerName,
+                                                                                    <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;scanner,
+                                                                                    <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Leases.Lease.html" title="class in org.apache.hadoop.hbase.regionserver">Leases.Lease</a>&nbsp;lease)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

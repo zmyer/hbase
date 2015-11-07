@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.html" title="class in org.apache.hadoop.hbase.chaos.actions"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.KillOrStart.html" title="enum in org.apache.hadoop.hbase.chaos.actions"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/SnapshotTableAction.html" title="class in org.apache.hadoop.hbase.chaos.actions"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.RollingBatchRestartRsAction">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.RollingBatchRestartRsAction">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -132,6 +132,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Rolling
 </a>
 <h3>Nested Class Summary</h3>
 <ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.RollingBatchRestartRsAction">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;org.apache.hadoop.hbase.chaos.actions.<a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.html" title="class in org.apache.hadoop.hbase.chaos.actions">RollingBatchRestartRsAction</a></h3>
+<code><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.KillOrStart.html" title="enum in org.apache.hadoop.hbase.chaos.actions">RollingBatchRestartRsAction.KillOrStart</a></code></li>
+</ul>
+<ul class="blockList">
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">
 <!--   -->
 </a>
@@ -152,6 +159,20 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Rolling
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.chaos.actions.<a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.html" title="class in org.apache.hadoop.hbase.chaos.actions">RollingBatchRestartRsAction</a></h3>
 <code><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.html#maxDeadServers">maxDeadServers</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.BatchRestartRsAction">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.chaos.actions.<a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/BatchRestartRsAction.html" title="class in org.apache.hadoop.hbase.chaos.actions">BatchRestartRsAction</a></h3>
+<code><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/BatchRestartRsAction.html#ratio">ratio</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.RestartActionBaseAction">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.chaos.actions.<a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html" title="class in org.apache.hadoop.hbase.chaos.actions">RestartActionBaseAction</a></h3>
+<code><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#sleepTime">sleepTime</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">
@@ -204,6 +225,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Rolling
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.chaos.actions.<a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.html" title="class in org.apache.hadoop.hbase.chaos.actions">RollingBatchRestartRsAction</a></h3>
 <code><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.html#main(java.lang.String[])">main</a>, <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.html#perform()">perform</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.RestartActionBaseAction">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.chaos.actions.<a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html" title="class in org.apache.hadoop.hbase.chaos.actions">RestartActionBaseAction</a></h3>
+<code><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#restartDataNode(org.apache.hadoop.hbase.ServerName,%20long)">restartDataNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#restartMaster(org.apache.hadoop.hbase.ServerName,%20long)">restartMaster</a>, <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#restartRs(org.apache.hadoop.hbase.ServerName,%20long)">restartRs</a>, <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#restartZKNode(org.apache.hadoop.hbase.ServerName,%20long)">restartZKNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#sleep(long)">sleep</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">
@@ -293,7 +321,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Rolling
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.html" title="class in org.apache.hadoop.hbase.chaos.actions"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RollingBatchRestartRsAction.KillOrStart.html" title="enum in org.apache.hadoop.hbase.chaos.actions"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/SnapshotTableAction.html" title="class in org.apache.hadoop.hbase.chaos.actions"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -318,7 +346,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Rolling
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.RollingBatchRestartRsAction">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.RollingBatchRestartRsAction">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

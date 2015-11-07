@@ -181,22 +181,66 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#BULKLOAD_TIME_KEY">BULKLOAD_TIME_KEY</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#cacheConf">cacheConf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/regionserver/BloomType.html" title="enum in org.apache.hadoop.hbase.regionserver">BloomType</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#cfBloomType">cfBloomType</a></strong></code>
+<div class="block">Bloom filter type specified in column family configuration.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#comparator">comparator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#DELETE_FAMILY_COUNT">DELETE_FAMILY_COUNT</a></strong></code>
 <div class="block">Delete Family Count in FileInfo</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#EARLIEST_PUT_TS">EARLIEST_PUT_TS</a></strong></code>
 <div class="block">Key for timestamp of earliest-put in metadata</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#EXCLUDE_FROM_MINOR_COMPACTION_KEY">EXCLUDE_FROM_MINOR_COMPACTION_KEY</a></strong></code>
 <div class="block">Minor compaction flag in FileInfo</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#excludeFromMinorCompaction">excludeFromMinorCompaction</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileInfo.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileInfo</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#fileInfo">fileInfo</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#firstKey">firstKey</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#LAST_BLOOM_KEY">LAST_BLOOM_KEY</a></strong></code>
+<div class="block">Last Bloom filter key in FileInfo</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#lastKey">lastKey</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
@@ -205,24 +249,46 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#majorCompaction">majorCompaction</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#MAX_SEQ_ID_KEY">MAX_SEQ_ID_KEY</a></strong></code>
 <div class="block">Max Sequence ID in FileInfo</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#maxMemstoreTS">maxMemstoreTS</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#metadataMap">metadataMap</a></strong></code>
+<div class="block">Map of the metadata entries in the corresponding HFile</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#MOB_CELLS_COUNT">MOB_CELLS_COUNT</a></strong></code>
 <div class="block">Key for the number of mob cells in metadata</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Reader</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#reader">reader</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#sequenceid">sequenceid</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#SKIP_RESET_SEQ_ID">SKIP_RESET_SEQ_ID</a></strong></code>
 <div class="block">Key for skipping resetting sequence id in metadata.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#TIMERANGE_KEY">TIMERANGE_KEY</a></strong></code>
 <div class="block">Key for Timerange information in metadata</div>
@@ -317,69 +383,81 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getFileInfo()">getFileInfo</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getFileSplitPoint(org.apache.hadoop.hbase.CellComparator)">getFileSplitPoint</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator)</code>
+<div class="block">Gets the approximate mid-point of this file that is optimal for use in splitting it.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getFirstKey()">getFirstKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getHDFSBlockDistribution()">getHDFSBlockDistribution</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getLastKey()">getLastKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getMaxMemstoreTS()">getMaxMemstoreTS</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getMaxMemstoreTSInList(java.util.Collection)">getMaxMemstoreTSInList</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs)</code>
 <div class="block">Return the largest memstoreTS found across all storefiles in
  the given list.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getMaxSequenceId()">getMaxSequenceId</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getMaxSequenceIdInList(java.util.Collection)">getMaxSequenceIdInList</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs)</code>
 <div class="block">Return the highest sequence ID found across all storefiles in
  the given list.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getMetadataValue(byte[])">getMetadataValue</a></strong>(byte[]&nbsp;key)</code>
 <div class="block">Only used by the Striped Compaction Policy</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getMinimumTimestamp()">getMinimumTimestamp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getModificationTimeStamp()">getModificationTimeStamp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.fs.Path</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getPath()">getPath</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.fs.Path</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getQualifiedPath()">getQualifiedPath</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Reader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getReader()">getReader</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static org.apache.hadoop.fs.Path</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#getUniqueFile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path)">getUniqueFile</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                           org.apache.hadoop.fs.Path&nbsp;dir)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#isBulkLoadResult()">isBulkLoadResult</a></strong>()</code>
+<div class="block">Check if this storefile was created by bulk load.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -388,6 +466,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#isReference()">isReference</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#isSkipResetSeqId(byte[])">isSkipResetSeqId</a></strong>(byte[]&nbsp;skipResetSeqId)</code>
+<div class="block">Gets whether to skip resetting the sequence id for cells.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Reader</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#open(boolean)">open</a></strong>(boolean&nbsp;canUseDropBehind)</code>
+<div class="block">Opens reader on this store file.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -423,6 +513,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.83">LOG</a></pre>
+</li>
+</ul>
 <a name="MAX_SEQ_ID_KEY">
 <!--   -->
 </a>
@@ -473,6 +572,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Delete Family Count in FileInfo</div>
 </li>
 </ul>
+<a name="LAST_BLOOM_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LAST_BLOOM_KEY</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.107">LAST_BLOOM_KEY</a></pre>
+<div class="block">Last Bloom filter key in FileInfo</div>
+</li>
+</ul>
 <a name="TIMERANGE_KEY">
 <!--   -->
 </a>
@@ -503,6 +612,96 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Key for the number of mob cells in metadata</div>
 </li>
 </ul>
+<a name="fileInfo">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fileInfo</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileInfo.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileInfo</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.118">fileInfo</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private final&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.119">fs</a></pre>
+</li>
+</ul>
+<a name="cacheConf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cacheConf</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.122">cacheConf</a></pre>
+</li>
+</ul>
+<a name="sequenceid">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sequenceid</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.126">sequenceid</a></pre>
+</li>
+</ul>
+<a name="maxMemstoreTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxMemstoreTS</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.130">maxMemstoreTS</a></pre>
+</li>
+</ul>
+<a name="firstKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>firstKey</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.133">firstKey</a></pre>
+</li>
+</ul>
+<a name="lastKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastKey</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.135">lastKey</a></pre>
+</li>
+</ul>
+<a name="comparator">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>comparator</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.137">comparator</a></pre>
+</li>
+</ul>
+<a name="majorCompaction">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>majorCompaction</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.161">majorCompaction</a></pre>
+</li>
+</ul>
+<a name="excludeFromMinorCompaction">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>excludeFromMinorCompaction</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.165">excludeFromMinorCompaction</a></pre>
+</li>
+</ul>
 <a name="BULKLOAD_TASK_KEY">
 <!--   -->
 </a>
@@ -520,6 +719,36 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>BULKLOAD_TIME_KEY</h4>
 <pre>public static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.170">BULKLOAD_TIME_KEY</a></pre>
+</li>
+</ul>
+<a name="metadataMap">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>metadataMap</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.176">metadataMap</a></pre>
+<div class="block">Map of the metadata entries in the corresponding HFile</div>
+</li>
+</ul>
+<a name="reader">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reader</h4>
+<pre>private volatile&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Reader</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.179">reader</a></pre>
+</li>
+</ul>
+<a name="cfBloomType">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cfBloomType</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/BloomType.html" title="enum in org.apache.hadoop.hbase.regionserver">BloomType</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.185">cfBloomType</a></pre>
+<div class="block">Bloom filter type specified in column family configuration. Does not
+ necessarily correspond to the Bloom filter type present in the HFile.</div>
 </li>
 </ul>
 <a name="SKIP_RESET_SEQ_ID">
@@ -777,6 +1006,23 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  does not yet have any store files.</dd></dl>
 </li>
 </ul>
+<a name="isBulkLoadResult()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isBulkLoadResult</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.366">isBulkLoadResult</a>()</pre>
+<div class="block">Check if this storefile was created by bulk load.
+ When a hfile is bulk loaded into HBase, we append
+ '_SeqId_<id-when-loaded>' to the hfile name, unless
+ "hbase.mapreduce.bulkload.assign.sequenceNumbers" is
+ explicitly turned off.
+ If "hbase.mapreduce.bulkload.assign.sequenceNumbers"
+ is turned off, fall back to BULKLOAD_TIME_KEY.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if this storefile was created by bulk load.</dd></dl>
+</li>
+</ul>
 <a name="getBulkLoadTimestamp()">
 <!--   -->
 </a>
@@ -796,6 +1042,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.388">getHDFSBlockDistribution</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the cached value of HDFS blocks distribution. The cached value is
  calculated when store file is opened.</dd></dl>
+</li>
+</ul>
+<a name="open(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>open</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.398">open</a>(boolean&nbsp;canUseDropBehind)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Opens reader on this store file.  Called by Constructor.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Reader for the store file.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#closeReader(boolean)"><code>closeReader(boolean)</code></a></dd></dl>
 </li>
 </ul>
 <a name="createReader()">
@@ -882,6 +1142,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">Returns:</span></dt><dd>a length description of this StoreFile, suitable for debug output</dd></dl>
 </li>
 </ul>
+<a name="isSkipResetSeqId(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isSkipResetSeqId</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.585">isSkipResetSeqId</a>(byte[]&nbsp;skipResetSeqId)</pre>
+<div class="block">Gets whether to skip resetting the sequence id for cells.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>skipResetSeqId</code> - The byte array of boolean.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Whether to skip resetting the sequence id.</dd></dl>
+</li>
+</ul>
 <a name="getUniqueFile(org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path)">
 <!--   -->
 </a>
@@ -900,10 +1172,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="getMinimumTimestamp()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getMinimumTimestamp</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.724">getMinimumTimestamp</a>()</pre>
+</li>
+</ul>
+<a name="getFileSplitPoint(org.apache.hadoop.hbase.CellComparator)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getFileSplitPoint</h4>
+<pre>byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFile.html#line.736">getFileSplitPoint</a>(<a href="../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator)
+                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Gets the approximate mid-point of this file that is optimal for use in splitting it.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>comparator</code> - Comparator used to compare KVs.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The split point row, or null if splitting is not possible, or reader is null.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>

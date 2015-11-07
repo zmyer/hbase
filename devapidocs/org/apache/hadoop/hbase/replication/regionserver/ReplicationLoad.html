@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/Replication.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/Replication.ReplicationStatisticsThread.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationSink.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -120,6 +120,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html" title="class in org.apache.hadoop.hbase.replication.regionserver">ReplicationLoad</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#EMPTY_REPLICATIONLOAD">EMPTY_REPLICATIONLOAD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.ClusterStatusProtos.ReplicationLoadSink</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#replicationLoadSink">replicationLoadSink</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.ClusterStatusProtos.ReplicationLoadSource&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#replicationLoadSourceList">replicationLoadSourceList</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/MetricsSink.html" title="class in org.apache.hadoop.hbase.replication.regionserver">MetricsSink</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#sinkMetrics">sinkMetrics</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/MetricsSource.html" title="class in org.apache.hadoop.hbase.replication.regionserver">MetricsSource</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#sourceMetricsList">sourceMetricsList</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -211,10 +227,46 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="EMPTY_REPLICATIONLOAD">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>EMPTY_REPLICATIONLOAD</h4>
 <pre>public static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html" title="class in org.apache.hadoop.hbase.replication.regionserver">ReplicationLoad</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#line.37">EMPTY_REPLICATIONLOAD</a></pre>
+</li>
+</ul>
+<a name="sourceMetricsList">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sourceMetricsList</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/MetricsSource.html" title="class in org.apache.hadoop.hbase.replication.regionserver">MetricsSource</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#line.39">sourceMetricsList</a></pre>
+</li>
+</ul>
+<a name="sinkMetrics">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sinkMetrics</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/MetricsSink.html" title="class in org.apache.hadoop.hbase.replication.regionserver">MetricsSink</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#line.40">sinkMetrics</a></pre>
+</li>
+</ul>
+<a name="replicationLoadSourceList">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>replicationLoadSourceList</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.ClusterStatusProtos.ReplicationLoadSource&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#line.42">replicationLoadSourceList</a></pre>
+</li>
+</ul>
+<a name="replicationLoadSink">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>replicationLoadSink</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.protobuf.generated.ClusterStatusProtos.ReplicationLoadSink <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/ReplicationLoad.html#line.43">replicationLoadSink</a></pre>
 </li>
 </ul>
 </li>
@@ -334,7 +386,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/Replication.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/Replication.ReplicationStatisticsThread.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationSink.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

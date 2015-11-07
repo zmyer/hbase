@@ -55,11 +55,11 @@
 <a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.Tag;
 <a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.TagRewriteCell;
 <a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.TagType;
-<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Connection;
-<a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
-<a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Durability;
-<a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Get;
-<a class="jxr_linenumber" name="52" href="#52">52</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.HBaseAdmin;
+<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Admin;
+<a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Connection;
+<a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
+<a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Durability;
+<a class="jxr_linenumber" name="52" href="#52">52</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Get;
 <a class="jxr_linenumber" name="53" href="#53">53</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Put;
 <a class="jxr_linenumber" name="54" href="#54">54</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Result;
 <a class="jxr_linenumber" name="55" href="#55">55</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ResultScanner;
@@ -196,7 +196,7 @@
 <a class="jxr_linenumber" name="186" href="#186">186</a>     <em class="jxr_comment">// Wait for the labels table to become available</em>
 <a class="jxr_linenumber" name="187" href="#187">187</a>     TEST_UTIL.waitTableEnabled(LABELS_TABLE_NAME.getName(), 50000);
 <a class="jxr_linenumber" name="188" href="#188">188</a>     TEST_UTIL1.startMiniCluster(1);
-<a class="jxr_linenumber" name="189" href="#189">189</a>     HBaseAdmin hBaseAdmin = TEST_UTIL.getHBaseAdmin();
+<a class="jxr_linenumber" name="189" href="#189">189</a>     Admin hBaseAdmin = TEST_UTIL.getHBaseAdmin();
 <a class="jxr_linenumber" name="190" href="#190">190</a>     HTableDescriptor table = <strong class="jxr_keyword">new</strong> HTableDescriptor(TABLE_NAME);
 <a class="jxr_linenumber" name="191" href="#191">191</a>     HColumnDescriptor desc = <strong class="jxr_keyword">new</strong> HColumnDescriptor(fam);
 <a class="jxr_linenumber" name="192" href="#192">192</a>     desc.setScope(HConstants.REPLICATION_SCOPE_GLOBAL);
@@ -208,7 +208,7 @@
 <a class="jxr_linenumber" name="198" href="#198">198</a>         hBaseAdmin.close();
 <a class="jxr_linenumber" name="199" href="#199">199</a>       }
 <a class="jxr_linenumber" name="200" href="#200">200</a>     }
-<a class="jxr_linenumber" name="201" href="#201">201</a>     HBaseAdmin hBaseAdmin1 = TEST_UTIL1.getHBaseAdmin();
+<a class="jxr_linenumber" name="201" href="#201">201</a>     Admin hBaseAdmin1 = TEST_UTIL1.getHBaseAdmin();
 <a class="jxr_linenumber" name="202" href="#202">202</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="203" href="#203">203</a>       hBaseAdmin1.createTable(table);
 <a class="jxr_linenumber" name="204" href="#204">204</a>     } <strong class="jxr_keyword">finally</strong> {

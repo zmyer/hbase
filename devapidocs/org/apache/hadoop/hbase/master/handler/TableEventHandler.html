@@ -135,6 +135,14 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/executor/EventHandler
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#isPrepareCalled">isPrepareCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
 </tr>
@@ -205,6 +213,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/executor/EventHandler
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#handleTableOperation(java.util.List)">handleTableOperation</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#hasColumnFamily(org.apache.hadoop.hbase.HTableDescriptor,%20byte[])">hasColumnFamily</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
+                              byte[]&nbsp;cf)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#isOnlineSchemaChangeAllowed()">isOnlineSchemaChangeAllowed</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html" title="class in org.apache.hadoop.hbase.master.handler">TableEventHandler</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#prepare()">prepare</a></strong>()</code>
 <div class="block">Event handlers should do all the necessary checks in this method (rather than
@@ -262,6 +279,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/executor/EventHandler
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/handler/TableEventHandler.html#line.66">LOG</a></pre>
+</li>
+</ul>
 <a name="masterServices">
 <!--   -->
 </a>
@@ -283,10 +309,19 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/executor/EventHandler
 <a name="tableLock">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>tableLock</h4>
 <pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.TableLock.html" title="interface in org.apache.hadoop.hbase.master">TableLockManager.TableLock</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/handler/TableEventHandler.html#line.69">tableLock</a></pre>
+</li>
+</ul>
+<a name="isPrepareCalled">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isPrepareCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/handler/TableEventHandler.html#line.70">isPrepareCalled</a></pre>
 </li>
 </ul>
 </li>
@@ -354,6 +389,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/executor/EventHandler
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="isOnlineSchemaChangeAllowed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOnlineSchemaChangeAllowed</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/handler/TableEventHandler.html#line.114">isOnlineSchemaChangeAllowed</a>()</pre>
+</li>
+</ul>
 <a name="process()">
 <!--   -->
 </a>
@@ -416,6 +460,19 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/executor/EventHandler
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/FileNotFoundException.html?is-external=true" title="class or interface in java.io">FileNotFoundException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="hasColumnFamily(org.apache.hadoop.hbase.HTableDescriptor, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasColumnFamily</h4>
+<pre>byte[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/handler/TableEventHandler.html#line.248">hasColumnFamily</a>(<a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
+                     byte[]&nbsp;cf)
+                 throws <a href="../../../../../../org/apache/hadoop/hbase/InvalidFamilyOperationException.html" title="class in org.apache.hadoop.hbase">InvalidFamilyOperationException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../../org/apache/hadoop/hbase/InvalidFamilyOperationException.html" title="class in org.apache.hadoop.hbase">InvalidFamilyOperationException</a></code></dd></dl>
 </li>
 </ul>
 <a name="handleTableOperation(java.util.List)">

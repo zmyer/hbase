@@ -61,15 +61,15 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_top">
@@ -134,6 +134,17 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#sleepTime">sleepTime</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">
 <!--   -->
@@ -166,6 +177,37 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.
 <!--   -->
 </a>
 <h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#restartDataNode(org.apache.hadoop.hbase.ServerName,%20long)">restartDataNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;server,
+                              long&nbsp;sleepTime)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#restartMaster(org.apache.hadoop.hbase.ServerName,%20long)">restartMaster</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;server,
+                          long&nbsp;sleepTime)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#restartRs(org.apache.hadoop.hbase.ServerName,%20long)">restartRs</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;server,
+                  long&nbsp;sleepTime)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#restartZKNode(org.apache.hadoop.hbase.ServerName,%20long)">restartZKNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;server,
+                          long&nbsp;sleepTime)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#sleep(long)">sleep</a></strong>(long&nbsp;sleepTime)</code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">
 <!--   -->
@@ -188,6 +230,23 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="sleepTime">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>sleepTime</h4>
+<pre>long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#line.30">sleepTime</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -201,6 +260,75 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.
 <li class="blockList">
 <h4>RestartActionBaseAction</h4>
 <pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#line.32">RestartActionBaseAction</a>(long&nbsp;sleepTime)</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="sleep(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sleep</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#line.36">sleep</a>(long&nbsp;sleepTime)</pre>
+</li>
+</ul>
+<a name="restartMaster(org.apache.hadoop.hbase.ServerName, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>restartMaster</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#line.41">restartMaster</a>(org.apache.hadoop.hbase.ServerName&nbsp;server,
+                 long&nbsp;sleepTime)
+             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="restartRs(org.apache.hadoop.hbase.ServerName, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>restartRs</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#line.53">restartRs</a>(org.apache.hadoop.hbase.ServerName&nbsp;server,
+             long&nbsp;sleepTime)
+         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="restartZKNode(org.apache.hadoop.hbase.ServerName, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>restartZKNode</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#line.64">restartZKNode</a>(org.apache.hadoop.hbase.ServerName&nbsp;server,
+                 long&nbsp;sleepTime)
+             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="restartDataNode(org.apache.hadoop.hbase.ServerName, long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>restartDataNode</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/RestartActionBaseAction.html#line.75">restartDataNode</a>(org.apache.hadoop.hbase.ServerName&nbsp;server,
+                   long&nbsp;sleepTime)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>
@@ -255,15 +383,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_bottom">

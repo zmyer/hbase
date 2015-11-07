@@ -92,6 +92,10 @@
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.master.balancer">org.apache.hadoop.hbase.master.balancer</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -138,6 +142,21 @@
 </tr>
 </tbody>
 </table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ClusterStatusListener.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClusterStatusListener.html#receive(org.apache.hadoop.hbase.ClusterStatus)">receive</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;ncs)</code>
+<div class="block">Acts upon the reception of a new cluster status.</div>
+</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.master">
 <!--   -->
@@ -164,14 +183,20 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">ClusterStatusPublisher.Publisher.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ClusterStatusPublisher.Publisher.html#publish(org.apache.hadoop.hbase.ClusterStatus)">publish</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;cs)</code>&nbsp;</td>
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">ClusterStatusPublisher.MulticastPublisher.ClusterStatusEncoder.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ClusterStatusPublisher.MulticastPublisher.ClusterStatusEncoder.html#encode(io.netty.channel.ChannelHandlerContext,%20org.apache.hadoop.hbase.ClusterStatus,%20java.util.List)">encode</a></strong>(io.netty.channel.ChannelHandlerContext&nbsp;channelHandlerContext,
+            <a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;clusterStatus,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;objects)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">ClusterStatusPublisher.MulticastPublisher.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ClusterStatusPublisher.MulticastPublisher.html#publish(org.apache.hadoop.hbase.ClusterStatus)">publish</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;cs)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">ClusterStatusPublisher.Publisher.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ClusterStatusPublisher.Publisher.html#publish(org.apache.hadoop.hbase.ClusterStatus)">publish</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;cs)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ClusterStatusPublisher.MulticastPublisher.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/ClusterStatusPublisher.MulticastPublisher.html#publish(org.apache.hadoop.hbase.ClusterStatus)">publish</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;cs)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">LoadBalancer.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#setClusterStatus(org.apache.hadoop.hbase.ClusterStatus)">setClusterStatus</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;st)</code>
 <div class="block">Set the current cluster status.</div>
@@ -195,6 +220,14 @@
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a></code></td>
 <td class="colLast"><span class="strong">BaseLoadBalancer.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#clusterStatus">clusterStatus</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a></code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.CostFromRegionLoadFunction.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.CostFromRegionLoadFunction.html#clusterStatus">clusterStatus</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a></code></td>
+<td class="colLast"><span class="strong">RegionLocationFinder.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/RegionLocationFinder.html#status">status</a></strong></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -210,7 +243,33 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RegionLocationFinder.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/RegionLocationFinder.html#setClusterStatus(org.apache.hadoop.hbase.ClusterStatus)">setClusterStatus</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;status)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">StochasticLoadBalancer.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.html#setClusterStatus(org.apache.hadoop.hbase.ClusterStatus)">setClusterStatus</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;st)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">StochasticLoadBalancer.CostFromRegionLoadFunction.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.CostFromRegionLoadFunction.html#setClusterStatus(org.apache.hadoop.hbase.ClusterStatus)">setClusterStatus</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;status)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.util">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a> in <a href="../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a> declared as <a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a></code></td>
+<td class="colLast"><span class="strong">HBaseFsck.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.html#status">status</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

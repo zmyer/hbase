@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,61 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Admin</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#admin">admin</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Connection</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#CONNECTION">CONNECTION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#favoredNodesAssignmentPlan">favoredNodesAssignmentPlan</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#lastRegionOnPrimaryRSCount">lastRegionOnPrimaryRSCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#positions">positions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#REGION_NUM">REGION_NUM</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.master.RegionPlacementMaintainer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#rp">rp</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#SLAVES">SLAVES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -133,8 +188,34 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#createTable(org.apache.hadoop.hbase.TableName,%20int)">createTable</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                      int&nbsp;regionNum)</code>
+<div class="block">Create a table with specified table name and region number.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#getNumRegionisOnPrimaryRS()">getNumRegionisOnPrimaryRS</a></strong>()</code>
+<div class="block">Check whether regions are assigned to servers consistent with the explicit
+ hints that are persisted in the hbase:meta table.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#killRandomServerAndVerifyAssignment()">killRandomServerAndVerifyAssignment</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#setupBeforeClass()">setupBeforeClass</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#shuffleAssignmentPlan(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan,%20org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position,%20org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position)">shuffleAssignmentPlan</a></strong>(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan&nbsp;plan,
+                                          org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position&nbsp;p1,
+                                          org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position&nbsp;p2)</code>
+<div class="block">Shuffle the assignment plan by switching two favored node positions.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
@@ -149,6 +230,40 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#testRegionPlacement()">testRegionPlacement</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#verifyMETAUpdated(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan)">verifyMETAUpdated</a></strong>(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan&nbsp;expectedPlan)</code>
+<div class="block">Verify the meta has updated to the latest assignment plan</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#verifyRegionAssignment(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan,%20int,%20int)">verifyRegionAssignment</a></strong>(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan&nbsp;plan,
+                                            int&nbsp;regionMovementNum,
+                                            int&nbsp;numRegionsOnPrimaryRS)</code>
+<div class="block">To verify the region assignment status.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#verifyRegionMovementNum(int)">verifyRegionMovementNum</a></strong>(int&nbsp;expected)</code>
+<div class="block">Verify the number of region movement is expected</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#verifyRegionOnPrimaryRS(int)">verifyRegionOnPrimaryRS</a></strong>(int&nbsp;expectedNum)</code>
+<div class="block">Verify the number of user regions is assigned to the primary
+ region server based on the plan is expected</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestRegionPlacement.html#verifyRegionServerUpdated(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan)">verifyRegionServerUpdated</a></strong>(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan&nbsp;plan)</code>
+<div class="block">Verify all the online region servers has been updated to the
+ latest assignment plan</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -166,6 +281,105 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.74">LOG</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.75">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="SLAVES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SLAVES</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.76">SLAVES</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.master.TestRegionPlacement.SLAVES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CONNECTION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CONNECTION</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Connection <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.77">CONNECTION</a></pre>
+</li>
+</ul>
+<a name="admin">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>admin</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Admin <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.78">admin</a></pre>
+</li>
+</ul>
+<a name="rp">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rp</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.master.RegionPlacementMaintainer <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.79">rp</a></pre>
+</li>
+</ul>
+<a name="positions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>positions</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position[] <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.80">positions</a></pre>
+</li>
+</ul>
+<a name="lastRegionOnPrimaryRSCount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastRegionOnPrimaryRSCount</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.81">lastRegionOnPrimaryRSCount</a></pre>
+</li>
+</ul>
+<a name="REGION_NUM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>REGION_NUM</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.82">REGION_NUM</a></pre>
+</li>
+</ul>
+<a name="favoredNodesAssignmentPlan">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>favoredNodesAssignmentPlan</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;org.apache.hadoop.hbase.HRegionInfo,org.apache.hadoop.hbase.ServerName[]&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.83">favoredNodesAssignmentPlan</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -225,14 +439,157 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="killRandomServerAndVerifyAssignment()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>killRandomServerAndVerifyAssignment</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.182">killRandomServerAndVerifyAssignment</a>()
+                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
+                                                 org.apache.zookeeper.KeeperException</pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
+<dd><code>org.apache.zookeeper.KeeperException</code></dd></dl>
+</li>
+</ul>
 <a name="testRandomizedMatrix()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testRandomizedMatrix</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.250">testRandomizedMatrix</a>()</pre>
 <div class="block">Used to test the correctness of this class.</div>
+</li>
+</ul>
+<a name="shuffleAssignmentPlan(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan, org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position, org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shuffleAssignmentPlan</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.301">shuffleAssignmentPlan</a>(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan&nbsp;plan,
+                                                                             org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position&nbsp;p1,
+                                                                             org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan.Position&nbsp;p2)</pre>
+<div class="block">Shuffle the assignment plan by switching two favored node positions.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>plan</code> - The assignment plan</dd><dd><code>p1</code> - The first switch position</dd><dd><code>p2</code> - The second switch position</dd>
+<dt><span class="strong">Returns:</span></dt><dd></dd></dl>
+</li>
+</ul>
+<a name="verifyRegionAssignment(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyRegionAssignment</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.336">verifyRegionAssignment</a>(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan&nbsp;plan,
+                          int&nbsp;regionMovementNum,
+                          int&nbsp;numRegionsOnPrimaryRS)
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
+                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">To verify the region assignment status.
+ It will check the assignment plan consistency between hbase:meta and
+ region servers.
+ Also it will verify weather the number of region movement and
+ the number regions on the primary region server are expected</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>plan</code> - </dd><dd><code>regionMovementNum</code> - </dd><dd><code>numRegionsOnPrimaryRS</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyMETAUpdated(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyMETAUpdated</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.358">verifyMETAUpdated</a>(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan&nbsp;expectedPlan)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Verify the meta has updated to the latest assignment plan</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>plan</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyRegionMovementNum(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyRegionMovementNum</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.368">verifyRegionMovementNum</a>(int&nbsp;expected)
+                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
+                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Verify the number of region movement is expected</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyRegionOnPrimaryRS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyRegionOnPrimaryRS</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.402">verifyRegionOnPrimaryRS</a>(int&nbsp;expectedNum)
+                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Verify the number of user regions is assigned to the primary
+ region server based on the plan is expected</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>expectedNum.</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyRegionServerUpdated(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyRegionServerUpdated</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.416">verifyRegionServerUpdated</a>(org.apache.hadoop.hbase.master.balancer.FavoredNodesPlan&nbsp;plan)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Verify all the online region servers has been updated to the
+ latest assignment plan</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>plan</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getNumRegionisOnPrimaryRS()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNumRegionisOnPrimaryRS</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.467">getNumRegionisOnPrimaryRS</a>()
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Check whether regions are assigned to servers consistent with the explicit
+ hints that are persisted in the hbase:meta table.
+ Also keep track of the number of the regions are assigned to the
+ primary region server.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the number of regions are assigned to the primary region server</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createTable(org.apache.hadoop.hbase.TableName, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createTable</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestRegionPlacement.html#line.538">createTable</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+               int&nbsp;regionNum)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Create a table with specified table name and region number.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tablename</code> - </dd><dd><code>regionNum</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>
@@ -287,13 +644,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -191,7 +191,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttr
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getACL()">getACL</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html" title="class in org.apache.hadoop.hbase.security.visibility">Authorizations</a></code></td>
+<td class="colFirst"><code>org.apache.hadoop.hbase.security.visibility.Authorizations</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getAuthorizations()">getAuthorizations</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -216,16 +216,16 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttr
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setACL(java.util.Map)">setACL</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&gt;&nbsp;perms)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setACL(java.util.Map)">setACL</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.security.access.Permission&gt;&nbsp;perms)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setACL(java.lang.String,%20org.apache.hadoop.hbase.security.access.Permission)">setACL</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user,
-            <a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&nbsp;perms)</code>&nbsp;</td>
+            org.apache.hadoop.hbase.security.access.Permission&nbsp;perms)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setAuthorizations(org.apache.hadoop.hbase.security.visibility.Authorizations)">setAuthorizations</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html" title="class in org.apache.hadoop.hbase.security.visibility">Authorizations</a>&nbsp;authorizations)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setAuthorizations(org.apache.hadoop.hbase.security.visibility.Authorizations)">setAuthorizations</a></strong>(org.apache.hadoop.hbase.security.visibility.Authorizations&nbsp;authorizations)</code>
 <div class="block">Sets the authorizations to be used by this Query</div>
 </td>
 </tr>
@@ -371,7 +371,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttr
 <ul class="blockList">
 <li class="blockList">
 <h4>setAuthorizations</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Query.html#line.66">setAuthorizations</a>(<a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html" title="class in org.apache.hadoop.hbase.security.visibility">Authorizations</a>&nbsp;authorizations)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Query.html#line.66">setAuthorizations</a>(org.apache.hadoop.hbase.security.visibility.Authorizations&nbsp;authorizations)</pre>
 <div class="block">Sets the authorizations to be used by this Query</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>authorizations</code> - </dd></dl>
 </li>
@@ -382,8 +382,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttr
 <ul class="blockList">
 <li class="blockList">
 <h4>getAuthorizations</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html" title="class in org.apache.hadoop.hbase.security.visibility">Authorizations</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Query.html#line.76">getAuthorizations</a>()
-                                 throws org.apache.hadoop.hbase.exceptions.DeserializationException</pre>
+<pre>public&nbsp;org.apache.hadoop.hbase.security.visibility.Authorizations&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Query.html#line.76">getAuthorizations</a>()
+                                                                             throws org.apache.hadoop.hbase.exceptions.DeserializationException</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The authorizations this Query is associated with.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code>org.apache.hadoop.hbase.exceptions.DeserializationException</code></dd></dl>
@@ -406,7 +406,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttr
 <li class="blockList">
 <h4>setACL</h4>
 <pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Query.html#line.93">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user,
-           <a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&nbsp;perms)</pre>
+           org.apache.hadoop.hbase.security.access.Permission&nbsp;perms)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>user</code> - User short name</dd><dd><code>perms</code> - Permissions for the user</dd></dl>
 </li>
 </ul>
@@ -416,7 +416,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttr
 <ul class="blockList">
 <li class="blockList">
 <h4>setACL</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Query.html#line.102">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&gt;&nbsp;perms)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Query.html#line.102">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.security.access.Permission&gt;&nbsp;perms)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>perms</code> - A map of permissions for a user or users</dd></dl>
 </li>
 </ul>

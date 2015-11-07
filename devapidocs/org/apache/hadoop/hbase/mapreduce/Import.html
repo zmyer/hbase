@@ -192,10 +192,22 @@ implements org.apache.hadoop.util.Tool</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#HAS_LARGE_RESULT">HAS_LARGE_RESULT</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#JOB_NAME_CONF_KEY">JOB_NAME_CONF_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#NAME">NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#TABLE_NAME">TABLE_NAME</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#WAL_DURABILITY">WAL_DURABILITY</a></strong></code>&nbsp;</td>
 </tr>
@@ -248,6 +260,15 @@ implements org.apache.hadoop.util.Tool</pre>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#convertKv(org.apache.hadoop.hbase.Cell,%20java.util.Map)">convertKv</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt;&nbsp;cfRenameMap)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#createCfRenameMap(org.apache.hadoop.conf.Configuration)">createCfRenameMap</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static org.apache.hadoop.mapreduce.Job</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#createSubmittableJob(org.apache.hadoop.conf.Configuration,%20java.lang.String[])">createSubmittableJob</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>
@@ -286,6 +307,14 @@ implements org.apache.hadoop.util.Tool</pre>
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#run(java.lang.String[])">run</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;byte[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#toQuotedByteArrays(java.lang.String...)">toQuotedByteArrays</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;stringArgs)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#usage(java.lang.String)">usage</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;errorMsg)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.conf.Configured">
@@ -322,6 +351,25 @@ implements org.apache.hadoop.util.Tool</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/Import.html#line.88">LOG</a></pre>
+</li>
+</ul>
+<a name="NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NAME</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/Import.html#line.89">NAME</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.Import.NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="CF_RENAME_PROP">
 <!--   -->
 </a>
@@ -385,11 +433,21 @@ implements org.apache.hadoop.util.Tool</pre>
 <a name="HAS_LARGE_RESULT">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>HAS_LARGE_RESULT</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/Import.html#line.96">HAS_LARGE_RESULT</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.Import.HAS_LARGE_RESULT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JOB_NAME_CONF_KEY">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>JOB_NAME_CONF_KEY</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/Import.html#line.98">JOB_NAME_CONF_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.Import.JOB_NAME_CONF_KEY">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -432,6 +490,15 @@ implements org.apache.hadoop.util.Tool</pre>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the filter is misconfigured</dd></dl>
 </li>
 </ul>
+<a name="toQuotedByteArrays(java.lang.String...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toQuotedByteArrays</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;byte[]&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/Import.html#line.468">toQuotedByteArrays</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;stringArgs)</pre>
+</li>
+</ul>
 <a name="filterKv(org.apache.hadoop.hbase.filter.Filter, org.apache.hadoop.hbase.Cell)">
 <!--   -->
 </a>
@@ -447,6 +514,25 @@ implements org.apache.hadoop.util.Tool</pre>
          <a href="../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase"><code>KeyValue</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="convertKv(org.apache.hadoop.hbase.Cell, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>convertKv</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/Import.html#line.501">convertKv</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv,
+             <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt;&nbsp;cfRenameMap)</pre>
+</li>
+</ul>
+<a name="createCfRenameMap(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCfRenameMap</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/Import.html#line.526">createCfRenameMap</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 </li>
 </ul>
 <a name="configureCfRenaming(org.apache.hadoop.conf.Configuration, java.util.Map)">
@@ -498,6 +584,15 @@ implements org.apache.hadoop.util.Tool</pre>
 <dt><span class="strong">Returns:</span></dt><dd>The newly created job.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - When setting up the job fails.</dd></dl>
+</li>
+</ul>
+<a name="usage(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>usage</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/Import.html#line.673">usage</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;errorMsg)</pre>
 </li>
 </ul>
 <a name="flushRegionsIfNecessary(org.apache.hadoop.conf.Configuration)">

@@ -74,7 +74,7 @@
 <a class="jxr_linenumber" name="64" href="#64">64</a>    }
 <a class="jxr_linenumber" name="65" href="#65">65</a>  
 <a class="jxr_linenumber" name="66" href="#66">66</a>    @Override
-<a class="jxr_linenumber" name="67" href="#67">67</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">CreateNamespaceState</a> state)
+<a class="jxr_linenumber" name="67" href="#67">67</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> CreateNamespaceState state)
 <a class="jxr_linenumber" name="68" href="#68">68</a>        <strong class="jxr_keyword">throws</strong> InterruptedException {
 <a class="jxr_linenumber" name="69" href="#69">69</a>      <strong class="jxr_keyword">if</strong> (isTraceEnabled()) {
 <a class="jxr_linenumber" name="70" href="#70">70</a>        LOG.trace(<strong class="jxr_keyword">this</strong> + <span class="jxr_string">" execute state="</span> + state);
@@ -114,7 +114,7 @@
 <a class="jxr_linenumber" name="104" href="#104">104</a>   }
 <a class="jxr_linenumber" name="105" href="#105">105</a> 
 <a class="jxr_linenumber" name="106" href="#106">106</a>   @Override
-<a class="jxr_linenumber" name="107" href="#107">107</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">CreateNamespaceState</a> state)
+<a class="jxr_linenumber" name="107" href="#107">107</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> CreateNamespaceState state)
 <a class="jxr_linenumber" name="108" href="#108">108</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="109" href="#109">109</a>     <strong class="jxr_keyword">if</strong> (isTraceEnabled()) {
 <a class="jxr_linenumber" name="110" href="#110">110</a>       LOG.trace(<strong class="jxr_keyword">this</strong> + <span class="jxr_string">" rollback state="</span> + state);
@@ -148,22 +148,22 @@
 <a class="jxr_linenumber" name="138" href="#138">138</a>   }
 <a class="jxr_linenumber" name="139" href="#139">139</a> 
 <a class="jxr_linenumber" name="140" href="#140">140</a>   @Override
-<a class="jxr_linenumber" name="141" href="#141">141</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">CreateNamespaceState</a> getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
+<a class="jxr_linenumber" name="141" href="#141">141</a>   <strong class="jxr_keyword">protected</strong> CreateNamespaceState getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
 <a class="jxr_linenumber" name="142" href="#142">142</a>     <strong class="jxr_keyword">return</strong> CreateNamespaceState.valueOf(stateId);
 <a class="jxr_linenumber" name="143" href="#143">143</a>   }
 <a class="jxr_linenumber" name="144" href="#144">144</a> 
 <a class="jxr_linenumber" name="145" href="#145">145</a>   @Override
-<a class="jxr_linenumber" name="146" href="#146">146</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">CreateNamespaceState</a> state) {
+<a class="jxr_linenumber" name="146" href="#146">146</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> CreateNamespaceState state) {
 <a class="jxr_linenumber" name="147" href="#147">147</a>     <strong class="jxr_keyword">return</strong> state.getNumber();
 <a class="jxr_linenumber" name="148" href="#148">148</a>   }
 <a class="jxr_linenumber" name="149" href="#149">149</a> 
 <a class="jxr_linenumber" name="150" href="#150">150</a>   @Override
-<a class="jxr_linenumber" name="151" href="#151">151</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">CreateNamespaceState</a> getInitialState() {
+<a class="jxr_linenumber" name="151" href="#151">151</a>   <strong class="jxr_keyword">protected</strong> CreateNamespaceState getInitialState() {
 <a class="jxr_linenumber" name="152" href="#152">152</a>     <strong class="jxr_keyword">return</strong> CreateNamespaceState.CREATE_NAMESPACE_PREPARE;
 <a class="jxr_linenumber" name="153" href="#153">153</a>   }
 <a class="jxr_linenumber" name="154" href="#154">154</a> 
 <a class="jxr_linenumber" name="155" href="#155">155</a>   @Override
-<a class="jxr_linenumber" name="156" href="#156">156</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setNextState(<a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">CreateNamespaceState</a> state) {
+<a class="jxr_linenumber" name="156" href="#156">156</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setNextState(CreateNamespaceState state) {
 <a class="jxr_linenumber" name="157" href="#157">157</a>     <strong class="jxr_keyword">if</strong> (aborted.get()) {
 <a class="jxr_linenumber" name="158" href="#158">158</a>       setAbortFailure(<span class="jxr_string">"create-namespace"</span>, <span class="jxr_string">"abort requested"</span>);
 <a class="jxr_linenumber" name="159" href="#159">159</a>     } <strong class="jxr_keyword">else</strong> {

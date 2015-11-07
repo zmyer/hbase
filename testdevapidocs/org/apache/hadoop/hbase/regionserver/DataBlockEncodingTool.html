@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/CreateRandomStoreFile.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/EncodedSeekPerformanceTest.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.Manipulation.html" title="enum in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -105,6 +105,188 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.Manipulation.html" title="enum in org.apache.hadoop.hbase.regionserver">DataBlockEncodingTool.Manipulation</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#benchmarkNOmit">benchmarkNOmit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#benchmarkNTimes">benchmarkNTimes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static double</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#BYTES_IN_MB">BYTES_IN_MB</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.io.encoding.EncodedDataBlock&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#codecs">codecs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.io.compress.Compression.Algorithm</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#compressionAlgorithm">compressionAlgorithm</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#compressionAlgorithmName">compressionAlgorithmName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.io.compress.Compressor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#compressor">compressor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.io.compress.Decompressor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#decompressor">decompressor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#DEFAULT_BENCHMARK_N_OMIT">DEFAULT_BENCHMARK_N_OMIT</a></strong></code>
+<div class="block">How many first runs should not be included in the benchmark.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#DEFAULT_BENCHMARK_N_TIMES">DEFAULT_BENCHMARK_N_TIMES</a></strong></code>
+<div class="block">How many times to run the benchmark.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.io.compress.Compression.Algorithm</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#DEFAULT_COMPRESSION">DEFAULT_COMPRESSION</a></strong></code>
+<div class="block">Compression algorithm to use if not specified on the command line</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html?is-external=true" title="class or interface in java.text">DecimalFormat</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#DELIMITED_DECIMAL_FORMAT">DELIMITED_DECIMAL_FORMAT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#includesMemstoreTS">includesMemstoreTS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#INT_FORMAT">INT_FORMAT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static double</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#MB_SEC_COEF">MB_SEC_COEF</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static double</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#NS_IN_SEC">NS_IN_SEC</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#OPT_BENCHMARK_N_OMIT">OPT_BENCHMARK_N_OMIT</a></strong></code>
+<div class="block">Number of first runs of every benchmark to omit from statistics</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#OPT_BENCHMARK_N_TIMES">OPT_BENCHMARK_N_TIMES</a></strong></code>
+<div class="block">Number of times to run each benchmark</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#OPT_ENCODING_ALGORITHM">OPT_ENCODING_ALGORITHM</a></strong></code>
+<div class="block">What encoding algorithm to test</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#OPT_HFILE_NAME">OPT_HFILE_NAME</a></strong></code>
+<div class="block">HFile name to be used in benchmark</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#OPT_KV_LIMIT">OPT_KV_LIMIT</a></strong></code>
+<div class="block">Maximum number of key/value pairs to process in a single benchmark run</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#OPT_MEASURE_THROUGHPUT">OPT_MEASURE_THROUGHPUT</a></strong></code>
+<div class="block">Whether to run a benchmark to measure read throughput</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#OPT_OMIT_CORRECTNESS_TEST">OPT_OMIT_CORRECTNESS_TEST</a></strong></code>
+<div class="block">If this is specified, no correctness testing will be done</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#PCT_FORMAT">PCT_FORMAT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#rawKVs">rawKVs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#totalCFLength">totalCFLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#totalKeyLength">totalKeyLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#totalKeyRedundancyLength">totalKeyRedundancyLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#totalPrefixLength">totalPrefixLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#totalValueLength">totalValueLength</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#useHBaseChecksum">useHBaseChecksum</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -151,6 +333,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#benchmarkDefaultCompression(int,%20byte[])">benchmarkDefaultCompression</a></strong>(int&nbsp;totalSize,
+                                                      byte[]&nbsp;rawBuffer)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#benchmarkEncoder(int,%20org.apache.hadoop.hbase.io.encoding.EncodedDataBlock)">benchmarkEncoder</a></strong>(int&nbsp;previousTotalSize,
+                                org.apache.hadoop.hbase.io.encoding.EncodedDataBlock&nbsp;codec)</code>
+<div class="block">Benchmark compression/decompression throughput.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#checkStatistics(org.apache.hadoop.hbase.regionserver.KeyValueScanner,%20int)">checkStatistics</a></strong>(org.apache.hadoop.hbase.regionserver.KeyValueScanner&nbsp;scanner,
                               int&nbsp;kvLimit)</code>
@@ -170,6 +364,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#outputSavings(java.lang.String,%20long,%20long)">outputSavings</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;caption,
+                          long&nbsp;part,
+                          long&nbsp;whole)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#outputTuple(java.lang.String,%20java.lang.String,%20java.lang.Object...)">outputTuple</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;caption,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;format,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;values)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#outputTuplePct(java.lang.String,%20long)">outputTuplePct</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;caption,
+                            long&nbsp;size)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#printBenchmarkResult(int,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.Manipulation)">printBenchmarkResult</a></strong>(int&nbsp;totalSize,
+                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;durationsInNanoSec,
+                                        <a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.Manipulation.html" title="enum in org.apache.hadoop.hbase.regionserver">DataBlockEncodingTool.Manipulation</a>&nbsp;manipulation)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#printUsage(org.apache.commons.cli.Options)">printUsage</a></strong>(org.apache.commons.cli.Options&nbsp;options)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#testCodecs(org.apache.hadoop.conf.Configuration,%20int,%20java.lang.String,%20java.lang.String,%20boolean,%20boolean)">testCodecs</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                     int&nbsp;kvLimit,
@@ -180,7 +401,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Test a data block encoder on the given HFile.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#verifyCodecs(org.apache.hadoop.hbase.regionserver.KeyValueScanner,%20int)">verifyCodecs</a></strong>(org.apache.hadoop.hbase.regionserver.KeyValueScanner&nbsp;scanner,
                         int&nbsp;kvLimit)</code>
@@ -203,6 +424,330 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.63">LOG</a></pre>
+</li>
+</ul>
+<a name="includesMemstoreTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>includesMemstoreTS</h4>
+<pre>private static final&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.66">includesMemstoreTS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.includesMemstoreTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_BENCHMARK_N_TIMES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_BENCHMARK_N_TIMES</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.73">DEFAULT_BENCHMARK_N_TIMES</a></pre>
+<div class="block">How many times to run the benchmark. More times means better data in terms
+ of statistics but slower execution. Has to be strictly larger than
+ <code>DEFAULT_BENCHMARK_N_OMIT</code>.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.DEFAULT_BENCHMARK_N_TIMES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_BENCHMARK_N_OMIT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_BENCHMARK_N_OMIT</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.79">DEFAULT_BENCHMARK_N_OMIT</a></pre>
+<div class="block">How many first runs should not be included in the benchmark. Done in order
+ to exclude setup cost.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.DEFAULT_BENCHMARK_N_OMIT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="OPT_HFILE_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OPT_HFILE_NAME</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.82">OPT_HFILE_NAME</a></pre>
+<div class="block">HFile name to be used in benchmark</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.OPT_HFILE_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="OPT_KV_LIMIT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OPT_KV_LIMIT</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.85">OPT_KV_LIMIT</a></pre>
+<div class="block">Maximum number of key/value pairs to process in a single benchmark run</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.OPT_KV_LIMIT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="OPT_MEASURE_THROUGHPUT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OPT_MEASURE_THROUGHPUT</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.88">OPT_MEASURE_THROUGHPUT</a></pre>
+<div class="block">Whether to run a benchmark to measure read throughput</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.OPT_MEASURE_THROUGHPUT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="OPT_OMIT_CORRECTNESS_TEST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OPT_OMIT_CORRECTNESS_TEST</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.91">OPT_OMIT_CORRECTNESS_TEST</a></pre>
+<div class="block">If this is specified, no correctness testing will be done</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.OPT_OMIT_CORRECTNESS_TEST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="OPT_ENCODING_ALGORITHM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OPT_ENCODING_ALGORITHM</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.94">OPT_ENCODING_ALGORITHM</a></pre>
+<div class="block">What encoding algorithm to test</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.OPT_ENCODING_ALGORITHM">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="OPT_BENCHMARK_N_TIMES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OPT_BENCHMARK_N_TIMES</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.97">OPT_BENCHMARK_N_TIMES</a></pre>
+<div class="block">Number of times to run each benchmark</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.OPT_BENCHMARK_N_TIMES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="OPT_BENCHMARK_N_OMIT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OPT_BENCHMARK_N_OMIT</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.100">OPT_BENCHMARK_N_OMIT</a></pre>
+<div class="block">Number of first runs of every benchmark to omit from statistics</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.OPT_BENCHMARK_N_OMIT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_COMPRESSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_COMPRESSION</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.io.compress.Compression.Algorithm <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.103">DEFAULT_COMPRESSION</a></pre>
+<div class="block">Compression algorithm to use if not specified on the command line</div>
+</li>
+</ul>
+<a name="DELIMITED_DECIMAL_FORMAT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DELIMITED_DECIMAL_FORMAT</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html?is-external=true" title="class or interface in java.text">DecimalFormat</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.106">DELIMITED_DECIMAL_FORMAT</a></pre>
+</li>
+</ul>
+<a name="PCT_FORMAT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PCT_FORMAT</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.113">PCT_FORMAT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.PCT_FORMAT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INT_FORMAT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INT_FORMAT</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.114">INT_FORMAT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.INT_FORMAT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="benchmarkNTimes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>benchmarkNTimes</h4>
+<pre>private static&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.116">benchmarkNTimes</a></pre>
+</li>
+</ul>
+<a name="benchmarkNOmit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>benchmarkNOmit</h4>
+<pre>private static&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.117">benchmarkNOmit</a></pre>
+</li>
+</ul>
+<a name="codecs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>codecs</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.io.encoding.EncodedDataBlock&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.119">codecs</a></pre>
+</li>
+</ul>
+<a name="totalPrefixLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>totalPrefixLength</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.120">totalPrefixLength</a></pre>
+</li>
+</ul>
+<a name="totalKeyLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>totalKeyLength</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.121">totalKeyLength</a></pre>
+</li>
+</ul>
+<a name="totalValueLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>totalValueLength</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.122">totalValueLength</a></pre>
+</li>
+</ul>
+<a name="totalKeyRedundancyLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>totalKeyRedundancyLength</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.123">totalKeyRedundancyLength</a></pre>
+</li>
+</ul>
+<a name="totalCFLength">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>totalCFLength</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.124">totalCFLength</a></pre>
+</li>
+</ul>
+<a name="rawKVs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rawKVs</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.126">rawKVs</a></pre>
+</li>
+</ul>
+<a name="useHBaseChecksum">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>useHBaseChecksum</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.127">useHBaseChecksum</a></pre>
+</li>
+</ul>
+<a name="compressionAlgorithmName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compressionAlgorithmName</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.129">compressionAlgorithmName</a></pre>
+</li>
+</ul>
+<a name="compressionAlgorithm">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compressionAlgorithm</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.io.compress.Compression.Algorithm <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.130">compressionAlgorithm</a></pre>
+</li>
+</ul>
+<a name="compressor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compressor</h4>
+<pre>private final&nbsp;org.apache.hadoop.io.compress.Compressor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.131">compressor</a></pre>
+</li>
+</ul>
+<a name="decompressor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>decompressor</h4>
+<pre>private final&nbsp;org.apache.hadoop.io.compress.Decompressor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.132">decompressor</a></pre>
+</li>
+</ul>
+<a name="BYTES_IN_MB">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BYTES_IN_MB</h4>
+<pre>private static final&nbsp;double <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.475">BYTES_IN_MB</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.BYTES_IN_MB">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="NS_IN_SEC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NS_IN_SEC</h4>
+<pre>private static final&nbsp;double <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.476">NS_IN_SEC</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.NS_IN_SEC">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MB_SEC_COEF">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>MB_SEC_COEF</h4>
+<pre>private static final&nbsp;double <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.477">MB_SEC_COEF</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.MB_SEC_COEF">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -272,6 +817,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="benchmarkEncoder(int, org.apache.hadoop.hbase.io.encoding.EncodedDataBlock)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>benchmarkEncoder</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.323">benchmarkEncoder</a>(int&nbsp;previousTotalSize,
+                   org.apache.hadoop.hbase.io.encoding.EncodedDataBlock&nbsp;codec)</pre>
+<div class="block">Benchmark compression/decompression throughput.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>previousTotalSize</code> - Total size used for verification. Use -1 if
+          unknown.</dd><dd><code>codec</code> - Tested encoder.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Size of uncompressed data.</dd></dl>
+</li>
+</ul>
+<a name="benchmarkDefaultCompression(int, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>benchmarkDefaultCompression</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.372">benchmarkDefaultCompression</a>(int&nbsp;totalSize,
+                               byte[]&nbsp;rawBuffer)
+                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="benchmarkAlgorithm(org.apache.hadoop.hbase.io.compress.Compression.Algorithm, java.lang.String, byte[], int, int)">
 <!--   -->
 </a>
@@ -290,6 +862,28 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="printBenchmarkResult(int, java.util.List, org.apache.hadoop.hbase.regionserver.DataBlockEncodingTool.Manipulation)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>printBenchmarkResult</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.479">printBenchmarkResult</a>(int&nbsp;totalSize,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;durationsInNanoSec,
+                        <a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.Manipulation.html" title="enum in org.apache.hadoop.hbase.regionserver">DataBlockEncodingTool.Manipulation</a>&nbsp;manipulation)</pre>
+</li>
+</ul>
+<a name="outputTuple(java.lang.String, java.lang.String, java.lang.Object...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>outputTuple</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.503">outputTuple</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;caption,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;format,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;values)</pre>
+</li>
+</ul>
 <a name="displayStatistics()">
 <!--   -->
 </a>
@@ -301,6 +895,27 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Display statistics of different compression algorithms.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="outputTuplePct(java.lang.String, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>outputTuplePct</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.567">outputTuplePct</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;caption,
+                  long&nbsp;size)</pre>
+</li>
+</ul>
+<a name="outputSavings(java.lang.String, long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>outputSavings</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.572">outputSavings</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;caption,
+                 long&nbsp;part,
+                 long&nbsp;whole)</pre>
 </li>
 </ul>
 <a name="testCodecs(org.apache.hadoop.conf.Configuration, int, java.lang.String, java.lang.String, boolean, boolean)">
@@ -320,6 +935,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>kvLimit</code> - The limit of KeyValue which will be analyzed.</dd><dd><code>hfilePath</code> - an HFile path on the file system.</dd><dd><code>compressionName</code> - Compression algorithm used for comparison.</dd><dd><code>doBenchmark</code> - Run performance benchmarks.</dd><dd><code>doVerify</code> - Verify correctness.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - When pathName is incorrect.</dd></dl>
+</li>
+</ul>
+<a name="printUsage(org.apache.commons.cli.Options)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>printUsage</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html#line.622">printUsage</a>(org.apache.commons.cli.Options&nbsp;options)</pre>
 </li>
 </ul>
 <a name="main(java.lang.String[])">
@@ -364,7 +988,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/CreateRandomStoreFile.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/EncodedSeekPerformanceTest.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.Manipulation.html" title="enum in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html" target="_top">Frames</a></li>
@@ -388,14 +1012,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

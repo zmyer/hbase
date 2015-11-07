@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.Legacy.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.Legacy.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -160,6 +160,253 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctBeforeDelete">ctBeforeDelete</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostAppend">ctPostAppend</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostBatchMutate">ctPostBatchMutate</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostBatchMutateIndispensably">ctPostBatchMutateIndispensably</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostBulkLoadHFile">ctPostBulkLoadHFile</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostCheckAndDelete">ctPostCheckAndDelete</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostCheckAndPut">ctPostCheckAndPut</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostClose">ctPostClose</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostCloseRegionOperation">ctPostCloseRegionOperation</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostCompact">ctPostCompact</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostCompactSelect">ctPostCompactSelect</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostDeleted">ctPostDeleted</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostFlush">ctPostFlush</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostGet">ctPostGet</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostIncrement">ctPostIncrement</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostOpen">ctPostOpen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostPut">ctPostPut</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostScannerClose">ctPostScannerClose</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostScannerFilterRow">ctPostScannerFilterRow</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostScannerNext">ctPostScannerNext</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostScannerOpen">ctPostScannerOpen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostSplit">ctPostSplit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostStartRegionOperation">ctPostStartRegionOperation</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostStoreFileReaderOpen">ctPostStoreFileReaderOpen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostWALRestore">ctPostWALRestore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPostWALRestoreDeprecated">ctPostWALRestoreDeprecated</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreAppend">ctPreAppend</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreAppendAfterRowLock">ctPreAppendAfterRowLock</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreBatchMutate">ctPreBatchMutate</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreBulkLoadHFile">ctPreBulkLoadHFile</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreCheckAndDelete">ctPreCheckAndDelete</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreCheckAndDeleteAfterRowLock">ctPreCheckAndDeleteAfterRowLock</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreCheckAndPut">ctPreCheckAndPut</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreCheckAndPutAfterRowLock">ctPreCheckAndPutAfterRowLock</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreClose">ctPreClose</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreCompact">ctPreCompact</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreCompactScanner">ctPreCompactScanner</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreCompactSelect">ctPreCompactSelect</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreDeleted">ctPreDeleted</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreFlush">ctPreFlush</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreFlushScannerOpen">ctPreFlushScannerOpen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreGet">ctPreGet</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreIncrement">ctPreIncrement</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreIncrementAfterRowLock">ctPreIncrementAfterRowLock</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreOpen">ctPreOpen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPrePrepareDeleteTS">ctPrePrepareDeleteTS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPrePut">ctPrePut</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreScannerClose">ctPreScannerClose</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreScannerNext">ctPreScannerNext</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreScannerOpen">ctPreScannerOpen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreSplit">ctPreSplit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreSplitAfterPONR">ctPreSplitAfterPONR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreSplitBeforePONR">ctPreSplitBeforePONR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreStoreFileReaderOpen">ctPreStoreFileReaderOpen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreStoreScannerOpen">ctPreStoreScannerOpen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreWALRestore">ctPreWALRestore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#ctPreWALRestoreDeprecated">ctPreWALRestoreDeprecated</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#TABLE_SKIPPED">TABLE_SKIPPED</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#throwOnPostFlush">throwOnPostFlush</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.Coprocessor">
 <!--   -->
@@ -882,6 +1129,555 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.81">LOG</a></pre>
+</li>
+</ul>
+<a name="ctBeforeDelete">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctBeforeDelete</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.83">ctBeforeDelete</a></pre>
+</li>
+</ul>
+<a name="ctPreOpen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreOpen</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.84">ctPreOpen</a></pre>
+</li>
+</ul>
+<a name="ctPostOpen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostOpen</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.85">ctPostOpen</a></pre>
+</li>
+</ul>
+<a name="ctPreClose">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreClose</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.86">ctPreClose</a></pre>
+</li>
+</ul>
+<a name="ctPostClose">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostClose</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.87">ctPostClose</a></pre>
+</li>
+</ul>
+<a name="ctPreFlush">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreFlush</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.88">ctPreFlush</a></pre>
+</li>
+</ul>
+<a name="ctPreFlushScannerOpen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreFlushScannerOpen</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.89">ctPreFlushScannerOpen</a></pre>
+</li>
+</ul>
+<a name="ctPostFlush">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostFlush</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.90">ctPostFlush</a></pre>
+</li>
+</ul>
+<a name="ctPreSplit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreSplit</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.91">ctPreSplit</a></pre>
+</li>
+</ul>
+<a name="ctPostSplit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostSplit</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.92">ctPostSplit</a></pre>
+</li>
+</ul>
+<a name="ctPreCompactSelect">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreCompactSelect</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.93">ctPreCompactSelect</a></pre>
+</li>
+</ul>
+<a name="ctPostCompactSelect">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostCompactSelect</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.94">ctPostCompactSelect</a></pre>
+</li>
+</ul>
+<a name="ctPreCompactScanner">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreCompactScanner</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.95">ctPreCompactScanner</a></pre>
+</li>
+</ul>
+<a name="ctPreCompact">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreCompact</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.96">ctPreCompact</a></pre>
+</li>
+</ul>
+<a name="ctPostCompact">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostCompact</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.97">ctPostCompact</a></pre>
+</li>
+</ul>
+<a name="ctPreGet">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreGet</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.98">ctPreGet</a></pre>
+</li>
+</ul>
+<a name="ctPostGet">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostGet</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.99">ctPostGet</a></pre>
+</li>
+</ul>
+<a name="ctPrePut">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPrePut</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.100">ctPrePut</a></pre>
+</li>
+</ul>
+<a name="ctPostPut">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostPut</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.101">ctPostPut</a></pre>
+</li>
+</ul>
+<a name="ctPreDeleted">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreDeleted</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.102">ctPreDeleted</a></pre>
+</li>
+</ul>
+<a name="ctPrePrepareDeleteTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPrePrepareDeleteTS</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.103">ctPrePrepareDeleteTS</a></pre>
+</li>
+</ul>
+<a name="ctPostDeleted">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostDeleted</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.104">ctPostDeleted</a></pre>
+</li>
+</ul>
+<a name="ctPreIncrement">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreIncrement</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.105">ctPreIncrement</a></pre>
+</li>
+</ul>
+<a name="ctPreIncrementAfterRowLock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreIncrementAfterRowLock</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.106">ctPreIncrementAfterRowLock</a></pre>
+</li>
+</ul>
+<a name="ctPreAppend">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreAppend</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.107">ctPreAppend</a></pre>
+</li>
+</ul>
+<a name="ctPreAppendAfterRowLock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreAppendAfterRowLock</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.108">ctPreAppendAfterRowLock</a></pre>
+</li>
+</ul>
+<a name="ctPostIncrement">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostIncrement</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.109">ctPostIncrement</a></pre>
+</li>
+</ul>
+<a name="ctPostAppend">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostAppend</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.110">ctPostAppend</a></pre>
+</li>
+</ul>
+<a name="ctPreCheckAndPut">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreCheckAndPut</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.111">ctPreCheckAndPut</a></pre>
+</li>
+</ul>
+<a name="ctPreCheckAndPutAfterRowLock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreCheckAndPutAfterRowLock</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.112">ctPreCheckAndPutAfterRowLock</a></pre>
+</li>
+</ul>
+<a name="ctPostCheckAndPut">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostCheckAndPut</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.113">ctPostCheckAndPut</a></pre>
+</li>
+</ul>
+<a name="ctPreCheckAndDelete">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreCheckAndDelete</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.114">ctPreCheckAndDelete</a></pre>
+</li>
+</ul>
+<a name="ctPreCheckAndDeleteAfterRowLock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreCheckAndDeleteAfterRowLock</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.115">ctPreCheckAndDeleteAfterRowLock</a></pre>
+</li>
+</ul>
+<a name="ctPostCheckAndDelete">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostCheckAndDelete</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.116">ctPostCheckAndDelete</a></pre>
+</li>
+</ul>
+<a name="ctPreScannerNext">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreScannerNext</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.117">ctPreScannerNext</a></pre>
+</li>
+</ul>
+<a name="ctPostScannerNext">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostScannerNext</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.118">ctPostScannerNext</a></pre>
+</li>
+</ul>
+<a name="ctPostScannerFilterRow">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostScannerFilterRow</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.119">ctPostScannerFilterRow</a></pre>
+</li>
+</ul>
+<a name="ctPreScannerClose">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreScannerClose</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.120">ctPreScannerClose</a></pre>
+</li>
+</ul>
+<a name="ctPostScannerClose">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostScannerClose</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.121">ctPostScannerClose</a></pre>
+</li>
+</ul>
+<a name="ctPreScannerOpen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreScannerOpen</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.122">ctPreScannerOpen</a></pre>
+</li>
+</ul>
+<a name="ctPreStoreScannerOpen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreStoreScannerOpen</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.123">ctPreStoreScannerOpen</a></pre>
+</li>
+</ul>
+<a name="ctPostScannerOpen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostScannerOpen</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.124">ctPostScannerOpen</a></pre>
+</li>
+</ul>
+<a name="ctPreBulkLoadHFile">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreBulkLoadHFile</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.125">ctPreBulkLoadHFile</a></pre>
+</li>
+</ul>
+<a name="ctPostBulkLoadHFile">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostBulkLoadHFile</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.126">ctPostBulkLoadHFile</a></pre>
+</li>
+</ul>
+<a name="ctPreBatchMutate">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreBatchMutate</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.127">ctPreBatchMutate</a></pre>
+</li>
+</ul>
+<a name="ctPostBatchMutate">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostBatchMutate</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.128">ctPostBatchMutate</a></pre>
+</li>
+</ul>
+<a name="ctPreWALRestore">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreWALRestore</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.129">ctPreWALRestore</a></pre>
+</li>
+</ul>
+<a name="ctPostWALRestore">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostWALRestore</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.130">ctPostWALRestore</a></pre>
+</li>
+</ul>
+<a name="ctPreWALRestoreDeprecated">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreWALRestoreDeprecated</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.131">ctPreWALRestoreDeprecated</a></pre>
+</li>
+</ul>
+<a name="ctPostWALRestoreDeprecated">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostWALRestoreDeprecated</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.132">ctPostWALRestoreDeprecated</a></pre>
+</li>
+</ul>
+<a name="ctPreSplitBeforePONR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreSplitBeforePONR</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.133">ctPreSplitBeforePONR</a></pre>
+</li>
+</ul>
+<a name="ctPreSplitAfterPONR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreSplitAfterPONR</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.134">ctPreSplitAfterPONR</a></pre>
+</li>
+</ul>
+<a name="ctPreStoreFileReaderOpen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPreStoreFileReaderOpen</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.135">ctPreStoreFileReaderOpen</a></pre>
+</li>
+</ul>
+<a name="ctPostStoreFileReaderOpen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostStoreFileReaderOpen</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.136">ctPostStoreFileReaderOpen</a></pre>
+</li>
+</ul>
+<a name="ctPostBatchMutateIndispensably">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostBatchMutateIndispensably</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.137">ctPostBatchMutateIndispensably</a></pre>
+</li>
+</ul>
+<a name="ctPostStartRegionOperation">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostStartRegionOperation</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.138">ctPostStartRegionOperation</a></pre>
+</li>
+</ul>
+<a name="ctPostCloseRegionOperation">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ctPostCloseRegionOperation</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.139">ctPostCloseRegionOperation</a></pre>
+</li>
+</ul>
+<a name="throwOnPostFlush">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>throwOnPostFlush</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.140">throwOnPostFlush</a></pre>
+</li>
+</ul>
+<a name="TABLE_SKIPPED">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TABLE_SKIPPED</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.html#line.141">TABLE_SKIPPED</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.coprocessor.SimpleRegionObserver.TABLE_SKIPPED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -2661,7 +3457,7 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.Legacy.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.Legacy.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -2687,13 +3483,13 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

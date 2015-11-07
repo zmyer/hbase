@@ -49,12 +49,12 @@
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="40" href="#40">40</a>  @InterfaceAudience.Public
 <a class="jxr_linenumber" name="41" href="#41">41</a>  @InterfaceStability.Stable
-<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">PrefixFilter</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/FilterBase.html">FilterBase</a> {
+<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/PrefixFilter.html">PrefixFilter</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/FilterBase.html">FilterBase</a> {
 <a class="jxr_linenumber" name="43" href="#43">43</a>    <strong class="jxr_keyword">protected</strong> byte [] prefix = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="44" href="#44">44</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">boolean</strong> passedPrefix = false;
 <a class="jxr_linenumber" name="45" href="#45">45</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">boolean</strong> filterRow = <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="46" href="#46">46</a>  
-<a class="jxr_linenumber" name="47" href="#47">47</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">PrefixFilter</a>(<strong class="jxr_keyword">final</strong> byte [] prefix) {
+<a class="jxr_linenumber" name="47" href="#47">47</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/PrefixFilter.html">PrefixFilter</a>(<strong class="jxr_keyword">final</strong> byte [] prefix) {
 <a class="jxr_linenumber" name="48" href="#48">48</a>      <strong class="jxr_keyword">this</strong>.prefix = prefix;
 <a class="jxr_linenumber" name="49" href="#49">49</a>    }
 <a class="jxr_linenumber" name="50" href="#50">50</a>  
@@ -104,11 +104,11 @@
 <a class="jxr_linenumber" name="94" href="#94">94</a>      <strong class="jxr_keyword">return</strong> passedPrefix;
 <a class="jxr_linenumber" name="95" href="#95">95</a>    }
 <a class="jxr_linenumber" name="96" href="#96">96</a>  
-<a class="jxr_linenumber" name="97" href="#97">97</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">Filter</a> createFilterFromArguments(ArrayList&lt;byte []&gt; filterArguments) {
+<a class="jxr_linenumber" name="97" href="#97">97</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html">Filter</a> createFilterFromArguments(ArrayList&lt;byte []&gt; filterArguments) {
 <a class="jxr_linenumber" name="98" href="#98">98</a>      Preconditions.checkArgument(filterArguments.size() == 1,
 <a class="jxr_linenumber" name="99" href="#99">99</a>                                  <span class="jxr_string">"Expected 1 but got: %s"</span>, filterArguments.size());
 <a class="jxr_linenumber" name="100" href="#100">100</a>     byte [] prefix = ParseFilter.removeQuotesFromByteArray(filterArguments.get(0));
-<a class="jxr_linenumber" name="101" href="#101">101</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">PrefixFilter</a>(prefix);
+<a class="jxr_linenumber" name="101" href="#101">101</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/PrefixFilter.html">PrefixFilter</a>(prefix);
 <a class="jxr_linenumber" name="102" href="#102">102</a>   }
 <a class="jxr_linenumber" name="103" href="#103">103</a> 
 <a class="jxr_linenumber" name="104" href="#104">104</a>   <em class="jxr_javadoccomment">/**</em>
@@ -127,7 +127,7 @@
 <a class="jxr_linenumber" name="117" href="#117">117</a> <em class="jxr_javadoccomment">   * @throws org.apache.hadoop.hbase.exceptions.DeserializationException</em>
 <a class="jxr_linenumber" name="118" href="#118">118</a> <em class="jxr_javadoccomment">   * @see #toByteArray</em>
 <a class="jxr_linenumber" name="119" href="#119">119</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="120" href="#120">120</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">PrefixFilter</a> parseFrom(<strong class="jxr_keyword">final</strong> byte [] pbBytes)
+<a class="jxr_linenumber" name="120" href="#120">120</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/PrefixFilter.html">PrefixFilter</a> parseFrom(<strong class="jxr_keyword">final</strong> byte [] pbBytes)
 <a class="jxr_linenumber" name="121" href="#121">121</a>   <strong class="jxr_keyword">throws</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a> {
 <a class="jxr_linenumber" name="122" href="#122">122</a>     FilterProtos.PrefixFilter proto;
 <a class="jxr_linenumber" name="123" href="#123">123</a>     <strong class="jxr_keyword">try</strong> {
@@ -135,7 +135,7 @@
 <a class="jxr_linenumber" name="125" href="#125">125</a>     } <strong class="jxr_keyword">catch</strong> (InvalidProtocolBufferException e) {
 <a class="jxr_linenumber" name="126" href="#126">126</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a>(e);
 <a class="jxr_linenumber" name="127" href="#127">127</a>     }
-<a class="jxr_linenumber" name="128" href="#128">128</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">PrefixFilter</a>(proto.hasPrefix()?proto.getPrefix().toByteArray():<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="128" href="#128">128</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/PrefixFilter.html">PrefixFilter</a>(proto.hasPrefix()?proto.getPrefix().toByteArray():<strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="129" href="#129">129</a>   }
 <a class="jxr_linenumber" name="130" href="#130">130</a> 
 <a class="jxr_linenumber" name="131" href="#131">131</a>   <em class="jxr_javadoccomment">/**</em>
@@ -143,11 +143,11 @@
 <a class="jxr_linenumber" name="133" href="#133">133</a> <em class="jxr_javadoccomment">   * @return true if and only if the fields of the filter that are serialized</em>
 <a class="jxr_linenumber" name="134" href="#134">134</a> <em class="jxr_javadoccomment">   * are equal to the corresponding fields in other.  Used for testing.</em>
 <a class="jxr_linenumber" name="135" href="#135">135</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="136" href="#136">136</a>   <strong class="jxr_keyword">boolean</strong> areSerializedFieldsEqual(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">Filter</a> o) {
+<a class="jxr_linenumber" name="136" href="#136">136</a>   <strong class="jxr_keyword">boolean</strong> areSerializedFieldsEqual(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html">Filter</a> o) {
 <a class="jxr_linenumber" name="137" href="#137">137</a>     <strong class="jxr_keyword">if</strong> (o == <strong class="jxr_keyword">this</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="138" href="#138">138</a>     <strong class="jxr_keyword">if</strong> (!(o instanceof PrefixFilter)) <strong class="jxr_keyword">return</strong> false;
 <a class="jxr_linenumber" name="139" href="#139">139</a> 
-<a class="jxr_linenumber" name="140" href="#140">140</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">PrefixFilter</a> other = (PrefixFilter)o;
+<a class="jxr_linenumber" name="140" href="#140">140</a>     <a href="../../../../../org/apache/hadoop/hbase/filter/PrefixFilter.html">PrefixFilter</a> other = (PrefixFilter)o;
 <a class="jxr_linenumber" name="141" href="#141">141</a>     <strong class="jxr_keyword">return</strong> Bytes.equals(<strong class="jxr_keyword">this</strong>.getPrefix(), other.getPrefix());
 <a class="jxr_linenumber" name="142" href="#142">142</a>   }
 <a class="jxr_linenumber" name="143" href="#143">143</a> 

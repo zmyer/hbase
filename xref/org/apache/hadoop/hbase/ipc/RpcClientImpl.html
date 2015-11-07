@@ -170,7 +170,7 @@
 <a class="jxr_linenumber" name="160" href="#160">160</a> <em class="jxr_javadoccomment">   * socket connected to a remote address.  Calls are multiplexed through this</em>
 <a class="jxr_linenumber" name="161" href="#161">161</a> <em class="jxr_javadoccomment">   * socket: responses may be delivered out of order. */</em>
 <a class="jxr_linenumber" name="162" href="#162">162</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Connection.html">Connection</a> <strong class="jxr_keyword">extends</strong> Thread {
-<a class="jxr_linenumber" name="163" href="#163">163</a>     <strong class="jxr_keyword">private</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RPCProtos.html">ConnectionHeader</a> header;              <em class="jxr_comment">// connection header</em>
+<a class="jxr_linenumber" name="163" href="#163">163</a>     <strong class="jxr_keyword">private</strong> ConnectionHeader header;              <em class="jxr_comment">// connection header</em>
 <a class="jxr_linenumber" name="164" href="#164">164</a>     <strong class="jxr_keyword">protected</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/ConnectionId.html">ConnectionId</a> remoteId;
 <a class="jxr_linenumber" name="165" href="#165">165</a>     <strong class="jxr_keyword">protected</strong> Socket socket = <strong class="jxr_keyword">null</strong>;                 <em class="jxr_comment">// connected socket</em>
 <a class="jxr_linenumber" name="166" href="#166">166</a>     <strong class="jxr_keyword">protected</strong> DataInputStream in;
@@ -366,7 +366,7 @@
 <a class="jxr_linenumber" name="356" href="#356">356</a> 
 <a class="jxr_linenumber" name="357" href="#357">357</a>       ConnectionHeader.Builder builder = ConnectionHeader.newBuilder();
 <a class="jxr_linenumber" name="358" href="#358">358</a>       builder.setServiceName(remoteId.getServiceName());
-<a class="jxr_linenumber" name="359" href="#359">359</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RPCProtos.html">UserInformation</a> userInfoPB = getUserInfo(ticket);
+<a class="jxr_linenumber" name="359" href="#359">359</a>       UserInformation userInfoPB = getUserInfo(ticket);
 <a class="jxr_linenumber" name="360" href="#360">360</a>       <strong class="jxr_keyword">if</strong> (userInfoPB != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="361" href="#361">361</a>         builder.setUserInfo(userInfoPB);
 <a class="jxr_linenumber" name="362" href="#362">362</a>       }
@@ -393,7 +393,7 @@
 <a class="jxr_linenumber" name="383" href="#383">383</a>       }
 <a class="jxr_linenumber" name="384" href="#384">384</a>     }
 <a class="jxr_linenumber" name="385" href="#385">385</a> 
-<a class="jxr_linenumber" name="386" href="#386">386</a>     <strong class="jxr_keyword">private</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RPCProtos.html">UserInformation</a> getUserInfo(UserGroupInformation ugi) {
+<a class="jxr_linenumber" name="386" href="#386">386</a>     <strong class="jxr_keyword">private</strong> UserInformation getUserInfo(UserGroupInformation ugi) {
 <a class="jxr_linenumber" name="387" href="#387">387</a>       <strong class="jxr_keyword">if</strong> (ugi == <strong class="jxr_keyword">null</strong> || authMethod == AuthMethod.DIGEST) {
 <a class="jxr_linenumber" name="388" href="#388">388</a>         <em class="jxr_comment">// Don't send user for token auth</em>
 <a class="jxr_linenumber" name="389" href="#389">389</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
@@ -907,7 +907,7 @@
 <a class="jxr_linenumber" name="897" href="#897">897</a>       }
 <a class="jxr_linenumber" name="898" href="#898">898</a>       <em class="jxr_comment">// Only pass priority if there one.  Let zero be same as no priority.</em>
 <a class="jxr_linenumber" name="899" href="#899">899</a>       <strong class="jxr_keyword">if</strong> (priority != 0) builder.setPriority(priority);
-<a class="jxr_linenumber" name="900" href="#900">900</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RPCProtos.html">RequestHeader</a> header = builder.build();
+<a class="jxr_linenumber" name="900" href="#900">900</a>       RequestHeader header = builder.build();
 <a class="jxr_linenumber" name="901" href="#901">901</a> 
 <a class="jxr_linenumber" name="902" href="#902">902</a>       setupIOstreams();
 <a class="jxr_linenumber" name="903" href="#903">903</a> 
@@ -963,7 +963,7 @@
 <a class="jxr_linenumber" name="953" href="#953">953</a>         <strong class="jxr_keyword">int</strong> totalSize = in.readInt();
 <a class="jxr_linenumber" name="954" href="#954">954</a> 
 <a class="jxr_linenumber" name="955" href="#955">955</a>         <em class="jxr_comment">// Read the header</em>
-<a class="jxr_linenumber" name="956" href="#956">956</a>         <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RPCProtos.html">ResponseHeader</a> responseHeader = ResponseHeader.parseDelimitedFrom(in);
+<a class="jxr_linenumber" name="956" href="#956">956</a>         ResponseHeader responseHeader = ResponseHeader.parseDelimitedFrom(in);
 <a class="jxr_linenumber" name="957" href="#957">957</a>         <strong class="jxr_keyword">int</strong> id = responseHeader.getCallId();
 <a class="jxr_linenumber" name="958" href="#958">958</a>         call = calls.remove(id); <em class="jxr_comment">// call.done have to be set before leaving this method</em>
 <a class="jxr_linenumber" name="959" href="#959">959</a>         expectedCall = (call != <strong class="jxr_keyword">null</strong> &amp;&amp; !call.done);
@@ -984,7 +984,7 @@
 <a class="jxr_linenumber" name="974" href="#974">974</a>           <strong class="jxr_keyword">return</strong>;
 <a class="jxr_linenumber" name="975" href="#975">975</a>         }
 <a class="jxr_linenumber" name="976" href="#976">976</a>         <strong class="jxr_keyword">if</strong> (responseHeader.hasException()) {
-<a class="jxr_linenumber" name="977" href="#977">977</a>           <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RPCProtos.html">ExceptionResponse</a> exceptionResponse = responseHeader.getException();
+<a class="jxr_linenumber" name="977" href="#977">977</a>           ExceptionResponse exceptionResponse = responseHeader.getException();
 <a class="jxr_linenumber" name="978" href="#978">978</a>           RemoteException re = createRemoteException(exceptionResponse);
 <a class="jxr_linenumber" name="979" href="#979">979</a>           call.setException(re);
 <a class="jxr_linenumber" name="980" href="#980">980</a>           call.callStats.setResponseSizeBytes(totalSize);
@@ -1031,7 +1031,7 @@
 <a class="jxr_linenumber" name="1021" href="#1021">1021</a>     <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="1022" href="#1022">1022</a> <em class="jxr_javadoccomment">     * @return True if the exception is a fatal connection exception.</em>
 <a class="jxr_linenumber" name="1023" href="#1023">1023</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="1024" href="#1024">1024</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> isFatalConnectionException(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RPCProtos.html">ExceptionResponse</a> e) {
+<a class="jxr_linenumber" name="1024" href="#1024">1024</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> isFatalConnectionException(<strong class="jxr_keyword">final</strong> ExceptionResponse e) {
 <a class="jxr_linenumber" name="1025" href="#1025">1025</a>       <strong class="jxr_keyword">return</strong> e.getExceptionClassName().
 <a class="jxr_linenumber" name="1026" href="#1026">1026</a>         equals(FatalConnectionException.<strong class="jxr_keyword">class</strong>.getName());
 <a class="jxr_linenumber" name="1027" href="#1027">1027</a>     }
@@ -1040,7 +1040,7 @@
 <a class="jxr_linenumber" name="1030" href="#1030">1030</a> <em class="jxr_javadoccomment">     * @param e exception to be wrapped</em>
 <a class="jxr_linenumber" name="1031" href="#1031">1031</a> <em class="jxr_javadoccomment">     * @return RemoteException made from passed &lt;code&gt;e&lt;/code&gt;</em>
 <a class="jxr_linenumber" name="1032" href="#1032">1032</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="1033" href="#1033">1033</a>     <strong class="jxr_keyword">private</strong> RemoteException createRemoteException(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RPCProtos.html">ExceptionResponse</a> e) {
+<a class="jxr_linenumber" name="1033" href="#1033">1033</a>     <strong class="jxr_keyword">private</strong> RemoteException createRemoteException(<strong class="jxr_keyword">final</strong> ExceptionResponse e) {
 <a class="jxr_linenumber" name="1034" href="#1034">1034</a>       String innerExceptionClassName = e.getExceptionClassName();
 <a class="jxr_linenumber" name="1035" href="#1035">1035</a>       <strong class="jxr_keyword">boolean</strong> doNotRetry = e.getDoNotRetry();
 <a class="jxr_linenumber" name="1036" href="#1036">1036</a>       <strong class="jxr_keyword">return</strong> e.hasHostname()?

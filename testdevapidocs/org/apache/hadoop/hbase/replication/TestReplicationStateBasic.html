@@ -138,54 +138,58 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#KEY_TWO">KEY_TWO</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#OUR_ID">OUR_ID</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#OUR_KEY">OUR_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.replication.ReplicationPeers</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#rp">rp</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.replication.ReplicationQueues</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#rq1">rq1</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.replication.ReplicationQueues</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#rq2">rq2</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.replication.ReplicationQueues</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#rq3">rq3</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.replication.ReplicationQueuesClient</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#rqc">rqc</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#server1">server1</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#server2">server2</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#server3">server3</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#ZK_MAX_COUNT">ZK_MAX_COUNT</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#ZK_SLEEP_INTERVAL">ZK_SLEEP_INTERVAL</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#zkTimeoutCount">zkTimeoutCount</a></strong></code>&nbsp;</td>
 </tr>
@@ -422,11 +426,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="ZK_SLEEP_INTERVAL">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>ZK_SLEEP_INTERVAL</h4>
 <pre>protected static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#line.60">ZK_SLEEP_INTERVAL</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.replication.TestReplicationStateBasic.ZK_SLEEP_INTERVAL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationStateBasic.html#line.62">LOG</a></pre>
 </li>
 </ul>
 </li>

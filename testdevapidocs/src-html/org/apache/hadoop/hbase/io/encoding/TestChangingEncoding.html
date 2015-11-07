@@ -228,7 +228,7 @@
 <span class="sourceLineNo">220</span>  private void compactAndWait() throws IOException, InterruptedException {<a name="line.220"></a>
 <span class="sourceLineNo">221</span>    LOG.debug("Compacting table " + tableName);<a name="line.221"></a>
 <span class="sourceLineNo">222</span>    HRegionServer rs = TEST_UTIL.getMiniHBaseCluster().getRegionServer(0);<a name="line.222"></a>
-<span class="sourceLineNo">223</span>    HBaseAdmin admin = TEST_UTIL.getHBaseAdmin();<a name="line.223"></a>
+<span class="sourceLineNo">223</span>    Admin admin = TEST_UTIL.getHBaseAdmin();<a name="line.223"></a>
 <span class="sourceLineNo">224</span>    admin.majorCompact(tableName);<a name="line.224"></a>
 <span class="sourceLineNo">225</span><a name="line.225"></a>
 <span class="sourceLineNo">226</span>    // Waiting for the compaction to start, at least .5s.<a name="line.226"></a>

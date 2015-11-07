@@ -117,16 +117,68 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#col1">col1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#COLS">COLS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#EXPLICIT_COLS">EXPLICIT_COLS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#FIRST_ROW">FIRST_ROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#firstRowBytes">firstRowBytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>org.junit.rules.TestName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#name">name</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#region">region</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static org.apache.hadoop.hbase.HRegionInfo</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#REGION_INFO">REGION_INFO</a></strong></code>
 <div class="block">HRegionInfo for root region</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#ROW_KEY">ROW_KEY</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#secondRowBytes">secondRowBytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#START_CODE">START_CODE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#TESTTABLEDESC">TESTTABLEDESC</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#thirdRowBytes">thirdRowBytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.junit.rules.TestRule</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#timeout">timeout</a></strong></code>&nbsp;</td>
 </tr>
@@ -163,45 +215,91 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#count(org.apache.hadoop.hbase.client.Table,%20int,%20boolean)">count</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;countTable,
+          int&nbsp;flushIndex,
+          boolean&nbsp;concurrent)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.Cell</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#getColumn(java.util.List,%20byte[],%20byte[])">getColumn</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;kvs,
+                  byte[]&nbsp;family,
+                  byte[]&nbsp;qualifier)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#getRegionInfo(org.apache.hadoop.hbase.client.Table)">getRegionInfo</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table)</code>
+<div class="block">Use get to retrieve the HRegionInfo and validate it</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#hasColumn(java.util.List,%20byte[],%20byte[])">hasColumn</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;kvs,
+                  byte[]&nbsp;family,
+                  byte[]&nbsp;qualifier)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#rowInclusiveStopFilter(org.apache.hadoop.hbase.client.Scan,%20byte[])">rowInclusiveStopFilter</a></strong>(org.apache.hadoop.hbase.client.Scan&nbsp;scan,
+                                            byte[]&nbsp;stopRow)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#rowPrefixFilter(org.apache.hadoop.hbase.client.Scan)">rowPrefixFilter</a></strong>(org.apache.hadoop.hbase.client.Scan&nbsp;scan)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#scan(boolean,%20java.lang.String)">scan</a></strong>(boolean&nbsp;validateStartcode,
+        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serverName)</code>
+<div class="block">Use a scanner to get the region info and then validate the results</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#testFilters()">testFilters</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#testRaceBetweenClientAndTimeout()">testRaceBetweenClientAndTimeout</a></strong>()</code>
 <div class="block">Test that closing a scanner while a client is using it doesn't throw
  NPEs but instead a UnknownScannerException.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#testScanAndConcurrentMajorCompact()">testScanAndConcurrentMajorCompact</a></strong>()</code>
 <div class="block">Make sure scanner returns correct result when we run a major compaction
  with deletes.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#testScanAndRealConcurrentFlush()">testScanAndRealConcurrentFlush</a></strong>()</code>
 <div class="block">Tests to do a concurrent flush (using a 2nd thread) while scanning.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#testScanAndSyncFlush()">testScanAndSyncFlush</a></strong>()</code>
 <div class="block">Tests to do a sync flush during the middle of a scan.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#testScanner()">testScanner</a></strong>()</code>
 <div class="block">The test!</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#testStopRow()">testStopRow</a></strong>()</code>
 <div class="block">Test basic stop row filter works.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html#validateRegionInfo(byte[])">validateRegionInfo</a></strong>(byte[]&nbsp;regionBytes)</code>
+<div class="block">Compare the HRegionInfo we read from HBase to what we stored</div>
 </td>
 </tr>
 </table>
@@ -244,14 +342,132 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public final&nbsp;org.junit.rules.TestRule <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.73">timeout</a></pre>
 </li>
 </ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.76">LOG</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.77">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="FIRST_ROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FIRST_ROW</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.79">FIRST_ROW</a></pre>
+</li>
+</ul>
+<a name="COLS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COLS</h4>
+<pre>private static final&nbsp;byte[][] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.80">COLS</a></pre>
+</li>
+</ul>
+<a name="EXPLICIT_COLS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EXPLICIT_COLS</h4>
+<pre>private static final&nbsp;byte[][] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.81">EXPLICIT_COLS</a></pre>
+</li>
+</ul>
+<a name="TESTTABLEDESC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TESTTABLEDESC</h4>
+<pre>static final&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.87">TESTTABLEDESC</a></pre>
+</li>
+</ul>
 <a name="REGION_INFO">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>REGION_INFO</h4>
 <pre>public static final&nbsp;org.apache.hadoop.hbase.HRegionInfo <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.99">REGION_INFO</a></pre>
 <div class="block">HRegionInfo for root region</div>
+</li>
+</ul>
+<a name="ROW_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROW_KEY</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.103">ROW_KEY</a></pre>
+</li>
+</ul>
+<a name="START_CODE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>START_CODE</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.105">START_CODE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestScanner.START_CODE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="region">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>region</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.107">region</a></pre>
+</li>
+</ul>
+<a name="firstRowBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>firstRowBytes</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.109">firstRowBytes</a></pre>
+</li>
+</ul>
+<a name="secondRowBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>secondRowBytes</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.109">secondRowBytes</a></pre>
+</li>
+</ul>
+<a name="thirdRowBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>thirdRowBytes</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.109">thirdRowBytes</a></pre>
+</li>
+</ul>
+<a name="col1">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>col1</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.110">col1</a></pre>
 </li>
 </ul>
 </li>
@@ -290,6 +506,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Test basic stop row filter works.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="rowPrefixFilter(org.apache.hadoop.hbase.client.Scan)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowPrefixFilter</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.172">rowPrefixFilter</a>(org.apache.hadoop.hbase.client.Scan&nbsp;scan)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="rowInclusiveStopFilter(org.apache.hadoop.hbase.client.Scan, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowInclusiveStopFilter</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.188">rowInclusiveStopFilter</a>(org.apache.hadoop.hbase.client.Scan&nbsp;scan,
+                          byte[]&nbsp;stopRow)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testFilters()">
@@ -331,6 +572,68 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="validateRegionInfo(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>validateRegionInfo</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.364">validateRegionInfo</a>(byte[]&nbsp;regionBytes)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Compare the HRegionInfo we read from HBase to what we stored</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="scan(boolean, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scan</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.375">scan</a>(boolean&nbsp;validateStartcode,
+        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serverName)
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Use a scanner to get the region info and then validate the results</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="hasColumn(java.util.List, byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasColumn</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.430">hasColumn</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;kvs,
+                byte[]&nbsp;family,
+                byte[]&nbsp;qualifier)</pre>
+</li>
+</ul>
+<a name="getColumn(java.util.List, byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getColumn</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.Cell&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.440">getColumn</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;kvs,
+                                     byte[]&nbsp;family,
+                                     byte[]&nbsp;qualifier)</pre>
+</li>
+</ul>
+<a name="getRegionInfo(org.apache.hadoop.hbase.client.Table)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRegionInfo</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.452">getRegionInfo</a>(org.apache.hadoop.hbase.client.Table&nbsp;table)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Use get to retrieve the HRegionInfo and validate it</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testScanAndSyncFlush()">
 <!--   -->
 </a>
@@ -363,7 +666,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testScanAndConcurrentMajorCompact()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testScanAndConcurrentMajorCompact</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.516">testScanAndConcurrentMajorCompact</a>()
@@ -372,6 +675,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  with deletes.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="count(org.apache.hadoop.hbase.client.Table, int, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>count</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScanner.html#line.573">count</a>(org.apache.hadoop.hbase.client.Table&nbsp;countTable,
+        int&nbsp;flushIndex,
+        boolean&nbsp;concurrent)
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>

@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduce.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduce.ProcessContentsMapper.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceUtil.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -219,6 +219,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#verify(org.apache.hadoop.hbase.TableName)">verify</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#verifyAttempt(org.apache.hadoop.hbase.client.Table)">verifyAttempt</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table)</code>
+<div class="block">Looks at every value of the mapreduce output and verifies that indeed
+ the values have been reversed.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -410,13 +417,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="verify(org.apache.hadoop.hbase.TableName)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>verify</h4>
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.137">verify</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName)
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyAttempt(org.apache.hadoop.hbase.client.Table)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>verifyAttempt</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.169">verifyAttempt</a>(org.apache.hadoop.hbase.client.Table&nbsp;table)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></pre>
+<div class="block">Looks at every value of the mapreduce output and verifies that indeed
+ the values have been reversed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>table</code> - Table to scan.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if we failed to find a cell value</dd></dl>
 </li>
 </ul>
 </li>
@@ -445,7 +469,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduce.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduce.ProcessContentsMapper.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceUtil.html" title="class in org.apache.hadoop.hbase.mapreduce"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

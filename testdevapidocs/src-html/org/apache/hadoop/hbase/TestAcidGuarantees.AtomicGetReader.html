@@ -36,10 +36,10 @@
 <span class="sourceLineNo">028</span>import org.apache.hadoop.conf.Configuration;<a name="line.28"></a>
 <span class="sourceLineNo">029</span>import org.apache.hadoop.hbase.MultithreadedTestUtil.RepeatingTestThread;<a name="line.29"></a>
 <span class="sourceLineNo">030</span>import org.apache.hadoop.hbase.MultithreadedTestUtil.TestContext;<a name="line.30"></a>
-<span class="sourceLineNo">031</span>import org.apache.hadoop.hbase.client.Connection;<a name="line.31"></a>
-<span class="sourceLineNo">032</span>import org.apache.hadoop.hbase.client.ConnectionFactory;<a name="line.32"></a>
-<span class="sourceLineNo">033</span>import org.apache.hadoop.hbase.client.Get;<a name="line.33"></a>
-<span class="sourceLineNo">034</span>import org.apache.hadoop.hbase.client.HBaseAdmin;<a name="line.34"></a>
+<span class="sourceLineNo">031</span>import org.apache.hadoop.hbase.client.Admin;<a name="line.31"></a>
+<span class="sourceLineNo">032</span>import org.apache.hadoop.hbase.client.Connection;<a name="line.32"></a>
+<span class="sourceLineNo">033</span>import org.apache.hadoop.hbase.client.ConnectionFactory;<a name="line.33"></a>
+<span class="sourceLineNo">034</span>import org.apache.hadoop.hbase.client.Get;<a name="line.34"></a>
 <span class="sourceLineNo">035</span>import org.apache.hadoop.hbase.client.Put;<a name="line.35"></a>
 <span class="sourceLineNo">036</span>import org.apache.hadoop.hbase.client.Result;<a name="line.36"></a>
 <span class="sourceLineNo">037</span>import org.apache.hadoop.hbase.client.ResultScanner;<a name="line.37"></a>
@@ -312,7 +312,7 @@
 <span class="sourceLineNo">304</span>    }<a name="line.304"></a>
 <span class="sourceLineNo">305</span>    // Add a flusher<a name="line.305"></a>
 <span class="sourceLineNo">306</span>    ctx.addThread(new RepeatingTestThread(ctx) {<a name="line.306"></a>
-<span class="sourceLineNo">307</span>      HBaseAdmin admin = util.getHBaseAdmin();<a name="line.307"></a>
+<span class="sourceLineNo">307</span>      Admin admin = util.getHBaseAdmin();<a name="line.307"></a>
 <span class="sourceLineNo">308</span>      public void doAnAction() throws Exception {<a name="line.308"></a>
 <span class="sourceLineNo">309</span>        try {<a name="line.309"></a>
 <span class="sourceLineNo">310</span>          admin.flush(TABLE_NAME);<a name="line.310"></a>

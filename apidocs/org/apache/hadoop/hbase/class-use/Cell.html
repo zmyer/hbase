@@ -85,33 +85,18 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.client.coprocessor">org.apache.hadoop.hbase.client.coprocessor</a></td>
-<td class="colLast">
-<div class="block">Provides client classes for invoking Coprocessor RPC protocols
-
-
- <a href="../../../../../org/apache/hadoop/hbase/client/coprocessor/#overview">Overview</a>
- <a href="../../../../../org/apache/hadoop/hbase/client/coprocessor/#usage">Example Usage</a>
-</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.filter">org.apache.hadoop.hbase.filter</a></td>
 <td class="colLast">
 <div class="block">Provides row-level filters applied to HRegion scan results during calls to
  <a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html#next()"><code>ResultScanner.next()</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce</a></td>
 <td class="colLast">
 <div class="block">Provides HBase <a href="http://wiki.apache.org/hadoop/HadoopMapReduce">MapReduce</a>
 Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
-<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
@@ -972,26 +957,6 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tbody>
 </table>
 </li>
-<li class="blockList"><a name="org.apache.hadoop.hbase.client.coprocessor">
-<!--   -->
-</a>
-<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a> in <a href="../../../../../org/apache/hadoop/hbase/client/coprocessor/package-summary.html">org.apache.hadoop.hbase.client.coprocessor</a></h3>
-<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/client/coprocessor/package-summary.html">org.apache.hadoop.hbase.client.coprocessor</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang">Double</a></code></td>
-<td class="colLast"><span class="strong">DoubleColumnInterpreter.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/coprocessor/DoubleColumnInterpreter.html#getValue(byte[],%20byte[],%20org.apache.hadoop.hbase.Cell)">getValue</a></strong>(byte[]&nbsp;colFamily,
-                byte[]&nbsp;colQualifier,
-                <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;c)</code>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.filter">
 <!--   -->
 </a>
@@ -1472,26 +1437,6 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast"><span class="strong">Import.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/Import.html#filterKv(org.apache.hadoop.hbase.filter.Filter,%20org.apache.hadoop.hbase.Cell)">filterKv</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;filter,
                 <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv)</code>
 <div class="block">Attempt to filter out the keyvalue</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList"><a name="org.apache.hadoop.hbase.security.visibility">
-<!--   -->
-</a>
-<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a> in <a href="../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a></h3>
-<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">VisibilityExpEvaluator.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityExpEvaluator.html#evaluate(org.apache.hadoop.hbase.Cell)">evaluate</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>
-<div class="block">Evaluates whether the passed cell passes Scan/Get Authorization.</div>
 </td>
 </tr>
 </tbody>

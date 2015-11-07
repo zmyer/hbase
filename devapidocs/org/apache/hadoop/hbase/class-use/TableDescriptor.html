@@ -173,6 +173,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a> in <a href="../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a> with type parameters of type <a href="../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a>&gt;</code></td>
+<td class="colLast"><span class="strong">FSTableDescriptors.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/FSTableDescriptors.html#cache">cache</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a> that return <a href="../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -221,6 +234,12 @@
 <div class="block">Returns the latest table descriptor for the given table directly from the file system
  if it exists, bypassing the local cache.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a></code></td>
+<td class="colLast"><span class="strong">FSTableDescriptors.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/FSTableDescriptors.html#readTableDescriptor(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.FileStatus,%20boolean)">readTableDescriptor</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                      org.apache.hadoop.fs.FileStatus&nbsp;status,
+                                      boolean&nbsp;rewritePb)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -273,6 +292,33 @@
                                                                             boolean&nbsp;forceCreation)</code>
 <div class="block">Create a new HTableDescriptor in HDFS in the specified table directory.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><span class="strong">FSTableDescriptors.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/FSTableDescriptors.html#rewriteTableDescriptor(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.FileStatus,%20org.apache.hadoop.hbase.TableDescriptor)">rewriteTableDescriptor</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                            org.apache.hadoop.fs.FileStatus&nbsp;status,
+                                            <a href="../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a>&nbsp;td)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><span class="strong">FSTableDescriptors.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/FSTableDescriptors.html#updateTableDescriptor(org.apache.hadoop.hbase.TableDescriptor)">updateTableDescriptor</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a>&nbsp;td)</code>
+<div class="block">Update table descriptor on the file system</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><span class="strong">FSTableDescriptors.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/FSTableDescriptors.html#writeTableDescriptor(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.TableDescriptor,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FileStatus)">writeTableDescriptor</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                        <a href="../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a>&nbsp;htd,
+                                        org.apache.hadoop.fs.Path&nbsp;tableDir,
+                                        org.apache.hadoop.fs.FileStatus&nbsp;currentDescriptorFile)</code>
+<div class="block">Attempts to write a new table descriptor to the given table's directory.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><span class="strong">FSTableDescriptors.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/FSTableDescriptors.html#writeTD(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.TableDescriptor)">writeTD</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+              org.apache.hadoop.fs.Path&nbsp;p,
+              <a href="../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

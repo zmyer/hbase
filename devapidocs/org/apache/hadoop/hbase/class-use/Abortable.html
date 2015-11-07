@@ -105,7 +105,15 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure.flush">org.apache.hadoop.hbase.procedure.flush</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.snapshot">org.apache.hadoop.hbase.regionserver.snapshot</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -123,6 +131,10 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.util.hbck">org.apache.hadoop.hbase.util.hbck</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.zookeeper">org.apache.hadoop.hbase.zookeeper</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -200,6 +212,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html" title="class in org.apache.hadoop.hbase.client">ConnectionImplementation</a></strong></code>
+<div class="block">Main implementation of <a href="../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client"><code>Connection</code></a> and <a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client"><code>ClusterConnection</code></a> interfaces.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionUtils.MasterlessConnection.html" title="class in org.apache.hadoop.hbase.client">ConnectionUtils.MasterlessConnection</a></strong></code>
+<div class="block">Some tests shut down the master.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/CoprocessorHConnection.html" title="class in org.apache.hadoop.hbase.client">CoprocessorHConnection</a></strong></code>
 <div class="block">Connection to an HTable from within a Coprocessor.</div>
@@ -209,6 +233,20 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html" title="class in org.apache.hadoop.hbase.client">HBaseAdmin</a></strong></code>
 <div class="block">HBaseAdmin is no longer a client API.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.ThrowableAbortable.html" title="class in org.apache.hadoop.hbase.client">HBaseAdmin.ThrowableAbortable</a></strong></code>
+<div class="block">Simple <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase"><code>Abortable</code></a>, throwing RuntimeException on abort.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ZooKeeperKeepAliveConnection.html" title="class in org.apache.hadoop.hbase.client">ZooKeeperKeepAliveConnection</a></strong></code>
+<div class="block">We inherit the current ZooKeeperWatcher implementation to change the semantic
+  of the close: the new close won't immediately close the connection but
+  will have a keep alive.</div>
 </td>
 </tr>
 </tbody>
@@ -247,6 +285,23 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a> in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> declared as <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></code></td>
+<td class="colLast"><span class="strong">RpcExecutor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RpcExecutor.html#abortable">abortable</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></code></td>
+<td class="colLast"><span class="strong">SimpleRpcScheduler.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/SimpleRpcScheduler.html#abortable">abortable</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -387,6 +442,37 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.procedure.flush">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a> in <a href="../../../../../org/apache/hadoop/hbase/procedure/flush/package-summary.html">org.apache.hadoop.hbase.procedure.flush</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/procedure/flush/package-summary.html">org.apache.hadoop.hbase.procedure.flush</a> declared as <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></code></td>
+<td class="colLast"><span class="strong">RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/flush/RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool.html#abortable">abortable</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/hadoop/hbase/procedure/flush/package-summary.html">org.apache.hadoop.hbase.procedure.flush</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/flush/RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool.html#RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool(java.lang.String,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.Abortable)">RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                                                                                                  org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                                                                                                  <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;abortable)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
 <!--   -->
 </a>
@@ -447,6 +533,37 @@
 <td class="colLast"><span class="strong">SimpleRpcSchedulerFactory.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/SimpleRpcSchedulerFactory.html#create(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.ipc.PriorityFunction,%20org.apache.hadoop.hbase.Abortable)">create</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
             <a href="../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a>&nbsp;priority,
             <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;server)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver.snapshot">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a> in <a href="../../../../../org/apache/hadoop/hbase/regionserver/snapshot/package-summary.html">org.apache.hadoop.hbase.regionserver.snapshot</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/regionserver/snapshot/package-summary.html">org.apache.hadoop.hbase.regionserver.snapshot</a> declared as <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></code></td>
+<td class="colLast"><span class="strong">RegionServerSnapshotManager.SnapshotSubprocedurePool.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/snapshot/RegionServerSnapshotManager.SnapshotSubprocedurePool.html#abortable">abortable</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/hadoop/hbase/regionserver/snapshot/package-summary.html">org.apache.hadoop.hbase.regionserver.snapshot</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/snapshot/RegionServerSnapshotManager.SnapshotSubprocedurePool.html#RegionServerSnapshotManager.SnapshotSubprocedurePool(java.lang.String,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.Abortable)">RegionServerSnapshotManager.SnapshotSubprocedurePool</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                                                                        org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                                                                        <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;abortable)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -624,6 +741,28 @@
  of regions.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationSyncUp.DummyServer.html" title="class in org.apache.hadoop.hbase.replication.regionserver">ReplicationSyncUp.DummyServer</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.util.hbck">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a> in <a href="../../../../../org/apache/hadoop/hbase/util/hbck/package-summary.html">org.apache.hadoop.hbase.util.hbck</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/hadoop/hbase/util/hbck/package-summary.html">org.apache.hadoop.hbase.util.hbck</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/hbck/ReplicationChecker.ReplicationQueueDeletor.html#ReplicationChecker.ReplicationQueueDeletor(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.Abortable)">ReplicationChecker.ReplicationQueueDeletor</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;zk,
+                                                                                    org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                                                    <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;abortable)</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -654,14 +793,22 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></code></td>
+<td class="colLast"><span class="strong">ZKClusterId.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZKClusterId.html#abortable">abortable</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></code></td>
 <td class="colLast"><span class="strong">ZooKeeperNodeTracker.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperNodeTracker.html#abortable">abortable</a></strong></code>
 <div class="block">Used to abort if a fatal error occurs</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></code></td>
 <td class="colLast"><span class="strong">ZooKeeperWatcher.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html#abortable">abortable</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a></code></td>
+<td class="colLast"><span class="strong">DrainingServerTracker.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/DrainingServerTracker.html#abortable">abortable</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

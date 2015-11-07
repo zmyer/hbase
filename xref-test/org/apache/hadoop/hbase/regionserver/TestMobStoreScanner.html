@@ -43,9 +43,9 @@
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.HRegionInfo;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.HTableDescriptor;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.TableName;
-<a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
-<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Get;
-<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.HBaseAdmin;
+<a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Admin;
+<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
+<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Get;
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Put;
 <a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Result;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ResultScanner;
@@ -77,7 +77,7 @@
 <a class="jxr_linenumber" name="67" href="#67">67</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] qf2 = Bytes.toBytes(<span class="jxr_string">"qualifier2"</span>);
 <a class="jxr_linenumber" name="68" href="#68">68</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">final</strong> byte[] qf3 = Bytes.toBytes(<span class="jxr_string">"qualifier3"</span>);
 <a class="jxr_linenumber" name="69" href="#69">69</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Table table;
-<a class="jxr_linenumber" name="70" href="#70">70</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> HBaseAdmin admin;
+<a class="jxr_linenumber" name="70" href="#70">70</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Admin admin;
 <a class="jxr_linenumber" name="71" href="#71">71</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> HColumnDescriptor hcd;
 <a class="jxr_linenumber" name="72" href="#72">72</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> HTableDescriptor desc;
 <a class="jxr_linenumber" name="73" href="#73">73</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Random random = <strong class="jxr_keyword">new</strong> Random();

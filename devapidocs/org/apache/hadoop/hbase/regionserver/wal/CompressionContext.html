@@ -63,13 +63,13 @@
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_java.lang.Object">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_top">
@@ -118,16 +118,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#ENABLE_WAL_TAGS_COMPRESSION">ENABLE_WAL_TAGS_COMPRESSION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/io/util/Dictionary.html" title="interface in org.apache.hadoop.hbase.io.util">Dictionary</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#familyDict">familyDict</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/io/util/Dictionary.html" title="interface in org.apache.hadoop.hbase.io.util">Dictionary</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#qualifierDict">qualifierDict</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/io/util/Dictionary.html" title="interface in org.apache.hadoop.hbase.io.util">Dictionary</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#regionDict">regionDict</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/io/util/Dictionary.html" title="interface in org.apache.hadoop.hbase.io.util">Dictionary</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#rowDict">rowDict</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/io/util/Dictionary.html" title="interface in org.apache.hadoop.hbase.io.util">Dictionary</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#tableDict">tableDict</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/io/TagCompressionContext.html" title="class in org.apache.hadoop.hbase.io">TagCompressionContext</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#tagCompressionContext">tagCompressionContext</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -157,6 +173,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#clear()">clear</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
@@ -178,6 +205,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="ENABLE_WAL_TAGS_COMPRESSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENABLE_WAL_TAGS_COMPRESSION</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#line.34">ENABLE_WAL_TAGS_COMPRESSION</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.wal.CompressionContext.ENABLE_WAL_TAGS_COMPRESSION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="regionDict">
 <!--   -->
 </a>
@@ -199,10 +236,37 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="familyDict">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>familyDict</h4>
 <pre>public final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/util/Dictionary.html" title="interface in org.apache.hadoop.hbase.io.util">Dictionary</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#line.40">familyDict</a></pre>
+</li>
+</ul>
+<a name="qualifierDict">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qualifierDict</h4>
+<pre>final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/util/Dictionary.html" title="interface in org.apache.hadoop.hbase.io.util">Dictionary</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#line.41">qualifierDict</a></pre>
+</li>
+</ul>
+<a name="rowDict">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowDict</h4>
+<pre>final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/util/Dictionary.html" title="interface in org.apache.hadoop.hbase.io.util">Dictionary</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#line.42">rowDict</a></pre>
+</li>
+</ul>
+<a name="tagCompressionContext">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>tagCompressionContext</h4>
+<pre><a href="../../../../../../org/apache/hadoop/hbase/io/TagCompressionContext.html" title="class in org.apache.hadoop.hbase.io">TagCompressionContext</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#line.44">tagCompressionContext</a></pre>
 </li>
 </ul>
 </li>
@@ -233,6 +297,23 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InstantiationException.html?is-external=true" title="class or interface in java.lang">InstantiationException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="clear()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>clear</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html#line.72">clear</a>()</pre>
 </li>
 </ul>
 </li>
@@ -289,13 +370,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_java.lang.Object">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_bottom">

@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -89,7 +89,7 @@
 <li>org.apache.hadoop.hbase.procedure2.Procedure&lt;TEnvironment&gt;</li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&gt;</li>
+<li>org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.BaseTestStepProcedure</li>
@@ -118,13 +118,36 @@
 <hr>
 <br>
 <pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.html#line.116">TestProcedureRecovery.BaseTestStepProcedure</a>
-extends org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&gt;</pre>
+extends org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&gt;</pre>
 </li>
 </ul>
 </div>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#abort">abort</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#step">step</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -156,15 +179,19 @@ extends org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;org.apache.had
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#abort(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv)">abort</a></strong>(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&nbsp;env)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#abort(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv)">abort</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&nbsp;env)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.procedure2.Procedure[]</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#execute(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv)">execute</a></strong>(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&nbsp;env)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#execute(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv)">execute</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&nbsp;env)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#isAborted()">isAborted</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#rollback(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv)">rollback</a></strong>(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&nbsp;env)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#rollback(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv)">rollback</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&nbsp;env)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -179,7 +206,7 @@ extends org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;org.apache.had
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.procedure2.Procedure</h3>
-<code>acquireLock, addStackIndex, beforeReplay, childrenCountDown, compareTo, completionCleanup, convert, convert, createProcedureInfo, elapsedTime, getException, getLastUpdate, getNonceKey, getOwner, getParentProcId, getProcId, getProcIdHashCode, getResult, getRootProcedureId, getStackIndexes, getStartTime, getState, getTimeout, getTimeRemaining, hasException, hasOwner, hasParent, hasTimeout, incChildrenLatch, isFailed, isFinished, isSuccess, isWaiting, isYieldAfterExecutionStep, newInstance, releaseLock, removeStackIndex, setAbortFailure, setChildrenLatch, setFailure, setFailure, setNonceKey, setOwner, setParentProcId, setProcId, setResult, setStackIndexes, setStartTime, setState, setTimeout, setTimeoutFailure, toString, toStringClass, toStringClassDetails, toStringState, updateTimestamp, validateClass, wasExecuted</code></li>
+<code><clinit>, acquireLock, addStackIndex, beforeReplay, childrenCountDown, compareTo, completionCleanup, convert, convert, createProcedureInfo, elapsedTime, getException, getLastUpdate, getNonceKey, getOwner, getParentProcId, getProcId, getProcIdHashCode, getResult, getRootProcedureId, getStackIndexes, getStartTime, getState, getTimeout, getTimeRemaining, hasException, hasOwner, hasParent, hasTimeout, incChildrenLatch, isFailed, isFinished, isSuccess, isWaiting, isYieldAfterExecutionStep, newInstance, releaseLock, removeStackIndex, setAbortFailure, setChildrenLatch, setFailure, setFailure, setNonceKey, setOwner, setParentProcId, setProcId, setResult, setStackIndexes, setStartTime, setState, setTimeout, setTimeoutFailure, toString, toStringClass, toStringClassDetails, toStringState, updateTimestamp, validateClass, wasExecuted</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -196,6 +223,32 @@ extends org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;org.apache.had
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="abort">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>abort</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#line.117">abort</a></pre>
+</li>
+</ul>
+<a name="step">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>step</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#line.118">step</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -225,11 +278,11 @@ extends org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;org.apache.had
 <ul class="blockList">
 <li class="blockList">
 <h4>execute</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.procedure2.Procedure[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#line.121">execute</a>(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&nbsp;env)
+<pre>protected&nbsp;org.apache.hadoop.hbase.procedure2.Procedure[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#line.121">execute</a>(<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&nbsp;env)
                                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>execute</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.procedure2.Procedure&lt;org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&gt;</code></dd>
+<dd><code>execute</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.procedure2.Procedure&lt;<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&gt;</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
@@ -240,24 +293,33 @@ extends org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;org.apache.had
 <ul class="blockList">
 <li class="blockList">
 <h4>rollback</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#line.137">rollback</a>(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&nbsp;env)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#line.137">rollback</a>(<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&nbsp;env)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>rollback</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.procedure2.Procedure&lt;org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&gt;</code></dd>
+<dd><code>rollback</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.procedure2.Procedure&lt;<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
 <a name="abort(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>abort</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#line.144">abort</a>(org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&nbsp;env)</pre>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#line.144">abort</a>(<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&nbsp;env)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>abort</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.procedure2.Procedure&lt;org.apache.hadoop.hbase.procedure2.TestProcedureRecovery.TestProcEnv&gt;</code></dd>
+<dd><code>abort</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.procedure2.Procedure&lt;<a href="../../../../../org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.TestProcEnv.html" title="class in org.apache.hadoop.hbase.procedure2">TestProcedureRecovery.TestProcEnv</a>&gt;</code></dd>
 </dl>
+</li>
+</ul>
+<a name="isAborted()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isAborted</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure2/TestProcedureRecovery.BaseTestStepProcedure.html#line.149">isAborted</a>()</pre>
 </li>
 </ul>
 </li>
@@ -312,13 +374,13 @@ extends org.apache.hadoop.hbase.procedure2.SequentialProcedure&lt;org.apache.had
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -102,6 +102,10 @@
 <dt>All Implemented Interfaces:</dt>
 <dd><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a>, <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>, <a href="../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a>, <a href="../../../../org/apache/hadoop/hbase/SettableSequenceId.html" title="interface in org.apache.hadoop.hbase">SettableSequenceId</a>, <a href="../../../../org/apache/hadoop/hbase/Streamable.html" title="interface in org.apache.hadoop.hbase">Streamable</a></dd>
 </dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryOffheapKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryOffheapKeyValue</a></dd>
+</dl>
 <hr>
 <br>
 <pre><a href="../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
@@ -133,12 +137,32 @@ implements <a href="../../../../org/apache/hadoop/hbase/io/HeapSize.html" title=
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#buf">buf</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected int</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#length">length</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#FIXED_HEAP_SIZE_OVERHEAD">FIXED_HEAP_SIZE_OVERHEAD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#hasTags">hasTags</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#keyLen">keyLen</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#length">length</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#offset">offset</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private short</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#rowLen">rowLen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#seqId">seqId</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -192,6 +216,14 @@ implements <a href="../../../../org/apache/hadoop/hbase/io/HeapSize.html" title=
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getFamilyLength()">getFamilyLength</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getFamilyLength(int)">getFamilyLength</a></strong>(int&nbsp;famLenPos)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getFamilyLengthPosition()">getFamilyLengthPosition</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getFamilyOffset()">getFamilyOffset</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -214,64 +246,73 @@ implements <a href="../../../../org/apache/hadoop/hbase/io/HeapSize.html" title=
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getQualifierLength()">getQualifierLength</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getQualifierOffset()">getQualifierOffset</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getQualifierLength(int,%20int)">getQualifierLength</a></strong>(int&nbsp;rlength,
+                                    int&nbsp;flength)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getQualifierPosition()">getQualifierPosition</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getQualifierOffset()">getQualifierOffset</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getQualifierPosition()">getQualifierPosition</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getRowArray()">getRowArray</a></strong>()</code>
 <div class="block">Contiguous raw bytes that may start at any index in the containing array.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getRowByteBuffer()">getRowByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>short</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getRowLength()">getRowLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getRowOffset()">getRowOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getRowPosition()">getRowPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getSequenceId()">getSequenceId</a></strong>()</code>
 <div class="block">A region-specific unique monotonically increasing sequence ID given to each Cell.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getTagsArray()">getTagsArray</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getTagsByteBuffer()">getTagsByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getTagsLength()">getTagsLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getTagsOffset()">getTagsOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getTagsPosition()">getTagsPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getTimestamp()">getTimestamp</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/OffheapKeyValue.html#getTimestampOffset(int)">getTimestampOffset</a></strong>(int&nbsp;keyLen)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte</code></td>
@@ -369,10 +410,55 @@ implements <a href="../../../../org/apache/hadoop/hbase/io/HeapSize.html" title=
 <a name="length">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>length</h4>
 <pre>protected final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.40">length</a></pre>
+</li>
+</ul>
+<a name="rowLen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowLen</h4>
+<pre>private final&nbsp;short <a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.41">rowLen</a></pre>
+</li>
+</ul>
+<a name="keyLen">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>keyLen</h4>
+<pre>private final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.42">keyLen</a></pre>
+</li>
+</ul>
+<a name="seqId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>seqId</h4>
+<pre>private&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.43">seqId</a></pre>
+</li>
+</ul>
+<a name="hasTags">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasTags</h4>
+<pre>private final&nbsp;boolean <a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.44">hasTags</a></pre>
+</li>
+</ul>
+<a name="FIXED_HEAP_SIZE_OVERHEAD">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>FIXED_HEAP_SIZE_OVERHEAD</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.47">FIXED_HEAP_SIZE_OVERHEAD</a></pre>
 </li>
 </ul>
 </li>
@@ -488,6 +574,24 @@ implements <a href="../../../../org/apache/hadoop/hbase/io/HeapSize.html" title=
 <dt><span class="strong">Returns:</span></dt><dd>Number of family bytes.  Must be &lt; familyArray.length - offset.</dd></dl>
 </li>
 </ul>
+<a name="getFamilyLengthPosition()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFamilyLengthPosition</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.92">getFamilyLengthPosition</a>()</pre>
+</li>
+</ul>
+<a name="getFamilyLength(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFamilyLength</h4>
+<pre>private&nbsp;byte&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.96">getFamilyLength</a>(int&nbsp;famLenPos)</pre>
+</li>
+</ul>
 <a name="getQualifierArray()">
 <!--   -->
 </a>
@@ -530,6 +634,16 @@ implements <a href="../../../../org/apache/hadoop/hbase/io/HeapSize.html" title=
 <dt><span class="strong">Returns:</span></dt><dd>Number of qualifier bytes.  Must be &lt; qualifierArray.length - offset.</dd></dl>
 </li>
 </ul>
+<a name="getQualifierLength(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getQualifierLength</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.115">getQualifierLength</a>(int&nbsp;rlength,
+                     int&nbsp;flength)</pre>
+</li>
+</ul>
 <a name="getTimestamp()">
 <!--   -->
 </a>
@@ -542,6 +656,15 @@ implements <a href="../../../../org/apache/hadoop/hbase/io/HeapSize.html" title=
 <dd><code><a href="../../../../org/apache/hadoop/hbase/Cell.html#getTimestamp()">getTimestamp</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>Long value representing time at which this cell was "Put" into the row.  Typically
  represents the time of insertion, but can be any value from 0 to Long.MAX_VALUE.</dd></dl>
+</li>
+</ul>
+<a name="getTimestampOffset(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTimestampOffset</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/OffheapKeyValue.html#line.125">getTimestampOffset</a>(int&nbsp;keyLen)</pre>
 </li>
 </ul>
 <a name="getTypeByte()">

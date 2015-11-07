@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -142,12 +142,27 @@ extends org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;org.apache.hadoop.hbase.wal.WAL.Entry&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.html#nextQueue">nextQueue</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.html#numberOfFileEntries">numberOfFileEntries</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader</h3>
-<code>reader</code></li>
+<code>entryStart, reader</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.ReaderBase">
@@ -188,6 +203,10 @@ extends org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.FailureType.html" title="enum in org.apache.hadoop.hbase.regionserver.wal">FaultySequenceFileLogReader.FailureType</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.html#getFailureType()">getFailureType</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.wal.WAL.Entry</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.html#next(org.apache.hadoop.hbase.wal.WAL.Entry)">next</a></strong>(org.apache.hadoop.hbase.wal.WAL.Entry&nbsp;reuse)</code>&nbsp;</td>
 </tr>
@@ -197,7 +216,7 @@ extends org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader</h3>
-<code>addFileInfoToException, close, getPosition, hasCompression, hasTagCompression, initAfterCompression, initAfterCompression, initReader, readNext, reset, seekOnFs</code></li>
+<code><clinit>, addFileInfoToException, close, getPosition, hasCompression, hasTagCompression, initAfterCompression, initAfterCompression, initReader, isWALCompressionEnabled, readNext, reset, seekOnFs</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.ReaderBase">
@@ -221,6 +240,32 @@ extends org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="nextQueue">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>nextQueue</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;org.apache.hadoop.hbase.wal.WAL.Entry&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.html#line.35">nextQueue</a></pre>
+</li>
+</ul>
+<a name="numberOfFileEntries">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>numberOfFileEntries</h4>
+<pre>int <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.html#line.36">numberOfFileEntries</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -244,6 +289,15 @@ extends org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getFailureType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFailureType</h4>
+<pre><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.FailureType.html" title="enum in org.apache.hadoop.hbase.regionserver.wal">FaultySequenceFileLogReader.FailureType</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.html#line.38">getFailureType</a>()</pre>
+</li>
+</ul>
 <a name="next(org.apache.hadoop.hbase.wal.WAL.Entry)">
 <!--   -->
 </a>
@@ -313,13 +367,13 @@ extends org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.SequenceFileLogReader">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

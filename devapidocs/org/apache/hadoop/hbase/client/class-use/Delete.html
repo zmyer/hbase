@@ -91,11 +91,19 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.coprocessor.example">org.apache.hadoop.hbase.coprocessor.example</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce</a></td>
 <td class="colLast">
 <div class="block">Provides HBase <a href="http://wiki.apache.org/hadoop/HadoopMapReduce">MapReduce</a>
 Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.quotas">org.apache.hadoop.hbase.quotas</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
@@ -145,6 +153,22 @@ service.</div>
                                                 long&nbsp;ts)</code>
 <div class="block">Generates and returns a Delete containing the region info for the catalog
  table</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/package-summary.html">org.apache.hadoop.hbase</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><span class="strong">MetaTableAccessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html#deleteFromMetaTable(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.client.Delete)">deleteFromMetaTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;d)</code>
+<div class="block">Delete the passed <code>d</code> from the <code>hbase:meta</code> table.</div>
 </td>
 </tr>
 </tbody>
@@ -531,6 +555,26 @@ service.</div>
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.coprocessor.example">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a> in <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/example/package-summary.html">org.apache.hadoop.hbase.coprocessor.example</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/example/package-summary.html">org.apache.hadoop.hbase.coprocessor.example</a> that return <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a></code></td>
+<td class="colLast"><span class="strong">BulkDeleteEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/example/BulkDeleteEndpoint.html#createDeleteMutation(java.util.List,%20org.apache.hadoop.hbase.coprocessor.example.generated.BulkDeleteProtos.BulkDeleteRequest.DeleteType,%20java.lang.Long)">createDeleteMutation</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;deleteRow,
+                                        org.apache.hadoop.hbase.coprocessor.example.generated.BulkDeleteProtos.BulkDeleteRequest.DeleteType&nbsp;deleteType,
+                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;timestamp)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.mapreduce">
 <!--   -->
 </a>
@@ -549,6 +593,25 @@ service.</div>
                   org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context,
                   <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
                   <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.quotas">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a> in <a href="../../../../../../org/apache/hadoop/hbase/quotas/package-summary.html">org.apache.hadoop.hbase.quotas</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/quotas/package-summary.html">org.apache.hadoop.hbase.quotas</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><span class="strong">QuotaUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.html#doDelete(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.client.Delete)">doDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
+                <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

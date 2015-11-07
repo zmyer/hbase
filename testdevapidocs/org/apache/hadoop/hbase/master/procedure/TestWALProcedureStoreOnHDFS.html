@@ -116,6 +116,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.procedure2.store.ProcedureStore.ProcedureStoreListener</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#stopProcedureListener">stopProcedureListener</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.procedure2.store.wal.WALProcedureStore</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#store">store</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#UTIL">UTIL</a></strong></code>&nbsp;</td>
 </tr>
@@ -152,26 +164,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#initConfig(org.apache.hadoop.conf.Configuration)">initConfig</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#setup()">setup</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#tearDown()">tearDown</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#testWalAbortOnLowReplication()">testWalAbortOnLowReplication</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#testWalAbortOnLowReplicationWithQueuedWriters()">testWalAbortOnLowReplicationWithQueuedWriters</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#testWalRollOnLowReplication()">testWalRollOnLowReplication</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#waitForNumReplicas(int)">waitForNumReplicas</a></strong>(int&nbsp;numReplicas)</code>&nbsp;</td>
 </tr>
@@ -197,13 +213,40 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#line.52">LOG</a></pre>
+</li>
+</ul>
 <a name="UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UTIL</h4>
+<pre>protected static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#line.54">UTIL</a></pre>
+</li>
+</ul>
+<a name="store">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>store</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.procedure2.store.wal.WALProcedureStore <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#line.56">store</a></pre>
+</li>
+</ul>
+<a name="stopProcedureListener">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>UTIL</h4>
-<pre>protected static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#line.54">UTIL</a></pre>
+<h4>stopProcedureListener</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.procedure2.store.ProcedureStore.ProcedureStoreListener <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#line.58">stopProcedureListener</a></pre>
 </li>
 </ul>
 </li>
@@ -231,6 +274,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="initConfig(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initConfig</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestWALProcedureStoreOnHDFS.html#line.69">initConfig</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+</li>
+</ul>
 <a name="setup()">
 <!--   -->
 </a>

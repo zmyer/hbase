@@ -1442,7 +1442,7 @@
 <a class="jxr_linenumber" name="1432" href="#1432">1432</a> 
 <a class="jxr_linenumber" name="1433" href="#1433">1433</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="1434" href="#1434">1434</a> <em class="jxr_javadoccomment">   * @return true if default behavior should be bypassed, false otherwise</em>
-<a class="jxr_linenumber" name="1435" href="#1435">1435</a> <em class="jxr_javadoccomment">   * @deprecated use {@link #preWALRestore(HRegionInfo, WALKey, WALEdit)}</em>
+<a class="jxr_linenumber" name="1435" href="#1435">1435</a> <em class="jxr_javadoccomment">   * @deprecated use {@link #preWALRestore(HRegionInfo, WALKey, WALEdit)}; as of 2.0, remove in 3.0</em>
 <a class="jxr_linenumber" name="1436" href="#1436">1436</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="1437" href="#1437">1437</a>   @Deprecated
 <a class="jxr_linenumber" name="1438" href="#1438">1438</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> preWALRestore(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> info, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html">HLogKey</a> logKey,
@@ -1479,7 +1479,7 @@
 <a class="jxr_linenumber" name="1469" href="#1469">1469</a>   }
 <a class="jxr_linenumber" name="1470" href="#1470">1470</a> 
 <a class="jxr_linenumber" name="1471" href="#1471">1471</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="1472" href="#1472">1472</a> <em class="jxr_javadoccomment">   * @deprecated use {@link #postWALRestore(HRegionInfo, WALKey, WALEdit)}</em>
+<a class="jxr_linenumber" name="1472" href="#1472">1472</a> <em class="jxr_javadoccomment">   * @deprecated use {@link #postWALRestore(HRegionInfo, WALKey, WALEdit)}; as of 2.0, remove in 3.0</em>
 <a class="jxr_linenumber" name="1473" href="#1473">1473</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="1474" href="#1474">1474</a>   @Deprecated
 <a class="jxr_linenumber" name="1475" href="#1475">1475</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> postWALRestore(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> info, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html">HLogKey</a> logKey, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html">WALEdit</a> logEdit)

@@ -93,6 +93,13 @@
  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>BlockCache</code></a>.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce</a></td>
+<td class="colLast">
+<div class="block">Provides HBase <a href="http://wiki.apache.org/hadoop/HadoopMapReduce">MapReduce</a>
+Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -155,6 +162,34 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a> in <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/package-summary.html">org.apache.hadoop.hbase.io.encoding</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/package-summary.html">org.apache.hadoop.hbase.io.encoding</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></code></td>
+<td class="colLast"><span class="strong">HFileBlockDefaultEncodingContext.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockDefaultEncodingContext.html#encodingAlgo">encodingAlgo</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/package-summary.html">org.apache.hadoop.hbase.io.encoding</a> with type parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Short.html?is-external=true" title="class or interface in java.lang">Short</a>,<a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&gt;</code></td>
+<td class="colLast"><span class="strong">DataBlockEncoding.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html#idToEncoding">idToEncoding</a></strong></code>
+<div class="block">Maps data block encoding ids to enum instances.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/package-summary.html">org.apache.hadoop.hbase.io.encoding</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -198,6 +233,12 @@ the order they are declared.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockEncodingContext.html" title="interface in org.apache.hadoop.hbase.io.encoding">HFileBlockEncodingContext</a></code></td>
+<td class="colLast"><span class="strong">BufferedDataBlockEncoder.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#newDataBlockEncodingContext(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding,%20byte[],%20org.apache.hadoop.hbase.io.hfile.HFileContext)">newDataBlockEncodingContext</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;encoding,
+                                                      byte[]&nbsp;header,
+                                                      <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContext</a>&nbsp;meta)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockEncodingContext.html" title="interface in org.apache.hadoop.hbase.io.encoding">HFileBlockEncodingContext</a></code></td>
 <td class="colLast"><span class="strong">DataBlockEncoder.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.html#newDataBlockEncodingContext(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding,%20byte[],%20org.apache.hadoop.hbase.io.hfile.HFileContext)">newDataBlockEncodingContext</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;encoding,
                                                       byte[]&nbsp;headerBytes,
                                                       <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContext</a>&nbsp;meta)</code>
@@ -232,6 +273,27 @@ the order they are declared.</div>
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a> in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></code></td>
+<td class="colLast"><span class="strong">HFileContext.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html#encoding">encoding</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></code></td>
+<td class="colLast"><span class="strong">HFileContextBuilder.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContextBuilder.html#encoding">encoding</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></code></td>
+<td class="colLast"><span class="strong">HFileDataBlockEncoderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileDataBlockEncoderImpl.html#encoding">encoding</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -314,6 +376,48 @@ the order they are declared.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
+<td class="colLast"><span class="strong">HFileReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.html#getCachedBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20boolean,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.hfile.BlockType,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">getCachedBlock</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;cacheKey,
+                            boolean&nbsp;cacheBlock,
+                            boolean&nbsp;useLock,
+                            boolean&nbsp;isCompaction,
+                            boolean&nbsp;updateCacheMetrics,
+                            <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockType.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockType</a>&nbsp;expectedBlockType,
+                            <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;expectedDataBlockEncoding)</code>
+<div class="block">Retrieve block from cache.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockWithScanInfo</a></code></td>
+<td class="colLast"><span class="strong">HFileBlockIndex.ByteArrayKeyBlockIndexReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.ByteArrayKeyBlockIndexReader.html#loadDataBlockWithScanInfo(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.io.hfile.HFileBlock,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">loadDataBlockWithScanInfo</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;currentBlock,
+                                                  boolean&nbsp;cacheBlocks,
+                                                  boolean&nbsp;pread,
+                                                  boolean&nbsp;isCompaction,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;expectedDataBlockEncoding)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockWithScanInfo</a></code></td>
+<td class="colLast"><span class="strong">HFileBlockIndex.CellBasedKeyBlockIndexReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.CellBasedKeyBlockIndexReader.html#loadDataBlockWithScanInfo(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.io.hfile.HFileBlock,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">loadDataBlockWithScanInfo</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;currentBlock,
+                                                  boolean&nbsp;cacheBlocks,
+                                                  boolean&nbsp;pread,
+                                                  boolean&nbsp;isCompaction,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;expectedDataBlockEncoding)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockWithScanInfo</a></code></td>
+<td class="colLast"><span class="strong">HFileBlockIndex.BlockIndexReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexReader.html#loadDataBlockWithScanInfo(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.io.hfile.HFileBlock,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">loadDataBlockWithScanInfo</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;currentBlock,
+                                                  boolean&nbsp;cacheBlocks,
+                                                  boolean&nbsp;pread,
+                                                  boolean&nbsp;isCompaction,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;expectedDataBlockEncoding)</code>
+<div class="block">Return the BlockWithScanInfo which contains the DataBlock with other scan
+ info such as nextIndexedKey.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
 <td class="colLast"><span class="strong">HFile.CachingBlockReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.CachingBlockReader.html#readBlock(long,%20long,%20boolean,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.hfile.BlockType,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">readBlock</a></strong>(long&nbsp;offset,
                   long&nbsp;onDiskBlockSize,
@@ -338,6 +442,17 @@ the order they are declared.</div>
                   <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;expectedDataBlockEncoding)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
+<td class="colLast"><span class="strong">HFileBlockIndex.BlockIndexReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexReader.html#seekToDataBlock(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.io.hfile.HFileBlock,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">seekToDataBlock</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key,
+                              <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;currentBlock,
+                              boolean&nbsp;cacheBlocks,
+                              boolean&nbsp;pread,
+                              boolean&nbsp;isCompaction,
+                              <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;expectedDataBlockEncoding)</code>
+<div class="block">Return the data block which contains this key.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContextBuilder.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContextBuilder</a></code></td>
 <td class="colLast"><span class="strong">HFileContextBuilder.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContextBuilder.html#withDataBlockEncoding(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">withDataBlockEncoding</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;encoding)</code>&nbsp;</td>
 </tr>
@@ -350,8 +465,43 @@ the order they are declared.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html#HFileContext(boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20boolean,%20org.apache.hadoop.hbase.util.ChecksumType,%20int,%20int,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context,%20long,%20java.lang.String)">HFileContext</a></strong>(boolean&nbsp;useHBaseChecksum,
+                        boolean&nbsp;includesMvcc,
+                        boolean&nbsp;includesTags,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/io/compress/Compression.Algorithm.html" title="enum in org.apache.hadoop.hbase.io.compress">Compression.Algorithm</a>&nbsp;compressAlgo,
+                        boolean&nbsp;compressTags,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/util/ChecksumType.html" title="enum in org.apache.hadoop.hbase.util">ChecksumType</a>&nbsp;checksumType,
+                        int&nbsp;bytesPerChecksum,
+                        int&nbsp;blockSize,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;encoding,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Encryption.Context.html" title="class in org.apache.hadoop.hbase.io.crypto">Encryption.Context</a>&nbsp;cryptoContext,
+                        long&nbsp;fileCreateTime,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hfileName)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileDataBlockEncoderImpl.html#HFileDataBlockEncoderImpl(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">HFileDataBlockEncoderImpl</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;encoding)</code>
 <div class="block">Do data block encoding with specified options.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.mapreduce">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a> in <a href="../../../../../../../org/apache/hadoop/hbase/mapreduce/package-summary.html">org.apache.hadoop.hbase.mapreduce</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/mapreduce/package-summary.html">org.apache.hadoop.hbase.mapreduce</a> that return types with arguments of type <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HFileOutputFormat2.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mapreduce/HFileOutputFormat2.html#createFamilyDataBlockEncodingMap(org.apache.hadoop.conf.Configuration)">createFamilyDataBlockEncodingMap</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
+<div class="block">Runs inside the task to deserialize column family to data block encoding
+ type map from the configuration.</div>
 </td>
 </tr>
 </tbody>

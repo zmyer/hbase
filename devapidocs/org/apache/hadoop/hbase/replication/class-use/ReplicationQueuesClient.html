@@ -75,16 +75,46 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.client.replication">org.apache.hadoop.hbase.client.replication</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.replication">org.apache.hadoop.hbase.replication</a></td>
 <td class="colLast">
 <div class="block">Multi Cluster Replication</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.replication.master">org.apache.hadoop.hbase.replication.master</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.util.hbck">org.apache.hadoop.hbase.util.hbck</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.client.replication">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a> in <a href="../../../../../../org/apache/hadoop/hbase/client/replication/package-summary.html">org.apache.hadoop.hbase.client.replication</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/client/replication/package-summary.html">org.apache.hadoop.hbase.client.replication</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a></code></td>
+<td class="colLast"><span class="strong">ReplicationAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/replication/ReplicationAdmin.html#replicationQueuesClient">replicationQueuesClient</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.replication">
 <!--   -->
 </a>
@@ -99,6 +129,19 @@
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClientZKImpl.html" title="class in org.apache.hadoop.hbase.replication">ReplicationQueuesClientZKImpl</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/replication/package-summary.html">org.apache.hadoop.hbase.replication</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a></code></td>
+<td class="colLast"><span class="strong">ReplicationPeersZKImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#queuesClient">queuesClient</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -144,6 +187,42 @@
                                             org.apache.hadoop.conf.Configuration&nbsp;conf,
                                             <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a>&nbsp;queuesClient,
                                             <a href="../../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;abortable)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.replication.master">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a> in <a href="../../../../../../org/apache/hadoop/hbase/replication/master/package-summary.html">org.apache.hadoop.hbase.replication.master</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/replication/master/package-summary.html">org.apache.hadoop.hbase.replication.master</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a></code></td>
+<td class="colLast"><span class="strong">ReplicationLogCleaner.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/master/ReplicationLogCleaner.html#replicationQueues">replicationQueues</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.util.hbck">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a> in <a href="../../../../../../org/apache/hadoop/hbase/util/hbck/package-summary.html">org.apache.hadoop.hbase.util.hbck</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/util/hbck/package-summary.html">org.apache.hadoop.hbase.util.hbck</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a></code></td>
+<td class="colLast"><span class="strong">ReplicationChecker.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/ReplicationChecker.html#queuesClient">queuesClient</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

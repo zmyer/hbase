@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentListener.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentListener.DummyServerListener.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyLoadBalancer.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html" target="_top">Frames</a></li>
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -95,7 +95,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.85">TestAssignmentManagerOnCluster</a>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.84">TestAssignmentManagerOnCluster</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">This tests AssignmentManager with a testing cluster.</div>
 </li>
@@ -117,16 +117,51 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Class and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html" title="class in org.apache.hadoop.hbase.master">TestAssignmentManagerOnCluster.MyMaster</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyLoadBalancer.html" title="class in org.apache.hadoop.hbase.master">TestAssignmentManagerOnCluster.MyLoadBalancer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionObserver.html" title="class in org.apache.hadoop.hbase.master">TestAssignmentManagerOnCluster.MyRegionObserver</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html" title="class in org.apache.hadoop.hbase.master">TestAssignmentManagerOnCluster.MyMaster</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionObserver.html" title="class in org.apache.hadoop.hbase.master">TestAssignmentManagerOnCluster.MyRegionObserver</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html" title="class in org.apache.hadoop.hbase.master">TestAssignmentManagerOnCluster.MyRegionServer</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Admin</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#admin">admin</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#FAMILY">FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -161,126 +196,130 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#createTableAndGetOneRegion(org.apache.hadoop.hbase.TableName)">createTableAndGetOneRegion</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testAssignDisabledRegion()">testAssignDisabledRegion</a></strong>()</code>
 <div class="block">Test force unassign/assign a region of a disabled table</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testAssignDisabledRegionBySSH()">testAssignDisabledRegionBySSH</a></strong>()</code>
 <div class="block">Test disabled region is ignored by SSH</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testAssignOfflinedRegionBySSH()">testAssignOfflinedRegionBySSH</a></strong>()</code>
 <div class="block">Test offlined region is assigned by SSH</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testAssignRacingWithSSH()">testAssignRacingWithSSH</a></strong>()</code>
 <div class="block">Test force unassign/assign a region hosted on a dead server</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testAssignRegion()">testAssignRegion</a></strong>()</code>
 <div class="block">This tests region assignment</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testAssignRegionOnRestartedServer()">testAssignRegionOnRestartedServer</a></strong>()</code>
 <div class="block">This tests region assignment on a simulated restarted server</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testAssignWhileClosing()">testAssignWhileClosing</a></strong>()</code>
 <div class="block">This tests assign a region while it's closing.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testCloseFailed()">testCloseFailed</a></strong>()</code>
 <div class="block">This tests region close failed</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testCloseHang()">testCloseHang</a></strong>()</code>
 <div class="block">This tests region close hanging</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testMoveRegion()">testMoveRegion</a></strong>()</code>
 <div class="block">This tests moving a region</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testMoveRegionOfDeletedTable()">testMoveRegionOfDeletedTable</a></strong>()</code>
 <div class="block">If a table is deleted, we should not be able to move it anymore.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testOfflineRegion()">testOfflineRegion</a></strong>()</code>
 <div class="block">This tests offlining a region</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testOpenCloseRacing()">testOpenCloseRacing</a></strong>()</code>
 <div class="block">This tests region close racing with open</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testOpenFailed()">testOpenFailed</a></strong>()</code>
 <div class="block">This tests region open failed</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testOpenFailedUnrecoverable()">testOpenFailedUnrecoverable</a></strong>()</code>
 <div class="block">This tests region open failure which is not recoverable</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testReportRegionStateTransition()">testReportRegionStateTransition</a></strong>()</code>
 <div class="block">Test that region state transition call is idempotent</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testRestartMetaRegionServer()">testRestartMetaRegionServer</a></strong>()</code>
 <div class="block">This tests restarting meta regionserver</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testSSHWaitForServerToAssignRegion()">testSSHWaitForServerToAssignRegion</a></strong>()</code>
 <div class="block">Test SSH waiting for extra region server for assignment</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testSSHWhenDisablingTableRegionsInOpeningOrPendingOpenState()">testSSHWhenDisablingTableRegionsInOpeningOrPendingOpenState</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#testUpdatesRemoteMeta()">testUpdatesRemoteMeta</a></strong>()</code>
 <div class="block">Test concurrent updates to meta when meta is not on master</div>
@@ -302,6 +341,50 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.85">FAMILY</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.86">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>static final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.87">conf</a></pre>
+</li>
+</ul>
+<a name="admin">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>admin</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Admin <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.88">admin</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -314,7 +397,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestAssignmentManagerOnCluster</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.85">TestAssignmentManagerOnCluster</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.84">TestAssignmentManagerOnCluster</a>()</pre>
 </li>
 </ul>
 </li>
@@ -331,7 +414,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setUpBeforeClass</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.92">setUpBeforeClass</a>()
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.91">setUpBeforeClass</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -343,7 +426,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>tearDownAfterClass</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.108">tearDownAfterClass</a>()
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.107">tearDownAfterClass</a>()
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -355,7 +438,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRestartMetaRegionServer</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.116">testRestartMetaRegionServer</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.115">testRestartMetaRegionServer</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests restarting meta regionserver</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -368,7 +451,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testAssignRegion</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.178">testAssignRegion</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.177">testAssignRegion</a>()
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests region assignment</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -381,7 +464,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testAssignRegionOnRestartedServer</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.214">testAssignRegionOnRestartedServer</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.213">testAssignRegionOnRestartedServer</a>()
                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests region assignment on a simulated restarted server</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -394,7 +477,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testOfflineRegion</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.277">testOfflineRegion</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.276">testOfflineRegion</a>()
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests offlining a region</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -407,7 +490,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMoveRegion</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.312">testMoveRegion</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.311">testMoveRegion</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests moving a region</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -420,12 +503,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMoveRegionOfDeletedTable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.364">testMoveRegionOfDeletedTable</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.363">testMoveRegionOfDeletedTable</a>()
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">If a table is deleted, we should not be able to move it anymore.
  Otherwise, the region will be brought back.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="createTableAndGetOneRegion(org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTableAndGetOneRegion</h4>
+<pre>org.apache.hadoop.hbase.HRegionInfo&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.405">createTableAndGetOneRegion</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName)
+                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testAssignWhileClosing()">
@@ -434,7 +531,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testAssignWhileClosing</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.433">testAssignWhileClosing</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.432">testAssignWhileClosing</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests assign a region while it's closing.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -447,7 +544,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testCloseFailed</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.482">testCloseFailed</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.481">testCloseFailed</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests region close failed</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -460,7 +557,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testOpenFailed</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.528">testOpenFailed</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.527">testOpenFailed</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests region open failed</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -473,7 +570,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testOpenFailedUnrecoverable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.569">testOpenFailedUnrecoverable</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.568">testOpenFailedUnrecoverable</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests region open failure which is not recoverable</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -486,7 +583,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSSHWhenDisablingTableRegionsInOpeningOrPendingOpenState</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.615">testSSHWhenDisablingTableRegionsInOpeningOrPendingOpenState</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.614">testSSHWhenDisablingTableRegionsInOpeningOrPendingOpenState</a>()
                                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -498,7 +595,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testCloseHang</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.656">testCloseHang</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.655">testCloseHang</a>()
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests region close hanging</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -511,7 +608,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testOpenCloseRacing</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.701">testOpenCloseRacing</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.700">testOpenCloseRacing</a>()
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This tests region close racing with open</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -524,7 +621,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testAssignRacingWithSSH</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.772">testAssignRacingWithSSH</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.771">testAssignRacingWithSSH</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test force unassign/assign a region hosted on a dead server</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -537,7 +634,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSSHWaitForServerToAssignRegion</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.848">testSSHWaitForServerToAssignRegion</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.847">testSSHWaitForServerToAssignRegion</a>()
                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test SSH waiting for extra region server for assignment</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -550,7 +647,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testAssignDisabledRegion</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.900">testAssignDisabledRegion</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.899">testAssignDisabledRegion</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test force unassign/assign a region of a disabled table</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -563,7 +660,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testAssignOfflinedRegionBySSH</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.941">testAssignOfflinedRegionBySSH</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.940">testAssignOfflinedRegionBySSH</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test offlined region is assigned by SSH</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -576,7 +673,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testAssignDisabledRegionBySSH</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1014">testAssignDisabledRegionBySSH</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1013">testAssignDisabledRegionBySSH</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test disabled region is ignored by SSH</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -589,7 +686,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testReportRegionStateTransition</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1085">testReportRegionStateTransition</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1084">testReportRegionStateTransition</a>()
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test that region state transition call is idempotent</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -602,7 +699,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>testUpdatesRemoteMeta</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1120">testUpdatesRemoteMeta</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1119">testUpdatesRemoteMeta</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test concurrent updates to meta when meta is not on master</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -635,8 +732,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentListener.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyMaster.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentListener.DummyServerListener.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyLoadBalancer.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html" target="_top">Frames</a></li>
@@ -661,13 +758,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

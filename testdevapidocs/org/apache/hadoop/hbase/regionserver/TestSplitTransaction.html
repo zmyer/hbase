@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitLogWorker.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitLogWorker.DummyServer.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.CustomObserver.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -121,6 +121,75 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.CustomObserver.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransaction.CustomObserver</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.MockedFailedDaughterCreation.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransaction.MockedFailedDaughterCreation</a></strong></code>
+<div class="block">Exception used in this class only.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.MockedFailedDaughterOpen.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransaction.MockedFailedDaughterOpen</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#CF">CF</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#ENDROW">ENDROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#GOOD_SPLIT_ROW">GOOD_SPLIT_ROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#parent">parent</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#postRollBackCalled">postRollBackCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#preRollBackCalled">preRollBackCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#STARTROW">STARTROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#testdir">testdir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.wal.WALFactory</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#wals">wals</a></strong></code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -152,6 +221,23 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#countRows(org.apache.hadoop.hbase.regionserver.Region)">countRows</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;r)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#createRegion(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.wal.WALFactory)">createRegion</a></strong>(org.apache.hadoop.fs.Path&nbsp;testdir,
+                        org.apache.hadoop.hbase.wal.WALFactory&nbsp;wals)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.SplitTransactionImpl</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#prepareGOOD_SPLIT_ROW()">prepareGOOD_SPLIT_ROW</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.SplitTransactionImpl</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#prepareGOOD_SPLIT_ROW(org.apache.hadoop.hbase.regionserver.HRegion)">prepareGOOD_SPLIT_ROW</a></strong>(org.apache.hadoop.hbase.regionserver.HRegion&nbsp;parentRegion)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -199,6 +285,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#testWholesomeSplit()">testWholesomeSplit</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#wasRollBackHookCalled()">wasRollBackHookCalled</a></strong>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -215,6 +305,113 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.74">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="testdir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testdir</h4>
+<pre>private final&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.75">testdir</a></pre>
+</li>
+</ul>
+<a name="parent">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parent</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.77">parent</a></pre>
+</li>
+</ul>
+<a name="wals">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wals</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.wal.WALFactory <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.78">wals</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.79">fs</a></pre>
+</li>
+</ul>
+<a name="STARTROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STARTROW</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.80">STARTROW</a></pre>
+</li>
+</ul>
+<a name="ENDROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENDROW</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.82">ENDROW</a></pre>
+</li>
+</ul>
+<a name="GOOD_SPLIT_ROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>GOOD_SPLIT_ROW</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.83">GOOD_SPLIT_ROW</a></pre>
+</li>
+</ul>
+<a name="CF">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CF</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.84">CF</a></pre>
+</li>
+</ul>
+<a name="preRollBackCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preRollBackCalled</h4>
+<pre>private static&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.86">preRollBackCalled</a></pre>
+</li>
+</ul>
+<a name="postRollBackCalled">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>postRollBackCalled</h4>
+<pre>private static&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.87">postRollBackCalled</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -289,6 +486,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="prepareGOOD_SPLIT_ROW()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prepareGOOD_SPLIT_ROW</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.SplitTransactionImpl&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.163">prepareGOOD_SPLIT_ROW</a>()
+                                                                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="prepareGOOD_SPLIT_ROW(org.apache.hadoop.hbase.regionserver.HRegion)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prepareGOOD_SPLIT_ROW</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.SplitTransactionImpl&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.167">prepareGOOD_SPLIT_ROW</a>(org.apache.hadoop.hbase.regionserver.HRegion&nbsp;parentRegion)
+                                                                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testPrepareWithRegionsWithReference()">
 <!--   -->
 </a>
@@ -354,11 +575,45 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testRollback()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testRollback</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.289">testRollback</a>()
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="wasRollBackHookCalled()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wasRollBackHookCalled</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.345">wasRollBackHookCalled</a>()</pre>
+</li>
+</ul>
+<a name="countRows(org.apache.hadoop.hbase.regionserver.Region)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.356">countRows</a>(org.apache.hadoop.hbase.regionserver.Region&nbsp;r)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createRegion(org.apache.hadoop.fs.Path, org.apache.hadoop.hbase.wal.WALFactory)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createRegion</h4>
+<pre>org.apache.hadoop.hbase.regionserver.HRegion&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html#line.372">createRegion</a>(org.apache.hadoop.fs.Path&nbsp;testdir,
+                                                        org.apache.hadoop.hbase.wal.WALFactory&nbsp;wals)
+                                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -389,7 +644,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitLogWorker.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitLogWorker.DummyServer.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.CustomObserver.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -415,13 +670,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

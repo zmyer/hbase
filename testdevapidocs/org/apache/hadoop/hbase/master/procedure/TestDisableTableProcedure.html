@@ -116,6 +116,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#nonce">nonce</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#nonceGroup">nonceGroup</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#UTIL">UTIL</a></strong></code>&nbsp;</td>
 </tr>
@@ -156,12 +168,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#cleanupTest()">cleanupTest</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.procedure2.ProcedureExecutor&lt;org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#getMasterProcedureExecutor()">getMasterProcedureExecutor</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#setup()">setup</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#setupCluster()">setupCluster</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#setupConf(org.apache.hadoop.conf.Configuration)">setupConf</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -205,13 +225,40 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#line.48">LOG</a></pre>
+</li>
+</ul>
 <a name="UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UTIL</h4>
+<pre>protected static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#line.50">UTIL</a></pre>
+</li>
+</ul>
+<a name="nonceGroup">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>nonceGroup</h4>
+<pre>private static&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#line.52">nonceGroup</a></pre>
+</li>
+</ul>
+<a name="nonce">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>UTIL</h4>
-<pre>protected static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#line.50">UTIL</a></pre>
+<h4>nonce</h4>
+<pre>private static&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#line.53">nonce</a></pre>
 </li>
 </ul>
 </li>
@@ -239,6 +286,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="setupConf(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setupConf</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#line.55">setupConf</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+</li>
+</ul>
 <a name="setupCluster()">
 <!--   -->
 </a>
@@ -326,13 +382,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testRecoveryAndDoubleExecution()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testRecoveryAndDoubleExecution</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#line.182">testRecoveryAndDoubleExecution</a>()
                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getMasterProcedureExecutor()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getMasterProcedureExecutor</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.procedure2.ProcedureExecutor&lt;org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TestDisableTableProcedure.html#line.208">getMasterProcedureExecutor</a>()</pre>
 </li>
 </ul>
 </li>

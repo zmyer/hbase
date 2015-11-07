@@ -75,6 +75,12 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.ipc">org.apache.hadoop.hbase.ipc</a></td>
+<td class="colLast">
+<div class="block">Tools to help define network clients and servers.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security">org.apache.hadoop.hbase.security</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -83,6 +89,55 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.ipc">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a> in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a></code></td>
+<td class="colLast"><span class="strong">AsyncRpcChannel.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannel.html#authMethod">authMethod</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a></code></td>
+<td class="colLast"><span class="strong">RpcClientImpl.Connection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClientImpl.Connection.html#authMethod">authMethod</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a></code></td>
+<td class="colLast"><span class="strong">RpcServer.Connection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Connection.html#authMethod">authMethod</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.RPCProtos.UserInformation</code></td>
+<td class="colLast"><span class="strong">AsyncRpcChannel.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannel.html#buildUserInfo(org.apache.hadoop.security.UserGroupInformation,%20org.apache.hadoop.hbase.security.AuthMethod)">buildUserInfo</a></strong>(org.apache.hadoop.security.UserGroupInformation&nbsp;ugi,
+                          <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a>&nbsp;authMethod)</code>
+<div class="block">Build the user information</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">AsyncRpcChannel.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannel.html#createPreamble(io.netty.buffer.ByteBuf,%20org.apache.hadoop.hbase.security.AuthMethod)">createPreamble</a></strong>(io.netty.buffer.ByteBuf&nbsp;byteBuf,
+                            <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a>&nbsp;authMethod)</code>
+<div class="block">Create connection preamble</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.security">
 <!--   -->
 </a>

@@ -115,15 +115,23 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.MasterKeepAliveConnection</code></td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#checkIfBaseNodeAvailable(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher)">checkIfBaseNodeAvailable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;zkw)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/MasterKeepAliveConnection.html" title="interface in org.apache.hadoop.hbase.client">MasterKeepAliveConnection</a></code></td>
 <td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#getKeepAliveMasterService()">getKeepAliveMasterService</a></strong>()</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>Since 0.96.0</i></div>
 </div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/MasterKeepAliveConnection.html" title="interface in org.apache.hadoop.hbase.client">MasterKeepAliveConnection</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#getKeepAliveMasterService()">getKeepAliveMasterService</a></strong>()</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.MasterKeepAliveConnection</code></td>
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/MasterKeepAliveConnection.html" title="interface in org.apache.hadoop.hbase.client">MasterKeepAliveConnection</a></code></td>
 <td class="colLast"><span class="strong">HConnection.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html#getKeepAliveMasterService()">getKeepAliveMasterService</a></strong>()</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>Since 0.96.0</i></div>
@@ -131,8 +139,20 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.MasterProtos.MasterService.BlockingInterface</code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#getMaster()">getMaster</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#isMasterRunning()">isMasterRunning</a></strong>()</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>this has been deprecated without a replacement</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#isMasterRunning()">isMasterRunning</a></strong>()</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>this has been deprecated without a replacement</i></div>
 </div>
@@ -159,30 +179,6 @@
 <td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#unassign(byte[],%20boolean)">unassign</a></strong>(byte[]&nbsp;regionName,
                 boolean&nbsp;force)</code>
 <div class="block">Unassign a region from current hosting regionserver.</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
-<caption><span>Constructors in <a href="../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> that throw <a href="../../../../../org/apache/hadoop/hbase/MasterNotRunningException.html" title="class in org.apache.hadoop.hbase">MasterNotRunningException</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colOne" scope="col">Constructor and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#HBaseAdmin(org.apache.hadoop.conf.Configuration)">HBaseAdmin</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;c)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>Constructing HBaseAdmin objects manually has been deprecated.
- Use <a href="../../../../../org/apache/hadoop/hbase/client/Connection.html#getAdmin()"><code>Connection.getAdmin()</code></a> to obtain an instance of <a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client"><code>Admin</code></a> instead.</i></div>
-</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#HBaseAdmin(org.apache.hadoop.hbase.client.Connection)">HBaseAdmin</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>Constructing HBaseAdmin objects manually has been deprecated.
- Use <a href="../../../../../org/apache/hadoop/hbase/client/Connection.html#getAdmin()"><code>Connection.getAdmin()</code></a> to obtain an instance of <a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client"><code>Admin</code></a> instead.</i></div>
-</div>
 </td>
 </tr>
 </tbody>

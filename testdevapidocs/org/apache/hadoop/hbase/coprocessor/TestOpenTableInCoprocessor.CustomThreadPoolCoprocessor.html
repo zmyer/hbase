@@ -184,6 +184,12 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestOpenTableInCoprocessor.CustomThreadPoolCoprocessor.html#getPool()">getPool</a></strong>()</code>
+<div class="block">Get a pool that has only ever one thread.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestOpenTableInCoprocessor.CustomThreadPoolCoprocessor.html#prePut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">prePut</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e,
             org.apache.hadoop.hbase.client.Put&nbsp;put,
@@ -236,6 +242,18 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getPool()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPool</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestOpenTableInCoprocessor.CustomThreadPoolCoprocessor.html#line.90">getPool</a>()</pre>
+<div class="block">Get a pool that has only ever one thread. A second action added to the pool (running
+ concurrently), will cause an exception.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd></dd></dl>
+</li>
+</ul>
 <a name="prePut(org.apache.hadoop.hbase.coprocessor.ObserverContext, org.apache.hadoop.hbase.client.Put, org.apache.hadoop.hbase.regionserver.wal.WALEdit, org.apache.hadoop.hbase.client.Durability)">
 <!--   -->
 </a>

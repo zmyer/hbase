@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.Action.html" title="enum in org.apache.hadoop.hbase.security.access"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/security/access/TableAuthManager.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.SecureBulkLoadListener.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.protobuf.generated.SecureBulkLoadProtos.SecureBulkLoadService">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -144,6 +144,17 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/Coproc
 <!--   -->
 </a>
 <h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.SecureBulkLoadListener.html" title="class in org.apache.hadoop.hbase.security.access">SecureBulkLoadEndpoint.SecureBulkLoadListener</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.protobuf.generated.SecureBulkLoadProtos.SecureBulkLoadService">
 <!--   -->
@@ -173,6 +184,50 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/Coproc
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#baseStagingDir">baseStagingDir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#env">env</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.fs.permission.FsPermission</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#PERM_ALL_ACCESS">PERM_ALL_ACCESS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.fs.permission.FsPermission</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#PERM_HIDDEN">PERM_HIDDEN</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/security/SecureRandom.html?is-external=true" title="class or interface in java.security">SecureRandom</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#random">random</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#RANDOM_RADIX">RANDOM_RADIX</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#RANDOM_WIDTH">RANDOM_WIDTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/security/UserProvider.html" title="class in org.apache.hadoop.hbase.security">UserProvider</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#userProvider">userProvider</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#VERSION">VERSION</a></strong></code>&nbsp;</td>
 </tr>
@@ -222,6 +277,26 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/Coproc
                               com.google.protobuf.RpcCallback&lt;org.apache.hadoop.hbase.protobuf.generated.SecureBulkLoadProtos.CleanupBulkLoadResponse&gt;&nbsp;done)</code>
 <div class="block"><code>rpc CleanupBulkLoad(.hbase.pb.CleanupBulkLoadRequest) returns (.hbase.pb.CleanupBulkLoadResponse);</code></div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#createStagingDir(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.security.User,%20java.lang.String)">createStagingDir</a></strong>(org.apache.hadoop.fs.Path&nbsp;baseDir,
+                                <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;randomDir)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#createStagingDir(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.security.User,%20org.apache.hadoop.hbase.TableName)">createStagingDir</a></strong>(org.apache.hadoop.fs.Path&nbsp;baseDir,
+                                <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user,
+                                <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#getActiveUser()">getActiveUser</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BulkLoadObserver.html" title="interface in org.apache.hadoop.hbase.coprocessor">BulkLoadObserver</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#getBulkLoadObservers()">getBulkLoadObservers</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>com.google.protobuf.Service</code></td>
@@ -283,11 +358,112 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/Coproc
 <a name="VERSION">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>VERSION</h4>
 <pre>public static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.107">VERSION</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.security.access.SecureBulkLoadEndpoint.VERSION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="RANDOM_WIDTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RANDOM_WIDTH</h4>
+<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.110">RANDOM_WIDTH</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.security.access.SecureBulkLoadEndpoint.RANDOM_WIDTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="RANDOM_RADIX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RANDOM_RADIX</h4>
+<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.111">RANDOM_RADIX</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.security.access.SecureBulkLoadEndpoint.RANDOM_RADIX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.113">LOG</a></pre>
+</li>
+</ul>
+<a name="PERM_ALL_ACCESS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PERM_ALL_ACCESS</h4>
+<pre>private static final&nbsp;org.apache.hadoop.fs.permission.FsPermission <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.115">PERM_ALL_ACCESS</a></pre>
+</li>
+</ul>
+<a name="PERM_HIDDEN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PERM_HIDDEN</h4>
+<pre>private static final&nbsp;org.apache.hadoop.fs.permission.FsPermission <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.116">PERM_HIDDEN</a></pre>
+</li>
+</ul>
+<a name="random">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>random</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/security/SecureRandom.html?is-external=true" title="class or interface in java.security">SecureRandom</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.118">random</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.119">fs</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.120">conf</a></pre>
+</li>
+</ul>
+<a name="baseStagingDir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>baseStagingDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.124">baseStagingDir</a></pre>
+</li>
+</ul>
+<a name="env">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>env</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.126">env</a></pre>
+</li>
+</ul>
+<a name="userProvider">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>userProvider</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/security/UserProvider.html" title="class in org.apache.hadoop.hbase.security">UserProvider</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.128">userProvider</a></pre>
 </li>
 </ul>
 </li>
@@ -394,6 +570,52 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/Coproc
 </dl>
 </li>
 </ul>
+<a name="getBulkLoadObservers()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBulkLoadObservers</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BulkLoadObserver.html" title="interface in org.apache.hadoop.hbase.coprocessor">BulkLoadObserver</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.313">getBulkLoadObservers</a>()</pre>
+</li>
+</ul>
+<a name="createStagingDir(org.apache.hadoop.fs.Path, org.apache.hadoop.hbase.security.User, org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createStagingDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.320">createStagingDir</a>(org.apache.hadoop.fs.Path&nbsp;baseDir,
+                                         <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user,
+                                         <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)
+                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createStagingDir(org.apache.hadoop.fs.Path, org.apache.hadoop.hbase.security.User, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createStagingDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.329">createStagingDir</a>(org.apache.hadoop.fs.Path&nbsp;baseDir,
+                                         <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user,
+                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;randomDir)
+                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getActiveUser()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getActiveUser</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html#line.338">getActiveUser</a>()</pre>
+</li>
+</ul>
 <a name="getService()">
 <!--   -->
 </a>
@@ -434,7 +656,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/Coproc
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/security/access/Permission.Action.html" title="enum in org.apache.hadoop.hbase.security.access"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/security/access/TableAuthManager.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.SecureBulkLoadListener.html" title="class in org.apache.hadoop.hbase.security.access"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html" target="_top">Frames</a></li>
@@ -458,7 +680,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/Coproc
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.protobuf.generated.SecureBulkLoadProtos.SecureBulkLoadService">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

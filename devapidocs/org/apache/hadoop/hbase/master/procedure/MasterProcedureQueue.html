@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.WALStoreLeaseRecovery.html" title="class in org.apache.hadoop.hbase.master.procedure"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureUtil.html" title="class in org.apache.hadoop.hbase.master.procedure"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.AbstractRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -123,6 +123,106 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedu
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.AbstractRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.AbstractRunQueue</a></strong></code>
+<div class="block">Base abstract class for RunQueue implementations.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.ServerRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.ServerRunQueue</a></strong></code>
+<div class="block">Run Queue for Server procedures.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.TableRunQueue</a></strong></code>
+<div class="block">Run Queue for a Table.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#DEFAULT_SERVER_PRIORITY">DEFAULT_SERVER_PRIORITY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantLock</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#lock">lock</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#lockManager">lockManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#metaTablePriority">metaTablePriority</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#queueSize">queueSize</a></strong></code>
+<div class="block">Keeps count across server and table queues.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureFairRunQueues.html" title="class in org.apache.hadoop.hbase.procedure2">ProcedureFairRunQueues</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#serverFairQ">serverFairQ</a></strong></code>
+<div class="block">Rely on basic fair q.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#sysTablePriority">sysTablePriority</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureFairRunQueues.html" title="class in org.apache.hadoop.hbase.procedure2">ProcedureFairRunQueues</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#tableFairQ">tableFairQ</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#userTablePriority">userTablePriority</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html?is-external=true" title="class or interface in java.util.concurrent.locks">Condition</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#waitCond">waitCond</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -176,6 +276,38 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedu
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#completionCleanup(org.apache.hadoop.hbase.procedure2.Procedure)">completionCleanup</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html" title="class in org.apache.hadoop.hbase.procedure2">Procedure</a>&nbsp;proc)</code>
 <div class="block">The procedure in execution completed.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.ServerRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.ServerRunQueue</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#createServerRunQueue(org.apache.hadoop.hbase.master.procedure.ServerProcedureInterface)">createServerRunQueue</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">ServerProcedureInterface</a>&nbsp;spi)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.TableRunQueue</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#createTableRunQueue(org.apache.hadoop.hbase.TableName)">createTableRunQueue</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#doPoll(org.apache.hadoop.hbase.master.procedure.MasterProcedureQueue.RunQueue)">doPoll</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a>&nbsp;rq)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.ServerRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.ServerRunQueue</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#getRunQueue(org.apache.hadoop.hbase.ServerName)">getRunQueue</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.TableRunQueue</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#getRunQueue(org.apache.hadoop.hbase.TableName)">getRunQueue</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#getRunQueueOrCreate(org.apache.hadoop.hbase.procedure2.Procedure)">getRunQueueOrCreate</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html" title="class in org.apache.hadoop.hbase.procedure2">Procedure</a>&nbsp;proc)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.ServerRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.ServerRunQueue</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#getRunQueueOrCreate(org.apache.hadoop.hbase.master.procedure.ServerProcedureInterface)">getRunQueueOrCreate</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">ServerProcedureInterface</a>&nbsp;spi)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.TableRunQueue</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#getRunQueueOrCreate(org.apache.hadoop.hbase.TableName)">getRunQueueOrCreate</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
@@ -278,6 +410,121 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedu
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.61">LOG</a></pre>
+</li>
+</ul>
+<a name="tableFairQ">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableFairQ</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureFairRunQueues.html" title="class in org.apache.hadoop.hbase.procedure2">ProcedureFairRunQueues</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.64">tableFairQ</a></pre>
+</li>
+</ul>
+<a name="serverFairQ">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverFairQ</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureFairRunQueues.html" title="class in org.apache.hadoop.hbase.procedure2">ProcedureFairRunQueues</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.73">serverFairQ</a></pre>
+<div class="block">Rely on basic fair q. ServerCrashProcedure will yield if meta is not assigned. This way, the
+ server that was carrying meta should rise to the top of the queue (this is how it used to
+ work when we had handlers and ServerShutdownHandler ran). TODO: special handling of servers
+ that were carrying system tables on crash; do I need to have these servers have priority?
+
+ <p>Apart from the special-casing of meta and system tables, fairq is what we want</div>
+</li>
+</ul>
+<a name="lock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lock</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantLock</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.75">lock</a></pre>
+</li>
+</ul>
+<a name="waitCond">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitCond</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html?is-external=true" title="class or interface in java.util.concurrent.locks">Condition</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.76">waitCond</a></pre>
+</li>
+</ul>
+<a name="lockManager">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lockManager</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.77">lockManager</a></pre>
+</li>
+</ul>
+<a name="metaTablePriority">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>metaTablePriority</h4>
+<pre>private final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.79">metaTablePriority</a></pre>
+</li>
+</ul>
+<a name="userTablePriority">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>userTablePriority</h4>
+<pre>private final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.80">userTablePriority</a></pre>
+</li>
+</ul>
+<a name="sysTablePriority">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sysTablePriority</h4>
+<pre>private final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.81">sysTablePriority</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_SERVER_PRIORITY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_SERVER_PRIORITY</h4>
+<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.82">DEFAULT_SERVER_PRIORITY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.master.procedure.MasterProcedureQueue.DEFAULT_SERVER_PRIORITY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="queueSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>queueSize</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.87">queueSize</a></pre>
+<div class="block">Keeps count across server and table queues.</div>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -363,6 +610,15 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedu
 <dt><span class="strong">Returns:</span></dt><dd>the Procedure ID to execute, or null if nothing present.</dd></dl>
 </li>
 </ul>
+<a name="doPoll(org.apache.hadoop.hbase.master.procedure.MasterProcedureQueue.RunQueue)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doPoll</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.156">doPoll</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a>&nbsp;rq)</pre>
+</li>
+</ul>
 <a name="signalAll()">
 <!--   -->
 </a>
@@ -436,6 +692,69 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedu
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureRunnableSet.html#completionCleanup(org.apache.hadoop.hbase.procedure2.Procedure)">completionCleanup</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureRunnableSet.html" title="interface in org.apache.hadoop.hbase.procedure2">ProcedureRunnableSet</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>proc</code> - the Procedure that completed the execution.</dd></dl>
+</li>
+</ul>
+<a name="getRunQueueOrCreate(org.apache.hadoop.hbase.procedure2.Procedure)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRunQueueOrCreate</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.RunQueue.html" title="interface in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.RunQueue</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.230">getRunQueueOrCreate</a>(<a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html" title="class in org.apache.hadoop.hbase.procedure2">Procedure</a>&nbsp;proc)</pre>
+</li>
+</ul>
+<a name="getRunQueueOrCreate(org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRunQueueOrCreate</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.TableRunQueue</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.245">getRunQueueOrCreate</a>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</pre>
+</li>
+</ul>
+<a name="getRunQueueOrCreate(org.apache.hadoop.hbase.master.procedure.ServerProcedureInterface)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRunQueueOrCreate</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.ServerRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.ServerRunQueue</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.251">getRunQueueOrCreate</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">ServerProcedureInterface</a>&nbsp;spi)</pre>
+</li>
+</ul>
+<a name="createTableRunQueue(org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTableRunQueue</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.TableRunQueue</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.257">createTableRunQueue</a>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</pre>
+</li>
+</ul>
+<a name="createServerRunQueue(org.apache.hadoop.hbase.master.procedure.ServerProcedureInterface)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createServerRunQueue</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.ServerRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.ServerRunQueue</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.267">createServerRunQueue</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">ServerProcedureInterface</a>&nbsp;spi)</pre>
+</li>
+</ul>
+<a name="getRunQueue(org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRunQueue</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.TableRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.TableRunQueue</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.271">getRunQueue</a>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table)</pre>
+</li>
+</ul>
+<a name="getRunQueue(org.apache.hadoop.hbase.ServerName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRunQueue</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.ServerRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureQueue.ServerRunQueue</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html#line.275">getRunQueue</a>(<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)</pre>
 </li>
 </ul>
 <a name="tryAcquireTableExclusiveLock(org.apache.hadoop.hbase.TableName, java.lang.String)">
@@ -577,7 +896,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedu
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.WALStoreLeaseRecovery.html" title="class in org.apache.hadoop.hbase.master.procedure"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureUtil.html" title="class in org.apache.hadoop.hbase.master.procedure"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.AbstractRunQueue.html" title="class in org.apache.hadoop.hbase.master.procedure"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/master/procedure/MasterProcedureQueue.html" target="_top">Frames</a></li>
@@ -601,14 +920,14 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedu
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

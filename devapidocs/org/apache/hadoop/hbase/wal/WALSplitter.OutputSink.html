@@ -94,6 +94,10 @@
 <ul class="blockList">
 <li class="blockList">
 <dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/RegionReplicaReplicationEndpoint.RegionReplicaOutputSink.html" title="class in org.apache.hadoop.hbase.replication.regionserver">RegionReplicaReplicationEndpoint.RegionReplicaOutputSink</a>, <a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.LogRecoveredEditsOutputSink.html" title="class in org.apache.hadoop.hbase.wal">WALSplitter.LogRecoveredEditsOutputSink</a>, <a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.LogReplayOutputSink.html" title="class in org.apache.hadoop.hbase.wal">WALSplitter.LogReplayOutputSink</a></dd>
+</dl>
+<dl>
 <dt>Enclosing class:</dt>
 <dd><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.html" title="class in org.apache.hadoop.hbase.wal">WALSplitter</a></dd>
 </dl>
@@ -228,13 +232,35 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#getNumberOfRecoveredRegions()">getNumberOfRecoveredRegions</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#getNumOpenWriters()">getNumOpenWriters</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>abstract <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#getOutputCounts()">getOutputCounts</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#getRegionMaximumEditLogSeqNum(byte[])">getRegionMaximumEditLogSeqNum</a></strong>(byte[]&nbsp;region)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#getSkippedEdits()">getSkippedEdits</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#setReporter(org.apache.hadoop.hbase.util.CancelableProgressable)">setReporter</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a>&nbsp;reporter)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#startWriterThreads()">startWriterThreads</a></strong>()</code>
 <div class="block">Start the threads that will pump data from the entryBuffers to the output files.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#updateRegionMaximumEditLogSeqNum(org.apache.hadoop.hbase.wal.WAL.Entry)">updateRegionMaximumEditLogSeqNum</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Entry.html" title="class in org.apache.hadoop.hbase.wal">WAL.Entry</a>&nbsp;entry)</code>
+<div class="block">Update region's maximum edit log SeqNum.</div>
 </td>
 </tr>
 </table>
@@ -394,6 +420,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="setReporter(org.apache.hadoop.hbase.util.CancelableProgressable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReporter</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#line.1155">setReporter</a>(<a href="../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a>&nbsp;reporter)</pre>
+</li>
+</ul>
 <a name="startWriterThreads()">
 <!--   -->
 </a>
@@ -402,6 +437,44 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>startWriterThreads</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#line.1162">startWriterThreads</a>()</pre>
 <div class="block">Start the threads that will pump data from the entryBuffers to the output files.</div>
+</li>
+</ul>
+<a name="updateRegionMaximumEditLogSeqNum(org.apache.hadoop.hbase.wal.WAL.Entry)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateRegionMaximumEditLogSeqNum</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#line.1174">updateRegionMaximumEditLogSeqNum</a>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Entry.html" title="class in org.apache.hadoop.hbase.wal">WAL.Entry</a>&nbsp;entry)</pre>
+<div class="block">Update region's maximum edit log SeqNum.</div>
+</li>
+</ul>
+<a name="getRegionMaximumEditLogSeqNum(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRegionMaximumEditLogSeqNum</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#line.1185">getRegionMaximumEditLogSeqNum</a>(byte[]&nbsp;region)</pre>
+</li>
+</ul>
+<a name="getNumOpenWriters()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNumOpenWriters</h4>
+<pre>int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#line.1192">getNumOpenWriters</a>()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the number of currently opened writers</dd></dl>
+</li>
+</ul>
+<a name="getSkippedEdits()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSkippedEdits</h4>
+<pre>long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALSplitter.OutputSink.html#line.1196">getSkippedEdits</a>()</pre>
 </li>
 </ul>
 <a name="finishWriting(boolean)">

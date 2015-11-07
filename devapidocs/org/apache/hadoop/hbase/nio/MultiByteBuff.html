@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -114,6 +114,49 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#curItem">curItem</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#curItemIndex">curItemIndex</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#itemBeginPos">itemBeginPos</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#items">items</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#limit">limit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#limitedItemIndex">limitedItemIndex</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#markedItemIndex">markedItemIndex</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -123,10 +166,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#MultiByteBuff(java.nio.ByteBuffer...)">MultiByteBuff</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>...&nbsp;items)</code>&nbsp;</td>
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#MultiByteBuff(java.nio.ByteBuffer...)">MultiByteBuff</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>...&nbsp;items)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private </code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#MultiByteBuff(java.nio.ByteBuffer[],%20int[],%20int,%20int,%20int,%20int)">MultiByteBuff</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>[]&nbsp;items,
+                          int[]&nbsp;itemBeginPos,
+                          int&nbsp;limit,
+                          int&nbsp;limitedIndex,
+                          int&nbsp;curItemIndex,
+                          int&nbsp;markedIndex)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -242,10 +296,28 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getInt(int,%20int)">getInt</a></strong>(int&nbsp;index,
+            int&nbsp;itemIndex)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getIntAfterPosition(int)">getIntAfterPosition</a></strong>(int&nbsp;offset)</code>
 <div class="block">Fetches the int value at the given offset from current position.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getItemByteBuffer(org.apache.hadoop.hbase.nio.ByteBuff,%20int)">getItemByteBuffer</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a>&nbsp;buf,
+                                  int&nbsp;index)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getItemIndex(int)">getItemIndex</a></strong>(int&nbsp;elemIndex)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getItemIndexFromCurItemIndex(int)">getItemIndexFromCurItemIndex</a></strong>(int&nbsp;elemIndex)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
@@ -260,22 +332,32 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getLong(int,%20int)">getLong</a></strong>(int&nbsp;index,
+              int&nbsp;itemIndex)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getLongAfterPosition(int)">getLongAfterPosition</a></strong>(int&nbsp;offset)</code>
 <div class="block">Fetches the long value at the given offset from current position.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>short</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getShort()">getShort</a></strong>()</code>
 <div class="block">Returns the short value at the current position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>short</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getShort(int)">getShort</a></strong>(int&nbsp;index)</code>
 <div class="block">Fetches the short at the given index.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private short</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#getShort(int,%20int)">getShort</a></strong>(int&nbsp;index,
+                int&nbsp;itemIndex)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>short</code></td>
@@ -298,6 +380,22 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#int0(int)">int0</a></strong>(int&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#int1(int)">int1</a></strong>(int&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#int2(int)">int2</a></strong>(int&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#int3(int)">int3</a></strong>(int&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#limit()">limit</a></strong>()</code>
 <div class="block">Returns the limit of this MBB</div>
@@ -308,6 +406,38 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#limit(int)">limit</a></strong>(int&nbsp;limit)</code>
 <div class="block">Marks the limit of this MBB.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#long0(long)">long0</a></strong>(long&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#long1(long)">long1</a></strong>(long&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#long2(long)">long2</a></strong>(long&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#long3(long)">long3</a></strong>(long&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#long4(long)">long4</a></strong>(long&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#long5(long)">long5</a></strong>(long&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#long6(long)">long6</a></strong>(long&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html#long7(long)">long7</a></strong>(long&nbsp;x)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/MultiByteBuff.html" title="class in org.apache.hadoop.hbase.nio">MultiByteBuff</a></code></td>
@@ -442,6 +572,77 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="items">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>items</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>[] <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.40">items</a></pre>
+</li>
+</ul>
+<a name="curItem">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>curItem</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.42">curItem</a></pre>
+</li>
+</ul>
+<a name="curItemIndex">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>curItemIndex</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.44">curItemIndex</a></pre>
+</li>
+</ul>
+<a name="limit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>limit</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.46">limit</a></pre>
+</li>
+</ul>
+<a name="limitedItemIndex">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>limitedItemIndex</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.47">limitedItemIndex</a></pre>
+</li>
+</ul>
+<a name="markedItemIndex">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>markedItemIndex</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.48">markedItemIndex</a></pre>
+</li>
+</ul>
+<a name="itemBeginPos">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>itemBeginPos</h4>
+<pre>private final&nbsp;int[] <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.49">itemBeginPos</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -451,10 +652,24 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <a name="MultiByteBuff(java.nio.ByteBuffer...)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>MultiByteBuff</h4>
 <pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.51">MultiByteBuff</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>...&nbsp;items)</pre>
+</li>
+</ul>
+<a name="MultiByteBuff(java.nio.ByteBuffer[], int[], int, int, int, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>MultiByteBuff</h4>
+<pre>private&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.74">MultiByteBuff</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>[]&nbsp;items,
+             int[]&nbsp;itemBeginPos,
+             int&nbsp;limit,
+             int&nbsp;limitedIndex,
+             int&nbsp;curItemIndex,
+             int&nbsp;markedIndex)</pre>
 </li>
 </ul>
 </li>
@@ -554,6 +769,24 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <dt><span class="strong">Returns:</span></dt><dd>the byte value at the given index.</dd></dl>
 </li>
 </ul>
+<a name="getItemIndex(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getItemIndex</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.145">getItemIndex</a>(int&nbsp;elemIndex)</pre>
+</li>
+</ul>
+<a name="getItemIndexFromCurItemIndex(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getItemIndexFromCurItemIndex</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.160">getItemIndexFromCurItemIndex</a>(int&nbsp;elemIndex)</pre>
+</li>
+</ul>
 <a name="getInt(int)">
 <!--   -->
 </a>
@@ -614,6 +847,36 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html#getShortAfterPosition(int)">getShortAfterPosition</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>the short value at the given index.</dd></dl>
+</li>
+</ul>
+<a name="getInt(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInt</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.246">getInt</a>(int&nbsp;index,
+         int&nbsp;itemIndex)</pre>
+</li>
+</ul>
+<a name="getShort(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getShort</h4>
+<pre>private&nbsp;short&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.271">getShort</a>(int&nbsp;index,
+             int&nbsp;itemIndex)</pre>
+</li>
+</ul>
+<a name="getLong(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLong</h4>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.296">getLong</a>(int&nbsp;index,
+           int&nbsp;itemIndex)</pre>
 </li>
 </ul>
 <a name="getLong(int)">
@@ -967,6 +1230,16 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <dt><span class="strong">Parameters:</span></dt><dd><code>offset</code> - the position in this MBB to which the copy should happen</dd><dd><code>src</code> - the src MBB</dd><dd><code>srcOffset</code> - the offset in the src MBB from where the elements should be read</dd><dd><code>length</code> - the length upto which the copy should happen</dd></dl>
 </li>
 </ul>
+<a name="getItemByteBuffer(org.apache.hadoop.hbase.nio.ByteBuff, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getItemByteBuffer</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.781">getItemByteBuffer</a>(<a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a>&nbsp;buf,
+                           int&nbsp;index)</pre>
+</li>
+</ul>
 <a name="putInt(int)">
 <!--   -->
 </a>
@@ -980,6 +1253,42 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html#putInt(int)">putInt</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>val</code> - Int value to write</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this object</dd></dl>
+</li>
+</ul>
+<a name="int3(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>int3</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.808">int3</a>(int&nbsp;x)</pre>
+</li>
+</ul>
+<a name="int2(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>int2</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.812">int2</a>(int&nbsp;x)</pre>
+</li>
+</ul>
+<a name="int1(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>int1</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.816">int1</a>(int&nbsp;x)</pre>
+</li>
+</ul>
+<a name="int0(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>int0</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.820">int0</a>(int&nbsp;x)</pre>
 </li>
 </ul>
 <a name="put(byte[])">
@@ -1027,6 +1336,78 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html#putLong(long)">putLong</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>val</code> - Long value to write</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this object</dd></dl>
+</li>
+</ul>
+<a name="long7(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>long7</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.881">long7</a>(long&nbsp;x)</pre>
+</li>
+</ul>
+<a name="long6(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>long6</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.885">long6</a>(long&nbsp;x)</pre>
+</li>
+</ul>
+<a name="long5(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>long5</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.889">long5</a>(long&nbsp;x)</pre>
+</li>
+</ul>
+<a name="long4(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>long4</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.893">long4</a>(long&nbsp;x)</pre>
+</li>
+</ul>
+<a name="long3(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>long3</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.897">long3</a>(long&nbsp;x)</pre>
+</li>
+</ul>
+<a name="long2(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>long2</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.901">long2</a>(long&nbsp;x)</pre>
+</li>
+</ul>
+<a name="long1(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>long1</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.905">long1</a>(long&nbsp;x)</pre>
+</li>
+</ul>
+<a name="long0(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>long0</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/MultiByteBuff.html#line.909">long0</a>(long&nbsp;x)</pre>
 </li>
 </ul>
 <a name="skip(int)">
@@ -1212,13 +1593,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

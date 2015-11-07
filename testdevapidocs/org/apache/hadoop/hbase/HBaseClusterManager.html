@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.RemoteShell.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.CommandProvider.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/HBaseClusterManager.html" target="_top">Frames</a></li>
@@ -100,13 +100,14 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd>org.apache.hadoop.conf.Configurable</dd>
+<dd>org.apache.hadoop.conf.Configurable, <a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></dd>
 </dl>
 <hr>
 <br>
 <pre>@InterfaceAudience.Private
 public class <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.46">HBaseClusterManager</a>
-extends org.apache.hadoop.conf.Configured</pre>
+extends org.apache.hadoop.conf.Configured
+implements <a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></pre>
 <div class="block">A default cluster manager for HBase. Uses SSH, and hbase shell scripts
  to manage the cluster. Assumes Unix-like commands are available like 'ps',
  'kill', etc. Also assumes the user running the test has enough "power" to start & stop
@@ -131,9 +132,21 @@ extends org.apache.hadoop.conf.Configured</pre>
 <th class="colLast" scope="col">Class and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><strong>org.apache.hadoop.hbase.ClusterManager.ServiceType</strong></code>
-<div class="block">Type of the service daemon</div>
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.CommandProvider.html" title="class in org.apache.hadoop.hbase">HBaseClusterManager.CommandProvider</a></strong></code>
+<div class="block">Provides command strings for services to be executed by Shell.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.HadoopShellCommandProvider.html" title="class in org.apache.hadoop.hbase">HBaseClusterManager.HadoopShellCommandProvider</a></strong></code>
+<div class="block">CommandProvider to manage the service using sbin/hadoop-* scripts.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.HBaseShellCommandProvider.html" title="class in org.apache.hadoop.hbase">HBaseClusterManager.HBaseShellCommandProvider</a></strong></code>
+<div class="block">CommandProvider to manage the service using bin/hbase-* scripts</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -142,7 +155,20 @@ extends org.apache.hadoop.conf.Configured</pre>
 <div class="block">Executes commands over SSH</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.ZookeeperShellCommandProvider.html" title="class in org.apache.hadoop.hbase">HBaseClusterManager.ZookeeperShellCommandProvider</a></strong></code>
+<div class="block">CommandProvider to manage the service using bin/zk* scripts.</div>
+</td>
+</tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.ClusterManager">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></h3>
+<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a></code></li>
+</ul>
 </li>
 </ul>
 <!-- =========== FIELD SUMMARY =========== -->
@@ -158,12 +184,58 @@ extends org.apache.hadoop.conf.Configured</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#DEFAULT_RETRY_ATTEMPTS">DEFAULT_RETRY_ATTEMPTS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#DEFAULT_RETRY_SLEEP_INTERVAL">DEFAULT_RETRY_SLEEP_INTERVAL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#DEFAULT_TUNNEL_CMD">DEFAULT_TUNNEL_CMD</a></strong></code>
+<div class="block">The command format that is used to execute the remote command.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static org.apache.commons.logging.Log</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#RETRY_ATTEMPTS_KEY">RETRY_ATTEMPTS_KEY</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#RETRY_SLEEP_INTERVAL_KEY">RETRY_SLEEP_INTERVAL_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.util.RetryCounterFactory</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#retryCounterFactory">retryCounterFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#SIGCONT">SIGCONT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#SIGKILL">SIGKILL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#SIGSTOP">SIGSTOP</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#sshOptions">sshOptions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#sshUserName">sshUserName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#tunnelCmd">tunnelCmd</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -198,12 +270,36 @@ extends org.apache.hadoop.conf.Configured</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.HBaseClusterManager.CommandProvider</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#getCommandProvider(org.apache.hadoop.hbase.ClusterManager.ServiceType)">getCommandProvider</a></strong>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service)</code>&nbsp;</td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#exec(java.lang.String,%20org.apache.hadoop.hbase.ClusterManager.ServiceType,%20org.apache.hadoop.hbase.HBaseClusterManager.CommandProvider.Operation)">exec</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
+        <a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
+        <a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.CommandProvider.Operation.html" title="enum in org.apache.hadoop.hbase">HBaseClusterManager.CommandProvider.Operation</a>&nbsp;op)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.util.Pair&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#exec(java.lang.String,%20org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String...)">exec</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
+        <a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
+        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;cmd)</code>
+<div class="block">Execute the given command on the host using SSH</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.util.Pair&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#execWithRetries(java.lang.String,%20org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String...)">execWithRetries</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
+                              <a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;cmd)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.CommandProvider.html" title="class in org.apache.hadoop.hbase">HBaseClusterManager.CommandProvider</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#getCommandProvider(org.apache.hadoop.hbase.ClusterManager.ServiceType)">getCommandProvider</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#getServiceUser(org.apache.hadoop.hbase.ClusterManager.ServiceType)">getServiceUser</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#isRunning(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">isRunning</a></strong>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#isRunning(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">isRunning</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
                   int&nbsp;port)</code>
 <div class="block">Returns whether the service is running on the remote host.</div>
@@ -211,7 +307,7 @@ extends org.apache.hadoop.conf.Configured</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#kill(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">kill</a></strong>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#kill(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">kill</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
         int&nbsp;port)</code>
 <div class="block">Kills the service running on the given host</div>
@@ -219,7 +315,7 @@ extends org.apache.hadoop.conf.Configured</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#restart(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">restart</a></strong>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#restart(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">restart</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
               int&nbsp;port)</code>
 <div class="block">Restart the service on the given host</div>
@@ -227,41 +323,48 @@ extends org.apache.hadoop.conf.Configured</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#resume(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">resume</a></strong>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#resume(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">resume</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
             int&nbsp;port)</code>
 <div class="block">Resumes the services running on the given host</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#setConf(org.apache.hadoop.conf.Configuration)">setConf</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
+<td class="colFirst"><code>private &lt;E extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt;&nbsp;<br>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#retryOrThrow(org.apache.hadoop.hbase.util.RetryCounter,%20E,%20java.lang.String,%20java.lang.String[])">retryOrThrow</a></strong>(org.apache.hadoop.hbase.util.RetryCounter&nbsp;retryCounter,
+                        E&nbsp;ex,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;cmd)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#signal(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20java.lang.String)">signal</a></strong>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
-            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;signal,
-            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#setConf(org.apache.hadoop.conf.Configuration)">setConf</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#start(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">start</a></strong>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#signal(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20java.lang.String)">signal</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;signal,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#start(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">start</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
           int&nbsp;port)</code>
 <div class="block">Start the service on the given host</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#stop(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">stop</a></strong>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#stop(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">stop</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
         int&nbsp;port)</code>
 <div class="block">Stop the service on the given host</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#suspend(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">suspend</a></strong>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.html#suspend(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">suspend</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
               int&nbsp;port)</code>
 <div class="block">Suspends the service running on the given host</div>
@@ -303,6 +406,36 @@ extends org.apache.hadoop.conf.Configured</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="SIGKILL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SIGKILL</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.47">SIGKILL</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HBaseClusterManager.SIGKILL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SIGSTOP">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SIGSTOP</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.48">SIGSTOP</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HBaseClusterManager.SIGSTOP">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SIGCONT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SIGCONT</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.49">SIGCONT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HBaseClusterManager.SIGCONT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="LOG">
 <!--   -->
 </a>
@@ -310,6 +443,86 @@ extends org.apache.hadoop.conf.Configured</pre>
 <li class="blockList">
 <h4>LOG</h4>
 <pre>protected static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.51">LOG</a></pre>
+</li>
+</ul>
+<a name="sshUserName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sshUserName</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.52">sshUserName</a></pre>
+</li>
+</ul>
+<a name="sshOptions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sshOptions</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.53">sshOptions</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_TUNNEL_CMD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_TUNNEL_CMD</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.60">DEFAULT_TUNNEL_CMD</a></pre>
+<div class="block">The command format that is used to execute the remote command. Arguments:
+ 1 SSH options, 2 user name , 3 "@" if username is set, 4 host,
+ 5 original command, 6 service user.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HBaseClusterManager.DEFAULT_TUNNEL_CMD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="tunnelCmd">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tunnelCmd</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.62">tunnelCmd</a></pre>
+</li>
+</ul>
+<a name="RETRY_ATTEMPTS_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RETRY_ATTEMPTS_KEY</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.64">RETRY_ATTEMPTS_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HBaseClusterManager.RETRY_ATTEMPTS_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_RETRY_ATTEMPTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_RETRY_ATTEMPTS</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.65">DEFAULT_RETRY_ATTEMPTS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HBaseClusterManager.DEFAULT_RETRY_ATTEMPTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="RETRY_SLEEP_INTERVAL_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RETRY_SLEEP_INTERVAL_KEY</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.67">RETRY_SLEEP_INTERVAL_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HBaseClusterManager.RETRY_SLEEP_INTERVAL_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_RETRY_SLEEP_INTERVAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_RETRY_SLEEP_INTERVAL</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.68">DEFAULT_RETRY_SLEEP_INTERVAL</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HBaseClusterManager.DEFAULT_RETRY_SLEEP_INTERVAL">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="retryCounterFactory">
@@ -361,14 +574,84 @@ extends org.apache.hadoop.conf.Configured</pre>
 </dl>
 </li>
 </ul>
+<a name="getServiceUser(org.apache.hadoop.hbase.ClusterManager.ServiceType)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getServiceUser</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.98">getServiceUser</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service)</pre>
+</li>
+</ul>
 <a name="getCommandProvider(org.apache.hadoop.hbase.ClusterManager.ServiceType)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getCommandProvider</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.HBaseClusterManager.CommandProvider&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.280">getCommandProvider</a>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service)
-                                                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>protected&nbsp;<a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.CommandProvider.html" title="class in org.apache.hadoop.hbase">HBaseClusterManager.CommandProvider</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.280">getCommandProvider</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service)
+                                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="exec(java.lang.String, org.apache.hadoop.hbase.ClusterManager.ServiceType, java.lang.String...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exec</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.util.Pair&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.296">exec</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
+                                                     <a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
+                                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;cmd)
+                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Execute the given command on the host using SSH</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>pair of exit code and command output</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if something goes wrong.</dd></dl>
+</li>
+</ul>
+<a name="execWithRetries(java.lang.String, org.apache.hadoop.hbase.ClusterManager.ServiceType, java.lang.String...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>execWithRetries</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.util.Pair&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.317">execWithRetries</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
+                                                                <a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
+                                                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;cmd)
+                                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="retryOrThrow(org.apache.hadoop.hbase.util.RetryCounter,java.lang.Exception,java.lang.String,java.lang.String[])">
+<!--   -->
+</a><a name="retryOrThrow(org.apache.hadoop.hbase.util.RetryCounter, E, java.lang.String, java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>retryOrThrow</h4>
+<pre>private&nbsp;&lt;E extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt;&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.335">retryOrThrow</a>(org.apache.hadoop.hbase.util.RetryCounter&nbsp;retryCounter,
+                                      E&nbsp;ex,
+                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
+                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;cmd)
+                   throws E extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>E extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="exec(java.lang.String, org.apache.hadoop.hbase.ClusterManager.ServiceType, org.apache.hadoop.hbase.HBaseClusterManager.CommandProvider.Operation)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exec</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.346">exec</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
+        <a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
+        <a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.CommandProvider.Operation.html" title="enum in org.apache.hadoop.hbase">HBaseClusterManager.CommandProvider.Operation</a>&nbsp;op)
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -379,12 +662,16 @@ extends org.apache.hadoop.conf.Configured</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>start</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.351">start</a>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.351">start</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
          int&nbsp;port)
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#start(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">ClusterManager</a></code></strong></div>
 <div class="block">Start the service on the given host</div>
-<dl><dt><span class="strong">Throws:</span></dt>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#start(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">start</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -394,12 +681,16 @@ extends org.apache.hadoop.conf.Configured</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>stop</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.356">stop</a>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.356">stop</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
         int&nbsp;port)
           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#stop(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">ClusterManager</a></code></strong></div>
 <div class="block">Stop the service on the given host</div>
-<dl><dt><span class="strong">Throws:</span></dt>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#stop(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">stop</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -409,12 +700,16 @@ extends org.apache.hadoop.conf.Configured</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>restart</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.361">restart</a>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.361">restart</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
            int&nbsp;port)
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#restart(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">ClusterManager</a></code></strong></div>
 <div class="block">Restart the service on the given host</div>
-<dl><dt><span class="strong">Throws:</span></dt>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#restart(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">restart</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -424,7 +719,7 @@ extends org.apache.hadoop.conf.Configured</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>signal</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.365">signal</a>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.365">signal</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;signal,
           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname)
             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -438,13 +733,17 @@ extends org.apache.hadoop.conf.Configured</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isRunning</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.370">isRunning</a>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.370">isRunning</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
                 int&nbsp;port)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#isRunning(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">ClusterManager</a></code></strong></div>
 <div class="block">Returns whether the service is running on the remote host. This only checks whether the
  service still has a pid.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#isRunning(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">isRunning</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -454,12 +753,16 @@ extends org.apache.hadoop.conf.Configured</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>kill</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.377">kill</a>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.377">kill</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
         int&nbsp;port)
           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#kill(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">ClusterManager</a></code></strong></div>
 <div class="block">Kills the service running on the given host</div>
-<dl><dt><span class="strong">Throws:</span></dt>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#kill(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">kill</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -469,12 +772,16 @@ extends org.apache.hadoop.conf.Configured</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>suspend</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.382">suspend</a>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.382">suspend</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
            int&nbsp;port)
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#suspend(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">ClusterManager</a></code></strong></div>
 <div class="block">Suspends the service running on the given host</div>
-<dl><dt><span class="strong">Throws:</span></dt>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#suspend(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">suspend</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -484,12 +791,16 @@ extends org.apache.hadoop.conf.Configured</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>resume</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.387">resume</a>(org.apache.hadoop.hbase.ClusterManager.ServiceType&nbsp;service,
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseClusterManager.html#line.387">resume</a>(<a href="../../../../org/apache/hadoop/hbase/ClusterManager.ServiceType.html" title="enum in org.apache.hadoop.hbase">ClusterManager.ServiceType</a>&nbsp;service,
           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
           int&nbsp;port)
             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#resume(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">ClusterManager</a></code></strong></div>
 <div class="block">Resumes the services running on the given host</div>
-<dl><dt><span class="strong">Throws:</span></dt>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html#resume(org.apache.hadoop.hbase.ClusterManager.ServiceType,%20java.lang.String,%20int)">resume</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ClusterManager.html" title="interface in org.apache.hadoop.hbase">ClusterManager</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -520,7 +831,7 @@ extends org.apache.hadoop.conf.Configured</pre>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.RemoteShell.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/HBaseClusterManager.CommandProvider.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/HBaseClusterManager.html" target="_top">Frames</a></li>

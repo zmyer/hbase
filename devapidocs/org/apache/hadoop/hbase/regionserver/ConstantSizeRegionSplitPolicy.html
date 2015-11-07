@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactSplitThread.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactSplitThread.Rejection.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultHeapMemoryTuner.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html" target="_top">Frames</a></li>
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.RegionSplitPolicy">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -135,6 +135,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplit
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html#desiredMaxFileSize">desiredMaxFileSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html#RANDOM">RANDOM</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.RegionSplitPolicy">
 <!--   -->
@@ -181,6 +196,10 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplit
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html#getDesiredMaxFileSize()">getDesiredMaxFileSize</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html#shouldSplit()">shouldSplit</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -190,7 +209,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplit
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">RegionSplitPolicy</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#create(org.apache.hadoop.hbase.regionserver.HRegion,%20org.apache.hadoop.conf.Configuration)">create</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#getSplitPoint()">getSplitPoint</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#getSplitPolicyClass(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.conf.Configuration)">getSplitPolicyClass</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#skipStoreFileRangeCheck()">skipStoreFileRangeCheck</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#skipStoreFileRangeCheck(java.lang.String)">skipStoreFileRangeCheck</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#create(org.apache.hadoop.hbase.regionserver.HRegion,%20org.apache.hadoop.conf.Configuration)">create</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#getSplitPoint()">getSplitPoint</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#getSplitPolicyClass(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.conf.Configuration)">getSplitPolicyClass</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#skipStoreFileRangeCheck(java.lang.String)">skipStoreFileRangeCheck</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.conf.Configured">
@@ -214,6 +233,32 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplit
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="RANDOM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RANDOM</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html#line.39">RANDOM</a></pre>
+</li>
+</ul>
+<a name="desiredMaxFileSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>desiredMaxFileSize</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html#line.41">desiredMaxFileSize</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -256,7 +301,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplit
 <a name="shouldSplit()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>shouldSplit</h4>
 <pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html#line.60">shouldSplit</a>()</pre>
@@ -264,6 +309,15 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplit
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html#shouldSplit()">shouldSplit</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">RegionSplitPolicy</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>true if the specified region should be split.</dd></dl>
+</li>
+</ul>
+<a name="getDesiredMaxFileSize()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getDesiredMaxFileSize</h4>
+<pre>long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html#line.80">getDesiredMaxFileSize</a>()</pre>
 </li>
 </ul>
 </li>
@@ -292,8 +346,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplit
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactSplitThread.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactSplitThread.Rejection.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultHeapMemoryTuner.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html" target="_top">Frames</a></li>
@@ -318,13 +372,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplit
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.RegionSplitPolicy">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

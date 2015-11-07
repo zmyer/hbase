@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterBase.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterBase.WroteKeysTracker.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.HBaseWriterThreadWithACL.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.util.MultiThreadedWriter">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -158,6 +158,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#userOwner">userOwner</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.util.MultiThreadedWriter">
 <!--   -->
@@ -218,6 +233,14 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#createWriterThreads(int)">createWriterThreads</a></strong>(int&nbsp;numThreads)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#recordFailure(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Put,%20long,%20long,%20java.io.IOException)">recordFailure</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
+                          org.apache.hadoop.hbase.client.Put&nbsp;put,
+                          long&nbsp;keyBase,
+                          long&nbsp;start,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#start(long,%20long,%20int)">start</a></strong>(long&nbsp;startKey,
           long&nbsp;endKey,
@@ -260,6 +283,32 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.42">LOG</a></pre>
+</li>
+</ul>
+<a name="userOwner">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>userOwner</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.43">userOwner</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -309,7 +358,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <a name="createWriterThreads(int)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>createWriterThreads</h4>
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.57">createWriterThreads</a>(int&nbsp;numThreads)
@@ -319,6 +368,19 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter.html#createWriterThreads(int)">createWriterThreads</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter.html" title="class in org.apache.hadoop.hbase.util">MultiThreadedWriter</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="recordFailure(org.apache.hadoop.hbase.client.Table, org.apache.hadoop.hbase.client.Put, long, long, java.io.IOException)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>recordFailure</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.140">recordFailure</a>(org.apache.hadoop.hbase.client.Table&nbsp;table,
+                 org.apache.hadoop.hbase.client.Put&nbsp;put,
+                 long&nbsp;keyBase,
+                 long&nbsp;start,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&nbsp;e)</pre>
 </li>
 </ul>
 </li>
@@ -347,7 +409,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterBase.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterBase.WroteKeysTracker.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.HBaseWriterThreadWithACL.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -373,13 +435,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.util.MultiThreadedWriter">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

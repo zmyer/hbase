@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -107,6 +107,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#loadPath">loadPath</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -137,6 +164,23 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#bulkLoadHFile(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20byte[][][],%20int)">bulkLoadHFile</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                          byte[]&nbsp;family,
+                          byte[]&nbsp;qualifier,
+                          byte[][][]&nbsp;hfileRanges,
+                          int&nbsp;numRowsPerRange)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#createHFile(org.apache.hadoop.fs.Path,%20byte[],%20byte[],%20byte[],%20byte[],%20int)">createHFile</a></strong>(org.apache.hadoop.fs.Path&nbsp;path,
+                      byte[]&nbsp;family,
+                      byte[]&nbsp;qualifier,
+                      byte[]&nbsp;startKey,
+                      byte[]&nbsp;endKey,
+                      int&nbsp;numRows)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#setPermission(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.permission.FsPermission)">setPermission</a></strong>(org.apache.hadoop.fs.Path&nbsp;dir,
                           org.apache.hadoop.fs.permission.FsPermission&nbsp;perm)</code>&nbsp;</td>
@@ -157,6 +201,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private final&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#line.1039">fs</a></pre>
+</li>
+</ul>
+<a name="loadPath">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loadPath</h4>
+<pre>private final&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#line.1040">loadPath</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#line.1041">conf</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -183,6 +262,39 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="createHFile(org.apache.hadoop.fs.Path, byte[], byte[], byte[], byte[], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createHFile</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#line.1050">createHFile</a>(org.apache.hadoop.fs.Path&nbsp;path,
+               byte[]&nbsp;family,
+               byte[]&nbsp;qualifier,
+               byte[]&nbsp;startKey,
+               byte[]&nbsp;endKey,
+               int&nbsp;numRows)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="bulkLoadHFile(org.apache.hadoop.hbase.TableName, byte[], byte[], byte[][][], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bulkLoadHFile</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestAccessController.BulkLoadHelper.html#line.1073">bulkLoadHFile</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                 byte[]&nbsp;family,
+                 byte[]&nbsp;qualifier,
+                 byte[][][]&nbsp;hfileRanges,
+                 int&nbsp;numRowsPerRange)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
 <a name="setPermission(org.apache.hadoop.fs.Path, org.apache.hadoop.fs.permission.FsPermission)">
 <!--   -->
 </a>
@@ -248,13 +360,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

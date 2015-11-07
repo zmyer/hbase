@@ -132,6 +132,17 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.Comparer.html" title="interface in org.apache.hadoop.hbase.util">Bytes.Comparer</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/util/Bytes.Comparer.html" title="type parameter in Bytes.Comparer">T</a>&gt;</strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.LexicographicalComparerHolder.html" title="class in org.apache.hadoop.hbase.util">Bytes.LexicographicalComparerHolder</a></strong></code>
+<div class="block">Provides a lexicographical comparer implementation; either a Java
+ implementation or a faster implementation based on <code>Unsafe</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.RowEndKeyComparator.html" title="class in org.apache.hadoop.hbase.util">Bytes.RowEndKeyComparator</a></strong></code>
 <div class="block">A <a href="../../../../../org/apache/hadoop/hbase/util/Bytes.ByteArrayComparator.html" title="class in org.apache.hadoop.hbase.util"><code>Bytes.ByteArrayComparator</code></a> that treats the empty array as the largest value.</div>
@@ -153,16 +164,24 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#bytes">bytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;byte[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#BYTES_COMPARATOR">BYTES_COMPARATOR</a></strong></code>
 <div class="block">Pass this to TreeMaps where byte [] are keys.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static org.apache.hadoop.io.RawComparator&lt;byte[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#BYTES_RAWCOMPARATOR">BYTES_RAWCOMPARATOR</a></strong></code>
 <div class="block">Use comparing byte arrays, byte-by-byte</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#EMPTY_BYTE_ARRAY">EMPTY_BYTE_ARRAY</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -171,57 +190,89 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static char[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#HEX_CHARS">HEX_CHARS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#length">length</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#MASK_FOR_LOWER_INT_IN_LONG">MASK_FOR_LOWER_INT_IN_LONG</a></strong></code>
 <div class="block">Mask to apply to a long to reveal the lower int only.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#offset">offset</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/security/SecureRandom.html?is-external=true" title="class or interface in java.security">SecureRandom</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#RNG">RNG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#SIZEOF_BOOLEAN">SIZEOF_BOOLEAN</a></strong></code>
 <div class="block">Size of boolean in bytes</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#SIZEOF_BYTE">SIZEOF_BYTE</a></strong></code>
 <div class="block">Size of byte in bytes</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#SIZEOF_CHAR">SIZEOF_CHAR</a></strong></code>
 <div class="block">Size of char in bytes</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#SIZEOF_DOUBLE">SIZEOF_DOUBLE</a></strong></code>
 <div class="block">Size of double in bytes</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#SIZEOF_FLOAT">SIZEOF_FLOAT</a></strong></code>
 <div class="block">Size of float in bytes</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#SIZEOF_INT">SIZEOF_INT</a></strong></code>
 <div class="block">Size of int in bytes</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#SIZEOF_LONG">SIZEOF_LONG</a></strong></code>
 <div class="block">Size of long in bytes</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#SIZEOF_SHORT">SIZEOF_SHORT</a></strong></code>
 <div class="block">Size of short in bytes</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html?is-external=true" title="class or interface in java.nio.charset">Charset</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#UTF8_CHARSET">UTF8_CHARSET</a></strong></code>
+<div class="block">When we encode strings, we always specify UTF8 encoding</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#UTF8_ENCODING">UTF8_ENCODING</a></strong></code>
+<div class="block">When we encode strings, we always specify UTF8 encoding</div>
 </td>
 </tr>
 </table>
@@ -295,6 +346,16 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#add(byte[],%20byte[],%20byte[])">add</a></strong>(byte[]&nbsp;a,
       byte[]&nbsp;b,
       byte[]&nbsp;c)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#binaryIncrementNeg(byte[],%20long)">binaryIncrementNeg</a></strong>(byte[]&nbsp;value,
+                                    long&nbsp;amount)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#binaryIncrementPos(byte[],%20long)">binaryIncrementPos</a></strong>(byte[]&nbsp;value,
+                                    long&nbsp;amount)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
@@ -434,6 +495,13 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#equals(java.lang.Object)">equals</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;right_obj)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#explainWrongLengthOrOffset(byte[],%20int,%20int,%20int)">explainWrongLengthOrOffset</a></strong>(byte[]&nbsp;bytes,
+                                                    int&nbsp;offset,
+                                                    int&nbsp;length,
+                                                    int&nbsp;expectedLength)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#findCommonPrefix(byte[],%20byte[],%20int,%20int,%20int,%20int)">findCommonPrefix</a></strong>(byte[]&nbsp;left,
                                 byte[]&nbsp;right,
@@ -442,34 +510,34 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
                                 int&nbsp;leftOffset,
                                 int&nbsp;rightOffset)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#fromHex(java.lang.String)">fromHex</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hex)</code>
 <div class="block">Create a byte array from a string of hash digits.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#get()">get</a></strong>()</code>
 <div class="block">Get the data from the Bytes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#getBytes(java.nio.ByteBuffer)">getBytes</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buf)</code>
 <div class="block">Returns a new byte array, copied from the given <code>buf</code>,
  from the position (inclusive) to the limit (exclusive).</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#getLength()">getLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#getOffset()">getOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#getSize()">getSize</a></strong>()</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
@@ -477,35 +545,44 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#getUtf8ByteArrays(java.util.List)">getUtf8ByteArrays</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;strings)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#hashCode()">hashCode</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#hashCode(byte[])">hashCode</a></strong>(byte[]&nbsp;b)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#hashCode(byte[],%20int)">hashCode</a></strong>(byte[]&nbsp;b,
                 int&nbsp;length)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#hashCode(byte[],%20int,%20int)">hashCode</a></strong>(byte[]&nbsp;bytes,
                 int&nbsp;offset,
                 int&nbsp;length)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#head(byte[],%20int)">head</a></strong>(byte[]&nbsp;a,
         int&nbsp;length)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#hexCharsToByte(char,%20char)">hexCharsToByte</a></strong>(char&nbsp;c1,
+                            char&nbsp;c2)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#hexCharToNibble(char)">hexCharToNibble</a></strong>(char&nbsp;ch)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#incrementBytes(byte[],%20long)">incrementBytes</a></strong>(byte[]&nbsp;value,
                             long&nbsp;amount)</code>
@@ -513,7 +590,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
  on given amount.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#indexOf(byte[],%20byte)">indexOf</a></strong>(byte[]&nbsp;array,
               byte&nbsp;target)</code>
@@ -521,12 +598,16 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
  <code>array</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#indexOf(byte[],%20byte[])">indexOf</a></strong>(byte[]&nbsp;array,
               byte[]&nbsp;target)</code>
 <div class="block">Returns the start position of the first occurrence of the specified <code>target</code> within <code>array</code>, or <code>-1</code> if there is no such occurrence.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#isHexDigit(char)">isHexDigit</a></strong>(char&nbsp;c)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
@@ -556,32 +637,36 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../org/apache/hadoop/hbase/util/Bytes.Comparer.html" title="interface in org.apache.hadoop.hbase.util">Bytes.Comparer</a>&lt;byte[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#lexicographicalComparerJavaImpl()">lexicographicalComparerJavaImpl</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#mapKey(byte[])">mapKey</a></strong>(byte[]&nbsp;b)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#mapKey(byte[],%20int)">mapKey</a></strong>(byte[]&nbsp;b,
             int&nbsp;length)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#multiple(byte[],%20int)">multiple</a></strong>(byte[]&nbsp;srcBytes,
                 int&nbsp;multiNum)</code>
 <div class="block">Create a byte array which is multiple given bytes</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#padHead(byte[],%20int)">padHead</a></strong>(byte[]&nbsp;a,
               int&nbsp;length)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#padTail(byte[],%20int)">padTail</a></strong>(byte[]&nbsp;a,
               int&nbsp;length)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putAsShort(byte[],%20int,%20int)">putAsShort</a></strong>(byte[]&nbsp;bytes,
                     int&nbsp;offset,
@@ -589,7 +674,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Put an int value as short out to the specified byte array position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putBigDecimal(byte[],%20int,%20java.math.BigDecimal)">putBigDecimal</a></strong>(byte[]&nbsp;bytes,
                           int&nbsp;offset,
@@ -597,7 +682,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Put a BigDecimal value out to the specified byte array position.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putByte(byte[],%20int,%20byte)">putByte</a></strong>(byte[]&nbsp;bytes,
               int&nbsp;offset,
@@ -605,7 +690,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Write a single byte out to the specified byte array position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putByteBuffer(byte[],%20int,%20java.nio.ByteBuffer)">putByteBuffer</a></strong>(byte[]&nbsp;bytes,
                           int&nbsp;offset,
@@ -613,7 +698,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Add the whole content of the ByteBuffer to the bytes arrays.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putBytes(byte[],%20int,%20byte[],%20int,%20int)">putBytes</a></strong>(byte[]&nbsp;tgtBytes,
                 int&nbsp;tgtOffset,
@@ -623,19 +708,19 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Put bytes at the specified byte array position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putDouble(byte[],%20int,%20double)">putDouble</a></strong>(byte[]&nbsp;bytes,
                   int&nbsp;offset,
                   double&nbsp;d)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putFloat(byte[],%20int,%20float)">putFloat</a></strong>(byte[]&nbsp;bytes,
                 int&nbsp;offset,
                 float&nbsp;f)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putInt(byte[],%20int,%20int)">putInt</a></strong>(byte[]&nbsp;bytes,
             int&nbsp;offset,
@@ -643,7 +728,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Put an int value out to the specified byte array position.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putIntUnsafe(byte[],%20int,%20int)">putIntUnsafe</a></strong>(byte[]&nbsp;bytes,
                         int&nbsp;offset,
@@ -653,7 +738,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putLong(byte[],%20int,%20long)">putLong</a></strong>(byte[]&nbsp;bytes,
               int&nbsp;offset,
@@ -661,7 +746,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Put a long value out to the specified byte array position.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putLongUnsafe(byte[],%20int,%20long)">putLongUnsafe</a></strong>(byte[]&nbsp;bytes,
                           int&nbsp;offset,
@@ -671,7 +756,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putShort(byte[],%20int,%20short)">putShort</a></strong>(byte[]&nbsp;bytes,
                 int&nbsp;offset,
@@ -679,7 +764,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Put a short value out to the specified byte array position.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#putShortUnsafe(byte[],%20int,%20short)">putShortUnsafe</a></strong>(byte[]&nbsp;bytes,
                             int&nbsp;offset,
@@ -689,13 +774,13 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#random(byte[])">random</a></strong>(byte[]&nbsp;b)</code>
 <div class="block">Fill given array with random bytes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#random(byte[],%20int,%20int)">random</a></strong>(byte[]&nbsp;b,
             int&nbsp;offset,
@@ -703,7 +788,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Fill given array with random bytes at the specified position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#readAsInt(byte[],%20int,%20int)">readAsInt</a></strong>(byte[]&nbsp;bytes,
                   int&nbsp;offset,
@@ -711,24 +796,28 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Converts a byte array to an int value</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#readAsVLong(byte[],%20int)">readAsVLong</a></strong>(byte[]&nbsp;buffer,
                       int&nbsp;offset)</code>
 <div class="block">Reads a zero-compressed encoded long from input buffer and returns it.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#readByteArray(java.io.DataInput)">readByteArray</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in)</code>
 <div class="block">Read byte-array written with a WritableableUtils.vint prefix.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#readByteArrayThrowsRuntime(java.io.DataInput)">readByteArrayThrowsRuntime</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in)</code>
 <div class="block">Read byte-array written with a WritableableUtils.vint prefix.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#readBytes(java.nio.ByteBuffer)">readBytes</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buf)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -1179,6 +1268,45 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="UTF8_ENCODING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UTF8_ENCODING</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.70">UTF8_ENCODING</a></pre>
+<div class="block">When we encode strings, we always specify UTF8 encoding</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.Bytes.UTF8_ENCODING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="UTF8_CHARSET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UTF8_CHARSET</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html?is-external=true" title="class or interface in java.nio.charset">Charset</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.74">UTF8_CHARSET</a></pre>
+<div class="block">When we encode strings, we always specify UTF8 encoding</div>
+</li>
+</ul>
+<a name="EMPTY_BYTE_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EMPTY_BYTE_ARRAY</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.77">EMPTY_BYTE_ARRAY</a></pre>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.79">LOG</a></pre>
+</li>
+</ul>
 <a name="SIZEOF_BOOLEAN">
 <!--   -->
 </a>
@@ -1291,6 +1419,33 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.Bytes.ESTIMATED_HEAP_TAX">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="bytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bytes</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.146">bytes</a></pre>
+</li>
+</ul>
+<a name="offset">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>offset</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.147">offset</a></pre>
+</li>
+</ul>
+<a name="length">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>length</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.148">length</a></pre>
+</li>
+</ul>
 <a name="BYTES_COMPARATOR">
 <!--   -->
 </a>
@@ -1304,11 +1459,29 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <a name="BYTES_RAWCOMPARATOR">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>BYTES_RAWCOMPARATOR</h4>
 <pre>public static final&nbsp;org.apache.hadoop.io.RawComparator&lt;byte[]&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.391">BYTES_RAWCOMPARATOR</a></pre>
 <div class="block">Use comparing byte arrays, byte-by-byte</div>
+</li>
+</ul>
+<a name="RNG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RNG</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/security/SecureRandom.html?is-external=true" title="class or interface in java.security">SecureRandom</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.2477">RNG</a></pre>
+</li>
+</ul>
+<a name="HEX_CHARS">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>HEX_CHARS</h4>
+<pre>private static final&nbsp;char[] <a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.2533">HEX_CHARS</a></pre>
 </li>
 </ul>
 </li>
@@ -1695,6 +1868,15 @@ public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ut
 <dt><span class="strong">Returns:</span></dt><dd>the byte array</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#getBytes(java.nio.ByteBuffer)"><code>getBytes(ByteBuffer)</code></a></dd></dl>
 </li>
 </ul>
+<a name="readBytes(java.nio.ByteBuffer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readBytes</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.528">readBytes</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buf)</pre>
+</li>
+</ul>
 <a name="toString(byte[])">
 <!--   -->
 </a>
@@ -1790,6 +1972,15 @@ public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ut
  \x00 \x05 etc</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>b</code> - array to write out</dd><dd><code>off</code> - offset to start at</dd><dd><code>len</code> - length to write</dd>
 <dt><span class="strong">Returns:</span></dt><dd>string output</dd></dl>
+</li>
+</ul>
+<a name="isHexDigit(char)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isHexDigit</h4>
+<pre>private static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.657">isHexDigit</a>(char&nbsp;c)</pre>
 </li>
 </ul>
 <a name="toBinaryFromHex(byte)">
@@ -1905,6 +2096,18 @@ public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ut
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if length is not <a href="../../../../../org/apache/hadoop/hbase/util/Bytes.html#SIZEOF_LONG"><code>SIZEOF_LONG</code></a> or
  if there's not enough room in the array at the offset indicated.</dd></dl>
+</li>
+</ul>
+<a name="explainWrongLengthOrOffset(byte[], int, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>explainWrongLengthOrOffset</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.805">explainWrongLengthOrOffset</a>(byte[]&nbsp;bytes,
+                                                  int&nbsp;offset,
+                                                  int&nbsp;length,
+                                                  int&nbsp;expectedLength)</pre>
 </li>
 </ul>
 <a name="putLong(byte[], int, long)">
@@ -2443,6 +2646,15 @@ public static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/
 <dt><span class="strong">Returns:</span></dt><dd>0 if equal, &lt; 0 if left is less than right, etc.</dd></dl>
 </li>
 </ul>
+<a name="lexicographicalComparerJavaImpl()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lexicographicalComparerJavaImpl</h4>
+<pre>static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/Bytes.Comparer.html" title="interface in org.apache.hadoop.hbase.util">Bytes.Comparer</a>&lt;byte[]&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.1413">lexicographicalComparerJavaImpl</a>()</pre>
+</li>
+</ul>
 <a name="equals(byte[], byte[])">
 <!--   -->
 </a>
@@ -2844,6 +3056,26 @@ public static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/h
 <dt><span class="strong">Returns:</span></dt><dd>array of bytes containing incremented long (length == SIZEOF_LONG)</dd></dl>
 </li>
 </ul>
+<a name="binaryIncrementPos(byte[], long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>binaryIncrementPos</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.2186">binaryIncrementPos</a>(byte[]&nbsp;value,
+                        long&nbsp;amount)</pre>
+</li>
+</ul>
+<a name="binaryIncrementNeg(byte[], long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>binaryIncrementNeg</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.2211">binaryIncrementNeg</a>(byte[]&nbsp;value,
+                        long&nbsp;amount)</pre>
+</li>
+</ul>
 <a name="writeStringFixedSize(java.io.DataOutput, java.lang.String, int)">
 <!--   -->
 </a>
@@ -3106,6 +3338,25 @@ public static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/h
 <h4>toHex</h4>
 <pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.2556">toHex</a>(byte[]&nbsp;b)</pre>
 <div class="block">Convert a byte array into a hex string</div>
+</li>
+</ul>
+<a name="hexCharToNibble(char)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hexCharToNibble</h4>
+<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.2560">hexCharToNibble</a>(char&nbsp;ch)</pre>
+</li>
+</ul>
+<a name="hexCharsToByte(char, char)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hexCharsToByte</h4>
+<pre>private static&nbsp;byte&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/Bytes.html#line.2571">hexCharsToByte</a>(char&nbsp;c1,
+                  char&nbsp;c2)</pre>
 </li>
 </ul>
 <a name="fromHex(java.lang.String)">

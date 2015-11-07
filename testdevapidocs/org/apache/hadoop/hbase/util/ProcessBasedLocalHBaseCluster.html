@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.HBaseWriterThreadWithACL.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.HBaseWriterThreadWithACL.WriteAccessAction.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.LocalDaemonLogTailer.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -106,6 +106,124 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.LocalDaemonLogTailer.html" title="class in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.LocalDaemonLogTailer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#daemonPidFiles">daemonPidFiles</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hdfs.MiniDFSCluster</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#dfsCluster">dfsCluster</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#hbaseDaemonScript">hbaseDaemonScript</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#hbaseHome">hbaseHome</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#LOG_PATH_FORMAT_RE">LOG_PATH_FORMAT_RE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#logTailDirs">logTailDirs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#logTailerThread">logTailerThread</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#masterPorts">masterPorts</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#MAX_FILE_SIZE_OVERRIDE">MAX_FILE_SIZE_OVERRIDE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#numDataNodes">numDataNodes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#numMasters">numMasters</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#numRegionServers">numRegionServers</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#rsPorts">rsPorts</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#shutdownHookInstalled">shutdownHookInstalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#testUtil">testUtil</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#TO_REMOVE_FROM_LOG_LINES_RE">TO_REMOVE_FROM_LOG_LINES_RE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#workDir">workDir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#zkClientPort">zkClientPort</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -140,20 +258,94 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#cleanupOldState()">cleanupOldState</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#ensureShutdownHookInstalled()">ensureShutdownHookInstalled</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#executeCommand(java.lang.String)">executeCommand</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;command)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#executeCommand(java.lang.String,%20java.util.Map)">executeCommand</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;command,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;envOverrides)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#generateConfig(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType,%20int,%20java.lang.String)">generateConfig</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+                            int&nbsp;rpcPort,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;daemonDir)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#getConf()">getConf</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#getServerPID(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType,%20int)">getServerPID</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+                        int&nbsp;port)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#killMaster()">killMaster</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#killRegionServer(int)">killRegionServer</a></strong>(int&nbsp;port)</code>&nbsp;</td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#killProcess(int)">killProcess</a></strong>(int&nbsp;pid)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#killRegionServer(int)">killRegionServer</a></strong>(int&nbsp;port)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#killServer(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType,%20int)">killServer</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+                    int&nbsp;port)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#pidFilePath(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType,%20int)">pidFilePath</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+                      int&nbsp;port)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#processLine(java.lang.String)">processLine</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;line)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#readPidFromFile(java.lang.String)">readPidFromFile</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pidFile)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#reportWebUIPort(java.lang.String,%20int)">reportWebUIPort</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;daemon,
+                              int&nbsp;port)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#serverWorkingDir(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType,%20int)">serverWorkingDir</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+                                int&nbsp;port)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#shutdown()">shutdown</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#shutdownAllProcesses()">shutdownAllProcesses</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#sortedPorts(int)">sortedPorts</a></strong>(int&nbsp;n)</code>
+<div class="block">Generates a list of random port numbers in the sorted order.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#startDaemonLogTailer()">startDaemonLogTailer</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -174,8 +366,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#startRegionServer(int)">startRegionServer</a></strong>(int&nbsp;port)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#startServer(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType,%20int)">startServer</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+                      int&nbsp;rsPort)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#startZK()">startZK</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#writeStringToFile(java.lang.String,%20java.lang.String)">writeStringToFile</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileName)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -193,6 +395,195 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="hbaseHome">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hbaseHome</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.63">hbaseHome</a></pre>
+</li>
+</ul>
+<a name="workDir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>workDir</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.63">workDir</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.64">conf</a></pre>
+</li>
+</ul>
+<a name="numMasters">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numMasters</h4>
+<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.65">numMasters</a></pre>
+</li>
+</ul>
+<a name="numRegionServers">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numRegionServers</h4>
+<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.65">numRegionServers</a></pre>
+</li>
+</ul>
+<a name="numDataNodes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numDataNodes</h4>
+<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.65">numDataNodes</a></pre>
+</li>
+</ul>
+<a name="rsPorts">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rsPorts</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.66">rsPorts</a></pre>
+</li>
+</ul>
+<a name="masterPorts">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>masterPorts</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.66">masterPorts</a></pre>
+</li>
+</ul>
+<a name="zkClientPort">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>zkClientPort</h4>
+<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.68">zkClientPort</a></pre>
+</li>
+</ul>
+<a name="MAX_FILE_SIZE_OVERRIDE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MAX_FILE_SIZE_OVERRIDE</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.70">MAX_FILE_SIZE_OVERRIDE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.MAX_FILE_SIZE_OVERRIDE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.72">LOG</a></pre>
+</li>
+</ul>
+<a name="daemonPidFiles">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>daemonPidFiles</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.75">daemonPidFiles</a></pre>
+</li>
+</ul>
+<a name="shutdownHookInstalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shutdownHookInstalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.78">shutdownHookInstalled</a></pre>
+</li>
+</ul>
+<a name="hbaseDaemonScript">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hbaseDaemonScript</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.80">hbaseDaemonScript</a></pre>
+</li>
+</ul>
+<a name="dfsCluster">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dfsCluster</h4>
+<pre>private&nbsp;org.apache.hadoop.hdfs.MiniDFSCluster <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.82">dfsCluster</a></pre>
+</li>
+</ul>
+<a name="testUtil">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testUtil</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.84">testUtil</a></pre>
+</li>
+</ul>
+<a name="logTailerThread">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logTailerThread</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.86">logTailerThread</a></pre>
+</li>
+</ul>
+<a name="logTailDirs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logTailDirs</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.88">logTailDirs</a></pre>
+</li>
+</ul>
+<a name="TO_REMOVE_FROM_LOG_LINES_RE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TO_REMOVE_FROM_LOG_LINES_RE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.437">TO_REMOVE_FROM_LOG_LINES_RE</a></pre>
+</li>
+</ul>
+<a name="LOG_PATH_FORMAT_RE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>LOG_PATH_FORMAT_RE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.440">LOG_PATH_FORMAT_RE</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -233,6 +624,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="sortedPorts(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sortedPorts</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.142">sortedPorts</a>(int&nbsp;n)</pre>
+<div class="block">Generates a list of random port numbers in the sorted order. A sorted
+ order makes sense if we ever want to refer to these servers by their index
+ in the returned array, e.g. server #0, #1, etc.</div>
 </li>
 </ul>
 <a name="startHBase()">
@@ -298,6 +701,160 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.203">startZK</a>()</pre>
 </li>
 </ul>
+<a name="executeCommand(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>executeCommand</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.207">executeCommand</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;command)</pre>
+</li>
+</ul>
+<a name="executeCommand(java.lang.String, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>executeCommand</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.211">executeCommand</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;command,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;envOverrides)</pre>
+</li>
+</ul>
+<a name="shutdownAllProcesses()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shutdownAllProcesses</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.251">shutdownAllProcesses</a>()</pre>
+</li>
+</ul>
+<a name="ensureShutdownHookInstalled()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ensureShutdownHookInstalled</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.269">ensureShutdownHookInstalled</a>()</pre>
+</li>
+</ul>
+<a name="cleanupOldState()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cleanupOldState</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.284">cleanupOldState</a>()</pre>
+</li>
+</ul>
+<a name="writeStringToFile(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeStringToFile</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.288">writeStringToFile</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileName)</pre>
+</li>
+</ul>
+<a name="serverWorkingDir(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverWorkingDir</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.298">serverWorkingDir</a>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+                      int&nbsp;port)</pre>
+</li>
+</ul>
+<a name="getServerPID(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getServerPID</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.302">getServerPID</a>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+               int&nbsp;port)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="readPidFromFile(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readPidFromFile</h4>
+<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.307">readPidFromFile</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pidFile)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="pidFilePath(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pidFilePath</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.316">pidFilePath</a>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+                 int&nbsp;port)</pre>
+</li>
+</ul>
+<a name="killServer(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>killServer</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.324">killServer</a>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+              int&nbsp;port)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="killProcess(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>killProcess</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.332">killProcess</a>(int&nbsp;pid)</pre>
+</li>
+</ul>
+<a name="startServer(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startServer</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.337">startServer</a>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+               int&nbsp;rsPort)</pre>
+</li>
+</ul>
+<a name="generateConfig(org.apache.hadoop.hbase.util.ProcessBasedLocalHBaseCluster.ServerType, int, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>generateConfig</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.379">generateConfig</a>(<a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util">ProcessBasedLocalHBaseCluster.ServerType</a>&nbsp;serverType,
+                    int&nbsp;rpcPort,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;daemonDir)</pre>
+</li>
+</ul>
+<a name="reportWebUIPort(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reportWebUIPort</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.421">reportWebUIPort</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;daemon,
+                   int&nbsp;port)</pre>
+</li>
+</ul>
 <a name="getConf()">
 <!--   -->
 </a>
@@ -310,10 +867,28 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="shutdown()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>shutdown</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.430">shutdown</a>()</pre>
+</li>
+</ul>
+<a name="processLine(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processLine</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.443">processLine</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;line)</pre>
+</li>
+</ul>
+<a name="startDaemonLogTailer()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>startDaemonLogTailer</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html#line.550">startDaemonLogTailer</a>()</pre>
 </li>
 </ul>
 </li>
@@ -342,8 +917,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.HBaseWriterThreadWithACL.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.HBaseWriterThreadWithACL.WriteAccessAction.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.LocalDaemonLogTailer.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html" target="_top">Frames</a></li>
@@ -367,14 +942,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

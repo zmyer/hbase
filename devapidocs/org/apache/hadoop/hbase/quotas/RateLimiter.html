@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.html" title="class in org.apache.hadoop.hbase.quotas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.KeyFromRow.html" title="interface in org.apache.hadoop.hbase.quotas"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/quotas/RegionServerQuotaManager.html" title="class in org.apache.hadoop.hbase.quotas"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -138,8 +138,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html#avail">avail</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html#limit">limit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html#QUOTA_RATE_LIMITER_CONF_KEY">QUOTA_RATE_LIMITER_CONF_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html#tunit">tunit</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -214,8 +226,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html#getTimeUnitInMillis()">getTimeUnitInMillis</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) abstract long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html#getWaitInterval(long,%20long,%20long)">getWaitInterval</a></strong>(long&nbsp;limit,
+                              long&nbsp;available,
+                              long&nbsp;amount)</code>
+<div class="block">Time in milliseconds to wait for before requesting to consume 'amount' resource.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html#isBypass()">isBypass</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) abstract long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/quotas/RateLimiter.html#refill(long)">refill</a></strong>(long&nbsp;limit)</code>
+<div class="block">Refill the available units w.r.t the elapsed time.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -271,11 +297,38 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="QUOTA_RATE_LIMITER_CONF_KEY">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>QUOTA_RATE_LIMITER_CONF_KEY</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/RateLimiter.html#line.49">QUOTA_RATE_LIMITER_CONF_KEY</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.quotas.RateLimiter.QUOTA_RATE_LIMITER_CONF_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="tunit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tunit</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/RateLimiter.html#line.50">tunit</a></pre>
+</li>
+</ul>
+<a name="limit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>limit</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/RateLimiter.html#line.51">limit</a></pre>
+</li>
+</ul>
+<a name="avail">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>avail</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/RateLimiter.html#line.52">avail</a></pre>
 </li>
 </ul>
 </li>
@@ -303,6 +356,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="refill(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>refill</h4>
+<pre>abstract&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/RateLimiter.html#line.59">refill</a>(long&nbsp;limit)</pre>
+<div class="block">Refill the available units w.r.t the elapsed time.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>limit</code> - Maximum available resource units that can be refilled to.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>how many resource units may be refilled ?</dd></dl>
+</li>
+</ul>
+<a name="getWaitInterval(long, long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWaitInterval</h4>
+<pre>abstract&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/quotas/RateLimiter.html#line.68">getWaitInterval</a>(long&nbsp;limit,
+                   long&nbsp;available,
+                   long&nbsp;amount)</pre>
+<div class="block">Time in milliseconds to wait for before requesting to consume 'amount' resource.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>limit</code> - Maximum available resource units that can be refilled to.</dd><dd><code>available</code> - Currently available resource units</dd><dd><code>amount</code> - Resources for which time interval to calculate for</dd>
+<dt><span class="strong">Returns:</span></dt><dd>estimate of the ms required to wait before being able to provide 'amount' resources.</dd></dl>
+</li>
+</ul>
 <a name="set(long, java.util.concurrent.TimeUnit)">
 <!--   -->
 </a>
@@ -485,7 +564,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.html" title="class in org.apache.hadoop.hbase.quotas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.KeyFromRow.html" title="interface in org.apache.hadoop.hbase.quotas"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/quotas/RegionServerQuotaManager.html" title="class in org.apache.hadoop.hbase.quotas"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

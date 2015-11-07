@@ -79,6 +79,10 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.mob.mapreduce">org.apache.hadoop.hbase.mob.mapreduce</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -119,10 +123,43 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.mob.mapreduce">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a> in <a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/package-summary.html">org.apache.hadoop.hbase.mob.mapreduce</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/package-summary.html">org.apache.hadoop.hbase.mob.mapreduce</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">MemStoreWrapper.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#internalFlushCache(org.apache.hadoop.hbase.regionserver.MemStoreSnapshot)">internalFlushCache</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a>&nbsp;snapshot)</code>
+<div class="block">Flushes the snapshot of the memstore.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a></code></td>
+<td class="colLast"><span class="strong">HStore.StoreFlusherImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HStore.StoreFlusherImpl.html#snapshot">snapshot</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -166,6 +203,14 @@
                           <a href="../../../../../../org/apache/hadoop/hbase/monitoring/MonitoredTask.html" title="interface in org.apache.hadoop.hbase.monitoring">MonitoredTask</a>&nbsp;status)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>abstract <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;</code></td>
+<td class="colLast"><span class="strong">StoreFlusher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#flushSnapshot(org.apache.hadoop.hbase.regionserver.MemStoreSnapshot,%20long,%20org.apache.hadoop.hbase.monitoring.MonitoredTask)">flushSnapshot</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a>&nbsp;snapshot,
+                          long&nbsp;cacheFlushSeqNum,
+                          <a href="../../../../../../org/apache/hadoop/hbase/monitoring/MonitoredTask.html" title="interface in org.apache.hadoop.hbase.monitoring">MonitoredTask</a>&nbsp;status)</code>
+<div class="block">Turns a snapshot of memstore into a set of store files.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;</code></td>
 <td class="colLast"><span class="strong">StripeStoreFlusher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFlusher.html#flushSnapshot(org.apache.hadoop.hbase.regionserver.MemStoreSnapshot,%20long,%20org.apache.hadoop.hbase.monitoring.MonitoredTask)">flushSnapshot</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a>&nbsp;snapshot,
                           long&nbsp;cacheFlushSeqNum,

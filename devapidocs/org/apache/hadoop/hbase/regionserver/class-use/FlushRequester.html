@@ -87,6 +87,38 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that implement <a href="../../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreFlusher</a></strong></code>
+<div class="block">Thread that flushes cache on request
+
+ NOTE: This class extends Thread rather than Chore because the sleep time
+ can be interrupted when there is something to do, rather than the Chore
+ sleep time which is invariant.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a></code></td>
+<td class="colLast"><span class="strong">HeapMemoryManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryManager.html#memStoreFlusher">memStoreFlusher</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -117,6 +149,20 @@
             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a>&nbsp;memStoreFlusher,
             <a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerAccounting.html" title="class in org.apache.hadoop.hbase.regionserver">RegionServerAccounting</a>&nbsp;regionServerAccounting)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryManager.html#HeapMemoryManager(org.apache.hadoop.hbase.io.hfile.ResizableBlockCache,%20org.apache.hadoop.hbase.regionserver.FlushRequester,%20org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerAccounting)">HeapMemoryManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/ResizableBlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">ResizableBlockCache</a>&nbsp;blockCache,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a>&nbsp;memStoreFlusher,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerAccounting.html" title="class in org.apache.hadoop.hbase.regionserver">RegionServerAccounting</a>&nbsp;regionServerAccounting)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

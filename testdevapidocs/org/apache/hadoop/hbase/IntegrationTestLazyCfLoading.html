@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestManyRegions.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.DataGenerator.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -106,6 +106,94 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.DataGenerator.html" title="class in org.apache.hadoop.hbase">IntegrationTestLazyCfLoading.DataGenerator</a></strong></code>
+<div class="block">Custom LoadTestDataGenerator.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.DataGenerator.html" title="class in org.apache.hadoop.hbase">IntegrationTestLazyCfLoading.DataGenerator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#dataGen">dataGen</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#DEFAULT_TIMEOUT_MINUTES">DEFAULT_TIMEOUT_MINUTES</a></strong></code>
+<div class="block">A soft test timeout; duration of the test, as such, depends on number of keys to put.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#ENCODING_KEY">ENCODING_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#KEYS_TO_WRITE_PER_SERVER">KEYS_TO_WRITE_PER_SERVER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#NUM_SERVERS">NUM_SERVERS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#REGIONS_PER_SERVER">REGIONS_PER_SERVER</a></strong></code>
+<div class="block">Set regions per server low to ensure splits happen during test</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#TABLE_NAME">TABLE_NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#TIMEOUT_KEY">TIMEOUT_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase">IntegrationTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#util">util</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#WAIT_BETWEEN_SCANS_MS">WAIT_BETWEEN_SCANS_MS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#WRITER_THREADS">WRITER_THREADS</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -136,6 +224,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#createTable()">createTable</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#deleteTable()">deleteTable</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -163,6 +259,132 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="TABLE_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TABLE_NAME</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.60">TABLE_NAME</a></pre>
+</li>
+</ul>
+<a name="TIMEOUT_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TIMEOUT_KEY</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.62">TIMEOUT_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestLazyCfLoading.TIMEOUT_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENCODING_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENCODING_KEY</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.63">ENCODING_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestLazyCfLoading.ENCODING_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_TIMEOUT_MINUTES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_TIMEOUT_MINUTES</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.66">DEFAULT_TIMEOUT_MINUTES</a></pre>
+<div class="block">A soft test timeout; duration of the test, as such, depends on number of keys to put.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestLazyCfLoading.DEFAULT_TIMEOUT_MINUTES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="NUM_SERVERS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NUM_SERVERS</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.68">NUM_SERVERS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestLazyCfLoading.NUM_SERVERS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="REGIONS_PER_SERVER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>REGIONS_PER_SERVER</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.70">REGIONS_PER_SERVER</a></pre>
+<div class="block">Set regions per server low to ensure splits happen during test</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestLazyCfLoading.REGIONS_PER_SERVER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="KEYS_TO_WRITE_PER_SERVER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>KEYS_TO_WRITE_PER_SERVER</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.71">KEYS_TO_WRITE_PER_SERVER</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestLazyCfLoading.KEYS_TO_WRITE_PER_SERVER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="WRITER_THREADS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WRITER_THREADS</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.72">WRITER_THREADS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestLazyCfLoading.WRITER_THREADS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="WAIT_BETWEEN_SCANS_MS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WAIT_BETWEEN_SCANS_MS</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.73">WAIT_BETWEEN_SCANS_MS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestLazyCfLoading.WAIT_BETWEEN_SCANS_MS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.75">LOG</a></pre>
+</li>
+</ul>
+<a name="util">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>util</h4>
+<pre>private&nbsp;<a href="../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase">IntegrationTestingUtility</a> <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.76">util</a></pre>
+</li>
+</ul>
+<a name="dataGen">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>dataGen</h4>
+<pre>private final&nbsp;<a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.DataGenerator.html" title="class in org.apache.hadoop.hbase">IntegrationTestLazyCfLoading.DataGenerator</a> <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.77">dataGen</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -194,6 +416,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>setUp</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.176">setUp</a>()
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="createTable()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTable</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.187">createTable</a>()
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="deleteTable()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteTable</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html#line.205">deleteTable</a>()
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -249,7 +495,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestManyRegions.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.DataGenerator.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/IntegrationTestLazyCfLoading.html" target="_top">Frames</a></li>
@@ -273,14 +519,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

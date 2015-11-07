@@ -133,6 +133,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.CellScannable</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestPayloadCarryingRpcController.html#createCell(int)">createCell</a></strong>(int&nbsp;index)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestPayloadCarryingRpcController.html#testListOfCellScannerables()">testListOfCellScannerables</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -178,13 +182,24 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testListOfCellScannerables()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testListOfCellScannerables</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/TestPayloadCarryingRpcController.html#line.41">testListOfCellScannerables</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createCell(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createCell</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.CellScannable&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/TestPayloadCarryingRpcController.html#line.63">createCell</a>(int&nbsp;index)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>index</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>A faked out 'Cell' that does nothing but return index as its value</dd></dl>
 </li>
 </ul>
 </li>

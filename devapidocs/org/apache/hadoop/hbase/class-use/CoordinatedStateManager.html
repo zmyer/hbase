@@ -91,10 +91,14 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.replication.regionserver">org.apache.hadoop.hbase.replication.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.wal">org.apache.hadoop.hbase.wal</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -243,6 +247,24 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.replication.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/CoordinatedStateManager.html" title="interface in org.apache.hadoop.hbase">CoordinatedStateManager</a> in <a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a> that return <a href="../../../../../org/apache/hadoop/hbase/CoordinatedStateManager.html" title="interface in org.apache.hadoop.hbase">CoordinatedStateManager</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/CoordinatedStateManager.html" title="interface in org.apache.hadoop.hbase">CoordinatedStateManager</a></code></td>
+<td class="colLast"><span class="strong">ReplicationSyncUp.DummyServer.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationSyncUp.DummyServer.html#getCoordinatedStateManager()">getCoordinatedStateManager</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.util">
 <!--   -->
 </a>
@@ -299,6 +321,23 @@
                         <a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a>&nbsp;factory)</code>
 <div class="block">Splits a WAL file into region's recovered-edits directory.</div>
 </td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/hadoop/hbase/wal/package-summary.html">org.apache.hadoop.hbase.wal</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/CoordinatedStateManager.html" title="interface in org.apache.hadoop.hbase">CoordinatedStateManager</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALSplitter.html#WALSplitter(org.apache.hadoop.hbase.wal.WALFactory,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.regionserver.LastSequenceId,%20org.apache.hadoop.hbase.CoordinatedStateManager,%20org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.SplitLogTask.RecoveryMode)">WALSplitter</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a>&nbsp;factory,
+                      org.apache.hadoop.conf.Configuration&nbsp;conf,
+                      org.apache.hadoop.fs.Path&nbsp;rootDir,
+                      org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                      <a href="../../../../../org/apache/hadoop/hbase/regionserver/LastSequenceId.html" title="interface in org.apache.hadoop.hbase.regionserver">LastSequenceId</a>&nbsp;idChecker,
+                      <a href="../../../../../org/apache/hadoop/hbase/CoordinatedStateManager.html" title="interface in org.apache.hadoop.hbase">CoordinatedStateManager</a>&nbsp;csm,
+                      org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.SplitLogTask.RecoveryMode&nbsp;mode)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

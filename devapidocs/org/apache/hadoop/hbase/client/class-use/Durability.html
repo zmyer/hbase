@@ -97,16 +97,30 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce</a></td>
+<td class="colLast">
+<div class="block">Provides HBase <a href="http://wiki.apache.org/hadoop/HadoopMapReduce">MapReduce</a>
+Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.rest.client">org.apache.hadoop.hbase.rest.client</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
 <td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.thrift2">org.apache.hadoop.hbase.thrift2</a></td>
+<td class="colLast">
+<div class="block">Provides an HBase <a href="http://thrift.apache.org/">Thrift</a>
+service.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.wal">org.apache.hadoop.hbase.wal</a></td>
@@ -121,6 +135,27 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a> in <a href="../../../../../../org/apache/hadoop/hbase/package-summary.html">org.apache.hadoop.hbase</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/package-summary.html">org.apache.hadoop.hbase</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
+<td class="colLast"><span class="strong">HTableDescriptor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html#DEFAULT_DURABLITY">DEFAULT_DURABLITY</a></strong></code>
+<div class="block">Default durability for HTD is USE_DEFAULT, which defaults to HBase-global default value</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
+<td class="colLast"><span class="strong">HTableDescriptor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html#durability">durability</a></strong></code>
+<div class="block">Durability setting for the table</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/package-summary.html">org.apache.hadoop.hbase</a> that return <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -356,10 +391,47 @@ the order they are declared.</div>
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.mapreduce">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a> in <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/package-summary.html">org.apache.hadoop.hbase.mapreduce</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/package-summary.html">org.apache.hadoop.hbase.mapreduce</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
+<td class="colLast"><span class="strong">Import.Importer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/Import.Importer.html#durability">durability</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#DEFAULT_DURABILITY">DEFAULT_DURABILITY</a></strong></code>
+<div class="block">This is the global default value for durability.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#durability">durability</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -380,6 +452,10 @@ the order they are declared.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
+<td class="colLast"><span class="strong">MultiRowMutationProcessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MultiRowMutationProcessor.html#useDurability()">useDurability</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
 <td class="colLast"><span class="strong">RowProcessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RowProcessor.html#useDurability()">useDurability</a></strong>()</code>&nbsp;</td>
 </tr>
 </tbody>
@@ -392,35 +468,50 @@ the order they are declared.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#delete(java.util.NavigableMap,%20org.apache.hadoop.hbase.client.Durability)">delete</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableMap.html?is-external=true" title="class or interface in java.util">NavigableMap</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&gt;&nbsp;familyMap,
+            <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>
+<div class="block">This is used only by unit tests.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
 <td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#getEffectiveDurability(org.apache.hadoop.hbase.client.Durability)">getEffectiveDurability</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;d)</code>
 <div class="block">Returns effective durability from the passed durability and
  the table descriptor.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postDelete(org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
                     <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
                     <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postPut(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
               <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preDelete(org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">preDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
                   <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
                   <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#prePut(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">prePut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
             <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#syncOrDefer(long,%20org.apache.hadoop.hbase.client.Durability)">syncOrDefer</a></strong>(long&nbsp;txid,
+                      <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>
+<div class="block">Calls sync with the given transaction ID if the region's table is not
+ deferring it.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -485,6 +576,24 @@ the order they are declared.</div>
             <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
             <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.thrift2">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a> in <a href="../../../../../../org/apache/hadoop/hbase/thrift2/package-summary.html">org.apache.hadoop.hbase.thrift2</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/thrift2/package-summary.html">org.apache.hadoop.hbase.thrift2</a> that return <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
+<td class="colLast"><span class="strong">ThriftUtilities.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#durabilityFromThrift(org.apache.hadoop.hbase.thrift2.generated.TDurability)">durabilityFromThrift</a></strong>(org.apache.hadoop.hbase.thrift2.generated.TDurability&nbsp;tDurability)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

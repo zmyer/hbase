@@ -450,7 +450,7 @@
 <a class="jxr_linenumber" name="440" href="#440">440</a>     LOG.info(<span class="jxr_string">"Setting hbase:meta region location in ZooKeeper as "</span> + serverName);
 <a class="jxr_linenumber" name="441" href="#441">441</a>     <em class="jxr_comment">// Make the MetaRegionServer pb and then get its bytes and save this as</em>
 <a class="jxr_linenumber" name="442" href="#442">442</a>     <em class="jxr_comment">// the znode content.</em>
-<a class="jxr_linenumber" name="443" href="#443">443</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ZooKeeperProtos.html">MetaRegionServer</a> pbrsr = MetaRegionServer.newBuilder()
+<a class="jxr_linenumber" name="443" href="#443">443</a>     MetaRegionServer pbrsr = MetaRegionServer.newBuilder()
 <a class="jxr_linenumber" name="444" href="#444">444</a>       .setServer(ProtobufUtil.toServerName(serverName))
 <a class="jxr_linenumber" name="445" href="#445">445</a>       .setRpcVersion(HConstants.RPC_CURRENT_VERSION)
 <a class="jxr_linenumber" name="446" href="#446">446</a>       .setState(state.convert()).build();

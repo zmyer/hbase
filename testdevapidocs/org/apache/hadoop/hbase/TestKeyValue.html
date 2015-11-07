@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/TestJMXListener.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/TestLocalHBaseCluster.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.MockKeyValue.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/TestKeyValue.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -117,6 +117,64 @@ extends junit.framework.TestCase</pre>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.MockKeyValue.html" title="class in org.apache.hadoop.hbase">TestKeyValue.MockKeyValue</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#family">family</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#qualA">qualA</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#qualB">qualB</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#rowA">rowA</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#rowB">rowB</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -147,81 +205,110 @@ extends junit.framework.TestCase</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testBasics()">testBasics</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#assertKVLess(org.apache.hadoop.hbase.CellComparator,%20org.apache.hadoop.hbase.KeyValue,%20org.apache.hadoop.hbase.KeyValue)">assertKVLess</a></strong>(org.apache.hadoop.hbase.CellComparator&nbsp;c,
+                        org.apache.hadoop.hbase.KeyValue&nbsp;less,
+                        org.apache.hadoop.hbase.KeyValue&nbsp;greater)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#assertKVLessWithoutRow(org.apache.hadoop.hbase.CellComparator,%20int,%20org.apache.hadoop.hbase.KeyValue,%20org.apache.hadoop.hbase.KeyValue)">assertKVLessWithoutRow</a></strong>(org.apache.hadoop.hbase.CellComparator&nbsp;c,
+                                            int&nbsp;common,
+                                            org.apache.hadoop.hbase.KeyValue&nbsp;less,
+                                            org.apache.hadoop.hbase.KeyValue&nbsp;greater)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#check(byte[],%20byte[],%20byte[],%20long,%20byte[])">check</a></strong>(byte[]&nbsp;row,
+          byte[]&nbsp;family,
+          byte[]&nbsp;qualifier,
+          long&nbsp;timestamp,
+          byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#comparisons(org.apache.hadoop.hbase.CellComparator)">comparisons</a></strong>(org.apache.hadoop.hbase.CellComparator&nbsp;c)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#metacomparisons(org.apache.hadoop.hbase.CellComparator)">metacomparisons</a></strong>(org.apache.hadoop.hbase.CellComparator&nbsp;c)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testBinaryKeys()">testBinaryKeys</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testBasics()">testBasics</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testBinaryKeys()">testBinaryKeys</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testColumnCompare_prefix()">testColumnCompare_prefix</a></strong>()</code>
 <div class="block">Test a corner case when the family qualifier is a prefix of the
   column qualifier.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testColumnCompare()">testColumnCompare</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testCompareWithoutRow()">testCompareWithoutRow</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testCreateKeyOnly()">testCreateKeyOnly</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testCreateKeyValueFromKey()">testCreateKeyValueFromKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testEqualsAndHashCode()">testEqualsAndHashCode</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testFirstLastOnRow()">testFirstLastOnRow</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testGetTimestamp()">testGetTimestamp</a></strong>()</code>
 <div class="block">Tests that getTimestamp() does always return the proper timestamp, even after updating it.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testKeyValueBorderCases()">testKeyValueBorderCases</a></strong>()</code>
 <div class="block">Tests cases where rows keys have characters below the ','.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testKeyValueSerialization()">testKeyValueSerialization</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testKVsWithTags()">testKVsWithTags</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testMetaComparatorTableKeysWithCommaOk()">testMetaComparatorTableKeysWithCommaOk</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testMetaKeyComparator()">testMetaKeyComparator</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testMoreComparisons()">testMoreComparisons</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testPlainCompare()">testPlainCompare</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.html#testStackedUpKeyValue()">testStackedUpKeyValue</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -248,6 +335,68 @@ extends junit.framework.TestCase</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.42">LOG</a></pre>
+</li>
+</ul>
+<a name="rowA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowA</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.265">rowA</a></pre>
+</li>
+</ul>
+<a name="rowB">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowB</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.266">rowB</a></pre>
+</li>
+</ul>
+<a name="family">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>family</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.268">family</a></pre>
+</li>
+</ul>
+<a name="qualA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qualA</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.269">qualA</a></pre>
+</li>
+</ul>
+<a name="qualB">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>qualB</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.270">qualB</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -309,6 +458,19 @@ extends junit.framework.TestCase</pre>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="check(byte[], byte[], byte[], long, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>check</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.93">check</a>(byte[]&nbsp;row,
+         byte[]&nbsp;family,
+         byte[]&nbsp;qualifier,
+         long&nbsp;timestamp,
+         byte[]&nbsp;value)</pre>
+</li>
+</ul>
 <a name="testPlainCompare()">
 <!--   -->
 </a>
@@ -356,6 +518,24 @@ extends junit.framework.TestCase</pre>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="metacomparisons(org.apache.hadoop.hbase.CellComparator)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>metacomparisons</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.190">metacomparisons</a>(org.apache.hadoop.hbase.CellComparator&nbsp;c)</pre>
+</li>
+</ul>
+<a name="comparisons(org.apache.hadoop.hbase.CellComparator)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>comparisons</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.207">comparisons</a>(org.apache.hadoop.hbase.CellComparator&nbsp;c)</pre>
+</li>
+</ul>
 <a name="testBinaryKeys()">
 <!--   -->
 </a>
@@ -375,6 +555,29 @@ extends junit.framework.TestCase</pre>
 <li class="blockList">
 <h4>testStackedUpKeyValue</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.258">testStackedUpKeyValue</a>()</pre>
+</li>
+</ul>
+<a name="assertKVLess(org.apache.hadoop.hbase.CellComparator, org.apache.hadoop.hbase.KeyValue, org.apache.hadoop.hbase.KeyValue)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertKVLess</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.272">assertKVLess</a>(org.apache.hadoop.hbase.CellComparator&nbsp;c,
+                org.apache.hadoop.hbase.KeyValue&nbsp;less,
+                org.apache.hadoop.hbase.KeyValue&nbsp;greater)</pre>
+</li>
+</ul>
+<a name="assertKVLessWithoutRow(org.apache.hadoop.hbase.CellComparator, int, org.apache.hadoop.hbase.KeyValue, org.apache.hadoop.hbase.KeyValue)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertKVLessWithoutRow</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestKeyValue.html#line.281">assertKVLessWithoutRow</a>(org.apache.hadoop.hbase.CellComparator&nbsp;c,
+                          int&nbsp;common,
+                          org.apache.hadoop.hbase.KeyValue&nbsp;less,
+                          org.apache.hadoop.hbase.KeyValue&nbsp;greater)</pre>
 </li>
 </ul>
 <a name="testCompareWithoutRow()">
@@ -496,7 +699,7 @@ extends junit.framework.TestCase</pre>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/TestJMXListener.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/TestLocalHBaseCluster.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TestKeyValue.MockKeyValue.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/TestKeyValue.html" target="_top">Frames</a></li>
@@ -520,14 +723,14 @@ extends junit.framework.TestCase</pre>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

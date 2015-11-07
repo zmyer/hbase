@@ -135,8 +135,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.junit.rules.TestName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#name">name</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -175,29 +183,36 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.zookeeper.MasterAddressTracker</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#setupMasterTracker(org.apache.hadoop.hbase.ServerName,%20int)">setupMasterTracker</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;sn,
+                                    int&nbsp;infoPort)</code>
+<div class="block">create an address tracker instance</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#testDeleteIfEquals()">testDeleteIfEquals</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#testMasterAddressTrackerFromZK()">testMasterAddressTrackerFromZK</a></strong>()</code>
 <div class="block">Unit tests that uses ZooKeeper but does not use the master-side methods
  but rather acts directly on ZK.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#testNoBackups()">testNoBackups</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#testNoMaster()">testNoMaster</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#testParsingNull()">testParsingNull</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -223,6 +238,24 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#line.46">LOG</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#line.48">TEST_UTIL</a></pre>
+</li>
+</ul>
 <a name="name">
 <!--   -->
 </a>
@@ -290,6 +323,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#line.64">testDeleteIfEquals</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="setupMasterTracker(org.apache.hadoop.hbase.ServerName, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setupMasterTracker</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.zookeeper.MasterAddressTracker&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html#line.81">setupMasterTracker</a>(org.apache.hadoop.hbase.ServerName&nbsp;sn,
+                                                                        int&nbsp;infoPort)
+                                                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">create an address tracker instance</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>sn</code> - if not-null set the active master</dd><dd><code>infoPort</code> - if there is an active master, set its info port.</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>

@@ -128,6 +128,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  set of column families, and random number of columns in range.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.ProgressReporter.html" title="class in org.apache.hadoop.hbase.util">MultiThreadedAction.ProgressReporter</a></strong></code>
+<div class="block">Asynchronously reports progress</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -144,22 +150,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#actionLetter">actionLetter</a></strong></code>
+<div class="block">"R" or "W"</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#conf">conf</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.client.HConnection</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#connection">connection</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html" title="class in org.apache.hadoop.hbase.util.test">LoadTestDataGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#dataGenerator">dataGenerator</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#endKey">endKey</a></strong></code>
 <div class="block">The end key of the key range, exclusive</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
@@ -188,14 +204,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#streamingCounters">streamingCounters</a></strong></code>
+<div class="block">Whether we need to print out Hadoop Streaming-style counters</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.TableName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#tableName">tableName</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#totalOpTimeMs">totalOpTimeMs</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#verbose">verbose</a></strong></code>&nbsp;</td>
 </tr>
@@ -251,18 +273,34 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#close()">close</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#formatTime(long)">formatTime</a></strong>(long&nbsp;elapsedTime)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#getEndKey()">getEndKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#isDone()">isDone</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.MutationType&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#parseMutateInfo(byte[])">parseMutateInfo</a></strong>(byte[]&nbsp;mutateInfo)</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#printLocations(org.apache.hadoop.hbase.client.Result)">printLocations</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;r)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected abstract <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#progressInfo()">progressInfo</a></strong>()</code>
 <div class="block">Returns a task-specific progress string</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedAction.html#resultToString(org.apache.hadoop.hbase.client.Result)">resultToString</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -316,6 +354,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedAction.html#line.59">LOG</a></pre>
+</li>
+</ul>
 <a name="tableName">
 <!--   -->
 </a>
@@ -426,6 +473,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html" title="class in org.apache.hadoop.hbase.util.test">LoadTestDataGenerator</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedAction.html#line.79">dataGenerator</a></pre>
 </li>
 </ul>
+<a name="actionLetter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>actionLetter</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedAction.html#line.144">actionLetter</a></pre>
+<div class="block">"R" or "W"</div>
+</li>
+</ul>
+<a name="streamingCounters">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>streamingCounters</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedAction.html#line.147">streamingCounters</a></pre>
+<div class="block">Whether we need to print out Hadoop Streaming-style counters</div>
+</li>
+</ul>
 <a name="REPORTING_INTERVAL_MS">
 <!--   -->
 </a>
@@ -479,6 +546,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="formatTime(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>formatTime</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedAction.html#line.168">formatTime</a>(long&nbsp;elapsedTime)</pre>
 </li>
 </ul>
 <a name="close()">
@@ -574,7 +650,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="verifyResultAgainstDataGenerator(org.apache.hadoop.hbase.client.Result, boolean, boolean)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>verifyResultAgainstDataGenerator</h4>
 <pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedAction.html#line.327">verifyResultAgainstDataGenerator</a>(org.apache.hadoop.hbase.client.Result&nbsp;result,
@@ -586,6 +662,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                                    that to use this multiPut should be used, or verification
                                    has to happen after writes, otherwise there can be races.</dd>
 <dt><span class="strong">Returns:</span></dt><dd></dd></dl>
+</li>
+</ul>
+<a name="printLocations(org.apache.hadoop.hbase.client.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>printLocations</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedAction.html#line.495">printLocations</a>(org.apache.hadoop.hbase.client.Result&nbsp;r)</pre>
+</li>
+</ul>
+<a name="resultToString(org.apache.hadoop.hbase.client.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resultToString</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedAction.html#line.516">resultToString</a>(org.apache.hadoop.hbase.client.Result&nbsp;result)</pre>
+</li>
+</ul>
+<a name="parseMutateInfo(byte[])">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>parseMutateInfo</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.MutationType&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedAction.html#line.538">parseMutateInfo</a>(byte[]&nbsp;mutateInfo)</pre>
 </li>
 </ul>
 </li>

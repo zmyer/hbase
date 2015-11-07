@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionFavoredNodes.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransactionOnCluster.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.MockedFailedMergedRegionCreation.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -105,6 +105,94 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.MockedFailedMergedRegionCreation.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionMergeTransaction.MockedFailedMergedRegionCreation</a></strong></code>
+<div class="block">Exception used in this class only.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.MockedFailedMergedRegionOpen.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionMergeTransaction.MockedFailedMergedRegionOpen</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#CF">CF</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#ENDROW">ENDROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#region_a">region_a</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#region_b">region_b</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#region_c">region_c</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#STARTROW_A">STARTROW_A</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#STARTROW_B">STARTROW_B</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#STARTROW_C">STARTROW_C</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#testdir">testdir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.wal.WALFactory</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#wals">wals</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -133,6 +221,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#countRows(org.apache.hadoop.hbase.regionserver.HRegion)">countRows</a></strong>(org.apache.hadoop.hbase.regionserver.HRegion&nbsp;r)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#createRegion(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.wal.WALFactory,%20byte[],%20byte[])">createRegion</a></strong>(org.apache.hadoop.fs.Path&nbsp;testdir,
+                        org.apache.hadoop.hbase.wal.WALFactory&nbsp;wals,
+                        byte[]&nbsp;startrow,
+                        byte[]&nbsp;endrow)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#loadRegion(org.apache.hadoop.hbase.regionserver.HRegion,%20byte[],%20boolean)">loadRegion</a></strong>(org.apache.hadoop.hbase.regionserver.HRegion&nbsp;r,
+                    byte[]&nbsp;f,
+                    boolean&nbsp;flush)</code>
+<div class="block">Load region with rows from 'aaa' to 'zzz', skip the rows which are out of
+ range of the region</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.RegionMergeTransactionImpl</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#prepareOnGoodRegions()">prepareOnGoodRegions</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -215,6 +327,122 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.67">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="testdir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testdir</h4>
+<pre>private final&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.68">testdir</a></pre>
+</li>
+</ul>
+<a name="region_a">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>region_a</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.70">region_a</a></pre>
+</li>
+</ul>
+<a name="region_b">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>region_b</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.71">region_b</a></pre>
+</li>
+</ul>
+<a name="region_c">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>region_c</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.72">region_c</a></pre>
+</li>
+</ul>
+<a name="wals">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wals</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.wal.WALFactory <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.73">wals</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.74">fs</a></pre>
+</li>
+</ul>
+<a name="STARTROW_A">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STARTROW_A</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.76">STARTROW_A</a></pre>
+</li>
+</ul>
+<a name="STARTROW_B">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STARTROW_B</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.77">STARTROW_B</a></pre>
+</li>
+</ul>
+<a name="STARTROW_C">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STARTROW_C</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.78">STARTROW_C</a></pre>
+</li>
+</ul>
+<a name="ENDROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENDROW</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.79">ENDROW</a></pre>
+</li>
+</ul>
+<a name="CF">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>CF</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.80">CF</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -272,6 +500,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Test straight prepare works. Tries to merge on <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#region_a"><code>region_a</code></a> and
  <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#region_b"><code>region_b</code></a></div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="prepareOnGoodRegions()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prepareOnGoodRegions</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.RegionMergeTransactionImpl&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.122">prepareOnGoodRegions</a>()
+                                                                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -401,10 +641,55 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testMeregedRegionBoundary()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testMeregedRegionBoundary</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.359">testMeregedRegionBoundary</a>()</pre>
+</li>
+</ul>
+<a name="createRegion(org.apache.hadoop.fs.Path, org.apache.hadoop.hbase.wal.WALFactory, byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createRegion</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.407">createRegion</a>(org.apache.hadoop.fs.Path&nbsp;testdir,
+                                                        org.apache.hadoop.hbase.wal.WALFactory&nbsp;wals,
+                                                        byte[]&nbsp;startrow,
+                                                        byte[]&nbsp;endrow)
+                                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="countRows(org.apache.hadoop.hbase.regionserver.HRegion)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.423">countRows</a>(org.apache.hadoop.hbase.regionserver.HRegion&nbsp;r)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="loadRegion(org.apache.hadoop.hbase.regionserver.HRegion, byte[], boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>loadRegion</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html#line.449">loadRegion</a>(org.apache.hadoop.hbase.regionserver.HRegion&nbsp;r,
+             byte[]&nbsp;f,
+             boolean&nbsp;flush)
+                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Load region with rows from 'aaa' to 'zzz', skip the rows which are out of
+ range of the region</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>r</code> - Region</dd><dd><code>f</code> - Family</dd><dd><code>flush</code> - flush the cache if true</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Count of rows loaded.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>
@@ -434,7 +719,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionFavoredNodes.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransactionOnCluster.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.MockedFailedMergedRegionCreation.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html" target="_top">Frames</a></li>
@@ -458,14 +743,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.chaos.factories.MonkeyFactory">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -114,6 +114,31 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/Monke
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#chaosEveryMilliSec">chaosEveryMilliSec</a></strong></code>
+<div class="block">How often to introduce the chaos.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#waitAfterBalanceMilliSec">waitAfterBalanceMilliSec</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#waitForKillMilliSec">waitForKillMilliSec</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#waitForUnbalanceMilliSec">waitForUnbalanceMilliSec</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.chaos.factories.MonkeyFactory">
 <!--   -->
@@ -156,6 +181,10 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/Monke
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/ChaosMonkey.html" title="class in org.apache.hadoop.hbase.chaos.monkies">ChaosMonkey</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#build()">build</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#loadProperties()">loadProperties</a></strong>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.chaos.factories.MonkeyFactory">
@@ -179,6 +208,52 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/Monke
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="chaosEveryMilliSec">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>chaosEveryMilliSec</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#line.30">chaosEveryMilliSec</a></pre>
+<div class="block">How often to introduce the chaos. If too frequent, sequence of kills on minicluster
+ can cause test to fail when Put runs out of retries.</div>
+</li>
+</ul>
+<a name="waitForUnbalanceMilliSec">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitForUnbalanceMilliSec</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#line.31">waitForUnbalanceMilliSec</a></pre>
+</li>
+</ul>
+<a name="waitForKillMilliSec">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitForKillMilliSec</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#line.32">waitForKillMilliSec</a></pre>
+</li>
+</ul>
+<a name="waitAfterBalanceMilliSec">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>waitAfterBalanceMilliSec</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#line.33">waitAfterBalanceMilliSec</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -205,7 +280,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/Monke
 <a name="build()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/ChaosMonkey.html" title="class in org.apache.hadoop.hbase.chaos.monkies">ChaosMonkey</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#line.36">build</a>()</pre>
@@ -213,6 +288,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/Monke
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/MonkeyFactory.html#build()">build</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/MonkeyFactory.html" title="class in org.apache.hadoop.hbase.chaos.factories">MonkeyFactory</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="loadProperties()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>loadProperties</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/factories/UnbalanceMonkeyFactory.html#line.45">loadProperties</a>()</pre>
 </li>
 </ul>
 </li>
@@ -267,13 +351,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/factories/Monke
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.chaos.factories.MonkeyFactory">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

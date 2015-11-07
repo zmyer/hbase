@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/RandomStringGeneratorImpl.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/ResourceCheckerJUnitListener.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.Phase.html" title="enum in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/ResourceChecker.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -107,6 +107,66 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.Phase.html" title="enum in org.apache.hadoop.hbase">ResourceChecker.Phase</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.ResourceAnalyzer.html" title="class in org.apache.hadoop.hbase">ResourceChecker.ResourceAnalyzer</a></strong></code>
+<div class="block">Class to implement for each type of resource.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#endingValues">endingValues</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#initialValues">initialValues</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/hadoop/hbase/ResourceChecker.ResourceAnalyzer.html" title="class in org.apache.hadoop.hbase">ResourceChecker.ResourceAnalyzer</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#ras">ras</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#tagLine">tagLine</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -140,9 +200,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#addResourceAnalyzer(org.apache.hadoop.hbase.ResourceChecker.ResourceAnalyzer)">addResourceAnalyzer</a></strong>(org.apache.hadoop.hbase.ResourceChecker.ResourceAnalyzer&nbsp;ra)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#addResourceAnalyzer(org.apache.hadoop.hbase.ResourceChecker.ResourceAnalyzer)">addResourceAnalyzer</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ResourceChecker.ResourceAnalyzer.html" title="class in org.apache.hadoop.hbase">ResourceChecker.ResourceAnalyzer</a>&nbsp;ra)</code>
 <div class="block">Adds a resource analyzer to the resources checked.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#check(int[])">check</a></strong>(int[]&nbsp;vals)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#checkEndings()">checkEndings</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -157,6 +225,27 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#fill(org.apache.hadoop.hbase.ResourceChecker.Phase,%20int[])">fill</a></strong>(<a href="../../../../org/apache/hadoop/hbase/ResourceChecker.Phase.html" title="enum in org.apache.hadoop.hbase">ResourceChecker.Phase</a>&nbsp;phase,
+        int[]&nbsp;vals)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#fillEndings()">fillEndings</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#fillInit()">fillInit</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#logEndings()">logEndings</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#logInit()">logInit</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.html#start()">start</a></strong>()</code>
 <div class="block">To be called as the beginning of a test method:
@@ -180,6 +269,59 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.35">LOG</a></pre>
+</li>
+</ul>
+<a name="tagLine">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tagLine</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.36">tagLine</a></pre>
+</li>
+</ul>
+<a name="ras">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ras</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../org/apache/hadoop/hbase/ResourceChecker.ResourceAnalyzer.html" title="class in org.apache.hadoop.hbase">ResourceChecker.ResourceAnalyzer</a>&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.97">ras</a></pre>
+</li>
+</ul>
+<a name="initialValues">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initialValues</h4>
+<pre>private&nbsp;int[] <a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.98">initialValues</a></pre>
+</li>
+</ul>
+<a name="endingValues">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>endingValues</h4>
+<pre>private&nbsp;int[] <a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.99">endingValues</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -205,6 +347,34 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="fillInit()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fillInit</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.102">fillInit</a>()</pre>
+</li>
+</ul>
+<a name="fillEndings()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fillEndings</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.107">fillEndings</a>()</pre>
+</li>
+</ul>
+<a name="fill(org.apache.hadoop.hbase.ResourceChecker.Phase, int[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fill</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.112">fill</a>(<a href="../../../../org/apache/hadoop/hbase/ResourceChecker.Phase.html" title="enum in org.apache.hadoop.hbase">ResourceChecker.Phase</a>&nbsp;phase,
+        int[]&nbsp;vals)</pre>
+</li>
+</ul>
 <a name="checkInit()">
 <!--   -->
 </a>
@@ -212,6 +382,42 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>checkInit</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.119">checkInit</a>()</pre>
+</li>
+</ul>
+<a name="checkEndings()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkEndings</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.123">checkEndings</a>()</pre>
+</li>
+</ul>
+<a name="check(int[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>check</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.127">check</a>(int[]&nbsp;vals)</pre>
+</li>
+</ul>
+<a name="logInit()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logInit</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.140">logInit</a>()</pre>
+</li>
+</ul>
+<a name="logEndings()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logEndings</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.151">logEndings</a>()</pre>
 </li>
 </ul>
 <a name="start()">
@@ -247,7 +453,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>addResourceAnalyzer</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.217">addResourceAnalyzer</a>(org.apache.hadoop.hbase.ResourceChecker.ResourceAnalyzer&nbsp;ra)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ResourceChecker.html#line.217">addResourceAnalyzer</a>(<a href="../../../../org/apache/hadoop/hbase/ResourceChecker.ResourceAnalyzer.html" title="class in org.apache.hadoop.hbase">ResourceChecker.ResourceAnalyzer</a>&nbsp;ra)</pre>
 <div class="block">Adds a resource analyzer to the resources checked.</div>
 </li>
 </ul>
@@ -278,7 +484,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/RandomStringGeneratorImpl.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/ResourceCheckerJUnitListener.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/ResourceChecker.Phase.html" title="enum in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/ResourceChecker.html" target="_top">Frames</a></li>
@@ -302,14 +508,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

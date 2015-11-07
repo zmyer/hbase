@@ -147,6 +147,28 @@ extends junit.framework.TestCase</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#doComparisonsOnObjects(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20int)">doComparisonsOnObjects</a></strong>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;a,
+                                            org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;b,
+                                            int&nbsp;expectedSignum)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#doComparisonsOnRaw(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20int)">doComparisonsOnRaw</a></strong>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;a,
+                                    org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;b,
+                                    int&nbsp;expectedSignum)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#runTests(java.lang.String,%20java.lang.String,%20int)">runTests</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aStr,
+                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bStr,
+                int&nbsp;signum)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#signum(int)">signum</a></strong>(int&nbsp;i)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#testComparison()">testComparison</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -228,13 +250,61 @@ extends junit.framework.TestCase</pre>
 <a name="testComparison()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testComparison</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#line.54">testComparison</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="runTests(java.lang.String, java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runTests</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#line.63">runTests</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aStr,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bStr,
+            int&nbsp;signum)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="signum(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>signum</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#line.91">signum</a>(int&nbsp;i)</pre>
+</li>
+</ul>
+<a name="doComparisonsOnRaw(org.apache.hadoop.hbase.io.ImmutableBytesWritable, org.apache.hadoop.hbase.io.ImmutableBytesWritable, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doComparisonsOnRaw</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#line.97">doComparisonsOnRaw</a>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;a,
+                      org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;b,
+                      int&nbsp;expectedSignum)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="doComparisonsOnObjects(org.apache.hadoop.hbase.io.ImmutableBytesWritable, org.apache.hadoop.hbase.io.ImmutableBytesWritable, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>doComparisonsOnObjects</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/TestImmutableBytesWritable.html#line.123">doComparisonsOnObjects</a>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;a,
+                          org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;b,
+                          int&nbsp;expectedSignum)</pre>
 </li>
 </ul>
 </li>

@@ -119,7 +119,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.apache.hadoop.hbase.security.access.<a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.html" title="class in org.apache.hadoop.hbase.security.access">SecureTestUtil</a></h3>
-<code><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.MasterSyncObserver.html" title="class in org.apache.hadoop.hbase.security.access">SecureTestUtil.MasterSyncObserver</a></code></li>
+<code><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.AccessTestAction.html" title="interface in org.apache.hadoop.hbase.security.access">SecureTestUtil.AccessTestAction</a>, <a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.MasterSyncObserver.html" title="class in org.apache.hadoop.hbase.security.access">SecureTestUtil.MasterSyncObserver</a></code></li>
 </ul>
 </li>
 </ul>
@@ -136,8 +136,76 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#GROUP">GROUP</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#GROUP_USER">GROUP_USER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#ONE">ONE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#TEST_FAMILY1">TEST_FAMILY1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#TEST_FAMILY2">TEST_FAMILY2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#TEST_Q1">TEST_Q1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#TEST_Q2">TEST_Q2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#TEST_ROW">TEST_ROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/TestTableName.html" title="class in org.apache.hadoop.hbase.util">TestTableName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#TEST_TABLE">TEST_TABLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#TWO">TWO</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#USER_OTHER">USER_OTHER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#USER_OTHER2">USER_OTHER2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#USER_OWNER">USER_OWNER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#usersAndGroups">usersAndGroups</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#ZERO">ZERO</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -170,6 +238,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.AccessTestAction.html" title="interface in org.apache.hadoop.hbase.security.access">SecureTestUtil.AccessTestAction</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#getDeleteFamilyAction(byte[])">getDeleteFamilyAction</a></strong>(byte[]&nbsp;fam)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.security.access.Permission&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#prepareCellPermissions(java.lang.String[],%20org.apache.hadoop.hbase.security.access.Permission.Action...)">prepareCellPermissions</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;users,
+                                            org.apache.hadoop.hbase.security.access.Permission.Action...&nbsp;action)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -219,6 +296,47 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#testDeleteWithFutureTimestamp()">testDeleteWithFutureTimestamp</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#verifyUserAllowedforCheckAndDelete(org.apache.hadoop.hbase.security.User,%20byte[],%20byte[],%20byte[])">verifyUserAllowedforCheckAndDelete</a></strong>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                                                    byte[]&nbsp;row,
+                                                                    byte[]&nbsp;q1,
+                                                                    byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#verifyUserDeniedForCheckAndDelete(org.apache.hadoop.hbase.security.User,%20byte[],%20byte[])">verifyUserDeniedForCheckAndDelete</a></strong>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                                                  byte[]&nbsp;row,
+                                                                  byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#verifyUserDeniedForDeleteExactVersion(org.apache.hadoop.hbase.security.User,%20byte[],%20byte[],%20byte[])">verifyUserDeniedForDeleteExactVersion</a></strong>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                                                          byte[]&nbsp;row,
+                                                                          byte[]&nbsp;q1,
+                                                                          byte[]&nbsp;q2)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#verifyUserDeniedForDeleteMultipleVersions(org.apache.hadoop.hbase.security.User,%20byte[],%20byte[],%20byte[])">verifyUserDeniedForDeleteMultipleVersions</a></strong>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                                                                  byte[]&nbsp;row,
+                                                                                  byte[]&nbsp;q1,
+                                                                                  byte[]&nbsp;q2)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#verifyUserDeniedForIncrementMultipleVersions(org.apache.hadoop.hbase.security.User,%20byte[],%20byte[])">verifyUserDeniedForIncrementMultipleVersions</a></strong>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                                                                        byte[]&nbsp;row,
+                                                                                        byte[]&nbsp;q1)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#verifyUserDeniedForPutMultipleVersions(org.apache.hadoop.hbase.security.User,%20byte[],%20byte[],%20byte[],%20byte[])">verifyUserDeniedForPutMultipleVersions</a></strong>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                                                            byte[]&nbsp;row,
+                                                                            byte[]&nbsp;q1,
+                                                                            byte[]&nbsp;q2,
+                                                                            byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.security.access.SecureTestUtil">
@@ -248,13 +366,167 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.67">LOG</a></pre>
+</li>
+</ul>
 <a name="TEST_TABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_TABLE</h4>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/TestTableName.html" title="class in org.apache.hadoop.hbase.util">TestTableName</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.76">TEST_TABLE</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.77">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="TEST_FAMILY1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_FAMILY1</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.78">TEST_FAMILY1</a></pre>
+</li>
+</ul>
+<a name="TEST_FAMILY2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_FAMILY2</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.79">TEST_FAMILY2</a></pre>
+</li>
+</ul>
+<a name="TEST_ROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_ROW</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.80">TEST_ROW</a></pre>
+</li>
+</ul>
+<a name="TEST_Q1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_Q1</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.81">TEST_Q1</a></pre>
+</li>
+</ul>
+<a name="TEST_Q2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_Q2</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.82">TEST_Q2</a></pre>
+</li>
+</ul>
+<a name="ZERO">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ZERO</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.83">ZERO</a></pre>
+</li>
+</ul>
+<a name="ONE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ONE</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.84">ONE</a></pre>
+</li>
+</ul>
+<a name="TWO">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TWO</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.85">TWO</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private static&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.87">conf</a></pre>
+</li>
+</ul>
+<a name="GROUP">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>GROUP</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.89">GROUP</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.security.access.TestCellACLWithMultipleVersions.GROUP">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="GROUP_USER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>GROUP_USER</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.90">GROUP_USER</a></pre>
+</li>
+</ul>
+<a name="USER_OWNER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_OWNER</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.91">USER_OWNER</a></pre>
+</li>
+</ul>
+<a name="USER_OTHER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_OTHER</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.92">USER_OTHER</a></pre>
+</li>
+</ul>
+<a name="USER_OTHER2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_OTHER2</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.93">USER_OTHER2</a></pre>
+</li>
+</ul>
+<a name="usersAndGroups">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>TEST_TABLE</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/TestTableName.html" title="class in org.apache.hadoop.hbase.util">TestTableName</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.76">TEST_TABLE</a></pre>
+<h4>usersAndGroups</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.95">usersAndGroups</a></pre>
 </li>
 </ul>
 </li>
@@ -330,6 +602,16 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="prepareCellPermissions(java.lang.String[], org.apache.hadoop.hbase.security.access.Permission.Action...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prepareCellPermissions</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.security.access.Permission&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.250">prepareCellPermissions</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;users,
+                                                                                    org.apache.hadoop.hbase.security.access.Permission.Action...&nbsp;action)</pre>
+</li>
+</ul>
 <a name="testCellPermissionsWithDeleteMutipleVersions()">
 <!--   -->
 </a>
@@ -342,6 +624,23 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="verifyUserDeniedForDeleteMultipleVersions(org.apache.hadoop.hbase.security.User, byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyUserDeniedForDeleteMultipleVersions</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.362">verifyUserDeniedForDeleteMultipleVersions</a>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                             byte[]&nbsp;row,
+                                             byte[]&nbsp;q1,
+                                             byte[]&nbsp;q2)
+                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testDeleteWithFutureTimestamp()">
 <!--   -->
 </a>
@@ -352,6 +651,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getDeleteFamilyAction(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDeleteFamilyAction</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.AccessTestAction.html" title="interface in org.apache.hadoop.hbase.security.access">SecureTestUtil.AccessTestAction</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.462">getDeleteFamilyAction</a>(byte[]&nbsp;fam)</pre>
 </li>
 </ul>
 <a name="testCellPermissionsWithDeleteWithUserTs()">
@@ -378,6 +686,23 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="verifyUserDeniedForDeleteExactVersion(org.apache.hadoop.hbase.security.User, byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyUserDeniedForDeleteExactVersion</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.633">verifyUserDeniedForDeleteExactVersion</a>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                         byte[]&nbsp;row,
+                                         byte[]&nbsp;q1,
+                                         byte[]&nbsp;q2)
+                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testCellPermissionsForIncrementWithMultipleVersions()">
 <!--   -->
 </a>
@@ -388,6 +713,22 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
                                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyUserDeniedForIncrementMultipleVersions(org.apache.hadoop.hbase.security.User, byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyUserDeniedForIncrementMultipleVersions</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.722">verifyUserDeniedForIncrementMultipleVersions</a>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                                byte[]&nbsp;row,
+                                                byte[]&nbsp;q1)
+                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testCellPermissionsForPutWithMultipleVersions()">
@@ -402,6 +743,24 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="verifyUserDeniedForPutMultipleVersions(org.apache.hadoop.hbase.security.User, byte[], byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyUserDeniedForPutMultipleVersions</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.817">verifyUserDeniedForPutMultipleVersions</a>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                          byte[]&nbsp;row,
+                                          byte[]&nbsp;q1,
+                                          byte[]&nbsp;q2,
+                                          byte[]&nbsp;value)
+                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testCellPermissionsForCheckAndDelete()">
 <!--   -->
 </a>
@@ -412,6 +771,39 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyUserAllowedforCheckAndDelete(org.apache.hadoop.hbase.security.User, byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyUserAllowedforCheckAndDelete</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.936">verifyUserAllowedforCheckAndDelete</a>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                      byte[]&nbsp;row,
+                                      byte[]&nbsp;q1,
+                                      byte[]&nbsp;value)
+                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyUserDeniedForCheckAndDelete(org.apache.hadoop.hbase.security.User, byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyUserDeniedForCheckAndDelete</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestCellACLWithMultipleVersions.html#line.953">verifyUserDeniedForCheckAndDelete</a>(org.apache.hadoop.hbase.security.User&nbsp;user,
+                                     byte[]&nbsp;row,
+                                     byte[]&nbsp;value)
+                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 <a name="tearDown()">

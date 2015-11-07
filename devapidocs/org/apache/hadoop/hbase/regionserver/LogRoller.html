@@ -133,8 +133,40 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#lastrolltime">lastrolltime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantLock</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#rollLock">rollLock</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#rollLog">rollLog</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#rollperiod">rollperiod</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#services">services</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#threadWakeFrequency">threadWakeFrequency</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#walNeedsRoll">walNeedsRoll</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -186,6 +218,10 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#run()">run</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#scheduleFlush(byte[])">scheduleFlush</a></strong>(byte[]&nbsp;encodedRegionName)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#walRollFinished()">walRollFinished</a></strong>()</code>
 <div class="block">For testing only</div>
@@ -220,13 +256,85 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.53">LOG</a></pre>
+</li>
+</ul>
+<a name="rollLock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rollLock</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantLock</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.54">rollLock</a></pre>
+</li>
+</ul>
+<a name="rollLog">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rollLog</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.55">rollLog</a></pre>
+</li>
+</ul>
+<a name="walNeedsRoll">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>walNeedsRoll</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.56">walNeedsRoll</a></pre>
+</li>
+</ul>
+<a name="server">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>server</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.58">server</a></pre>
+</li>
+</ul>
 <a name="services">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>services</h4>
+<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.59">services</a></pre>
+</li>
+</ul>
+<a name="lastrolltime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastrolltime</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.60">lastrolltime</a></pre>
+</li>
+</ul>
+<a name="rollperiod">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rollperiod</h4>
+<pre>private final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.62">rollperiod</a></pre>
+</li>
+</ul>
+<a name="threadWakeFrequency">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>services</h4>
-<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.59">services</a></pre>
+<h4>threadWakeFrequency</h4>
+<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.63">threadWakeFrequency</a></pre>
 </li>
 </ul>
 </li>
@@ -300,6 +408,16 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html#run()">run</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" title="class in org.apache.hadoop.hbase.util">HasThread</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="scheduleFlush(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scheduleFlush</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.176">scheduleFlush</a>(byte[]&nbsp;encodedRegionName)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>encodedRegionName</code> - Encoded name of region to flush.</dd></dl>
 </li>
 </ul>
 <a name="walRollFinished()">

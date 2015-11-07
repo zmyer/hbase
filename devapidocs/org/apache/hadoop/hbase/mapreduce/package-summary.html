@@ -80,6 +80,10 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.BulkHFileVisitor.html" title="interface in org.apache.hadoop.hbase.mapreduce">LoadIncrementalHFiles.BulkHFileVisitor</a>&lt;TFamily&gt;</td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/VisibilityExpressionResolver.html" title="interface in org.apache.hadoop.hbase.mapreduce">VisibilityExpressionResolver</a></td>
 <td class="colLast">
 <div class="block">Interface to convert visibility expressions into Tags for storing along with Cells in HFiles.</div>
@@ -101,6 +105,16 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast">
 <div class="block">A job with a a map and reduce phase to count cells in a table.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/CellCounter.CellCounterMapper.html" title="class in org.apache.hadoop.hbase.mapreduce">CellCounter.CellCounterMapper</a></td>
+<td class="colLast">
+<div class="block">Mapper that runs the count.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/CellCounter.IntSumReducer.html" title="class in org.apache.hadoop.hbase.mapreduce">CellCounter.IntSumReducer</a>&lt;Key&gt;</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/CellCreator.html" title="class in org.apache.hadoop.hbase.mapreduce">CellCreator</a></td>
@@ -147,14 +161,12 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/HashTable.TableHash.html" title="class in org.apache.hadoop.hbase.mapreduce">HashTable.TableHash</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/HashTable.ResultHasher.html" title="class in org.apache.hadoop.hbase.mapreduce">HashTable.ResultHasher</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/HFileOutputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce">HFileOutputFormat</a></td>
-<td class="colLast">Deprecated
-<div class="block"><i>use <a href="../../../../../org/apache/hadoop/hbase/mapreduce/HFileOutputFormat2.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>HFileOutputFormat2</code></a> instead.</i></div>
-</td>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/HashTable.TableHash.html" title="class in org.apache.hadoop.hbase.mapreduce">HashTable.TableHash</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/HFileOutputFormat2.html" title="class in org.apache.hadoop.hbase.mapreduce">HFileOutputFormat2</a></td>
@@ -163,9 +175,19 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/HFileOutputFormat2.WriterLength.html" title="class in org.apache.hadoop.hbase.mapreduce">HFileOutputFormat2.WriterLength</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/HLogInputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce">HLogInputFormat</a></td>
 <td class="colLast">Deprecated
-<div class="block"><i>use <a href="../../../../../org/apache/hadoop/hbase/mapreduce/WALInputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>WALInputFormat</code></a></i></div>
+<div class="block"><i>use <a href="../../../../../org/apache/hadoop/hbase/mapreduce/WALInputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>WALInputFormat</code></a>.</i></div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/HLogInputFormat.HLogKeyRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce">HLogInputFormat.HLogKeyRecordReader</a></td>
+<td class="colLast">
+<div class="block"><code>RecordReader</code> that pulls out the legacy HLogKey format directly.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -237,53 +259,59 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/ImportTsv.TsvParser.html" title="class in org.apache.hadoop.hbase.mapreduce">ImportTsv.TsvParser</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/IndexBuilder.html" title="class in org.apache.hadoop.hbase.mapreduce">IndexBuilder</a></td>
 <td class="colLast">
 <div class="block">Example map/reduce job to construct index tables that can be used to quickly
  find a row based on the value of a column.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/IndexBuilder.Map.html" title="class in org.apache.hadoop.hbase.mapreduce">IndexBuilder.Map</a></td>
 <td class="colLast">
 <div class="block">Internal Mapper to be run by Hadoop.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/JarFinder.html" title="class in org.apache.hadoop.hbase.mapreduce">JarFinder</a></td>
 <td class="colLast">
 <div class="block">Finds the Jar for a class.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/JobUtil.html" title="class in org.apache.hadoop.hbase.mapreduce">JobUtil</a></td>
 <td class="colLast">
 <div class="block">Utility methods to interact with a job.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/KeyValueSerialization.html" title="class in org.apache.hadoop.hbase.mapreduce">KeyValueSerialization</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/KeyValueSerialization.KeyValueDeserializer.html" title="class in org.apache.hadoop.hbase.mapreduce">KeyValueSerialization.KeyValueDeserializer</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/KeyValueSerialization.KeyValueSerializer.html" title="class in org.apache.hadoop.hbase.mapreduce">KeyValueSerialization.KeyValueSerializer</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/KeyValueSortReducer.html" title="class in org.apache.hadoop.hbase.mapreduce">KeyValueSortReducer</a></td>
 <td class="colLast">
 <div class="block">Emits sorted KeyValues.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html" title="class in org.apache.hadoop.hbase.mapreduce">LoadIncrementalHFiles</a></td>
 <td class="colLast">
 <div class="block">Tool to load the output of HFileOutputFormat into an existing table.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.LoadQueueItem.html" title="class in org.apache.hadoop.hbase.mapreduce">LoadIncrementalHFiles.LoadQueueItem</a></td>
+<td class="colLast">
+<div class="block">Represents an HFile waiting to be loaded.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -338,6 +366,14 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/MutationSerialization.MutationDeserializer.html" title="class in org.apache.hadoop.hbase.mapreduce">MutationSerialization.MutationDeserializer</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/MutationSerialization.MutationSerializer.html" title="class in org.apache.hadoop.hbase.mapreduce">MutationSerialization.MutationSerializer</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/PutCombiner.html" title="class in org.apache.hadoop.hbase.mapreduce">PutCombiner</a>&lt;K&gt;</td>
 <td class="colLast">
 <div class="block">Combine Puts.</div>
@@ -354,9 +390,29 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/ResultSerialization.Result94Deserializer.html" title="class in org.apache.hadoop.hbase.mapreduce">ResultSerialization.Result94Deserializer</a></td>
+<td class="colLast">
+<div class="block">The following deserializer class is used to load exported file of 0.94</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/ResultSerialization.ResultDeserializer.html" title="class in org.apache.hadoop.hbase.mapreduce">ResultSerialization.ResultDeserializer</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/ResultSerialization.ResultSerializer.html" title="class in org.apache.hadoop.hbase.mapreduce">ResultSerialization.ResultSerializer</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/RowCounter.html" title="class in org.apache.hadoop.hbase.mapreduce">RowCounter</a></td>
 <td class="colLast">
 <div class="block">A job with a just a map phase to count rows.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/RowCounter.RowCounterMapper.html" title="class in org.apache.hadoop.hbase.mapreduce">RowCounter.RowCounterMapper</a></td>
+<td class="colLast">
+<div class="block">Mapper that runs the count.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -366,18 +422,26 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/SampleUploader.Uploader.html" title="class in org.apache.hadoop.hbase.mapreduce">SampleUploader.Uploader</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/SimpleTotalOrderPartitioner.html" title="class in org.apache.hadoop.hbase.mapreduce">SimpleTotalOrderPartitioner</a>&lt;VALUE&gt;</td>
 <td class="colLast">
 <div class="block">A partitioner that takes start and end keys and uses bigdecimal to figure
  which reduce a key belongs to.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/SyncTable.html" title="class in org.apache.hadoop.hbase.mapreduce">SyncTable</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/SyncTable.SyncMapper.html" title="class in org.apache.hadoop.hbase.mapreduce">SyncTable.SyncMapper</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/SyncTable.SyncMapper.CellScanner.html" title="class in org.apache.hadoop.hbase.mapreduce">SyncTable.SyncMapper.CellScanner</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -445,55 +509,77 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotInputFormat.TableSnapshotRegionSplit.html" title="class in org.apache.hadoop.hbase.mapreduce">TableSnapshotInputFormat.TableSnapshotRegionSplit</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotInputFormat.TableSnapshotRegionRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce">TableSnapshotInputFormat.TableSnapshotRegionRecordReader</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotInputFormat.TableSnapshotRegionSplit.html" title="class in org.apache.hadoop.hbase.mapreduce">TableSnapshotInputFormat.TableSnapshotRegionSplit</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotInputFormatImpl.html" title="class in org.apache.hadoop.hbase.mapreduce">TableSnapshotInputFormatImpl</a></td>
 <td class="colLast">
 <div class="block">Hadoop MR API-agnostic implementation for mapreduce over table snapshots.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotInputFormatImpl.InputSplit.html" title="class in org.apache.hadoop.hbase.mapreduce">TableSnapshotInputFormatImpl.InputSplit</a></td>
 <td class="colLast">
 <div class="block">Implementation class for InputSplit logic common between mapred and mapreduce.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSnapshotInputFormatImpl.RecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce">TableSnapshotInputFormatImpl.RecordReader</a></td>
 <td class="colLast">
 <div class="block">Implementation class for RecordReader logic common between mapred and mapreduce.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSplit.html" title="class in org.apache.hadoop.hbase.mapreduce">TableSplit</a></td>
 <td class="colLast">
 <div class="block">A table split corresponds to a key range (low, high) and an optional scanner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TextSortReducer.html" title="class in org.apache.hadoop.hbase.mapreduce">TextSortReducer</a></td>
 <td class="colLast">
 <div class="block">Emits Sorted KeyValues.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html" title="class in org.apache.hadoop.hbase.mapreduce">TsvImporterMapper</a></td>
 <td class="colLast">
 <div class="block">Write table content out to files in hdfs.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TsvImporterTextMapper.html" title="class in org.apache.hadoop.hbase.mapreduce">TsvImporterTextMapper</a></td>
 <td class="colLast">
 <div class="block">Write table content out to map output files.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/WALInputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce">WALInputFormat</a></td>
 <td class="colLast">
 <div class="block">Simple <code>InputFormat</code> for <a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal"><code>WAL</code></a> files.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/WALInputFormat.WALKeyRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce">WALInputFormat.WALKeyRecordReader</a></td>
+<td class="colLast">
+<div class="block">handler for non-deprecated WALKey version.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/WALInputFormat.WALRecordReader.html" title="class in org.apache.hadoop.hbase.mapreduce">WALInputFormat.WALRecordReader</a>&lt;K extends <a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a>&gt;</td>
+<td class="colLast">
+<div class="block"><code>RecordReader</code> for an <code>WAL</code> file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/WALInputFormat.WALSplit.html" title="class in org.apache.hadoop.hbase.mapreduce">WALInputFormat.WALSplit</a></td>
+<td class="colLast">
+<div class="block"><code>InputSplit</code> for <code>WAL</code> files.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -503,6 +589,12 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/WALPlayer.WALKeyValueMapper.html" title="class in org.apache.hadoop.hbase.mapreduce">WALPlayer.WALKeyValueMapper</a></td>
+<td class="colLast">
+<div class="block">A mapper that just writes out KeyValues.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/WALPlayer.WALMapper.html" title="class in org.apache.hadoop.hbase.mapreduce">WALPlayer.WALMapper</a></td>
 <td class="colLast">
 <div class="block">A mapper that writes out <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client"><code>Mutation</code></a> to be directly applied to
@@ -521,7 +613,23 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/CellCounter.CellCounterMapper.Counters.html" title="enum in org.apache.hadoop.hbase.mapreduce">CellCounter.CellCounterMapper.Counters</a></td>
+<td class="colLast">
+<div class="block">Counter enumeration to count the actual rows.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/RowCounter.RowCounterMapper.Counters.html" title="enum in org.apache.hadoop.hbase.mapreduce">RowCounter.RowCounterMapper.Counters</a></td>
+<td class="colLast">
+<div class="block">Counter enumeration to count the actual rows.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/SyncTable.SyncMapper.Counter.html" title="enum in org.apache.hadoop.hbase.mapreduce">SyncTable.SyncMapper.Counter</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableSplit.Version.html" title="enum in org.apache.hadoop.hbase.mapreduce">TableSplit.Version</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>

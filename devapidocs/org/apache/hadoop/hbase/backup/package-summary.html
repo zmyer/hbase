@@ -81,6 +81,45 @@
  for a HRegion from the <code>FileSystem</code>.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/backup/HFileArchiver.File.html" title="class in org.apache.hadoop.hbase.backup">HFileArchiver.File</a></td>
+<td class="colLast">
+<div class="block">Wrapper to handle file operations uniformly</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/backup/HFileArchiver.FileablePath.html" title="class in org.apache.hadoop.hbase.backup">HFileArchiver.FileablePath</a></td>
+<td class="colLast">
+<div class="block">A <a href="../../../../../org/apache/hadoop/hbase/backup/HFileArchiver.File.html" title="class in org.apache.hadoop.hbase.backup"><code>HFileArchiver.File</code></a> that wraps a simple <code>Path</code> on a <code>FileSystem</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/backup/HFileArchiver.FileableStoreFile.html" title="class in org.apache.hadoop.hbase.backup">HFileArchiver.FileableStoreFile</a></td>
+<td class="colLast">
+<div class="block"><a href="../../../../../org/apache/hadoop/hbase/backup/HFileArchiver.File.html" title="class in org.apache.hadoop.hbase.backup"><code>HFileArchiver.File</code></a> adapter for a <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver"><code>StoreFile</code></a> living on a <code>FileSystem</code>
+ .</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/backup/HFileArchiver.FileConverter.html" title="class in org.apache.hadoop.hbase.backup">HFileArchiver.FileConverter</a>&lt;T&gt;</td>
+<td class="colLast">
+<div class="block">Adapt a type to match the <a href="../../../../../org/apache/hadoop/hbase/backup/HFileArchiver.File.html" title="class in org.apache.hadoop.hbase.backup"><code>HFileArchiver.File</code></a> interface, which is used internally for handling
+ archival/removal of files</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/backup/HFileArchiver.FileStatusConverter.html" title="class in org.apache.hadoop.hbase.backup">HFileArchiver.FileStatusConverter</a></td>
+<td class="colLast">
+<div class="block">Convert a FileStatus to something we can manage in the archiving</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/backup/HFileArchiver.StoreToFile.html" title="class in org.apache.hadoop.hbase.backup">HFileArchiver.StoreToFile</a></td>
+<td class="colLast">
+<div class="block">Convert the <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver"><code>StoreFile</code></a> into something we can manage in the archive
+ methods</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>

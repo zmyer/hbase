@@ -128,7 +128,7 @@ implements org.apache.hadoop.hbase.thrift.generated.Hbase.Iface</pre>
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.thrift.ThriftServerRunner.HBaseHandler</h3>
-<code>conf, LOG, nextScannerId, scannerMap</code></li>
+<code>CLEANUP_INTERVAL, coalescer, conf, LOG, MAX_IDLETIME, nextScannerId, scannerMap</code></li>
 </ul>
 </li>
 </ul>
@@ -173,7 +173,7 @@ implements org.apache.hadoop.hbase.thrift.generated.Hbase.Iface</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.thrift.ThriftServerRunner.HBaseHandler</h3>
-<code>addScanner, append, atomicIncrement, atomicIncrement, checkAndPut, compact, createTable, deleteAll, deleteAllRow, deleteAllRowTs, deleteAllTs, deleteTable, disableTable, enableTable, get, get, getColumnDescriptors, getRegionInfo, getRow, getRows, getRowsTs, getRowsWithColumns, getRowsWithColumnsTs, getRowTs, getRowWithColumns, getRowWithColumnsTs, getScanner, getTable, getTable, getTableRegions, getVer, getVer, getVerTs, getVerTs, increment, incrementRows, isTableEnabled, majorCompact, mutateRow, mutateRows, mutateRowsTs, mutateRowTs, removeScanner, scannerClose, scannerGet, scannerGetList, scannerOpen, scannerOpenTs, scannerOpenWithPrefix, scannerOpenWithScan, scannerOpenWithStop, scannerOpenWithStopTs</code></li>
+<code><clinit>, addScanner, append, atomicIncrement, atomicIncrement, checkAndPut, compact, createTable, deleteAll, deleteAllRow, deleteAllRowTs, deleteAllTs, deleteTable, disableTable, enableTable, get, get, getAllColumns, getColumnDescriptors, getRegionInfo, getRow, getRows, getRowsTs, getRowsWithColumns, getRowsWithColumnsTs, getRowTs, getRowWithColumns, getRowWithColumnsTs, getScanner, getTable, getTable, getTableRegions, getVer, getVer, getVerTs, getVerTs, increment, incrementRows, isTableEnabled, majorCompact, mutateRow, mutateRows, mutateRowsTs, mutateRowTs, removeScanner, scannerClose, scannerGet, scannerGetList, scannerOpen, scannerOpenTs, scannerOpenWithPrefix, scannerOpenWithScan, scannerOpenWithStop, scannerOpenWithStopTs, setEffectiveUser</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">

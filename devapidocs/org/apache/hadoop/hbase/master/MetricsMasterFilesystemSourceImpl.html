@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.metrics.BaseSourceImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -120,6 +120,29 @@ implements <a href="../../../../../org/apache/hadoop/hbase/master/MetricsMasterF
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MetricsMasterFilesystemSourceImpl.html#metaSplitSizeHisto">metaSplitSizeHisto</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MetricsMasterFilesystemSourceImpl.html#metaSplitTimeHisto">metaSplitTimeHisto</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MetricsMasterFilesystemSourceImpl.html#splitSizeHisto">splitSizeHisto</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MetricsMasterFilesystemSourceImpl.html#splitTimeHisto">splitTimeHisto</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.metrics.BaseSourceImpl">
 <!--   -->
@@ -230,6 +253,50 @@ implements <a href="../../../../../org/apache/hadoop/hbase/master/MetricsMasterF
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="splitSizeHisto">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>splitSizeHisto</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/MetricsMasterFilesystemSourceImpl.html#line.28">splitSizeHisto</a></pre>
+</li>
+</ul>
+<a name="splitTimeHisto">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>splitTimeHisto</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/MetricsMasterFilesystemSourceImpl.html#line.29">splitTimeHisto</a></pre>
+</li>
+</ul>
+<a name="metaSplitTimeHisto">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>metaSplitTimeHisto</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/MetricsMasterFilesystemSourceImpl.html#line.30">metaSplitTimeHisto</a></pre>
+</li>
+</ul>
+<a name="metaSplitSizeHisto">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>metaSplitSizeHisto</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/MetricsMasterFilesystemSourceImpl.html#line.31">metaSplitSizeHisto</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -386,13 +453,13 @@ implements <a href="../../../../../org/apache/hadoop/hbase/master/MetricsMasterF
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.metrics.BaseSourceImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

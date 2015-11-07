@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -126,6 +126,57 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </table>
 </li>
 </ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#f">f</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#hriPrimary">hriPrimary</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#hriSecondary">hriSecondary</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#HTU">HTU</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#NB_SERVERS">NB_SERVERS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#REFRESH_PERIOD">REFRESH_PERIOD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#row">row</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#table">table</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -172,58 +223,104 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#beforeClass()">beforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#checkRegionIsClosed(java.lang.String)">checkRegionIsClosed</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedRegionName)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#checkRegionIsOpened(org.apache.hadoop.hbase.HRegionInfo)">checkRegionIsOpened</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#closeRegion(org.apache.hadoop.hbase.HRegionInfo)">closeRegion</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#flushRegion(org.apache.hadoop.hbase.HRegionInfo)">flushRegion</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;regionInfo)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegionServer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#getRS()">getRS</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#isRegionOpened(org.apache.hadoop.hbase.HRegionInfo)">isRegionOpened</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#openRegion(org.apache.hadoop.hbase.HRegionInfo)">openRegion</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#runMultipleScansOfOneType(boolean,%20boolean)">runMultipleScansOfOneType</a></strong>(boolean&nbsp;reversed,
+                                                  boolean&nbsp;small)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#scanWithReplicas(boolean,%20boolean,%20org.apache.hadoop.hbase.client.Consistency,%20int,%20long,%20byte[],%20int,%20int,%20boolean,%20boolean)">scanWithReplicas</a></strong>(boolean&nbsp;reversed,
+                                boolean&nbsp;small,
+                                org.apache.hadoop.hbase.client.Consistency&nbsp;consistency,
+                                int&nbsp;caching,
+                                long&nbsp;maxResultSize,
+                                byte[]&nbsp;startRow,
+                                int&nbsp;numRows,
+                                int&nbsp;numCols,
+                                boolean&nbsp;staleExpected,
+                                boolean&nbsp;slowNext)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testCancelOfMultiGet()">testCancelOfMultiGet</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testCancelOfScan()">testCancelOfScan</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testFlushPrimary()">testFlushPrimary</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testFlushSecondary()">testFlushSecondary</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testFlushTable()">testFlushTable</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testGetNoResultNoStaleRegionWithReplica()">testGetNoResultNoStaleRegionWithReplica</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testGetNoResultNotStaleSleepRegionWithReplica()">testGetNoResultNotStaleSleepRegionWithReplica</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testGetNoResultStaleRegionWithReplica()">testGetNoResultStaleRegionWithReplica</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testLocations()">testLocations</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testReverseScanWithReplicas()">testReverseScanWithReplicas</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testScanWithReplicas()">testScanWithReplicas</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testSmallScanWithReplicas()">testSmallScanWithReplicas</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testUseRegionWithoutReplica()">testUseRegionWithoutReplica</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html#testUseRegionWithReplica()">testUseRegionWithReplica</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -243,6 +340,97 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.81">LOG</a></pre>
+</li>
+</ul>
+<a name="NB_SERVERS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NB_SERVERS</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.87">NB_SERVERS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.TestReplicasClient.NB_SERVERS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="table">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>table</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.88">table</a></pre>
+</li>
+</ul>
+<a name="row">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>row</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.89">row</a></pre>
+</li>
+</ul>
+<a name="hriPrimary">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hriPrimary</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.HRegionInfo <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.91">hriPrimary</a></pre>
+</li>
+</ul>
+<a name="hriSecondary">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hriSecondary</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.HRegionInfo <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.92">hriSecondary</a></pre>
+</li>
+</ul>
+<a name="HTU">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HTU</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.94">HTU</a></pre>
+</li>
+</ul>
+<a name="f">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>f</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.95">f</a></pre>
+</li>
+</ul>
+<a name="REFRESH_PERIOD">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>REFRESH_PERIOD</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.97">REFRESH_PERIOD</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.TestReplicasClient.REFRESH_PERIOD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -314,6 +502,87 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code>org.apache.zookeeper.KeeperException</code></dd></dl>
+</li>
+</ul>
+<a name="getRS()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRS</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegionServer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.232">getRS</a>()</pre>
+</li>
+</ul>
+<a name="openRegion(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>openRegion</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.236">openRegion</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="closeRegion(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>closeRegion</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.250">closeRegion</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkRegionIsOpened(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkRegionIsOpened</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.260">checkRegionIsOpened</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="isRegionOpened(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRegionOpened</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.266">isRegionOpened</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkRegionIsClosed(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkRegionIsClosed</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.270">checkRegionIsClosed</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedRegionName)
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="flushRegion(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>flushRegion</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.285">flushRegion</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;regionInfo)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testUseRegionWithoutReplica()">
@@ -475,11 +744,45 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testCancelOfScan()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testCancelOfScan</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.615">testCancelOfScan</a>()
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="runMultipleScansOfOneType(boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runMultipleScansOfOneType</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.662">runMultipleScansOfOneType</a>(boolean&nbsp;reversed,
+                             boolean&nbsp;small)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanWithReplicas(boolean, boolean, org.apache.hadoop.hbase.client.Consistency, int, long, byte[], int, int, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>scanWithReplicas</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestReplicasClient.html#line.743">scanWithReplicas</a>(boolean&nbsp;reversed,
+                    boolean&nbsp;small,
+                    org.apache.hadoop.hbase.client.Consistency&nbsp;consistency,
+                    int&nbsp;caching,
+                    long&nbsp;maxResultSize,
+                    byte[]&nbsp;startRow,
+                    int&nbsp;numRows,
+                    int&nbsp;numCols,
+                    boolean&nbsp;staleExpected,
+                    boolean&nbsp;slowNext)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -536,13 +839,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

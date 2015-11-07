@@ -111,7 +111,7 @@
 <a class="jxr_linenumber" name="101" href="#101">101</a> <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="102" href="#102">102</a> <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="103" href="#103">103</a> @InterfaceAudience.Private
-<a class="jxr_linenumber" name="104" href="#104">104</a> <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html">SecureBulkLoadEndpoint</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/SecureBulkLoadProtos.html">SecureBulkLoadService</a>
+<a class="jxr_linenumber" name="104" href="#104">104</a> <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html">SecureBulkLoadEndpoint</a> <strong class="jxr_keyword">extends</strong> SecureBulkLoadService
 <a class="jxr_linenumber" name="105" href="#105">105</a>     <strong class="jxr_keyword">implements</strong> CoprocessorService, <a href="../../../../../../org/apache/hadoop/hbase/Coprocessor.html">Coprocessor</a> {
 <a class="jxr_linenumber" name="106" href="#106">106</a> 
 <a class="jxr_linenumber" name="107" href="#107">107</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> VERSION = 0L;
@@ -170,7 +170,7 @@
 <a class="jxr_linenumber" name="160" href="#160">160</a> 
 <a class="jxr_linenumber" name="161" href="#161">161</a>   @Override
 <a class="jxr_linenumber" name="162" href="#162">162</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> prepareBulkLoad(RpcController controller,
-<a class="jxr_linenumber" name="163" href="#163">163</a>                                                  <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/SecureBulkLoadProtos.html">PrepareBulkLoadRequest</a> request,
+<a class="jxr_linenumber" name="163" href="#163">163</a>                                                  PrepareBulkLoadRequest request,
 <a class="jxr_linenumber" name="164" href="#164">164</a>                                                  RpcCallback&lt;PrepareBulkLoadResponse&gt; done){
 <a class="jxr_linenumber" name="165" href="#165">165</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="166" href="#166">166</a>       List&lt;BulkLoadObserver&gt; bulkLoadObservers = getBulkLoadObservers();
@@ -196,7 +196,7 @@
 <a class="jxr_linenumber" name="186" href="#186">186</a> 
 <a class="jxr_linenumber" name="187" href="#187">187</a>   @Override
 <a class="jxr_linenumber" name="188" href="#188">188</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> cleanupBulkLoad(RpcController controller,
-<a class="jxr_linenumber" name="189" href="#189">189</a>                               <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/SecureBulkLoadProtos.html">CleanupBulkLoadRequest</a> request,
+<a class="jxr_linenumber" name="189" href="#189">189</a>                               CleanupBulkLoadRequest request,
 <a class="jxr_linenumber" name="190" href="#190">190</a>                               RpcCallback&lt;CleanupBulkLoadResponse&gt; done) {
 <a class="jxr_linenumber" name="191" href="#191">191</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="192" href="#192">192</a>       List&lt;BulkLoadObserver&gt; bulkLoadObservers = getBulkLoadObservers();
@@ -221,16 +221,16 @@
 <a class="jxr_linenumber" name="211" href="#211">211</a> 
 <a class="jxr_linenumber" name="212" href="#212">212</a>   @Override
 <a class="jxr_linenumber" name="213" href="#213">213</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> secureBulkLoadHFiles(RpcController controller,
-<a class="jxr_linenumber" name="214" href="#214">214</a>                                    <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/SecureBulkLoadProtos.html">SecureBulkLoadHFilesRequest</a> request,
+<a class="jxr_linenumber" name="214" href="#214">214</a>                                    SecureBulkLoadHFilesRequest request,
 <a class="jxr_linenumber" name="215" href="#215">215</a>                                    RpcCallback&lt;SecureBulkLoadHFilesResponse&gt; done) {
 <a class="jxr_linenumber" name="216" href="#216">216</a>     <strong class="jxr_keyword">final</strong> List&lt;Pair&lt;byte[], String&gt;&gt; familyPaths = <strong class="jxr_keyword">new</strong> ArrayList&lt;Pair&lt;byte[], String&gt;&gt;();
 <a class="jxr_linenumber" name="217" href="#217">217</a>     <strong class="jxr_keyword">for</strong>(ClientProtos.BulkLoadHFileRequest.FamilyPath el : request.getFamilyPathList()) {
 <a class="jxr_linenumber" name="218" href="#218">218</a>       familyPaths.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/util/Pair.html">Pair</a>(el.getFamily().toByteArray(),el.getPath()));
 <a class="jxr_linenumber" name="219" href="#219">219</a>     }
 <a class="jxr_linenumber" name="220" href="#220">220</a>     
-<a class="jxr_linenumber" name="221" href="#221">221</a>     <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AuthenticationProtos.html">Token</a> userToken = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="221" href="#221">221</a>     Token userToken = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="222" href="#222">222</a>     <strong class="jxr_keyword">if</strong> (userProvider.isHadoopSecurityEnabled()) {
-<a class="jxr_linenumber" name="223" href="#223">223</a>       userToken = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AuthenticationProtos.html">Token</a>(request.getFsToken().getIdentifier().toByteArray(), request.getFsToken()
+<a class="jxr_linenumber" name="223" href="#223">223</a>       userToken = <strong class="jxr_keyword">new</strong> Token(request.getFsToken().getIdentifier().toByteArray(), request.getFsToken()
 <a class="jxr_linenumber" name="224" href="#224">224</a>               .getPassword().toByteArray(), <strong class="jxr_keyword">new</strong> Text(request.getFsToken().getKind()), <strong class="jxr_keyword">new</strong> Text(
 <a class="jxr_linenumber" name="225" href="#225">225</a>               request.getFsToken().getService()));
 <a class="jxr_linenumber" name="226" href="#226">226</a>     }

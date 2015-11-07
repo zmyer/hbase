@@ -82,6 +82,10 @@
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure">org.apache.hadoop.hbase.procedure</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure.flush">org.apache.hadoop.hbase.procedure.flush</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -91,6 +95,36 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a> in <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/package-summary.html">org.apache.hadoop.hbase.master.snapshot</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/package-summary.html">org.apache.hadoop.hbase.master.snapshot</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></code></td>
+<td class="colLast"><span class="strong">EnabledTableSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/EnabledTableSnapshotHandler.html#coordinator">coordinator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></code></td>
+<td class="colLast"><span class="strong">SnapshotManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotManager.html#coordinator">coordinator</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/package-summary.html">org.apache.hadoop.hbase.master.snapshot</a> that return <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></code></td>
+<td class="colLast"><span class="strong">SnapshotManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotManager.html#getCoordinator()">getCoordinator</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/package-summary.html">org.apache.hadoop.hbase.master.snapshot</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -120,6 +154,10 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></code></td>
+<td class="colLast"><span class="strong">Procedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Procedure.html#coord">coord</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></code></td>
 <td class="colLast"><span class="strong">ZKProcedureCoordinatorRpcs.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/ZKProcedureCoordinatorRpcs.html#coordinator">coordinator</a></strong></code>&nbsp;</td>
 </tr>
@@ -172,6 +210,24 @@
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;expectedMembers)</code>
 <div class="block">Create a procedure.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.procedure.flush">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a> in <a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/package-summary.html">org.apache.hadoop.hbase.procedure.flush</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/package-summary.html">org.apache.hadoop.hbase.procedure.flush</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureCoordinator.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureCoordinator</a></code></td>
+<td class="colLast"><span class="strong">MasterFlushTableProcedureManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/MasterFlushTableProcedureManager.html#coordinator">coordinator</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

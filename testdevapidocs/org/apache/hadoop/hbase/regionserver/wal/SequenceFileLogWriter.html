@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.WriterBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -126,6 +126,37 @@ extends org.apache.hadoop.hbase.regionserver.wal.WriterBase</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.io.Text</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#DICTIONARY_COMPRESSION_TYPE">DICTIONARY_COMPRESSION_TYPE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.io.Text</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#WAL_COMPRESSION_TYPE_KEY">WAL_COMPRESSION_TYPE_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.io.Text</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#WAL_VERSION_KEY">WAL_VERSION_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.io.SequenceFile.Writer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#writer">writer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FSDataOutputStream</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#writer_out">writer_out</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.WriterBase">
 <!--   -->
@@ -175,8 +206,20 @@ extends org.apache.hadoop.hbase.regionserver.wal.WriterBase</pre>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#close()">close</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.io.SequenceFile.Metadata</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#createMetadata(org.apache.hadoop.conf.Configuration,%20boolean)">createMetadata</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                            boolean&nbsp;compress)</code>
+<div class="block">Create sequence file Metadata for our WAL file with version and compression
+ type (if any).</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#getLength()">getLength</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FSDataOutputStream</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#getSequenceFilePrivateFSDataOutputStreamAccessible()">getSequenceFilePrivateFSDataOutputStreamAccessible</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.fs.FSDataOutputStream</code></td>
@@ -216,6 +259,68 @@ extends org.apache.hadoop.hbase.regionserver.wal.WriterBase</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#line.56">LOG</a></pre>
+</li>
+</ul>
+<a name="writer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writer</h4>
+<pre>private&nbsp;org.apache.hadoop.io.SequenceFile.Writer <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#line.58">writer</a></pre>
+</li>
+</ul>
+<a name="writer_out">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writer_out</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FSDataOutputStream <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#line.61">writer_out</a></pre>
+</li>
+</ul>
+<a name="WAL_VERSION_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WAL_VERSION_KEY</h4>
+<pre>private static final&nbsp;org.apache.hadoop.io.Text <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#line.64">WAL_VERSION_KEY</a></pre>
+</li>
+</ul>
+<a name="WAL_COMPRESSION_TYPE_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WAL_COMPRESSION_TYPE_KEY</h4>
+<pre>private static final&nbsp;org.apache.hadoop.io.Text <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#line.65">WAL_COMPRESSION_TYPE_KEY</a></pre>
+</li>
+</ul>
+<a name="DICTIONARY_COMPRESSION_TYPE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DICTIONARY_COMPRESSION_TYPE</h4>
+<pre>private static final&nbsp;org.apache.hadoop.io.Text <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#line.66">DICTIONARY_COMPRESSION_TYPE</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -240,6 +345,20 @@ extends org.apache.hadoop.hbase.regionserver.wal.WriterBase</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="createMetadata(org.apache.hadoop.conf.Configuration, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createMetadata</h4>
+<pre>private static&nbsp;org.apache.hadoop.io.SequenceFile.Metadata&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#line.81">createMetadata</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                        boolean&nbsp;compress)</pre>
+<div class="block">Create sequence file Metadata for our WAL file with version and compression
+ type (if any).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - </dd><dd><code>compress</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>Metadata instance.</dd></dl>
+</li>
+</ul>
 <a name="init(org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path, org.apache.hadoop.conf.Configuration, boolean)">
 <!--   -->
 </a>
@@ -257,6 +376,18 @@ extends org.apache.hadoop.hbase.regionserver.wal.WriterBase</pre>
 <dt><strong>Overrides:</strong></dt>
 <dd><code>init</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.wal.WriterBase</code></dd>
 <dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getSequenceFilePrivateFSDataOutputStreamAccessible()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSequenceFilePrivateFSDataOutputStreamAccessible</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FSDataOutputStream&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/SequenceFileLogWriter.html#line.148">getSequenceFilePrivateFSDataOutputStreamAccessible</a>()
+                                                                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -371,13 +502,13 @@ extends org.apache.hadoop.hbase.regionserver.wal.WriterBase</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.WriterBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

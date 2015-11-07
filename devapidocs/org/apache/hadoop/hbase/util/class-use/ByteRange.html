@@ -95,6 +95,14 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -374,6 +382,103 @@
 <td class="colLast"><span class="strong">MemStoreLAB.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreLAB.html#allocateBytes(int)">allocateBytes</a></strong>(int&nbsp;size)</code>
 <div class="block">Allocate a slice of the given length.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.security.access">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a> in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></code></td>
+<td class="colLast"><span class="strong">AccessControlFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessControlFilter.html#prevFam">prevFam</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></code></td>
+<td class="colLast"><span class="strong">AccessControlFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessControlFilter.html#prevQual">prevQual</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a> with type parameters of type <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><span class="strong">AccessControlFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessControlFilter.html#cfVsMaxVersions">cfVsMaxVersions</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructor parameters in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a> with type arguments of type <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessControlFilter.html#AccessControlFilter(org.apache.hadoop.hbase.security.access.TableAuthManager,%20org.apache.hadoop.hbase.security.User,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.security.access.AccessControlFilter.Strategy,%20java.util.Map)">AccessControlFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/security/access/TableAuthManager.html" title="class in org.apache.hadoop.hbase.security.access">TableAuthManager</a>&nbsp;mgr,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;ugi,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessControlFilter.Strategy.html" title="enum in org.apache.hadoop.hbase.security.access">AccessControlFilter.Strategy</a>&nbsp;strategy,
+                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;cfVsMaxVersions)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.security.visibility">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a> in <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></code></td>
+<td class="colLast"><span class="strong">VisibilityLabelFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityLabelFilter.html#curFamily">curFamily</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></code></td>
+<td class="colLast"><span class="strong">VisibilityLabelFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityLabelFilter.html#curQualifier">curQualifier</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a> with type parameters of type <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><span class="strong">VisibilityLabelFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityLabelFilter.html#cfVsMaxVersions">cfVsMaxVersions</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructor parameters in <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a> with type arguments of type <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityLabelFilter.html#VisibilityLabelFilter(org.apache.hadoop.hbase.security.visibility.VisibilityExpEvaluator,%20java.util.Map)">VisibilityLabelFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityExpEvaluator.html" title="interface in org.apache.hadoop.hbase.security.visibility">VisibilityExpEvaluator</a>&nbsp;expEvaluator,
+                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util">ByteRange</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;cfVsMaxVersions)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

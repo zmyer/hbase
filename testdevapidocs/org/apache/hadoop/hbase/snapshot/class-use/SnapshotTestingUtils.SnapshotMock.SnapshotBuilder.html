@@ -75,6 +75,10 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.snapshot">org.apache.hadoop.hbase.master.snapshot</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.snapshot">org.apache.hadoop.hbase.snapshot</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -83,6 +87,47 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.master.snapshot">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a> in <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/package-summary.html">org.apache.hadoop.hbase.master.snapshot</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/package-summary.html">org.apache.hadoop.hbase.master.snapshot</a> that return <a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a></code></td>
+<td class="colLast"><span class="strong">TestSnapshotFileCache.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotFileCache.html#createAndTestSnapshotV1(org.apache.hadoop.hbase.master.snapshot.SnapshotFileCache,%20java.lang.String,%20boolean,%20boolean)">createAndTestSnapshotV1</a></strong>(org.apache.hadoop.hbase.master.snapshot.SnapshotFileCache&nbsp;cache,
+                                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                              boolean&nbsp;tmp,
+                                              boolean&nbsp;removeOnExit)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/package-summary.html">org.apache.hadoop.hbase.master.snapshot</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">TestSnapshotFileCache.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotFileCache.html#createAndTestSnapshot(org.apache.hadoop.hbase.master.snapshot.SnapshotFileCache,%20org.apache.hadoop.hbase.snapshot.SnapshotTestingUtils.SnapshotMock.SnapshotBuilder,%20boolean,%20boolean)">createAndTestSnapshot</a></strong>(org.apache.hadoop.hbase.master.snapshot.SnapshotFileCache&nbsp;cache,
+                                          <a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a>&nbsp;builder,
+                                          boolean&nbsp;tmp,
+                                          boolean&nbsp;removeOnExit)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.FileStatus&gt;</code></td>
+<td class="colLast"><span class="strong">TestSnapshotFileCache.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TestSnapshotFileCache.html#getStoreFilesForSnapshot(org.apache.hadoop.hbase.snapshot.SnapshotTestingUtils.SnapshotMock.SnapshotBuilder)">getStoreFilesForSnapshot</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a>&nbsp;builder)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.snapshot">
 <!--   -->
 </a>
@@ -95,14 +140,36 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a></code></td>
+<td class="colLast"><span class="strong">SnapshotTestingUtils.SnapshotMock.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.html#createSnapshot(java.lang.String,%20java.lang.String,%20int)">createSnapshot</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+                            int&nbsp;version)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a></code></td>
 <td class="colLast"><span class="strong">SnapshotTestingUtils.SnapshotMock.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.html#createSnapshotV1(java.lang.String,%20java.lang.String)">createSnapshotV1</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a></code></td>
 <td class="colLast"><span class="strong">SnapshotTestingUtils.SnapshotMock.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.html#createSnapshotV2(java.lang.String,%20java.lang.String)">createSnapshotV2</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/snapshot/package-summary.html">org.apache.hadoop.hbase.snapshot</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">TestExportSnapshot.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/TestExportSnapshot.html#testSnapshotWithRefsExportFileSystemState(org.apache.hadoop.hbase.snapshot.SnapshotTestingUtils.SnapshotMock.SnapshotBuilder)">testSnapshotWithRefsExportFileSystemState</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.SnapshotMock.SnapshotBuilder.html" title="class in org.apache.hadoop.hbase.snapshot">SnapshotTestingUtils.SnapshotMock.SnapshotBuilder</a>&nbsp;builder)</code>
+<div class="block">Generates a couple of regions for the specified SnapshotMock,
+ and then it will run the export and verification.</div>
+</td>
 </tr>
 </tbody>
 </table>

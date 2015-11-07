@@ -82,7 +82,7 @@
 <a class="jxr_linenumber" name="72" href="#72">72</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">long</strong> startTime;
 <a class="jxr_linenumber" name="73" href="#73">73</a>  
 <a class="jxr_linenumber" name="74" href="#74">74</a>    <em class="jxr_comment">// runtime state, updated every operation</em>
-<a class="jxr_linenumber" name="75" href="#75">75</a>    <strong class="jxr_keyword">private</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">ProcedureState</a> state = ProcedureState.INITIALIZING;
+<a class="jxr_linenumber" name="75" href="#75">75</a>    <strong class="jxr_keyword">private</strong> ProcedureState state = ProcedureState.INITIALIZING;
 <a class="jxr_linenumber" name="76" href="#76">76</a>    <strong class="jxr_keyword">private</strong> Integer timeout = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="77" href="#77">77</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong>[] stackIndexes = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="78" href="#78">78</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> childrenLatch = 0;
@@ -102,7 +102,7 @@
 <a class="jxr_linenumber" name="92" href="#92">92</a>  <em class="jxr_javadoccomment">   * @throws ProcedureYieldException the procedure will be added back to the queue and retried later</em>
 <a class="jxr_linenumber" name="93" href="#93">93</a>  <em class="jxr_javadoccomment">   * @throws InterruptedException the procedure will be added back to the queue and retried later</em>
 <a class="jxr_linenumber" name="94" href="#94">94</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="95" href="#95">95</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">abstract</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a>[] execute(TEnvironment env)
+<a class="jxr_linenumber" name="95" href="#95">95</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">abstract</strong> <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a>[] execute(TEnvironment env)
 <a class="jxr_linenumber" name="96" href="#96">96</a>      <strong class="jxr_keyword">throws</strong> ProcedureYieldException, InterruptedException;
 <a class="jxr_linenumber" name="97" href="#97">97</a>  
 <a class="jxr_linenumber" name="98" href="#98">98</a>    <em class="jxr_javadoccomment">/**</em>
@@ -386,13 +386,13 @@
 <a class="jxr_linenumber" name="376" href="#376">376</a> 
 <a class="jxr_linenumber" name="377" href="#377">377</a>   @VisibleForTesting
 <a class="jxr_linenumber" name="378" href="#378">378</a>   @InterfaceAudience.Private
-<a class="jxr_linenumber" name="379" href="#379">379</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">synchronized</strong> <strong class="jxr_keyword">void</strong> setState(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">ProcedureState</a> state) {
+<a class="jxr_linenumber" name="379" href="#379">379</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">synchronized</strong> <strong class="jxr_keyword">void</strong> setState(<strong class="jxr_keyword">final</strong> ProcedureState state) {
 <a class="jxr_linenumber" name="380" href="#380">380</a>     <strong class="jxr_keyword">this</strong>.state = state;
 <a class="jxr_linenumber" name="381" href="#381">381</a>     updateTimestamp();
 <a class="jxr_linenumber" name="382" href="#382">382</a>   }
 <a class="jxr_linenumber" name="383" href="#383">383</a> 
 <a class="jxr_linenumber" name="384" href="#384">384</a>   @InterfaceAudience.Private
-<a class="jxr_linenumber" name="385" href="#385">385</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">synchronized</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">ProcedureState</a> getState() {
+<a class="jxr_linenumber" name="385" href="#385">385</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">synchronized</strong> ProcedureState getState() {
 <a class="jxr_linenumber" name="386" href="#386">386</a>     <strong class="jxr_keyword">return</strong> state;
 <a class="jxr_linenumber" name="387" href="#387">387</a>   }
 <a class="jxr_linenumber" name="388" href="#388">388</a> 
@@ -455,7 +455,7 @@
 <a class="jxr_linenumber" name="445" href="#445">445</a> <em class="jxr_javadoccomment">   * user-level code execute().</em>
 <a class="jxr_linenumber" name="446" href="#446">446</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="447" href="#447">447</a>   @InterfaceAudience.Private
-<a class="jxr_linenumber" name="448" href="#448">448</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a>[] doExecute(<strong class="jxr_keyword">final</strong> TEnvironment env)
+<a class="jxr_linenumber" name="448" href="#448">448</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a>[] doExecute(<strong class="jxr_keyword">final</strong> TEnvironment env)
 <a class="jxr_linenumber" name="449" href="#449">449</a>       <strong class="jxr_keyword">throws</strong> ProcedureYieldException, InterruptedException {
 <a class="jxr_linenumber" name="450" href="#450">450</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="451" href="#451">451</a>       updateTimestamp();
@@ -577,7 +577,7 @@
 <a class="jxr_linenumber" name="567" href="#567">567</a>   }
 <a class="jxr_linenumber" name="568" href="#568">568</a> 
 <a class="jxr_linenumber" name="569" href="#569">569</a>   @Override
-<a class="jxr_linenumber" name="570" href="#570">570</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> compareTo(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a> other) {
+<a class="jxr_linenumber" name="570" href="#570">570</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> compareTo(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a> other) {
 <a class="jxr_linenumber" name="571" href="#571">571</a>     <strong class="jxr_keyword">long</strong> diff = getProcId() - other.getProcId();
 <a class="jxr_linenumber" name="572" href="#572">572</a>     <strong class="jxr_keyword">return</strong> (diff &lt; 0) ? -1 : (diff &gt; 0) ? 1 : 0;
 <a class="jxr_linenumber" name="573" href="#573">573</a>   }
@@ -600,7 +600,7 @@
 <a class="jxr_linenumber" name="590" href="#590">590</a> <em class="jxr_comment">   * Helper to lookup the root Procedure ID given a specified procedure.</em>
 <a class="jxr_linenumber" name="591" href="#591">591</a> <em class="jxr_comment">   */</em>
 <a class="jxr_linenumber" name="592" href="#592">592</a>   @InterfaceAudience.Private
-<a class="jxr_linenumber" name="593" href="#593">593</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> Long getRootProcedureId(<strong class="jxr_keyword">final</strong> Map&lt;Long, Procedure&gt; procedures, <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a> proc) {
+<a class="jxr_linenumber" name="593" href="#593">593</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> Long getRootProcedureId(<strong class="jxr_keyword">final</strong> Map&lt;Long, Procedure&gt; procedures, <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a> proc) {
 <a class="jxr_linenumber" name="594" href="#594">594</a>     <strong class="jxr_keyword">while</strong> (proc.hasParent()) {
 <a class="jxr_linenumber" name="595" href="#595">595</a>       proc = procedures.get(proc.getParentProcId());
 <a class="jxr_linenumber" name="596" href="#596">596</a>       <strong class="jxr_keyword">if</strong> (proc == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
@@ -608,7 +608,7 @@
 <a class="jxr_linenumber" name="598" href="#598">598</a>     <strong class="jxr_keyword">return</strong> proc.getProcId();
 <a class="jxr_linenumber" name="599" href="#599">599</a>   }
 <a class="jxr_linenumber" name="600" href="#600">600</a> 
-<a class="jxr_linenumber" name="601" href="#601">601</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a> newInstance(<strong class="jxr_keyword">final</strong> String className) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="601" href="#601">601</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a> newInstance(<strong class="jxr_keyword">final</strong> String className) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="602" href="#602">602</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="603" href="#603">603</a>       Class&lt;?&gt; clazz = Class.forName(className);
 <a class="jxr_linenumber" name="604" href="#604">604</a>       <strong class="jxr_keyword">if</strong> (!Modifier.isPublic(clazz.getModifiers())) {
@@ -627,7 +627,7 @@
 <a class="jxr_linenumber" name="617" href="#617">617</a>     }
 <a class="jxr_linenumber" name="618" href="#618">618</a>   }
 <a class="jxr_linenumber" name="619" href="#619">619</a> 
-<a class="jxr_linenumber" name="620" href="#620">620</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> validateClass(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a> proc) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="620" href="#620">620</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> validateClass(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a> proc) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="621" href="#621">621</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="622" href="#622">622</a>       Class&lt;?&gt; clazz = proc.getClass();
 <a class="jxr_linenumber" name="623" href="#623">623</a>       <strong class="jxr_keyword">if</strong> (!Modifier.isPublic(clazz.getModifiers())) {
@@ -649,7 +649,7 @@
 <a class="jxr_linenumber" name="639" href="#639">639</a> <em class="jxr_javadoccomment">   * Helper to create the ProcedureInfo from Procedure.</em>
 <a class="jxr_linenumber" name="640" href="#640">640</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="641" href="#641">641</a>   @InterfaceAudience.Private
-<a class="jxr_linenumber" name="642" href="#642">642</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/ProcedureInfo.html">ProcedureInfo</a> createProcedureInfo(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a> proc, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/util/NonceKey.html">NonceKey</a> nonceKey) {
+<a class="jxr_linenumber" name="642" href="#642">642</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/ProcedureInfo.html">ProcedureInfo</a> createProcedureInfo(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a> proc, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/util/NonceKey.html">NonceKey</a> nonceKey) {
 <a class="jxr_linenumber" name="643" href="#643">643</a>     <a href="../../../../../org/apache/hadoop/hbase/procedure2/RemoteProcedureException.html">RemoteProcedureException</a> exception;
 <a class="jxr_linenumber" name="644" href="#644">644</a> 
 <a class="jxr_linenumber" name="645" href="#645">645</a>     <strong class="jxr_keyword">if</strong> (proc.hasException()) {
@@ -681,7 +681,7 @@
 <a class="jxr_linenumber" name="671" href="#671">671</a> <em class="jxr_javadoccomment">   * Used by ProcedureStore implementations.</em>
 <a class="jxr_linenumber" name="672" href="#672">672</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="673" href="#673">673</a>   @InterfaceAudience.Private
-<a class="jxr_linenumber" name="674" href="#674">674</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ProcedureProtos.Procedure convert(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a> proc)
+<a class="jxr_linenumber" name="674" href="#674">674</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ProcedureProtos.Procedure convert(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a> proc)
 <a class="jxr_linenumber" name="675" href="#675">675</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="676" href="#676">676</a>     Preconditions.checkArgument(proc != <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="677" href="#677">677</a>     validateClass(proc);
@@ -747,10 +747,10 @@
 <a class="jxr_linenumber" name="737" href="#737">737</a> <em class="jxr_javadoccomment">   *                     may take advantage of it by storing the data only on insert().</em>
 <a class="jxr_linenumber" name="738" href="#738">738</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="739" href="#739">739</a>   @InterfaceAudience.Private
-<a class="jxr_linenumber" name="740" href="#740">740</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a> convert(<strong class="jxr_keyword">final</strong> ProcedureProtos.Procedure proto)
+<a class="jxr_linenumber" name="740" href="#740">740</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a> convert(<strong class="jxr_keyword">final</strong> ProcedureProtos.Procedure proto)
 <a class="jxr_linenumber" name="741" href="#741">741</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="742" href="#742">742</a>     <em class="jxr_comment">// Procedure from class name</em>
-<a class="jxr_linenumber" name="743" href="#743">743</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">Procedure</a> proc = Procedure.newInstance(proto.getClassName());
+<a class="jxr_linenumber" name="743" href="#743">743</a>     <a href="../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html">Procedure</a> proc = Procedure.newInstance(proto.getClassName());
 <a class="jxr_linenumber" name="744" href="#744">744</a> 
 <a class="jxr_linenumber" name="745" href="#745">745</a>     <em class="jxr_comment">// set fields</em>
 <a class="jxr_linenumber" name="746" href="#746">746</a>     proc.setProcId(proto.getProcId());

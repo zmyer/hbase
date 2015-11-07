@@ -203,7 +203,7 @@
 <a class="jxr_linenumber" name="193" href="#193">193</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> replicaId = DEFAULT_REPLICA_ID;
 <a class="jxr_linenumber" name="194" href="#194">194</a> 
 <a class="jxr_linenumber" name="195" href="#195">195</a>   <em class="jxr_comment">// Current TableName</em>
-<a class="jxr_linenumber" name="196" href="#196">196</a>   <strong class="jxr_keyword">private</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> tableName = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="196" href="#196">196</a>   <strong class="jxr_keyword">private</strong> <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="197" href="#197">197</a>   <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> String DISPLAY_KEYS_KEY = <span class="jxr_string">"hbase.display.keys"</span>;
 <a class="jxr_linenumber" name="198" href="#198">198</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte[] HIDDEN_END_KEY = Bytes.toBytes(<span class="jxr_string">"hidden-end-key"</span>);
 <a class="jxr_linenumber" name="199" href="#199">199</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte[] HIDDEN_START_KEY = Bytes.toBytes(<span class="jxr_string">"hidden-start-key"</span>);
@@ -228,11 +228,11 @@
 <a class="jxr_linenumber" name="218" href="#218">218</a> <em class="jxr_javadoccomment">   * Private constructor used constructing HRegionInfo for the</em>
 <a class="jxr_linenumber" name="219" href="#219">219</a> <em class="jxr_javadoccomment">   * first meta regions</em>
 <a class="jxr_linenumber" name="220" href="#220">220</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="221" href="#221">221</a>   <strong class="jxr_keyword">private</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">long</strong> regionId, <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> tableName) {
+<a class="jxr_linenumber" name="221" href="#221">221</a>   <strong class="jxr_keyword">private</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">long</strong> regionId, <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName) {
 <a class="jxr_linenumber" name="222" href="#222">222</a>     <strong class="jxr_keyword">this</strong>(regionId, tableName, DEFAULT_REPLICA_ID);
 <a class="jxr_linenumber" name="223" href="#223">223</a>   }
 <a class="jxr_linenumber" name="224" href="#224">224</a> 
-<a class="jxr_linenumber" name="225" href="#225">225</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">long</strong> regionId, <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> tableName, <strong class="jxr_keyword">int</strong> replicaId) {
+<a class="jxr_linenumber" name="225" href="#225">225</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">long</strong> regionId, <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">int</strong> replicaId) {
 <a class="jxr_linenumber" name="226" href="#226">226</a>     <strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="227" href="#227">227</a>     <strong class="jxr_keyword">this</strong>.regionId = regionId;
 <a class="jxr_linenumber" name="228" href="#228">228</a>     <strong class="jxr_keyword">this</strong>.tableName = tableName;
@@ -242,7 +242,7 @@
 <a class="jxr_linenumber" name="232" href="#232">232</a>     setHashCode();
 <a class="jxr_linenumber" name="233" href="#233">233</a>   }
 <a class="jxr_linenumber" name="234" href="#234">234</a> 
-<a class="jxr_linenumber" name="235" href="#235">235</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> tableName) {
+<a class="jxr_linenumber" name="235" href="#235">235</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName) {
 <a class="jxr_linenumber" name="236" href="#236">236</a>     <strong class="jxr_keyword">this</strong>(tableName, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="237" href="#237">237</a>   }
 <a class="jxr_linenumber" name="238" href="#238">238</a> 
@@ -254,7 +254,7 @@
 <a class="jxr_linenumber" name="244" href="#244">244</a> <em class="jxr_javadoccomment">   * @param endKey end of key range</em>
 <a class="jxr_linenumber" name="245" href="#245">245</a> <em class="jxr_javadoccomment">   * @throws IllegalArgumentException</em>
 <a class="jxr_linenumber" name="246" href="#246">246</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="247" href="#247">247</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> byte[] startKey, <strong class="jxr_keyword">final</strong> byte[] endKey)
+<a class="jxr_linenumber" name="247" href="#247">247</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> byte[] startKey, <strong class="jxr_keyword">final</strong> byte[] endKey)
 <a class="jxr_linenumber" name="248" href="#248">248</a>   <strong class="jxr_keyword">throws</strong> IllegalArgumentException {
 <a class="jxr_linenumber" name="249" href="#249">249</a>     <strong class="jxr_keyword">this</strong>(tableName, startKey, endKey, false);
 <a class="jxr_linenumber" name="250" href="#250">250</a>   }
@@ -269,7 +269,7 @@
 <a class="jxr_linenumber" name="259" href="#259">259</a> <em class="jxr_javadoccomment">   * regions that may or may not hold references to this region.</em>
 <a class="jxr_linenumber" name="260" href="#260">260</a> <em class="jxr_javadoccomment">   * @throws IllegalArgumentException</em>
 <a class="jxr_linenumber" name="261" href="#261">261</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="262" href="#262">262</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> byte[] startKey, <strong class="jxr_keyword">final</strong> byte[] endKey,
+<a class="jxr_linenumber" name="262" href="#262">262</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> byte[] startKey, <strong class="jxr_keyword">final</strong> byte[] endKey,
 <a class="jxr_linenumber" name="263" href="#263">263</a>       <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> split)
 <a class="jxr_linenumber" name="264" href="#264">264</a>   <strong class="jxr_keyword">throws</strong> IllegalArgumentException {
 <a class="jxr_linenumber" name="265" href="#265">265</a>     <strong class="jxr_keyword">this</strong>(tableName, startKey, endKey, split, System.currentTimeMillis());
@@ -286,7 +286,7 @@
 <a class="jxr_linenumber" name="276" href="#276">276</a> <em class="jxr_javadoccomment">   * @param regionid Region id to use.</em>
 <a class="jxr_linenumber" name="277" href="#277">277</a> <em class="jxr_javadoccomment">   * @throws IllegalArgumentException</em>
 <a class="jxr_linenumber" name="278" href="#278">278</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="279" href="#279">279</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> byte[] startKey,
+<a class="jxr_linenumber" name="279" href="#279">279</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> byte[] startKey,
 <a class="jxr_linenumber" name="280" href="#280">280</a>                      <strong class="jxr_keyword">final</strong> byte[] endKey, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> split, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> regionid)
 <a class="jxr_linenumber" name="281" href="#281">281</a>   <strong class="jxr_keyword">throws</strong> IllegalArgumentException {
 <a class="jxr_linenumber" name="282" href="#282">282</a>     <strong class="jxr_keyword">this</strong>(tableName, startKey, endKey, split, regionid, DEFAULT_REPLICA_ID);
@@ -304,7 +304,7 @@
 <a class="jxr_linenumber" name="294" href="#294">294</a> <em class="jxr_javadoccomment">   * @param replicaId the replicaId to use</em>
 <a class="jxr_linenumber" name="295" href="#295">295</a> <em class="jxr_javadoccomment">   * @throws IllegalArgumentException</em>
 <a class="jxr_linenumber" name="296" href="#296">296</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="297" href="#297">297</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> byte[] startKey,
+<a class="jxr_linenumber" name="297" href="#297">297</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName, <strong class="jxr_keyword">final</strong> byte[] startKey,
 <a class="jxr_linenumber" name="298" href="#298">298</a>                      <strong class="jxr_keyword">final</strong> byte[] endKey, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> split, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> regionid,
 <a class="jxr_linenumber" name="299" href="#299">299</a>                      <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> replicaId)
 <a class="jxr_linenumber" name="300" href="#300">300</a>     <strong class="jxr_keyword">throws</strong> IllegalArgumentException {
@@ -488,7 +488,7 @@
 <a class="jxr_linenumber" name="478" href="#478">478</a> <em class="jxr_javadoccomment">   * @param regionName to extract the table name from</em>
 <a class="jxr_linenumber" name="479" href="#479">479</a> <em class="jxr_javadoccomment">   * @return Table name</em>
 <a class="jxr_linenumber" name="480" href="#480">480</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="481" href="#481">481</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> getTable(<strong class="jxr_keyword">final</strong> byte [] regionName) {
+<a class="jxr_linenumber" name="481" href="#481">481</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> getTable(<strong class="jxr_keyword">final</strong> byte [] regionName) {
 <a class="jxr_linenumber" name="482" href="#482">482</a>     <strong class="jxr_keyword">int</strong> offset = -1;
 <a class="jxr_linenumber" name="483" href="#483">483</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; regionName.length; i++) {
 <a class="jxr_linenumber" name="484" href="#484">484</a>       <strong class="jxr_keyword">if</strong> (regionName[i] == HConstants.DELIMITER) {
@@ -641,7 +641,7 @@
 <a class="jxr_linenumber" name="631" href="#631">631</a> <em class="jxr_javadoccomment">   * Get current table name of the region</em>
 <a class="jxr_linenumber" name="632" href="#632">632</a> <em class="jxr_javadoccomment">   * @return TableName</em>
 <a class="jxr_linenumber" name="633" href="#633">633</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="634" href="#634">634</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> getTable() {
+<a class="jxr_linenumber" name="634" href="#634">634</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> getTable() {
 <a class="jxr_linenumber" name="635" href="#635">635</a>     <em class="jxr_comment">// This method name should be getTableName but there was already a method getTableName</em>
 <a class="jxr_linenumber" name="636" href="#636">636</a>     <em class="jxr_comment">// that returned a byte array.  It is unfortunate given everywhere else, getTableName returns</em>
 <a class="jxr_linenumber" name="637" href="#637">637</a>     <em class="jxr_comment">// a TableName instance.</em>
@@ -859,7 +859,7 @@
 <a class="jxr_linenumber" name="849" href="#849">849</a> <em class="jxr_javadoccomment">   *</em>
 <a class="jxr_linenumber" name="850" href="#850">850</a> <em class="jxr_javadoccomment">   * @return the converted RegionInfo</em>
 <a class="jxr_linenumber" name="851" href="#851">851</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="852" href="#852">852</a>   <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">RegionInfo</a> convert() {
+<a class="jxr_linenumber" name="852" href="#852">852</a>   RegionInfo convert() {
 <a class="jxr_linenumber" name="853" href="#853">853</a>     <strong class="jxr_keyword">return</strong> convert(<strong class="jxr_keyword">this</strong>);
 <a class="jxr_linenumber" name="854" href="#854">854</a>   }
 <a class="jxr_linenumber" name="855" href="#855">855</a> 
@@ -869,7 +869,7 @@
 <a class="jxr_linenumber" name="859" href="#859">859</a> <em class="jxr_javadoccomment">   * @param info the HRegionInfo to convert</em>
 <a class="jxr_linenumber" name="860" href="#860">860</a> <em class="jxr_javadoccomment">   * @return the converted RegionInfo</em>
 <a class="jxr_linenumber" name="861" href="#861">861</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="862" href="#862">862</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">RegionInfo</a> convert(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> info) {
+<a class="jxr_linenumber" name="862" href="#862">862</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> RegionInfo convert(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> info) {
 <a class="jxr_linenumber" name="863" href="#863">863</a>     <strong class="jxr_keyword">if</strong> (info == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="864" href="#864">864</a>     RegionInfo.Builder builder = RegionInfo.newBuilder();
 <a class="jxr_linenumber" name="865" href="#865">865</a>     builder.setTableName(ProtobufUtil.toProtoTableName(info.getTable()));
@@ -892,9 +892,9 @@
 <a class="jxr_linenumber" name="882" href="#882">882</a> <em class="jxr_javadoccomment">   * @param proto the RegionInfo to convert</em>
 <a class="jxr_linenumber" name="883" href="#883">883</a> <em class="jxr_javadoccomment">   * @return the converted HRegionInfho</em>
 <a class="jxr_linenumber" name="884" href="#884">884</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="885" href="#885">885</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> convert(<strong class="jxr_keyword">final</strong> <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">RegionInfo</a> proto) {
+<a class="jxr_linenumber" name="885" href="#885">885</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> convert(<strong class="jxr_keyword">final</strong> RegionInfo proto) {
 <a class="jxr_linenumber" name="886" href="#886">886</a>     <strong class="jxr_keyword">if</strong> (proto == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="887" href="#887">887</a>     <a href="../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TableName</a> tableName =
+<a class="jxr_linenumber" name="887" href="#887">887</a>     <a href="../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName =
 <a class="jxr_linenumber" name="888" href="#888">888</a>         ProtobufUtil.toTableName(proto.getTableName());
 <a class="jxr_linenumber" name="889" href="#889">889</a>     <strong class="jxr_keyword">if</strong> (tableName.equals(TableName.META_TABLE_NAME)) {
 <a class="jxr_linenumber" name="890" href="#890">890</a>       <strong class="jxr_keyword">return</strong> RegionReplicaUtil.getRegionInfoForReplica(FIRST_META_REGIONINFO,

@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,53 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#expected">expected</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#FAMILY_A">FAMILY_A</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#FAMILY_B">FAMILY_B</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#HBASE_TABLE_NAME">HBASE_TABLE_NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#htable">htable</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#QUALIFIER_BAR">QUALIFIER_BAR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#QUALIFIER_FOO">QUALIFIER_FOO</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.filter.Filter</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#scanFilter">scanFilter</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -131,6 +178,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#create(org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.TableName,%20byte[]...)">create</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+            org.apache.hadoop.hbase.TableName&nbsp;tableName,
+            byte[]...&nbsp;families)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#destroy(org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.TableName)">destroy</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+              org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -171,6 +229,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#tearDown()">tearDown</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#verify(org.apache.hadoop.hbase.client.Scan)">verify</a></strong>(org.apache.hadoop.hbase.client.Scan&nbsp;scan)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -187,6 +249,86 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="HBASE_TABLE_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HBASE_TABLE_NAME</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.61">HBASE_TABLE_NAME</a></pre>
+</li>
+</ul>
+<a name="FAMILY_A">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY_A</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.63">FAMILY_A</a></pre>
+</li>
+</ul>
+<a name="FAMILY_B">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY_B</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.64">FAMILY_B</a></pre>
+</li>
+</ul>
+<a name="QUALIFIER_FOO">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>QUALIFIER_FOO</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.66">QUALIFIER_FOO</a></pre>
+</li>
+</ul>
+<a name="QUALIFIER_BAR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>QUALIFIER_BAR</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.67">QUALIFIER_BAR</a></pre>
+</li>
+</ul>
+<a name="htable">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>htable</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.69">htable</a></pre>
+</li>
+</ul>
+<a name="scanFilter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanFilter</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.filter.Filter <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.71">scanFilter</a></pre>
+</li>
+</ul>
+<a name="expected">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>expected</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.73">expected</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -232,6 +374,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="verify(org.apache.hadoop.hbase.client.Scan)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verify</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.131">verify</a>(org.apache.hadoop.hbase.client.Scan&nbsp;scan)
+             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="scanWithAllQualifiersOfFamiliyA()">
@@ -292,12 +446,39 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="scanWithSpecificQualifiers3()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>scanWithSpecificQualifiers3</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.209">scanWithSpecificQualifiers3</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Test the filter by adding 2 columns of family A in the scan. (OK)</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="create(org.apache.hadoop.hbase.client.Admin, org.apache.hadoop.hbase.TableName, byte[]...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>create</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.219">create</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+          org.apache.hadoop.hbase.TableName&nbsp;tableName,
+          byte[]...&nbsp;families)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="destroy(org.apache.hadoop.hbase.client.Admin, org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>destroy</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestSCVFWithMiniCluster.html#line.235">destroy</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+           org.apache.hadoop.hbase.TableName&nbsp;tableName)
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -354,13 +535,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

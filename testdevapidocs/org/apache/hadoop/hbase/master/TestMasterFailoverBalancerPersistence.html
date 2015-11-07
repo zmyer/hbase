@@ -133,6 +133,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestMasterFailoverBalancerPersistence.html#getActiveMasterIndex(org.apache.hadoop.hbase.MiniHBaseCluster)">getActiveMasterIndex</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a>&nbsp;cluster)</code>
+<div class="block">return the index of the active master in the cluster</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.master.HMaster</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestMasterFailoverBalancerPersistence.html#killActiveAndWaitForNewActive(org.apache.hadoop.hbase.MiniHBaseCluster)">killActiveAndWaitForNewActive</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a>&nbsp;cluster)</code>
+<div class="block">Kill the master and wait for a new active master to show up</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestMasterFailoverBalancerPersistence.html#testMasterFailoverBalancerPersistence()">testMasterFailoverBalancerPersistence</a></strong>()</code>
 <div class="block">Test that if the master fails, the load balancer maintains its
@@ -181,7 +193,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testMasterFailoverBalancerPersistence()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testMasterFailoverBalancerPersistence</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestMasterFailoverBalancerPersistence.html#line.47">testMasterFailoverBalancerPersistence</a>()
@@ -190,6 +202,36 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  state (running or not) when the next master takes over</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="killActiveAndWaitForNewActive(org.apache.hadoop.hbase.MiniHBaseCluster)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>killActiveAndWaitForNewActive</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.master.HMaster&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestMasterFailoverBalancerPersistence.html#line.91">killActiveAndWaitForNewActive</a>(<a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a>&nbsp;cluster)
+                                                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
+                                                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Kill the master and wait for a new active master to show up</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cluster</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>the new active master</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getActiveMasterIndex(org.apache.hadoop.hbase.MiniHBaseCluster)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getActiveMasterIndex</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestMasterFailoverBalancerPersistence.html#line.110">getActiveMasterIndex</a>(<a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a>&nbsp;cluster)
+                          throws org.apache.hadoop.hbase.MasterNotRunningException</pre>
+<div class="block">return the index of the active master in the cluster</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>org.apache.hadoop.hbase.MasterNotRunningException</code> - if no active master found</dd></dl>
 </li>
 </ul>
 </li>

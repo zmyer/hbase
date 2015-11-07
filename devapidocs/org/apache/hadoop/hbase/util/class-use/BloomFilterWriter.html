@@ -82,6 +82,10 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -119,25 +123,80 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">HFileWriterImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#addBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter,%20org.apache.hadoop.hbase.io.hfile.BlockType)">addBloomFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw,
+                            <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockType.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockType</a>&nbsp;blockType)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">HFile.Writer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Writer.html#addDeleteFamilyBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter)">addDeleteFamilyBloomFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw)</code>
 <div class="block">Store delete family Bloom filter in the file, which is only supported in
  HFile V2.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">HFileWriterImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#addDeleteFamilyBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter)">addDeleteFamilyBloomFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">HFile.Writer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Writer.html#addGeneralBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter)">addGeneralBloomFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw)</code>
 <div class="block">Store general Bloom filter in the file.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">HFileWriterImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#addGeneralBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter)">addGeneralBloomFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a></code></td>
+<td class="colLast"><span class="strong">StoreFile.Writer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html#deleteFamilyBloomFilterWriter">deleteFamilyBloomFilterWriter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a></code></td>
+<td class="colLast"><span class="strong">StoreFile.Writer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html#generalBloomFilterWriter">generalBloomFilterWriter</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a></code></td>
+<td class="colLast"><span class="strong">StoreFile.Writer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html#getGeneralBloomWriter()">getGeneralBloomWriter</a></strong>()</code>
+<div class="block">For unit testing only.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><span class="strong">StoreFile.Writer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html#closeBloomFilter(org.apache.hadoop.hbase.util.BloomFilterWriter)">closeBloomFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilterWriter.html" title="interface in org.apache.hadoop.hbase.util">BloomFilterWriter</a>&nbsp;bfw)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

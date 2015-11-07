@@ -126,8 +126,36 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/ChaosMo
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#FIVE_SEC">FIVE_SEC</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#monkeyThreads">monkeyThreads</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#ONE_MIN">ONE_MIN</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#ONE_SEC">ONE_SEC</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/chaos/policies/Policy.html" title="class in org.apache.hadoop.hbase.chaos.policies">Policy</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#policies">policies</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#TIMEOUT">TIMEOUT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase">IntegrationTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#util">util</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -234,14 +262,80 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/monkies/ChaosMo
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#line.37">LOG</a></pre>
+</li>
+</ul>
+<a name="ONE_SEC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ONE_SEC</h4>
+<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#line.38">ONE_SEC</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.chaos.monkies.PolicyBasedChaosMonkey.ONE_SEC">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FIVE_SEC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FIVE_SEC</h4>
+<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#line.39">FIVE_SEC</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.chaos.monkies.PolicyBasedChaosMonkey.FIVE_SEC">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ONE_MIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ONE_MIN</h4>
+<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#line.40">ONE_MIN</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.chaos.monkies.PolicyBasedChaosMonkey.ONE_MIN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="TIMEOUT">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>TIMEOUT</h4>
 <pre>public static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#line.42">TIMEOUT</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.chaos.monkies.PolicyBasedChaosMonkey.TIMEOUT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="util">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>util</h4>
+<pre>final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase">IntegrationTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#line.44">util</a></pre>
+</li>
+</ul>
+<a name="policies">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>policies</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/chaos/policies/Policy.html" title="class in org.apache.hadoop.hbase.chaos.policies">Policy</a>[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#line.107">policies</a></pre>
+</li>
+</ul>
+<a name="monkeyThreads">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>monkeyThreads</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a>[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/monkies/PolicyBasedChaosMonkey.html#line.108">monkeyThreads</a></pre>
 </li>
 </ul>
 </li>

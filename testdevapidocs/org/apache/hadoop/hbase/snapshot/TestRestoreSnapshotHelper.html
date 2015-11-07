@@ -133,14 +133,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#fs">fs</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected org.apache.hadoop.fs.Path</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#rootDir">rootDir</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#TEST_HFILE">TEST_HFILE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
 </tr>
@@ -181,24 +185,56 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#createSnapshotMock()">createSnapshotMock</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#getReferredToFile(java.lang.String)">getReferredToFile</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;referenceName)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.snapshot.RestoreSnapshotHelper</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#getRestoreHelper(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">getRestoreHelper</a></strong>(org.apache.hadoop.fs.Path&nbsp;rootDir,
+                                org.apache.hadoop.fs.Path&nbsp;snapshotDir,
+                                org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;sd,
+                                org.apache.hadoop.hbase.HTableDescriptor&nbsp;htdClone)</code>
+<div class="block">Initialize the restore helper, based on the snapshot and table information provided.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#restoreAndVerify(java.lang.String,%20java.lang.String)">restoreAndVerify</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#setup()">setup</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#setupConf(org.apache.hadoop.conf.Configuration)">setupConf</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#tearDown()">tearDown</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#testRestore()">testRestore</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#testRestore(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">testRestore</a></strong>(org.apache.hadoop.fs.Path&nbsp;snapshotDir,
+                      org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;sd,
+                      org.apache.hadoop.hbase.HTableDescriptor&nbsp;htdClone)</code>
+<div class="block">Execute the restore operation</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#testRestoreWithNamespace()">testRestoreWithNamespace</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#verifyRestore(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.HTableDescriptor)">verifyRestore</a></strong>(org.apache.hadoop.fs.Path&nbsp;rootDir,
+                          org.apache.hadoop.hbase.HTableDescriptor&nbsp;sourceHtd,
+                          org.apache.hadoop.hbase.HTableDescriptor&nbsp;htdClone)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -222,6 +258,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#line.55">LOG</a></pre>
+</li>
+</ul>
 <a name="TEST_UTIL">
 <!--   -->
 </a>
@@ -362,13 +407,81 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testRestoreWithNamespace()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testRestoreWithNamespace</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#line.93">testRestoreWithNamespace</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="restoreAndVerify(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>restoreAndVerify</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#line.97">restoreAndVerify</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyRestore(org.apache.hadoop.fs.Path, org.apache.hadoop.hbase.HTableDescriptor, org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyRestore</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#line.126">verifyRestore</a>(org.apache.hadoop.fs.Path&nbsp;rootDir,
+                 org.apache.hadoop.hbase.HTableDescriptor&nbsp;sourceHtd,
+                 org.apache.hadoop.hbase.HTableDescriptor&nbsp;htdClone)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testRestore(org.apache.hadoop.fs.Path, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription, org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testRestore</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#line.150">testRestore</a>(org.apache.hadoop.fs.Path&nbsp;snapshotDir,
+               org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;sd,
+               org.apache.hadoop.hbase.HTableDescriptor&nbsp;htdClone)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Execute the restore operation</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>snapshotDir</code> - The snapshot directory to use as "restore source"</dd><dd><code>sd</code> - The snapshot descriptor</dd><dd><code>htdClone</code> - The HTableDescriptor of the table to restore/clone.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getRestoreHelper(org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription, org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRestoreHelper</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.snapshot.RestoreSnapshotHelper&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#line.166">getRestoreHelper</a>(org.apache.hadoop.fs.Path&nbsp;rootDir,
+                                                                      org.apache.hadoop.fs.Path&nbsp;snapshotDir,
+                                                                      org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;sd,
+                                                                      org.apache.hadoop.hbase.HTableDescriptor&nbsp;htdClone)
+                                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Initialize the restore helper, based on the snapshot and table information provided.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getReferredToFile(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getReferredToFile</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.html#line.176">getReferredToFile</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;referenceName)</pre>
 </li>
 </ul>
 </li>

@@ -35,15 +35,15 @@
 <span class="sourceLineNo">027</span>import java.util.Arrays;<a name="line.27"></a>
 <span class="sourceLineNo">028</span>import java.util.List;<a name="line.28"></a>
 <span class="sourceLineNo">029</span>import java.util.Random;<a name="line.29"></a>
-<span class="sourceLineNo">030</span><a name="line.30"></a>
-<span class="sourceLineNo">031</span>import org.apache.hadoop.hbase.io.hfile.BlockCacheKey;<a name="line.31"></a>
-<span class="sourceLineNo">032</span>import org.apache.hadoop.hbase.io.hfile.CacheTestUtils;<a name="line.32"></a>
-<span class="sourceLineNo">033</span>import org.apache.hadoop.hbase.io.hfile.Cacheable;<a name="line.33"></a>
-<span class="sourceLineNo">034</span>import org.apache.hadoop.hbase.io.hfile.bucket.BucketAllocator.BucketSizeInfo;<a name="line.34"></a>
-<span class="sourceLineNo">035</span>import org.apache.hadoop.hbase.io.hfile.bucket.BucketAllocator.IndexStatistics;<a name="line.35"></a>
-<span class="sourceLineNo">036</span>import org.apache.hadoop.hbase.testclassification.IOTests;<a name="line.36"></a>
-<span class="sourceLineNo">037</span>import org.apache.hadoop.hbase.testclassification.SmallTests;<a name="line.37"></a>
-<span class="sourceLineNo">038</span>import org.apache.hadoop.hbase.util.IdLock;<a name="line.38"></a>
+<span class="sourceLineNo">030</span>import java.util.concurrent.locks.ReentrantReadWriteLock;<a name="line.30"></a>
+<span class="sourceLineNo">031</span><a name="line.31"></a>
+<span class="sourceLineNo">032</span>import org.apache.hadoop.hbase.io.hfile.BlockCacheKey;<a name="line.32"></a>
+<span class="sourceLineNo">033</span>import org.apache.hadoop.hbase.io.hfile.CacheTestUtils;<a name="line.33"></a>
+<span class="sourceLineNo">034</span>import org.apache.hadoop.hbase.io.hfile.Cacheable;<a name="line.34"></a>
+<span class="sourceLineNo">035</span>import org.apache.hadoop.hbase.io.hfile.bucket.BucketAllocator.BucketSizeInfo;<a name="line.35"></a>
+<span class="sourceLineNo">036</span>import org.apache.hadoop.hbase.io.hfile.bucket.BucketAllocator.IndexStatistics;<a name="line.36"></a>
+<span class="sourceLineNo">037</span>import org.apache.hadoop.hbase.testclassification.IOTests;<a name="line.37"></a>
+<span class="sourceLineNo">038</span>import org.apache.hadoop.hbase.testclassification.SmallTests;<a name="line.38"></a>
 <span class="sourceLineNo">039</span>import org.junit.After;<a name="line.39"></a>
 <span class="sourceLineNo">040</span>import org.junit.Before;<a name="line.40"></a>
 <span class="sourceLineNo">041</span>import org.junit.Test;<a name="line.41"></a>
@@ -182,7 +182,7 @@
 <span class="sourceLineNo">174</span><a name="line.174"></a>
 <span class="sourceLineNo">175</span>  @Test<a name="line.175"></a>
 <span class="sourceLineNo">176</span>  public void testCacheMultiThreadedSingleKey() throws Exception {<a name="line.176"></a>
-<span class="sourceLineNo">177</span>    CacheTestUtils.hammerSingleKey(cache, BLOCK_SIZE, NUM_THREADS, NUM_QUERIES);<a name="line.177"></a>
+<span class="sourceLineNo">177</span>    CacheTestUtils.hammerSingleKey(cache, BLOCK_SIZE, 2 * NUM_THREADS, 2 * NUM_QUERIES);<a name="line.177"></a>
 <span class="sourceLineNo">178</span>  }<a name="line.178"></a>
 <span class="sourceLineNo">179</span><a name="line.179"></a>
 <span class="sourceLineNo">180</span>  @Test<a name="line.180"></a>
@@ -207,27 +207,28 @@
 <span class="sourceLineNo">199</span>    cacheAndWaitUntilFlushedToBucket(cache, cacheKey, new CacheTestUtils.ByteArrayCacheable(<a name="line.199"></a>
 <span class="sourceLineNo">200</span>        new byte[10]));<a name="line.200"></a>
 <span class="sourceLineNo">201</span>    long lockId = cache.backingMap.get(cacheKey).offset();<a name="line.201"></a>
-<span class="sourceLineNo">202</span>    IdLock.Entry lockEntry = cache.offsetLock.getLockEntry(lockId);<a name="line.202"></a>
-<span class="sourceLineNo">203</span>    Thread evictThread = new Thread("evict-block") {<a name="line.203"></a>
-<span class="sourceLineNo">204</span><a name="line.204"></a>
-<span class="sourceLineNo">205</span>      @Override<a name="line.205"></a>
-<span class="sourceLineNo">206</span>      public void run() {<a name="line.206"></a>
-<span class="sourceLineNo">207</span>        cache.evictBlock(cacheKey);<a name="line.207"></a>
-<span class="sourceLineNo">208</span>      }<a name="line.208"></a>
-<span class="sourceLineNo">209</span><a name="line.209"></a>
-<span class="sourceLineNo">210</span>    };<a name="line.210"></a>
-<span class="sourceLineNo">211</span>    evictThread.start();<a name="line.211"></a>
-<span class="sourceLineNo">212</span>    cache.offsetLock.waitForWaiters(lockId, 1);<a name="line.212"></a>
-<span class="sourceLineNo">213</span>    cache.blockEvicted(cacheKey, cache.backingMap.remove(cacheKey), true);<a name="line.213"></a>
-<span class="sourceLineNo">214</span>    cacheAndWaitUntilFlushedToBucket(cache, cacheKey, new CacheTestUtils.ByteArrayCacheable(<a name="line.214"></a>
-<span class="sourceLineNo">215</span>        new byte[10]));<a name="line.215"></a>
-<span class="sourceLineNo">216</span>    cache.offsetLock.releaseLockEntry(lockEntry);<a name="line.216"></a>
-<span class="sourceLineNo">217</span>    evictThread.join();<a name="line.217"></a>
-<span class="sourceLineNo">218</span>    assertEquals(1L, cache.getBlockCount());<a name="line.218"></a>
-<span class="sourceLineNo">219</span>    assertTrue(cache.getCurrentSize() &gt; 0L);<a name="line.219"></a>
-<span class="sourceLineNo">220</span>    assertTrue("We should have a block!", cache.iterator().hasNext());<a name="line.220"></a>
-<span class="sourceLineNo">221</span>  }<a name="line.221"></a>
-<span class="sourceLineNo">222</span>}<a name="line.222"></a>
+<span class="sourceLineNo">202</span>    ReentrantReadWriteLock lock = cache.offsetLock.getLock(lockId);<a name="line.202"></a>
+<span class="sourceLineNo">203</span>    lock.writeLock().lock();<a name="line.203"></a>
+<span class="sourceLineNo">204</span>    Thread evictThread = new Thread("evict-block") {<a name="line.204"></a>
+<span class="sourceLineNo">205</span><a name="line.205"></a>
+<span class="sourceLineNo">206</span>      @Override<a name="line.206"></a>
+<span class="sourceLineNo">207</span>      public void run() {<a name="line.207"></a>
+<span class="sourceLineNo">208</span>        cache.evictBlock(cacheKey);<a name="line.208"></a>
+<span class="sourceLineNo">209</span>      }<a name="line.209"></a>
+<span class="sourceLineNo">210</span><a name="line.210"></a>
+<span class="sourceLineNo">211</span>    };<a name="line.211"></a>
+<span class="sourceLineNo">212</span>    evictThread.start();<a name="line.212"></a>
+<span class="sourceLineNo">213</span>    cache.offsetLock.waitForWaiters(lockId, 1);<a name="line.213"></a>
+<span class="sourceLineNo">214</span>    cache.blockEvicted(cacheKey, cache.backingMap.remove(cacheKey), true);<a name="line.214"></a>
+<span class="sourceLineNo">215</span>    cacheAndWaitUntilFlushedToBucket(cache, cacheKey, new CacheTestUtils.ByteArrayCacheable(<a name="line.215"></a>
+<span class="sourceLineNo">216</span>        new byte[10]));<a name="line.216"></a>
+<span class="sourceLineNo">217</span>    lock.writeLock().unlock();<a name="line.217"></a>
+<span class="sourceLineNo">218</span>    evictThread.join();<a name="line.218"></a>
+<span class="sourceLineNo">219</span>    assertEquals(1L, cache.getBlockCount());<a name="line.219"></a>
+<span class="sourceLineNo">220</span>    assertTrue(cache.getCurrentSize() &gt; 0L);<a name="line.220"></a>
+<span class="sourceLineNo">221</span>    assertTrue("We should have a block!", cache.iterator().hasNext());<a name="line.221"></a>
+<span class="sourceLineNo">222</span>  }<a name="line.222"></a>
+<span class="sourceLineNo">223</span>}<a name="line.223"></a>
 
 
 

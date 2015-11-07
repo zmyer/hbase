@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.ListenerInfo.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.RequestQuoter.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -135,6 +135,25 @@ implements javax.servlet.Filter</pre>
 </table>
 </li>
 </ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private javax.servlet.FilterConfig</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.html#config">config</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -175,6 +194,13 @@ implements javax.servlet.Filter</pre>
                 javax.servlet.FilterChain&nbsp;chain)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.html#inferMimeType(javax.servlet.ServletRequest)">inferMimeType</a></strong>(javax.servlet.ServletRequest&nbsp;request)</code>
+<div class="block">Infer the mime type for the response based on the extension of the request
+ URI.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.html#init(javax.servlet.FilterConfig)">init</a></strong>(javax.servlet.FilterConfig&nbsp;config)</code>&nbsp;</td>
 </tr>
@@ -194,6 +220,23 @@ implements javax.servlet.Filter</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="config">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>config</h4>
+<pre>private&nbsp;javax.servlet.FilterConfig <a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.html#line.1235">config</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -248,7 +291,7 @@ implements javax.servlet.Filter</pre>
 <a name="doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>doFilter</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.html#line.1334">doFilter</a>(javax.servlet.ServletRequest&nbsp;request,
@@ -262,6 +305,17 @@ implements javax.servlet.Filter</pre>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code>javax.servlet.ServletException</code></dd></dl>
+</li>
+</ul>
+<a name="inferMimeType(javax.servlet.ServletRequest)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>inferMimeType</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.html#line.1361">inferMimeType</a>(javax.servlet.ServletRequest&nbsp;request)</pre>
+<div class="block">Infer the mime type for the response based on the extension of the request
+ URI. Returns null if unknown.</div>
 </li>
 </ul>
 </li>
@@ -290,7 +344,7 @@ implements javax.servlet.Filter</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.Builder.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.ListenerInfo.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/http/HttpServer.QuotingInputFilter.RequestQuoter.html" title="class in org.apache.hadoop.hbase.http"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -316,13 +370,13 @@ implements javax.servlet.Filter</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

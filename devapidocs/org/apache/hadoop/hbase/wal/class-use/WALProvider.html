@@ -100,6 +100,48 @@
 <div class="block">A WAL Provider that returns a single thread safe WAL that writes to HDFS.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/DisabledWALProvider.html" title="class in org.apache.hadoop.hbase.wal">DisabledWALProvider</a></strong></code>
+<div class="block">No-op implementation of <a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal"><code>WALProvider</code></a> used when the WAL is disabled.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.html" title="class in org.apache.hadoop.hbase.wal">RegionGroupingProvider</a></strong></code>
+<div class="block">A WAL Provider that returns a WAL per group of regions.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/wal/package-summary.html">org.apache.hadoop.hbase.wal</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></code></td>
+<td class="colLast"><span class="strong">WALFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#provider">provider</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/wal/package-summary.html">org.apache.hadoop.hbase.wal</a> with type parameters of type <a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a>&gt;</code></td>
+<td class="colLast"><span class="strong">WALFactory.Providers.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/WALFactory.Providers.html#clazz">clazz</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a>&gt;</code></td>
+<td class="colLast"><span class="strong">WALFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#metaProvider">metaProvider</a></strong></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -114,8 +156,28 @@
 <td class="colLast"><span class="strong">WALFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#getMetaWALProvider()">getMetaWALProvider</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></code></td>
+<td class="colLast"><span class="strong">WALFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#getProvider(java.lang.String,%20java.lang.String,%20java.util.List,%20java.lang.String)">getProvider</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;defaultValue,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a>&gt;&nbsp;listeners,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerId)</code>
+<div class="block">instantiate a provider from a config property.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></code></td>
 <td class="colLast"><span class="strong">WALFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#getWALProvider()">getWALProvider</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructor parameters in <a href="../../../../../../org/apache/hadoop/hbase/wal/package-summary.html">org.apache.hadoop.hbase.wal</a> with type arguments of type <a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/WALFactory.Providers.html#WALFactory.Providers(java.lang.Class)">WALFactory.Providers</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a>&gt;&nbsp;clazz)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

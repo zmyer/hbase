@@ -124,7 +124,7 @@
 <a class="jxr_linenumber" name="114" href="#114">114</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="115" href="#115">115</a>       <strong class="jxr_keyword">boolean</strong> hasMore = <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="116" href="#116">116</a>       <strong class="jxr_keyword">while</strong> (hasMore) {
-<a class="jxr_linenumber" name="117" href="#117">117</a>         <a href="../../../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">ProcedureWALEntry</a> entry = ProcedureWALFormat.readEntry(stream);
+<a class="jxr_linenumber" name="117" href="#117">117</a>         ProcedureWALEntry entry = ProcedureWALFormat.readEntry(stream);
 <a class="jxr_linenumber" name="118" href="#118">118</a>         <strong class="jxr_keyword">if</strong> (entry == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="119" href="#119">119</a>           LOG.warn(<span class="jxr_string">"nothing left to decode. exiting with missing EOF"</span>);
 <a class="jxr_linenumber" name="120" href="#120">120</a>           hasMore = false;
@@ -187,7 +187,7 @@
 <a class="jxr_linenumber" name="177" href="#177">177</a>     <strong class="jxr_keyword">if</strong> (procIter != <strong class="jxr_keyword">null</strong>) loader.handleCorrupted(procIter);
 <a class="jxr_linenumber" name="178" href="#178">178</a>   }
 <a class="jxr_linenumber" name="179" href="#179">179</a> 
-<a class="jxr_linenumber" name="180" href="#180">180</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> loadProcedure(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">ProcedureWALEntry</a> entry, <strong class="jxr_keyword">final</strong> ProcedureProtos.Procedure proc) {
+<a class="jxr_linenumber" name="180" href="#180">180</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> loadProcedure(<strong class="jxr_keyword">final</strong> ProcedureWALEntry entry, <strong class="jxr_keyword">final</strong> ProcedureProtos.Procedure proc) {
 <a class="jxr_linenumber" name="181" href="#181">181</a>     maxProcId = Math.max(maxProcId, proc.getProcId());
 <a class="jxr_linenumber" name="182" href="#182">182</a>     <strong class="jxr_keyword">if</strong> (isRequired(proc.getProcId())) {
 <a class="jxr_linenumber" name="183" href="#183">183</a>       <strong class="jxr_keyword">if</strong> (LOG.isTraceEnabled()) {
@@ -198,13 +198,13 @@
 <a class="jxr_linenumber" name="188" href="#188">188</a>     }
 <a class="jxr_linenumber" name="189" href="#189">189</a>   }
 <a class="jxr_linenumber" name="190" href="#190">190</a> 
-<a class="jxr_linenumber" name="191" href="#191">191</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> readInitEntry(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">ProcedureWALEntry</a> entry)
+<a class="jxr_linenumber" name="191" href="#191">191</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> readInitEntry(<strong class="jxr_keyword">final</strong> ProcedureWALEntry entry)
 <a class="jxr_linenumber" name="192" href="#192">192</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="193" href="#193">193</a>     assert entry.getProcedureCount() == 1 : <span class="jxr_string">"Expected only one procedure"</span>;
 <a class="jxr_linenumber" name="194" href="#194">194</a>     loadProcedure(entry, entry.getProcedure(0));
 <a class="jxr_linenumber" name="195" href="#195">195</a>   }
 <a class="jxr_linenumber" name="196" href="#196">196</a> 
-<a class="jxr_linenumber" name="197" href="#197">197</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> readInsertEntry(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">ProcedureWALEntry</a> entry) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="197" href="#197">197</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> readInsertEntry(<strong class="jxr_keyword">final</strong> ProcedureWALEntry entry) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="198" href="#198">198</a>     assert entry.getProcedureCount() &gt;= 1 : <span class="jxr_string">"Expected one or more procedures"</span>;
 <a class="jxr_linenumber" name="199" href="#199">199</a>     loadProcedure(entry, entry.getProcedure(0));
 <a class="jxr_linenumber" name="200" href="#200">200</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; entry.getProcedureCount(); ++i) {
@@ -212,12 +212,12 @@
 <a class="jxr_linenumber" name="202" href="#202">202</a>     }
 <a class="jxr_linenumber" name="203" href="#203">203</a>   }
 <a class="jxr_linenumber" name="204" href="#204">204</a> 
-<a class="jxr_linenumber" name="205" href="#205">205</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> readUpdateEntry(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">ProcedureWALEntry</a> entry) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="205" href="#205">205</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> readUpdateEntry(<strong class="jxr_keyword">final</strong> ProcedureWALEntry entry) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="206" href="#206">206</a>     assert entry.getProcedureCount() == 1 : <span class="jxr_string">"Expected only one procedure"</span>;
 <a class="jxr_linenumber" name="207" href="#207">207</a>     loadProcedure(entry, entry.getProcedure(0));
 <a class="jxr_linenumber" name="208" href="#208">208</a>   }
 <a class="jxr_linenumber" name="209" href="#209">209</a> 
-<a class="jxr_linenumber" name="210" href="#210">210</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> readDeleteEntry(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../org/apache/hadoop/hbase/protobuf/generated/ProcedureProtos.html">ProcedureWALEntry</a> entry) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="210" href="#210">210</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> readDeleteEntry(<strong class="jxr_keyword">final</strong> ProcedureWALEntry entry) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="211" href="#211">211</a>     assert entry.getProcedureCount() == 0 : <span class="jxr_string">"Expected no procedures"</span>;
 <a class="jxr_linenumber" name="212" href="#212">212</a>     assert entry.hasProcId() : <span class="jxr_string">"expected ProcID"</span>;
 <a class="jxr_linenumber" name="213" href="#213">213</a>     <strong class="jxr_keyword">if</strong> (LOG.isTraceEnabled()) {

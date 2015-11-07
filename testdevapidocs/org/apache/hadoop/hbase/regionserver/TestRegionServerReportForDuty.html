@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -122,6 +122,53 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </table>
 </li>
 </ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#backupMaster">backupMaster</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.LocalHBaseCluster</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#cluster">cluster</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.util.JVMClusterUtil.RegionServerThread</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#rs">rs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.util.JVMClusterUtil.RegionServerThread</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#rs2">rs2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#SLEEP_INTERVAL">SLEEP_INTERVAL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#testUtil">testUtil</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -166,6 +213,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  the first master goes away.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#waitForClusterOnline(org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread)">waitForClusterOnline</a></strong>(org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread&nbsp;master)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#waitForSecondRsStarted()">waitForSecondRsStarted</a></strong>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -182,6 +237,87 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.47">LOG</a></pre>
+</li>
+</ul>
+<a name="SLEEP_INTERVAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SLEEP_INTERVAL</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.49">SLEEP_INTERVAL</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestRegionServerReportForDuty.SLEEP_INTERVAL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="testUtil">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testUtil</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.51">testUtil</a></pre>
+</li>
+</ul>
+<a name="cluster">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cluster</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.LocalHBaseCluster <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.52">cluster</a></pre>
+</li>
+</ul>
+<a name="rs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rs</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.util.JVMClusterUtil.RegionServerThread <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.53">rs</a></pre>
+</li>
+</ul>
+<a name="rs2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rs2</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.util.JVMClusterUtil.RegionServerThread <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.54">rs2</a></pre>
+</li>
+</ul>
+<a name="master">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>master</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.55">master</a></pre>
+</li>
+</ul>
+<a name="backupMaster">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>backupMaster</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.56">backupMaster</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -232,7 +368,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testReportForDutyWithMasterChange()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testReportForDutyWithMasterChange</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.80">testReportForDutyWithMasterChange</a>()
@@ -241,6 +377,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  the first master goes away.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="waitForClusterOnline(org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitForClusterOnline</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.128">waitForClusterOnline</a>(org.apache.hadoop.hbase.util.JVMClusterUtil.MasterThread&nbsp;master)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="waitForSecondRsStarted()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>waitForSecondRsStarted</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html#line.139">waitForSecondRsStarted</a>()
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 </li>
@@ -295,13 +455,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

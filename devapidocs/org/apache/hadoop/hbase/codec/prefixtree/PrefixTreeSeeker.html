@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeCodec.html" title="class in org.apache.hadoop.hbase.codec.prefixtree"><span class="strong">Prev Class</span></a></li>
-<li>Next Class</li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeCodec.PrefixTreeEncodingState.html" title="class in org.apache.hadoop.hbase.codec.prefixtree"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.OffheapPrefixTreeCell.html" title="class in org.apache.hadoop.hbase.codec.prefixtree"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -115,6 +115,32 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.OffheapPrefixTreeCell.html" title="class in org.apache.hadoop.hbase.codec.prefixtree">PrefixTreeSeeker.OffheapPrefixTreeCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.OnheapPrefixTreeCell.html" title="class in org.apache.hadoop.hbase.codec.prefixtree">PrefixTreeSeeker.OnheapPrefixTreeCell</a></strong></code>
+<div class="block">Cloned version of the PrefixTreeCell where except the value part, the rest
+ of the key part is deep copied</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="field_summary">
@@ -138,6 +164,10 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeArraySearcher.html" title="class in org.apache.hadoop.hbase.codec.prefixtree.decode">PrefixTreeArraySearcher</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.html#ptSearcher">ptSearcher</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.html#USE_POSITION_BEFORE">USE_POSITION_BEFORE</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -298,10 +328,20 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <a name="ptSearcher">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>ptSearcher</h4>
 <pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/decode/PrefixTreeArraySearcher.html" title="class in org.apache.hadoop.hbase.codec.prefixtree.decode">PrefixTreeArraySearcher</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.html#line.54">ptSearcher</a></pre>
+</li>
+</ul>
+<a name="USE_POSITION_BEFORE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>USE_POSITION_BEFORE</h4>
+<pre>private static final&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.html#line.149">USE_POSITION_BEFORE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.codec.prefixtree.PrefixTreeSeeker.USE_POSITION_BEFORE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -550,8 +590,8 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeCodec.html" title="class in org.apache.hadoop.hbase.codec.prefixtree"><span class="strong">Prev Class</span></a></li>
-<li>Next Class</li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeCodec.PrefixTreeEncodingState.html" title="class in org.apache.hadoop.hbase.codec.prefixtree"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.OffheapPrefixTreeCell.html" title="class in org.apache.hadoop.hbase.codec.prefixtree"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.html" target="_top">Frames</a></li>
@@ -575,7 +615,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

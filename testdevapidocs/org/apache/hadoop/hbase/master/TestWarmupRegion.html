@@ -119,8 +119,40 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#COLUMN">COLUMN</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#FAMILY">FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#myCluster">myCluster</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#numRows">numRows</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#QUALIFIER">QUALIFIER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#ROW">ROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#SLAVES">SLAVES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#table">table</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.TableName</code></td>
@@ -129,6 +161,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>protected static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestWarmupRegion.html#VALUE">VALUE</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -210,6 +246,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.55">LOG</a></pre>
+</li>
+</ul>
 <a name="TABLENAME">
 <!--   -->
 </a>
@@ -228,13 +273,85 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>protected static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.57">TEST_UTIL</a></pre>
 </li>
 </ul>
+<a name="ROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROW</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.58">ROW</a></pre>
+</li>
+</ul>
+<a name="FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.59">FAMILY</a></pre>
+</li>
+</ul>
+<a name="QUALIFIER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>QUALIFIER</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.60">QUALIFIER</a></pre>
+</li>
+</ul>
+<a name="VALUE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VALUE</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.61">VALUE</a></pre>
+</li>
+</ul>
+<a name="COLUMN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COLUMN</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.62">COLUMN</a></pre>
+</li>
+</ul>
+<a name="numRows">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numRows</h4>
+<pre>private static&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.63">numRows</a></pre>
+</li>
+</ul>
 <a name="SLAVES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SLAVES</h4>
+<pre>protected static&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.64">SLAVES</a></pre>
+</li>
+</ul>
+<a name="myCluster">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>myCluster</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.65">myCluster</a></pre>
+</li>
+</ul>
+<a name="table">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>SLAVES</h4>
-<pre>protected static&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.64">SLAVES</a></pre>
+<h4>table</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestWarmupRegion.html#line.66">table</a></pre>
 </li>
 </ul>
 </li>

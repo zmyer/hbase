@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -111,6 +111,29 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCal
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="interface in org.apache.hadoop.hbase.client">RpcRetryingCaller</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#delegate">delegate</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/ServerStatisticTracker.html" title="class in org.apache.hadoop.hbase.client">ServerStatisticTracker</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#stats">stats</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -159,6 +182,11 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCal
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#cancel()">cancel</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#updateStatsAndUnwrap(T,%20org.apache.hadoop.hbase.client.RetryingCallable)">updateStatsAndUnwrap</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&nbsp;result,
+                                        <a href="../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&gt;&nbsp;callable)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -175,6 +203,32 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCal
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="stats">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stats</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/ServerStatisticTracker.html" title="class in org.apache.hadoop.hbase.client">ServerStatisticTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#line.31">stats</a></pre>
+</li>
+</ul>
+<a name="delegate">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>delegate</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="interface in org.apache.hadoop.hbase.client">RpcRetryingCaller</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#line.32">delegate</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -237,7 +291,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCal
 <a name="callWithoutRetries(org.apache.hadoop.hbase.client.RetryingCallable, int)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>callWithoutRetries</h4>
 <pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#line.53">callWithoutRetries</a>(<a href="../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&gt;&nbsp;callable,
@@ -256,6 +310,18 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCal
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if a remote or network exception occurs</dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - other unspecified error</dd></dl>
+</li>
+</ul>
+<a name="updateStatsAndUnwrap(java.lang.Object,org.apache.hadoop.hbase.client.RetryingCallable)">
+<!--   -->
+</a><a name="updateStatsAndUnwrap(T, org.apache.hadoop.hbase.client.RetryingCallable)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>updateStatsAndUnwrap</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#line.59">updateStatsAndUnwrap</a>(<a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&nbsp;result,
+                     <a href="../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&gt;&nbsp;callable)</pre>
 </li>
 </ul>
 </li>
@@ -310,13 +376,13 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCal
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

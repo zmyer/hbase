@@ -174,7 +174,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/client/Table.html"
 <td class="colFirst"><code>&lt;R&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/RemoteHTable.html#batchCallback(java.util.List,%20java.lang.Object[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">batchCallback</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../org/apache/hadoop/hbase/client/Row.html" title="interface in org.apache.hadoop.hbase.client">Row</a>&gt;&nbsp;actions,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;results,
-                          <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Callback.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Callback</a>&lt;R&gt;&nbsp;callback)</code>
+                          org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)</code>
 <div class="block">Same as <a href="../../../../../../org/apache/hadoop/hbase/client/Table.html#batch(java.util.List,%20java.lang.Object[])"><code>Table.batch(List, Object[])</code></a>, but with a callback.</div>
 </td>
 </tr>
@@ -197,7 +197,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/client/Table.html"
                                               byte[]&nbsp;startKey,
                                               byte[]&nbsp;endKey,
                                               R&nbsp;responsePrototype,
-                                              <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Callback.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Callback</a>&lt;R&gt;&nbsp;callback)</code>
+                                              org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)</code>
 <div class="block">Creates an instance of the given <code>Service</code> subclass for each table
  region spanning the range from the <code>startKey</code> row to <code>endKey</code> row (inclusive), all
  the invocations to the same region server will be batched into one call.</div>
@@ -299,10 +299,10 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/client/Table.html"
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/RemoteHTable.html#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call)">coprocessorService</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
                                     byte[]&nbsp;startKey,
                                     byte[]&nbsp;endKey,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Call</a>&lt;T,R&gt;&nbsp;callable)</code>
+                                    org.apache.hadoop.hbase.client.coprocessor.Batch.Call&lt;T,R&gt;&nbsp;callable)</code>
 <div class="block">Creates an instance of the given <code>Service</code> subclass for each table
  region spanning the range from the <code>startKey</code> row to <code>endKey</code> row (inclusive), and
- invokes the passed <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html#call(T)"><code>Batch.Call.call(T)</code></a> method
+ invokes the passed <code>Batch.Call.call(T)</code> method
  with each <code>Service</code> instance.</div>
 </td>
 </tr>
@@ -311,11 +311,11 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/client/Table.html"
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/client/RemoteHTable.html#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call,%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">coprocessorService</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
                                     byte[]&nbsp;startKey,
                                     byte[]&nbsp;endKey,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Call</a>&lt;T,R&gt;&nbsp;callable,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Callback.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Callback</a>&lt;R&gt;&nbsp;callback)</code>
+                                    org.apache.hadoop.hbase.client.coprocessor.Batch.Call&lt;T,R&gt;&nbsp;callable,
+                                    org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)</code>
 <div class="block">Creates an instance of the given <code>Service</code> subclass for each table
  region spanning the range from the <code>startKey</code> row to <code>endKey</code> row (inclusive), and
- invokes the passed <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html#call(T)"><code>Batch.Call.call(T)</code></a> method
+ invokes the passed <code>Batch.Call.call(T)</code> method
  with each <code>Service</code> instance.</div>
 </td>
 </tr>
@@ -1161,7 +1161,7 @@ public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.
 <h4>batchCallback</h4>
 <pre>public&nbsp;&lt;R&gt;&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/RemoteHTable.html#line.792">batchCallback</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../org/apache/hadoop/hbase/client/Row.html" title="interface in org.apache.hadoop.hbase.client">Row</a>&gt;&nbsp;actions,
                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;results,
-                     <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Callback.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Callback</a>&lt;R&gt;&nbsp;callback)
+                     org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html#batchCallback(java.util.List,%20java.lang.Object[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">Table</a></code></strong></div>
@@ -1220,19 +1220,19 @@ public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.
 <pre>public&nbsp;&lt;T extends com.google.protobuf.Service,R&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],R&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/RemoteHTable.html#line.803">coprocessorService</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
                                                                          byte[]&nbsp;startKey,
                                                                          byte[]&nbsp;endKey,
-                                                                         <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Call</a>&lt;T,R&gt;&nbsp;callable)
+                                                                         org.apache.hadoop.hbase.client.coprocessor.Batch.Call&lt;T,R&gt;&nbsp;callable)
                                  throws com.google.protobuf.ServiceException,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call)">Table</a></code></strong></div>
 <div class="block">Creates an instance of the given <code>Service</code> subclass for each table
  region spanning the range from the <code>startKey</code> row to <code>endKey</code> row (inclusive), and
- invokes the passed <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html#call(T)"><code>Batch.Call.call(T)</code></a> method
+ invokes the passed <code>Batch.Call.call(T)</code> method
  with each <code>Service</code> instance.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call)">coprocessorService</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
-<dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - the <code>Service</code> subclass to connect to</dd><dd><code>R</code> - Return type for the <code>callable</code> parameter's <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html#call(T)"><code>Batch.Call.call(T)</code></a> method</dd><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - the protocol buffer <code>Service</code> implementation to call</dd><dd><code>startKey</code> - start region selection with region containing this row.  If <code>null</code>, the
- selection will start with the first table region.</dd><dd><code>endKey</code> - select regions up to and including the region containing this row. If <code>null</code>, selection will continue through the last table region.</dd><dd><code>callable</code> - this instance's <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.html" title="class in org.apache.hadoop.hbase.client.coprocessor"><code>.Call#call</code></a>
+<dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - the <code>Service</code> subclass to connect to</dd><dd><code>R</code> - Return type for the <code>callable</code> parameter's <code>Batch.Call.call(T)</code> method</dd><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - the protocol buffer <code>Service</code> implementation to call</dd><dd><code>startKey</code> - start region selection with region containing this row.  If <code>null</code>, the
+ selection will start with the first table region.</dd><dd><code>endKey</code> - select regions up to and including the region containing this row. If <code>null</code>, selection will continue through the last table region.</dd><dd><code>callable</code> - this instance's <code>.Call#call</code>
  method will be invoked once per table region, using the <code>Service</code>
  instance connected to that region.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>a map of result values keyed by region name</dd>
@@ -1250,23 +1250,23 @@ public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.
 <pre>public&nbsp;&lt;T extends com.google.protobuf.Service,R&gt;&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/rest/client/RemoteHTable.html#line.810">coprocessorService</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
                                                                 byte[]&nbsp;startKey,
                                                                 byte[]&nbsp;endKey,
-                                                                <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Call</a>&lt;T,R&gt;&nbsp;callable,
-                                                                <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Callback.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Callback</a>&lt;R&gt;&nbsp;callback)
+                                                                org.apache.hadoop.hbase.client.coprocessor.Batch.Call&lt;T,R&gt;&nbsp;callable,
+                                                                org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)
                         throws com.google.protobuf.ServiceException,
                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call,%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">Table</a></code></strong></div>
 <div class="block">Creates an instance of the given <code>Service</code> subclass for each table
  region spanning the range from the <code>startKey</code> row to <code>endKey</code> row (inclusive), and
- invokes the passed <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html#call(T)"><code>Batch.Call.call(T)</code></a> method
+ invokes the passed <code>Batch.Call.call(T)</code> method
  with each <code>Service</code> instance.
 
- <p> The given <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Callback.html#update(byte[],%20byte[],%20R)"><code>Batch.Callback.update(byte[],
- byte[], Object)</code></a> method will be called with the return value from each region's <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html#call(T)"><code>Batch.Call.call(T)</code></a> invocation. </p></div>
+ <p> The given <code>Batch.Callback.update(byte[],
+ byte[], Object)</code> method will be called with the return value from each region's <code>Batch.Call.call(T)</code> invocation. </p></div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call,%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">coprocessorService</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
-<dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - the <code>Service</code> subclass to connect to</dd><dd><code>R</code> - Return type for the <code>callable</code> parameter's <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html#call(T)"><code>Batch.Call.call(T)</code></a> method</dd><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - the protocol buffer <code>Service</code> implementation to call</dd><dd><code>startKey</code> - start region selection with region containing this row.  If <code>null</code>, the
- selection will start with the first table region.</dd><dd><code>endKey</code> - select regions up to and including the region containing this row. If <code>null</code>, selection will continue through the last table region.</dd><dd><code>callable</code> - this instance's <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.html" title="class in org.apache.hadoop.hbase.client.coprocessor"><code>.Call#call</code></a>
+<dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - the <code>Service</code> subclass to connect to</dd><dd><code>R</code> - Return type for the <code>callable</code> parameter's <code>Batch.Call.call(T)</code> method</dd><dt><span class="strong">Parameters:</span></dt><dd><code>service</code> - the protocol buffer <code>Service</code> implementation to call</dd><dd><code>startKey</code> - start region selection with region containing this row.  If <code>null</code>, the
+ selection will start with the first table region.</dd><dd><code>endKey</code> - select regions up to and including the region containing this row. If <code>null</code>, selection will continue through the last table region.</dd><dd><code>callable</code> - this instance's <code>.Call#call</code>
  method will be invoked once per table region, using the <code>Service</code> instance connected to
  that region.</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -1377,7 +1377,7 @@ public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.
                                                                    byte[]&nbsp;startKey,
                                                                    byte[]&nbsp;endKey,
                                                                    R&nbsp;responsePrototype,
-                                                                   <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Callback.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Callback</a>&lt;R&gt;&nbsp;callback)
+                                                                   org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)
                              throws com.google.protobuf.ServiceException,
                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html#batchCoprocessorService(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20byte[],%20byte[],%20R,%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">Table</a></code></strong></div>
@@ -1388,7 +1388,7 @@ public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.
 
  <p>
  The given
- <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Callback.html#update(byte[],%20byte[],%20R)"><code>Batch.Callback.update(byte[],byte[],Object)</code></a>
+ <code>Batch.Callback.update(byte[],byte[],Object)</code>
  method will be called with the return value from each region's invocation.
  </p></div>
 <dl>

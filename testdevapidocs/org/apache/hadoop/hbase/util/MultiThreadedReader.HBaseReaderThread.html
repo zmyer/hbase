@@ -148,16 +148,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#curKey">curKey</a></strong></code>
+<div class="block">The "current" key being read.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#printExceptionTrace">printExceptionTrace</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#readerId">readerId</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#readingRandomKey">readingRandomKey</a></strong></code>
+<div class="block">If we are ahead of the writer and reading a random key.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#startTimeMs">startTimeMs</a></strong></code>
 <div class="block">Time when the thread started</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.client.Table</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#table">table</a></strong></code>&nbsp;</td>
 </tr>
@@ -217,22 +233,36 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#getNextKeyToRead()">getNextKeyToRead</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#maxKeyWeCanRead()">maxKeyWeCanRead</a></strong>()</code>
+<div class="block">Should only be used for the concurrent writer/reader workload.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#queryKey(org.apache.hadoop.hbase.client.Get[],%20boolean,%20long[])">queryKey</a></strong>(org.apache.hadoop.hbase.client.Get[]&nbsp;gets,
                 boolean&nbsp;verify,
                 long[]&nbsp;keysToRead)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#queryKey(org.apache.hadoop.hbase.client.Get,%20boolean,%20long)">queryKey</a></strong>(org.apache.hadoop.hbase.client.Get&nbsp;get,
                 boolean&nbsp;verify,
                 long&nbsp;keyToRead)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Get[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#readKey(long[])">readKey</a></strong>(long[]&nbsp;keysToRead)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#run()">run</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#runReader()">runReader</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#verifyResultsAndUpdateMetrics(boolean,%20org.apache.hadoop.hbase.client.Get[],%20long,%20org.apache.hadoop.hbase.client.Result[],%20org.apache.hadoop.hbase.client.Table,%20boolean)">verifyResultsAndUpdateMetrics</a></strong>(boolean&nbsp;verify,
                                                           org.apache.hadoop.hbase.client.Get[]&nbsp;gets,
@@ -241,7 +271,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?
                                                           org.apache.hadoop.hbase.client.Table&nbsp;table,
                                                           boolean&nbsp;isNullExpected)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#verifyResultsAndUpdateMetrics(boolean,%20org.apache.hadoop.hbase.client.Get,%20long,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.hbase.client.Table,%20boolean)">verifyResultsAndUpdateMetrics</a></strong>(boolean&nbsp;verify,
                                                           org.apache.hadoop.hbase.client.Get&nbsp;get,
@@ -249,6 +279,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?
                                                           org.apache.hadoop.hbase.client.Result&nbsp;result,
                                                           org.apache.hadoop.hbase.client.Table&nbsp;table,
                                                           boolean&nbsp;isNullExpected)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#verifyResultsAndUpdateMetricsOnAPerGetBasis(boolean,%20org.apache.hadoop.hbase.client.Get,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.hbase.client.Table,%20boolean)">verifyResultsAndUpdateMetricsOnAPerGetBasis</a></strong>(boolean&nbsp;verify,
+                                                                                      org.apache.hadoop.hbase.client.Get&nbsp;get,
+                                                                                      org.apache.hadoop.hbase.client.Result&nbsp;result,
+                                                                                      org.apache.hadoop.hbase.client.Table&nbsp;table,
+                                                                                      boolean&nbsp;isNullExpected)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -297,14 +335,43 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?
 <pre>protected final&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.138">table</a></pre>
 </li>
 </ul>
+<a name="curKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>curKey</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.141">curKey</a></pre>
+<div class="block">The "current" key being read. Increases from startKey to endKey.</div>
+</li>
+</ul>
 <a name="startTimeMs">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>startTimeMs</h4>
 <pre>protected&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.144">startTimeMs</a></pre>
 <div class="block">Time when the thread started</div>
+</li>
+</ul>
+<a name="readingRandomKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readingRandomKey</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.147">readingRandomKey</a></pre>
+<div class="block">If we are ahead of the writer and reading a random key.</div>
+</li>
+</ul>
+<a name="printExceptionTrace">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>printExceptionTrace</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.149">printExceptionTrace</a></pre>
 </li>
 </ul>
 </li>
@@ -373,6 +440,27 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.175">closeTable</a>()</pre>
 </li>
 </ul>
+<a name="runReader()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runReader</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.185">runReader</a>()</pre>
+</li>
+</ul>
+<a name="maxKeyWeCanRead()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxKeyWeCanRead</h4>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.233">maxKeyWeCanRead</a>()</pre>
+<div class="block">Should only be used for the concurrent writer/reader workload. The
+ maximum key we are allowed to read, subject to the "key window"
+ constraint.</div>
+</li>
+</ul>
 <a name="getNextKeyToRead()">
 <!--   -->
 </a>
@@ -380,6 +468,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?
 <li class="blockList">
 <h4>getNextKeyToRead</h4>
 <pre>protected&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.243">getNextKeyToRead</a>()</pre>
+</li>
+</ul>
+<a name="readKey(long[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readKey</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Get[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.273">readKey</a>(long[]&nbsp;keysToRead)</pre>
 </li>
 </ul>
 <a name="createGet(long)">
@@ -442,7 +539,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?
 <a name="verifyResultsAndUpdateMetrics(boolean, org.apache.hadoop.hbase.client.Get, long, org.apache.hadoop.hbase.client.Result, org.apache.hadoop.hbase.client.Table, boolean)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>verifyResultsAndUpdateMetrics</h4>
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.368">verifyResultsAndUpdateMetrics</a>(boolean&nbsp;verify,
@@ -452,6 +549,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?
                                  org.apache.hadoop.hbase.client.Table&nbsp;table,
                                  boolean&nbsp;isNullExpected)
                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyResultsAndUpdateMetricsOnAPerGetBasis(boolean, org.apache.hadoop.hbase.client.Get, org.apache.hadoop.hbase.client.Result, org.apache.hadoop.hbase.client.Table, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>verifyResultsAndUpdateMetricsOnAPerGetBasis</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedReader.HBaseReaderThread.html#line.375">verifyResultsAndUpdateMetricsOnAPerGetBasis</a>(boolean&nbsp;verify,
+                                               org.apache.hadoop.hbase.client.Get&nbsp;get,
+                                               org.apache.hadoop.hbase.client.Result&nbsp;result,
+                                               org.apache.hadoop.hbase.client.Table&nbsp;table,
+                                               boolean&nbsp;isNullExpected)
+                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>

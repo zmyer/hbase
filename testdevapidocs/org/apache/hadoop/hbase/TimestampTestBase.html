@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/TimedOutTestsListener.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/Waiter.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.FlushCache.html" title="interface in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/TimestampTestBase.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -106,6 +106,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.FlushCache.html" title="interface in org.apache.hadoop.hbase">TimestampTestBase.FlushCache</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="field_summary">
@@ -121,6 +140,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#FAMILY_NAME">FAMILY_NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#QUALIFIER_NAME">QUALIFIER_NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#ROW">ROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#T0">T0</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#T1">T1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#T2">T2</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -155,60 +194,65 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#assertOnlyLatest(org.apache.hadoop.hbase.client.Table,%20long)">assertOnlyLatest</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;incommon,
+                                long&nbsp;currentTime)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#assertScanContentTimestamp(org.apache.hadoop.hbase.client.Table,%20long)">assertScanContentTimestamp</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;in,
                                                     long&nbsp;ts)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#assertVersions(org.apache.hadoop.hbase.client.Table,%20long[])">assertVersions</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;incommon,
                             long[]&nbsp;tss)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#delete(org.apache.hadoop.hbase.client.Table)">delete</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;loader)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#delete(org.apache.hadoop.hbase.client.Table,%20byte[])">delete</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;loader,
             byte[]&nbsp;column)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#delete(org.apache.hadoop.hbase.client.Table,%20byte[],%20long)">delete</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;loader,
             byte[]&nbsp;column,
             long&nbsp;ts)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#delete(org.apache.hadoop.hbase.client.Table,%20long)">delete</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;loader,
             long&nbsp;ts)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#doTestDelete(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.TimestampTestBase.FlushCache)">doTestDelete</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-                        org.apache.hadoop.hbase.TimestampTestBase.FlushCache&nbsp;flusher)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#doTestTimestampScanning(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.TimestampTestBase.FlushCache)">doTestTimestampScanning</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;incommon,
-                                              org.apache.hadoop.hbase.TimestampTestBase.FlushCache&nbsp;flusher)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#doTestDelete(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.TimestampTestBase.FlushCache)">doTestDelete</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
+                        <a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.FlushCache.html" title="interface in org.apache.hadoop.hbase">TimestampTestBase.FlushCache</a>&nbsp;flusher)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#doTestTimestampScanning(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.TimestampTestBase.FlushCache)">doTestTimestampScanning</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;incommon,
+                                              <a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.FlushCache.html" title="interface in org.apache.hadoop.hbase">TimestampTestBase.FlushCache</a>&nbsp;flusher)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static org.apache.hadoop.hbase.client.Result</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#get(org.apache.hadoop.hbase.client.Table)">get</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;loader)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#put(org.apache.hadoop.hbase.client.Table)">put</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;loader)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#put(org.apache.hadoop.hbase.client.Table,%20byte[],%20long)">put</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;loader,
       byte[]&nbsp;bytes,
       long&nbsp;ts)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html#put(org.apache.hadoop.hbase.client.Table,%20long)">put</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;loader,
       long&nbsp;ts)</code>&nbsp;</td>
@@ -235,13 +279,61 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="T0">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T0</h4>
+<pre>private static final&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.40">T0</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.TimestampTestBase.T0">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="T1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T1</h4>
+<pre>private static final&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.41">T1</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.TimestampTestBase.T1">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="T2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T2</h4>
+<pre>private static final&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.42">T2</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.TimestampTestBase.T2">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="FAMILY_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY_NAME</h4>
+<pre>public static final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.44">FAMILY_NAME</a></pre>
+</li>
+</ul>
+<a name="QUALIFIER_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>QUALIFIER_NAME</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.45">QUALIFIER_NAME</a></pre>
+</li>
+</ul>
+<a name="ROW">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>FAMILY_NAME</h4>
-<pre>public static final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.44">FAMILY_NAME</a></pre>
+<h4>ROW</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.47">ROW</a></pre>
 </li>
 </ul>
 </li>
@@ -276,8 +368,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>doTestDelete</h4>
 <pre>public static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.60">doTestDelete</a>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-                org.apache.hadoop.hbase.TimestampTestBase.FlushCache&nbsp;flusher)
+                <a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.FlushCache.html" title="interface in org.apache.hadoop.hbase">TimestampTestBase.FlushCache</a>&nbsp;flusher)
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertOnlyLatest(org.apache.hadoop.hbase.client.Table, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertOnlyLatest</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.106">assertOnlyLatest</a>(org.apache.hadoop.hbase.client.Table&nbsp;incommon,
+                    long&nbsp;currentTime)
+                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -302,7 +407,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>doTestTimestampScanning</h4>
 <pre>public static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TimestampTestBase.html#line.176">doTestTimestampScanning</a>(org.apache.hadoop.hbase.client.Table&nbsp;incommon,
-                           org.apache.hadoop.hbase.TimestampTestBase.FlushCache&nbsp;flusher)
+                           <a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.FlushCache.html" title="interface in org.apache.hadoop.hbase">TimestampTestBase.FlushCache</a>&nbsp;flusher)
                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -451,7 +556,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/TimedOutTestsListener.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/Waiter.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.FlushCache.html" title="interface in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/TimestampTestBase.html" target="_top">Frames</a></li>
@@ -475,7 +580,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

@@ -53,7 +53,7 @@
 <a class="jxr_linenumber" name="43" href="#43">43</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="44" href="#44">44</a>  @InterfaceAudience.Public
 <a class="jxr_linenumber" name="45" href="#45">45</a>  @InterfaceStability.Stable
-<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueExcludeFilter</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueFilter</a> {
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueExcludeFilter.html">SingleColumnValueExcludeFilter</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueFilter.html">SingleColumnValueFilter</a> {
 <a class="jxr_linenumber" name="47" href="#47">47</a>  
 <a class="jxr_linenumber" name="48" href="#48">48</a>    <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="49" href="#49">49</a>  <em class="jxr_javadoccomment">   * Constructor for binary compare of the value of a single column. If the</em>
@@ -66,7 +66,7 @@
 <a class="jxr_linenumber" name="56" href="#56">56</a>  <em class="jxr_javadoccomment">   * @param compareOp operator</em>
 <a class="jxr_linenumber" name="57" href="#57">57</a>  <em class="jxr_javadoccomment">   * @param value value to compare column values against</em>
 <a class="jxr_linenumber" name="58" href="#58">58</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="59" href="#59">59</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueExcludeFilter</a>(byte[] family, byte[] qualifier,
+<a class="jxr_linenumber" name="59" href="#59">59</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueExcludeFilter.html">SingleColumnValueExcludeFilter</a>(byte[] family, byte[] qualifier,
 <a class="jxr_linenumber" name="60" href="#60">60</a>        <a href="../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html">CompareOp</a> compareOp, byte[] value) {
 <a class="jxr_linenumber" name="61" href="#61">61</a>      <strong class="jxr_keyword">super</strong>(family, qualifier, compareOp, value);
 <a class="jxr_linenumber" name="62" href="#62">62</a>    }
@@ -86,8 +86,8 @@
 <a class="jxr_linenumber" name="76" href="#76">76</a>  <em class="jxr_javadoccomment">   * @param compareOp operator</em>
 <a class="jxr_linenumber" name="77" href="#77">77</a>  <em class="jxr_javadoccomment">   * @param comparator Comparator to use.</em>
 <a class="jxr_linenumber" name="78" href="#78">78</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="79" href="#79">79</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueExcludeFilter</a>(byte[] family, byte[] qualifier,
-<a class="jxr_linenumber" name="80" href="#80">80</a>        <a href="../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html">CompareOp</a> compareOp, <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">ByteArrayComparable</a> comparator) {
+<a class="jxr_linenumber" name="79" href="#79">79</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueExcludeFilter.html">SingleColumnValueExcludeFilter</a>(byte[] family, byte[] qualifier,
+<a class="jxr_linenumber" name="80" href="#80">80</a>        <a href="../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html">CompareOp</a> compareOp, <a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html">ByteArrayComparable</a> comparator) {
 <a class="jxr_linenumber" name="81" href="#81">81</a>      <strong class="jxr_keyword">super</strong>(family, qualifier, compareOp, comparator);
 <a class="jxr_linenumber" name="82" href="#82">82</a>    }
 <a class="jxr_linenumber" name="83" href="#83">83</a>  
@@ -100,8 +100,8 @@
 <a class="jxr_linenumber" name="90" href="#90">90</a>  <em class="jxr_javadoccomment">   * @param filterIfMissing</em>
 <a class="jxr_linenumber" name="91" href="#91">91</a>  <em class="jxr_javadoccomment">   * @param latestVersionOnly</em>
 <a class="jxr_linenumber" name="92" href="#92">92</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="93" href="#93">93</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueExcludeFilter</a>(<strong class="jxr_keyword">final</strong> byte[] family, <strong class="jxr_keyword">final</strong> byte[] qualifier,
-<a class="jxr_linenumber" name="94" href="#94">94</a>        <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html">CompareOp</a> compareOp, <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">ByteArrayComparable</a> comparator, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> filterIfMissing,
+<a class="jxr_linenumber" name="93" href="#93">93</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueExcludeFilter.html">SingleColumnValueExcludeFilter</a>(<strong class="jxr_keyword">final</strong> byte[] family, <strong class="jxr_keyword">final</strong> byte[] qualifier,
+<a class="jxr_linenumber" name="94" href="#94">94</a>        <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html">CompareOp</a> compareOp, <a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html">ByteArrayComparable</a> comparator, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> filterIfMissing,
 <a class="jxr_linenumber" name="95" href="#95">95</a>        <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> latestVersionOnly) {
 <a class="jxr_linenumber" name="96" href="#96">96</a>      <strong class="jxr_keyword">super</strong>(family, qualifier, compareOp, comparator, filterIfMissing, latestVersionOnly);
 <a class="jxr_linenumber" name="97" href="#97">97</a>    }
@@ -124,10 +124,10 @@
 <a class="jxr_linenumber" name="114" href="#114">114</a>     }
 <a class="jxr_linenumber" name="115" href="#115">115</a>   }
 <a class="jxr_linenumber" name="116" href="#116">116</a> 
-<a class="jxr_linenumber" name="117" href="#117">117</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">Filter</a> createFilterFromArguments(ArrayList&lt;byte []&gt; filterArguments) {
-<a class="jxr_linenumber" name="118" href="#118">118</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueFilter</a> tempFilter = (SingleColumnValueFilter)
+<a class="jxr_linenumber" name="117" href="#117">117</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html">Filter</a> createFilterFromArguments(ArrayList&lt;byte []&gt; filterArguments) {
+<a class="jxr_linenumber" name="118" href="#118">118</a>     <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueFilter.html">SingleColumnValueFilter</a> tempFilter = (SingleColumnValueFilter)
 <a class="jxr_linenumber" name="119" href="#119">119</a>       SingleColumnValueFilter.createFilterFromArguments(filterArguments);
-<a class="jxr_linenumber" name="120" href="#120">120</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueExcludeFilter</a> filter = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueExcludeFilter</a> (
+<a class="jxr_linenumber" name="120" href="#120">120</a>     <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueExcludeFilter.html">SingleColumnValueExcludeFilter</a> filter = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueExcludeFilter.html">SingleColumnValueExcludeFilter</a> (
 <a class="jxr_linenumber" name="121" href="#121">121</a>       tempFilter.getFamily(), tempFilter.getQualifier(),
 <a class="jxr_linenumber" name="122" href="#122">122</a>       tempFilter.getOperator(), tempFilter.getComparator());
 <a class="jxr_linenumber" name="123" href="#123">123</a> 
@@ -154,7 +154,7 @@
 <a class="jxr_linenumber" name="144" href="#144">144</a> <em class="jxr_javadoccomment">   * @throws DeserializationException</em>
 <a class="jxr_linenumber" name="145" href="#145">145</a> <em class="jxr_javadoccomment">   * @see #toByteArray</em>
 <a class="jxr_linenumber" name="146" href="#146">146</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="147" href="#147">147</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueExcludeFilter</a> parseFrom(<strong class="jxr_keyword">final</strong> byte [] pbBytes)
+<a class="jxr_linenumber" name="147" href="#147">147</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueExcludeFilter.html">SingleColumnValueExcludeFilter</a> parseFrom(<strong class="jxr_keyword">final</strong> byte [] pbBytes)
 <a class="jxr_linenumber" name="148" href="#148">148</a>   <strong class="jxr_keyword">throws</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a> {
 <a class="jxr_linenumber" name="149" href="#149">149</a>     FilterProtos.SingleColumnValueExcludeFilter proto;
 <a class="jxr_linenumber" name="150" href="#150">150</a>     <strong class="jxr_keyword">try</strong> {
@@ -166,14 +166,14 @@
 <a class="jxr_linenumber" name="156" href="#156">156</a>     FilterProtos.SingleColumnValueFilter parentProto = proto.getSingleColumnValueFilter();
 <a class="jxr_linenumber" name="157" href="#157">157</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html">CompareOp</a> compareOp =
 <a class="jxr_linenumber" name="158" href="#158">158</a>       CompareOp.valueOf(parentProto.getCompareOp().name());
-<a class="jxr_linenumber" name="159" href="#159">159</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">ByteArrayComparable</a> comparator;
+<a class="jxr_linenumber" name="159" href="#159">159</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html">ByteArrayComparable</a> comparator;
 <a class="jxr_linenumber" name="160" href="#160">160</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="161" href="#161">161</a>       comparator = ProtobufUtil.toComparator(parentProto.getComparator());
 <a class="jxr_linenumber" name="162" href="#162">162</a>     } <strong class="jxr_keyword">catch</strong> (IOException ioe) {
 <a class="jxr_linenumber" name="163" href="#163">163</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a>(ioe);
 <a class="jxr_linenumber" name="164" href="#164">164</a>     }
 <a class="jxr_linenumber" name="165" href="#165">165</a> 
-<a class="jxr_linenumber" name="166" href="#166">166</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">SingleColumnValueExcludeFilter</a>(parentProto.hasColumnFamily() ? parentProto
+<a class="jxr_linenumber" name="166" href="#166">166</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueExcludeFilter.html">SingleColumnValueExcludeFilter</a>(parentProto.hasColumnFamily() ? parentProto
 <a class="jxr_linenumber" name="167" href="#167">167</a>         .getColumnFamily().toByteArray() : <strong class="jxr_keyword">null</strong>, parentProto.hasColumnQualifier() ? parentProto
 <a class="jxr_linenumber" name="168" href="#168">168</a>         .getColumnQualifier().toByteArray() : <strong class="jxr_keyword">null</strong>, compareOp, comparator, parentProto
 <a class="jxr_linenumber" name="169" href="#169">169</a>         .getFilterIfMissing(), parentProto.getLatestVersionOnly());
@@ -184,7 +184,7 @@
 <a class="jxr_linenumber" name="174" href="#174">174</a> <em class="jxr_javadoccomment">   * @return true if and only if the fields of the filter that are serialized</em>
 <a class="jxr_linenumber" name="175" href="#175">175</a> <em class="jxr_javadoccomment">   * are equal to the corresponding fields in other.  Used for testing.</em>
 <a class="jxr_linenumber" name="176" href="#176">176</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="177" href="#177">177</a>   <strong class="jxr_keyword">boolean</strong> areSerializedFieldsEqual(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/FilterProtos.html">Filter</a> o) {
+<a class="jxr_linenumber" name="177" href="#177">177</a>   <strong class="jxr_keyword">boolean</strong> areSerializedFieldsEqual(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html">Filter</a> o) {
 <a class="jxr_linenumber" name="178" href="#178">178</a>     <strong class="jxr_keyword">if</strong> (o == <strong class="jxr_keyword">this</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="179" href="#179">179</a>     <strong class="jxr_keyword">if</strong> (!(o instanceof SingleColumnValueExcludeFilter)) <strong class="jxr_keyword">return</strong> false;
 <a class="jxr_linenumber" name="180" href="#180">180</a> 

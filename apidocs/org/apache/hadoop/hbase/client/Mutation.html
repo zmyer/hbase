@@ -214,7 +214,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/Row.html" titl
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html#getACL()">getACL</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/security/visibility/CellVisibility.html" title="class in org.apache.hadoop.hbase.security.visibility">CellVisibility</a></code></td>
+<td class="colFirst"><code>org.apache.hadoop.hbase.security.visibility.CellVisibility</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html#getCellVisibility()">getCellVisibility</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -273,16 +273,16 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/Row.html" titl
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html#setACL(java.util.Map)">setACL</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&gt;&nbsp;perms)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html#setACL(java.util.Map)">setACL</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.security.access.Permission&gt;&nbsp;perms)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html#setACL(java.lang.String,%20org.apache.hadoop.hbase.security.access.Permission)">setACL</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user,
-            <a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&nbsp;perms)</code>&nbsp;</td>
+            org.apache.hadoop.hbase.security.access.Permission&nbsp;perms)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html#setCellVisibility(org.apache.hadoop.hbase.security.visibility.CellVisibility)">setCellVisibility</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/security/visibility/CellVisibility.html" title="class in org.apache.hadoop.hbase.security.visibility">CellVisibility</a>&nbsp;expression)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html#setCellVisibility(org.apache.hadoop.hbase.security.visibility.CellVisibility)">setCellVisibility</a></strong>(org.apache.hadoop.hbase.security.visibility.CellVisibility&nbsp;expression)</code>
 <div class="block">Sets the visibility expression associated with cells in this Mutation.</div>
 </td>
 </tr>
@@ -593,7 +593,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/Row.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>setCellVisibility</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Mutation.html#line.331">setCellVisibility</a>(<a href="../../../../../org/apache/hadoop/hbase/security/visibility/CellVisibility.html" title="class in org.apache.hadoop.hbase.security.visibility">CellVisibility</a>&nbsp;expression)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Mutation.html#line.331">setCellVisibility</a>(org.apache.hadoop.hbase.security.visibility.CellVisibility&nbsp;expression)</pre>
 <div class="block">Sets the visibility expression associated with cells in this Mutation.
  It is illegal to set <code>CellVisibility</code> on <code>Delete</code> mutation.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>expression</code> - </dd></dl>
@@ -605,8 +605,8 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/Row.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>getCellVisibility</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/security/visibility/CellVisibility.html" title="class in org.apache.hadoop.hbase.security.visibility">CellVisibility</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Mutation.html#line.341">getCellVisibility</a>()
-                                 throws org.apache.hadoop.hbase.exceptions.DeserializationException</pre>
+<pre>public&nbsp;org.apache.hadoop.hbase.security.visibility.CellVisibility&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Mutation.html#line.341">getCellVisibility</a>()
+                                                                             throws org.apache.hadoop.hbase.exceptions.DeserializationException</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>CellVisibility associated with cells in this Mutation.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code>org.apache.hadoop.hbase.exceptions.DeserializationException</code></dd></dl>
@@ -663,7 +663,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/Row.html" titl
 <li class="blockList">
 <h4>setACL</h4>
 <pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Mutation.html#line.411">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user,
-              <a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&nbsp;perms)</pre>
+              org.apache.hadoop.hbase.security.access.Permission&nbsp;perms)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>user</code> - User short name</dd><dd><code>perms</code> - Permissions for the user</dd></dl>
 </li>
 </ul>
@@ -673,7 +673,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/client/Row.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>setACL</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Mutation.html#line.420">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&gt;&nbsp;perms)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Mutation.html#line.420">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,org.apache.hadoop.hbase.security.access.Permission&gt;&nbsp;perms)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>perms</code> - A map of permissions for a user or users</dd></dl>
 </li>
 </ul>

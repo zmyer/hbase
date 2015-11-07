@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestManyRegions.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestManyRegions.Worker.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestRegionReplicaPerf.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -108,6 +108,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestMetaReplicas.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase">IntegrationTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestMetaReplicas.html#util">util</a></strong></code>
+<div class="block">Util to get at the cluster.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -153,6 +178,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestMetaReplicas.html#testShutdownHandling()">testShutdownHandling</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestMetaReplicas.html#waitUntilZnodeAvailable(int)">waitUntilZnodeAvailable</a></strong>(int&nbsp;replicaId)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -169,6 +198,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestMetaReplicas.html#line.44">LOG</a></pre>
+</li>
+</ul>
+<a name="util">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>util</h4>
+<pre>private static&nbsp;<a href="../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase">IntegrationTestingUtility</a> <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestMetaReplicas.html#line.48">util</a></pre>
+<div class="block">Util to get at the cluster.</div>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -212,6 +268,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>teardown</h4>
 <pre>public static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestMetaReplicas.html#line.75">teardown</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="waitUntilZnodeAvailable(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitUntilZnodeAvailable</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestMetaReplicas.html#line.81">waitUntilZnodeAvailable</a>(int&nbsp;replicaId)
+                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -266,7 +334,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestManyRegions.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestManyRegions.Worker.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestRegionReplicaPerf.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -292,13 +360,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -66,15 +66,15 @@
 <a class="jxr_linenumber" name="56" href="#56">56</a>  <em class="jxr_javadoccomment">   * @return HColumnDescriptor</em>
 <a class="jxr_linenumber" name="57" href="#57">57</a>  <em class="jxr_javadoccomment">   * @throws IllegalArgument</em>
 <a class="jxr_linenumber" name="58" href="#58">58</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="59" href="#59">59</a>    <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html">HColumnDescriptor</a> colDescFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift/generated/ColumnDescriptor.html">ColumnDescriptor</a> in)
-<a class="jxr_linenumber" name="60" href="#60">60</a>        <strong class="jxr_keyword">throws</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/IllegalArgument.html">IllegalArgument</a> {
+<a class="jxr_linenumber" name="59" href="#59">59</a>    <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html">HColumnDescriptor</a> colDescFromThrift(ColumnDescriptor in)
+<a class="jxr_linenumber" name="60" href="#60">60</a>        <strong class="jxr_keyword">throws</strong> IllegalArgument {
 <a class="jxr_linenumber" name="61" href="#61">61</a>      Compression.Algorithm comp =
 <a class="jxr_linenumber" name="62" href="#62">62</a>        Compression.getCompressionAlgorithmByName(in.compression.toLowerCase());
 <a class="jxr_linenumber" name="63" href="#63">63</a>      <a href="../../../../../org/apache/hadoop/hbase/regionserver/BloomType.html">BloomType</a> bt =
 <a class="jxr_linenumber" name="64" href="#64">64</a>        BloomType.valueOf(in.bloomFilterType);
 <a class="jxr_linenumber" name="65" href="#65">65</a>  
 <a class="jxr_linenumber" name="66" href="#66">66</a>      <strong class="jxr_keyword">if</strong> (in.name == <strong class="jxr_keyword">null</strong> || !in.name.hasRemaining()) {
-<a class="jxr_linenumber" name="67" href="#67">67</a>        <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/IllegalArgument.html">IllegalArgument</a>(<span class="jxr_string">"column name is empty"</span>);
+<a class="jxr_linenumber" name="67" href="#67">67</a>        <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgument(<span class="jxr_string">"column name is empty"</span>);
 <a class="jxr_linenumber" name="68" href="#68">68</a>      }
 <a class="jxr_linenumber" name="69" href="#69">69</a>      byte [] parsedName = KeyValue.parseColumn(Bytes.getBytes(in.name))[0];
 <a class="jxr_linenumber" name="70" href="#70">70</a>      <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html">HColumnDescriptor</a> col = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html">HColumnDescriptor</a>(parsedName)
@@ -95,8 +95,8 @@
 <a class="jxr_linenumber" name="85" href="#85">85</a>  <em class="jxr_javadoccomment">   *          Hbase HColumnDescriptor object</em>
 <a class="jxr_linenumber" name="86" href="#86">86</a>  <em class="jxr_javadoccomment">   * @return Thrift ColumnDescriptor</em>
 <a class="jxr_linenumber" name="87" href="#87">87</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="88" href="#88">88</a>    <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/ColumnDescriptor.html">ColumnDescriptor</a> colDescFromHbase(<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html">HColumnDescriptor</a> in) {
-<a class="jxr_linenumber" name="89" href="#89">89</a>      <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/ColumnDescriptor.html">ColumnDescriptor</a> col = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/ColumnDescriptor.html">ColumnDescriptor</a>();
+<a class="jxr_linenumber" name="88" href="#88">88</a>    <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">public</strong> ColumnDescriptor colDescFromHbase(<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html">HColumnDescriptor</a> in) {
+<a class="jxr_linenumber" name="89" href="#89">89</a>      ColumnDescriptor col = <strong class="jxr_keyword">new</strong> ColumnDescriptor();
 <a class="jxr_linenumber" name="90" href="#90">90</a>      col.name = ByteBuffer.wrap(Bytes.add(in.getName(), KeyValue.COLUMN_FAMILY_DELIM_ARRAY));
 <a class="jxr_linenumber" name="91" href="#91">91</a>      col.maxVersions = in.getMaxVersions();
 <a class="jxr_linenumber" name="92" href="#92">92</a>      col.compression = in.getCompressionType().toString();
@@ -117,7 +117,7 @@
 <a class="jxr_linenumber" name="107" href="#107">107</a>   <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">public</strong> List&lt;TCell&gt; cellFromHBase(<a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> in) {
 <a class="jxr_linenumber" name="108" href="#108">108</a>     List&lt;TCell&gt; list = <strong class="jxr_keyword">new</strong> ArrayList&lt;TCell&gt;(1);
 <a class="jxr_linenumber" name="109" href="#109">109</a>     <strong class="jxr_keyword">if</strong> (in != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="110" href="#110">110</a>       list.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TCell.html">TCell</a>(ByteBuffer.wrap(CellUtil.cloneValue(in)), in.getTimestamp()));
+<a class="jxr_linenumber" name="110" href="#110">110</a>       list.add(<strong class="jxr_keyword">new</strong> TCell(ByteBuffer.wrap(CellUtil.cloneValue(in)), in.getTimestamp()));
 <a class="jxr_linenumber" name="111" href="#111">111</a>     }
 <a class="jxr_linenumber" name="112" href="#112">112</a>     <strong class="jxr_keyword">return</strong> list;
 <a class="jxr_linenumber" name="113" href="#113">113</a>   }
@@ -133,7 +133,7 @@
 <a class="jxr_linenumber" name="123" href="#123">123</a>     <strong class="jxr_keyword">if</strong> (in != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="124" href="#124">124</a>       list = <strong class="jxr_keyword">new</strong> ArrayList&lt;TCell&gt;(in.length);
 <a class="jxr_linenumber" name="125" href="#125">125</a>       <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; in.length; i++) {
-<a class="jxr_linenumber" name="126" href="#126">126</a>         list.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TCell.html">TCell</a>(ByteBuffer.wrap(CellUtil.cloneValue(in[i])), in[i].getTimestamp()));
+<a class="jxr_linenumber" name="126" href="#126">126</a>         list.add(<strong class="jxr_keyword">new</strong> TCell(ByteBuffer.wrap(CellUtil.cloneValue(in[i])), in[i].getTimestamp()));
 <a class="jxr_linenumber" name="127" href="#127">127</a>       }
 <a class="jxr_linenumber" name="128" href="#128">128</a>     } <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="129" href="#129">129</a>       list = <strong class="jxr_keyword">new</strong> ArrayList&lt;TCell&gt;(0);
@@ -162,15 +162,15 @@
 <a class="jxr_linenumber" name="152" href="#152">152</a>         <strong class="jxr_keyword">if</strong>(result_ == <strong class="jxr_keyword">null</strong> || result_.isEmpty()) {
 <a class="jxr_linenumber" name="153" href="#153">153</a>             <strong class="jxr_keyword">continue</strong>;
 <a class="jxr_linenumber" name="154" href="#154">154</a>         }
-<a class="jxr_linenumber" name="155" href="#155">155</a>         <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TRowResult.html">TRowResult</a> result = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TRowResult.html">TRowResult</a>();
+<a class="jxr_linenumber" name="155" href="#155">155</a>         TRowResult result = <strong class="jxr_keyword">new</strong> TRowResult();
 <a class="jxr_linenumber" name="156" href="#156">156</a>         result.row = ByteBuffer.wrap(result_.getRow());
 <a class="jxr_linenumber" name="157" href="#157">157</a>         <strong class="jxr_keyword">if</strong> (sortColumns) {
 <a class="jxr_linenumber" name="158" href="#158">158</a>           result.sortedColumns = <strong class="jxr_keyword">new</strong> ArrayList&lt;TColumn&gt;();
 <a class="jxr_linenumber" name="159" href="#159">159</a>           <strong class="jxr_keyword">for</strong> (Cell kv : result_.rawCells()) {
-<a class="jxr_linenumber" name="160" href="#160">160</a>             result.sortedColumns.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TColumn.html">TColumn</a>(
+<a class="jxr_linenumber" name="160" href="#160">160</a>             result.sortedColumns.add(<strong class="jxr_keyword">new</strong> TColumn(
 <a class="jxr_linenumber" name="161" href="#161">161</a>                 ByteBuffer.wrap(KeyValue.makeColumn(CellUtil.cloneFamily(kv),
 <a class="jxr_linenumber" name="162" href="#162">162</a>                     CellUtil.cloneQualifier(kv))),
-<a class="jxr_linenumber" name="163" href="#163">163</a>                 <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TCell.html">TCell</a>(ByteBuffer.wrap(CellUtil.cloneValue(kv)), kv.getTimestamp())));
+<a class="jxr_linenumber" name="163" href="#163">163</a>                 <strong class="jxr_keyword">new</strong> TCell(ByteBuffer.wrap(CellUtil.cloneValue(kv)), kv.getTimestamp())));
 <a class="jxr_linenumber" name="164" href="#164">164</a>           }
 <a class="jxr_linenumber" name="165" href="#165">165</a>         } <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="166" href="#166">166</a>           result.columns = <strong class="jxr_keyword">new</strong> TreeMap&lt;ByteBuffer, TCell&gt;();
@@ -178,7 +178,7 @@
 <a class="jxr_linenumber" name="168" href="#168">168</a>             result.columns.put(
 <a class="jxr_linenumber" name="169" href="#169">169</a>                 ByteBuffer.wrap(KeyValue.makeColumn(CellUtil.cloneFamily(kv),
 <a class="jxr_linenumber" name="170" href="#170">170</a>                     CellUtil.cloneQualifier(kv))),
-<a class="jxr_linenumber" name="171" href="#171">171</a>                 <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TCell.html">TCell</a>(ByteBuffer.wrap(CellUtil.cloneValue(kv)), kv.getTimestamp()));
+<a class="jxr_linenumber" name="171" href="#171">171</a>                 <strong class="jxr_keyword">new</strong> TCell(ByteBuffer.wrap(CellUtil.cloneValue(kv)), kv.getTimestamp()));
 <a class="jxr_linenumber" name="172" href="#172">172</a>           }
 <a class="jxr_linenumber" name="173" href="#173">173</a>         }
 <a class="jxr_linenumber" name="174" href="#174">174</a>       results.add(result);
@@ -209,7 +209,7 @@
 <a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_javadoccomment">   * @param tincrement the Thrift version of an increment</em>
 <a class="jxr_linenumber" name="200" href="#200">200</a> <em class="jxr_javadoccomment">   * @return an increment that the {@link TIncrement} represented.</em>
 <a class="jxr_linenumber" name="201" href="#201">201</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="202" href="#202">202</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> incrementFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TIncrement.html">TIncrement</a> tincrement) {
+<a class="jxr_linenumber" name="202" href="#202">202</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> incrementFromThrift(TIncrement tincrement) {
 <a class="jxr_linenumber" name="203" href="#203">203</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> inc = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a>(tincrement.getRow());
 <a class="jxr_linenumber" name="204" href="#204">204</a>     byte[][] famAndQf = KeyValue.parseColumn(tincrement.getColumn());
 <a class="jxr_linenumber" name="205" href="#205">205</a>     <strong class="jxr_keyword">if</strong> (famAndQf.length != 2) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
@@ -222,8 +222,8 @@
 <a class="jxr_linenumber" name="212" href="#212">212</a> <em class="jxr_javadoccomment">   * @param tappend the Thrift version of an append.</em>
 <a class="jxr_linenumber" name="213" href="#213">213</a> <em class="jxr_javadoccomment">   * @return an increment that the {@link TAppend} represented.</em>
 <a class="jxr_linenumber" name="214" href="#214">214</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="215" href="#215">215</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> appendFromThrift(<a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TAppend.html">TAppend</a> tappend) {
-<a class="jxr_linenumber" name="216" href="#216">216</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Hbase.html">append</a> = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a>(tappend.getRow());
+<a class="jxr_linenumber" name="215" href="#215">215</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> appendFromThrift(TAppend tappend) {
+<a class="jxr_linenumber" name="216" href="#216">216</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> append = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a>(tappend.getRow());
 <a class="jxr_linenumber" name="217" href="#217">217</a>     List&lt;ByteBuffer&gt; columns = tappend.getColumns();
 <a class="jxr_linenumber" name="218" href="#218">218</a>     List&lt;ByteBuffer&gt; values = tappend.getValues();
 <a class="jxr_linenumber" name="219" href="#219">219</a> 

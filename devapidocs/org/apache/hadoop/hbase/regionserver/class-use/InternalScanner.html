@@ -630,37 +630,57 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion.RegionScannerImpl</a></strong></code>
+<div class="block">RegionScannerImpl is used to combine scanners from multiple Stores (aka column families).</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html" title="class in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a></strong></code>
 <div class="block">Implements a heap merge across any number of KeyValueScanners.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MobCompactionStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">MobCompactionStoreScanner</a></strong></code>
 <div class="block">Scanner scans the MOB Store.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MobStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">MobStoreScanner</a></strong></code>
 <div class="block">Scanner scans both the memstore and the MOB Store.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ReversedKeyValueHeap.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedKeyValueHeap</a></strong></code>
 <div class="block">ReversedKeyValueHeap is used for supporting reversed scanning.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ReversedMobStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedMobStoreScanner</a></strong></code>
 <div class="block">ReversedMobStoreScanner extends from ReversedStoreScanner, and is used to support
  reversed scanning in both the memstore and the MOB store.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ReversedRegionScannerImpl.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedRegionScannerImpl</a></strong></code>
+<div class="block">ReversibleRegionScannerImpl extends from RegionScannerImpl, and is used to
+ support reversed scanning.</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ReversedStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedStoreScanner</a></strong></code>
+<div class="block">ReversedStoreScanner extends from StoreScanner, and is used to support
+ reversed scanning.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreScanner</a></strong></code>
 <div class="block">Scanner scans both the memstore and the Store.</div>
@@ -676,6 +696,13 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
+<td class="colLast"><span class="strong">StoreFlusher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#createScanner(org.apache.hadoop.hbase.regionserver.KeyValueScanner,%20long)">createScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;snapshotScanner,
+                          long&nbsp;smallestReadPoint)</code>
+<div class="block">Creates the scanner for flushing snapshot.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preCompact(org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.ScanType,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)">preCompact</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                     <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
@@ -684,7 +711,7 @@
 <div class="block">Called prior to rewriting the store files selected for compaction</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preCompactScannerOpen(org.apache.hadoop.hbase.regionserver.Store,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.ScanType,%20long,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)">preCompactScannerOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileScanner</a>&gt;&nbsp;scanners,
@@ -695,14 +722,14 @@
  <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#preCompactScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.ScanType,%20long,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)"><code>RegionObserver.preCompactScannerOpen(ObserverContext, Store, List, ScanType, long, InternalScanner, CompactionRequest)</code></a></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preFlush(org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.InternalScanner)">preFlush</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner)</code>
 <div class="block">Invoked before a memstore flush</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preFlushScannerOpen(org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.KeyValueScanner)">preFlushScannerOpen</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                                       <a href="../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;memstoreScanner)</code>
@@ -721,10 +748,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><span class="strong">StoreFlusher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#performFlush(org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long)">performFlush</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
+                        <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a>&nbsp;sink,
+                        long&nbsp;smallestReadPoint)</code>
+<div class="block">Performs memstore flush, writing data from scanner into sink.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postScannerClose(org.apache.hadoop.hbase.regionserver.InternalScanner)">postScannerClose</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postScannerFilterRow(org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.Cell)">postScannerFilterRow</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s,
                                         <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;curRowCell)</code>
@@ -732,14 +767,14 @@
  filter.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postScannerNext(org.apache.hadoop.hbase.regionserver.InternalScanner,%20java.util.List,%20int,%20boolean)">postScannerNext</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s,
                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&gt;&nbsp;results,
                               int&nbsp;limit,
                               boolean&nbsp;hasMore)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preCompact(org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.ScanType,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)">preCompact</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                     <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
@@ -748,18 +783,18 @@
 <div class="block">Called prior to rewriting the store files selected for compaction</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preFlush(org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.InternalScanner)">preFlush</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner)</code>
 <div class="block">Invoked before a memstore flush</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preScannerClose(org.apache.hadoop.hbase.regionserver.InternalScanner)">preScannerClose</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preScannerNext(org.apache.hadoop.hbase.regionserver.InternalScanner,%20java.util.List,%20int)">preScannerNext</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s,
                             <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&gt;&nbsp;results,
@@ -859,6 +894,21 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a> in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a> with type parameters of type <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#scannerOwners">scannerOwners</a></strong></code>
+<div class="block">Mapping of scanner instances to the user who created them</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/security/access/package-summary.html">org.apache.hadoop.hbase.security.access</a> that return <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -914,6 +964,12 @@
                             int&nbsp;limit,
                             boolean&nbsp;hasNext)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">AccessController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/AccessController.html#requireScannerOwner(org.apache.hadoop.hbase.regionserver.InternalScanner)">requireScannerOwner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)</code>
+<div class="block">Verify, when servicing an RPC, that the caller is the scanner owner.</div>
+</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -921,6 +977,21 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a> in <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a> with type parameters of type <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><span class="strong">VisibilityController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityController.html#scannerOwners">scannerOwners</a></strong></code>
+<div class="block">Mapping of scanner instances to the user who created them</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/package-summary.html">org.apache.hadoop.hbase.security.visibility</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -952,6 +1023,12 @@
                             <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&gt;&nbsp;result,
                             int&nbsp;limit,
                             boolean&nbsp;hasNext)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">VisibilityController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/VisibilityController.html#requireScannerOwner(org.apache.hadoop.hbase.regionserver.InternalScanner)">requireScannerOwner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)</code>
+<div class="block">Verify, when servicing an RPC, that the caller is the scanner owner.</div>
+</td>
 </tr>
 </tbody>
 </table>

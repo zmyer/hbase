@@ -75,16 +75,59 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client</a></td>
+<td class="colLast">
+<div class="block">Provides HBase Client</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.ipc">org.apache.hadoop.hbase.ipc</a></td>
 <td class="colLast">
 <div class="block">Tools to help define network clients and servers.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.client">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClient.html" title="interface in org.apache.hadoop.hbase.ipc">RpcClient</a> in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClient.html" title="interface in org.apache.hadoop.hbase.ipc">RpcClient</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClient.html" title="interface in org.apache.hadoop.hbase.ipc">RpcClient</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#rpcClient">rpcClient</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> that return <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClient.html" title="interface in org.apache.hadoop.hbase.ipc">RpcClient</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClient.html" title="interface in org.apache.hadoop.hbase.ipc">RpcClient</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#getRpcClient()">getRpcClient</a></strong>()</code>
+<div class="block">For tests only.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.ipc">
 <!--   -->
 </a>
@@ -148,6 +191,24 @@
 <div class="block">Creates a new RpcClient by the class defined in the configuration or falls back to
  RpcClientImpl</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClient.html" title="interface in org.apache.hadoop.hbase.ipc">RpcClient</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClient.html" title="interface in org.apache.hadoop.hbase.ipc">RpcClient</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClient.html" title="interface in org.apache.hadoop.hbase.ipc">RpcClient</a></code></td>
+<td class="colLast"><span class="strong">HRegionServer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionServer.html#rpcClient">rpcClient</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

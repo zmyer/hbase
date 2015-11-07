@@ -61,15 +61,15 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_java.lang.Object">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_top">
@@ -106,6 +106,29 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsEditsReplaySource.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">MetricsEditsReplaySource</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#source">source</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -129,6 +152,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#updateReplayBatchSize(long)">updateReplayBatchSize</a></strong>(long&nbsp;size)</code>
+<div class="block">Add the batch size of each replay</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#updateReplayDataSize(long)">updateReplayDataSize</a></strong>(long&nbsp;size)</code>
+<div class="block">Add the payload data size of each replay</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#updateReplayTime(long)">updateReplayTime</a></strong>(long&nbsp;time)</code>
+<div class="block">Add the time a replay command took</div>
+</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
@@ -144,6 +192,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#line.32">LOG</a></pre>
+</li>
+</ul>
+<a name="source">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>source</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsEditsReplaySource.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">MetricsEditsReplaySource</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#line.34">source</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -157,6 +231,44 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>MetricsWALEditsReplay</h4>
 <pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#line.36">MetricsWALEditsReplay</a>()</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="updateReplayTime(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateReplayTime</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#line.43">updateReplayTime</a>(long&nbsp;time)</pre>
+<div class="block">Add the time a replay command took</div>
+</li>
+</ul>
+<a name="updateReplayBatchSize(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateReplayBatchSize</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#line.50">updateReplayBatchSize</a>(long&nbsp;size)</pre>
+<div class="block">Add the batch size of each replay</div>
+</li>
+</ul>
+<a name="updateReplayDataSize(long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>updateReplayDataSize</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html#line.57">updateReplayDataSize</a>(long&nbsp;size)</pre>
+<div class="block">Add the payload data size of each replay</div>
 </li>
 </ul>
 </li>
@@ -211,15 +323,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_java.lang.Object">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_bottom">

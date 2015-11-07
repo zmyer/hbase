@@ -116,8 +116,48 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#c0">c0</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#c1">c1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#hbu">hbu</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.junit.rules.TestName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#name">name</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#T0">T0</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#T1">T1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#T2">T2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#T3">T3</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#T4">T4</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#T5">T5</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#T6">T6</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -152,32 +192,52 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#checkGet(org.apache.hadoop.hbase.regionserver.Region,%20byte[],%20byte[],%20byte[],%20long,%20byte[]...)">checkGet</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region,
+                byte[]&nbsp;row,
+                byte[]&nbsp;fam,
+                byte[]&nbsp;col,
+                long&nbsp;time,
+                byte[]...&nbsp;vals)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#checkResult(org.apache.hadoop.hbase.client.Result,%20byte[],%20byte[],%20byte[]...)">checkResult</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;r,
+                      byte[]&nbsp;fam,
+                      byte[]&nbsp;col,
+                      byte[]...&nbsp;vals)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#countDeleteMarkers(org.apache.hadoop.hbase.regionserver.Region)">countDeleteMarkers</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#tearDown()">tearDown</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#tearDown()">tearDown</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testBasicScenario()">testBasicScenario</a></strong>()</code>
 <div class="block">Make sure that deleted rows are retained.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testDeleteMarkerExpiration()">testDeleteMarkerExpiration</a></strong>()</code>
 <div class="block">Test delete marker removal from store files.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testDeleteMarkerExpirationEmptyStore()">testDeleteMarkerExpirationEmptyStore</a></strong>()</code>
 <div class="block">Verify that delete markers are removed from an otherwise empty store.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testDeleteMarkerVersioning()">testDeleteMarkerVersioning</a></strong>()</code>
 <div class="block">Verify that column/version delete makers are sorted
@@ -185,25 +245,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  versioning (i.e.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testRanges()">testRanges</a></strong>()</code>
 <div class="block">Verify correct range demarcation</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testRawScan()">testRawScan</a></strong>()</code>
 <div class="block">Verify that "raw" scanning mode return delete markers and deletes rows.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testRawScanWithColumns()">testRawScanWithColumns</a></strong>()</code>
 <div class="block">The ExplicitColumnTracker does not support "raw" scanning.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testRawScanWithoutKeepingDeletes()">testRawScanWithoutKeepingDeletes</a></strong>()</code>
 <div class="block">Even when the store does not keep deletes a "raw" scan will
@@ -211,31 +271,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  to have no effect).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testWithMinVersions()">testWithMinVersions</a></strong>()</code>
 <div class="block">Test keeping deleted rows together with min versions set</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testWithMixedCFs()">testWithMixedCFs</a></strong>()</code>
 <div class="block">Verify scenarios with multiple CFs and columns</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testWithOldRow()">testWithOldRow</a></strong>()</code>
 <div class="block">Test delete marker removal from store files.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testWithoutKeepingDeletes()">testWithoutKeepingDeletes</a></strong>()</code>
 <div class="block">basic verification of existing behavior</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#testWithTTL()">testWithTTL</a></strong>()</code>
 <div class="block">Test keeping deleted rows together with min versions set</div>
@@ -263,6 +323,96 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="hbu">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hbu</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.57">hbu</a></pre>
+</li>
+</ul>
+<a name="T0">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T0</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.58">T0</a></pre>
+</li>
+</ul>
+<a name="T1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T1</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.59">T1</a></pre>
+</li>
+</ul>
+<a name="T2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T2</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.60">T2</a></pre>
+</li>
+</ul>
+<a name="T3">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T3</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.61">T3</a></pre>
+</li>
+</ul>
+<a name="T4">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T4</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.62">T4</a></pre>
+</li>
+</ul>
+<a name="T5">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T5</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.63">T5</a></pre>
+</li>
+</ul>
+<a name="T6">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>T6</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.64">T6</a></pre>
+</li>
+</ul>
+<a name="c0">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>c0</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.66">c0</a></pre>
+</li>
+</ul>
+<a name="c1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>c1</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.67">c1</a></pre>
+</li>
+</ul>
 <a name="name">
 <!--   -->
 </a>
@@ -490,7 +640,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testWithTTL()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testWithTTL</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.897">testWithTTL</a>()
@@ -498,6 +648,47 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Test keeping deleted rows together with min versions set</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkGet(org.apache.hadoop.hbase.regionserver.Region, byte[], byte[], byte[], long, byte[]...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkGet</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.937">checkGet</a>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region,
+            byte[]&nbsp;row,
+            byte[]&nbsp;fam,
+            byte[]&nbsp;col,
+            long&nbsp;time,
+            byte[]...&nbsp;vals)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="countDeleteMarkers(org.apache.hadoop.hbase.regionserver.Region)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countDeleteMarkers</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.948">countDeleteMarkers</a>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkResult(org.apache.hadoop.hbase.client.Result, byte[], byte[], byte[]...)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>checkResult</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html#line.968">checkResult</a>(org.apache.hadoop.hbase.client.Result&nbsp;r,
+               byte[]&nbsp;fam,
+               byte[]&nbsp;col,
+               byte[]...&nbsp;vals)</pre>
 </li>
 </ul>
 </li>

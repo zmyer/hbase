@@ -107,6 +107,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a> in <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/package-summary.html">org.apache.hadoop.hbase.errorhandling</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/package-summary.html">org.apache.hadoop.hbase.errorhandling</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a></code></td>
+<td class="colLast"><span class="strong">ForeignExceptionDispatcher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html#exception">exception</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/package-summary.html">org.apache.hadoop.hbase.errorhandling</a> that return <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -140,10 +153,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">ForeignExceptionDispatcher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html#dispatch(org.apache.hadoop.hbase.errorhandling.ForeignException)">dispatch</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;e)</code>
+<div class="block">Sends an exception to all listeners.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ForeignExceptionDispatcher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html#receive(org.apache.hadoop.hbase.errorhandling.ForeignException)">receive</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ForeignExceptionListener.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionListener.html#receive(org.apache.hadoop.hbase.errorhandling.ForeignException)">receive</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;e)</code>
 <div class="block">Receive a ForeignException.</div>
@@ -363,31 +382,35 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">Subprocedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html#rethrowException()">rethrowException</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">Procedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Procedure.html#sendGlobalBarrierReached()">sendGlobalBarrierReached</a></strong>()</code>
 <div class="block">Sends a message to all members that the global barrier condition has been satisfied.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">Procedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Procedure.html#sendGlobalBarrierStart()">sendGlobalBarrierStart</a></strong>()</code>
 <div class="block">Sends a message to Members to create a new <a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html" title="class in org.apache.hadoop.hbase.procedure"><code>Subprocedure</code></a> for this Procedure and execute
  the <a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html#acquireBarrier()"><code>Subprocedure.acquireBarrier()</code></a> step.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">Procedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Procedure.html#waitForCompleted()">waitForCompleted</a></strong>()</code>
 <div class="block">Waits until the entire procedure has globally completed, or has been aborted.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,byte[]&gt;</code></td>
 <td class="colLast"><span class="strong">Procedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Procedure.html#waitForCompletedWithRet()">waitForCompletedWithRet</a></strong>()</code>
 <div class="block">Waits until the entire procedure has globally completed, or has been aborted.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><span class="strong">Procedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Procedure.html#waitForLatch(java.util.concurrent.CountDownLatch,%20org.apache.hadoop.hbase.errorhandling.ForeignExceptionSnare,%20long,%20java.lang.String)">waitForLatch</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;latch,
                         <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionSnare.html" title="interface in org.apache.hadoop.hbase.errorhandling">ForeignExceptionSnare</a>&nbsp;monitor,
@@ -397,10 +420,16 @@
  check for errors</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">Subprocedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html#waitForLocallyCompleted()">waitForLocallyCompleted</a></strong>()</code>
 <div class="block">Waits until the entire procedure has globally completed, or has been aborted.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">Subprocedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html#waitForReachedGlobalBarrier()">waitForReachedGlobalBarrier</a></strong>()</code>
+<div class="block">Wait for the reached global barrier notification.</div>
 </td>
 </tr>
 </tbody>
@@ -424,8 +453,18 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">FlushTableSubprocedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/FlushTableSubprocedure.html#flushRegions()">flushRegions</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><span class="strong">FlushTableSubprocedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/FlushTableSubprocedure.html#insideBarrier()">insideBarrier</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><span class="strong">RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool.html#waitForOutstandingTasks()">waitForOutstandingTasks</a></strong>()</code>
+<div class="block">Wait for all of the currently outstanding tasks submitted via <a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool.html#submitTask(java.util.concurrent.Callable)"><code>RegionServerFlushTableProcedureManager.FlushTableSubprocedurePool.submitTask(Callable)</code></a>.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -448,9 +487,19 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">FlushSnapshotSubprocedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/FlushSnapshotSubprocedure.html#flushSnapshot()">flushSnapshot</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><span class="strong">FlushSnapshotSubprocedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/FlushSnapshotSubprocedure.html#insideBarrier()">insideBarrier</a></strong>()</code>
 <div class="block">do a flush snapshot of every region on this rs from the target table.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><span class="strong">RegionServerSnapshotManager.SnapshotSubprocedurePool.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/RegionServerSnapshotManager.SnapshotSubprocedurePool.html#waitForOutstandingTasks()">waitForOutstandingTasks</a></strong>()</code>
+<div class="block">Wait for all of the currently outstanding tasks submitted via <a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/RegionServerSnapshotManager.SnapshotSubprocedurePool.html#submitTask(java.util.concurrent.Callable)"><code>RegionServerSnapshotManager.SnapshotSubprocedurePool.submitTask(Callable)</code></a>.</div>
 </td>
 </tr>
 </tbody>

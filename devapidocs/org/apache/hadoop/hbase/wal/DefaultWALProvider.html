@@ -154,24 +154,69 @@ implements <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html"
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#DEFAULT_PROVIDER_ID">DEFAULT_PROVIDER_ID</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#factory">factory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#initialized">initialized</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#listeners">listeners</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/FSHLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal">FSHLog</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#log">log</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#logPrefix">logPrefix</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#META_WAL_PROVIDER_ID">META_WAL_PROVIDER_ID</a></strong></code>
 <div class="block">The hbase:meta region's WAL filename extension</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#pattern">pattern</a></strong></code>
+<div class="block">Pattern used to validate a WAL file name
+ see <a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#validateWALFilename(java.lang.String)"><code>validateWALFilename(String)</code></a> for description.</div>
+</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#providerId">providerId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#SPLITTING_EXT">SPLITTING_EXT</a></strong></code>
 <div class="block">File Extension used while splitting an WAL into regions (HBASE-2312)</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#WAL_FILE_NAME_DELIMITER">WAL_FILE_NAME_DELIMITER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#walCreateLock">walCreateLock</a></strong></code>
+<div class="block">we synchronized on walCreateLock to prevent wal recreation in different threads</div>
+</td>
 </tr>
 </table>
 </li>
@@ -306,12 +351,18 @@ implements <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html"
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#isMetaFile(java.lang.String)">isMetaFile</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;p)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#requestLogRoll(org.apache.hadoop.hbase.wal.WAL)">requestLogRoll</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</code>
+<div class="block">request a log roll, but don't actually do it.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#shutdown()">shutdown</a></strong>()</code>
 <div class="block">persist outstanding WALs to storage and stop accepting new appends.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#validateWALFilename(java.lang.String)">validateWALFilename</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
 <div class="block">A WAL file name is of the format:
@@ -340,6 +391,15 @@ implements <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html"
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.59">LOG</a></pre>
+</li>
+</ul>
 <a name="log">
 <!--   -->
 </a>
@@ -347,6 +407,70 @@ implements <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html"
 <li class="blockList">
 <h4>log</h4>
 <pre>protected volatile&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/FSHLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal">FSHLog</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.77">log</a></pre>
+</li>
+</ul>
+<a name="factory">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>factory</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.78">factory</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.79">conf</a></pre>
+</li>
+</ul>
+<a name="listeners">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>listeners</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.80">listeners</a></pre>
+</li>
+</ul>
+<a name="providerId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>providerId</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.81">providerId</a></pre>
+</li>
+</ul>
+<a name="initialized">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initialized</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.82">initialized</a></pre>
+</li>
+</ul>
+<a name="logPrefix">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logPrefix</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.84">logPrefix</a></pre>
+</li>
+</ul>
+<a name="walCreateLock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>walCreateLock</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.89">walCreateLock</a></pre>
+<div class="block">we synchronized on walCreateLock to prevent wal recreation in different threads</div>
 </li>
 </ul>
 <a name="WAL_FILE_NAME_DELIMITER">
@@ -370,15 +494,36 @@ implements <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html"
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.wal.DefaultWALProvider.META_WAL_PROVIDER_ID">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="DEFAULT_PROVIDER_ID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_PROVIDER_ID</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.152">DEFAULT_PROVIDER_ID</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.wal.DefaultWALProvider.DEFAULT_PROVIDER_ID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="SPLITTING_EXT">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>SPLITTING_EXT</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.156">SPLITTING_EXT</a></pre>
 <div class="block">File Extension used while splitting an WAL into regions (HBASE-2312)</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.wal.DefaultWALProvider.SPLITTING_EXT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="pattern">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>pattern</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.223">pattern</a></pre>
+<div class="block">Pattern used to validate a WAL file name
+ see <a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html#validateWALFilename(java.lang.String)"><code>validateWALFilename(String)</code></a> for description.</div>
 </li>
 </ul>
 </li>
@@ -535,6 +680,16 @@ implements <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html"
 <h4>getCurrentFileName</h4>
 <pre>public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.190">getCurrentFileName</a>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</pre>
 <div class="block">return the current filename from the current wal.</div>
+</li>
+</ul>
+<a name="requestLogRoll(org.apache.hadoop.hbase.wal.WAL)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>requestLogRoll</h4>
+<pre>static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/DefaultWALProvider.html#line.198">requestLogRoll</a>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</pre>
+<div class="block">request a log roll, but don't actually do it.</div>
 </li>
 </ul>
 <a name="extractFileNumFromWAL(org.apache.hadoop.hbase.wal.WAL)">

@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryManager.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushType.html" title="enum in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/FlushRequestListener.html" target="_top">Frames</a></li>
@@ -85,6 +85,10 @@
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Known Implementing Classes:</dt>
+<dd><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryManager.HeapMemoryTunerChore.html" title="class in org.apache.hadoop.hbase.regionserver">HeapMemoryManager.HeapMemoryTunerChore</a></dd>
+</dl>
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
@@ -110,7 +114,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/region
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushRequestListener.html#flushRequested(org.apache.hadoop.hbase.regionserver.FlushType,%20org.apache.hadoop.hbase.regionserver.Region)">flushRequested</a></strong>(org.apache.hadoop.hbase.regionserver.FlushType&nbsp;type,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushRequestListener.html#flushRequested(org.apache.hadoop.hbase.regionserver.FlushType,%20org.apache.hadoop.hbase.regionserver.Region)">flushRequested</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushType.html" title="enum in org.apache.hadoop.hbase.regionserver">FlushType</a>&nbsp;type,
                             <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region)</code>
 <div class="block">Callback which will get called when a flush request is made for a region.</div>
 </td>
@@ -136,7 +140,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/region
 <ul class="blockListLast">
 <li class="blockList">
 <h4>flushRequested</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/FlushRequestListener.html#line.35">flushRequested</a>(org.apache.hadoop.hbase.regionserver.FlushType&nbsp;type,
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/FlushRequestListener.html#line.35">flushRequested</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushType.html" title="enum in org.apache.hadoop.hbase.regionserver">FlushType</a>&nbsp;type,
                   <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region)</pre>
 <div class="block">Callback which will get called when a flush request is made for a region.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - The type of flush. (ie. Whether a normal flush or flush because of global heap preassure)</dd><dd><code>region</code> - The region for which flush is requested</dd></dl>
@@ -169,7 +173,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/region
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryManager.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushType.html" title="enum in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/FlushRequestListener.html" target="_top">Frames</a></li>

@@ -86,10 +86,15 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.StoreFlusher</a></li>
+<li>
+<ul class="inheritance">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.DefaultStoreFlusher</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.mob.DefaultMobStoreFlusher</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -134,14 +139,33 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStor
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected org.apache.hadoop.conf.Configuration</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#conf">conf</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#flushLock">flushLock</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#store">store</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#mobCellValueSizeThreshold">mobCellValueSizeThreshold</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html" title="class in org.apache.hadoop.hbase.regionserver">HMobStore</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#mobStore">mobStore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#targetPath">targetPath</a></strong></code>&nbsp;</td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFlusher">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFlusher</a></h3>
+<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#conf">conf</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#store">store</a></code></li>
+</ul>
 </li>
 </ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -175,19 +199,6 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStor
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#createScanner(org.apache.hadoop.hbase.regionserver.KeyValueScanner,%20long)">createScanner</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;snapshotScanner,
-                          long&nbsp;smallestReadPoint)</code>
-<div class="block">Creates the scanner for flushing snapshot.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#finalizeWriter(org.apache.hadoop.hbase.regionserver.StoreFile.Writer,%20long,%20org.apache.hadoop.hbase.monitoring.MonitoredTask)">finalizeWriter</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a>&nbsp;writer,
-                            long&nbsp;cacheFlushSeqNum,
-                            <a href="../../../../../org/apache/hadoop/hbase/monitoring/MonitoredTask.html" title="interface in org.apache.hadoop.hbase.monitoring">MonitoredTask</a>&nbsp;status)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#flushSnapshot(org.apache.hadoop.hbase.regionserver.MemStoreSnapshot,%20long,%20org.apache.hadoop.hbase.monitoring.MonitoredTask)">flushSnapshot</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a>&nbsp;snapshot,
                           long&nbsp;cacheFlushId,
@@ -196,14 +207,6 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStor
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#performFlush(org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long)">performFlush</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
-                        <a href="../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a>&nbsp;sink,
-                        long&nbsp;smallestReadPoint)</code>
-<div class="block">Performs memstore flush, writing data from scanner into sink.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#performMobFlush(org.apache.hadoop.hbase.regionserver.MemStoreSnapshot,%20long,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.StoreFile.Writer,%20org.apache.hadoop.hbase.monitoring.MonitoredTask)">performMobFlush</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a>&nbsp;snapshot,
                               long&nbsp;cacheFlushId,
@@ -214,6 +217,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStor
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFlusher">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFlusher</a></h3>
+<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#createScanner(org.apache.hadoop.hbase.regionserver.KeyValueScanner,%20long)">createScanner</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#finalizeWriter(org.apache.hadoop.hbase.regionserver.StoreFile.Writer,%20long,%20org.apache.hadoop.hbase.monitoring.MonitoredTask)">finalizeWriter</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#performFlush(org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long)">performFlush</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
@@ -235,22 +245,49 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStor
 <!--   -->
 </a>
 <h3>Field Detail</h3>
-<a name="conf">
+<a name="LOG">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>conf</h4>
-<pre>protected&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFlusher.html#line.41">conf</a></pre>
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#line.65">LOG</a></pre>
 </li>
 </ul>
-<a name="store">
+<a name="flushLock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>flushLock</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#line.66">flushLock</a></pre>
+</li>
+</ul>
+<a name="mobCellValueSizeThreshold">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobCellValueSizeThreshold</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#line.67">mobCellValueSizeThreshold</a></pre>
+</li>
+</ul>
+<a name="targetPath">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>targetPath</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../src-html/org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#line.68">targetPath</a></pre>
+</li>
+</ul>
+<a name="mobStore">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>store</h4>
-<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFlusher.html#line.42">store</a></pre>
+<h4>mobStore</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html" title="class in org.apache.hadoop.hbase.regionserver">HMobStore</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#line.69">mobStore</a></pre>
 </li>
 </ul>
 </li>
@@ -316,7 +353,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStor
 <a name="performMobFlush(org.apache.hadoop.hbase.regionserver.MemStoreSnapshot, long, org.apache.hadoop.hbase.regionserver.InternalScanner, org.apache.hadoop.hbase.regionserver.StoreFile.Writer, org.apache.hadoop.hbase.monitoring.MonitoredTask)">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>performMobFlush</h4>
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/DefaultMobStoreFlusher.html#line.155">performMobFlush</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a>&nbsp;snapshot,
@@ -335,52 +372,6 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStor
  to a store file in HBase.</li>
  </ol></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>snapshot</code> - Memstore snapshot.</dd><dd><code>cacheFlushId</code> - Log cache flush sequence number.</dd><dd><code>scanner</code> - The scanner of memstore snapshot.</dd><dd><code>writer</code> - The store file writer.</dd><dd><code>status</code> - Task that represents the flush operation and may be updated with status.</dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
-</li>
-</ul>
-<a name="finalizeWriter(org.apache.hadoop.hbase.regionserver.StoreFile.Writer, long, org.apache.hadoop.hbase.monitoring.MonitoredTask)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>finalizeWriter</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFlusher.html#line.59">finalizeWriter</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a>&nbsp;writer,
-                  long&nbsp;cacheFlushSeqNum,
-                  <a href="../../../../../org/apache/hadoop/hbase/monitoring/MonitoredTask.html" title="interface in org.apache.hadoop.hbase.monitoring">MonitoredTask</a>&nbsp;status)
-                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
-</li>
-</ul>
-<a name="createScanner(org.apache.hadoop.hbase.regionserver.KeyValueScanner, long)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>createScanner</h4>
-<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFlusher.html#line.77">createScanner</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;snapshotScanner,
-                            long&nbsp;smallestReadPoint)
-                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Creates the scanner for flushing snapshot. Also calls coprocessors.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>snapshotScanner</code> - </dd><dd><code>smallestReadPoint</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd>The scanner; null if coprocessor is canceling the flush.</dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
-</li>
-</ul>
-<a name="performFlush(org.apache.hadoop.hbase.regionserver.InternalScanner, org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink, long)">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>performFlush</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFlusher.html#line.108">performFlush</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
-                <a href="../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a>&nbsp;sink,
-                long&nbsp;smallestReadPoint)
-                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Performs memstore flush, writing data from scanner into sink.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>scanner</code> - Scanner to get data from.</dd><dd><code>sink</code> - Sink to write data to. Could be StoreFile.Writer.</dd><dd><code>smallestReadPoint</code> - Smallest read point used for the flush.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>

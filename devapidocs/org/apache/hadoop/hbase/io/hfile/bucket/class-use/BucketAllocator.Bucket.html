@@ -90,6 +90,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a> in <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a> declared as <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a>[]</code></td>
+<td class="colLast"><span class="strong">BucketAllocator.</span><code><strong><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.html#buckets">buckets</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a> that return <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -98,8 +111,42 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a></code></td>
+<td class="colLast"><span class="strong">BucketAllocator.BucketSizeInfo.</span><code><strong><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.BucketSizeInfo.html#findAndRemoveCompletelyFreeBucket()">findAndRemoveCompletelyFreeBucket</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a>[]</code></td>
 <td class="colLast"><span class="strong">BucketAllocator.</span><code><strong><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.html#getBuckets()">getBuckets</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a></code></td>
+<td class="colLast"><span class="strong">BucketAllocator.</span><code><strong><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.html#grabGlobalCompletelyFreeBucket()">grabGlobalCompletelyFreeBucket</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/package-summary.html">org.apache.hadoop.hbase.io.hfile.bucket</a> with parameters of type <a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">BucketAllocator.BucketSizeInfo.</span><code><strong><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.BucketSizeInfo.html#blockAllocated(org.apache.hadoop.hbase.io.hfile.bucket.BucketAllocator.Bucket)">blockAllocated</a></strong>(<a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a>&nbsp;b)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BucketAllocator.BucketSizeInfo.</span><code><strong><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.BucketSizeInfo.html#freeBlock(org.apache.hadoop.hbase.io.hfile.bucket.BucketAllocator.Bucket,%20long)">freeBlock</a></strong>(<a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a>&nbsp;b,
+                  long&nbsp;offset)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BucketAllocator.BucketSizeInfo.</span><code><strong><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.BucketSizeInfo.html#instantiateBucket(org.apache.hadoop.hbase.io.hfile.bucket.BucketAllocator.Bucket)">instantiateBucket</a></strong>(<a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a>&nbsp;b)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">BucketAllocator.BucketSizeInfo.</span><code><strong><a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.BucketSizeInfo.html#removeBucket(org.apache.hadoop.hbase.io.hfile.bucket.BucketAllocator.Bucket)">removeBucket</a></strong>(<a href="../../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.Bucket.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketAllocator.Bucket</a>&nbsp;b)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

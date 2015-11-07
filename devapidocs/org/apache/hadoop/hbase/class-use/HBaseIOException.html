@@ -531,17 +531,27 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/master/RegionPlan.html" title="class in org.apache.hadoop.hbase.master">RegionPlan</a></code></td>
+<td class="colLast"><span class="strong">AssignmentManager.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html#getRegionPlan(org.apache.hadoop.hbase.HRegionInfo,%20boolean)">getRegionPlan</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region,
+                          boolean&nbsp;forceNewPlan)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;</code></td>
 <td class="colLast"><span class="strong">LoadBalancer.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#immediateAssignment(java.util.List,%20java.util.List)">immediateAssignment</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</code>
 <div class="block">Sync assign a region</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">LoadBalancer.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#initialize()">initialize</a></strong>()</code>
 <div class="block">Initialize the load balancer.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#move(byte[],%20byte[])">move</a></strong>(byte[]&nbsp;encodedRegionName,
+        byte[]&nbsp;destServerName)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>

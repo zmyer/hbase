@@ -75,7 +75,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure2">org.apache.hadoop.hbase.procedure2</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure2.store">org.apache.hadoop.hbase.procedure2.store</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure2.store.wal">org.apache.hadoop.hbase.procedure2.store.wal</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -83,6 +91,25 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.procedure2">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.ProcedureIterator.html" title="interface in org.apache.hadoop.hbase.procedure2.store">ProcedureStore.ProcedureIterator</a> in <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/package-summary.html">org.apache.hadoop.hbase.procedure2</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/package-summary.html">org.apache.hadoop.hbase.procedure2</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.ProcedureIterator.html" title="interface in org.apache.hadoop.hbase.procedure2.store">ProcedureStore.ProcedureIterator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">ProcedureExecutor.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureExecutor.html#loadProcedures(org.apache.hadoop.hbase.procedure2.store.ProcedureStore.ProcedureIterator,%20boolean)">loadProcedures</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.ProcedureIterator.html" title="interface in org.apache.hadoop.hbase.procedure2.store">ProcedureStore.ProcedureIterator</a>&nbsp;procIter,
+                            boolean&nbsp;abortOnCorruption)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.procedure2.store">
 <!--   -->
 </a>
@@ -106,6 +133,24 @@
 <td class="colLast"><span class="strong">ProcedureStore.ProcedureLoader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.ProcedureLoader.html#load(org.apache.hadoop.hbase.procedure2.store.ProcedureStore.ProcedureIterator)">load</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.ProcedureIterator.html" title="interface in org.apache.hadoop.hbase.procedure2.store">ProcedureStore.ProcedureIterator</a>&nbsp;procIter)</code>
 <div class="block">Called by the ProcedureStore.load() every time a set of procedures are ready to be executed.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.procedure2.store.wal">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.ProcedureIterator.html" title="interface in org.apache.hadoop.hbase.procedure2.store">ProcedureStore.ProcedureIterator</a> in <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/package-summary.html">org.apache.hadoop.hbase.procedure2.store.wal</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/package-summary.html">org.apache.hadoop.hbase.procedure2.store.wal</a> that implement <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.ProcedureIterator.html" title="interface in org.apache.hadoop.hbase.procedure2.store">ProcedureStore.ProcedureIterator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFormatReader.EntryIterator.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFormatReader.EntryIterator</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

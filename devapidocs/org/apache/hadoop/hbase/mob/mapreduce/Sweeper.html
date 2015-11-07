@@ -106,7 +106,7 @@
 <br>
 <pre><a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Public.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Public</a>
 <a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceStability.Evolving.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceStability.Evolving</a>
-public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.48">Sweeper</a>
+public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.51">Sweeper</a>
 extends org.apache.hadoop.conf.Configured
 implements org.apache.hadoop.util.Tool</pre>
 <div class="block">The sweep tool. It deletes the mob files that are not used and merges the small mob files to
@@ -153,9 +153,20 @@ implements org.apache.hadoop.util.Tool</pre>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#main(java.lang.String[])">main</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#printUsage()">printUsage</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#run(java.lang.String[])">run</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>
 <div class="block">Main method for the tool.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#sweepFamily(java.lang.String,%20java.lang.String)">sweepFamily</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</code>
+<div class="block">Sweeps the mob files on one column family.</div>
 </td>
 </tr>
 </table>
@@ -200,7 +211,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Sweeper</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.48">Sweeper</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.51">Sweeper</a>()</pre>
 </li>
 </ul>
 </li>
@@ -211,16 +222,51 @@ implements org.apache.hadoop.util.Tool</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="sweepFamily(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sweepFamily</h4>
+<pre>int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.66">sweepFamily</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)
+          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a>,
+                 org.apache.zookeeper.KeeperException,
+                 com.google.protobuf.ServiceException</pre>
+<div class="block">Sweeps the mob files on one column family. It deletes the unused mob files and merges
+ the small mob files into bigger ones.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableName</code> - The current table name in string format.</dd><dd><code>familyName</code> - The column family name.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>0 if success, 2 if job aborted with an exception, 3 if unable to start due to
+   other compaction,4 if mr job was unsuccessful</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code></dd>
+<dd><code>org.apache.zookeeper.KeeperException</code></dd>
+<dd><code>com.google.protobuf.ServiceException</code></dd></dl>
+</li>
+</ul>
 <a name="main(java.lang.String[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>main</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.92">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.101">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="printUsage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>printUsage</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.107">printUsage</a>()</pre>
 </li>
 </ul>
 <a name="run(java.lang.String[])">
@@ -229,7 +275,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>run</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.110">run</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
+<pre>public&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/Sweeper.html#line.119">run</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Main method for the tool.</div>
 <dl>

@@ -45,7 +45,7 @@
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <em class="jxr_javadoccomment"> * Represents the identity information stored in an HBase authentication token.</em>
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="37" href="#37">37</a>  @InterfaceAudience.Private
-<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html">AuthenticationTokenIdentifier</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AuthenticationProtos.html">TokenIdentifier</a> {
+<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html">AuthenticationTokenIdentifier</a> <strong class="jxr_keyword">extends</strong> TokenIdentifier {
 <a class="jxr_linenumber" name="39" href="#39">39</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Text AUTH_TOKEN_TYPE = <strong class="jxr_keyword">new</strong> Text(<span class="jxr_string">"HBASE_AUTH_TOKEN"</span>);
 <a class="jxr_linenumber" name="40" href="#40">40</a>  
 <a class="jxr_linenumber" name="41" href="#41">41</a>    <strong class="jxr_keyword">protected</strong> String username;

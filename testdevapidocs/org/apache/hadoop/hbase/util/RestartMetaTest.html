@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/StoppableImplementation.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.util.AbstractHBaseTool">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -121,6 +121,49 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#DEFAULT_NUM_RS">DEFAULT_NUM_RS</a></strong></code>
+<div class="block">The number of region servers used if not specified</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#NUM_DATANODES">NUM_DATANODES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#numRegionServers">numRegionServers</a></strong></code>
+<div class="block">The actual number of region servers</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#OPT_NUM_RS">OPT_NUM_RS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#SLEEP_SEC_AFTER_DATA_LOAD">SLEEP_SEC_AFTER_DATA_LOAD</a></strong></code>
+<div class="block">The number of seconds to sleep after loading the data</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#TABLE_NAME">TABLE_NAME</a></strong></code>
+<div class="block">Table name for the test</div>
+</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.util.AbstractHBaseTool">
 <!--   -->
@@ -168,10 +211,16 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#doWork()">doWork</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#loadData()">loadData</a></strong>()</code>
+<div class="block">Loads data into the table using the multi-threaded writer.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#main(java.lang.String[])">main</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RestartMetaTest.html#processOptions(org.apache.commons.cli.CommandLine)">processOptions</a></strong>(org.apache.commons.cli.CommandLine&nbsp;cmd)</code>&nbsp;</td>
 </tr>
@@ -181,7 +230,7 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.util.AbstractHBaseTool</h3>
-<code>addOptNoArg, addOptNoArg, addOptWithArg, addOptWithArg, addRequiredOptWithArg, addRequiredOptWithArg, doStaticMain, getConf, parseArgs, parseInt, parseLong, printUsage, printUsage, run, setConf</code></li>
+<code><clinit>, addOptNoArg, addOptNoArg, addOptWithArg, addOptWithArg, addRequiredOptWithArg, addRequiredOptWithArg, doStaticMain, getConf, parseArgs, parseInt, parseLong, printUsage, printUsage, run, setConf</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -198,6 +247,85 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/util/RestartMetaTest.html#line.44">LOG</a></pre>
+</li>
+</ul>
+<a name="DEFAULT_NUM_RS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_NUM_RS</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/RestartMetaTest.html#line.47">DEFAULT_NUM_RS</a></pre>
+<div class="block">The number of region servers used if not specified</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.RestartMetaTest.DEFAULT_NUM_RS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TABLE_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TABLE_NAME</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/util/RestartMetaTest.html#line.50">TABLE_NAME</a></pre>
+<div class="block">Table name for the test</div>
+</li>
+</ul>
+<a name="SLEEP_SEC_AFTER_DATA_LOAD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SLEEP_SEC_AFTER_DATA_LOAD</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/RestartMetaTest.html#line.54">SLEEP_SEC_AFTER_DATA_LOAD</a></pre>
+<div class="block">The number of seconds to sleep after loading the data</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.RestartMetaTest.SLEEP_SEC_AFTER_DATA_LOAD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="numRegionServers">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numRegionServers</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/RestartMetaTest.html#line.57">numRegionServers</a></pre>
+<div class="block">The actual number of region servers</div>
+</li>
+</ul>
+<a name="OPT_NUM_RS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OPT_NUM_RS</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/RestartMetaTest.html#line.59">OPT_NUM_RS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.RestartMetaTest.OPT_NUM_RS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="NUM_DATANODES">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>NUM_DATANODES</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/RestartMetaTest.html#line.61">NUM_DATANODES</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.RestartMetaTest.NUM_DATANODES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -221,6 +349,19 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="loadData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loadData</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RestartMetaTest.html#line.64">loadData</a>()
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Loads data into the table using the multi-threaded writer.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="doWork()">
 <!--   -->
 </a>
@@ -297,7 +438,7 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/ProcessBasedLocalHBaseCluster.ServerType.html" title="enum in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/StoppableImplementation.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -323,13 +464,13 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.util.AbstractHBaseTool">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -62,13 +62,13 @@
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -148,30 +148,63 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#COMPACTION_PROGRESS_LOG_INTERVAL">COMPACTION_PROGRESS_LOG_INTERVAL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/io/compress/Compression.Algorithm.html" title="enum in org.apache.hadoop.hbase.io.compress">Compression.Algorithm</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#compactionCompression">compactionCompression</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#compactionKVMax">compactionKVMax</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#conf">conf</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#keepSeqIdPeriod">keepSeqIdPeriod</a></strong></code>
 <div class="block">specify how many days to keep MVCC values during major compaction</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#NAME_COUNTER">NAME_COUNTER</a></strong></code>
+<div class="block">Used to prevent compaction name conflict when multiple compactions running parallel on the
+ same store.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionProgress.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionProgress</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#progress">progress</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#store">store</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#Compactor(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.Store)">Compactor</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -222,21 +255,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                           long&nbsp;earliestPutTs)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#generateCompactionName()">generateCompactionName</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.FileDetails.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">Compactor.FileDetails</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#getFileDetails(java.util.Collection,%20boolean)">getFileDetails</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact,
                             boolean&nbsp;allFiles)</code>
 <div class="block">Extracts some details about the files to compact that are commonly needed by compactors.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionProgress.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionProgress</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#getProgress()">getProgress</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#getSmallestReadPoint()">getSmallestReadPoint</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#performCompaction(org.apache.hadoop.hbase.regionserver.compactions.Compactor.FileDetails,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long,%20boolean,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController,%20boolean)">performCompaction</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.FileDetails.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">Compactor.FileDetails</a>&nbsp;fd,
                                   <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
@@ -248,7 +285,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Performs the compaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#postCreateCoprocScanner(org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest,%20org.apache.hadoop.hbase.regionserver.ScanType,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.security.User)">postCreateCoprocScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionRequest</a>&nbsp;request,
                                               <a href="../../../../../../org/apache/hadoop/hbase/regionserver/ScanType.html" title="enum in org.apache.hadoop.hbase.regionserver">ScanType</a>&nbsp;scanType,
@@ -257,7 +294,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Calls coprocessor, if any, to create scanners - after normal scanner creation.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#preCreateCoprocScanner(org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest,%20org.apache.hadoop.hbase.regionserver.ScanType,%20long,%20java.util.List)">preCreateCoprocScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionRequest</a>&nbsp;request,
                                             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/ScanType.html" title="enum in org.apache.hadoop.hbase.regionserver">ScanType</a>&nbsp;scanType,
@@ -266,7 +303,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Calls coprocessor, if any, to create compaction scanner - before normal scanner creation.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#preCreateCoprocScanner(org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest,%20org.apache.hadoop.hbase.regionserver.ScanType,%20long,%20java.util.List,%20org.apache.hadoop.hbase.security.User)">preCreateCoprocScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionRequest</a>&nbsp;request,
                                             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/ScanType.html" title="enum in org.apache.hadoop.hbase.regionserver">ScanType</a>&nbsp;scanType,
@@ -296,6 +333,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#line.63">LOG</a></pre>
+</li>
+</ul>
+<a name="COMPACTION_PROGRESS_LOG_INTERVAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COMPACTION_PROGRESS_LOG_INTERVAL</h4>
+<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#line.64">COMPACTION_PROGRESS_LOG_INTERVAL</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.Compactor.COMPACTION_PROGRESS_LOG_INTERVAL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="progress">
 <!--   -->
 </a>
@@ -344,11 +400,40 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="keepSeqIdPeriod">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>keepSeqIdPeriod</h4>
 <pre>protected&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#line.73">keepSeqIdPeriod</a></pre>
 <div class="block">specify how many days to keep MVCC values during major compaction</div>
+</li>
+</ul>
+<a name="NAME_COUNTER">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>NAME_COUNTER</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#line.288">NAME_COUNTER</a></pre>
+<div class="block">Used to prevent compaction name conflict when multiple compactions running parallel on the
+ same store.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Compactor(org.apache.hadoop.conf.Configuration, org.apache.hadoop.hbase.regionserver.Store)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Compactor</h4>
+<pre><a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#line.76">Compactor</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+         <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store)</pre>
 </li>
 </ul>
 </li>
@@ -460,6 +545,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dt><span class="strong">Returns:</span></dt><dd>Scanner scanner to use (usually the default); null if compaction should not proceed.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="generateCompactionName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>generateCompactionName</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#line.290">generateCompactionName</a>()</pre>
 </li>
 </ul>
 <a name="performCompaction(org.apache.hadoop.hbase.regionserver.compactions.Compactor.FileDetails, org.apache.hadoop.hbase.regionserver.InternalScanner, org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink, long, boolean, org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController, boolean)">
@@ -589,13 +683,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

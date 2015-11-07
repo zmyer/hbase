@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.replication.ReplicationStateZKBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -139,6 +139,29 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#myQueuesZnode">myQueuesZnode</a></strong></code>
+<div class="block">Znode containing all replication queues for this region server.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#RS_LOCK_ZNODE">RS_LOCK_ZNODE</a></strong></code>
+<div class="block">Name of znode we use to lock during failover</div>
+</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.replication.ReplicationStateZKBase">
 <!--   -->
@@ -193,56 +216,86 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#copyQueuesFromRS(java.lang.String)">copyQueuesFromRS</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</code>
+<div class="block">This methods copies all the wals queues from another region server and returns them all sorted
+ per peer cluster (appended with the dead server's znode)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#copyQueuesFromRSUsingMulti(java.lang.String)">copyQueuesFromRSUsingMulti</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</code>
+<div class="block">It "atomically" copies all the wals queues from another region server and returns them all
+ sorted per peer cluster (appended with the dead server's znode).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#deleteAnotherRSQueues(java.lang.String)">deleteAnotherRSQueues</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionserverZnode)</code>
+<div class="block">Delete all the replication queues for a given region server.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#getAllQueues()">getAllQueues</a></strong>()</code>
 <div class="block">Get a list of all queues for this region server.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#getLogPosition(java.lang.String,%20java.lang.String)">getLogPosition</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
 <div class="block">Get the current position for a specific WAL in a given queue.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#getLogsInQueue(java.lang.String)">getLogsInQueue</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId)</code>
 <div class="block">Get a list of all WALs in the given queue.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#init(java.lang.String)">init</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serverName)</code>
 <div class="block">Initialize the region server replication queue interface.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#isThisOurZnode(java.lang.String)">isThisOurZnode</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</code>
 <div class="block">Checks if the provided znode is the same as this region server's</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#lockOtherRS(java.lang.String)">lockOtherRS</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</code>
+<div class="block">Try to set a lock in another region server's znode.</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#lockToByteArray(java.lang.String)">lockToByteArray</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;lockOwner)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#removeAllQueues()">removeAllQueues</a></strong>()</code>
 <div class="block">Remove all replication queues for this region server.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#removeLog(java.lang.String,%20java.lang.String)">removeLog</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
 <div class="block">Remove an WAL file from the given queue.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#removeQueue(java.lang.String)">removeQueue</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId)</code>
 <div class="block">Remove a replication queue.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#setLogPosition(java.lang.String,%20java.lang.String,%20long)">setLogPosition</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename,
@@ -280,6 +333,44 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="myQueuesZnode">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>myQueuesZnode</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#line.68">myQueuesZnode</a></pre>
+<div class="block">Znode containing all replication queues for this region server.</div>
+</li>
+</ul>
+<a name="RS_LOCK_ZNODE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RS_LOCK_ZNODE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#line.70">RS_LOCK_ZNODE</a></pre>
+<div class="block">Name of znode we use to lock during failover</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.replication.ReplicationQueuesZKImpl.RS_LOCK_ZNODE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#line.72">LOG</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -478,7 +569,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <a name="getAllQueues()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getAllQueues</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#line.211">getAllQueues</a>()</pre>
@@ -488,6 +579,67 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#getAllQueues()">getAllQueues</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueues</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>a list of queueIds, null if this region server is dead and has no outstanding queues</dd></dl>
+</li>
+</ul>
+<a name="lockOtherRS(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lockOtherRS</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#line.227">lockOtherRS</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</pre>
+<div class="block">Try to set a lock in another region server's znode.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>znode</code> - the server names of the other server</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the lock was acquired, false in every other cases</dd></dl>
+</li>
+</ul>
+<a name="deleteAnotherRSQueues(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteAnotherRSQueues</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#line.258">deleteAnotherRSQueues</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionserverZnode)</pre>
+<div class="block">Delete all the replication queues for a given region server.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>regionserverZnode</code> - The znode of the region server to delete.</dd></dl>
+</li>
+</ul>
+<a name="copyQueuesFromRSUsingMulti(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyQueuesFromRSUsingMulti</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#line.293">copyQueuesFromRSUsingMulti</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</pre>
+<div class="block">It "atomically" copies all the wals queues from another region server and returns them all
+ sorted per peer cluster (appended with the dead server's znode).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>znode</code> - pertaining to the region server to copy the queues from</dd>
+<dt><span class="strong">Returns:</span></dt><dd>WAL queues sorted per peer cluster</dd></dl>
+</li>
+</ul>
+<a name="copyQueuesFromRS(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyQueuesFromRS</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#line.362">copyQueuesFromRS</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</pre>
+<div class="block">This methods copies all the wals queues from another region server and returns them all sorted
+ per peer cluster (appended with the dead server's znode)</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>znode</code> - server names to copy</dd>
+<dt><span class="strong">Returns:</span></dt><dd>all wals for all peers of that cluster, null if an error occurred</dd></dl>
+</li>
+</ul>
+<a name="lockToByteArray(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>lockToByteArray</h4>
+<pre>static&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html#line.429">lockToByteArray</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;lockOwner)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>lockOwner</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>Serialized protobuf of <code>lockOwner</code> with pb magic prefix prepended suitable
+         for use as content of an replication lock during region server fail over.</dd></dl>
 </li>
 </ul>
 </li>
@@ -542,13 +694,13 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.replication.ReplicationStateZKBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

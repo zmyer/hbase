@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.io.hfile.CompoundBloomFilterBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -126,6 +126,39 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilter.h
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/Hash.html" title="class in org.apache.hadoop.hbase.util">Hash</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#hash">hash</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#hashCount">hashCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexReader.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexReader</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#index">index</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#numPositivesPerChunk">numPositivesPerChunk</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#numQueriesPerChunk">numQueriesPerChunk</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#reader">reader</a></strong></code>
+<div class="block">Used to load chunks on demand</div>
+</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.io.hfile.CompoundBloomFilterBase">
 <!--   -->
@@ -168,6 +201,13 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilter.h
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#checkContains(byte[],%20int,%20int,%20int)">checkContains</a></strong>(byte[]&nbsp;key,
+                          int&nbsp;keyOffset,
+                          int&nbsp;keyLength,
+                          int&nbsp;block)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#contains(byte[],%20int,%20int,%20org.apache.hadoop.hbase.nio.ByteBuff)">contains</a></strong>(byte[]&nbsp;key,
                 int&nbsp;keyOffset,
@@ -176,38 +216,38 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilter.h
 <div class="block">Check if the specified key is contained in the bloom filter.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#contains(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.nio.ByteBuff)">contains</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;keyCell,
                 <a href="../../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a>&nbsp;bloom)</code>
 <div class="block">Check if the specified key is contained in the bloom filter.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#enableTestingStats()">enableTestingStats</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#formatTestingStats()">formatTestingStats</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#getNumChunks()">getNumChunks</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#getNumPositivesForTesting(int)">getNumPositivesForTesting</a></strong>(int&nbsp;chunk)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#getNumQueriesForTesting(int)">getNumQueriesForTesting</a></strong>(int&nbsp;chunk)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#supportsAutoLoading()">supportsAutoLoading</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#toString()">toString</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -241,6 +281,69 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilter.h
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="reader">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reader</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#line.48">reader</a></pre>
+<div class="block">Used to load chunks on demand</div>
+</li>
+</ul>
+<a name="index">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>index</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexReader.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexReader</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#line.50">index</a></pre>
+</li>
+</ul>
+<a name="hashCount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hashCount</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#line.52">hashCount</a></pre>
+</li>
+</ul>
+<a name="hash">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hash</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/Hash.html" title="class in org.apache.hadoop.hbase.util">Hash</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#line.53">hash</a></pre>
+</li>
+</ul>
+<a name="numQueriesPerChunk">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numQueriesPerChunk</h4>
+<pre>private&nbsp;long[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#line.55">numQueriesPerChunk</a></pre>
+</li>
+</ul>
+<a name="numPositivesPerChunk">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>numPositivesPerChunk</h4>
+<pre>private&nbsp;long[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#line.56">numPositivesPerChunk</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -290,6 +393,18 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilter.h
 <dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - data to check for existence of</dd><dd><code>keyOffset</code> - offset into the data</dd><dd><code>keyLength</code> - length of the data</dd><dd><code>bloom</code> - bloom filter data to search. This can be null if auto-loading
         is supported.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>true if matched by bloom, false if not</dd></dl>
+</li>
+</ul>
+<a name="checkContains(byte[], int, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkContains</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html#line.106">checkContains</a>(byte[]&nbsp;key,
+                    int&nbsp;keyOffset,
+                    int&nbsp;keyLength,
+                    int&nbsp;block)</pre>
 </li>
 </ul>
 <a name="contains(org.apache.hadoop.hbase.Cell, org.apache.hadoop.hbase.nio.ByteBuff)">
@@ -435,13 +550,13 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/util/BloomFilter.h
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.io.hfile.CompoundBloomFilterBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

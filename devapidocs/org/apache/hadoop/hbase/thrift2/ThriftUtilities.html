@@ -62,13 +62,13 @@
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -104,6 +104,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#ThriftUtilities()">ThriftUtilities</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -117,24 +136,35 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#addAttributes(org.apache.hadoop.hbase.client.OperationWithAttributes,%20java.util.Map)">addAttributes</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttributes.html" title="class in org.apache.hadoop.hbase.client">OperationWithAttributes</a>&nbsp;op,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&gt;&nbsp;attributes)</code>
+<div class="block">Adds all the attributes into the Operation object</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#appendFromThrift(org.apache.hadoop.hbase.thrift2.generated.TAppend)">appendFromThrift</a></strong>(org.apache.hadoop.hbase.thrift2.generated.TAppend&nbsp;append)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static org.apache.hadoop.hbase.thrift2.generated.TDelete</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#deleteFromHBase(org.apache.hadoop.hbase.client.Delete)">deleteFromHBase</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;in)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#deleteFromThrift(org.apache.hadoop.hbase.thrift2.generated.TDelete)">deleteFromThrift</a></strong>(org.apache.hadoop.hbase.thrift2.generated.TDelete&nbsp;in)</code>
 <div class="block">Creates a <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client"><code>Delete</code></a> (HBase) from a <code>TDelete</code> (Thrift).</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#deletesFromThrift(java.util.List)">deletesFromThrift</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.thrift2.generated.TDelete&gt;&nbsp;in)</code>
 <div class="block">Converts multiple <code>TDelete</code>s (Thrift) into a list of <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client"><code>Delete</code></a>s (HBase).</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#durabilityFromThrift(org.apache.hadoop.hbase.thrift2.generated.TDurability)">durabilityFromThrift</a></strong>(org.apache.hadoop.hbase.thrift2.generated.TDurability&nbsp;tDurability)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a></code></td>
@@ -210,6 +240,23 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="ThriftUtilities()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ThriftUtilities</h4>
+<pre>private&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#line.72">ThriftUtilities</a>()</pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
@@ -392,10 +439,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="regionLocationsFromHBase(java.util.List)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>regionLocationsFromHBase</h4>
 <pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.thrift2.generated.THRegionLocation&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#line.501">regionLocationsFromHBase</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase">HRegionLocation</a>&gt;&nbsp;locations)</pre>
+</li>
+</ul>
+<a name="addAttributes(org.apache.hadoop.hbase.client.OperationWithAttributes, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addAttributes</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#line.512">addAttributes</a>(<a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttributes.html" title="class in org.apache.hadoop.hbase.client">OperationWithAttributes</a>&nbsp;op,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&gt;&nbsp;attributes)</pre>
+<div class="block">Adds all the attributes into the Operation object</div>
+</li>
+</ul>
+<a name="durabilityFromThrift(org.apache.hadoop.hbase.thrift2.generated.TDurability)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>durabilityFromThrift</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#line.524">durabilityFromThrift</a>(org.apache.hadoop.hbase.thrift2.generated.TDurability&nbsp;tDurability)</pre>
 </li>
 </ul>
 </li>
@@ -451,13 +518,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

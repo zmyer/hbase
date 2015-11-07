@@ -564,7 +564,7 @@
 <a class="jxr_linenumber" name="554" href="#554">554</a>       }
 <a class="jxr_linenumber" name="555" href="#555">555</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/regionserver/LruHashMap.html">Entry</a> entry = (Entry)instanceObj;
 <a class="jxr_linenumber" name="556" href="#556">556</a>       <em class="jxr_comment">// We only support legacy HLogKey</em>
-<a class="jxr_linenumber" name="557" href="#557">557</a>       <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">WALKey</a> key = entry.getKey();
+<a class="jxr_linenumber" name="557" href="#557">557</a>       <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html">WALKey</a> key = entry.getKey();
 <a class="jxr_linenumber" name="558" href="#558">558</a>       <strong class="jxr_keyword">if</strong> (!(key instanceof HLogKey)) {
 <a class="jxr_linenumber" name="559" href="#559">559</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(<span class="jxr_string">"Can't write Entry '"</span> + instanceObj + <span class="jxr_string">"' due to key class '"</span> +
 <a class="jxr_linenumber" name="560" href="#560">560</a>             key.getClass() + <span class="jxr_string">"'"</span>);

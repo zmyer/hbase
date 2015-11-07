@@ -91,19 +91,19 @@
 <a class="jxr_linenumber" name="81" href="#81">81</a>            .newReflectiveBlockingService(<strong class="jxr_keyword">new</strong> TestRpcServiceProtos.TestProtobufRpcProto.BlockingInterface() {
 <a class="jxr_linenumber" name="82" href="#82">82</a>  
 <a class="jxr_linenumber" name="83" href="#83">83</a>              @Override
-<a class="jxr_linenumber" name="84" href="#84">84</a>              <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EmptyResponseProto</a> ping(RpcController controller, <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EmptyRequestProto</a> request)
+<a class="jxr_linenumber" name="84" href="#84">84</a>              <strong class="jxr_keyword">public</strong> EmptyResponseProto ping(RpcController controller, EmptyRequestProto request)
 <a class="jxr_linenumber" name="85" href="#85">85</a>                  <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="86" href="#86">86</a>                <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="87" href="#87">87</a>              }
 <a class="jxr_linenumber" name="88" href="#88">88</a>  
 <a class="jxr_linenumber" name="89" href="#89">89</a>              @Override
-<a class="jxr_linenumber" name="90" href="#90">90</a>              <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EmptyResponseProto</a> error(RpcController controller, <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EmptyRequestProto</a> request)
+<a class="jxr_linenumber" name="90" href="#90">90</a>              <strong class="jxr_keyword">public</strong> EmptyResponseProto error(RpcController controller, EmptyRequestProto request)
 <a class="jxr_linenumber" name="91" href="#91">91</a>                  <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="92" href="#92">92</a>                <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="93" href="#93">93</a>              }
 <a class="jxr_linenumber" name="94" href="#94">94</a>  
 <a class="jxr_linenumber" name="95" href="#95">95</a>              @Override
-<a class="jxr_linenumber" name="96" href="#96">96</a>              <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EchoResponseProto</a> echo(RpcController controller, <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EchoRequestProto</a> request)
+<a class="jxr_linenumber" name="96" href="#96">96</a>              <strong class="jxr_keyword">public</strong> EchoResponseProto echo(RpcController controller, EchoRequestProto request)
 <a class="jxr_linenumber" name="97" href="#97">97</a>                  <strong class="jxr_keyword">throws</strong> ServiceException {
 <a class="jxr_linenumber" name="98" href="#98">98</a>                <strong class="jxr_keyword">if</strong> (controller instanceof PayloadCarryingRpcController) {
 <a class="jxr_linenumber" name="99" href="#99">99</a>                  PayloadCarryingRpcController pcrc = (PayloadCarryingRpcController) controller;
@@ -171,7 +171,7 @@
 <a class="jxr_linenumber" name="161" href="#161">161</a>       rpcServer.start();
 <a class="jxr_linenumber" name="162" href="#162">162</a>       MethodDescriptor md = SERVICE.getDescriptorForType().findMethodByName(<span class="jxr_string">"echo"</span>);
 <a class="jxr_linenumber" name="163" href="#163">163</a>       <strong class="jxr_keyword">final</strong> String message = <span class="jxr_string">"hello"</span>;
-<a class="jxr_linenumber" name="164" href="#164">164</a>       <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EchoRequestProto</a> param = EchoRequestProto.newBuilder().setMessage(message).build();
+<a class="jxr_linenumber" name="164" href="#164">164</a>       EchoRequestProto param = EchoRequestProto.newBuilder().setMessage(message).build();
 <a class="jxr_linenumber" name="165" href="#165">165</a>       InetSocketAddress address = rpcServer.getListenerAddress();
 <a class="jxr_linenumber" name="166" href="#166">166</a>       <strong class="jxr_keyword">if</strong> (address == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="167" href="#167">167</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(<span class="jxr_string">"Listener channel is closed"</span>);
@@ -214,7 +214,7 @@
 <a class="jxr_linenumber" name="204" href="#204">204</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="205" href="#205">205</a>       rpcServer.start();
 <a class="jxr_linenumber" name="206" href="#206">206</a>       MethodDescriptor md = SERVICE.getDescriptorForType().findMethodByName(<span class="jxr_string">"echo"</span>);
-<a class="jxr_linenumber" name="207" href="#207">207</a>       <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EchoRequestProto</a> param = EchoRequestProto.newBuilder().setMessage(<span class="jxr_string">"hello"</span>).build();
+<a class="jxr_linenumber" name="207" href="#207">207</a>       EchoRequestProto param = EchoRequestProto.newBuilder().setMessage(<span class="jxr_string">"hello"</span>).build();
 <a class="jxr_linenumber" name="208" href="#208">208</a>       PayloadCarryingRpcController pcrc =
 <a class="jxr_linenumber" name="209" href="#209">209</a>           <strong class="jxr_keyword">new</strong> PayloadCarryingRpcController(CellUtil.createCellScanner(cells));
 <a class="jxr_linenumber" name="210" href="#210">210</a>       InetSocketAddress address = rpcServer.getListenerAddress();
@@ -247,7 +247,7 @@
 <a class="jxr_linenumber" name="237" href="#237">237</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="238" href="#238">238</a>       rpcServer.start();
 <a class="jxr_linenumber" name="239" href="#239">239</a>       MethodDescriptor md = SERVICE.getDescriptorForType().findMethodByName(<span class="jxr_string">"echo"</span>);
-<a class="jxr_linenumber" name="240" href="#240">240</a>       <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EchoRequestProto</a> param = EchoRequestProto.newBuilder().setMessage(<span class="jxr_string">"hello"</span>).build();
+<a class="jxr_linenumber" name="240" href="#240">240</a>       EchoRequestProto param = EchoRequestProto.newBuilder().setMessage(<span class="jxr_string">"hello"</span>).build();
 <a class="jxr_linenumber" name="241" href="#241">241</a>       InetSocketAddress address = rpcServer.getListenerAddress();
 <a class="jxr_linenumber" name="242" href="#242">242</a>       <strong class="jxr_keyword">if</strong> (address == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="243" href="#243">243</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(<span class="jxr_string">"Listener channel is closed"</span>);
@@ -275,7 +275,7 @@
 <a class="jxr_linenumber" name="265" href="#265">265</a>       rpcServer.start();
 <a class="jxr_linenumber" name="266" href="#266">266</a>       verify(scheduler).start();
 <a class="jxr_linenumber" name="267" href="#267">267</a>       MethodDescriptor md = SERVICE.getDescriptorForType().findMethodByName(<span class="jxr_string">"echo"</span>);
-<a class="jxr_linenumber" name="268" href="#268">268</a>       <a href="../../../../../org/apache/hadoop/hbase/ipc/protobuf/generated/TestProtos.html">EchoRequestProto</a> param = EchoRequestProto.newBuilder().setMessage(<span class="jxr_string">"hello"</span>).build();
+<a class="jxr_linenumber" name="268" href="#268">268</a>       EchoRequestProto param = EchoRequestProto.newBuilder().setMessage(<span class="jxr_string">"hello"</span>).build();
 <a class="jxr_linenumber" name="269" href="#269">269</a>       InetSocketAddress address = rpcServer.getListenerAddress();
 <a class="jxr_linenumber" name="270" href="#270">270</a>       <strong class="jxr_keyword">if</strong> (address == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="271" href="#271">271</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(<span class="jxr_string">"Listener channel is closed"</span>);

@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -125,6 +125,65 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </table>
 </li>
 </ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#data">data</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.errorhandling.ForeignExceptionDispatcher</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#dispatcher">dispatcher</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.procedure.ProcedureMember</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#member">member</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.procedure.SubprocedureFactory</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#mockBuilder">mockBuilder</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.errorhandling.ForeignExceptionDispatcher</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#mockListener">mockListener</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.procedure.ProcedureMemberRpcs</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#mockMemberComms">mockMemberComms</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#op">op</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#POOL_KEEP_ALIVE">POOL_KEEP_ALIVE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.procedure.Subprocedure</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#spySub">spySub</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#TIMEOUT">TIMEOUT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#WAKE_FREQUENCY">WAKE_FREQUENCY</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -155,18 +214,36 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#addCommitAnswer()">addCommitAnswer</a></strong>()</code>
+<div class="block">Add a 'in barrier phase' response to the mock controller when it gets a acquired notification</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.procedure.ProcedureMember</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#buildCohortMember()">buildCohortMember</a></strong>()</code>
+<div class="block">Build a member using the class level mocks</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#buildCohortMemberPair()">buildCohortMemberPair</a></strong>()</code>
+<div class="block">Setup a procedure member that returns the spied-upon <code>Subprocedure</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#resetTest()">resetTest</a></strong>()</code>
 <div class="block">Reset all the mock objects</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#testCoordinatorAbort()">testCoordinatorAbort</a></strong>()</code>
 <div class="block">Fail correctly if coordinator aborts the procedure.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#testMemberCommitCommsFailure()">testMemberCommitCommsFailure</a></strong>()</code>
 <div class="block">Handle Failures if a member's commit phase succeeds but notification to coordinator fails
@@ -174,39 +251,39 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  NOTE: This is the core difference that makes this different from traditional 2PC.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#testMemberCommitException()">testMemberCommitException</a></strong>()</code>
 <div class="block">Handle failures if a member's commit phase fails.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#testMemberPrepareException()">testMemberPrepareException</a></strong>()</code>
 <div class="block">Make sure we call cleanup etc, when we have an exception during
  <code>Subprocedure.acquireBarrier()</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#testNoTaskToBeRunFromRequest()">testNoTaskToBeRunFromRequest</a></strong>()</code>
 <div class="block">Test that the cohort member correctly doesn't attempt to start a task when the builder cannot
  correctly build a new task for the requested operation</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#testPropagateConnectionErrorBackToManager()">testPropagateConnectionErrorBackToManager</a></strong>()</code>
 <div class="block">Fail correctly on getting an external error while waiting for the prepared latch</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#testSendMemberAcquiredCommsFailure()">testSendMemberAcquiredCommsFailure</a></strong>()</code>
 <div class="block">Make sure we call cleanup etc, when we have an exception during prepare.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestProcedureMember.html#testSimpleRun()">testSimpleRun</a></strong>()</code>
 <div class="block">Test the normal sub procedure execution case.</div>
@@ -228,6 +305,117 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="WAKE_FREQUENCY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>WAKE_FREQUENCY</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.56">WAKE_FREQUENCY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.procedure.TestProcedureMember.WAKE_FREQUENCY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TIMEOUT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TIMEOUT</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.57">TIMEOUT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.procedure.TestProcedureMember.TIMEOUT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="POOL_KEEP_ALIVE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>POOL_KEEP_ALIVE</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.58">POOL_KEEP_ALIVE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.procedure.TestProcedureMember.POOL_KEEP_ALIVE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="op">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>op</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.60">op</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.procedure.TestProcedureMember.op">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="data">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>data</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.61">data</a></pre>
+</li>
+</ul>
+<a name="mockListener">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mockListener</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.errorhandling.ForeignExceptionDispatcher <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.62">mockListener</a></pre>
+</li>
+</ul>
+<a name="mockBuilder">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mockBuilder</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.procedure.SubprocedureFactory <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.64">mockBuilder</a></pre>
+</li>
+</ul>
+<a name="mockMemberComms">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mockMemberComms</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.procedure.ProcedureMemberRpcs <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.65">mockMemberComms</a></pre>
+</li>
+</ul>
+<a name="member">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>member</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.procedure.ProcedureMember <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.67">member</a></pre>
+</li>
+</ul>
+<a name="dispatcher">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dispatcher</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.errorhandling.ForeignExceptionDispatcher <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.68">dispatcher</a></pre>
+</li>
+</ul>
+<a name="spySub">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>spySub</h4>
+<pre>org.apache.hadoop.hbase.procedure.Subprocedure <a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.69">spySub</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -259,6 +447,43 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>resetTest</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.75">resetTest</a>()</pre>
 <div class="block">Reset all the mock objects</div>
+</li>
+</ul>
+<a name="buildCohortMember()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildCohortMember</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.procedure.ProcedureMember&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.89">buildCohortMember</a>()</pre>
+<div class="block">Build a member using the class level mocks</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>member to use for tests</dd></dl>
+</li>
+</ul>
+<a name="buildCohortMemberPair()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildCohortMemberPair</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.98">buildCohortMemberPair</a>()
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Setup a procedure member that returns the spied-upon <code>Subprocedure</code>.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="addCommitAnswer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addCommitAnswer</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestProcedureMember.html#line.114">addCommitAnswer</a>()
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Add a 'in barrier phase' response to the mock controller when it gets a acquired notification</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testSimpleRun()">
@@ -432,13 +657,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

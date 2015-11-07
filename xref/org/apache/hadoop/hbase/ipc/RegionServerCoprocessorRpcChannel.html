@@ -67,7 +67,7 @@
 <a class="jxr_linenumber" name="57" href="#57">57</a>              .setRow(ByteStringer.wrap(HConstants.EMPTY_BYTE_ARRAY))
 <a class="jxr_linenumber" name="58" href="#58">58</a>              .setServiceName(method.getService().getFullName()).setMethodName(method.getName())
 <a class="jxr_linenumber" name="59" href="#59">59</a>              .setRequest(request.toByteString()).build();
-<a class="jxr_linenumber" name="60" href="#60">60</a>      <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> result =
+<a class="jxr_linenumber" name="60" href="#60">60</a>      CoprocessorServiceResponse result =
 <a class="jxr_linenumber" name="61" href="#61">61</a>          ProtobufUtil.execRegionServerService(connection.getClient(serverName), call);
 <a class="jxr_linenumber" name="62" href="#62">62</a>      Message response = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="63" href="#63">63</a>      <strong class="jxr_keyword">if</strong> (result.getValue().hasValue()) {

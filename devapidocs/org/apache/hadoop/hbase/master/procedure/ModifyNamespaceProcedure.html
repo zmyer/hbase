@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.procedure2.StateMachineProcedure">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -140,6 +140,41 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/T
 <h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.master.procedure.<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">TableProcedureInterface</a></h3>
 <code><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.TableOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure">TableProcedureInterface.TableOperationType</a></code></li>
 </ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#aborted">aborted</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/NamespaceDescriptor.html" title="class in org.apache.hadoop.hbase">NamespaceDescriptor</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#newNsDescriptor">newNsDescriptor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/NamespaceDescriptor.html" title="class in org.apache.hadoop.hbase">NamespaceDescriptor</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#oldNsDescriptor">oldNsDescriptor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#traceEnabled">traceEnabled</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 </li>
 </ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -225,9 +260,31 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/T
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#getTableName()">getTableName</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/TableNamespaceManager.html" title="class in org.apache.hadoop.hbase.master">TableNamespaceManager</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#getTableNamespaceManager(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">getTableNamespaceManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.TableOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure">TableProcedureInterface.TableOperationType</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#getTableOperationType()">getTableOperationType</a></strong>()</code>
 <div class="block">Given an operation type we can take decisions about what to do with pending operations.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#insertIntoNSTable(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">insertIntoNSTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</code>
+<div class="block">Insert/update the row into namespace table</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#isTraceEnabled()">isTraceEnabled</a></strong>()</code>
+<div class="block">The procedure could be restarted from a different machine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#prepareModify(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">prepareModify</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</code>
+<div class="block">Action before any real action of adding namespace.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -241,6 +298,18 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/T
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#rollbackState(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv,%20org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ModifyNamespaceState)">rollbackState</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
                           org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ModifyNamespaceState&nbsp;state)</code>
 <div class="block">called to perform the rollback of the specified state</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#rollbackUpdateInNSTable(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">rollbackUpdateInNSTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</code>
+<div class="block">rollback the row into namespace table</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#rollbackZKNamespaceManagerChange(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">rollbackZKNamespaceManagerChange</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</code>
+<div class="block">Update Zookeeper during undo.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -261,6 +330,12 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/T
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#toStringClassDetails(java.lang.StringBuilder)">toStringClassDetails</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</a>&nbsp;sb)</code>
 <div class="block">Extend the toString() information with the procedure details
  e.g.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#updateZKNamespaceManager(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">updateZKNamespaceManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</code>
+<div class="block">Update Zookeeper.</div>
 </td>
 </tr>
 </table>
@@ -293,6 +368,59 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/T
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.45">LOG</a></pre>
+</li>
+</ul>
+<a name="aborted">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>aborted</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.47">aborted</a></pre>
+</li>
+</ul>
+<a name="oldNsDescriptor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>oldNsDescriptor</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/NamespaceDescriptor.html" title="class in org.apache.hadoop.hbase">NamespaceDescriptor</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.49">oldNsDescriptor</a></pre>
+</li>
+</ul>
+<a name="newNsDescriptor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>newNsDescriptor</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/NamespaceDescriptor.html" title="class in org.apache.hadoop.hbase">NamespaceDescriptor</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.50">newNsDescriptor</a></pre>
+</li>
+</ul>
+<a name="traceEnabled">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>traceEnabled</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.51">traceEnabled</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -559,7 +687,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/T
 <a name="getTableOperationType()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getTableOperationType</h4>
 <pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.TableOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure">TableProcedureInterface.TableOperationType</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.209">getTableOperationType</a>()</pre>
@@ -571,6 +699,97 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/T
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.html#getTableOperationType()">getTableOperationType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">TableProcedureInterface</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>the operation type that the procedure is executing.</dd></dl>
+</li>
+</ul>
+<a name="prepareModify(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prepareModify</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.218">prepareModify</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Action before any real action of adding namespace.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>env</code> - MasterProcedureEnv</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="insertIntoNSTable(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>insertIntoNSTable</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.233">insertIntoNSTable</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Insert/update the row into namespace table</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>env</code> - MasterProcedureEnv</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="rollbackUpdateInNSTable(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rollbackUpdateInNSTable</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.242">rollbackUpdateInNSTable</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">rollback the row into namespace table</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>env</code> - MasterProcedureEnv</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="updateZKNamespaceManager(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateZKNamespaceManager</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.253">updateZKNamespaceManager</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Update Zookeeper.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>env</code> - MasterProcedureEnv</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="rollbackZKNamespaceManagerChange(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rollbackZKNamespaceManagerChange</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.262">rollbackZKNamespaceManagerChange</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Update Zookeeper during undo.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>env</code> - MasterProcedureEnv</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getTableNamespaceManager(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTableNamespaceManager</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/TableNamespaceManager.html" title="class in org.apache.hadoop.hbase.master">TableNamespaceManager</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.268">getTableNamespaceManager</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</pre>
+</li>
+</ul>
+<a name="isTraceEnabled()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isTraceEnabled</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html#line.276">isTraceEnabled</a>()</pre>
+<div class="block">The procedure could be restarted from a different machine. If the variable is null, we need to
+ retrieve it.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>traceEnabled</dd></dl>
 </li>
 </ul>
 </li>
@@ -625,13 +844,13 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/T
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.procedure2.StateMachineProcedure">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

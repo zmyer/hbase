@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/OffPeakHours.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/OffPeakHours.OffPeakHoursImpl.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.ActiveCompaction.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -125,6 +125,27 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.ActiveCompaction.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">PressureAwareCompactionThroughputController.ActiveCompaction</a></strong></code>
+<div class="block">Stores the information of one controlled compaction.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="field_summary">
@@ -136,6 +157,30 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.ActiveCompaction.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">PressureAwareCompactionThroughputController.ActiveCompaction</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#activeCompactions">activeCompactions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#controlPerSize">controlPerSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND">DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND">DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK">DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#DEFAULT_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD">DEFAULT_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -152,6 +197,38 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#HBASE_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD">HBASE_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) double</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#maxThroughput">maxThroughput</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#maxThroughputHigherBound">maxThroughputHigherBound</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#maxThroughputLowerBound">maxThroughputLowerBound</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#maxThroughputOffpeak">maxThroughputOffpeak</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/OffPeakHours.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">OffPeakHours</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#offPeakHours">offPeakHours</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#stopped">stopped</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#tuningPeriod">tuningPeriod</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -225,8 +302,21 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#throughputDesc(double)">throughputDesc</a></strong>(double&nbsp;speed)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#throughputDesc(long,%20long)">throughputDesc</a></strong>(long&nbsp;deltaSize,
+                            long&nbsp;elapsedTime)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#toString()">toString</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#tune(double)">tune</a></strong>(double&nbsp;compactionPressure)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -257,6 +347,15 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.51">LOG</a></pre>
+</li>
+</ul>
 <a name="HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND">
 <!--   -->
 </a>
@@ -265,6 +364,16 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 <h4>HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.54">HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController.HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND</h4>
+<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.57">DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController.DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND">
@@ -277,6 +386,16 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController.HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND</h4>
+<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.63">DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController.DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK">
 <!--   -->
 </a>
@@ -287,14 +406,115 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController.HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK</h4>
+<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.69">DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController.DEFAULT_HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="HBASE_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>HBASE_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.71">HBASE_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController.HBASE_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD</h4>
+<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.74">DEFAULT_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.PressureAwareCompactionThroughputController.DEFAULT_HSTORE_COMPACTION_THROUGHPUT_TUNE_PERIOD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="maxThroughputHigherBound">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxThroughputHigherBound</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.104">maxThroughputHigherBound</a></pre>
+</li>
+</ul>
+<a name="maxThroughputLowerBound">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxThroughputLowerBound</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.106">maxThroughputLowerBound</a></pre>
+</li>
+</ul>
+<a name="maxThroughputOffpeak">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxThroughputOffpeak</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.108">maxThroughputOffpeak</a></pre>
+</li>
+</ul>
+<a name="offPeakHours">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>offPeakHours</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/OffPeakHours.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">OffPeakHours</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.110">offPeakHours</a></pre>
+</li>
+</ul>
+<a name="controlPerSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>controlPerSize</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.112">controlPerSize</a></pre>
+</li>
+</ul>
+<a name="tuningPeriod">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tuningPeriod</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.114">tuningPeriod</a></pre>
+</li>
+</ul>
+<a name="maxThroughput">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxThroughput</h4>
+<pre>volatile&nbsp;double <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.116">maxThroughput</a></pre>
+</li>
+</ul>
+<a name="activeCompactions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>activeCompactions</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.ActiveCompaction.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">PressureAwareCompactionThroughputController.ActiveCompaction</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.118">activeCompactions</a></pre>
+</li>
+</ul>
+<a name="stopped">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>stopped</h4>
+<pre>private volatile&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.246">stopped</a></pre>
 </li>
 </ul>
 </li>
@@ -337,6 +557,15 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 </dl>
 </li>
 </ul>
+<a name="tune(double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tune</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.133">tune</a>(double&nbsp;compactionPressure)</pre>
+</li>
+</ul>
 <a name="setConf(org.apache.hadoop.conf.Configuration)">
 <!--   -->
 </a>
@@ -350,6 +579,25 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 <dt><strong>Overrides:</strong></dt>
 <dd><code>setConf</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.conf.Configured</code></dd>
 </dl>
+</li>
+</ul>
+<a name="throughputDesc(long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>throughputDesc</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.181">throughputDesc</a>(long&nbsp;deltaSize,
+                    long&nbsp;elapsedTime)</pre>
+</li>
+</ul>
+<a name="throughputDesc(double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>throughputDesc</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#line.185">throughputDesc</a>(double&nbsp;speed)</pre>
 </li>
 </ul>
 <a name="start(java.lang.String)">
@@ -468,8 +716,8 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/OffPeakHours.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/OffPeakHours.OffPeakHoursImpl.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.ActiveCompaction.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html" target="_top">Frames</a></li>
@@ -493,7 +741,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compa
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

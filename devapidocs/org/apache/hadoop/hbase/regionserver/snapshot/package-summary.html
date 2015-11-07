@@ -81,10 +81,17 @@
  store flush and then records the hfiles.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/RegionServerSnapshotManager.html" title="class in org.apache.hadoop.hbase.regionserver.snapshot">RegionServerSnapshotManager</a></td>
 <td class="colLast">
 <div class="block">This manager class handles the work dealing with snapshots for a <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver"><code>HRegionServer</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/RegionServerSnapshotManager.SnapshotSubprocedurePool.html" title="class in org.apache.hadoop.hbase.regionserver.snapshot">RegionServerSnapshotManager.SnapshotSubprocedurePool</a></td>
+<td class="colLast">
+<div class="block">We use the SnapshotSubprocedurePool, a class specific thread pool instead of
+ <a href="../../../../../../org/apache/hadoop/hbase/executor/ExecutorService.html" title="class in org.apache.hadoop.hbase.executor"><code>ExecutorService</code></a>.</div>
 </td>
 </tr>
 </tbody>

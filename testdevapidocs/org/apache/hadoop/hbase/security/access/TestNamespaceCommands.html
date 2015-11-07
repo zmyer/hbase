@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.security.access.SecureTestUtil">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -119,8 +119,139 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.apache.hadoop.hbase.security.access.<a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.html" title="class in org.apache.hadoop.hbase.security.access">SecureTestUtil</a></h3>
-<code><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.MasterSyncObserver.html" title="class in org.apache.hadoop.hbase.security.access">SecureTestUtil.MasterSyncObserver</a></code></li>
+<code><a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.AccessTestAction.html" title="interface in org.apache.hadoop.hbase.security.access">SecureTestUtil.AccessTestAction</a>, <a href="../../../../../../org/apache/hadoop/hbase/security/access/SecureTestUtil.MasterSyncObserver.html" title="class in org.apache.hadoop.hbase.security.access">SecureTestUtil.MasterSyncObserver</a></code></li>
 </ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.access.AccessController</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#ACCESS_CONTROLLER">ACCESS_CONTROLLER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.coprocessor.MasterCoprocessorEnvironment</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#CP_ENV">CP_ENV</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#GROUP_ADMIN">GROUP_ADMIN</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#GROUP_CREATE">GROUP_CREATE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#GROUP_READ">GROUP_READ</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#GROUP_WRITE">GROUP_WRITE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#SUPERUSER">SUPERUSER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#TEST_FAMILY">TEST_FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#TEST_NAMESPACE">TEST_NAMESPACE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#TEST_NAMESPACE2">TEST_NAMESPACE2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#TEST_TABLE">TEST_TABLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_GLOBAL_ADMIN">USER_GLOBAL_ADMIN</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_GLOBAL_CREATE">USER_GLOBAL_CREATE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_GLOBAL_EXEC">USER_GLOBAL_EXEC</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_GLOBAL_READ">USER_GLOBAL_READ</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_GLOBAL_WRITE">USER_GLOBAL_WRITE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_GROUP_ADMIN">USER_GROUP_ADMIN</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_GROUP_CREATE">USER_GROUP_CREATE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_GROUP_READ">USER_GROUP_READ</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_GROUP_WRITE">USER_GROUP_WRITE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_NS_ADMIN">USER_NS_ADMIN</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_NS_CREATE">USER_NS_CREATE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_NS_EXEC">USER_NS_EXEC</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_NS_READ">USER_NS_READ</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_NS_WRITE">USER_NS_WRITE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_TABLE_CREATE">USER_TABLE_CREATE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.security.User</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#USER_TABLE_WRITE">USER_TABLE_WRITE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#UTIL">UTIL</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 </li>
 </ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -211,6 +342,279 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UTIL</h4>
+<pre>private static&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.59">UTIL</a></pre>
+</li>
+</ul>
+<a name="TEST_NAMESPACE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_NAMESPACE</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.60">TEST_NAMESPACE</a></pre>
+</li>
+</ul>
+<a name="TEST_NAMESPACE2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_NAMESPACE2</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.61">TEST_NAMESPACE2</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private static&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.62">conf</a></pre>
+</li>
+</ul>
+<a name="CP_ENV">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CP_ENV</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.coprocessor.MasterCoprocessorEnvironment <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.63">CP_ENV</a></pre>
+</li>
+</ul>
+<a name="ACCESS_CONTROLLER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ACCESS_CONTROLLER</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.access.AccessController <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.64">ACCESS_CONTROLLER</a></pre>
+</li>
+</ul>
+<a name="SUPERUSER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SUPERUSER</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.67">SUPERUSER</a></pre>
+</li>
+</ul>
+<a name="USER_GLOBAL_ADMIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_GLOBAL_ADMIN</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.70">USER_GLOBAL_ADMIN</a></pre>
+</li>
+</ul>
+<a name="USER_GLOBAL_CREATE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_GLOBAL_CREATE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.72">USER_GLOBAL_CREATE</a></pre>
+</li>
+</ul>
+<a name="USER_GLOBAL_WRITE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_GLOBAL_WRITE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.74">USER_GLOBAL_WRITE</a></pre>
+</li>
+</ul>
+<a name="USER_GLOBAL_READ">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_GLOBAL_READ</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.76">USER_GLOBAL_READ</a></pre>
+</li>
+</ul>
+<a name="USER_GLOBAL_EXEC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_GLOBAL_EXEC</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.78">USER_GLOBAL_EXEC</a></pre>
+</li>
+</ul>
+<a name="USER_NS_ADMIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_NS_ADMIN</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.81">USER_NS_ADMIN</a></pre>
+</li>
+</ul>
+<a name="USER_NS_CREATE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_NS_CREATE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.83">USER_NS_CREATE</a></pre>
+</li>
+</ul>
+<a name="USER_NS_WRITE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_NS_WRITE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.85">USER_NS_WRITE</a></pre>
+</li>
+</ul>
+<a name="USER_NS_READ">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_NS_READ</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.87">USER_NS_READ</a></pre>
+</li>
+</ul>
+<a name="USER_NS_EXEC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_NS_EXEC</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.89">USER_NS_EXEC</a></pre>
+</li>
+</ul>
+<a name="USER_TABLE_WRITE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_TABLE_WRITE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.92">USER_TABLE_WRITE</a></pre>
+</li>
+</ul>
+<a name="USER_TABLE_CREATE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_TABLE_CREATE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.94">USER_TABLE_CREATE</a></pre>
+</li>
+</ul>
+<a name="GROUP_ADMIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>GROUP_ADMIN</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.96">GROUP_ADMIN</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.security.access.TestNamespaceCommands.GROUP_ADMIN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="GROUP_CREATE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>GROUP_CREATE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.97">GROUP_CREATE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.security.access.TestNamespaceCommands.GROUP_CREATE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="GROUP_READ">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>GROUP_READ</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.98">GROUP_READ</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.security.access.TestNamespaceCommands.GROUP_READ">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="GROUP_WRITE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>GROUP_WRITE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.99">GROUP_WRITE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.security.access.TestNamespaceCommands.GROUP_WRITE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="USER_GROUP_ADMIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_GROUP_ADMIN</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.101">USER_GROUP_ADMIN</a></pre>
+</li>
+</ul>
+<a name="USER_GROUP_CREATE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_GROUP_CREATE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.102">USER_GROUP_CREATE</a></pre>
+</li>
+</ul>
+<a name="USER_GROUP_READ">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_GROUP_READ</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.103">USER_GROUP_READ</a></pre>
+</li>
+</ul>
+<a name="USER_GROUP_WRITE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USER_GROUP_WRITE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.104">USER_GROUP_WRITE</a></pre>
+</li>
+</ul>
+<a name="TEST_TABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_TABLE</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.106">TEST_TABLE</a></pre>
+</li>
+</ul>
+<a name="TEST_FAMILY">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TEST_FAMILY</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/access/TestNamespaceCommands.html#line.107">TEST_FAMILY</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -394,13 +798,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/security/access/Secur
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.security.access.SecureTestUtil">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

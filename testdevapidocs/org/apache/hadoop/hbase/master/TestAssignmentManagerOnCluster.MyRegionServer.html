@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegionServer">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.MiniHBaseCluster.MiniHBaseClusterRegionServer">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -118,7 +118,7 @@
 </dl>
 <hr>
 <br>
-<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1225">TestAssignmentManagerOnCluster.MyRegionServer</a>
+<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.html#line.1224">TestAssignmentManagerOnCluster.MyRegionServer</a>
 extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBaseClusterRegionServer.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster.MiniHBaseClusterRegionServer</a></pre>
 </li>
 </ul>
@@ -154,6 +154,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBa
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.ServerName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#abortedServer">abortedServer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#simulateRetry">simulateRetry</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.MiniHBaseCluster.MiniHBaseClusterRegionServer">
 <!--   -->
@@ -247,6 +262,32 @@ extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBa
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="abortedServer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>abortedServer</h4>
+<pre>static volatile&nbsp;org.apache.hadoop.hbase.ServerName <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#line.1225">abortedServer</a></pre>
+</li>
+</ul>
+<a name="simulateRetry">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>simulateRetry</h4>
+<pre>static volatile&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#line.1226">simulateRetry</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -259,7 +300,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestAssignmentManagerOnCluster.MyRegionServer</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#line.1229">TestAssignmentManagerOnCluster.MyRegionServer</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#line.1228">TestAssignmentManagerOnCluster.MyRegionServer</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                              org.apache.hadoop.hbase.CoordinatedStateManager&nbsp;cp)
                                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                                      org.apache.zookeeper.KeeperException,
@@ -284,7 +325,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBa
 <ul class="blockList">
 <li class="blockList">
 <h4>reportRegionStateTransition</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#line.1236">reportRegionStateTransition</a>(org.apache.hadoop.hbase.protobuf.generated.RegionServerStatusProtos.RegionStateTransition.TransitionCode&nbsp;code,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#line.1235">reportRegionStateTransition</a>(org.apache.hadoop.hbase.protobuf.generated.RegionServerStatusProtos.RegionStateTransition.TransitionCode&nbsp;code,
                                   long&nbsp;openSeqNum,
                                   org.apache.hadoop.hbase.HRegionInfo...&nbsp;hris)</pre>
 <dl>
@@ -301,7 +342,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>isAborted</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#line.1247">isAborted</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/TestAssignmentManagerOnCluster.MyRegionServer.html#line.1246">isAborted</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code>isAborted</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.Abortable</code></dd>
@@ -362,13 +403,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/MiniHBaseCluster.MiniHBa
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegionServer">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.MiniHBaseCluster.MiniHBaseClusterRegionServer">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

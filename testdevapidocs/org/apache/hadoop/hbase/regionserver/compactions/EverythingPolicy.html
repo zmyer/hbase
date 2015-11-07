@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li>Prev Class</li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PerfTestCompactionPolicies.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ConstantSizeFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ExplicitFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html" target="_top">Frames</a></li>
@@ -63,13 +63,13 @@
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_top">
@@ -155,12 +155,25 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <!--   -->
 </a>
 <h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html#applyCompactionPolicy(java.util.ArrayList,%20boolean,%20boolean)">applyCompactionPolicy</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;candidates,
+                                          boolean&nbsp;mayUseOffPeak,
+                                          boolean&nbsp;mayBeStuck)</code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</h3>
-<code>getNextMajorCompactTime, isMajorCompaction, needsCompaction, preSelectCompactionForCoprocessor, selectCompaction, throttleCompaction</code></li>
+<code><clinit>, getNextMajorCompactTime, isMajorCompaction, needsCompaction, preSelectCompactionForCoprocessor, selectCompaction, throttleCompaction</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy">
@@ -204,6 +217,31 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 </ul>
 </li>
 </ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="applyCompactionPolicy(java.util.ArrayList, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>applyCompactionPolicy</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html#line.45">applyCompactionPolicy</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;candidates,
+                                                                              boolean&nbsp;mayUseOffPeak,
+                                                                              boolean&nbsp;mayBeStuck)
+                                                                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>applyCompactionPolicy</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 </div>
@@ -228,8 +266,8 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 </div>
 <div class="subNav">
 <ul class="navList">
-<li>Prev Class</li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PerfTestCompactionPolicies.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ConstantSizeFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ExplicitFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html" target="_top">Frames</a></li>
@@ -256,13 +294,13 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_bottom">

@@ -111,6 +111,14 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.balancer">org.apache.hadoop.hbase.master.balancer</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.quotas">org.apache.hadoop.hbase.quotas</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -128,6 +136,10 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <div class="block">Provides an HBase <a href="http://thrift.apache.org/">Thrift</a>
 service.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -167,19 +179,24 @@ service.</div>
                       int&nbsp;replicaId)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><span class="strong">MetaTableAccessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html#addRegionInfo(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.HRegionInfo)">addRegionInfo</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;p,
+                          <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
 <td class="colLast"><span class="strong">MetaTableAccessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html#makePutFromRegionInfo(org.apache.hadoop.hbase.HRegionInfo)">makePutFromRegionInfo</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo)</code>
 <div class="block">Generates and returns a Put containing the region into for the catalog table</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
 <td class="colLast"><span class="strong">MetaTableAccessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html#makePutFromRegionInfo(org.apache.hadoop.hbase.HRegionInfo,%20long)">makePutFromRegionInfo</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
                                           long&nbsp;ts)</code>
 <div class="block">Generates and returns a Put containing the region into for the catalog table</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
 <td class="colLast"><span class="strong">MetaTableAccessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html#makePutFromTableState(org.apache.hadoop.hbase.client.TableState)">makePutFromTableState</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/TableState.html" title="class in org.apache.hadoop.hbase.client">TableState</a>&nbsp;state)</code>
 <div class="block">Construct PUT for given state</div>
@@ -215,6 +232,23 @@ service.</div>
                       long&nbsp;time,
                       int&nbsp;replicaId)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><span class="strong">MetaTableAccessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html#addRegionInfo(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.HRegionInfo)">addRegionInfo</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;p,
+                          <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><span class="strong">MetaTableAccessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html#put(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Put)">put</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;t,
+      <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;p)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><span class="strong">MetaTableAccessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html#putToMetaTable(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.client.Put)">putToMetaTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
+                            <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;p)</code>
+<div class="block">Put the passed <code>p</code> to the <code>hbase:meta</code> table.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -238,6 +272,19 @@ service.</div>
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a> in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><span class="strong">HTableMultiplexer.PutStatus.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTableMultiplexer.PutStatus.html#put">put</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> that return <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -588,6 +635,11 @@ service.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTableMultiplexer.PutStatus.html#HTableMultiplexer.PutStatus(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.client.Put,%20int)">HTableMultiplexer.PutStatus</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
+                                                      <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
+                                                      int&nbsp;maxAttempCount)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Put.html#Put(org.apache.hadoop.hbase.client.Put)">Put</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;putToCopy)</code>
 <div class="block">Copy constructor.</div>
 </td>
@@ -805,7 +857,7 @@ service.</div>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><span class="strong">TsvImporterMapper.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html#populatePut(byte[],%20org.apache.hadoop.hbase.mapreduce.ImportTsv.TsvParser.ParsedLine,%20org.apache.hadoop.hbase.client.Put,%20int)">populatePut</a></strong>(byte[]&nbsp;lineBytes,
-                      org.apache.hadoop.hbase.mapreduce.ImportTsv.TsvParser.ParsedLine&nbsp;parsed,
+                      <a href="../../../../../../org/apache/hadoop/hbase/mapreduce/ImportTsv.TsvParser.ParsedLine.html" title="class in org.apache.hadoop.hbase.mapreduce">ImportTsv.TsvParser.ParsedLine</a>&nbsp;parsed,
                       <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
                       int&nbsp;i)</code>&nbsp;</td>
 </tr>
@@ -841,10 +893,72 @@ service.</div>
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.master.balancer">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a> in <a href="../../../../../../org/apache/hadoop/hbase/master/balancer/package-summary.html">org.apache.hadoop.hbase.master.balancer</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/master/balancer/package-summary.html">org.apache.hadoop.hbase.master.balancer</a> that return <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><span class="strong">FavoredNodeAssignmentHelper.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/FavoredNodeAssignmentHelper.html#makePutFromRegionInfo(org.apache.hadoop.hbase.HRegionInfo,%20java.util.List)">makePutFromRegionInfo</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
+                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;favoredNodeList)</code>
+<div class="block">Generates and returns a Put containing the region info for the catalog table
+ and the servers</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.quotas">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a> in <a href="../../../../../../org/apache/hadoop/hbase/quotas/package-summary.html">org.apache.hadoop.hbase.quotas</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/quotas/package-summary.html">org.apache.hadoop.hbase.quotas</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><span class="strong">QuotaUtil.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.html#doPut(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.client.Put)">doPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
+          <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><span class="strong">RegionMergeTransactionImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html#addLocation(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.ServerName,%20long)">addLocation</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;p,
+                      <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn,
+                      long&nbsp;openSeqNum)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#addLocation(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.ServerName,%20long)">addLocation</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;p,
+                      <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn,
+                      long&nbsp;openSeqNum)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -852,6 +966,18 @@ service.</div>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><span class="strong">RegionMergeTransactionImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html#addLocation(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.ServerName,%20long)">addLocation</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;p,
+                      <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn,
+                      long&nbsp;openSeqNum)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><span class="strong">SplitTransactionImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html#addLocation(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.ServerName,%20long)">addLocation</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;p,
+                      <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn,
+                      long&nbsp;openSeqNum)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postCheckAndPut(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">postCheckAndPut</a></strong>(byte[]&nbsp;row,
@@ -1037,6 +1163,26 @@ service.</div>
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&gt;</code></td>
 <td class="colLast"><span class="strong">ThriftUtilities.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/thrift2/ThriftUtilities.html#putsFromThrift(java.util.List)">putsFromThrift</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.thrift2.generated.TPut&gt;&nbsp;in)</code>
 <div class="block">Converts multiple <code>TPut</code>s (Thrift) into a list of <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client"><code>Put</code></a>s (HBase).</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.util">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a> in <a href="../../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a> that return types with arguments of type <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HBaseFsck.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.html#generatePuts(java.util.SortedMap)">generatePuts</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.TableInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.TableInfo</a>&gt;&nbsp;tablesInfo)</code>
+<div class="block">Generate set of puts to add to new meta.</div>
 </td>
 </tr>
 </tbody>

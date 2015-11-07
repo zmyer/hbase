@@ -117,12 +117,56 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#COLUMN_FAMILY">COLUMN_FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#COLUMN_FAMILY_TEXT">COLUMN_FAMILY_TEXT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#compactionThreshold">compactionThreshold</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#htd">htd</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#MAX_FILES_TO_COMPACT">MAX_FILES_TO_COMPACT</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>org.junit.rules.TestName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#name">name</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.Region</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#r">r</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#secondRowBytes">secondRowBytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#STARTROW">STARTROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#thirdRowBytes">thirdRowBytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#UTIL">UTIL</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -159,61 +203,87 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#count()">count</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#createSmallerStoreFile(org.apache.hadoop.hbase.regionserver.Region)">createSmallerStoreFile</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#createStoreFile(org.apache.hadoop.hbase.regionserver.Region)">createStoreFile</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#createStoreFile(org.apache.hadoop.hbase.regionserver.Region,%20java.lang.String)">createStoreFile</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;family)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#majorCompaction()">majorCompaction</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#majorCompactionWithDataBlockEncoding(boolean)">majorCompactionWithDataBlockEncoding</a></strong>(boolean&nbsp;inCacheOnly)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#tearDown()">tearDown</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#testDataBlockEncodingEverywhere()">testDataBlockEncodingEverywhere</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#testDataBlockEncodingInCacheOnly()">testDataBlockEncodingInCacheOnly</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#testMajorCompactingToNoOutput()">testMajorCompactingToNoOutput</a></strong>()</code>
 <div class="block">Test that on a major compaction, if all cells are expired or deleted, then
  we'll end up with no product.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#testMajorCompactingToNoOutputWithReverseScan()">testMajorCompactingToNoOutputWithReverseScan</a></strong>()</code>
 <div class="block">Test that on a major compaction, if all cells are expired or deleted, then we'll end up with no
  product.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#testMajorCompaction()">testMajorCompaction</a></strong>()</code>
 <div class="block">Run compaction and flushing memstore
  Assert deletes get cleaned up.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#testNonUserMajorCompactionRequest()">testNonUserMajorCompactionRequest</a></strong>()</code>
 <div class="block">Test for HBASE-5920 - Test user requested major compactions always occurring</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#testTimeBasedMajorCompaction()">testTimeBasedMajorCompaction</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#testUserMajorCompactionRequest()">testUserMajorCompactionRequest</a></strong>()</code>
 <div class="block">Test for HBASE-5920</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#verifyCounts(int,%20int)">verifyCounts</a></strong>(int&nbsp;countRow1,
+                        int&nbsp;countRow2)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -246,13 +316,113 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;org.junit.rules.TestName <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.75">name</a></pre>
 </li>
 </ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.76">LOG</a></pre>
+</li>
+</ul>
+<a name="UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.77">UTIL</a></pre>
+</li>
+</ul>
 <a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>protected&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.78">conf</a></pre>
+</li>
+</ul>
+<a name="r">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>r</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.Region <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.80">r</a></pre>
+</li>
+</ul>
+<a name="htd">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>htd</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.81">htd</a></pre>
+</li>
+</ul>
+<a name="COLUMN_FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COLUMN_FAMILY</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.82">COLUMN_FAMILY</a></pre>
+</li>
+</ul>
+<a name="STARTROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STARTROW</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.83">STARTROW</a></pre>
+</li>
+</ul>
+<a name="COLUMN_FAMILY_TEXT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COLUMN_FAMILY_TEXT</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.84">COLUMN_FAMILY_TEXT</a></pre>
+</li>
+</ul>
+<a name="compactionThreshold">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compactionThreshold</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.85">compactionThreshold</a></pre>
+</li>
+</ul>
+<a name="secondRowBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>secondRowBytes</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.86">secondRowBytes</a></pre>
+</li>
+</ul>
+<a name="thirdRowBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>thirdRowBytes</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.86">thirdRowBytes</a></pre>
+</li>
+</ul>
+<a name="MAX_FILES_TO_COMPACT">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>conf</h4>
-<pre>protected&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.78">conf</a></pre>
+<h4>MAX_FILES_TO_COMPACT</h4>
+<pre>private static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.87">MAX_FILES_TO_COMPACT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestMajorCompaction.MAX_FILES_TO_COMPACT">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -370,6 +540,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="majorCompaction()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>majorCompaction</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.195">majorCompaction</a>()
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
 <a name="testTimeBasedMajorCompaction()">
 <!--   -->
 </a>
@@ -380,6 +562,68 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyCounts(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyCounts</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.351">verifyCounts</a>(int&nbsp;countRow1,
+                int&nbsp;countRow2)
+                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="count()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>count</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.371">count</a>()
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createStoreFile(org.apache.hadoop.hbase.regionserver.Region)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createStoreFile</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.385">createStoreFile</a>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createStoreFile(org.apache.hadoop.hbase.regionserver.Region, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createStoreFile</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.389">createStoreFile</a>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;family)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createSmallerStoreFile(org.apache.hadoop.hbase.regionserver.Region)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createSmallerStoreFile</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html#line.395">createSmallerStoreFile</a>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region)
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testNonUserMajorCompactionRequest()">

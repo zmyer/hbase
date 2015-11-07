@@ -80,6 +80,10 @@
 <div class="block">Tools to help define network clients and servers.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -101,6 +105,73 @@
 <td class="colLast"><span class="strong">RpcServer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcServer.html#callQueueSize">callQueueSize</a></strong></code>
 <div class="block">This is a running count of the size of all outstanding calls by size.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">RpcServer.Connection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Connection.html#rpcCount">rpcCount</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#blockedRequestsCount">blockedRequestsCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#checkAndMutateChecksFailed">checkAndMutateChecksFailed</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#checkAndMutateChecksPassed">checkAndMutateChecksPassed</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#dataInMemoryWithoutWAL">dataInMemoryWithoutWAL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#numMutationsWithoutWAL">numMutationsWithoutWAL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#readRequestsCount">readRequestsCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#requestCount">requestCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">MemStoreFlusher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreFlusher.html#updatesBlockedMsHighWater">updatesBlockedMsHighWater</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#writeRequestsCount">writeRequestsCount</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/Counter.html" title="class in org.apache.hadoop.hbase.util">Counter</a></code></td>
+<td class="colLast"><span class="strong">MemStoreFlusher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreFlusher.html#getUpdatesBlockedMsHighWater()">getUpdatesBlockedMsHighWater</a></strong>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

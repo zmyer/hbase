@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/HTestConst.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.GaussianRandomReadBenchmark.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/HFilePerformanceEvaluation.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -105,6 +105,84 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.GaussianRandomReadBenchmark.html" title="class in org.apache.hadoop.hbase">HFilePerformanceEvaluation.GaussianRandomReadBenchmark</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.ReadBenchmark.html" title="class in org.apache.hadoop.hbase">HFilePerformanceEvaluation.ReadBenchmark</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.RowOrientedBenchmark.html" title="class in org.apache.hadoop.hbase">HFilePerformanceEvaluation.RowOrientedBenchmark</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.SequentialReadBenchmark.html" title="class in org.apache.hadoop.hbase">HFilePerformanceEvaluation.SequentialReadBenchmark</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.SequentialWriteBenchmark.html" title="class in org.apache.hadoop.hbase">HFilePerformanceEvaluation.SequentialWriteBenchmark</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.UniformRandomReadBenchmark.html" title="class in org.apache.hadoop.hbase">HFilePerformanceEvaluation.UniformRandomReadBenchmark</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.UniformRandomSmallScan.html" title="class in org.apache.hadoop.hbase">HFilePerformanceEvaluation.UniformRandomSmallScan</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#RFILE_BLOCKSIZE">RFILE_BLOCKSIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#ROW_COUNT">ROW_COUNT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#ROW_LENGTH">ROW_LENGTH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#testSummary">testSummary</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -135,15 +213,70 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.Cell</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#createCell(byte[])">createCell</a></strong>(byte[]&nbsp;keyRow)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.Cell</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#createCell(byte[],%20byte[])">createCell</a></strong>(byte[]&nbsp;keyRow,
+                    byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.Cell</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#createCell(int)">createCell</a></strong>(int&nbsp;i)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.Cell</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#createCell(int,%20byte[])">createCell</a></strong>(int&nbsp;i,
+                    byte[]&nbsp;value)</code>
+<div class="block">HFile is Cell-based.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#format(int)">format</a></strong>(int&nbsp;i)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.io.ImmutableBytesWritable</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#format(int,%20org.apache.hadoop.hbase.io.ImmutableBytesWritable)">format</a></strong>(int&nbsp;i,
+            org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;w)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#main(java.lang.String[])">main</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#runBenchmark(org.apache.hadoop.hbase.HFilePerformanceEvaluation.RowOrientedBenchmark,%20int,%20java.lang.String,%20java.lang.String)">runBenchmark</a></strong>(org.apache.hadoop.hbase.HFilePerformanceEvaluation.RowOrientedBenchmark&nbsp;benchmark,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#runBenchmark(org.apache.hadoop.hbase.HFilePerformanceEvaluation.RowOrientedBenchmark,%20int,%20java.lang.String,%20java.lang.String)">runBenchmark</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.RowOrientedBenchmark.html" title="class in org.apache.hadoop.hbase">HFilePerformanceEvaluation.RowOrientedBenchmark</a>&nbsp;benchmark,
                         int&nbsp;rowCount,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;codec,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cipher)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#runBenchmarks()">runBenchmarks</a></strong>()</code>
+<div class="block">Add any supported codec or cipher to test the HFile read/write performance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#runReadBenchmark(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20java.lang.String,%20java.lang.String)">runReadBenchmark</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                org.apache.hadoop.fs.Path&nbsp;mf,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;codec,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cipher)</code>
+<div class="block">Run all the read benchmarks for the test HFile</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#runWriteBenchmark(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20java.lang.String,%20java.lang.String)">runWriteBenchmark</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                  org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                  org.apache.hadoop.fs.Path&nbsp;mf,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;codec,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cipher)</code>
+<div class="block">Write a test HFile with the given codec & cipher</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -161,6 +294,62 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ROW_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROW_LENGTH</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.50">ROW_LENGTH</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HFilePerformanceEvaluation.ROW_LENGTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ROW_COUNT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROW_COUNT</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.51">ROW_COUNT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HFilePerformanceEvaluation.ROW_COUNT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="RFILE_BLOCKSIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RFILE_BLOCKSIZE</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.52">RFILE_BLOCKSIZE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HFilePerformanceEvaluation.RFILE_BLOCKSIZE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="testSummary">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testSummary</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.53">testSummary</a></pre>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.63">LOG</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -184,13 +373,121 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="format(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>format</h4>
+<pre>static&nbsp;byte[]&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.66">format</a>(int&nbsp;i)</pre>
+</li>
+</ul>
+<a name="format(int, org.apache.hadoop.hbase.io.ImmutableBytesWritable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>format</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.71">format</a>(int&nbsp;i,
+                                                       org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;w)</pre>
+</li>
+</ul>
+<a name="createCell(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCell</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.Cell&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.76">createCell</a>(int&nbsp;i)</pre>
+</li>
+</ul>
+<a name="createCell(int, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCell</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.Cell&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.87">createCell</a>(int&nbsp;i,
+                                      byte[]&nbsp;value)</pre>
+<div class="block">HFile is Cell-based. It used to be byte arrays.  Doing this test, pass Cells. All Cells
+ intentionally have same coordinates in all fields but row.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>i</code> - Integer to format as a row Key.</dd><dd><code>value</code> - Value to use</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Created Cell.</dd></dl>
+</li>
+</ul>
+<a name="createCell(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCell</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.Cell&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.91">createCell</a>(byte[]&nbsp;keyRow)</pre>
+</li>
+</ul>
+<a name="createCell(byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCell</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.Cell&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.95">createCell</a>(byte[]&nbsp;keyRow,
+                                      byte[]&nbsp;value)</pre>
+</li>
+</ul>
+<a name="runBenchmarks()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runBenchmarks</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.104">runBenchmarks</a>()
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Add any supported codec or cipher to test the HFile read/write performance. 
+ Specify "none" to disable codec or cipher or both.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="runWriteBenchmark(org.apache.hadoop.conf.Configuration, org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runWriteBenchmark</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.156">runWriteBenchmark</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                     org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                     org.apache.hadoop.fs.Path&nbsp;mf,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;codec,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cipher)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Write a test HFile with the given codec & cipher</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - </dd><dd><code>fs</code> - </dd><dd><code>mf</code> - </dd><dd><code>codec</code> - "none", "lzo", "gz", "snappy"</dd><dd><code>cipher</code> - "none", "aes"</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="runReadBenchmark(org.apache.hadoop.conf.Configuration, org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runReadBenchmark</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.175">runReadBenchmark</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                    org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                    org.apache.hadoop.fs.Path&nbsp;mf,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;codec,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cipher)</pre>
+<div class="block">Run all the read benchmarks for the test HFile</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - </dd><dd><code>fs</code> - </dd><dd><code>mf</code> - </dd><dd><code>codec</code> - "none", "lzo", "gz", "snappy"</dd><dd><code>cipher</code> - "none", "aes"</dd></dl>
+</li>
+</ul>
 <a name="runBenchmark(org.apache.hadoop.hbase.HFilePerformanceEvaluation.RowOrientedBenchmark, int, java.lang.String, java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>runBenchmark</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.231">runBenchmark</a>(org.apache.hadoop.hbase.HFilePerformanceEvaluation.RowOrientedBenchmark&nbsp;benchmark,
+<pre>protected&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HFilePerformanceEvaluation.html#line.231">runBenchmark</a>(<a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.RowOrientedBenchmark.html" title="class in org.apache.hadoop.hbase">HFilePerformanceEvaluation.RowOrientedBenchmark</a>&nbsp;benchmark,
                 int&nbsp;rowCount,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;codec,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cipher)
@@ -240,7 +537,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/HBaseTestingUtility.SeenRowTracker.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/HTestConst.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/HFilePerformanceEvaluation.GaussianRandomReadBenchmark.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/HFilePerformanceEvaluation.html" target="_top">Frames</a></li>
@@ -264,14 +561,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

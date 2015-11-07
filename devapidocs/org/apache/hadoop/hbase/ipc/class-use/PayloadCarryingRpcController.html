@@ -86,6 +86,10 @@
 <div class="block">Tools to help define network clients and servers.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -103,8 +107,29 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a></code></td>
+<td class="colLast"><span class="strong">MultiServerCallable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/MultiServerCallable.html#controller">controller</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a></code></td>
+<td class="colLast"><span class="strong">RpcRetryingCallerWithReadReplicas.ReplicaRegionServerCallable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerWithReadReplicas.ReplicaRegionServerCallable.html#controller">controller</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a></code></td>
 <td class="colLast"><span class="strong">ScannerCallable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ScannerCallable.html#controller">controller</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> that return <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a></code></td>
+<td class="colLast"><span class="strong">ScannerCallable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ScannerCallable.html#getController()">getController</a></strong>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -126,6 +151,23 @@
 <div class="block">Simple delegating controller for use with the <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc"><code>RpcControllerFactory</code></a> to help override
  standard behavior of a <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc"><code>PayloadCarryingRpcController</code></a>.</div>
 </td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a></code></td>
+<td class="colLast"><span class="strong">AsyncCall.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncCall.html#controller">controller</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a></code></td>
+<td class="colLast"><span class="strong">DelegatingPayloadCarryingRpcController.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/DelegatingPayloadCarryingRpcController.html#delegate">delegate</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -200,6 +242,17 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) com.google.protobuf.Message</code></td>
+<td class="colLast"><span class="strong">AbstractRpcClient.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AbstractRpcClient.html#callBlockingMethod(com.google.protobuf.Descriptors.MethodDescriptor,%20org.apache.hadoop.hbase.ipc.PayloadCarryingRpcController,%20com.google.protobuf.Message,%20com.google.protobuf.Message,%20org.apache.hadoop.hbase.security.User,%20java.net.InetSocketAddress)">callBlockingMethod</a></strong>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;md,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a>&nbsp;pcrc,
+                                    com.google.protobuf.Message&nbsp;param,
+                                    com.google.protobuf.Message&nbsp;returnType,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;ticket,
+                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</a>&nbsp;isa)</code>
+<div class="block">Make a blocking call.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>io.netty.util.concurrent.Promise&lt;com.google.protobuf.Message&gt;</code></td>
 <td class="colLast"><span class="strong">AsyncRpcChannel.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannel.html#callMethod(com.google.protobuf.Descriptors.MethodDescriptor,%20org.apache.hadoop.hbase.ipc.PayloadCarryingRpcController,%20com.google.protobuf.Message,%20com.google.protobuf.Message,%20org.apache.hadoop.hbase.client.MetricsConnection.CallStats)">callMethod</a></strong>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
                     <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a>&nbsp;controller,
@@ -207,6 +260,18 @@
                     com.google.protobuf.Message&nbsp;responsePrototype,
                     <a href="../../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallStats</a>&nbsp;callStats)</code>
 <div class="block">Calls method on channel</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">AsyncRpcClient.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcClient.html#callMethod(com.google.protobuf.Descriptors.MethodDescriptor,%20org.apache.hadoop.hbase.ipc.PayloadCarryingRpcController,%20com.google.protobuf.Message,%20com.google.protobuf.Message,%20org.apache.hadoop.hbase.security.User,%20java.net.InetSocketAddress,%20com.google.protobuf.RpcCallback)">callMethod</a></strong>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;md,
+                    <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a>&nbsp;pcrc,
+                    com.google.protobuf.Message&nbsp;param,
+                    com.google.protobuf.Message&nbsp;returnType,
+                    <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;ticket,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</a>&nbsp;addr,
+                    com.google.protobuf.RpcCallback&lt;com.google.protobuf.Message&gt;&nbsp;done)</code>
+<div class="block">Call method async</div>
 </td>
 </tr>
 </tbody>
@@ -230,6 +295,26 @@
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/DelegatingPayloadCarryingRpcController.html#DelegatingPayloadCarryingRpcController(org.apache.hadoop.hbase.ipc.PayloadCarryingRpcController)">DelegatingPayloadCarryingRpcController</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a>&nbsp;delegate)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#addResult(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponse.Builder,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.hbase.ipc.PayloadCarryingRpcController)">addResult</a></strong>(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponse.Builder&nbsp;builder,
+                  <a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;result,
+                  <a href="../../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc">PayloadCarryingRpcController</a>&nbsp;rpcc)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

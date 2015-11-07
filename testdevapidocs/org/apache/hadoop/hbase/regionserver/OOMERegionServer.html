@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegionServer">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegionServer">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -133,7 +133,7 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.HRegionServer</h3>
-<code>org.apache.hadoop.hbase.regionserver.HRegionServer.MovedRegionsCleaner</code></li>
+<code>org.apache.hadoop.hbase.regionserver.HRegionServer.MovedRegionsCleaner, org.apache.hadoop.hbase.regionserver.HRegionServer.PeriodicMemstoreFlusher</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.RegionServerServices">
@@ -150,12 +150,23 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Put&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/OOMERegionServer.html#retainer">retainer</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegionServer">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.HRegionServer</h3>
-<code>cacheConfig, cacheFlusher, CLOSE, clusterConnection, clusterStatusTracker, compactSplitThread, conf, configurationManager, csm, fs, fsOk, hMemManager, infoServer, leases, lock, metaTableLocator, movedRegions, msgInterval, numRegionsToReport, onlineRegions, OPEN, recoveringRegions, regionFavoredNodesMap, REGIONSERVER, regionsInTransitionInRS, replicationSinkHandler, replicationSourceHandler, rpcServices, serverName, service, sleeper, startcode, tableDescriptors, tableLockManager, TEST_SKIP_REPORTING_TRANSITION, threadWakeFrequency, useThisHostnameInstead, walFactory, zooKeeper</code></li>
+<code>cacheConfig, cacheFlusher, CLOSE, clusterConnection, clusterStatusTracker, compactionChecker, compactSplitThread, conf, configurationManager, csm, fs, fsOk, hMemManager, infoServer, leases, lock, MASTER_HOSTNAME_KEY, metaTableLocator, metawalRoller, metricsRegionServer, mobCacheConfig, movedRegions, msgInterval, nonceManager, numRegionsToReport, numRetries, online, onlineRegions, OPEN, periodicFlusher, recoveringRegions, regionFavoredNodesMap, REGIONSERVER, regionsInTransitionInRS, replicationSinkHandler, replicationSourceHandler, rowlocks, rpcClient, rpcServices, RS_HOSTNAME_KEY, serverName, service, sleeper, startcode, tableDescriptors, tableLockManager, TEST_SKIP_REPORTING_TRANSITION, threadWakeFrequency, useThisHostnameInstead, walFactory, walRoller, zooKeeper</code></li>
 </ul>
 </li>
 </ul>
@@ -204,7 +215,7 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.HRegionServer</h3>
-<code>abort, abort, addToMovedRegions, addToOnlineRegions, canCreateBaseZNode, canUpdateTableDescriptor, checkFileSystem, cleanMovedRegions, closeAllRegions, closeRegion, configureInfoServer, constructRegionServer, convertThrowableToIOE, createClusterConnection, createRegionLoad, createRegionServerStatusStub, createRpcServices, doMetrics, ensureMetaWALRoller, execRegionServerService, getCacheConfig, getChoreService, getClusterId, getCompactionPressure, getCompactionRequester, getCompactSplitThread, getConfiguration, getConfigurationManager, getConnection, getCoordinatedStateManager, getDumpServlet, getExecutorService, getFavoredNodesForRegion, getFileSystem, getFlushRequester, getFromOnlineRegions, getFsTableDescriptors, getHeapMemoryManager, getInfoServer, getLastSequenceId, getLeases, getMasterAddressTracker, getMetaTableLocator, getMostLoadedRegions, getNonceManager, getNumberOfOnlineRegions, getOnlineRegion, getOnlineRegions, getOnlineRegionsLocalContext, getOnlineTables, getProcessName, getRecoveringRegions, getRegion, getRegionBlockLocations, getRegionByEncodedName, getRegionByEncodedName, getRegionServerAccounting, getRegionServerCoprocessorHost, getRegionServerCoprocessors, getRegionServerMetrics, getRegionServerQuotaManager, getRegionsInTransitionInRS, getRootDir, getRpcServer, getRSRpcServices, getServerName, getStartcode, getTableDescriptors, getTableLockManager, getThreadWakeFrequency, getWAL, getZooKeeper, handleReportForDutyResponse, isAborted, isOnline, isStopped, isStopping, kill, login, movedRegionCleanerPeriod, postOpenDeployTasks, postOpenDeployTasks, registerService, removeFromOnlineRegions, reportRegionStateTransition, reportRegionStateTransition, reportRegionStateTransition, run, sendShutdownInterrupt, setupClusterConnection, shouldUseThisHostnameInstead, stop, stopServiceThreads, toString, tryRegionServerReport, updateConfiguration, updateRegionFavoredNodesMapping, waitForMasterActive, waitForServerOnline, walRollRequestFinished</code></li>
+<code><clinit>, abort, abort, addToMovedRegions, addToOnlineRegions, buildServerLoad, canCreateBaseZNode, canUpdateTableDescriptor, checkFileSystem, cleanMovedRegions, closeAllRegions, closeMetaTableRegions, closeRegion, closeUserRegions, configureInfoServer, constructRegionServer, convertThrowableToIOE, createClusterConnection, createRegionLoad, createRegionServerStatusStub, createRpcServices, doMetrics, ensureMetaWALRoller, execRegionServerService, getCacheConfig, getChoreService, getClusterId, getCompactionPressure, getCompactionRequester, getCompactSplitThread, getConfiguration, getConfigurationManager, getConnection, getCoordinatedStateManager, getCopyOfOnlineRegionsSortedBySize, getDumpServlet, getExecutorService, getFavoredNodesForRegion, getFileSystem, getFlushRequester, getFromOnlineRegions, getFsTableDescriptors, getHeapMemoryManager, getInfoServer, getLastSequenceId, getLeases, getMasterAddressTracker, getMetaTableLocator, getMostLoadedRegions, getNonceManager, getNumberOfOnlineRegions, getOnlineRegion, getOnlineRegions, getOnlineRegionsAsPrintableString, getOnlineRegionsLocalContext, getOnlineTables, getProcessName, getRecoveringRegions, getRegion, getRegionBlockLocations, getRegionByEncodedName, getRegionByEncodedName, getRegionServerAccounting, getRegionServerCoprocessorHost, getRegionServerCoprocessors, getRegionServerMetrics, getRegionServerQuotaManager, getRegionsInTransitionInRS, getReplicationSinkService, getReplicationSourceService, getRootDir, getRpcServer, getRSRpcServices, getServerName, getStartcode, getTableDescriptors, getTableLockManager, getThreadWakeFrequency, getWAL, getWriteLock, getZooKeeper, handleReportForDutyResponse, isAborted, isOnline, isOnlineRegionsEmpty, isStopped, isStopping, kill, login, movedRegionCleanerPeriod, postOpenDeployTasks, postOpenDeployTasks, registerService, removeFromMovedRegions, removeFromOnlineRegions, reportRegionStateTransition, reportRegionStateTransition, reportRegionStateTransition, run, sendShutdownInterrupt, setupClusterConnection, shouldUseThisHostnameInstead, stop, stopServiceThreads, toString, triggerFlushInPrimaryRegion, tryRegionServerReport, updateConfiguration, updateRegionFavoredNodesMapping, waitForMasterActive, waitForServerOnline, walRollRequestFinished</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.util.HasThread">
@@ -228,6 +239,23 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="retainer">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>retainer</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Put&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/OOMERegionServer.html#line.43">retainer</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -331,13 +359,13 @@ extends org.apache.hadoop.hbase.regionserver.HRegionServer</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegionServer">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegionServer">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

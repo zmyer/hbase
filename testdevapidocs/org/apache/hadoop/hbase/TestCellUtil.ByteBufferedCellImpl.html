@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/TestCheckTestClasses.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.TestCell.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html" target="_top">Frames</a></li>
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -116,6 +116,33 @@ extends org.apache.hadoop.hbase.ByteBufferedCell</pre>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#buffer">buffer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#length">length</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#offset">offset</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -168,94 +195,98 @@ extends org.apache.hadoop.hbase.ByteBufferedCell</pre>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getFamilyPosition()">getFamilyPosition</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getKeyLength()">getKeyLength</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getQualifierArray()">getQualifierArray</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getQualifierByteBuffer()">getQualifierByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getQualifierLength()">getQualifierLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getQualifierOffset()">getQualifierOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getQualifierPosition()">getQualifierPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getRowArray()">getRowArray</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getRowByteBuffer()">getRowByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>short</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getRowLength()">getRowLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getRowOffset()">getRowOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getRowPosition()">getRowPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getSequenceId()">getSequenceId</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getTagsArray()">getTagsArray</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getTagsByteBuffer()">getTagsByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getTagsLength()">getTagsLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getTagsOffset()">getTagsOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getTagsPosition()">getTagsPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getTimestamp()">getTimestamp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getTypeByte()">getTypeByte</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getValueArray()">getValueArray</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getValueByteBuffer()">getValueByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getValueLength()">getValueLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getValueOffset()">getValueOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#getValuePosition()">getValuePosition</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -275,6 +306,41 @@ extends org.apache.hadoop.hbase.ByteBufferedCell</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="buffer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buffer</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a> <a href="../../../../src-html/org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#line.496">buffer</a></pre>
+</li>
+</ul>
+<a name="offset">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>offset</h4>
+<pre>private final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#line.497">offset</a></pre>
+</li>
+</ul>
+<a name="length">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>length</h4>
+<pre>private final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#line.497">length</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -379,6 +445,15 @@ extends org.apache.hadoop.hbase.ByteBufferedCell</pre>
 <li class="blockList">
 <h4>getQualifierLength</h4>
 <pre>public&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#line.546">getQualifierLength</a>()</pre>
+</li>
+</ul>
+<a name="getKeyLength()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeyLength</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html#line.551">getKeyLength</a>()</pre>
 </li>
 </ul>
 <a name="getTimestamp()">
@@ -619,7 +694,7 @@ extends org.apache.hadoop.hbase.ByteBufferedCell</pre>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/TestCheckTestClasses.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TestCellUtil.TestCell.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/TestCellUtil.ByteBufferedCellImpl.html" target="_top">Frames</a></li>
@@ -644,13 +719,13 @@ extends org.apache.hadoop.hbase.ByteBufferedCell</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

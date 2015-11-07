@@ -116,8 +116,64 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Admin</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#admin">admin</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#defaultThreshold">defaultThreshold</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#desc">desc</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#family">family</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.HColumnDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#hcd">hcd</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#qf1">qf1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#qf2">qf2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#qf3">qf3</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#random">random</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#row1">row1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#row2">row2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#table">table</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -152,6 +208,46 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#assertIsMobReference(org.apache.hadoop.hbase.Cell,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.TableName)">assertIsMobReference</a></strong>(org.apache.hadoop.hbase.Cell&nbsp;cell,
+                                        byte[]&nbsp;row,
+                                        byte[]&nbsp;family,
+                                        byte[]&nbsp;value,
+                                        org.apache.hadoop.hbase.TableName&nbsp;tn)</code>
+<div class="block">Assert the value is store in mob.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#assertNotMobReference(org.apache.hadoop.hbase.Cell,%20byte[],%20byte[],%20byte[])">assertNotMobReference</a></strong>(org.apache.hadoop.hbase.Cell&nbsp;cell,
+                                          byte[]&nbsp;row,
+                                          byte[]&nbsp;family,
+                                          byte[]&nbsp;value)</code>
+<div class="block">Assert the value is not store in mob.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#createRecordAndCorruptMobFile(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20byte[],%20byte[])">createRecordAndCorruptMobFile</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tn,
+                                                          byte[]&nbsp;row,
+                                                          byte[]&nbsp;family,
+                                                          byte[]&nbsp;qf,
+                                                          byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#generateMobValue(int)">generateMobValue</a></strong>(int&nbsp;size)</code>
+<div class="block">Generate the mob value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#getFlushedMobFile(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.TableName,%20java.lang.String)">getFlushedMobFile</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                  org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                  org.apache.hadoop.hbase.TableName&nbsp;table,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;family)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#setScan(org.apache.hadoop.hbase.client.Scan,%20boolean,%20boolean)">setScan</a></strong>(org.apache.hadoop.hbase.client.Scan&nbsp;scan,
               boolean&nbsp;reversed,
@@ -159,40 +255,66 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Set the scan attribute</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#setUp(long,%20org.apache.hadoop.hbase.TableName)">setUp</a></strong>(long&nbsp;threshold,
           org.apache.hadoop.hbase.TableName&nbsp;tn)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testGet(org.apache.hadoop.hbase.TableName,%20boolean,%20boolean)">testGet</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+              boolean&nbsp;reversed,
+              boolean&nbsp;doFlush)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testGetFromArchive(boolean)">testGetFromArchive</a></strong>(boolean&nbsp;reversed)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testGetFromFiles(boolean)">testGetFromFiles</a></strong>(boolean&nbsp;reversed)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testGetFromMemStore(boolean)">testGetFromMemStore</a></strong>(boolean&nbsp;reversed)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testGetMassive()">testGetMassive</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testGetReferences(boolean)">testGetReferences</a></strong>(boolean&nbsp;reversed)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testMobStoreScanner()">testMobStoreScanner</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testMobThreshold(boolean)">testMobThreshold</a></strong>(boolean&nbsp;reversed)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testReadFromCorruptMobFiles()">testReadFromCorruptMobFiles</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testReadFromCorruptMobFilesWithReadEmptyValueOnMobCellMiss()">testReadFromCorruptMobFilesWithReadEmptyValueOnMobCellMiss</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testReadPt()">testReadPt</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#testReversedMobStoreScanner()">testReversedMobStoreScanner</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -218,13 +340,139 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.62">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="row1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>row1</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.63">row1</a></pre>
+</li>
+</ul>
+<a name="row2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>row2</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.64">row2</a></pre>
+</li>
+</ul>
+<a name="family">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>family</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.65">family</a></pre>
+</li>
+</ul>
+<a name="qf1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qf1</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.66">qf1</a></pre>
+</li>
+</ul>
+<a name="qf2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qf2</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.67">qf2</a></pre>
+</li>
+</ul>
 <a name="qf3">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qf3</h4>
+<pre>protected final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.68">qf3</a></pre>
+</li>
+</ul>
+<a name="table">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>table</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.69">table</a></pre>
+</li>
+</ul>
+<a name="admin">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>admin</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Admin <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.70">admin</a></pre>
+</li>
+</ul>
+<a name="hcd">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hcd</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.HColumnDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.71">hcd</a></pre>
+</li>
+</ul>
+<a name="desc">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>desc</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.72">desc</a></pre>
+</li>
+</ul>
+<a name="random">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>random</h4>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.73">random</a></pre>
+</li>
+</ul>
+<a name="defaultThreshold">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>defaultThreshold</h4>
+<pre>private static&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.74">defaultThreshold</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.75">fs</a></pre>
+</li>
+</ul>
+<a name="conf">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>qf3</h4>
-<pre>protected final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.68">qf3</a></pre>
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.76">conf</a></pre>
 </li>
 </ul>
 </li>
@@ -287,6 +535,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="generateMobValue(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>generateMobValue</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.113">generateMobValue</a>(int&nbsp;size)</pre>
+<div class="block">Generate the mob value.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>size</code> - the size of the value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the mob value generated</dd></dl>
 </li>
 </ul>
 <a name="setScan(org.apache.hadoop.hbase.client.Scan, boolean, boolean)">
@@ -365,13 +625,151 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testReadFromCorruptMobFiles()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testReadFromCorruptMobFiles</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.221">testReadFromCorruptMobFiles</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="createRecordAndCorruptMobFile(org.apache.hadoop.hbase.TableName, byte[], byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createRecordAndCorruptMobFile</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.236">createRecordAndCorruptMobFile</a>(org.apache.hadoop.hbase.TableName&nbsp;tn,
+                                 byte[]&nbsp;row,
+                                 byte[]&nbsp;family,
+                                 byte[]&nbsp;qf,
+                                 byte[]&nbsp;value)
+                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getFlushedMobFile(org.apache.hadoop.conf.Configuration, org.apache.hadoop.fs.FileSystem, org.apache.hadoop.hbase.TableName, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFlushedMobFile</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.251">getFlushedMobFile</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                          org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                          org.apache.hadoop.hbase.TableName&nbsp;table,
+                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;family)
+                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testGetFromFiles(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testGetFromFiles</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.263">testGetFromFiles</a>(boolean&nbsp;reversed)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testGetFromMemStore(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testGetFromMemStore</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.268">testGetFromMemStore</a>(boolean&nbsp;reversed)
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testGet(org.apache.hadoop.hbase.TableName, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testGet</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.273">testGet</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+           boolean&nbsp;reversed,
+           boolean&nbsp;doFlush)
+              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testGetReferences(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testGetReferences</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.296">testGetReferences</a>(boolean&nbsp;reversed)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testMobThreshold(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testMobThreshold</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.329">testMobThreshold</a>(boolean&nbsp;reversed)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testGetFromArchive(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testGetFromArchive</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.379">testGetFromArchive</a>(boolean&nbsp;reversed)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertNotMobReference(org.apache.hadoop.hbase.Cell, byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertNotMobReference</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.435">assertNotMobReference</a>(org.apache.hadoop.hbase.Cell&nbsp;cell,
+                         byte[]&nbsp;row,
+                         byte[]&nbsp;family,
+                         byte[]&nbsp;value)
+                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Assert the value is not store in mob.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertIsMobReference(org.apache.hadoop.hbase.Cell, byte[], byte[], byte[], org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>assertIsMobReference</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html#line.445">assertIsMobReference</a>(org.apache.hadoop.hbase.Cell&nbsp;cell,
+                        byte[]&nbsp;row,
+                        byte[]&nbsp;family,
+                        byte[]&nbsp;value,
+                        org.apache.hadoop.hbase.TableName&nbsp;tn)
+                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Assert the value is store in mob.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>

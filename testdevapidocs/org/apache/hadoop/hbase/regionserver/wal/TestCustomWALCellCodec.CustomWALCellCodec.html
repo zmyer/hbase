@@ -127,7 +127,7 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALCellCodec</pre>
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.WALCellCodec</h3>
-<code>org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.ByteStringCompressor, org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.ByteStringUncompressor, org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.EnsureKvEncoder</code></li>
+<code>org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.BaosAndCompressor, org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.ByteStringCompressor, org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.ByteStringUncompressor, org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.CompressedKvDecoder, org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.CompressedKvEncoder, org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.EnsureKvEncoder</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.codec.Codec">
@@ -197,7 +197,7 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALCellCodec</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.WALCellCodec</h3>
-<code>create, create, getByteStringCompressor, getByteStringUncompressor, getDecoder, getEncoder</code></li>
+<code>create, create, getByteStringCompressor, getByteStringUncompressor, getDecoder, getEncoder, getWALCellCodecClass</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">

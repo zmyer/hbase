@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,65 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#BATCH_SIZE">BATCH_SIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#FAM_NAME1">FAM_NAME1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#FAM_NAME2">FAM_NAME2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.replication.regionserver.ReplicationSink</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#SINK">SINK</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.Stoppable</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#STOPPABLE">STOPPABLE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#TABLE_NAME1">TABLE_NAME1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#TABLE_NAME2">TABLE_NAME2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#table1">table1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#table2">table2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -133,43 +192,50 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WALEntry</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#createEntry(org.apache.hadoop.hbase.TableName,%20int,%20org.apache.hadoop.hbase.KeyValue.Type,%20java.util.List)">createEntry</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;table,
+                      int&nbsp;row,
+                      org.apache.hadoop.hbase.KeyValue.Type&nbsp;type,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;cells)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#testApplyDeleteBeforePut()">testApplyDeleteBeforePut</a></strong>()</code>
 <div class="block">Puts are buffered, but this tests when a delete (not-buffered) is applied
  before the actual Put that creates it.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#testBatchSink()">testBatchSink</a></strong>()</code>
 <div class="block">Insert a whole batch of entries</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#testMixedDeletes()">testMixedDeletes</a></strong>()</code>
 <div class="block">Insert then do different types of deletes</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#testMixedPutDelete()">testMixedPutDelete</a></strong>()</code>
 <div class="block">Insert a mix of puts and deletes</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#testMixedPutTables()">testMixedPutTables</a></strong>()</code>
 <div class="block">Insert to 2 different tables</div>
@@ -191,6 +257,114 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.58">LOG</a></pre>
+</li>
+</ul>
+<a name="BATCH_SIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BATCH_SIZE</h4>
+<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.59">BATCH_SIZE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.replication.regionserver.TestReplicationSink.BATCH_SIZE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.61">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="SINK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SINK</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.replication.regionserver.ReplicationSink <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.64">SINK</a></pre>
+</li>
+</ul>
+<a name="TABLE_NAME1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TABLE_NAME1</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.66">TABLE_NAME1</a></pre>
+</li>
+</ul>
+<a name="TABLE_NAME2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TABLE_NAME2</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.68">TABLE_NAME2</a></pre>
+</li>
+</ul>
+<a name="FAM_NAME1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAM_NAME1</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.71">FAM_NAME1</a></pre>
+</li>
+</ul>
+<a name="FAM_NAME2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAM_NAME2</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.72">FAM_NAME2</a></pre>
+</li>
+</ul>
+<a name="table1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>table1</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.74">table1</a></pre>
+</li>
+</ul>
+<a name="STOPPABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STOPPABLE</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.Stoppable <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.75">STOPPABLE</a></pre>
+</li>
+</ul>
+<a name="table2">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>table2</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.91">table2</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -305,7 +479,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testApplyDeleteBeforePut()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testApplyDeleteBeforePut</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.221">testApplyDeleteBeforePut</a>()
@@ -314,6 +488,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  before the actual Put that creates it.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="createEntry(org.apache.hadoop.hbase.TableName, int, org.apache.hadoop.hbase.KeyValue.Type, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createEntry</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WALEntry&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.html#line.237">createEntry</a>(org.apache.hadoop.hbase.TableName&nbsp;table,
+                                                                          int&nbsp;row,
+                                                                          org.apache.hadoop.hbase.KeyValue.Type&nbsp;type,
+                                                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;cells)</pre>
 </li>
 </ul>
 </li>
@@ -368,13 +554,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

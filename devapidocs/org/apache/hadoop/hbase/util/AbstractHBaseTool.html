@@ -143,6 +143,26 @@ implements org.apache.hadoop.util.Tool</pre>
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#EXIT_SUCCESS">EXIT_SUCCESS</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#LONG_HELP_OPTION">LONG_HELP_OPTION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.commons.cli.Options</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#options">options</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#requiredOptions">requiredOptions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#SHORT_HELP_OPTION">SHORT_HELP_OPTION</a></strong></code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -270,6 +290,10 @@ implements org.apache.hadoop.util.Tool</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#run(java.lang.String[])">run</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#sanityCheckOptions(org.apache.commons.cli.CommandLine)">sanityCheckOptions</a></strong>(org.apache.commons.cli.CommandLine&nbsp;cmd)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#setConf(org.apache.hadoop.conf.Configuration)">setConf</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
@@ -315,6 +339,44 @@ implements org.apache.hadoop.util.Tool</pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.AbstractHBaseTool.EXIT_FAILURE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="SHORT_HELP_OPTION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SHORT_HELP_OPTION</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/AbstractHBaseTool.html#line.47">SHORT_HELP_OPTION</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.AbstractHBaseTool.SHORT_HELP_OPTION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LONG_HELP_OPTION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LONG_HELP_OPTION</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/AbstractHBaseTool.html#line.48">LONG_HELP_OPTION</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.AbstractHBaseTool.LONG_HELP_OPTION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/util/AbstractHBaseTool.html#line.50">LOG</a></pre>
+</li>
+</ul>
+<a name="options">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>options</h4>
+<pre>private final&nbsp;org.apache.commons.cli.Options <a href="../../../../../src-html/org/apache/hadoop/hbase/util/AbstractHBaseTool.html#line.52">options</a></pre>
+</li>
+</ul>
 <a name="conf">
 <!--   -->
 </a>
@@ -322,6 +384,15 @@ implements org.apache.hadoop.util.Tool</pre>
 <li class="blockList">
 <h4>conf</h4>
 <pre>protected&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/util/AbstractHBaseTool.html#line.54">conf</a></pre>
+</li>
+</ul>
+<a name="requiredOptions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>requiredOptions</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/AbstractHBaseTool.html#line.56">requiredOptions</a></pre>
 </li>
 </ul>
 <a name="cmdLineArgs">
@@ -431,6 +502,15 @@ implements org.apache.hadoop.util.Tool</pre>
 <dd><code>run</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.util.Tool</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="sanityCheckOptions(org.apache.commons.cli.CommandLine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sanityCheckOptions</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/AbstractHBaseTool.html#line.120">sanityCheckOptions</a>(org.apache.commons.cli.CommandLine&nbsp;cmd)</pre>
 </li>
 </ul>
 <a name="parseArgs(java.lang.String[])">

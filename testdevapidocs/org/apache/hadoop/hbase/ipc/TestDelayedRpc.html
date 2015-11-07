@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/ipc/TestCallRunner.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.TestDelayedImplementation.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.FaultyTestDelayedImplementation.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/ipc/TestDelayedRpc.html" target="_top">Frames</a></li>
@@ -119,6 +119,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Class and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.FaultyTestDelayedImplementation.html" title="class in org.apache.hadoop.hbase.ipc">TestDelayedRpc.FaultyTestDelayedImplementation</a></strong></code>
+<div class="block">Delayed calls to this class throw an exception.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.ListAppender.html" title="class in org.apache.hadoop.hbase.ipc">TestDelayedRpc.ListAppender</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.TestDelayedImplementation.html" title="class in org.apache.hadoop.hbase.ipc">TestDelayedRpc.TestDelayedImplementation</a></strong></code>&nbsp;</td>
 </tr>
@@ -144,6 +154,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#DELAYED">DELAYED</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#RPC_CLIENT_TIMEOUT">RPC_CLIENT_TIMEOUT</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static org.apache.hadoop.hbase.ipc.RpcServerInterface</code></td>
@@ -186,18 +204,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#testDelayedRpc(boolean)">testDelayedRpc</a></strong>(boolean&nbsp;delayReturnValue)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#testDelayedRpcDelayedReturnValue()">testDelayedRpcDelayedReturnValue</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#testDelayedRpcImmediateReturnValue()">testDelayedRpcImmediateReturnValue</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#testEndDelayThrowing()">testEndDelayThrowing</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#testTooManyDelayedRpcs()">testTooManyDelayedRpcs</a></strong>()</code>
 <div class="block">Tests that we see a WARN message in the logs.</div>
@@ -225,6 +247,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#line.63">LOG</a></pre>
+</li>
+</ul>
 <a name="rpcServer">
 <!--   -->
 </a>
@@ -247,11 +278,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="DELAYED">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>DELAYED</h4>
 <pre>public static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#line.66">DELAYED</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.ipc.TestDelayedRpc.DELAYED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="RPC_CLIENT_TIMEOUT">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>RPC_CLIENT_TIMEOUT</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#line.67">RPC_CLIENT_TIMEOUT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.ipc.TestDelayedRpc.RPC_CLIENT_TIMEOUT">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -299,6 +340,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>testDelayedRpcDelayedReturnValue</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#line.75">testDelayedRpcDelayedReturnValue</a>()
                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testDelayedRpc(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testDelayedRpc</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/TestDelayedRpc.html#line.79">testDelayedRpc</a>(boolean&nbsp;delayReturnValue)
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -355,7 +408,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/ipc/TestCallRunner.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.TestDelayedImplementation.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/ipc/TestDelayedRpc.FaultyTestDelayedImplementation.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/ipc/TestDelayedRpc.html" target="_top">Frames</a></li>

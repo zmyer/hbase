@@ -116,10 +116,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#FAMILY">FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#NUM_COLS">NUM_COLS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#NUM_ROWS">NUM_ROWS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#SLAVES">SLAVES</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#TABLENAME">TABLENAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
 </tr>
@@ -160,16 +180,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#sumTable(org.apache.hadoop.hbase.client.ResultScanner)">sumTable</a></strong>(org.apache.hadoop.hbase.client.ResultScanner&nbsp;scanner)</code>
+<div class="block">Count the number of rows and the number of entries from a scanner</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#testScannerSeesAllRecords()">testScannerSeesAllRecords</a></strong>()</code>
 <div class="block">Basic client side validation of HBASE-13262</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestSizeFailures.html#testSmallScannerSeesAllRecords()">testSmallScannerSeesAllRecords</a></strong>()</code>
 <div class="block">Basic client side validation of HBASE-13262</div>
@@ -197,6 +223,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.46">LOG</a></pre>
+</li>
+</ul>
 <a name="TEST_UTIL">
 <!--   -->
 </a>
@@ -206,13 +241,51 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>protected static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.47">TEST_UTIL</a></pre>
 </li>
 </ul>
+<a name="FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.48">FAMILY</a></pre>
+</li>
+</ul>
 <a name="SLAVES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SLAVES</h4>
+<pre>protected static&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.49">SLAVES</a></pre>
+</li>
+</ul>
+<a name="TABLENAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TABLENAME</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.50">TABLENAME</a></pre>
+</li>
+</ul>
+<a name="NUM_ROWS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NUM_ROWS</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.51">NUM_ROWS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.TestSizeFailures.NUM_ROWS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="NUM_COLS">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>SLAVES</h4>
-<pre>protected static&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.49">SLAVES</a></pre>
+<h4>NUM_COLS</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.51">NUM_COLS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.TestSizeFailures.NUM_COLS">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -280,7 +353,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testSmallScannerSeesAllRecords()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testSmallScannerSeesAllRecords</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.137">testSmallScannerSeesAllRecords</a>()
@@ -288,6 +361,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Basic client side validation of HBASE-13262</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="sumTable(org.apache.hadoop.hbase.client.ResultScanner)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>sumTable</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestSizeFailures.html#line.163">sumTable</a>(org.apache.hadoop.hbase.client.ResultScanner&nbsp;scanner)</pre>
+<div class="block">Count the number of rows and the number of entries from a scanner</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>scanner</code> - The Scanner</dd>
+<dt><span class="strong">Returns:</span></dt><dd>An entry where the first item is rows observed and the second is entries observed.</dd></dl>
 </li>
 </ul>
 </li>

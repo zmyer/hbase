@@ -186,10 +186,22 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/PositionedByteRa
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/util/PositionedByteRange.html" title="interface in org.apache.hadoop.hbase.util">PositionedByteRange</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractPositionedByteRange.html#clear()">clear</a></strong>()</code>
+<div class="block">Similar to <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/Buffer.html?is-external=true#clear()" title="class or interface in java.nio"><code>Buffer.clear()</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>abstract <a href="../../../../../org/apache/hadoop/hbase/util/PositionedByteRange.html" title="interface in org.apache.hadoop.hbase.util">PositionedByteRange</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractPositionedByteRange.html#deepCopy()">deepCopy</a></strong>()</code>
 <div class="block">Create a new <code>ByteRange</code> with new backing byte[] containing a copy
  of the content from <code>this</code> range's window.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/util/PositionedByteRange.html" title="interface in org.apache.hadoop.hbase.util">PositionedByteRange</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/AbstractPositionedByteRange.html#flip()">flip</a></strong>()</code>
+<div class="block">Similar to <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/Buffer.html?is-external=true#flip()" title="class or interface in java.nio"><code>Buffer.flip()</code></a>.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -973,6 +985,28 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/PositionedByteRa
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/util/PositionedByteRange.html#putVLong(long)">putVLong</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/PositionedByteRange.html" title="interface in org.apache.hadoop.hbase.util">PositionedByteRange</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>val</code> - the value to store</dd>
 <dt><span class="strong">Returns:</span></dt><dd>number of bytes written</dd></dl>
+</li>
+</ul>
+<a name="flip()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>flip</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/util/PositionedByteRange.html" title="interface in org.apache.hadoop.hbase.util">PositionedByteRange</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/AbstractPositionedByteRange.html#line.189">flip</a>()</pre>
+<div class="block">Similar to <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/Buffer.html?is-external=true#flip()" title="class or interface in java.nio"><code>Buffer.flip()</code></a>. Sets length to position, position to
+ offset.</div>
+</li>
+</ul>
+<a name="clear()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clear</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/util/PositionedByteRange.html" title="interface in org.apache.hadoop.hbase.util">PositionedByteRange</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/AbstractPositionedByteRange.html#line.201">clear</a>()</pre>
+<div class="block">Similar to <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/Buffer.html?is-external=true#clear()" title="class or interface in java.nio"><code>Buffer.clear()</code></a>. Sets position to 0, length to
+ capacity.</div>
 </li>
 </ul>
 <a name="get(int, byte[])">

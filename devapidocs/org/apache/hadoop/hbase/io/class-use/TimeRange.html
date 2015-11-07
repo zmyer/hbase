@@ -93,6 +93,27 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a> in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
+<td class="colLast"><span class="strong">Get.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Get.html#tr">tr</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
+<td class="colLast"><span class="strong">Increment.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html#tr">tr</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
+<td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#tr">tr</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> that return <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -123,6 +144,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
+<td class="colLast"><span class="strong">ScanQueryMatcher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ScanQueryMatcher.html#tr">tr</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -131,6 +165,15 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#doGet(org.apache.hadoop.hbase.regionserver.Store,%20byte[],%20java.util.Map.Entry,%20org.apache.hadoop.hbase.io.TimeRange)">doGet</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
+          byte[]&nbsp;row,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&gt;&nbsp;family,
+          <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a>&nbsp;tr)</code>
+<div class="block">Run a Get against passed in <code>store</code> on passed <code>row</code>, etc.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">TimeRangeTracker.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html#includesTimeRange(org.apache.hadoop.hbase.io.TimeRange)">includesTimeRange</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a>&nbsp;tr)</code>
 <div class="block">Check if the range has any overlap with TimeRange</div>

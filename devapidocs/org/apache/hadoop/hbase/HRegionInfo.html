@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/HealthCheckChore.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/HealthReport.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -97,6 +97,10 @@
 <dt>All Implemented Interfaces:</dt>
 <dd><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;</dd>
 </dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../org/apache/hadoop/hbase/util/HBaseFsck.MetaEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.MetaEntry</a>, <a href="../../../../org/apache/hadoop/hbase/client/UnmodifyableHRegionInfo.html" title="class in org.apache.hadoop.hbase.client">UnmodifyableHRegionInfo</a></dd>
+</dl>
 <hr>
 <br>
 <pre><a href="../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Public.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Public</a>
@@ -155,16 +159,43 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#DEFAULT_REPLICA_ID">DEFAULT_REPLICA_ID</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#DISPLAY_KEYS_KEY">DISPLAY_KEYS_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#ENC_SEPARATOR">ENC_SEPARATOR</a></strong></code>
+<div class="block">Separator used to demarcate the encodedName in a region name
+ in the new format.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#ENCODED_REGION_NAME_REGEX">ENCODED_REGION_NAME_REGEX</a></strong></code>
 <div class="block">A non-capture group so that this can be embedded.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#encodedName">encodedName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#encodedNameAsBytes">encodedNameAsBytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#endKey">endKey</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#FIRST_META_REGIONINFO">FIRST_META_REGIONINFO</a></strong></code>
 <div class="block">HRegionInfo for first meta region</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#hashCode">hashCode</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
@@ -175,6 +206,14 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HIDDEN_START_KEY">HIDDEN_START_KEY</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#MAX_REPLICA_ID">MAX_REPLICA_ID</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#MD5_HEX_LENGTH">MD5_HEX_LENGTH</a></strong></code>&nbsp;</td>
 </tr>
@@ -183,12 +222,40 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#NO_HASH">NO_HASH</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#offLine">offLine</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#regionId">regionId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#regionName">regionName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static byte</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#REPLICA_ID_DELIMITER">REPLICA_ID_DELIMITER</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#REPLICA_ID_FORMAT">REPLICA_ID_FORMAT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#replicaId">replicaId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#split">split</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#startKey">startKey</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#tableName">tableName</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -202,42 +269,58 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.HRegionInfo)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;other)</code>
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.HRegionInfo)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;other)</code>
 <div class="block">Costruct a copy of another HRegionInfo</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.HRegionInfo,%20int)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;other,
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.HRegionInfo,%20int)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;other,
                       int&nbsp;replicaId)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(long,%20org.apache.hadoop.hbase.TableName,%20int)">HRegionInfo</a></strong>(long&nbsp;regionId,
+<td class="colFirst"><code>private </code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(long,%20org.apache.hadoop.hbase.TableName)">HRegionInfo</a></strong>(long&nbsp;regionId,
+                      <a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>
+<div class="block">Private constructor used constructing HRegionInfo for the
+ first meta regions</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(long,%20org.apache.hadoop.hbase.TableName,%20int)">HRegionInfo</a></strong>(long&nbsp;regionId,
                       <a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                       int&nbsp;replicaId)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[])">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[])">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                       byte[]&nbsp;startKey,
                       byte[]&nbsp;endKey)</code>
 <div class="block">Construct HRegionInfo with explicit parameters</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+<tr class="altColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                       byte[]&nbsp;startKey,
                       byte[]&nbsp;endKey,
                       boolean&nbsp;split)</code>
 <div class="block">Construct HRegionInfo with explicit parameters</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean,%20long)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+<tr class="rowColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean,%20long)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                       byte[]&nbsp;startKey,
                       byte[]&nbsp;endKey,
                       boolean&nbsp;split,
@@ -245,8 +328,9 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Construct HRegionInfo with explicit parameters</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean,%20long,%20int)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+<tr class="altColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#HRegionInfo(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean,%20long,%20int)">HRegionInfo</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                       byte[]&nbsp;startKey,
                       byte[]&nbsp;endKey,
                       boolean&nbsp;split,
@@ -296,18 +380,24 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#convert()">convert</a></strong>()</code>
+<div class="block">Convert a HRegionInfo to the protobuf RegionInfo</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#convert(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionInfo)">convert</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionInfo&nbsp;proto)</code>
 <div class="block">Convert a RegionInfo to a HRegionInfo</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionInfo</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#convert(org.apache.hadoop.hbase.HRegionInfo)">convert</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info)</code>
 <div class="block">Convert a HRegionInfo to a RegionInfo</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#createRegionName(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean)">createRegionName</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                 byte[]&nbsp;startKey,
@@ -316,7 +406,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Make a region name of passed parameters.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#createRegionName(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20int,%20boolean)">createRegionName</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                 byte[]&nbsp;startKey,
@@ -326,7 +416,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Make a region name of passed parameters.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#createRegionName(org.apache.hadoop.hbase.TableName,%20byte[],%20long,%20boolean)">createRegionName</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                 byte[]&nbsp;startKey,
@@ -335,7 +425,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Make a region name of passed parameters.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#createRegionName(org.apache.hadoop.hbase.TableName,%20byte[],%20long,%20int,%20boolean)">createRegionName</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                 byte[]&nbsp;startKey,
@@ -345,7 +435,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Make a region name of passed parameters.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#createRegionName(org.apache.hadoop.hbase.TableName,%20byte[],%20java.lang.String,%20boolean)">createRegionName</a></strong>(<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                 byte[]&nbsp;startKey,
@@ -354,15 +444,15 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="block">Make a region name of passed parameters.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#encodeRegionName(byte[])">encodeRegionName</a></strong>(byte[]&nbsp;regionName)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#equals(java.lang.Object)">equals</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/apache/hadoop/hbase/KeyValue.KVComparator.html" title="class in org.apache.hadoop.hbase">KeyValue.KVComparator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getComparator()">getComparator</a></strong>()</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
@@ -370,7 +460,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getDescriptiveNameFromRegionStateForDisplay(org.apache.hadoop.hbase.master.RegionState,%20org.apache.hadoop.conf.Configuration)">getDescriptiveNameFromRegionStateForDisplay</a></strong>(<a href="../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&nbsp;state,
                                                                                       org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
@@ -378,88 +468,94 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
  startkey optionally</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getEncodedName()">getEncodedName</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getEncodedNameAsBytes()">getEncodedNameAsBytes</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getEndKey()">getEndKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getEndKeyForDisplay(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.conf.Configuration)">getEndKeyForDisplay</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                                       org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Get the end key for display.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getRegionId()">getRegionId</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getRegionName()">getRegionName</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getRegionNameAsString()">getRegionNameAsString</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getRegionNameAsStringForDisplay(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.conf.Configuration)">getRegionNameAsStringForDisplay</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                                                               org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Get the region name for display.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getRegionNameForDisplay(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.conf.Configuration)">getRegionNameForDisplay</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                                               org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Get the region name for display.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getReplicaId()">getReplicaId</a></strong>()</code>
 <div class="block">Returns the region replica id</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getShortNameToLog()">getShortNameToLog</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getStartKey()">getStartKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getStartKey(byte[])">getStartKey</a></strong>(byte[]&nbsp;regionName)</code>
 <div class="block">Gets the start key from the specified region name.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getStartKeyForDisplay(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.conf.Configuration)">getStartKeyForDisplay</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                                           org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Get the start key for display.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getTable()">getTable</a></strong>()</code>
 <div class="block">Get current table name of the region</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#getTable(byte[])">getTable</a></strong>(byte[]&nbsp;regionName)</code>
 <div class="block">Gets the table name from the specified region name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#hasEncodedName(byte[])">hasEncodedName</a></strong>(byte[]&nbsp;regionName)</code>
+<div class="block">Does region name contain its encoded name?</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -537,34 +633,38 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#setHashCode()">setHashCode</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#setOffline(boolean)">setOffline</a></strong>(boolean&nbsp;offLine)</code>
 <div class="block">The parent of a region split is offline while split daughters hold
  references to the parent.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#setSplit(boolean)">setSplit</a></strong>(boolean&nbsp;split)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#toByteArray()">toByteArray</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#toDelimitedByteArray()">toDelimitedByteArray</a></strong>()</code>
 <div class="block">Use this instead of <a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#toByteArray()"><code>toByteArray()</code></a> when writing to a stream and you want to use
  the pb mergeDelimitedFrom (w/o the delimiter, pb reads to EOF which may not be what you want).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#toDelimitedByteArray(org.apache.hadoop.hbase.HRegionInfo...)">toDelimitedByteArray</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>...&nbsp;infos)</code>
 <div class="block">Serializes given HRegionInfo's as a byte array.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html#toString()">toString</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -590,6 +690,27 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.79">LOG</a></pre>
+</li>
+</ul>
+<a name="ENC_SEPARATOR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENC_SEPARATOR</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.107">ENC_SEPARATOR</a></pre>
+<div class="block">Separator used to demarcate the encodedName in a region name
+ in the new format. See description on new format above.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HRegionInfo.ENC_SEPARATOR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="MD5_HEX_LENGTH">
 <!--   -->
 </a>
@@ -631,6 +752,16 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HRegionInfo.REPLICA_ID_DELIMITER">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="MAX_REPLICA_ID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MAX_REPLICA_ID</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.119">MAX_REPLICA_ID</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HRegionInfo.MAX_REPLICA_ID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="DEFAULT_REPLICA_ID">
 <!--   -->
 </a>
@@ -641,6 +772,69 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HRegionInfo.DEFAULT_REPLICA_ID">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="endKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endKey</h4>
+<pre>private&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.179">endKey</a></pre>
+</li>
+</ul>
+<a name="offLine">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>offLine</h4>
+<pre>private&nbsp;boolean <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.183">offLine</a></pre>
+</li>
+</ul>
+<a name="regionId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regionId</h4>
+<pre>private&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.184">regionId</a></pre>
+</li>
+</ul>
+<a name="regionName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regionName</h4>
+<pre>private transient&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.185">regionName</a></pre>
+</li>
+</ul>
+<a name="split">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>split</h4>
+<pre>private&nbsp;boolean <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.186">split</a></pre>
+</li>
+</ul>
+<a name="startKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startKey</h4>
+<pre>private&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.187">startKey</a></pre>
+</li>
+</ul>
+<a name="hashCode">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>private&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.188">hashCode</a></pre>
+</li>
+</ul>
 <a name="NO_HASH">
 <!--   -->
 </a>
@@ -648,6 +842,52 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <li class="blockList">
 <h4>NO_HASH</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.190">NO_HASH</a></pre>
+</li>
+</ul>
+<a name="encodedName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encodedName</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.191">encodedName</a></pre>
+</li>
+</ul>
+<a name="encodedNameAsBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encodedNameAsBytes</h4>
+<pre>private&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.192">encodedNameAsBytes</a></pre>
+</li>
+</ul>
+<a name="replicaId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>replicaId</h4>
+<pre>private&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.193">replicaId</a></pre>
+</li>
+</ul>
+<a name="tableName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableName</h4>
+<pre>private&nbsp;<a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.196">tableName</a></pre>
+</li>
+</ul>
+<a name="DISPLAY_KEYS_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DISPLAY_KEYS_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.197">DISPLAY_KEYS_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HRegionInfo.DISPLAY_KEYS_KEY">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="HIDDEN_END_KEY">
@@ -686,6 +926,18 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
+<a name="HRegionInfo(long, org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HRegionInfo</h4>
+<pre>private&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.221">HRegionInfo</a>(long&nbsp;regionId,
+           <a href="../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</pre>
+<div class="block">Private constructor used constructing HRegionInfo for the
+ first meta regions</div>
+</li>
+</ul>
 <a name="HRegionInfo(long, org.apache.hadoop.hbase.TableName, int)">
 <!--   -->
 </a>
@@ -808,6 +1060,19 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="hasEncodedName(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasEncodedName</h4>
+<pre>private static&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.127">hasEncodedName</a>(byte[]&nbsp;regionName)</pre>
+<div class="block">Does region name contain its encoded name?</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>regionName</code> - region name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>boolean indicating if this a new format region
+         name which contains its encoded name.</dd></dl>
+</li>
+</ul>
 <a name="encodeRegionName(byte[])">
 <!--   -->
 </a>
@@ -840,6 +1105,15 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>encodedRegionName</code> - The encoded regionname.</dd>
 <dt><span class="strong">Returns:</span></dt><dd><code>hbase:meta</code> if passed <code>1028785192</code> else returns
  <code>encodedRegionName</code></dd></dl>
+</li>
+</ul>
+<a name="setHashCode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setHashCode</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.205">setHashCode</a>()</pre>
 </li>
 </ul>
 <a name="createRegionName(org.apache.hadoop.hbase.TableName, byte[], long, boolean)">
@@ -1228,6 +1502,17 @@ public&nbsp;<a href="../../../../org/apache/hadoop/hbase/KeyValue.KVComparator.h
 <dl><dt><span class="strong">Returns:</span></dt><dd>Comparator to use comparing <a href="../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase"><code>KeyValue</code></a>s.</dd></dl>
 </li>
 </ul>
+<a name="convert()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>convert</h4>
+<pre>org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionInfo&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HRegionInfo.html#line.852">convert</a>()</pre>
+<div class="block">Convert a HRegionInfo to the protobuf RegionInfo</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the converted RegionInfo</dd></dl>
+</li>
+</ul>
 <a name="convert(org.apache.hadoop.hbase.HRegionInfo)">
 <!--   -->
 </a>
@@ -1488,7 +1773,7 @@ public&nbsp;<a href="../../../../org/apache/hadoop/hbase/KeyValue.KVComparator.h
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/HealthCheckChore.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/HealthReport.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

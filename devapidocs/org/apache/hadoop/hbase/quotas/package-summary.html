@@ -75,10 +75,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/MasterQuotaManager.SetQuotaOperations.html" title="interface in org.apache.hadoop.hbase.quotas">MasterQuotaManager.SetQuotaOperations</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.html" title="interface in org.apache.hadoop.hbase.quotas">OperationQuota</a></td>
 <td class="colLast">
 <div class="block">Interface that allows to check the quota available for an operation.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.Fetcher.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaCache.Fetcher</a>&lt;Key,Value&gt;</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaLimiter.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaLimiter</a></td>
@@ -103,6 +111,10 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaUtil.KeyFromRow.html" title="interface in org.apache.hadoop.hbase.quotas">QuotaUtil.KeyFromRow</a>&lt;T&gt;</td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/RegionStateListener.html" title="interface in org.apache.hadoop.hbase.quotas">RegionStateListener</a></td>
 <td class="colLast">
 <div class="block">The listener interface for receiving region state events.</div>
@@ -142,12 +154,28 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/MasterQuotaManager.NamedLock.html" title="class in org.apache.hadoop.hbase.quotas">MasterQuotaManager.NamedLock</a>&lt;T&gt;</td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/NoopOperationQuota.html" title="class in org.apache.hadoop.hbase.quotas">NoopOperationQuota</a></td>
+<td class="colLast">
+<div class="block">Noop operation quota returned when no quota is associated to the user/table</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/NoopQuotaLimiter.html" title="class in org.apache.hadoop.hbase.quotas">NoopQuotaLimiter</a></td>
+<td class="colLast">
+<div class="block">Noop quota limiter returned when no limiter is associated to the user/table</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/OperationQuota.AvgOperationSize.html" title="class in org.apache.hadoop.hbase.quotas">OperationQuota.AvgOperationSize</a></td>
 <td class="colLast">
 <div class="block">Keeps track of the average data size of operations like get, scan, mutate</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaCache.html" title="class in org.apache.hadoop.hbase.quotas">QuotaCache</a></td>
 <td class="colLast">
 <div class="block">Cache that keeps track of the quota settings for the users and tables that
@@ -170,12 +198,16 @@
 <div class="block">Scanner to iterate over the quota settings.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaSettings.html" title="class in org.apache.hadoop.hbase.quotas">QuotaSettings</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaSettingsFactory.html" title="class in org.apache.hadoop.hbase.quotas">QuotaSettingsFactory</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaSettingsFactory.QuotaGlobalsSettingsBypass.html" title="class in org.apache.hadoop.hbase.quotas">QuotaSettingsFactory.QuotaGlobalsSettingsBypass</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -209,12 +241,16 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottleSettings.html" title="class in org.apache.hadoop.hbase.quotas">ThrottleSettings</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/TimeBasedLimiter.html" title="class in org.apache.hadoop.hbase.quotas">TimeBasedLimiter</a></td>
 <td class="colLast">
 <div class="block">Simple time based limiter that checks the quota Throttle</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/quotas/UserQuotaState.html" title="class in org.apache.hadoop.hbase.quotas">UserQuotaState</a></td>
 <td class="colLast">
 <div class="block">In-Memory state of the user quotas</div>

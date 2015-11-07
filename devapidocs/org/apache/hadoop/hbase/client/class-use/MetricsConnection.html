@@ -95,6 +95,23 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection</a> in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#metrics">metrics</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection</a></code></td>
+<td class="colLast"><span class="strong">MetaCache.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/MetaCache.html#metrics">metrics</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> that return <a href="../../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -105,6 +122,10 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection</a></code></td>
 <td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#getConnectionMetrics()">getConnectionMetrics</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#getConnectionMetrics()">getConnectionMetrics</a></strong>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -204,6 +225,15 @@
 <div class="block">Construct an IPC client for the cluster <code>clusterId</code> with the default SocketFactory
 
  This method is called with reflection by the RpcClientFactory to create an instance</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcClientImpl.html#RpcClientImpl(org.apache.hadoop.conf.Configuration,%20java.lang.String,%20javax.net.SocketFactory,%20java.net.SocketAddress,%20org.apache.hadoop.hbase.client.MetricsConnection)">RpcClientImpl</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clusterId,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/javax/net/SocketFactory.html?is-external=true" title="class or interface in javax.net">SocketFactory</a>&nbsp;factory,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</a>&nbsp;localAddr,
+                          <a href="../../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection</a>&nbsp;metrics)</code>
+<div class="block">Construct an IPC cluster client whose values are of the <code>Message</code> class.</div>
 </td>
 </tr>
 </tbody>

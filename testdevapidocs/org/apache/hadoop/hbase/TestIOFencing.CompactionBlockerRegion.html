@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegion">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegion">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -148,6 +148,25 @@ extends org.apache.hadoop.hbase.regionserver.HRegion</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestIOFencing.CompactionBlockerRegion.html#compactCount">compactCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestIOFencing.CompactionBlockerRegion.html#compactionsBlocked">compactionsBlocked</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestIOFencing.CompactionBlockerRegion.html#compactionsWaiting">compactionsWaiting</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegion">
 <!--   -->
@@ -244,6 +263,41 @@ extends org.apache.hadoop.hbase.regionserver.HRegion</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="compactCount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compactCount</h4>
+<pre>volatile&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/TestIOFencing.CompactionBlockerRegion.html#line.93">compactCount</a></pre>
+</li>
+</ul>
+<a name="compactionsBlocked">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compactionsBlocked</h4>
+<pre>volatile&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a> <a href="../../../../src-html/org/apache/hadoop/hbase/TestIOFencing.CompactionBlockerRegion.html#line.94">compactionsBlocked</a></pre>
+</li>
+</ul>
+<a name="compactionsWaiting">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>compactionsWaiting</h4>
+<pre>volatile&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a> <a href="../../../../src-html/org/apache/hadoop/hbase/TestIOFencing.CompactionBlockerRegion.html#line.95">compactionsWaiting</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -399,13 +453,13 @@ extends org.apache.hadoop.hbase.regionserver.HRegion</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegion">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.HRegion">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

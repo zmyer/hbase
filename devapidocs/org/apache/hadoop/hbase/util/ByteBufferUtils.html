@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferArray.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferArray.Visitor.html" title="interface in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -62,13 +62,13 @@
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -128,8 +128,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#NEXT_BIT_SHIFT">NEXT_BIT_SHIFT</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#UNSAFE_AVAIL">UNSAFE_AVAIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#VALUE_MASK">VALUE_MASK</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#ByteBufferUtils()">ByteBufferUtils</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -175,6 +198,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                   int&nbsp;l2)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#compareToUnsafe(java.lang.Object,%20long,%20int,%20java.lang.Object,%20long,%20int)">compareToUnsafe</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj1,
+                              long&nbsp;o1,
+                              int&nbsp;l1,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj2,
+                              long&nbsp;o2,
+                              int&nbsp;l2)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#copyBufferToStream(java.io.OutputStream,%20java.nio.ByteBuffer,%20int,%20int)">copyBufferToStream</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out,
                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in,
@@ -183,7 +215,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Copy data from a buffer to an output stream.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#copyFromArrayToBuffer(java.nio.ByteBuffer,%20byte[],%20int,%20int)">copyFromArrayToBuffer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;out,
                                           byte[]&nbsp;in,
@@ -192,7 +224,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Copies the bytes from given array's offset to length part into the given buffer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#copyFromBufferToArray(byte[],%20java.nio.ByteBuffer,%20int,%20int,%20int)">copyFromBufferToArray</a></strong>(byte[]&nbsp;out,
                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in,
@@ -203,14 +235,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  the array.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#copyFromBufferToBuffer(java.nio.ByteBuffer,%20java.nio.ByteBuffer)">copyFromBufferToBuffer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;out)</code>
 <div class="block">Copy one buffer's whole data to another.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#copyFromBufferToBuffer(java.nio.ByteBuffer,%20java.nio.ByteBuffer,%20int,%20int)">copyFromBufferToBuffer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;out,
@@ -219,7 +251,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Copy from one buffer to another from given offset.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#copyFromBufferToBuffer(java.nio.ByteBuffer,%20java.nio.ByteBuffer,%20int,%20int,%20int)">copyFromBufferToBuffer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;out,
@@ -229,7 +261,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Copy from one buffer to another from given offset.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#copyFromStreamToBuffer(java.nio.ByteBuffer,%20java.io.DataInputStream,%20int)">copyFromStreamToBuffer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;out,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html?is-external=true" title="class or interface in java.io">DataInputStream</a>&nbsp;in,
@@ -238,13 +270,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  current position of the given buffer, updating the position in the buffer.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#drainInputStreamToBuffer(java.io.InputStream)">drainInputStreamToBuffer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;is)</code>
 <div class="block">Copy from the InputStream to a new heap ByteBuffer until the InputStream is exhausted.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#equals(java.nio.ByteBuffer,%20int,%20int,%20byte[],%20int,%20int)">equals</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buf1,
             int&nbsp;o1,
@@ -253,7 +285,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
             int&nbsp;o2,
             int&nbsp;l2)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#equals(java.nio.ByteBuffer,%20int,%20int,%20java.nio.ByteBuffer,%20int,%20int)">equals</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buf1,
             int&nbsp;o1,
@@ -262,12 +294,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
             int&nbsp;o2,
             int&nbsp;l2)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#extendLimit(java.nio.ByteBuffer,%20int)">extendLimit</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buffer,
                       int&nbsp;numBytes)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#findCommonPrefix(byte[],%20int,%20int,%20byte[],%20int,%20int)">findCommonPrefix</a></strong>(byte[]&nbsp;left,
                                 int&nbsp;leftOffset,
@@ -278,7 +310,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Find length of common prefix in two arrays.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#findCommonPrefix(java.nio.ByteBuffer,%20int,%20int,%20int)">findCommonPrefix</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buffer,
                                 int&nbsp;offsetLeft,
@@ -287,11 +319,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Find length of common prefix of two parts in the buffer</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#intFitsIn(int)">intFitsIn</a></strong>(int&nbsp;value)</code>
 <div class="block">Check how many bytes is required to store value.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#lessThanUnsignedInt(int,%20int)">lessThanUnsignedInt</a></strong>(int&nbsp;x1,
+                                      int&nbsp;x2)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#lessThanUnsignedLong(long,%20long)">lessThanUnsignedLong</a></strong>(long&nbsp;x1,
+                                        long&nbsp;x2)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferUtils.html#lessThanUnsignedShort(short,%20short)">lessThanUnsignedShort</a></strong>(short&nbsp;x1,
+                                          short&nbsp;x2)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
@@ -521,11 +568,37 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="NEXT_BIT_MASK">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>NEXT_BIT_MASK</h4>
 <pre>public static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ByteBufferUtils.html#line.48">NEXT_BIT_MASK</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.util.ByteBufferUtils.NEXT_BIT_MASK">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="UNSAFE_AVAIL">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>UNSAFE_AVAIL</h4>
+<pre>private static final&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/util/ByteBufferUtils.html#line.49">UNSAFE_AVAIL</a></pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="ByteBufferUtils()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ByteBufferUtils</h4>
+<pre>private&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ByteBufferUtils.html#line.51">ByteBufferUtils</a>()</pre>
 </li>
 </ul>
 </li>
@@ -970,6 +1043,50 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
             int&nbsp;l2)</pre>
 </li>
 </ul>
+<a name="compareToUnsafe(java.lang.Object, long, int, java.lang.Object, long, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compareToUnsafe</h4>
+<pre>static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ByteBufferUtils.html#line.617">compareToUnsafe</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj1,
+                  long&nbsp;o1,
+                  int&nbsp;l1,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj2,
+                  long&nbsp;o2,
+                  int&nbsp;l2)</pre>
+</li>
+</ul>
+<a name="lessThanUnsignedLong(long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lessThanUnsignedLong</h4>
+<pre>private static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ByteBufferUtils.html#line.667">lessThanUnsignedLong</a>(long&nbsp;x1,
+                           long&nbsp;x2)</pre>
+</li>
+</ul>
+<a name="lessThanUnsignedInt(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lessThanUnsignedInt</h4>
+<pre>private static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ByteBufferUtils.html#line.679">lessThanUnsignedInt</a>(int&nbsp;x1,
+                          int&nbsp;x2)</pre>
+</li>
+</ul>
+<a name="lessThanUnsignedShort(short, short)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lessThanUnsignedShort</h4>
+<pre>private static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/ByteBufferUtils.html#line.691">lessThanUnsignedShort</a>(short&nbsp;x1,
+                            short&nbsp;x2)</pre>
+</li>
+</ul>
 <a name="toShort(java.nio.ByteBuffer, int)">
 <!--   -->
 </a>
@@ -1167,7 +1284,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferArray.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/ByteBufferArray.Visitor.html" title="interface in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -1194,13 +1311,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

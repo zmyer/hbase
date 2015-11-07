@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_java.lang.Thread">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.MultithreadedTestUtil.TestThread">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -148,6 +148,37 @@ extends <a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.Repea
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#data">data</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#numWritten">numWritten</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#rand">rand</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#table">table</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#targetFamilies">targetFamilies</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#targetRows">targetRows</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.MultithreadedTestUtil.TestThread">
 <!--   -->
@@ -236,6 +267,68 @@ extends <a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.Repea
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="rand">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rand</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../src-html/org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#line.114">rand</a></pre>
+</li>
+</ul>
+<a name="data">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>data</h4>
+<pre>byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#line.115">data</a></pre>
+</li>
+</ul>
+<a name="targetRows">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>targetRows</h4>
+<pre>byte[][] <a href="../../../../src-html/org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#line.116">targetRows</a></pre>
+</li>
+</ul>
+<a name="targetFamilies">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>targetFamilies</h4>
+<pre>byte[][] <a href="../../../../src-html/org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#line.117">targetFamilies</a></pre>
+</li>
+</ul>
+<a name="table">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>table</h4>
+<pre>org.apache.hadoop.hbase.client.Table <a href="../../../../src-html/org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#line.118">table</a></pre>
+</li>
+</ul>
+<a name="numWritten">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>numWritten</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../src-html/org/apache/hadoop/hbase/TestAcidGuarantees.AtomicityWriter.html#line.119">numWritten</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -331,13 +424,13 @@ extends <a href="../../../../org/apache/hadoop/hbase/MultithreadedTestUtil.Repea
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_java.lang.Thread">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.MultithreadedTestUtil.TestThread">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

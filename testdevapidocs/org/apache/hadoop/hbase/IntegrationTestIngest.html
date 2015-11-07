@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestDDLMasterFailover.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestDDLMasterFailover.Worker.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestIngestStripeCompactions.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -194,6 +194,10 @@ extends <a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html" t
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestIngest.html#SERVER_COUNT">SERVER_COUNT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase">IntegrationTestingUtility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestIngest.html#util">util</a></strong></code>&nbsp;</td>
 </tr>
@@ -244,19 +248,27 @@ extends <a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html" t
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestIngest.html#deleteTableIfNecessary()">deleteTableIfNecessary</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestIngest.html#getArgsForLoadTestTool(java.lang.String,%20java.lang.String,%20long,%20long)">getArgsForLoadTestTool</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mode,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;modeSpecificArg,
                                             long&nbsp;startKey,
                                             long&nbsp;numKeys)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestIngest.html#getArgsForLoadTestToolInitTable()">getArgsForLoadTestToolInitTable</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestIngest.html#getColumnFamilies()">getColumnFamilies</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestIngest.html#getColumnFamiliesAsString()">getColumnFamiliesAsString</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
@@ -349,6 +361,16 @@ extends <a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html" t
 <h4>HIPHEN</h4>
 <pre>public static final&nbsp;char <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestIngest.html#line.47">HIPHEN</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestIngest.HIPHEN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SERVER_COUNT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SERVER_COUNT</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestIngest.html#line.48">SERVER_COUNT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.IntegrationTestIngest.SERVER_COUNT">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="DEFAULT_RUN_TIME">
@@ -613,6 +635,18 @@ extends <a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html" t
 </dl>
 </li>
 </ul>
+<a name="deleteTableIfNecessary()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteTableIfNecessary</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestIngest.html#line.153">deleteTableIfNecessary</a>()
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="runIngestTest(long, long, int, int, int, int)">
 <!--   -->
 </a>
@@ -649,6 +683,15 @@ extends <a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html" t
                               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;modeSpecificArg,
                               long&nbsp;startKey,
                               long&nbsp;numKeys)</pre>
+</li>
+</ul>
+<a name="getColumnFamiliesAsString()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getColumnFamiliesAsString</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestIngest.html#line.244">getColumnFamiliesAsString</a>()</pre>
 </li>
 </ul>
 <a name="getNumKeys(long)">
@@ -702,7 +745,7 @@ extends <a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html" t
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestDDLMasterFailover.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestDDLMasterFailover.Worker.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/IntegrationTestIngestStripeCompactions.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

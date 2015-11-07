@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.RegionRepairException.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HBaseFsckTool.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HdfsEntry.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html" target="_top">Frames</a></li>
@@ -61,14 +61,14 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -114,6 +114,70 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/KeyRange.html" t
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.OnlineEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.OnlineEntry</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#deployedEntries">deployedEntries</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#deployedOn">deployedOn</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#deployedReplicaId">deployedReplicaId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HdfsEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.HdfsEntry</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#hdfsEntry">hdfsEntry</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#isMerged">isMerged</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.MetaEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.MetaEntry</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#metaEntry">metaEntry</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#primaryHRIForDeployedReplica">primaryHRIForDeployedReplica</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#skipChecks">skipChecks</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#HBaseFsck.HbckInfo(org.apache.hadoop.hbase.util.HBaseFsck.MetaEntry)">HBaseFsck.HbckInfo</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.MetaEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.MetaEntry</a>&nbsp;metaEntry)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -132,8 +196,24 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/KeyRange.html" t
                   <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;server)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#containsOnlyHdfsEdits()">containsOnlyHdfsEdits</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#getEndKey()">getEndKey</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#getHdfsHRI()">getHdfsHRI</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#getHdfsRegionDir()">getHdfsRegionDir</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#getModTime()">getModTime</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a></code></td>
@@ -160,22 +240,26 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/KeyRange.html" t
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#getTableName()">getTableName</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#isHdfsRegioninfoPresent()">isHdfsRegioninfoPresent</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#isMerged()">isMerged</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#isSkipChecks()">isSkipChecks</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#setMerged(boolean)">setMerged</a></strong>(boolean&nbsp;isMerged)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#setSkipChecks(boolean)">setSkipChecks</a></strong>(boolean&nbsp;skipChecks)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#toString()">toString</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -195,6 +279,103 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/KeyRange.html" t
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="metaEntry">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>metaEntry</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.MetaEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.MetaEntry</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3554">metaEntry</a></pre>
+</li>
+</ul>
+<a name="hdfsEntry">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hdfsEntry</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HdfsEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.HdfsEntry</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3555">hdfsEntry</a></pre>
+</li>
+</ul>
+<a name="deployedEntries">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deployedEntries</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.OnlineEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.OnlineEntry</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3556">deployedEntries</a></pre>
+</li>
+</ul>
+<a name="deployedOn">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deployedOn</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3557">deployedOn</a></pre>
+</li>
+</ul>
+<a name="skipChecks">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>skipChecks</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3558">skipChecks</a></pre>
+</li>
+</ul>
+<a name="isMerged">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMerged</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3559">isMerged</a></pre>
+</li>
+</ul>
+<a name="deployedReplicaId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deployedReplicaId</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3560">deployedReplicaId</a></pre>
+</li>
+</ul>
+<a name="primaryHRIForDeployedReplica">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>primaryHRIForDeployedReplica</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3561">primaryHRIForDeployedReplica</a></pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="HBaseFsck.HbckInfo(org.apache.hadoop.hbase.util.HBaseFsck.MetaEntry)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>HBaseFsck.HbckInfo</h4>
+<pre><a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3563">HBaseFsck.HbckInfo</a>(<a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.MetaEntry.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.MetaEntry</a>&nbsp;metaEntry)</pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
@@ -295,6 +476,51 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/KeyRange.html" t
 <pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3667">getPrimaryHRIForDeployedReplica</a>()</pre>
 </li>
 </ul>
+<a name="getHdfsRegionDir()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHdfsRegionDir</h4>
+<pre>org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3671">getHdfsRegionDir</a>()</pre>
+</li>
+</ul>
+<a name="containsOnlyHdfsEdits()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>containsOnlyHdfsEdits</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3678">containsOnlyHdfsEdits</a>()</pre>
+</li>
+</ul>
+<a name="isHdfsRegioninfoPresent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isHdfsRegioninfoPresent</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3685">isHdfsRegioninfoPresent</a>()</pre>
+</li>
+</ul>
+<a name="getModTime()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getModTime</h4>
+<pre>long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3692">getModTime</a>()</pre>
+</li>
+</ul>
+<a name="getHdfsHRI()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHdfsHRI</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html#line.3699">getHdfsHRI</a>()</pre>
+</li>
+</ul>
 <a name="setSkipChecks(boolean)">
 <!--   -->
 </a>
@@ -357,8 +583,8 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/KeyRange.html" t
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.RegionRepairException.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HBaseFsckTool.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HdfsEntry.html" title="class in org.apache.hadoop.hbase.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html" target="_top">Frames</a></li>
@@ -383,14 +609,14 @@ implements <a href="../../../../../org/apache/hadoop/hbase/util/KeyRange.html" t
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

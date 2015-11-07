@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.StatisticsThread.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlockQueue.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -128,8 +128,34 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/HeapSize.html" 
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#accessTime">accessTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#buf">buf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#cachedTime">cachedTime</a></strong></code>
+<div class="block">Time this block was cached.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#cacheKey">cacheKey</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#PER_BLOCK_OVERHEAD">PER_BLOCK_OVERHEAD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#priority">priority</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#size">size</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -234,10 +260,65 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/HeapSize.html" 
 <a name="PER_BLOCK_OVERHEAD">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>PER_BLOCK_OVERHEAD</h4>
 <pre>public static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#line.37">PER_BLOCK_OVERHEAD</a></pre>
+</li>
+</ul>
+<a name="cacheKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cacheKey</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#line.41">cacheKey</a></pre>
+</li>
+</ul>
+<a name="buf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buf</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#line.42">buf</a></pre>
+</li>
+</ul>
+<a name="accessTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>accessTime</h4>
+<pre>private volatile&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#line.43">accessTime</a></pre>
+</li>
+</ul>
+<a name="size">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>size</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#line.44">size</a></pre>
+</li>
+</ul>
+<a name="priority">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>priority</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockPriority.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockPriority</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#line.45">priority</a></pre>
+</li>
+</ul>
+<a name="cachedTime">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>cachedTime</h4>
+<pre>private final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html#line.49">cachedTime</a></pre>
+<div class="block">Time this block was cached.  Presumes we are created just before we are added to the cache.</div>
 </li>
 </ul>
 </li>
@@ -407,7 +488,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/HeapSize.html" 
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.StatisticsThread.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlockQueue.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

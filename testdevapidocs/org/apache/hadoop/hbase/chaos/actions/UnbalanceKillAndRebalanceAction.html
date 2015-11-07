@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -130,6 +130,43 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static double</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#FRC_SERVERS_THAT_HOARD_AND_DIE">FRC_SERVERS_THAT_HOARD_AND_DIE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static double</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#FRC_SERVERS_THAT_HOARD_AND_LIVE">FRC_SERVERS_THAT_HOARD_AND_LIVE</a></strong></code>
+<div class="block">Fractions of servers to get regions and live and die respectively; from all other
+ servers, HOARD_FRC_OF_REGIONS will be removed to the above randomly</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static double</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#HOARD_FRC_OF_REGIONS">HOARD_FRC_OF_REGIONS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#waitAfterBalanceMilliSec">waitAfterBalanceMilliSec</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#waitForKillsMilliSec">waitForKillsMilliSec</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#waitForUnbalanceMilliSec">waitForUnbalanceMilliSec</a></strong></code>
+<div class="block">Waits between calling unbalance and killing servers, kills and rebalance, and rebalance
+ and restarting the servers; to make sure these events have time to impact the cluster.</div>
+</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">
 <!--   -->
@@ -197,6 +234,75 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="FRC_SERVERS_THAT_HOARD_AND_LIVE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FRC_SERVERS_THAT_HOARD_AND_LIVE</h4>
+<pre>private static final&nbsp;double <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#line.36">FRC_SERVERS_THAT_HOARD_AND_LIVE</a></pre>
+<div class="block">Fractions of servers to get regions and live and die respectively; from all other
+ servers, HOARD_FRC_OF_REGIONS will be removed to the above randomly</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.chaos.actions.UnbalanceKillAndRebalanceAction.FRC_SERVERS_THAT_HOARD_AND_LIVE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FRC_SERVERS_THAT_HOARD_AND_DIE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FRC_SERVERS_THAT_HOARD_AND_DIE</h4>
+<pre>private static final&nbsp;double <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#line.37">FRC_SERVERS_THAT_HOARD_AND_DIE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.chaos.actions.UnbalanceKillAndRebalanceAction.FRC_SERVERS_THAT_HOARD_AND_DIE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="HOARD_FRC_OF_REGIONS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HOARD_FRC_OF_REGIONS</h4>
+<pre>private static final&nbsp;double <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#line.38">HOARD_FRC_OF_REGIONS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.chaos.actions.UnbalanceKillAndRebalanceAction.HOARD_FRC_OF_REGIONS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="waitForUnbalanceMilliSec">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitForUnbalanceMilliSec</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#line.41">waitForUnbalanceMilliSec</a></pre>
+<div class="block">Waits between calling unbalance and killing servers, kills and rebalance, and rebalance
+ and restarting the servers; to make sure these events have time to impact the cluster.</div>
+</li>
+</ul>
+<a name="waitForKillsMilliSec">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitForKillsMilliSec</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#line.42">waitForKillsMilliSec</a></pre>
+</li>
+</ul>
+<a name="waitAfterBalanceMilliSec">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>waitAfterBalanceMilliSec</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/chaos/actions/UnbalanceKillAndRebalanceAction.html#line.43">waitAfterBalanceMilliSec</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -289,13 +395,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/chaos/actions/Action.
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.chaos.actions.Action">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

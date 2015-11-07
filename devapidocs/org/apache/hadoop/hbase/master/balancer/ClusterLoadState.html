@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.SwapRegionsAction.html" title="class in org.apache.hadoop.hbase.master.balancer"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.DefaultRackManager.html" title="class in org.apache.hadoop.hbase.master.balancer"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterStatusChore.html" title="class in org.apache.hadoop.hbase.master.balancer"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,15 +61,15 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_java.lang.Object">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_top">
@@ -104,6 +104,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#clusterState">clusterState</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#emptyRegionServerPresent">emptyRegionServerPresent</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#numRegions">numRegions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#numServers">numServers</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableMap.html?is-external=true" title="class or interface in java.util">NavigableMap</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ServerAndLoad.html" title="class in org.apache.hadoop.hbase.master.balancer">ServerAndLoad</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#serversByLoad">serversByLoad</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -127,6 +162,45 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#getClusterState()">getClusterState</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) float</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#getLoadAverage()">getLoadAverage</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#getMaxLoad()">getMaxLoad</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#getMinLoad()">getMinLoad</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#getNumRegions()">getNumRegions</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#getNumServers()">getNumServers</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableMap.html?is-external=true" title="class or interface in java.util">NavigableMap</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ServerAndLoad.html" title="class in org.apache.hadoop.hbase.master.balancer">ServerAndLoad</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#getServersByLoad()">getServersByLoad</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#isEmptyRegionServerPresent()">isEmptyRegionServerPresent</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
@@ -142,6 +216,59 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="clusterState">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clusterState</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.32">clusterState</a></pre>
+</li>
+</ul>
+<a name="serversByLoad">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serversByLoad</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableMap.html?is-external=true" title="class or interface in java.util">NavigableMap</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ServerAndLoad.html" title="class in org.apache.hadoop.hbase.master.balancer">ServerAndLoad</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.33">serversByLoad</a></pre>
+</li>
+</ul>
+<a name="emptyRegionServerPresent">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>emptyRegionServerPresent</h4>
+<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.34">emptyRegionServerPresent</a></pre>
+</li>
+</ul>
+<a name="numRegions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numRegions</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.35">numRegions</a></pre>
+</li>
+</ul>
+<a name="numServers">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>numServers</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.36">numServers</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -155,6 +282,86 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>ClusterLoadState</h4>
 <pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.38">ClusterLoadState</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;clusterState)</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getClusterState()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getClusterState</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.53">getClusterState</a>()</pre>
+</li>
+</ul>
+<a name="getServersByLoad()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getServersByLoad</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableMap.html?is-external=true" title="class or interface in java.util">NavigableMap</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ServerAndLoad.html" title="class in org.apache.hadoop.hbase.master.balancer">ServerAndLoad</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.57">getServersByLoad</a>()</pre>
+</li>
+</ul>
+<a name="isEmptyRegionServerPresent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isEmptyRegionServerPresent</h4>
+<pre>boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.61">isEmptyRegionServerPresent</a>()</pre>
+</li>
+</ul>
+<a name="getNumRegions()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNumRegions</h4>
+<pre>int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.65">getNumRegions</a>()</pre>
+</li>
+</ul>
+<a name="getNumServers()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNumServers</h4>
+<pre>int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.69">getNumServers</a>()</pre>
+</li>
+</ul>
+<a name="getLoadAverage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLoadAverage</h4>
+<pre>float&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.73">getLoadAverage</a>()</pre>
+</li>
+</ul>
+<a name="getMaxLoad()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaxLoad</h4>
+<pre>int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.77">getMaxLoad</a>()</pre>
+</li>
+</ul>
+<a name="getMinLoad()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getMinLoad</h4>
+<pre>int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/ClusterLoadState.html#line.81">getMinLoad</a>()</pre>
 </li>
 </ul>
 </li>
@@ -183,7 +390,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.SwapRegionsAction.html" title="class in org.apache.hadoop.hbase.master.balancer"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.DefaultRackManager.html" title="class in org.apache.hadoop.hbase.master.balancer"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/ClusterStatusChore.html" title="class in org.apache.hadoop.hbase.master.balancer"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -209,15 +416,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_java.lang.Object">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_bottom">

@@ -197,14 +197,34 @@ extends javax.servlet.http.HttpServlet</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#CALLBACK_PARAM">CALLBACK_PARAM</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#INCLUDE_DESCRIPTION">INCLUDE_DESCRIPTION</a></strong></code>
+<div class="block">If query string includes 'description', then we will emit bean and attribute descriptions to
+ output IFF they are not null and IFF the description is not the same as the attribute name:
+ i.e.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/util/JSONBean.html" title="class in org.apache.hadoop.hbase.util">JSONBean</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#jsonBeanWriter">jsonBeanWriter</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/javax/management/MBeanServer.html?is-external=true" title="class or interface in javax.management">MBeanServer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#mBeanServer">mBeanServer</a></strong></code>
 <div class="block">MBean server.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#serialVersionUID">serialVersionUID</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -287,6 +307,48 @@ extends javax.servlet.http.HttpServlet</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#line.114">LOG</a></pre>
+</li>
+</ul>
+<a name="serialVersionUID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serialVersionUID</h4>
+<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#line.116">serialVersionUID</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.http.jmx.JMXJsonServlet.serialVersionUID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CALLBACK_PARAM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CALLBACK_PARAM</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#line.118">CALLBACK_PARAM</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.http.jmx.JMXJsonServlet.CALLBACK_PARAM">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INCLUDE_DESCRIPTION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INCLUDE_DESCRIPTION</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/http/jmx/JMXJsonServlet.html#line.124">INCLUDE_DESCRIPTION</a></pre>
+<div class="block">If query string includes 'description', then we will emit bean and attribute descriptions to
+ output IFF they are not null and IFF the description is not the same as the attribute name:
+ i.e. specify an URL like so: /jmx?description=true</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.http.jmx.JMXJsonServlet.INCLUDE_DESCRIPTION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="mBeanServer">
 <!--   -->
 </a>

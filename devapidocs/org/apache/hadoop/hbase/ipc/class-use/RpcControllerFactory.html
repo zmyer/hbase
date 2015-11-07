@@ -87,7 +87,19 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.handler">org.apache.hadoop.hbase.regionserver.handler</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.wal">org.apache.hadoop.hbase.regionserver.wal</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.replication.regionserver">org.apache.hadoop.hbase.replication.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -115,8 +127,24 @@
 <td class="colLast"><span class="strong">ClientScanner.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClientScanner.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><span class="strong">HTable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTable.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
 <td class="colLast"><span class="strong">RegionAdminServiceCallable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RegionAdminServiceCallable.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><span class="strong">RpcRetryingCallerWithReadReplicas.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerWithReadReplicas.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><span class="strong">AsyncProcess.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/AsyncProcess.html#rpcFactory">rpcFactory</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +156,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.ScannerCallableWithReplicas</code></td>
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/ScannerCallableWithReplicas.html" title="class in org.apache.hadoop.hbase.client">ScannerCallableWithReplicas</a></code></td>
 <td class="colLast"><span class="strong">ClientSmallScanner.SmallScannerCallableFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.SmallScannerCallableFactory.html#getCallable(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.client.metrics.ScanMetrics,%20byte[],%20int,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20java.util.concurrent.ExecutorService,%20int,%20int,%20int,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.client.RpcRetryingCaller)">getCallable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
                       <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table,
                       <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
@@ -151,6 +179,20 @@
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/AsyncProcess.html#AsyncProcess(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.conf.Configuration,%20java.util.concurrent.ExecutorService,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20boolean,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory)">AsyncProcess</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;hc,
+                        org.apache.hadoop.conf.Configuration&nbsp;conf,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;pool,
+                        <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a>&nbsp;rpcCaller,
+                        boolean&nbsp;useGlobalErrors,
+                        <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;rpcFactory)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutatorImpl.html#BufferedMutatorImpl(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20org.apache.hadoop.hbase.client.BufferedMutatorParams)">BufferedMutatorImpl</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;conn,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a>&nbsp;rpcCallerFactory,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;rpcFactory,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutatorParams.html" title="class in org.apache.hadoop.hbase.client">BufferedMutatorParams</a>&nbsp;params)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html#ClientAsyncPrefetchScanner(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20java.util.concurrent.ExecutorService,%20int)">ClientAsyncPrefetchScanner</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;configuration,
                                                     <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
@@ -197,6 +239,28 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClientSmallReversedScanner.html#ClientSmallReversedScanner(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20java.util.concurrent.ExecutorService,%20int,%20org.apache.hadoop.hbase.client.ClientSmallScanner.SmallScannerCallableFactory)">ClientSmallReversedScanner</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                    <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                                                    <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                    <a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
+                                                    <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a>&nbsp;rpcFactory,
+                                                    <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;controllerFactory,
+                                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;pool,
+                                                    int&nbsp;primaryOperationTimeout,
+                                                    <a href="../../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.SmallScannerCallableFactory.html" title="class in org.apache.hadoop.hbase.client">ClientSmallScanner.SmallScannerCallableFactory</a>&nbsp;callableFactory)</code>
+<div class="block">Create a new ReversibleClientScanner for the specified table.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.SmallScannerCallable.html#ClientSmallScanner.SmallScannerCallable(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.client.metrics.ScanMetrics,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20int,%20int)">ClientSmallScanner.SmallScannerCallable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
+                                                                              <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table,
+                                                                              <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                                                                              <a href="../../../../../../org/apache/hadoop/hbase/client/metrics/ScanMetrics.html" title="class in org.apache.hadoop.hbase.client.metrics">ScanMetrics</a>&nbsp;scanMetrics,
+                                                                              <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;controllerFactory,
+                                                                              int&nbsp;caching,
+                                                                              int&nbsp;id)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.html#ClientSmallScanner(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20java.util.concurrent.ExecutorService,%20int)">ClientSmallScanner</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                     <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                                     <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
@@ -209,12 +273,25 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.html#ClientSmallScanner(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20java.util.concurrent.ExecutorService,%20int,%20org.apache.hadoop.hbase.client.ClientSmallScanner.SmallScannerCallableFactory)">ClientSmallScanner</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a>&nbsp;rpcFactory,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;controllerFactory,
+                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;pool,
+                                    int&nbsp;primaryOperationTimeout,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.SmallScannerCallableFactory.html" title="class in org.apache.hadoop.hbase.client">ClientSmallScanner.SmallScannerCallableFactory</a>&nbsp;callableFactory)</code>
+<div class="block">Create a new ShortClientScanner for the specified table.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/FlushRegionCallable.html#FlushRegionCallable(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20org.apache.hadoop.hbase.HRegionInfo,%20boolean)">FlushRegionCallable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
                                       <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;rpcControllerFactory,
                                       <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
                                       boolean&nbsp;writeFlushWalMarker)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/FlushRegionCallable.html#FlushRegionCallable(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean)">FlushRegionCallable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
                                       <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;rpcControllerFactory,
                                       <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
@@ -222,7 +299,7 @@
                                       byte[]&nbsp;regionStartKey,
                                       boolean&nbsp;writeFlushWalMarker)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTable.html#HTable(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.TableConfiguration,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20java.util.concurrent.ExecutorService)">HTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
             <a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
             <a href="../../../../../../org/apache/hadoop/hbase/client/TableConfiguration.html" title="class in org.apache.hadoop.hbase.client">TableConfiguration</a>&nbsp;tableConfig,
@@ -231,6 +308,13 @@
             <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;pool)</code>
 <div class="block">Creates an object to access a HBase table.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/MultiServerCallable.html#MultiServerCallable(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.ServerName,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20org.apache.hadoop.hbase.client.MultiAction)">MultiServerCallable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;location,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;rpcFactory,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/client/MultiAction.html" title="class in org.apache.hadoop.hbase.client">MultiAction</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/MultiServerCallable.html" title="type parameter in MultiServerCallable">R</a>&gt;&nbsp;multi)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RegionAdminServiceCallable.html#RegionAdminServiceCallable(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20org.apache.hadoop.hbase.HRegionLocation,%20org.apache.hadoop.hbase.TableName,%20byte[])">RegionAdminServiceCallable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
@@ -329,10 +413,41 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><span class="strong">HRegionServer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionServer.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver.handler">
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/package-summary.html">org.apache.hadoop.hbase.regionserver.handler</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/package-summary.html">org.apache.hadoop.hbase.regionserver.handler</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><span class="strong">RegionReplicaFlushHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/RegionReplicaFlushHandler.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/package-summary.html">org.apache.hadoop.hbase.regionserver.handler</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -346,6 +461,60 @@
                                                   <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;rpcControllerFactory,
                                                   int&nbsp;operationTimeout,
                                                   <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;region)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver.wal">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/package-summary.html">org.apache.hadoop.hbase.regionserver.wal</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/package-summary.html">org.apache.hadoop.hbase.regionserver.wal</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><span class="strong">WALEditsReplaySink.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEditsReplaySink.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.replication.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a> in <a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><span class="strong">RegionReplicaReplicationEndpoint.RegionReplicaSinkWriter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/RegionReplicaReplicationEndpoint.RegionReplicaSinkWriter.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/RegionReplicaReplicationEndpoint.RegionReplicaReplayCallable.html#RegionReplicaReplicationEndpoint.RegionReplicaReplayCallable(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HRegionLocation,%20org.apache.hadoop.hbase.HRegionInfo,%20byte[],%20java.util.List,%20java.util.concurrent.atomic.AtomicLong)">RegionReplicaReplicationEndpoint.RegionReplicaReplayCallable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
+                                                                                                                        <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;rpcControllerFactory,
+                                                                                                                        <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                                                                        <a href="../../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase">HRegionLocation</a>&nbsp;location,
+                                                                                                                        <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
+                                                                                                                        byte[]&nbsp;row,
+                                                                                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/wal/WAL.Entry.html" title="class in org.apache.hadoop.hbase.wal">WAL.Entry</a>&gt;&nbsp;entries,
+                                                                                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;skippedEntries)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

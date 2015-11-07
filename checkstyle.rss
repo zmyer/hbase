@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2007 - 2015 The Apache Software Foundation</copyright>
     <item>
-      <title>File: 1639,
+      <title>File: 1637,
              Errors: 1093,
              Warnings: 0,
              Infos: 0
@@ -3429,7 +3429,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
+                  5
                 </td>
               </tr>
                           <tr>
@@ -4718,20 +4718,6 @@ under the License.
                 </td>
                 <td>
                   0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.security.access.CodeToClassAndBackFor96Migration.java">org/apache/hadoop/hbase/security/access/CodeToClassAndBackFor96Migration.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
                 </td>
               </tr>
                           <tr>
@@ -7928,20 +7914,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.thrift2.generated.TIOError.java">org/apache/hadoop/hbase/thrift2/generated/TIOError.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.quotas.NoopOperationQuota.java">org/apache/hadoop/hbase/quotas/NoopOperationQuota.java</a>
                 </td>
                 <td>
@@ -7957,6 +7929,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.regionserver.compactions.ExploringCompactionPolicy.java">org/apache/hadoop/hbase/regionserver/compactions/ExploringCompactionPolicy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.thrift2.generated.TIOError.java">org/apache/hadoop/hbase/thrift2/generated/TIOError.java</a>
                 </td>
                 <td>
                   0
@@ -9441,6 +9427,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.quotas.UserQuotaState.java">org/apache/hadoop/hbase/quotas/UserQuotaState.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.util.IdReadWriteLock.java">org/apache/hadoop/hbase/util/IdReadWriteLock.java</a>
                 </td>
                 <td>
                   0
@@ -16286,20 +16286,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.util.HFileV1Detector.java">org/apache/hadoop/hbase/util/HFileV1Detector.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.master.cleaner.FileCleanerDelegate.java">org/apache/hadoop/hbase/master/cleaner/FileCleanerDelegate.java</a>
                 </td>
                 <td>
@@ -17071,20 +17057,6 @@ under the License.
                           <tr>
                 <td>
                   <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.client.RegionOfflineException.java">org/apache/hadoop/hbase/client/RegionOfflineException.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://hbase.apache.org/checkstyle.html#org.apache.hadoop.hbase.mapreduce.HFileOutputFormat.java">org/apache/hadoop/hbase/mapreduce/HFileOutputFormat.java</a>
                 </td>
                 <td>
                   0
@@ -19571,7 +19543,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  4
+                  5
                 </td>
               </tr>
                           <tr>

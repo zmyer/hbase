@@ -293,13 +293,13 @@
 <a class="jxr_linenumber" name="283" href="#283">283</a>     <strong class="jxr_keyword">return</strong> sb.toString();
 <a class="jxr_linenumber" name="284" href="#284">284</a>   }
 <a class="jxr_linenumber" name="285" href="#285">285</a> 
-<a class="jxr_linenumber" name="286" href="#286">286</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html">WALEdit</a> createFlushWALEdit(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri, <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> f) {
+<a class="jxr_linenumber" name="286" href="#286">286</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html">WALEdit</a> createFlushWALEdit(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri, FlushDescriptor f) {
 <a class="jxr_linenumber" name="287" href="#287">287</a>     <a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a> kv = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a>(getRowForRegion(hri), METAFAMILY, FLUSH,
 <a class="jxr_linenumber" name="288" href="#288">288</a>       EnvironmentEdgeManager.currentTime(), f.toByteArray());
 <a class="jxr_linenumber" name="289" href="#289">289</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html">WALEdit</a>().add(kv);
 <a class="jxr_linenumber" name="290" href="#290">290</a>   }
 <a class="jxr_linenumber" name="291" href="#291">291</a> 
-<a class="jxr_linenumber" name="292" href="#292">292</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> getFlushDescriptor(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> cell) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="292" href="#292">292</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> FlushDescriptor getFlushDescriptor(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> cell) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="293" href="#293">293</a>     <strong class="jxr_keyword">if</strong> (CellUtil.matchingColumn(cell, METAFAMILY, FLUSH)) {
 <a class="jxr_linenumber" name="294" href="#294">294</a>       <strong class="jxr_keyword">return</strong> FlushDescriptor.parseFrom(CellUtil.cloneValue(cell));
 <a class="jxr_linenumber" name="295" href="#295">295</a>     }
@@ -307,13 +307,13 @@
 <a class="jxr_linenumber" name="297" href="#297">297</a>   }
 <a class="jxr_linenumber" name="298" href="#298">298</a> 
 <a class="jxr_linenumber" name="299" href="#299">299</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html">WALEdit</a> createRegionEventWALEdit(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri,
-<a class="jxr_linenumber" name="300" href="#300">300</a>       <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">RegionEventDescriptor</a> regionEventDesc) {
+<a class="jxr_linenumber" name="300" href="#300">300</a>       RegionEventDescriptor regionEventDesc) {
 <a class="jxr_linenumber" name="301" href="#301">301</a>     <a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a> kv = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a>(getRowForRegion(hri), METAFAMILY, REGION_EVENT,
 <a class="jxr_linenumber" name="302" href="#302">302</a>       EnvironmentEdgeManager.currentTime(), regionEventDesc.toByteArray());
 <a class="jxr_linenumber" name="303" href="#303">303</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html">WALEdit</a>().add(kv);
 <a class="jxr_linenumber" name="304" href="#304">304</a>   }
 <a class="jxr_linenumber" name="305" href="#305">305</a> 
-<a class="jxr_linenumber" name="306" href="#306">306</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">RegionEventDescriptor</a> getRegionEventDescriptor(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> cell) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="306" href="#306">306</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> RegionEventDescriptor getRegionEventDescriptor(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> cell) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="307" href="#307">307</a>     <strong class="jxr_keyword">if</strong> (CellUtil.matchingColumn(cell, METAFAMILY, REGION_EVENT)) {
 <a class="jxr_linenumber" name="308" href="#308">308</a>       <strong class="jxr_keyword">return</strong> RegionEventDescriptor.parseFrom(CellUtil.cloneValue(cell));
 <a class="jxr_linenumber" name="309" href="#309">309</a>     }
@@ -325,7 +325,7 @@
 <a class="jxr_linenumber" name="315" href="#315">315</a> <em class="jxr_javadoccomment">   * @param c</em>
 <a class="jxr_linenumber" name="316" href="#316">316</a> <em class="jxr_javadoccomment">   * @return A WALEdit that has &lt;code&gt;c&lt;/code&gt; serialized as its value</em>
 <a class="jxr_linenumber" name="317" href="#317">317</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="318" href="#318">318</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html">WALEdit</a> createCompaction(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">CompactionDescriptor</a> c) {
+<a class="jxr_linenumber" name="318" href="#318">318</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html">WALEdit</a> createCompaction(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri, <strong class="jxr_keyword">final</strong> CompactionDescriptor c) {
 <a class="jxr_linenumber" name="319" href="#319">319</a>     byte [] pbbytes = c.toByteArray();
 <a class="jxr_linenumber" name="320" href="#320">320</a>     <a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a> kv = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a>(getRowForRegion(hri), METAFAMILY, COMPACTION,
 <a class="jxr_linenumber" name="321" href="#321">321</a>       EnvironmentEdgeManager.currentTime(), pbbytes);
@@ -347,7 +347,7 @@
 <a class="jxr_linenumber" name="337" href="#337">337</a> <em class="jxr_javadoccomment">   * @param kv the key value</em>
 <a class="jxr_linenumber" name="338" href="#338">338</a> <em class="jxr_javadoccomment">   * @return deserialized CompactionDescriptor or null.</em>
 <a class="jxr_linenumber" name="339" href="#339">339</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="340" href="#340">340</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">CompactionDescriptor</a> getCompaction(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> kv) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="340" href="#340">340</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> CompactionDescriptor getCompaction(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> kv) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="341" href="#341">341</a>     <strong class="jxr_keyword">if</strong> (CellUtil.matchingColumn(kv, METAFAMILY, COMPACTION)) {
 <a class="jxr_linenumber" name="342" href="#342">342</a>       <strong class="jxr_keyword">return</strong> CompactionDescriptor.parseFrom(CellUtil.cloneValue(kv));
 <a class="jxr_linenumber" name="343" href="#343">343</a>     }

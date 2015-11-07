@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -133,6 +133,345 @@ implements org.apache.hadoop.hbase.coprocessor.MasterObserver</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#bypass">bypass</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postAbortProcedureCalled">postAbortProcedureCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postAddColumnCalled">postAddColumnCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postAddColumnHandlerCalled">postAddColumnHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postAssignCalled">postAssignCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postBalanceCalled">postBalanceCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postBalanceSwitchCalled">postBalanceSwitchCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postCloneSnapshotCalled">postCloneSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postCreateNamespaceCalled">postCreateNamespaceCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postCreateTableCalled">postCreateTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postCreateTableHandlerCalled">postCreateTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDeleteColumnCalled">postDeleteColumnCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDeleteColumnHandlerCalled">postDeleteColumnHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDeleteNamespaceCalled">postDeleteNamespaceCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDeleteSnapshotCalled">postDeleteSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDeleteTableCalled">postDeleteTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDeleteTableHandlerCalled">postDeleteTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDisableTableCalled">postDisableTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postDisableTableHandlerCalled">postDisableTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postEnableTableCalled">postEnableTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postEnableTableHandlerCalled">postEnableTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postGetNamespaceDescriptorCalled">postGetNamespaceDescriptorCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postGetTableDescriptorsCalled">postGetTableDescriptorsCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postGetTableNamesCalled">postGetTableNamesCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postListNamespaceDescriptorsCalled">postListNamespaceDescriptorsCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postListProceduresCalled">postListProceduresCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postListSnapshotCalled">postListSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postModifyColumnCalled">postModifyColumnCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postModifyColumnHandlerCalled">postModifyColumnHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postModifyNamespaceCalled">postModifyNamespaceCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postModifyTableCalled">postModifyTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postModifyTableHandlerCalled">postModifyTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postMoveCalled">postMoveCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postRegionOfflineCalled">postRegionOfflineCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postRestoreSnapshotCalled">postRestoreSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postSnapshotCalled">postSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postStartMasterCalled">postStartMasterCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postTruncateTableCalled">postTruncateTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postTruncateTableHandlerCalled">postTruncateTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#postUnassignCalled">postUnassignCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preAbortProcedureCalled">preAbortProcedureCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preAddColumnCalled">preAddColumnCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preAddColumnHandlerCalled">preAddColumnHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preAssignCalled">preAssignCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preBalanceCalled">preBalanceCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preBalanceSwitchCalled">preBalanceSwitchCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preCloneSnapshotCalled">preCloneSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preCreateNamespaceCalled">preCreateNamespaceCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preCreateTableCalled">preCreateTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preCreateTableHandlerCalled">preCreateTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDeleteColumnCalled">preDeleteColumnCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDeleteColumnHandlerCalled">preDeleteColumnHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDeleteNamespaceCalled">preDeleteNamespaceCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDeleteSnapshotCalled">preDeleteSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDeleteTableCalled">preDeleteTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDeleteTableHandlerCalled">preDeleteTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDisableTableCalled">preDisableTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preDisableTableHandlerCalled">preDisableTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preEnableTableCalled">preEnableTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preEnableTableHandlerCalled">preEnableTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preGetNamespaceDescriptorCalled">preGetNamespaceDescriptorCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preGetTableDescriptorsCalled">preGetTableDescriptorsCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preGetTableNamesCalled">preGetTableNamesCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preListNamespaceDescriptorsCalled">preListNamespaceDescriptorsCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preListProceduresCalled">preListProceduresCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preListSnapshotCalled">preListSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preMasterInitializationCalled">preMasterInitializationCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preModifyColumnCalled">preModifyColumnCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preModifyColumnHandlerCalled">preModifyColumnHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preModifyNamespaceCalled">preModifyNamespaceCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preModifyTableCalled">preModifyTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preModifyTableHandlerCalled">preModifyTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preMoveCalled">preMoveCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preRegionOfflineCalled">preRegionOfflineCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preRestoreSnapshotCalled">preRestoreSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preShutdownCalled">preShutdownCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preSnapshotCalled">preSnapshotCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preStopMasterCalled">preStopMasterCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preTruncateTableCalled">preTruncateTableCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preTruncateTableHandlerCalled">preTruncateTableHandlerCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#preUnassignCalled">preUnassignCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#startCalled">startCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#stopCalled">stopCalled</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.Coprocessor">
 <!--   -->
@@ -1098,6 +1437,761 @@ implements org.apache.hadoop.hbase.coprocessor.MasterObserver</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="bypass">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bypass</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.87">bypass</a></pre>
+</li>
+</ul>
+<a name="preCreateTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preCreateTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.88">preCreateTableCalled</a></pre>
+</li>
+</ul>
+<a name="postCreateTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postCreateTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.89">postCreateTableCalled</a></pre>
+</li>
+</ul>
+<a name="preDeleteTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preDeleteTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.90">preDeleteTableCalled</a></pre>
+</li>
+</ul>
+<a name="postDeleteTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postDeleteTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.91">postDeleteTableCalled</a></pre>
+</li>
+</ul>
+<a name="preTruncateTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preTruncateTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.92">preTruncateTableCalled</a></pre>
+</li>
+</ul>
+<a name="postTruncateTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postTruncateTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.93">postTruncateTableCalled</a></pre>
+</li>
+</ul>
+<a name="preModifyTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preModifyTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.94">preModifyTableCalled</a></pre>
+</li>
+</ul>
+<a name="postModifyTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postModifyTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.95">postModifyTableCalled</a></pre>
+</li>
+</ul>
+<a name="preCreateNamespaceCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preCreateNamespaceCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.96">preCreateNamespaceCalled</a></pre>
+</li>
+</ul>
+<a name="postCreateNamespaceCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postCreateNamespaceCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.97">postCreateNamespaceCalled</a></pre>
+</li>
+</ul>
+<a name="preDeleteNamespaceCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preDeleteNamespaceCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.98">preDeleteNamespaceCalled</a></pre>
+</li>
+</ul>
+<a name="postDeleteNamespaceCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postDeleteNamespaceCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.99">postDeleteNamespaceCalled</a></pre>
+</li>
+</ul>
+<a name="preModifyNamespaceCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preModifyNamespaceCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.100">preModifyNamespaceCalled</a></pre>
+</li>
+</ul>
+<a name="postModifyNamespaceCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postModifyNamespaceCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.101">postModifyNamespaceCalled</a></pre>
+</li>
+</ul>
+<a name="preGetNamespaceDescriptorCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preGetNamespaceDescriptorCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.102">preGetNamespaceDescriptorCalled</a></pre>
+</li>
+</ul>
+<a name="postGetNamespaceDescriptorCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postGetNamespaceDescriptorCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.103">postGetNamespaceDescriptorCalled</a></pre>
+</li>
+</ul>
+<a name="preListNamespaceDescriptorsCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preListNamespaceDescriptorsCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.104">preListNamespaceDescriptorsCalled</a></pre>
+</li>
+</ul>
+<a name="postListNamespaceDescriptorsCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postListNamespaceDescriptorsCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.105">postListNamespaceDescriptorsCalled</a></pre>
+</li>
+</ul>
+<a name="preAddColumnCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preAddColumnCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.106">preAddColumnCalled</a></pre>
+</li>
+</ul>
+<a name="postAddColumnCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postAddColumnCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.107">postAddColumnCalled</a></pre>
+</li>
+</ul>
+<a name="preModifyColumnCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preModifyColumnCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.108">preModifyColumnCalled</a></pre>
+</li>
+</ul>
+<a name="postModifyColumnCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postModifyColumnCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.109">postModifyColumnCalled</a></pre>
+</li>
+</ul>
+<a name="preDeleteColumnCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preDeleteColumnCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.110">preDeleteColumnCalled</a></pre>
+</li>
+</ul>
+<a name="postDeleteColumnCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postDeleteColumnCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.111">postDeleteColumnCalled</a></pre>
+</li>
+</ul>
+<a name="preEnableTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preEnableTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.112">preEnableTableCalled</a></pre>
+</li>
+</ul>
+<a name="postEnableTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postEnableTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.113">postEnableTableCalled</a></pre>
+</li>
+</ul>
+<a name="preDisableTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preDisableTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.114">preDisableTableCalled</a></pre>
+</li>
+</ul>
+<a name="postDisableTableCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postDisableTableCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.115">postDisableTableCalled</a></pre>
+</li>
+</ul>
+<a name="preAbortProcedureCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preAbortProcedureCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.116">preAbortProcedureCalled</a></pre>
+</li>
+</ul>
+<a name="postAbortProcedureCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postAbortProcedureCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.117">postAbortProcedureCalled</a></pre>
+</li>
+</ul>
+<a name="preListProceduresCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preListProceduresCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.118">preListProceduresCalled</a></pre>
+</li>
+</ul>
+<a name="postListProceduresCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postListProceduresCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.119">postListProceduresCalled</a></pre>
+</li>
+</ul>
+<a name="preMoveCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preMoveCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.120">preMoveCalled</a></pre>
+</li>
+</ul>
+<a name="postMoveCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postMoveCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.121">postMoveCalled</a></pre>
+</li>
+</ul>
+<a name="preAssignCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preAssignCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.122">preAssignCalled</a></pre>
+</li>
+</ul>
+<a name="postAssignCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postAssignCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.123">postAssignCalled</a></pre>
+</li>
+</ul>
+<a name="preUnassignCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preUnassignCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.124">preUnassignCalled</a></pre>
+</li>
+</ul>
+<a name="postUnassignCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postUnassignCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.125">postUnassignCalled</a></pre>
+</li>
+</ul>
+<a name="preRegionOfflineCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preRegionOfflineCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.126">preRegionOfflineCalled</a></pre>
+</li>
+</ul>
+<a name="postRegionOfflineCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postRegionOfflineCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.127">postRegionOfflineCalled</a></pre>
+</li>
+</ul>
+<a name="preBalanceCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preBalanceCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.128">preBalanceCalled</a></pre>
+</li>
+</ul>
+<a name="postBalanceCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postBalanceCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.129">postBalanceCalled</a></pre>
+</li>
+</ul>
+<a name="preBalanceSwitchCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preBalanceSwitchCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.130">preBalanceSwitchCalled</a></pre>
+</li>
+</ul>
+<a name="postBalanceSwitchCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postBalanceSwitchCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.131">postBalanceSwitchCalled</a></pre>
+</li>
+</ul>
+<a name="preShutdownCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preShutdownCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.132">preShutdownCalled</a></pre>
+</li>
+</ul>
+<a name="preStopMasterCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preStopMasterCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.133">preStopMasterCalled</a></pre>
+</li>
+</ul>
+<a name="preMasterInitializationCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preMasterInitializationCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.134">preMasterInitializationCalled</a></pre>
+</li>
+</ul>
+<a name="postStartMasterCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postStartMasterCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.135">postStartMasterCalled</a></pre>
+</li>
+</ul>
+<a name="startCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.136">startCalled</a></pre>
+</li>
+</ul>
+<a name="stopCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stopCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.137">stopCalled</a></pre>
+</li>
+</ul>
+<a name="preSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.138">preSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="postSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.139">postSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="preListSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preListSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.140">preListSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="postListSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postListSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.141">postListSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="preCloneSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preCloneSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.142">preCloneSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="postCloneSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postCloneSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.143">postCloneSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="preRestoreSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preRestoreSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.144">preRestoreSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="postRestoreSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postRestoreSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.145">postRestoreSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="preDeleteSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preDeleteSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.146">preDeleteSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="postDeleteSnapshotCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postDeleteSnapshotCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.147">postDeleteSnapshotCalled</a></pre>
+</li>
+</ul>
+<a name="preCreateTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preCreateTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.148">preCreateTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="postCreateTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postCreateTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.149">postCreateTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="preDeleteTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preDeleteTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.150">preDeleteTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="postDeleteTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postDeleteTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.151">postDeleteTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="preTruncateTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preTruncateTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.152">preTruncateTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="postTruncateTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postTruncateTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.153">postTruncateTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="preAddColumnHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preAddColumnHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.154">preAddColumnHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="postAddColumnHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postAddColumnHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.155">postAddColumnHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="preModifyColumnHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preModifyColumnHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.156">preModifyColumnHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="postModifyColumnHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postModifyColumnHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.157">postModifyColumnHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="preDeleteColumnHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preDeleteColumnHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.158">preDeleteColumnHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="postDeleteColumnHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postDeleteColumnHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.159">postDeleteColumnHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="preEnableTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preEnableTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.160">preEnableTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="postEnableTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postEnableTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.161">postEnableTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="preDisableTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preDisableTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.162">preDisableTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="postDisableTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postDisableTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.163">postDisableTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="preModifyTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preModifyTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.164">preModifyTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="postModifyTableHandlerCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postModifyTableHandlerCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.165">postModifyTableHandlerCalled</a></pre>
+</li>
+</ul>
+<a name="preGetTableDescriptorsCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preGetTableDescriptorsCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.166">preGetTableDescriptorsCalled</a></pre>
+</li>
+</ul>
+<a name="postGetTableDescriptorsCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postGetTableDescriptorsCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.167">postGetTableDescriptorsCalled</a></pre>
+</li>
+</ul>
+<a name="postGetTableNamesCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postGetTableNamesCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.168">postGetTableNamesCalled</a></pre>
+</li>
+</ul>
+<a name="preGetTableNamesCalled">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>preGetTableNamesCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.CPMasterObserver.html#line.169">preGetTableNamesCalled</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -3625,13 +4719,13 @@ public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/c
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

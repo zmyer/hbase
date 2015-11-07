@@ -145,7 +145,7 @@ extends <a href="../../../../org/apache/hadoop/hbase/CellComparator.html" title=
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a></h3>
-<code><a href="../../../../org/apache/hadoop/hbase/CellComparator.html#COMPARATOR">COMPARATOR</a>, <a href="../../../../org/apache/hadoop/hbase/CellComparator.html#META_COMPARATOR">META_COMPARATOR</a></code></li>
+<code><a href="../../../../org/apache/hadoop/hbase/CellComparator.html#COMPARATOR">COMPARATOR</a>, <a href="../../../../org/apache/hadoop/hbase/CellComparator.html#LOG">LOG</a>, <a href="../../../../org/apache/hadoop/hbase/CellComparator.html#META_COMPARATOR">META_COMPARATOR</a></code></li>
 </ul>
 </li>
 </ul>
@@ -179,6 +179,15 @@ extends <a href="../../../../org/apache/hadoop/hbase/CellComparator.html" title=
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellComparator.MetaCellComparator.html#compareRows(byte[],%20int,%20int,%20byte[],%20int,%20int)">compareRows</a></strong>(byte[]&nbsp;left,
+                      int&nbsp;loffset,
+                      int&nbsp;llength,
+                      byte[]&nbsp;right,
+                      int&nbsp;roffset,
+                      int&nbsp;rlength)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellComparator.MetaCellComparator.html#compareRows(org.apache.hadoop.hbase.Cell,%20byte[],%20int,%20int)">compareRows</a></strong>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
                       byte[]&nbsp;right,
@@ -188,7 +197,7 @@ extends <a href="../../../../org/apache/hadoop/hbase/CellComparator.html" title=
  stopRow in Scan.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/CellComparator.MetaCellComparator.html#compareRows(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell)">compareRows</a></strong>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
                       <a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;right)</code>
@@ -269,7 +278,7 @@ extends <a href="../../../../org/apache/hadoop/hbase/CellComparator.html" title=
 <a name="compareRows(org.apache.hadoop.hbase.Cell, byte[], int, int)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>compareRows</h4>
 <pre>public&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/CellComparator.MetaCellComparator.html#line.581">compareRows</a>(<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
@@ -286,6 +295,20 @@ extends <a href="../../../../org/apache/hadoop/hbase/CellComparator.html" title=
 <dt><span class="strong">Parameters:</span></dt><dd><code>left</code> - the cell to be compared</dd><dd><code>right</code> - the kv serialized byte[] to be compared with</dd><dd><code>roffset</code> - the offset in the byte[]</dd><dd><code>rlength</code> - the length in the byte[]</dd>
 <dt><span class="strong">Returns:</span></dt><dd>0 if both cell and the byte[] are equal, 1 if the cell is bigger
          than byte[], -1 otherwise</dd></dl>
+</li>
+</ul>
+<a name="compareRows(byte[], int, int, byte[], int, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>compareRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/CellComparator.MetaCellComparator.html#line.586">compareRows</a>(byte[]&nbsp;left,
+              int&nbsp;loffset,
+              int&nbsp;llength,
+              byte[]&nbsp;right,
+              int&nbsp;roffset,
+              int&nbsp;rlength)</pre>
 </li>
 </ul>
 </li>

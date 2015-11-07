@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCoprocessorHost.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCoprocessorHost.WALEnvironment.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEditsReplaySink.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -157,12 +157,56 @@ implements org.apache.hadoop.io.Writable, <a href="../../../../../../org/apache/
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#BULK_LOAD">BULK_LOAD</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#cells">cells</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#COMPACTION">COMPACTION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#compressionContext">compressionContext</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#EMPTY_WALEDIT">EMPTY_WALEDIT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#FLUSH">FLUSH</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#isReplay">isReplay</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#METAFAMILY">METAFAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#METAROW">METAROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#REGION_EVENT">REGION_EVENT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableMap.html?is-external=true" title="class or interface in java.util">NavigableMap</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#scopes">scopes</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Legacy</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#VERSION_2">VERSION_2</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -256,53 +300,57 @@ implements org.apache.hadoop.io.Writable, <a href="../../../../../../org/apache/
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#getRegionEventDescriptor(org.apache.hadoop.hbase.Cell)">getRegionEventDescriptor</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#getRowForRegion(org.apache.hadoop.hbase.HRegionInfo)">getRowForRegion</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#heapSize()">heapSize</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#isEmpty()">isEmpty</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#isMetaEdit()">isMetaEdit</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#isMetaEditFamily(byte[])">isMetaEditFamily</a></strong>(byte[]&nbsp;f)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#isMetaEditFamily(org.apache.hadoop.hbase.Cell)">isMetaEditFamily</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#isReplay()">isReplay</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#readFields(java.io.DataInput)">readFields</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#readFromCells(org.apache.hadoop.hbase.codec.Codec.Decoder,%20int)">readFromCells</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/codec/Codec.Decoder.html" title="interface in org.apache.hadoop.hbase.codec">Codec.Decoder</a>&nbsp;cellDecoder,
                           int&nbsp;expectedCount)</code>
 <div class="block">Reads WALEdit from cells.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#setCompressionContext(org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">setCompressionContext</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a>&nbsp;compressionContext)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#size()">size</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#toString()">toString</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#write(java.io.DataOutput)">write</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;out)</code>&nbsp;</td>
 </tr>
@@ -328,6 +376,15 @@ implements org.apache.hadoop.io.Writable, <a href="../../../../../../org/apache/
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.88">LOG</a></pre>
+</li>
+</ul>
 <a name="METAFAMILY">
 <!--   -->
 </a>
@@ -335,6 +392,42 @@ implements org.apache.hadoop.io.Writable, <a href="../../../../../../org/apache/
 <li class="blockList">
 <h4>METAFAMILY</h4>
 <pre>public static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.91">METAFAMILY</a></pre>
+</li>
+</ul>
+<a name="METAROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>METAROW</h4>
+<pre>static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.92">METAROW</a></pre>
+</li>
+</ul>
+<a name="COMPACTION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COMPACTION</h4>
+<pre>static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.93">COMPACTION</a></pre>
+</li>
+</ul>
+<a name="FLUSH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLUSH</h4>
+<pre>static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.94">FLUSH</a></pre>
+</li>
+</ul>
+<a name="REGION_EVENT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>REGION_EVENT</h4>
+<pre>static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.95">REGION_EVENT</a></pre>
 </li>
 </ul>
 <a name="BULK_LOAD">
@@ -346,13 +439,61 @@ implements org.apache.hadoop.io.Writable, <a href="../../../../../../org/apache/
 <pre>public static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.97">BULK_LOAD</a></pre>
 </li>
 </ul>
+<a name="VERSION_2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VERSION_2</h4>
+<pre>private final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.99">VERSION_2</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.wal.WALEdit.VERSION_2">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="isReplay">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isReplay</h4>
+<pre>private final&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.100">isReplay</a></pre>
+</li>
+</ul>
+<a name="cells">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cells</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.102">cells</a></pre>
+</li>
+</ul>
 <a name="EMPTY_WALEDIT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EMPTY_WALEDIT</h4>
+<pre>public static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.104">EMPTY_WALEDIT</a></pre>
+</li>
+</ul>
+<a name="scopes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scopes</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableMap.html?is-external=true" title="class or interface in java.util">NavigableMap</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.111">scopes</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>Legacy</i></div>
+</li>
+</ul>
+<a name="compressionContext">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>EMPTY_WALEDIT</h4>
-<pre>public static final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.104">EMPTY_WALEDIT</a></pre>
+<h4>compressionContext</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.113">compressionContext</a></pre>
 </li>
 </ul>
 </li>
@@ -613,6 +754,15 @@ implements org.apache.hadoop.io.Writable, <a href="../../../../../../org/apache/
 <dt><span class="strong">Returns:</span></dt><dd>A WALEdit that has <code>c</code> serialized as its value</dd></dl>
 </li>
 </ul>
+<a name="getRowForRegion(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRowForRegion</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#line.325">getRowForRegion</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</pre>
+</li>
+</ul>
 <a name="getCompaction(org.apache.hadoop.hbase.Cell)">
 <!--   -->
 </a>
@@ -682,7 +832,7 @@ implements org.apache.hadoop.io.Writable, <a href="../../../../../../org/apache/
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCoprocessorHost.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCoprocessorHost.WALEnvironment.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEditsReplaySink.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

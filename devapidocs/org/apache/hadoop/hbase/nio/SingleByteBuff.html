@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -111,6 +111,37 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#buf">buf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#UNSAFE_AVAIL">UNSAFE_AVAIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#unsafeOffset">unsafeOffset</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#unsafeRef">unsafeRef</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -230,120 +261,124 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getEnclosingByteBuffer()">getEnclosingByteBuffer</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getInt()">getInt</a></strong>()</code>
 <div class="block">Returns the int value at the current position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getInt(int)">getInt</a></strong>(int&nbsp;index)</code>
 <div class="block">Fetches the int at the given index.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getIntAfterPosition(int)">getIntAfterPosition</a></strong>(int&nbsp;offset)</code>
 <div class="block">Fetches the int value at the given offset from current position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getLong()">getLong</a></strong>()</code>
 <div class="block">Returns the long value at the current position.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getLong(int)">getLong</a></strong>(int&nbsp;index)</code>
 <div class="block">Fetches the long at the given index.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getLongAfterPosition(int)">getLongAfterPosition</a></strong>(int&nbsp;offset)</code>
 <div class="block">Fetches the long value at the given offset from current position.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>short</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getShort()">getShort</a></strong>()</code>
 <div class="block">Returns the short value at the current position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>short</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getShort(int)">getShort</a></strong>(int&nbsp;index)</code>
 <div class="block">Fetches the short value at the given index.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>short</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#getShortAfterPosition(int)">getShortAfterPosition</a></strong>(int&nbsp;offset)</code>
 <div class="block">Fetches the short value at the given offset from current position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#hasArray()">hasArray</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#hashCode()">hashCode</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#hasRemaining()">hasRemaining</a></strong>()</code>
 <div class="block">Returns true if there are elements between the current position and the limt</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#limit()">limit</a></strong>()</code>
 <div class="block">Returns the limit of this ByteBuff</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#limit(int)">limit</a></strong>(int&nbsp;limit)</code>
 <div class="block">Marks the limit of this ByteBuff.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#mark()">mark</a></strong>()</code>
 <div class="block">Marks the current position of the ByteBuff</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#moveBack(int)">moveBack</a></strong>(int&nbsp;len)</code>
 <div class="block">Jumps back the current position of this ByteBuff by specified length.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#position()">position</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#position(int)">position</a></strong>(int&nbsp;position)</code>
 <div class="block">Sets this ByteBuff's position to the given value.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#put(byte)">put</a></strong>(byte&nbsp;b)</code>
 <div class="block">Writes a byte to this ByteBuff at the current position and increments the position</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#put(byte[])">put</a></strong>(byte[]&nbsp;src)</code>
 <div class="block">Copies from the given byte[] to this ByteBuff</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#put(byte[],%20int,%20int)">put</a></strong>(byte[]&nbsp;src,
       int&nbsp;offset,
@@ -351,14 +386,14 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <div class="block">Copies from the given byte[] to this ByteBuff</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#put(int,%20byte)">put</a></strong>(int&nbsp;index,
       byte&nbsp;b)</code>
 <div class="block">Writes a byte to this ByteBuff at the given index</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#put(int,%20org.apache.hadoop.hbase.nio.ByteBuff,%20int,%20int)">put</a></strong>(int&nbsp;offset,
       <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a>&nbsp;src,
@@ -367,51 +402,51 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <div class="block">Copies the contents from the src ByteBuff to this ByteBuff.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#putInt(int)">putInt</a></strong>(int&nbsp;value)</code>
 <div class="block">Writes an int to this ByteBuff at its current position.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#putLong(long)">putLong</a></strong>(long&nbsp;value)</code>
 <div class="block">Writes a long to this ByteBuff at its current position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#remaining()">remaining</a></strong>()</code>
 <div class="block">Returns the number of elements between the current position and the
  limit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#reset()">reset</a></strong>()</code>
 <div class="block">Similar to <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio"><code>ByteBuffer</code></a>.reset(), ensures that this ByteBuff
  is reset back to last marked position.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#rewind()">rewind</a></strong>()</code>
 <div class="block">Rewinds this ByteBuff and the position is set to 0</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#skip(int)">skip</a></strong>(int&nbsp;len)</code>
 <div class="block">Jumps the current position of this ByteBuff by specified length.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html" title="class in org.apache.hadoop.hbase.nio">SingleByteBuff</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#slice()">slice</a></strong>()</code>
 <div class="block">Returns an ByteBuff which is a sliced version of this ByteBuff.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/nio/SingleByteBuff.html#toBytes(int,%20int)">toBytes</a></strong>(int&nbsp;offset,
               int&nbsp;length)</code>
@@ -442,6 +477,50 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="UNSAFE_AVAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UNSAFE_AVAIL</h4>
+<pre>private static final&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/SingleByteBuff.html#line.36">UNSAFE_AVAIL</a></pre>
+</li>
+</ul>
+<a name="buf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buf</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/SingleByteBuff.html#line.39">buf</a></pre>
+</li>
+</ul>
+<a name="unsafeOffset">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>unsafeOffset</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/SingleByteBuff.html#line.42">unsafeOffset</a></pre>
+</li>
+</ul>
+<a name="unsafeRef">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>unsafeRef</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/nio/SingleByteBuff.html#line.43">unsafeRef</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -1188,7 +1267,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <a name="hashCode()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>hashCode</h4>
 <pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/SingleByteBuff.html#line.318">hashCode</a>()</pre>
@@ -1196,6 +1275,16 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="getEnclosingByteBuffer()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getEnclosingByteBuffer</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/nio/SingleByteBuff.html#line.325">getEnclosingByteBuffer</a>()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the ByteBuffer which this wraps.</dd></dl>
 </li>
 </ul>
 </li>
@@ -1250,13 +1339,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

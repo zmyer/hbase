@@ -232,10 +232,30 @@ extends org.apache.hadoop.security.token.TokenIdentifier</pre>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#readFields(java.io.DataInput)">readFields</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#setExpirationDate(long)">setExpirationDate</a></strong>(long&nbsp;timestamp)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#setIssueDate(long)">setIssueDate</a></strong>(long&nbsp;timestamp)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#setKeyId(int)">setKeyId</a></strong>(int&nbsp;id)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#setSequenceNumber(long)">setSequenceNumber</a></strong>(long&nbsp;seq)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#setUsername(java.lang.String)">setUsername</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#toBytes()">toBytes</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#write(java.io.DataOutput)">write</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;out)</code>&nbsp;</td>
 </tr>
@@ -403,6 +423,15 @@ extends org.apache.hadoop.security.token.TokenIdentifier</pre>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.75">getUsername</a>()</pre>
 </li>
 </ul>
+<a name="setUsername(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setUsername</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.79">setUsername</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+</li>
+</ul>
 <a name="getKeyId()">
 <!--   -->
 </a>
@@ -410,6 +439,15 @@ extends org.apache.hadoop.security.token.TokenIdentifier</pre>
 <li class="blockList">
 <h4>getKeyId</h4>
 <pre>public&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.83">getKeyId</a>()</pre>
+</li>
+</ul>
+<a name="setKeyId(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKeyId</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.87">setKeyId</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getIssueDate()">
@@ -421,6 +459,15 @@ extends org.apache.hadoop.security.token.TokenIdentifier</pre>
 <pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.91">getIssueDate</a>()</pre>
 </li>
 </ul>
+<a name="setIssueDate(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIssueDate</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.95">setIssueDate</a>(long&nbsp;timestamp)</pre>
+</li>
+</ul>
 <a name="getExpirationDate()">
 <!--   -->
 </a>
@@ -430,6 +477,15 @@ extends org.apache.hadoop.security.token.TokenIdentifier</pre>
 <pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.99">getExpirationDate</a>()</pre>
 </li>
 </ul>
+<a name="setExpirationDate(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setExpirationDate</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.103">setExpirationDate</a>(long&nbsp;timestamp)</pre>
+</li>
+</ul>
 <a name="getSequenceNumber()">
 <!--   -->
 </a>
@@ -437,6 +493,15 @@ extends org.apache.hadoop.security.token.TokenIdentifier</pre>
 <li class="blockList">
 <h4>getSequenceNumber</h4>
 <pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.107">getSequenceNumber</a>()</pre>
+</li>
+</ul>
+<a name="setSequenceNumber(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSequenceNumber</h4>
+<pre>void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.html#line.111">setSequenceNumber</a>(long&nbsp;seq)</pre>
 </li>
 </ul>
 <a name="toBytes()">

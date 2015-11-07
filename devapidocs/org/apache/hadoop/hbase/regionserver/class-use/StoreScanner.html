@@ -75,6 +75,10 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.mob.compactions">org.apache.hadoop.hbase.mob.compactions</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -83,6 +87,27 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.mob.compactions">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreScanner</a> in <a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/package-summary.html">org.apache.hadoop.hbase.mob.compactions</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/package-summary.html">org.apache.hadoop.hbase.mob.compactions</a> that return <a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreScanner</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreScanner</a></code></td>
+<td class="colLast"><span class="strong">PartitionedMobCompactor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactor.html#createScanner(java.util.List,%20org.apache.hadoop.hbase.regionserver.ScanType)">createScanner</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact,
+                          <a href="../../../../../../org/apache/hadoop/hbase/regionserver/ScanType.html" title="enum in org.apache.hadoop.hbase.regionserver">ScanType</a>&nbsp;scanType)</code>
+<div class="block">Creates a store scanner.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
 <!--   -->
 </a>
@@ -111,6 +136,13 @@
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ReversedMobStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedMobStoreScanner</a></strong></code>
 <div class="block">ReversedMobStoreScanner extends from ReversedStoreScanner, and is used to support
  reversed scanning in both the memstore and the MOB store.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ReversedStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedStoreScanner</a></strong></code>
+<div class="block">ReversedStoreScanner extends from StoreScanner, and is used to support
+ reversed scanning.</div>
 </td>
 </tr>
 </tbody>

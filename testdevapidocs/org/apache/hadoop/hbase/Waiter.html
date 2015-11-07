@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.FlushCache.html" title="interface in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/Waiter.ExplainingPredicate.html" title="interface in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -62,13 +62,13 @@
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -157,6 +157,37 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  <p/>
  The actual time out value will equal to hbase.test.wait.for.ratio * passed-in timeout</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/Waiter.html#HBASE_WAIT_FOR_RATIO_DEFAULT">HBASE_WAIT_FOR_RATIO_DEFAULT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/Waiter.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static float</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/Waiter.html#waitForRatio">waitForRatio</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private </code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/Waiter.html#Waiter()">Waiter</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -255,10 +286,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/Waiter.html#line.38">LOG</a></pre>
+</li>
+</ul>
 <a name="HBASE_TEST_WAIT_FOR_RATIO">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>HBASE_TEST_WAIT_FOR_RATIO</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/Waiter.html#line.48">HBASE_TEST_WAIT_FOR_RATIO</a></pre>
@@ -269,6 +309,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  <p/>
  The actual time out value will equal to hbase.test.wait.for.ratio * passed-in timeout</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.Waiter.HBASE_TEST_WAIT_FOR_RATIO">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="HBASE_WAIT_FOR_RATIO_DEFAULT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HBASE_WAIT_FOR_RATIO_DEFAULT</h4>
+<pre>private static&nbsp;float <a href="../../../../src-html/org/apache/hadoop/hbase/Waiter.html#line.50">HBASE_WAIT_FOR_RATIO_DEFAULT</a></pre>
+</li>
+</ul>
+<a name="waitForRatio">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>waitForRatio</h4>
+<pre>private static&nbsp;float <a href="../../../../src-html/org/apache/hadoop/hbase/Waiter.html#line.52">waitForRatio</a></pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Waiter()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Waiter</h4>
+<pre>private&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/Waiter.html#line.54">Waiter</a>()</pre>
 </li>
 </ul>
 </li>
@@ -417,7 +492,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.html" title="class in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/TimestampTestBase.FlushCache.html" title="interface in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../org/apache/hadoop/hbase/Waiter.ExplainingPredicate.html" title="interface in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -444,13 +519,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

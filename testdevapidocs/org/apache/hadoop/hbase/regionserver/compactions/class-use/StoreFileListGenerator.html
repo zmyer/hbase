@@ -87,6 +87,69 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StoreFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">StoreFileListGenerator</a> in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">org.apache.hadoop.hbase.regionserver.compactions</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subclasses, and an explanation">
+<caption><span>Subclasses of <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StoreFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">StoreFileListGenerator</a> in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">org.apache.hadoop.hbase.regionserver.compactions</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ConstantSizeFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">ConstantSizeFileListGenerator</a></strong></code>
+<div class="block">Class to generate several lists of StoreFiles that are all the same size.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ExplicitFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">ExplicitFileListGenerator</a></strong></code>
+<div class="block">Class to create list of mock storefiles of specified length.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/GaussianFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">GaussianFileListGenerator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/SemiConstantSizeFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">SemiConstantSizeFileListGenerator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/SinusoidalFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">SinusoidalFileListGenerator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/SpikyFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">SpikyFileListGenerator</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">org.apache.hadoop.hbase.regionserver.compactions</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StoreFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">StoreFileListGenerator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StoreFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">StoreFileListGenerator</a></code></td>
+<td class="colLast"><span class="strong">PerfTestCompactionPolicies.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PerfTestCompactionPolicies.html#generator">generator</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">org.apache.hadoop.hbase.regionserver.compactions</a> with type parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StoreFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">StoreFileListGenerator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StoreFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">StoreFileListGenerator</a>&gt;</code></td>
+<td class="colLast"><span class="strong">PerfTestCompactionPolicies.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PerfTestCompactionPolicies.html#fileGenClass">fileGenClass</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructor parameters in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">org.apache.hadoop.hbase.regionserver.compactions</a> with type arguments of type <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StoreFileListGenerator.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">StoreFileListGenerator</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>

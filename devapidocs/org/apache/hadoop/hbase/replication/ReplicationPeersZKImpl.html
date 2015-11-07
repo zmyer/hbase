@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.replication.ReplicationStateZKBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -144,6 +144,29 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerZKImpl.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerZKImpl</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#peerClusters">peerClusters</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#queuesClient">queuesClient</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#tableCFsNodeName">tableCFsNodeName</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.replication.ReplicationStateZKBase">
 <!--   -->
@@ -186,6 +209,12 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#addExistingPeers()">addExistingPeers</a></strong>()</code>
+<div class="block">A private method used during initialization.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#addPeer(java.lang.String,%20org.apache.hadoop.hbase.replication.ReplicationPeerConfig,%20java.lang.String)">addPeer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
               <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a>&nbsp;peerConfig,
@@ -193,10 +222,35 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <div class="block">Add a new remote slave cluster for replication.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#changePeerState(java.lang.String,%20org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationState.State)">changePeerState</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
+                              org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationState.State&nbsp;state)</code>
+<div class="block">Update the state znode of a peer cluster.</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#checkQueuesDeleted(java.lang.String)">checkQueuesDeleted</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationPeer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#convert(org.apache.hadoop.hbase.replication.ReplicationPeerConfig)">convert</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a>&nbsp;peerConfig)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#convert(org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationPeer)">convert</a></strong>(org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationPeer&nbsp;peer)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#createAndAddPeer(java.lang.String)">createAndAddPeer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>
 <div class="block">Attempt to connect to a new remote slave cluster.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerZKImpl.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerZKImpl</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#createPeer(java.lang.String)">createPeer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>
+<div class="block">Helper method to connect to a peer</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -243,35 +297,43 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#getPeerStateNode(java.lang.String)">getPeerStateNode</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#getPeerTableCFsConfig(java.lang.String)">getPeerTableCFsConfig</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>
 <div class="block">Get the table and column-family list string of the peer from ZK.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#getReplicationPeerConfig(java.lang.String)">getReplicationPeerConfig</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>
 <div class="block">Returns a ReplicationPeerConfig from the znode or null for the given peerId.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#getStatusOfPeer(java.lang.String)">getStatusOfPeer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>
 <div class="block">Get the replication status for the specified connected remote slave cluster.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#getStatusOfPeerFromBackingStore(java.lang.String)">getStatusOfPeerFromBackingStore</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>
 <div class="block">Get the replication status for the specified remote slave cluster, which doesn't
  have to be connected.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#getTableCFs(java.lang.String)">getTableCFs</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>
 <div class="block">Get the table and column-family-list map of the peer.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#getTableCFsNode(java.lang.String)">getTableCFsNode</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -280,25 +342,33 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#parsePeerFrom(byte[])">parsePeerFrom</a></strong>(byte[]&nbsp;bytes)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#peerAdded(java.lang.String)">peerAdded</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#peerRemoved(java.lang.String)">peerRemoved</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#removePeer(java.lang.String)">removePeer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>
 <div class="block">Removes a remote slave cluster and stops the replication to it.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#setPeerTableCFsConfig(java.lang.String,%20java.lang.String)">setPeerTableCFsConfig</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableCFsStr)</code>
 <div class="block">Set the table and column-family list string of the peer to ZK.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#toByteArray(org.apache.hadoop.hbase.replication.ReplicationPeerConfig)">toByteArray</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a>&nbsp;peerConfig)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -323,6 +393,50 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="peerClusters">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>peerClusters</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerZKImpl.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerZKImpl</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.82">peerClusters</a></pre>
+</li>
+</ul>
+<a name="tableCFsNodeName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableCFsNodeName</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.83">tableCFsNodeName</a></pre>
+</li>
+</ul>
+<a name="queuesClient">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>queuesClient</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.84">queuesClient</a></pre>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.86">LOG</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -634,6 +748,20 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <dt><span class="strong">Returns:</span></dt><dd>A list of peer ids</dd></dl>
 </li>
 </ul>
+<a name="addExistingPeers()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addExistingPeers</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.359">addExistingPeers</a>()
+                       throws <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></pre>
+<div class="block">A private method used during initialization. This method attempts to add all registered
+ peer clusters. This method does not set a watch on the peer cluster znodes.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></code></dd></dl>
+</li>
+</ul>
 <a name="peerAdded(java.lang.String)">
 <!--   -->
 </a>
@@ -665,7 +793,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <a name="createAndAddPeer(java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>createAndAddPeer</h4>
 <pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.391">createAndAddPeer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)
@@ -674,6 +802,111 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>peerId</code> - a short that identifies the cluster</dd>
 <dt><span class="strong">Returns:</span></dt><dd>true if a new connection was made, false if no new connection was made.</dd>
 <dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getTableCFsNode(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTableCFsNode</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.419">getTableCFsNode</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</pre>
+</li>
+</ul>
+<a name="getPeerStateNode(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPeerStateNode</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.423">getPeerStateNode</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</pre>
+</li>
+</ul>
+<a name="changePeerState(java.lang.String, org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationState.State)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>changePeerState</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.432">changePeerState</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id,
+                   org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationState.State&nbsp;state)
+                      throws <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></pre>
+<div class="block">Update the state znode of a peer cluster.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>id</code> - </dd><dd><code>state</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createPeer(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createPeer</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerZKImpl.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerZKImpl</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.460">createPeer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)
+                                  throws <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></pre>
+<div class="block">Helper method to connect to a peer</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>peerId</code> - peer's identifier</dd>
+<dt><span class="strong">Returns:</span></dt><dd>object representing the peer</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></code></dd></dl>
+</li>
+</ul>
+<a name="parsePeerFrom(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parsePeerFrom</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.490">parsePeerFrom</a>(byte[]&nbsp;bytes)
+                                            throws <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html" title="class in org.apache.hadoop.hbase.exceptions">DeserializationException</a></pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>bytes</code> - Content of a peer znode.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>ClusterKey parsed from the passed bytes.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html" title="class in org.apache.hadoop.hbase.exceptions">DeserializationException</a></code></dd></dl>
+</li>
+</ul>
+<a name="convert(org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationPeer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>convert</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.512">convert</a>(org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationPeer&nbsp;peer)</pre>
+</li>
+</ul>
+<a name="convert(org.apache.hadoop.hbase.replication.ReplicationPeerConfig)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>convert</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationPeer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.531">convert</a>(<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a>&nbsp;peerConfig)</pre>
+</li>
+</ul>
+<a name="toByteArray(org.apache.hadoop.hbase.replication.ReplicationPeerConfig)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toByteArray</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.563">toByteArray</a>(<a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication">ReplicationPeerConfig</a>&nbsp;peerConfig)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>peerConfig</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>Serialized protobuf of <code>peerConfig</code> with pb magic prefix prepended suitable
+         for use as content of a this.peersZNode; i.e. the content of PEER_ID znode under
+         /hbase/replication/peers/PEER_ID</dd></dl>
+</li>
+</ul>
+<a name="checkQueuesDeleted(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>checkQueuesDeleted</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationPeersZKImpl.html#line.568">checkQueuesDeleted</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)
+                         throws <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></code></dd></dl>
 </li>
 </ul>
@@ -729,13 +962,13 @@ implements <a href="../../../../../org/apache/hadoop/hbase/replication/Replicati
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.replication.ReplicationStateZKBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

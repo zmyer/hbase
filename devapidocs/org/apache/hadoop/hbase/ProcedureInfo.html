@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -106,6 +106,65 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#clientAckTime">clientAckTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.ErrorHandlingProtos.ForeignExceptionMessage</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#exception">exception</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#lastUpdate">lastUpdate</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../org/apache/hadoop/hbase/util/NonceKey.html" title="class in org.apache.hadoop.hbase.util">NonceKey</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#nonceKey">nonceKey</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#parentId">parentId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#procId">procId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#procName">procName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#procOwner">procOwner</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureState</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#procState">procState</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#result">result</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ProcedureInfo.html#startTime">startTime</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -268,6 +327,113 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="procId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>procId</h4>
+<pre>private final&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.39">procId</a></pre>
+</li>
+</ul>
+<a name="procName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>procName</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.40">procName</a></pre>
+</li>
+</ul>
+<a name="procOwner">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>procOwner</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.41">procOwner</a></pre>
+</li>
+</ul>
+<a name="procState">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>procState</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureState <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.42">procState</a></pre>
+</li>
+</ul>
+<a name="parentId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parentId</h4>
+<pre>private final&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.43">parentId</a></pre>
+</li>
+</ul>
+<a name="exception">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exception</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.protobuf.generated.ErrorHandlingProtos.ForeignExceptionMessage <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.44">exception</a></pre>
+</li>
+</ul>
+<a name="lastUpdate">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastUpdate</h4>
+<pre>private final&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.45">lastUpdate</a></pre>
+</li>
+</ul>
+<a name="startTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startTime</h4>
+<pre>private final&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.46">startTime</a></pre>
+</li>
+</ul>
+<a name="result">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>result</h4>
+<pre>private final&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.47">result</a></pre>
+</li>
+</ul>
+<a name="nonceKey">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>nonceKey</h4>
+<pre>private&nbsp;<a href="../../../../org/apache/hadoop/hbase/util/NonceKey.html" title="class in org.apache.hadoop.hbase.util">NonceKey</a> <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.49">nonceKey</a></pre>
+</li>
+</ul>
+<a name="clientAckTime">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>clientAckTime</h4>
+<pre>private&nbsp;long <a href="../../../../src-html/org/apache/hadoop/hbase/ProcedureInfo.html#line.50">clientAckTime</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -606,13 +772,13 @@ public static&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

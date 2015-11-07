@@ -93,7 +93,7 @@
 <a class="jxr_linenumber" name="83" href="#83">83</a>    }
 <a class="jxr_linenumber" name="84" href="#84">84</a>  
 <a class="jxr_linenumber" name="85" href="#85">85</a>    @Override
-<a class="jxr_linenumber" name="86" href="#86">86</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> state)
+<a class="jxr_linenumber" name="86" href="#86">86</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, DeleteColumnFamilyState state)
 <a class="jxr_linenumber" name="87" href="#87">87</a>        <strong class="jxr_keyword">throws</strong> InterruptedException {
 <a class="jxr_linenumber" name="88" href="#88">88</a>      <strong class="jxr_keyword">if</strong> (isTraceEnabled()) {
 <a class="jxr_linenumber" name="89" href="#89">89</a>        LOG.trace(<strong class="jxr_keyword">this</strong> + <span class="jxr_string">" execute state="</span> + state);
@@ -142,7 +142,7 @@
 <a class="jxr_linenumber" name="132" href="#132">132</a>   }
 <a class="jxr_linenumber" name="133" href="#133">133</a> 
 <a class="jxr_linenumber" name="134" href="#134">134</a>   @Override
-<a class="jxr_linenumber" name="135" href="#135">135</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> state)
+<a class="jxr_linenumber" name="135" href="#135">135</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> DeleteColumnFamilyState state)
 <a class="jxr_linenumber" name="136" href="#136">136</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="137" href="#137">137</a>     <strong class="jxr_keyword">if</strong> (isTraceEnabled()) {
 <a class="jxr_linenumber" name="138" href="#138">138</a>       LOG.trace(<strong class="jxr_keyword">this</strong> + <span class="jxr_string">" rollback state="</span> + state);
@@ -181,22 +181,22 @@
 <a class="jxr_linenumber" name="171" href="#171">171</a>   }
 <a class="jxr_linenumber" name="172" href="#172">172</a> 
 <a class="jxr_linenumber" name="173" href="#173">173</a>   @Override
-<a class="jxr_linenumber" name="174" href="#174">174</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
+<a class="jxr_linenumber" name="174" href="#174">174</a>   <strong class="jxr_keyword">protected</strong> DeleteColumnFamilyState getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
 <a class="jxr_linenumber" name="175" href="#175">175</a>     <strong class="jxr_keyword">return</strong> DeleteColumnFamilyState.valueOf(stateId);
 <a class="jxr_linenumber" name="176" href="#176">176</a>   }
 <a class="jxr_linenumber" name="177" href="#177">177</a> 
 <a class="jxr_linenumber" name="178" href="#178">178</a>   @Override
-<a class="jxr_linenumber" name="179" href="#179">179</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> state) {
+<a class="jxr_linenumber" name="179" href="#179">179</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> DeleteColumnFamilyState state) {
 <a class="jxr_linenumber" name="180" href="#180">180</a>     <strong class="jxr_keyword">return</strong> state.getNumber();
 <a class="jxr_linenumber" name="181" href="#181">181</a>   }
 <a class="jxr_linenumber" name="182" href="#182">182</a> 
 <a class="jxr_linenumber" name="183" href="#183">183</a>   @Override
-<a class="jxr_linenumber" name="184" href="#184">184</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> getInitialState() {
+<a class="jxr_linenumber" name="184" href="#184">184</a>   <strong class="jxr_keyword">protected</strong> DeleteColumnFamilyState getInitialState() {
 <a class="jxr_linenumber" name="185" href="#185">185</a>     <strong class="jxr_keyword">return</strong> DeleteColumnFamilyState.DELETE_COLUMN_FAMILY_PREPARE;
 <a class="jxr_linenumber" name="186" href="#186">186</a>   }
 <a class="jxr_linenumber" name="187" href="#187">187</a> 
 <a class="jxr_linenumber" name="188" href="#188">188</a>   @Override
-<a class="jxr_linenumber" name="189" href="#189">189</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setNextState(<a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> state) {
+<a class="jxr_linenumber" name="189" href="#189">189</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setNextState(DeleteColumnFamilyState state) {
 <a class="jxr_linenumber" name="190" href="#190">190</a>     <strong class="jxr_keyword">if</strong> (aborted.get() &amp;&amp; isRollbackSupported(state)) {
 <a class="jxr_linenumber" name="191" href="#191">191</a>       setAbortFailure(<span class="jxr_string">"delete-columnfamily"</span>, <span class="jxr_string">"abort requested"</span>);
 <a class="jxr_linenumber" name="192" href="#192">192</a>     } <strong class="jxr_keyword">else</strong> {
@@ -312,7 +312,7 @@
 <a class="jxr_linenumber" name="302" href="#302">302</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="303" href="#303">303</a> <em class="jxr_javadoccomment">   * @throws InterruptedException</em>
 <a class="jxr_linenumber" name="304" href="#304">304</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="305" href="#305">305</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> preDelete(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> state)
+<a class="jxr_linenumber" name="305" href="#305">305</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> preDelete(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> DeleteColumnFamilyState state)
 <a class="jxr_linenumber" name="306" href="#306">306</a>       <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
 <a class="jxr_linenumber" name="307" href="#307">307</a>     runCoprocessorAction(env, state);
 <a class="jxr_linenumber" name="308" href="#308">308</a>   }
@@ -364,7 +364,7 @@
 <a class="jxr_linenumber" name="354" href="#354">354</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="355" href="#355">355</a> <em class="jxr_javadoccomment">   * @throws InterruptedException</em>
 <a class="jxr_linenumber" name="356" href="#356">356</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="357" href="#357">357</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> postDelete(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> state)
+<a class="jxr_linenumber" name="357" href="#357">357</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> postDelete(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> DeleteColumnFamilyState state)
 <a class="jxr_linenumber" name="358" href="#358">358</a>       <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
 <a class="jxr_linenumber" name="359" href="#359">359</a>     runCoprocessorAction(env, state);
 <a class="jxr_linenumber" name="360" href="#360">360</a>   }
@@ -412,7 +412,7 @@
 <a class="jxr_linenumber" name="402" href="#402">402</a> <em class="jxr_javadoccomment">   * @throws InterruptedException</em>
 <a class="jxr_linenumber" name="403" href="#403">403</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="404" href="#404">404</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> runCoprocessorAction(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env,
-<a class="jxr_linenumber" name="405" href="#405">405</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> state) <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
+<a class="jxr_linenumber" name="405" href="#405">405</a>       <strong class="jxr_keyword">final</strong> DeleteColumnFamilyState state) <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
 <a class="jxr_linenumber" name="406" href="#406">406</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html">MasterCoprocessorHost</a> cpHost = env.getMasterCoprocessorHost();
 <a class="jxr_linenumber" name="407" href="#407">407</a>     <strong class="jxr_keyword">if</strong> (cpHost != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="408" href="#408">408</a>       user.doAs(<strong class="jxr_keyword">new</strong> PrivilegedExceptionAction&lt;Void&gt;() {
@@ -437,7 +437,7 @@
 <a class="jxr_linenumber" name="427" href="#427">427</a>   <em class="jxr_comment">/*</em>
 <a class="jxr_linenumber" name="428" href="#428">428</a> <em class="jxr_comment">   * Check whether we are in the state that can be rollback</em>
 <a class="jxr_linenumber" name="429" href="#429">429</a> <em class="jxr_comment">   */</em>
-<a class="jxr_linenumber" name="430" href="#430">430</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> isRollbackSupported(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DeleteColumnFamilyState</a> state) {
+<a class="jxr_linenumber" name="430" href="#430">430</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> isRollbackSupported(<strong class="jxr_keyword">final</strong> DeleteColumnFamilyState state) {
 <a class="jxr_linenumber" name="431" href="#431">431</a>     <strong class="jxr_keyword">switch</strong> (state) {
 <a class="jxr_linenumber" name="432" href="#432">432</a>     <strong class="jxr_keyword">case</strong> DELETE_COLUMN_FAMILY_REOPEN_ALL_REGIONS:
 <a class="jxr_linenumber" name="433" href="#433">433</a>     <strong class="jxr_keyword">case</strong> DELETE_COLUMN_FAMILY_POST_OPERATION:

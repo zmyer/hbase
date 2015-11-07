@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.util.test.LoadTestDataGenerator">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -118,6 +118,29 @@ extends <a href="../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGener
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#COLUMN_NAMES">COLUMN_NAMES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#numPartitions">numPartitions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#PAD_TO">PAD_TO</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#PREFIX_PAD_TO">PREFIX_PAD_TO</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.util.test.LoadTestDataGenerator">
 <!--   -->
@@ -186,6 +209,10 @@ extends <a href="../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGener
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#getPrefix(long)">getPrefix</a></strong>(long&nbsp;i)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#verify(byte[],%20byte[],%20byte[],%20byte[])">verify</a></strong>(byte[]&nbsp;rowKey,
             byte[]&nbsp;cf,
@@ -195,7 +222,7 @@ extends <a href="../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGener
  <a href="../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html#generateValue(byte[],%20byte[],%20byte[])"><code>LoadTestDataGenerator.generateValue(byte[], byte[], byte[])</code></a></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#verify(byte[],%20byte[],%20java.util.Set)">verify</a></strong>(byte[]&nbsp;rowKey,
             byte[]&nbsp;cf,
@@ -227,6 +254,52 @@ extends <a href="../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGener
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="COLUMN_NAMES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COLUMN_NAMES</h4>
+<pre>private static final&nbsp;byte[][] <a href="../../../../src-html/org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#line.303">COLUMN_NAMES</a></pre>
+</li>
+</ul>
+<a name="PAD_TO">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PAD_TO</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#line.304">PAD_TO</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.PAD_TO">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PREFIX_PAD_TO">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PREFIX_PAD_TO</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#line.305">PREFIX_PAD_TO</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.PREFIX_PAD_TO">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="numPartitions">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>numPartitions</h4>
+<pre>private final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#line.307">numPartitions</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -266,6 +339,15 @@ extends <a href="../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGener
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html#getDeterministicUniqueKey(long)">getDeterministicUniqueKey</a></code>&nbsp;in class&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html" title="class in org.apache.hadoop.hbase.util.test">LoadTestDataGenerator</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>keyBase</code> - Base number for a key, such as a loop counter.</dd></dl>
+</li>
+</ul>
+<a name="getPrefix(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPrefix</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/StripeCompactionsPerformanceEvaluation.SeqShardedDataGenerator.html#line.320">getPrefix</a>(long&nbsp;i)</pre>
 </li>
 </ul>
 <a name="getColumnFamilies()">
@@ -409,13 +491,13 @@ extends <a href="../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGener
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.util.test.LoadTestDataGenerator">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

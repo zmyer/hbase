@@ -103,12 +103,24 @@
 <td class="colLast"><span class="strong">WALCellCodec.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCellCodec.html#compression">compression</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a></code></td>
+<td class="colLast"><span class="strong">WALCellCodec.CompressedKvEncoder.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCellCodec.CompressedKvEncoder.html#compression">compression</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a></code></td>
+<td class="colLast"><span class="strong">WALCellCodec.CompressedKvDecoder.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCellCodec.CompressedKvDecoder.html#compression">compression</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a></code></td>
 <td class="colLast"><span class="strong">ReaderBase.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/ReaderBase.html#compressionContext">compressionContext</a></strong></code>
 <div class="block">Compression context to use reading.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a></code></td>
+<td class="colLast"><span class="strong">WALEdit.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#compressionContext">compressionContext</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a></code></td>
 <td class="colLast"><span class="strong">WriterBase.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/WriterBase.html#compressionContext">compressionContext</a></strong></code>&nbsp;</td>
 </tr>
@@ -150,8 +162,25 @@
                 <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a>&nbsp;compressionContext)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a></code></td>
+<td class="colLast"><span class="strong">KeyValueCompression.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/KeyValueCompression.html#readKV(java.io.DataInput,%20org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">readKV</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in,
+            <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a>&nbsp;readContext)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block">Uncompresses a KeyValue from a DataInput and returns it.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">WALEdit.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html#setCompressionContext(org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">setCompressionContext</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a>&nbsp;compressionContext)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><span class="strong">KeyValueCompression.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/KeyValueCompression.html#writeKV(java.io.DataOutput,%20org.apache.hadoop.hbase.KeyValue,%20org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">writeKV</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;out,
+              <a href="../../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&nbsp;keyVal,
+              <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a>&nbsp;writeContext)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block">Compresses and writes ourKV to out, a DataOutput.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -164,6 +193,14 @@
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/SecureWALCellCodec.html#SecureWALCellCodec(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">SecureWALCellCodec</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                     <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a>&nbsp;compression)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCellCodec.CompressedKvDecoder.html#WALCellCodec.CompressedKvDecoder(java.io.InputStream,%20org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">WALCellCodec.CompressedKvDecoder</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in,
+                                                                <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a>&nbsp;compression)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCellCodec.CompressedKvEncoder.html#WALCellCodec.CompressedKvEncoder(java.io.OutputStream,%20org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">WALCellCodec.CompressedKvEncoder</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out,
+                                                                <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a>&nbsp;compression)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCellCodec.html#WALCellCodec(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">WALCellCodec</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,

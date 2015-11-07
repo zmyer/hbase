@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -105,6 +105,65 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.HColumnDescriptor[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#families">families</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#familyAname">familyAname</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#familyBname">familyBname</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelper.html" title="interface in org.apache.hadoop.hbase.test">MetricsAssertHelper</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#metricsHelper">metricsHelper</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#qualifierAname">qualifierAname</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#qualifierBname">qualifierBname</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#tableAname">tableAname</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#UTIL">UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#valueAname">valueAname</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#valueBname">valueBname</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -148,102 +207,117 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#beforeClass()">beforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.thrift2.ThriftHBaseServiceHandler</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#createHandler()">createHandler</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.thrift.ThriftMetrics</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#getMetrics(org.apache.hadoop.conf.Configuration)">getMetrics</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#pad(int,%20byte)">pad</a></strong>(int&nbsp;n,
+      byte&nbsp;pad)</code>
+<div class="block">Padding numbers to make comparison of sort order easier in a for loop</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#setup()">setup</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testAppend()">testAppend</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testAttribute()">testAttribute</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testCheckAndDelete()">testCheckAndDelete</a></strong>()</code>
 <div class="block">check that checkAndDelete fails if the cell does not exist, then put in the cell, then
  check that the checkAndDelete succeeds.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testCheckAndPut()">testCheckAndPut</a></strong>()</code>
 <div class="block">check that checkAndPut fails if the cell does not exist, then put in the cell, then check
  that the checkAndPut succeeds.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testDelete()">testDelete</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testDeleteAllTimestamps()">testDeleteAllTimestamps</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testDeleteMultiple()">testDeleteMultiple</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testDeleteSingleTimestamp()">testDeleteSingleTimestamp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testDurability()">testDurability</a></strong>()</code>
 <div class="block">Create TPut, TDelete , TIncrement objects, set durability then call ThriftUtility
  functions to get Put , Delete and Increment respectively.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testExists()">testExists</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testFilterRegistration()">testFilterRegistration</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testGetScannerResults()">testGetScannerResults</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testIncrement()">testIncrement</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testMetrics()">testMetrics</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testMutateRow()">testMutateRow</a></strong>()</code>
 <div class="block">Put valueA to a row, make sure put has happened, then create a mutation object to put valueB
  and delete ValueA, then check that the row value is only valueB.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testPutGet()">testPutGet</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testPutGetMultiple()">testPutGetMultiple</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testReverseScan()">testReverseScan</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testScan()">testScan</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testScanWithBatchSize()">testScanWithBatchSize</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#testScanWithFilter()">testScanWithFilter</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -263,6 +337,113 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.91">LOG</a></pre>
+</li>
+</ul>
+<a name="UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UTIL</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.92">UTIL</a></pre>
+</li>
+</ul>
+<a name="tableAname">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableAname</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.95">tableAname</a></pre>
+</li>
+</ul>
+<a name="familyAname">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>familyAname</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.96">familyAname</a></pre>
+</li>
+</ul>
+<a name="familyBname">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>familyBname</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.97">familyBname</a></pre>
+</li>
+</ul>
+<a name="qualifierAname">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qualifierAname</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.98">qualifierAname</a></pre>
+</li>
+</ul>
+<a name="qualifierBname">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qualifierBname</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.99">qualifierBname</a></pre>
+</li>
+</ul>
+<a name="valueAname">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>valueAname</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.100">valueAname</a></pre>
+</li>
+</ul>
+<a name="valueBname">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>valueBname</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.101">valueBname</a></pre>
+</li>
+</ul>
+<a name="families">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>families</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.HColumnDescriptor[] <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.102">families</a></pre>
+</li>
+</ul>
+<a name="metricsHelper">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>metricsHelper</h4>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/test/MetricsAssertHelper.html" title="interface in org.apache.hadoop.hbase.test">MetricsAssertHelper</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.108">metricsHelper</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -330,6 +511,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="createHandler()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createHandler</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.thrift2.ThriftHBaseServiceHandler&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.156">createHandler</a>()
+                                                                         throws org.apache.thrift.TException</pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>org.apache.thrift.TException</code></dd></dl>
 </li>
 </ul>
 <a name="testExists()">
@@ -506,6 +699,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="pad(int, byte)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pad</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.694">pad</a>(int&nbsp;n,
+         byte&nbsp;pad)</pre>
+<div class="block">Padding numbers to make comparison of sort order easier in a for loop</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>n</code> - The number to pad.</dd><dd><code>pad</code> - The length to pad up to.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The padded number as a string.</dd></dl>
+</li>
+</ul>
 <a name="testScanWithBatchSize()">
 <!--   -->
 </a>
@@ -550,6 +756,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>testMetrics</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.840">testMetrics</a>()
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getMetrics(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMetrics</h4>
+<pre>private static&nbsp;org.apache.hadoop.hbase.thrift.ThriftMetrics&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/TestThriftHBaseServiceHandler.html#line.865">getMetrics</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+                                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -647,13 +865,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

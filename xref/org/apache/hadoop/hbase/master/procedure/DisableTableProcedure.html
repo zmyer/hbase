@@ -131,7 +131,7 @@
 <a class="jxr_linenumber" name="121" href="#121">121</a>   }
 <a class="jxr_linenumber" name="122" href="#122">122</a> 
 <a class="jxr_linenumber" name="123" href="#123">123</a>   @Override
-<a class="jxr_linenumber" name="124" href="#124">124</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DisableTableState</a> state)
+<a class="jxr_linenumber" name="124" href="#124">124</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html">Flow</a> executeFromState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> DisableTableState state)
 <a class="jxr_linenumber" name="125" href="#125">125</a>       <strong class="jxr_keyword">throws</strong> InterruptedException {
 <a class="jxr_linenumber" name="126" href="#126">126</a>     <strong class="jxr_keyword">if</strong> (isTraceEnabled()) {
 <a class="jxr_linenumber" name="127" href="#127">127</a>       LOG.trace(<strong class="jxr_keyword">this</strong> + <span class="jxr_string">" execute state="</span> + state);
@@ -180,7 +180,7 @@
 <a class="jxr_linenumber" name="170" href="#170">170</a>   }
 <a class="jxr_linenumber" name="171" href="#171">171</a> 
 <a class="jxr_linenumber" name="172" href="#172">172</a>   @Override
-<a class="jxr_linenumber" name="173" href="#173">173</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DisableTableState</a> state)
+<a class="jxr_linenumber" name="173" href="#173">173</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> rollbackState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> DisableTableState state)
 <a class="jxr_linenumber" name="174" href="#174">174</a>       <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="175" href="#175">175</a>     <strong class="jxr_keyword">if</strong> (state == DisableTableState.DISABLE_TABLE_PREPARE) {
 <a class="jxr_linenumber" name="176" href="#176">176</a>       <em class="jxr_comment">// nothing to rollback, prepare-disable is just table-state checks.</em>
@@ -194,22 +194,22 @@
 <a class="jxr_linenumber" name="184" href="#184">184</a>   }
 <a class="jxr_linenumber" name="185" href="#185">185</a> 
 <a class="jxr_linenumber" name="186" href="#186">186</a>   @Override
-<a class="jxr_linenumber" name="187" href="#187">187</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DisableTableState</a> getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
+<a class="jxr_linenumber" name="187" href="#187">187</a>   <strong class="jxr_keyword">protected</strong> DisableTableState getState(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> stateId) {
 <a class="jxr_linenumber" name="188" href="#188">188</a>     <strong class="jxr_keyword">return</strong> DisableTableState.valueOf(stateId);
 <a class="jxr_linenumber" name="189" href="#189">189</a>   }
 <a class="jxr_linenumber" name="190" href="#190">190</a> 
 <a class="jxr_linenumber" name="191" href="#191">191</a>   @Override
-<a class="jxr_linenumber" name="192" href="#192">192</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DisableTableState</a> state) {
+<a class="jxr_linenumber" name="192" href="#192">192</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getStateId(<strong class="jxr_keyword">final</strong> DisableTableState state) {
 <a class="jxr_linenumber" name="193" href="#193">193</a>     <strong class="jxr_keyword">return</strong> state.getNumber();
 <a class="jxr_linenumber" name="194" href="#194">194</a>   }
 <a class="jxr_linenumber" name="195" href="#195">195</a> 
 <a class="jxr_linenumber" name="196" href="#196">196</a>   @Override
-<a class="jxr_linenumber" name="197" href="#197">197</a>   <strong class="jxr_keyword">protected</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DisableTableState</a> getInitialState() {
+<a class="jxr_linenumber" name="197" href="#197">197</a>   <strong class="jxr_keyword">protected</strong> DisableTableState getInitialState() {
 <a class="jxr_linenumber" name="198" href="#198">198</a>     <strong class="jxr_keyword">return</strong> DisableTableState.DISABLE_TABLE_PREPARE;
 <a class="jxr_linenumber" name="199" href="#199">199</a>   }
 <a class="jxr_linenumber" name="200" href="#200">200</a> 
 <a class="jxr_linenumber" name="201" href="#201">201</a>   @Override
-<a class="jxr_linenumber" name="202" href="#202">202</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setNextState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DisableTableState</a> state) {
+<a class="jxr_linenumber" name="202" href="#202">202</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> setNextState(<strong class="jxr_keyword">final</strong> DisableTableState state) {
 <a class="jxr_linenumber" name="203" href="#203">203</a>     <strong class="jxr_keyword">if</strong> (aborted.get()) {
 <a class="jxr_linenumber" name="204" href="#204">204</a>       setAbortFailure(<span class="jxr_string">"disable-table"</span>, <span class="jxr_string">"abort requested"</span>);
 <a class="jxr_linenumber" name="205" href="#205">205</a>     } <strong class="jxr_keyword">else</strong> {
@@ -326,7 +326,7 @@
 <a class="jxr_linenumber" name="316" href="#316">316</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="317" href="#317">317</a> <em class="jxr_javadoccomment">   * @throws InterruptedException</em>
 <a class="jxr_linenumber" name="318" href="#318">318</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="319" href="#319">319</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> preDisable(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DisableTableState</a> state)
+<a class="jxr_linenumber" name="319" href="#319">319</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> preDisable(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> DisableTableState state)
 <a class="jxr_linenumber" name="320" href="#320">320</a>       <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
 <a class="jxr_linenumber" name="321" href="#321">321</a>     runCoprocessorAction(env, state);
 <a class="jxr_linenumber" name="322" href="#322">322</a>   }
@@ -444,7 +444,7 @@
 <a class="jxr_linenumber" name="434" href="#434">434</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="435" href="#435">435</a> <em class="jxr_javadoccomment">   * @throws InterruptedException</em>
 <a class="jxr_linenumber" name="436" href="#436">436</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="437" href="#437">437</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> postDisable(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DisableTableState</a> state)
+<a class="jxr_linenumber" name="437" href="#437">437</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> postDisable(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> DisableTableState state)
 <a class="jxr_linenumber" name="438" href="#438">438</a>       <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
 <a class="jxr_linenumber" name="439" href="#439">439</a>     runCoprocessorAction(env, state);
 <a class="jxr_linenumber" name="440" href="#440">440</a>   }
@@ -468,7 +468,7 @@
 <a class="jxr_linenumber" name="458" href="#458">458</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="459" href="#459">459</a> <em class="jxr_javadoccomment">   * @throws InterruptedException</em>
 <a class="jxr_linenumber" name="460" href="#460">460</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="461" href="#461">461</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> runCoprocessorAction(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProcedureProtos.html">DisableTableState</a> state)
+<a class="jxr_linenumber" name="461" href="#461">461</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> runCoprocessorAction(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env, <strong class="jxr_keyword">final</strong> DisableTableState state)
 <a class="jxr_linenumber" name="462" href="#462">462</a>       <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
 <a class="jxr_linenumber" name="463" href="#463">463</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html">MasterCoprocessorHost</a> cpHost = env.getMasterCoprocessorHost();
 <a class="jxr_linenumber" name="464" href="#464">464</a>     <strong class="jxr_keyword">if</strong> (cpHost != <strong class="jxr_keyword">null</strong>) {

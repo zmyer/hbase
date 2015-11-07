@@ -118,16 +118,40 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#COLUMN_FAMILY">COLUMN_FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#COLUMN_FAMILY_BYTES">COLUMN_FAMILY_BYTES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#CONF">CONF</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#dir">dir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>org.junit.rules.TestName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#name">name</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#region">region</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.TableName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#tableName">tableName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -162,21 +186,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#getName()">getName</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static org.apache.hadoop.hbase.regionserver.HRegion</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#initHRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20org.apache.hadoop.hbase.wal.WAL)">initHRegion</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
                       byte[]&nbsp;startKey,
                       byte[]&nbsp;stopKey,
                       org.apache.hadoop.hbase.wal.WAL&nbsp;wal)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#setup()">setup</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#tearDown()">tearDown</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#testLockupAroundBadAssignSync()">testLockupAroundBadAssignSync</a></strong>()</code>
 <div class="block">Reproduce locking up that happens when we get an exceptions appending and syncing.</div>
@@ -204,6 +232,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#line.65">LOG</a></pre>
+</li>
+</ul>
 <a name="name">
 <!--   -->
 </a>
@@ -213,6 +250,43 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;org.junit.rules.TestName <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#line.66">name</a></pre>
 </li>
 </ul>
+<a name="COLUMN_FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COLUMN_FAMILY</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#line.68">COLUMN_FAMILY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestFailedAppendAndSync.COLUMN_FAMILY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="COLUMN_FAMILY_BYTES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COLUMN_FAMILY_BYTES</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#line.69">COLUMN_FAMILY_BYTES</a></pre>
+</li>
+</ul>
+<a name="region">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>region</h4>
+<pre>org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#line.71">region</a></pre>
+</li>
+</ul>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#line.73">TEST_UTIL</a></pre>
+</li>
+</ul>
 <a name="CONF">
 <!--   -->
 </a>
@@ -220,6 +294,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>CONF</h4>
 <pre>public static&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#line.74">CONF</a></pre>
+</li>
+</ul>
+<a name="dir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dir</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#line.75">dir</a></pre>
 </li>
 </ul>
 <a name="tableName">
@@ -278,6 +361,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestFailedAppendAndSync.html#line.97">getName</a>()</pre>
 </li>
 </ul>
 <a name="testLockupAroundBadAssignSync()">

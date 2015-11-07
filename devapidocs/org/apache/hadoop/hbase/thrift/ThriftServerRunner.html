@@ -100,7 +100,7 @@
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public class <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.142">ThriftServerRunner</a>
+public class <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.141">ThriftServerRunner</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a></pre>
 <div class="block">ThriftServerRunner - this class starts up a Thrift server which implements
@@ -131,6 +131,12 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.ImplType.html" title="enum in org.apache.hadoop.hbase.thrift">ThriftServerRunner.ImplType</a></strong></code>
+<div class="block">An enum of server implementation selections</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.ResultScannerWrapper.html" title="class in org.apache.hadoop.hbase.thrift">ThriftServerRunner.ResultScannerWrapper</a></strong></code>&nbsp;</td>
 </tr>
@@ -150,12 +156,138 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#BACKLOG_CONF_KEY">BACKLOG_CONF_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#BIND_CONF_KEY">BIND_CONF_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#COALESCE_INC_KEY">COALESCE_INC_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#COMPACT_CONF_KEY">COMPACT_CONF_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#DEFAULT_BIND_ADDR">DEFAULT_BIND_ADDR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#DEFAULT_LISTEN_PORT">DEFAULT_LISTEN_PORT</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#doAsEnabled">doAsEnabled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#FRAMED_CONF_KEY">FRAMED_CONF_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.thrift.generated.Hbase.Iface</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#handler">handler</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.HBaseHandler.html" title="class in org.apache.hadoop.hbase.thrift">ThriftServerRunner.HBaseHandler</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#hbaseHandler">hbaseHandler</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#host">host</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#HREGION_VERSION">HREGION_VERSION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#HTTP_MAX_THREADS">HTTP_MAX_THREADS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#HTTP_MIN_THREADS">HTTP_MIN_THREADS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.mortbay.jetty.Server</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#httpServer">httpServer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#listenPort">listenPort</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#MAX_FRAME_SIZE_CONF_KEY">MAX_FRAME_SIZE_CONF_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftMetrics.html" title="class in org.apache.hadoop.hbase.thrift">ThriftMetrics</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#metrics">metrics</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#PORT_CONF_KEY">PORT_CONF_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#qop">qop</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.security.UserGroupInformation</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#realUser">realUser</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#securityEnabled">securityEnabled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#SERVER_TYPE_CONF_KEY">SERVER_TYPE_CONF_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#THRIFT_QOP_KEY">THRIFT_QOP_KEY</a></strong></code>
+<div class="block">Thrift quality of protection configuration key.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#THRIFT_SSL_ENABLED">THRIFT_SSL_ENABLED</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#THRIFT_SSL_KEYSTORE_KEYPASSWORD">THRIFT_SSL_KEYSTORE_KEYPASSWORD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#THRIFT_SSL_KEYSTORE_PASSWORD">THRIFT_SSL_KEYSTORE_PASSWORD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#THRIFT_SSL_KEYSTORE_STORE">THRIFT_SSL_KEYSTORE_STORE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#THRIFT_SUPPORT_PROXYUSER">THRIFT_SUPPORT_PROXYUSER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) org.apache.thrift.server.TServer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#tserver">tserver</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#USE_HTTP_CONF_KEY">USE_HTTP_CONF_KEY</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -190,14 +322,40 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#addAttributes(org.apache.hadoop.hbase.client.OperationWithAttributes,%20java.util.Map)">addAttributes</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttributes.html" title="class in org.apache.hadoop.hbase.client">OperationWithAttributes</a>&nbsp;op,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&gt;&nbsp;attributes)</code>
+<div class="block">Adds all the attributes into the Operation object</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#createExecutor(java.util.concurrent.BlockingQueue,%20int)">createExecutor</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&gt;&nbsp;callQueue,
+                            int&nbsp;workerThreads)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#getBindAddress(org.apache.hadoop.conf.Configuration)">getBindAddress</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#registerFilters(org.apache.hadoop.conf.Configuration)">registerFilters</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#run()">run</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#setupHTTPServer()">setupHTTPServer</a></strong>()</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#setupServer()">setupServer</a></strong>()</code>
+<div class="block">Setting up the thrift TServer</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#shutdown()">shutdown</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -223,24 +381,328 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.143">LOG</a></pre>
+</li>
+</ul>
+<a name="SERVER_TYPE_CONF_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SERVER_TYPE_CONF_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.145">SERVER_TYPE_CONF_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.SERVER_TYPE_CONF_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="BIND_CONF_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BIND_CONF_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.148">BIND_CONF_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.BIND_CONF_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="COMPACT_CONF_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COMPACT_CONF_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.149">COMPACT_CONF_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.COMPACT_CONF_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FRAMED_CONF_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FRAMED_CONF_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.150">FRAMED_CONF_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.FRAMED_CONF_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MAX_FRAME_SIZE_CONF_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MAX_FRAME_SIZE_CONF_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.151">MAX_FRAME_SIZE_CONF_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.MAX_FRAME_SIZE_CONF_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PORT_CONF_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PORT_CONF_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.152">PORT_CONF_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.PORT_CONF_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="COALESCE_INC_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COALESCE_INC_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.153">COALESCE_INC_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.COALESCE_INC_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="USE_HTTP_CONF_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>USE_HTTP_CONF_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.154">USE_HTTP_CONF_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.USE_HTTP_CONF_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="HTTP_MIN_THREADS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HTTP_MIN_THREADS</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.155">HTTP_MIN_THREADS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.HTTP_MIN_THREADS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="HTTP_MAX_THREADS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HTTP_MAX_THREADS</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.156">HTTP_MAX_THREADS</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.HTTP_MAX_THREADS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="THRIFT_SSL_ENABLED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>THRIFT_SSL_ENABLED</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.158">THRIFT_SSL_ENABLED</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.THRIFT_SSL_ENABLED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="THRIFT_SSL_KEYSTORE_STORE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>THRIFT_SSL_KEYSTORE_STORE</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.159">THRIFT_SSL_KEYSTORE_STORE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.THRIFT_SSL_KEYSTORE_STORE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="THRIFT_SSL_KEYSTORE_PASSWORD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>THRIFT_SSL_KEYSTORE_PASSWORD</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.160">THRIFT_SSL_KEYSTORE_PASSWORD</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.THRIFT_SSL_KEYSTORE_PASSWORD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="THRIFT_SSL_KEYSTORE_KEYPASSWORD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>THRIFT_SSL_KEYSTORE_KEYPASSWORD</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.161">THRIFT_SSL_KEYSTORE_KEYPASSWORD</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.THRIFT_SSL_KEYSTORE_KEYPASSWORD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="THRIFT_QOP_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>THRIFT_QOP_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.173">THRIFT_QOP_KEY</a></pre>
+<div class="block">Thrift quality of protection configuration key. Valid values can be:
+ auth-conf: authentication, integrity and confidentiality checking
+ auth-int: authentication and integrity checking
+ auth: authentication only
+
+ This is used to authenticate the callers and support impersonation.
+ The thrift server and the HBase cluster must run in secure mode.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.THRIFT_QOP_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="BACKLOG_CONF_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BACKLOG_CONF_KEY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.174">BACKLOG_CONF_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.BACKLOG_CONF_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_BIND_ADDR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_BIND_ADDR</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.176">DEFAULT_BIND_ADDR</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.DEFAULT_BIND_ADDR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="DEFAULT_LISTEN_PORT">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_LISTEN_PORT</h4>
-<pre>public static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.178">DEFAULT_LISTEN_PORT</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.177">DEFAULT_LISTEN_PORT</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.DEFAULT_LISTEN_PORT">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="HREGION_VERSION">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>HREGION_VERSION</h4>
-<pre>public static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.179">HREGION_VERSION</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.178">HREGION_VERSION</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.HREGION_VERSION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="THRIFT_SUPPORT_PROXYUSER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>THRIFT_SUPPORT_PROXYUSER</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.179">THRIFT_SUPPORT_PROXYUSER</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift.ThriftServerRunner.THRIFT_SUPPORT_PROXYUSER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="listenPort">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>listenPort</h4>
+<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.180">listenPort</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.182">conf</a></pre>
+</li>
+</ul>
+<a name="tserver">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tserver</h4>
+<pre>volatile&nbsp;org.apache.thrift.server.TServer <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.183">tserver</a></pre>
+</li>
+</ul>
+<a name="httpServer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>httpServer</h4>
+<pre>volatile&nbsp;org.mortbay.jetty.Server <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.184">httpServer</a></pre>
+</li>
+</ul>
+<a name="handler">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handler</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.thrift.generated.Hbase.Iface <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.185">handler</a></pre>
+</li>
+</ul>
+<a name="metrics">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>metrics</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftMetrics.html" title="class in org.apache.hadoop.hbase.thrift">ThriftMetrics</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.186">metrics</a></pre>
+</li>
+</ul>
+<a name="hbaseHandler">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hbaseHandler</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.HBaseHandler.html" title="class in org.apache.hadoop.hbase.thrift">ThriftServerRunner.HBaseHandler</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.187">hbaseHandler</a></pre>
+</li>
+</ul>
+<a name="realUser">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>realUser</h4>
+<pre>private final&nbsp;org.apache.hadoop.security.UserGroupInformation <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.188">realUser</a></pre>
+</li>
+</ul>
+<a name="qop">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qop</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.190">qop</a></pre>
+</li>
+</ul>
+<a name="host">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>host</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.191">host</a></pre>
+</li>
+</ul>
+<a name="securityEnabled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>securityEnabled</h4>
+<pre>private final&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.193">securityEnabled</a></pre>
+</li>
+</ul>
+<a name="doAsEnabled">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>doAsEnabled</h4>
+<pre>private final&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.194">doAsEnabled</a></pre>
 </li>
 </ul>
 </li>
@@ -257,7 +719,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ThriftServerRunner</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.295">ThriftServerRunner</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.294">ThriftServerRunner</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -277,7 +739,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>run</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.334">run</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.333">run</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true#run()" title="class or interface in java.lang">run</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a></code></dd>
@@ -290,7 +752,65 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>shutdown</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.358">shutdown</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.357">shutdown</a>()</pre>
+</li>
+</ul>
+<a name="setupHTTPServer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setupHTTPServer</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.373">setupHTTPServer</a>()
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setupServer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setupServer</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.432">setupServer</a>()
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Setting up the thrift TServer</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="createExecutor(java.util.concurrent.BlockingQueue, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createExecutor</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.599">createExecutor</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&gt;&nbsp;callQueue,
+                             int&nbsp;workerThreads)</pre>
+</li>
+</ul>
+<a name="getBindAddress(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBindAddress</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.608">getBindAddress</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/net/UnknownHostException.html?is-external=true" title="class or interface in java.net">UnknownHostException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/net/UnknownHostException.html?is-external=true" title="class or interface in java.net">UnknownHostException</a></code></dd></dl>
+</li>
+</ul>
+<a name="addAttributes(org.apache.hadoop.hbase.client.OperationWithAttributes, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addAttributes</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.1838">addAttributes</a>(<a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttributes.html" title="class in org.apache.hadoop.hbase.client">OperationWithAttributes</a>&nbsp;op,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&gt;&nbsp;attributes)</pre>
+<div class="block">Adds all the attributes into the Operation object</div>
 </li>
 </ul>
 <a name="registerFilters(org.apache.hadoop.conf.Configuration)">
@@ -299,7 +819,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockListLast">
 <li class="blockList">
 <h4>registerFilters</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.1843">registerFilters</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.1850">registerFilters</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 </li>
 </ul>
 </li>

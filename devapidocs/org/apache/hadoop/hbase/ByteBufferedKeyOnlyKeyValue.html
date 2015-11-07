@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -116,6 +116,37 @@ extends <a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" titl
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#buf">buf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#length">length</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#offset">offset</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private short</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#rowLen">rowLen</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -169,6 +200,14 @@ extends <a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" titl
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getFamilyLength()">getFamilyLength</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getFamilyLength(int)">getFamilyLength</a></strong>(int&nbsp;famLenPos)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getFamilyLengthPosition()">getFamilyLengthPosition</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getFamilyOffset()">getFamilyOffset</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -191,64 +230,73 @@ extends <a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" titl
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getQualifierLength()">getQualifierLength</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getQualifierOffset()">getQualifierOffset</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getQualifierLength(int,%20int)">getQualifierLength</a></strong>(int&nbsp;rlength,
+                                    int&nbsp;flength)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getQualifierPosition()">getQualifierPosition</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getQualifierOffset()">getQualifierOffset</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getQualifierPosition()">getQualifierPosition</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getRowArray()">getRowArray</a></strong>()</code>
 <div class="block">Contiguous raw bytes that may start at any index in the containing array.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getRowByteBuffer()">getRowByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>short</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getRowLength()">getRowLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getRowOffset()">getRowOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getRowPosition()">getRowPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getSequenceId()">getSequenceId</a></strong>()</code>
 <div class="block">A region-specific unique monotonically increasing sequence ID given to each Cell.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getTagsArray()">getTagsArray</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getTagsByteBuffer()">getTagsByteBuffer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getTagsLength()">getTagsLength</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getTagsOffset()">getTagsOffset</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getTagsPosition()">getTagsPosition</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getTimestamp()">getTimestamp</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#getTimestampOffset()">getTimestampOffset</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte</code></td>
@@ -305,6 +353,50 @@ extends <a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" titl
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="buf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buf</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a> <a href="../../../../src-html/org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#line.35">buf</a></pre>
+</li>
+</ul>
+<a name="offset">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>offset</h4>
+<pre>private&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#line.36">offset</a></pre>
+</li>
+</ul>
+<a name="length">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>length</h4>
+<pre>private&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#line.37">length</a></pre>
+</li>
+</ul>
+<a name="rowLen">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>rowLen</h4>
+<pre>private&nbsp;short <a href="../../../../src-html/org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#line.38">rowLen</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -421,6 +513,15 @@ extends <a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" titl
 <dl><dt><span class="strong">Returns:</span></dt><dd>Number of family bytes.  Must be &lt; familyArray.length - offset.</dd></dl>
 </li>
 </ul>
+<a name="getFamilyLength(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFamilyLength</h4>
+<pre>private&nbsp;byte&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#line.107">getFamilyLength</a>(int&nbsp;famLenPos)</pre>
+</li>
+</ul>
 <a name="getQualifierArray()">
 <!--   -->
 </a>
@@ -454,6 +555,16 @@ extends <a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" titl
 <dl><dt><span class="strong">Returns:</span></dt><dd>Number of qualifier bytes.  Must be &lt; qualifierArray.length - offset.</dd></dl>
 </li>
 </ul>
+<a name="getQualifierLength(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getQualifierLength</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#line.132">getQualifierLength</a>(int&nbsp;rlength,
+                     int&nbsp;flength)</pre>
+</li>
+</ul>
 <a name="getTimestamp()">
 <!--   -->
 </a>
@@ -463,6 +574,15 @@ extends <a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" titl
 <pre>public&nbsp;long&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#line.137">getTimestamp</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>Long value representing time at which this cell was "Put" into the row.  Typically
  represents the time of insertion, but can be any value from 0 to Long.MAX_VALUE.</dd></dl>
+</li>
+</ul>
+<a name="getTimestampOffset()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTimestampOffset</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#line.141">getTimestampOffset</a>()</pre>
 </li>
 </ul>
 <a name="getTypeByte()">
@@ -603,6 +723,15 @@ extends <a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" titl
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html#getFamilyPosition()">getFamilyPosition</a></code>&nbsp;in class&nbsp;<code><a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" title="class in org.apache.hadoop.hbase">ByteBufferedCell</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>Position in the <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio"><code>ByteBuffer</code></a> where column family bytes start</dd></dl>
+</li>
+</ul>
+<a name="getFamilyLengthPosition()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFamilyLengthPosition</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ByteBufferedKeyOnlyKeyValue.html#line.206">getFamilyLengthPosition</a>()</pre>
 </li>
 </ul>
 <a name="getQualifierByteBuffer()">
@@ -748,13 +877,13 @@ extends <a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" titl
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

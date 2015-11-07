@@ -78,6 +78,14 @@
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure">org.apache.hadoop.hbase.procedure</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure.flush">org.apache.hadoop.hbase.procedure.flush</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.snapshot">org.apache.hadoop.hbase.regionserver.snapshot</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -110,8 +118,27 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></code></td>
+<td class="colLast"><span class="strong">ProcedureMember.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMember.html#rpcs">rpcs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></code></td>
 <td class="colLast"><span class="strong">Subprocedure.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html#rpcs">rpcs</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/procedure/package-summary.html">org.apache.hadoop.hbase.procedure</a> that return <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></code></td>
+<td class="colLast"><span class="strong">ProcedureMember.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMember.html#getRpcs()">getRpcs</a></strong>()</code>
+<div class="block">Package exposed.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -126,6 +153,74 @@
                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html?is-external=true" title="class or interface in java.util.concurrent">ThreadPoolExecutor</a>&nbsp;pool,
                               <a href="../../../../../../org/apache/hadoop/hbase/procedure/SubprocedureFactory.html" title="interface in org.apache.hadoop.hbase.procedure">SubprocedureFactory</a>&nbsp;factory)</code>
 <div class="block">Instantiate a new ProcedureMember.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.procedure.flush">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a> in <a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/package-summary.html">org.apache.hadoop.hbase.procedure.flush</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/package-summary.html">org.apache.hadoop.hbase.procedure.flush</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></code></td>
+<td class="colLast"><span class="strong">RegionServerFlushTableProcedureManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/RegionServerFlushTableProcedureManager.html#memberRpcs">memberRpcs</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/package-summary.html">org.apache.hadoop.hbase.procedure.flush</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/flush/RegionServerFlushTableProcedureManager.html#RegionServerFlushTableProcedureManager(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.HRegionServer,%20org.apache.hadoop.hbase.procedure.ProcedureMemberRpcs,%20org.apache.hadoop.hbase.procedure.ProcedureMember)">RegionServerFlushTableProcedureManager</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                                            <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionServer</a>&nbsp;server,
+                                                                            <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a>&nbsp;memberRpc,
+                                                                            <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMember.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureMember</a>&nbsp;procMember)</code>
+<div class="block">Exposed for testing.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver.snapshot">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/package-summary.html">org.apache.hadoop.hbase.regionserver.snapshot</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/package-summary.html">org.apache.hadoop.hbase.regionserver.snapshot</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></code></td>
+<td class="colLast"><span class="strong">RegionServerSnapshotManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/RegionServerSnapshotManager.html#memberRpcs">memberRpcs</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/package-summary.html">org.apache.hadoop.hbase.regionserver.snapshot</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/snapshot/RegionServerSnapshotManager.html#RegionServerSnapshotManager(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.HRegionServer,%20org.apache.hadoop.hbase.procedure.ProcedureMemberRpcs,%20org.apache.hadoop.hbase.procedure.ProcedureMember)">RegionServerSnapshotManager</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                      <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">HRegionServer</a>&nbsp;parent,
+                                                      <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html" title="interface in org.apache.hadoop.hbase.procedure">ProcedureMemberRpcs</a>&nbsp;memberRpc,
+                                                      <a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMember.html" title="class in org.apache.hadoop.hbase.procedure">ProcedureMember</a>&nbsp;procMember)</code>
+<div class="block">Exposed for testing.</div>
 </td>
 </tr>
 </tbody>

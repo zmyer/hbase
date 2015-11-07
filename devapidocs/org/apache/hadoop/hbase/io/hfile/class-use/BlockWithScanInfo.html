@@ -64,7 +64,76 @@
 <div class="header">
 <h2 title="Uses of Class org.apache.hadoop.hbase.io.hfile.BlockWithScanInfo" class="title">Uses of Class<br>org.apache.hadoop.hbase.io.hfile.BlockWithScanInfo</h2>
 </div>
-<div class="classUseContainer">No usage of org.apache.hadoop.hbase.io.hfile.BlockWithScanInfo</div>
+<div class="classUseContainer">
+<ul class="blockList">
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing packages, and an explanation">
+<caption><span>Packages that use <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockWithScanInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Package</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.io.hfile">org.apache.hadoop.hbase.io.hfile</a></td>
+<td class="colLast">
+<div class="block">Provides implementations of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html" title="class in org.apache.hadoop.hbase.io.hfile"><code>HFile</code></a> and HFile
+ <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>BlockCache</code></a>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.io.hfile">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockWithScanInfo</a> in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/package-summary.html">org.apache.hadoop.hbase.io.hfile</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockWithScanInfo</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockWithScanInfo</a></code></td>
+<td class="colLast"><span class="strong">HFileBlockIndex.ByteArrayKeyBlockIndexReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.ByteArrayKeyBlockIndexReader.html#loadDataBlockWithScanInfo(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.io.hfile.HFileBlock,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">loadDataBlockWithScanInfo</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;currentBlock,
+                                                  boolean&nbsp;cacheBlocks,
+                                                  boolean&nbsp;pread,
+                                                  boolean&nbsp;isCompaction,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;expectedDataBlockEncoding)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockWithScanInfo</a></code></td>
+<td class="colLast"><span class="strong">HFileBlockIndex.CellBasedKeyBlockIndexReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.CellBasedKeyBlockIndexReader.html#loadDataBlockWithScanInfo(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.io.hfile.HFileBlock,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">loadDataBlockWithScanInfo</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;currentBlock,
+                                                  boolean&nbsp;cacheBlocks,
+                                                  boolean&nbsp;pread,
+                                                  boolean&nbsp;isCompaction,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;expectedDataBlockEncoding)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockWithScanInfo</a></code></td>
+<td class="colLast"><span class="strong">HFileBlockIndex.BlockIndexReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexReader.html#loadDataBlockWithScanInfo(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.io.hfile.HFileBlock,%20boolean,%20boolean,%20boolean,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">loadDataBlockWithScanInfo</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;currentBlock,
+                                                  boolean&nbsp;cacheBlocks,
+                                                  boolean&nbsp;pread,
+                                                  boolean&nbsp;isCompaction,
+                                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;expectedDataBlockEncoding)</code>
+<div class="block">Return the BlockWithScanInfo which contains the DataBlock with other scan
+ info such as nextIndexedKey.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
 <div class="bottomNav"><a name="navbar_bottom">
 <!--   -->

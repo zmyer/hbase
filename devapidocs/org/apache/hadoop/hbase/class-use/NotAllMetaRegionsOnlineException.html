@@ -166,6 +166,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface</code></td>
+<td class="colLast"><span class="strong">MetaTableLocator.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/MetaTableLocator.html#getMetaServerConnection(org.apache.hadoop.hbase.client.HConnection,%20org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20long,%20int)">getMetaServerConnection</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a>&nbsp;hConnection,
+                                              <a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;zkw,
+                                              long&nbsp;timeout,
+                                              int&nbsp;replicaId)</code>
+<div class="block">Gets a connection to the server hosting meta, as reported by ZooKeeper,
+ waiting up to the specified timeout for availability.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>
 <td class="colLast"><span class="strong">MetaTableLocator.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/MetaTableLocator.html#waitMetaRegionLocation(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20int,%20long)">waitMetaRegionLocation</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;zkw,
                                             int&nbsp;replicaId,
@@ -174,7 +184,7 @@
  specified timeout if not immediately available.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>
 <td class="colLast"><span class="strong">MetaTableLocator.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/MetaTableLocator.html#waitMetaRegionLocation(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20long)">waitMetaRegionLocation</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;zkw,
                                             long&nbsp;timeout)</code>

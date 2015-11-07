@@ -61,14 +61,14 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -108,6 +108,137 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#deadServers">deadServers</a></strong></code>
+<div class="block">Map a host port pair string to the latest start code
+ of a region server which is known to be dead.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#DEFAULT_LOG_SPLIT_TIME">DEFAULT_LOG_SPLIT_TIME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#defaultReplicaToOtherReplicas">defaultReplicaToOtherReplicas</a></strong></code>
+<div class="block">Maintains the mapping from the default region to the replica regions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#lastAssignments">lastAssignments</a></strong></code>
+<div class="block">Encoded region name to server assignment map for re-assignment
+ purpose.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#lastProcessedServerCleanTime">lastProcessedServerCleanTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#LOG_SPLIT_TIME">LOG_SPLIT_TIME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#oldAssignments">oldAssignments</a></strong></code>
+<div class="block">Encoded region name to server assignment map for the
+ purpose to clean up serverHoldings when a region is online
+ on a new server.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#processedServers">processedServers</a></strong></code>
+<div class="block">Map a dead servers to the time when log split is done.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util">TreeMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#regionAssignments">regionAssignments</a></strong></code>
+<div class="block">Region to server assignment map.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#regionsInTransition">regionsInTransition</a></strong></code>
+<div class="block">Regions currently in transition.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#regionStates">regionStates</a></strong></code>
+<div class="block">Region encoded name to state map.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#regionStatesTableIndex">regionStatesTableIndex</a></strong></code>
+<div class="block">Holds mapping of table -> region state</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/master/RegionStateStore.html" title="class in org.apache.hadoop.hbase.master">RegionStateStore</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#regionStateStore">regionStateStore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#server">server</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#serverHoldings">serverHoldings</a></strong></code>
+<div class="block">Server to regions assignment map.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/master/ServerManager.html" title="class in org.apache.hadoop.hbase.master">ServerManager</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#serverManager">serverManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/master/TableStateManager.html" title="class in org.apache.hadoop.hbase.master">TableStateManager</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#tableStateManager">tableStateManager</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#RegionStates(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.master.TableStateManager,%20org.apache.hadoop.hbase.master.ServerManager,%20org.apache.hadoop.hbase.master.RegionStateStore)">RegionStates</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master,
+                        <a href="../../../../../org/apache/hadoop/hbase/master/TableStateManager.html" title="class in org.apache.hadoop.hbase.master">TableStateManager</a>&nbsp;tableStateManager,
+                        <a href="../../../../../org/apache/hadoop/hbase/master/ServerManager.html" title="class in org.apache.hadoop.hbase.master">ServerManager</a>&nbsp;serverManager,
+                        <a href="../../../../../org/apache/hadoop/hbase/master/RegionStateStore.html" title="class in org.apache.hadoop.hbase.master">RegionStateStore</a>&nbsp;regionStateStore)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_summary">
@@ -121,8 +252,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#addToReplicaMapping(org.apache.hadoop.hbase.HRegionInfo)">addToReplicaMapping</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#addToServerHoldings(org.apache.hadoop.hbase.ServerName,%20org.apache.hadoop.hbase.HRegionInfo)">addToServerHoldings</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                                      <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#cleanIfNoMetaEntry(java.util.Set)">cleanIfNoMetaEntry</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;hris)</code>
+<div class="block">This method does an RPC to hbase:meta.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#clearLastAssignment(org.apache.hadoop.hbase.HRegionInfo)">clearLastAssignment</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#closeAllUserRegions(java.util.Set)">closeAllUserRegions</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&gt;&nbsp;excludedTables)</code>
+<div class="block">At cluster clean re/start, mark all user regions closed except those of tables
+ that are excluded, such as disabled/disabling/enabling tables.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
@@ -164,8 +317,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getLastRegionServerOfRegion(java.lang.String)">getLastRegionServerOfRegion</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedName)</code>
+<div class="block">Get the last region server a region was on for purpose of re-assignment,
+ i.e.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionAssignments()">getRegionAssignments</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionAssignments(java.util.Collection)">getRegionAssignments</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions)</code>
+<div class="block">Return the replicas (including default) for the regions grouped by ServerName</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
@@ -186,50 +352,59 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionReplication(org.apache.hadoop.hbase.HRegionInfo)">getRegionReplication</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;r)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionServerOfRegion(org.apache.hadoop.hbase.HRegionInfo)">getRegionServerOfRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionsInTransition()">getRegionsInTransition</a></strong>()</code>
 <div class="block">Get regions in transition and their states</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionsOfTable(org.apache.hadoop.hbase.TableName)">getRegionsOfTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>
 <div class="block">Gets the online regions of the specified table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionState(org.apache.hadoop.hbase.HRegionInfo)">getRegionState</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionState(java.lang.String)">getRegionState</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedName)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionTransitionState(org.apache.hadoop.hbase.HRegionInfo)">getRegionTransitionState</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>
 <div class="block">Get region transition state</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getRegionTransitionState(java.lang.String)">getRegionTransitionState</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedName)</code>
 <div class="block">Get region transition state</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#getServerRegions(org.apache.hadoop.hbase.ServerName)">getServerRegions</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Get a copy of all regions assigned to a server</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#isMetaRegionInTransition()">isMetaRegionInTransition</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#isOneOfStates(org.apache.hadoop.hbase.master.RegionState,%20org.apache.hadoop.hbase.master.RegionState.State...)">isOneOfStates</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&nbsp;regionState,
+                          <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>...&nbsp;states)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -258,8 +433,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#isRegionOnline(org.apache.hadoop.hbase.HRegionInfo)">isRegionOnline</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#isRegionOnServer(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.ServerName)">isRegionOnServer</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
+                                <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#isRegionsInTransition()">isRegionsInTransition</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#isServerDeadAndNotProcessed(org.apache.hadoop.hbase.ServerName)">isServerDeadAndNotProcessed</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;server)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -273,6 +457,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">A dead server's wals have been split so that all the regions
  used to be open on it can be safely assigned now.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#mergeRegions(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.ServerName)">mergeRegions</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;p,
+                        <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;a,
+                        <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;b,
+                        <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#putRegionState(org.apache.hadoop.hbase.master.RegionState)">putRegionState</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&nbsp;regionState)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -301,29 +496,64 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#removeFromReplicaMapping(org.apache.hadoop.hbase.HRegionInfo)">removeFromReplicaMapping</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#removeFromServerHoldings(org.apache.hadoop.hbase.ServerName,%20org.apache.hadoop.hbase.HRegionInfo)">removeFromServerHoldings</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                                                <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#serverOffline(org.apache.hadoop.hbase.ServerName)">serverOffline</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)</code>
 <div class="block">A server is offline, all regions on it are dead.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#setLastRegionServerOfRegion(org.apache.hadoop.hbase.ServerName,%20java.lang.String)">setLastRegionServerOfRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedName)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#setLastRegionServerOfRegions(org.apache.hadoop.hbase.ServerName,%20java.util.List)">setLastRegionServerOfRegions</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regionInfos)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#splitRegion(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.ServerName)">splitRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;p,
+                      <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;a,
+                      <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;b,
+                      <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#tableDeleted(org.apache.hadoop.hbase.TableName)">tableDeleted</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>
 <div class="block">A table is deleted.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#updateRegionState(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.master.RegionState.State)">updateRegionState</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                                   <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>&nbsp;state)</code>
 <div class="block">Update a region state.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#updateRegionState(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.master.RegionState.State,%20org.apache.hadoop.hbase.ServerName)">updateRegionState</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                                   <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>&nbsp;state,
                                   <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
+<div class="block">Update a region state.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#updateRegionState(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.master.RegionState.State,%20org.apache.hadoop.hbase.ServerName,%20long)">updateRegionState</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
+                                  <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>&nbsp;state,
+                                  <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                                  long&nbsp;openSeqNum)</code>
 <div class="block">Update a region state.</div>
 </td>
 </tr>
@@ -337,6 +567,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#waitOnRegionToClearRegionsInTransition(org.apache.hadoop.hbase.HRegionInfo)">waitOnRegionToClearRegionsInTransition</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>
 <div class="block">Wait on region to clear regions-in-transition.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/RegionStates.html#wasRegionOnDeadServer(java.lang.String)">wasRegionOnDeadServer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedName)</code>
+<div class="block">Checking if a region was assigned to a server which is not online now.</div>
 </td>
 </tr>
 </table>
@@ -355,6 +591,230 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.60">LOG</a></pre>
+</li>
+</ul>
+<a name="regionsInTransition">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regionsInTransition</h4>
+<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.65">regionsInTransition</a></pre>
+<div class="block">Regions currently in transition.</div>
+</li>
+</ul>
+<a name="regionStates">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regionStates</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.72">regionStates</a></pre>
+<div class="block">Region encoded name to state map.
+ All the regions should be in this map.</div>
+</li>
+</ul>
+<a name="regionStatesTableIndex">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regionStatesTableIndex</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&gt;&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.78">regionStatesTableIndex</a></pre>
+<div class="block">Holds mapping of table -> region state</div>
+</li>
+</ul>
+<a name="serverHoldings">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverHoldings</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.85">serverHoldings</a></pre>
+<div class="block">Server to regions assignment map.
+ Contains the set of regions currently assigned to a given server.</div>
+</li>
+</ul>
+<a name="defaultReplicaToOtherReplicas">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>defaultReplicaToOtherReplicas</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.91">defaultReplicaToOtherReplicas</a></pre>
+<div class="block">Maintains the mapping from the default region to the replica regions.</div>
+</li>
+</ul>
+<a name="regionAssignments">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regionAssignments</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util">TreeMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.98">regionAssignments</a></pre>
+<div class="block">Region to server assignment map.
+ Contains the server a given region is currently assigned to.</div>
+</li>
+</ul>
+<a name="lastAssignments">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastAssignments</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.111">lastAssignments</a></pre>
+<div class="block">Encoded region name to server assignment map for re-assignment
+ purpose. Contains the server a given region is last known assigned
+ to, which has not completed log splitting, so not assignable.
+ If a region is currently assigned, this server info in this
+ map should be the same as that in regionAssignments.
+ However the info in regionAssignments is cleared when the region
+ is offline while the info in lastAssignments is cleared when
+ the region is closed or the server is dead and processed.</div>
+</li>
+</ul>
+<a name="oldAssignments">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>oldAssignments</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.123">oldAssignments</a></pre>
+<div class="block">Encoded region name to server assignment map for the
+ purpose to clean up serverHoldings when a region is online
+ on a new server. When the region is offline from the previous
+ server, we cleaned up regionAssignments so that it has the
+ latest assignment map. But we didn't clean up serverHoldings
+ to match the meta. We need this map to find out the old server
+ whose serverHoldings needs cleanup, given a moved region.</div>
+</li>
+</ul>
+<a name="deadServers">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deadServers</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.131">deadServers</a></pre>
+<div class="block">Map a host port pair string to the latest start code
+ of a region server which is known to be dead. It is dead
+ to us, but server manager may not know it yet.</div>
+</li>
+</ul>
+<a name="processedServers">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processedServers</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.141">processedServers</a></pre>
+<div class="block">Map a dead servers to the time when log split is done.
+ Since log splitting is not ordered, we have to remember
+ all processed instances. The map is cleaned up based
+ on a configured time. By default, we assume a dead
+ server should be done with log splitting in two hours.</div>
+</li>
+</ul>
+<a name="lastProcessedServerCleanTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastProcessedServerCleanTime</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.143">lastProcessedServerCleanTime</a></pre>
+</li>
+</ul>
+<a name="tableStateManager">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableStateManager</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/master/TableStateManager.html" title="class in org.apache.hadoop.hbase.master">TableStateManager</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.145">tableStateManager</a></pre>
+</li>
+</ul>
+<a name="regionStateStore">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regionStateStore</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/master/RegionStateStore.html" title="class in org.apache.hadoop.hbase.master">RegionStateStore</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.146">regionStateStore</a></pre>
+</li>
+</ul>
+<a name="serverManager">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverManager</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/master/ServerManager.html" title="class in org.apache.hadoop.hbase.master">ServerManager</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.147">serverManager</a></pre>
+</li>
+</ul>
+<a name="server">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>server</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.148">server</a></pre>
+</li>
+</ul>
+<a name="LOG_SPLIT_TIME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG_SPLIT_TIME</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.151">LOG_SPLIT_TIME</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.master.RegionStates.LOG_SPLIT_TIME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_LOG_SPLIT_TIME">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DEFAULT_LOG_SPLIT_TIME</h4>
+<pre>static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.152">DEFAULT_LOG_SPLIT_TIME</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.master.RegionStates.DEFAULT_LOG_SPLIT_TIME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="RegionStates(org.apache.hadoop.hbase.master.MasterServices, org.apache.hadoop.hbase.master.TableStateManager, org.apache.hadoop.hbase.master.ServerManager, org.apache.hadoop.hbase.master.RegionStateStore)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>RegionStates</h4>
+<pre><a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.154">RegionStates</a>(<a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master,
+            <a href="../../../../../org/apache/hadoop/hbase/master/TableStateManager.html" title="class in org.apache.hadoop.hbase.master">TableStateManager</a>&nbsp;tableStateManager,
+            <a href="../../../../../org/apache/hadoop/hbase/master/ServerManager.html" title="class in org.apache.hadoop.hbase.master">ServerManager</a>&nbsp;serverManager,
+            <a href="../../../../../org/apache/hadoop/hbase/master/RegionStateStore.html" title="class in org.apache.hadoop.hbase.master">RegionStateStore</a>&nbsp;regionStateStore)</pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
@@ -369,6 +829,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>getRegionAssignments</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.165">getRegionAssignments</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>a copy of the region assignment map</dd></dl>
+</li>
+</ul>
+<a name="getRegionAssignments(java.util.Collection)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRegionAssignments</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.174">getRegionAssignments</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions)</pre>
+<div class="block">Return the replicas (including default) for the regions grouped by ServerName</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>regions</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd>a pair containing the groupings as a map</dd></dl>
 </li>
 </ul>
 <a name="getRegionServerOfRegion(org.apache.hadoop.hbase.HRegionInfo)">
@@ -548,6 +1020,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dt><span class="strong">Returns:</span></dt><dd>the current state</dd></dl>
 </li>
 </ul>
+<a name="putRegionState(org.apache.hadoop.hbase.master.RegionState)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>putRegionState</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.368">putRegionState</a>(<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&nbsp;regionState)</pre>
+</li>
+</ul>
 <a name="updateRegionState(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.master.RegionState.State)">
 <!--   -->
 </a>
@@ -593,6 +1074,44 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">A region is online, won't be in transition any more.
  We can't confirm it is really online on specified region server
  because it hasn't been put in region server's online region list yet.</div>
+</li>
+</ul>
+<a name="addToServerHoldings(org.apache.hadoop.hbase.ServerName, org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addToServerHoldings</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.445">addToServerHoldings</a>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                       <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</pre>
+</li>
+</ul>
+<a name="addToReplicaMapping(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addToReplicaMapping</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.454">addToReplicaMapping</a>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</pre>
+</li>
+</ul>
+<a name="removeFromServerHoldings(org.apache.hadoop.hbase.ServerName, org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeFromServerHoldings</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.465">removeFromServerHoldings</a>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                            <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</pre>
+</li>
+</ul>
+<a name="removeFromReplicaMapping(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeFromReplicaMapping</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.473">removeFromReplicaMapping</a>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</pre>
 </li>
 </ul>
 <a name="logSplit(org.apache.hadoop.hbase.ServerName)">
@@ -656,6 +1175,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>serverOffline</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.581">serverOffline</a>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)</pre>
 <div class="block">A server is offline, all regions on it are dead.</div>
+</li>
+</ul>
+<a name="cleanIfNoMetaEntry(java.util.Set)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cleanIfNoMetaEntry</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.647">cleanIfNoMetaEntry</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;hris)</pre>
+<div class="block">This method does an RPC to hbase:meta. Do not call this method with a lock/synchronize held.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>hris</code> - The hris to check if empty in hbase:meta and if so, clean them up.</dd></dl>
 </li>
 </ul>
 <a name="getRegionsOfTable(org.apache.hadoop.hbase.TableName)">
@@ -737,6 +1267,127 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Remove a region from all state maps.</div>
 </li>
 </ul>
+<a name="wasRegionOnDeadServer(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wasRegionOnDeadServer</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.793">wasRegionOnDeadServer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedName)</pre>
+<div class="block">Checking if a region was assigned to a server which is not online now.
+ If so, we should hold re-assign this region till SSH has split its wals.
+ Once logs are split, the last assignment of this region will be reset,
+ which means a null last assignment server is ok for re-assigning.
+
+ A region server could be dead but we don't know it yet. We may
+ think it's online falsely. Therefore if a server is online, we still
+ need to confirm it reachable and having the expected start code.</div>
+</li>
+</ul>
+<a name="isServerDeadAndNotProcessed(org.apache.hadoop.hbase.ServerName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isServerDeadAndNotProcessed</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.798">isServerDeadAndNotProcessed</a>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;server)</pre>
+</li>
+</ul>
+<a name="getLastRegionServerOfRegion(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLastRegionServerOfRegion</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.828">getLastRegionServerOfRegion</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedName)</pre>
+<div class="block">Get the last region server a region was on for purpose of re-assignment,
+ i.e. should the re-assignment be held back till log split is done?</div>
+</li>
+</ul>
+<a name="setLastRegionServerOfRegions(org.apache.hadoop.hbase.ServerName, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLastRegionServerOfRegions</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.832">setLastRegionServerOfRegions</a>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regionInfos)</pre>
+</li>
+</ul>
+<a name="setLastRegionServerOfRegion(org.apache.hadoop.hbase.ServerName, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLastRegionServerOfRegion</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.839">setLastRegionServerOfRegion</a>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedName)</pre>
+</li>
+</ul>
+<a name="isRegionOnServer(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.ServerName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRegionOnServer</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.844">isRegionOnServer</a>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
+                       <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</pre>
+</li>
+</ul>
+<a name="splitRegion(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.ServerName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>splitRegion</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.850">splitRegion</a>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;p,
+               <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;a,
+               <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;b,
+               <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="mergeRegions(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.ServerName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mergeRegions</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.867">mergeRegions</a>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;p,
+                <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;a,
+                <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;b,
+                <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)
+            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getRegionReplication(org.apache.hadoop.hbase.HRegionInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRegionReplication</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.883">getRegionReplication</a>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;r)
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="closeAllUserRegions(java.util.Set)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>closeAllUserRegions</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.898">closeAllUserRegions</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&gt;&nbsp;excludedTables)</pre>
+<div class="block">At cluster clean re/start, mark all user regions closed except those of tables
+ that are excluded, such as disabled/disabling/enabling tables. All user regions
+ and their previous locations are returned.</div>
+</li>
+</ul>
 <a name="getAverageLoad()">
 <!--   -->
 </a>
@@ -796,7 +1447,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="getRegionInfo(byte[])">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getRegionInfo</h4>
 <pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.1037">getRegionInfo</a>(byte[]&nbsp;regionName)</pre>
@@ -804,6 +1455,29 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  Be careful. Does RPC. Do not hold a lock or synchronize when you call this method.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>regionName</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>HRegionInfo for the region</dd></dl>
+</li>
+</ul>
+<a name="isOneOfStates(org.apache.hadoop.hbase.master.RegionState, org.apache.hadoop.hbase.master.RegionState.State...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOneOfStates</h4>
+<pre>static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.1059">isOneOfStates</a>(<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&nbsp;regionState,
+                    <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>...&nbsp;states)</pre>
+</li>
+</ul>
+<a name="updateRegionState(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.master.RegionState.State, org.apache.hadoop.hbase.ServerName, long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>updateRegionState</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/master/RegionState.html" title="class in org.apache.hadoop.hbase.master">RegionState</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/RegionStates.html#line.1070">updateRegionState</a>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
+                            <a href="../../../../../org/apache/hadoop/hbase/master/RegionState.State.html" title="enum in org.apache.hadoop.hbase.master">RegionState.State</a>&nbsp;state,
+                            <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                            long&nbsp;openSeqNum)</pre>
+<div class="block">Update a region state. It will be put in transition if not already there.</div>
 </li>
 </ul>
 </li>
@@ -858,14 +1532,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

@@ -1211,7 +1211,7 @@
 <span class="sourceLineNo">1203</span>    // the element at index 1 would be a replica (since the metareader gives us ordered<a name="line.1203"></a>
 <span class="sourceLineNo">1204</span>    // regions). Try splitting that region via the split API . Should fail<a name="line.1204"></a>
 <span class="sourceLineNo">1205</span>    try {<a name="line.1205"></a>
-<span class="sourceLineNo">1206</span>      TEST_UTIL.getHBaseAdmin().split(regions.get(1).getFirst().getRegionName());<a name="line.1206"></a>
+<span class="sourceLineNo">1206</span>      TEST_UTIL.getHBaseAdmin().splitRegion(regions.get(1).getFirst().getRegionName());<a name="line.1206"></a>
 <span class="sourceLineNo">1207</span>    } catch (IllegalArgumentException ex) {<a name="line.1207"></a>
 <span class="sourceLineNo">1208</span>      gotException = true;<a name="line.1208"></a>
 <span class="sourceLineNo">1209</span>    }<a name="line.1209"></a>

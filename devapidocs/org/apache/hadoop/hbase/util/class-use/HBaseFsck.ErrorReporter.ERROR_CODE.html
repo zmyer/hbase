@@ -87,6 +87,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a> in <a href="../../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a> with type parameters of type <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HBaseFsck.PrintingErrorReporter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.PrintingErrorReporter.html#errorList">errorList</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a> that return <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -120,6 +133,10 @@ the order they are declared.</div>
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a>&gt;</code></td>
 <td class="colLast"><span class="strong">HBaseFsck.ErrorReporter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.html#getErrorList()">getErrorList</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HBaseFsck.PrintingErrorReporter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.PrintingErrorReporter.html#getErrorList()">getErrorList</a></strong>()</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -136,7 +153,18 @@ the order they are declared.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">HBaseFsck.PrintingErrorReporter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.PrintingErrorReporter.html#reportError(org.apache.hadoop.hbase.util.HBaseFsck.ErrorReporter.ERROR_CODE,%20java.lang.String)">reportError</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a>&nbsp;errorCode,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">HBaseFsck.ErrorReporter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.html#reportError(org.apache.hadoop.hbase.util.HBaseFsck.ErrorReporter.ERROR_CODE,%20java.lang.String,%20org.apache.hadoop.hbase.util.HBaseFsck.TableInfo)">reportError</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a>&nbsp;errorCode,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+                      <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.TableInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.TableInfo</a>&nbsp;table)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">HBaseFsck.PrintingErrorReporter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.PrintingErrorReporter.html#reportError(org.apache.hadoop.hbase.util.HBaseFsck.ErrorReporter.ERROR_CODE,%20java.lang.String,%20org.apache.hadoop.hbase.util.HBaseFsck.TableInfo)">reportError</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a>&nbsp;errorCode,
                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
                       <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.TableInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.TableInfo</a>&nbsp;table)</code>&nbsp;</td>
 </tr>
@@ -149,7 +177,22 @@ the order they are declared.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">HBaseFsck.PrintingErrorReporter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.PrintingErrorReporter.html#reportError(org.apache.hadoop.hbase.util.HBaseFsck.ErrorReporter.ERROR_CODE,%20java.lang.String,%20org.apache.hadoop.hbase.util.HBaseFsck.TableInfo,%20org.apache.hadoop.hbase.util.HBaseFsck.HbckInfo)">reportError</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a>&nbsp;errorCode,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+                      <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.TableInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.TableInfo</a>&nbsp;table,
+                      <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.HbckInfo</a>&nbsp;info)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">HBaseFsck.ErrorReporter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.html#reportError(org.apache.hadoop.hbase.util.HBaseFsck.ErrorReporter.ERROR_CODE,%20java.lang.String,%20org.apache.hadoop.hbase.util.HBaseFsck.TableInfo,%20org.apache.hadoop.hbase.util.HBaseFsck.HbckInfo,%20org.apache.hadoop.hbase.util.HBaseFsck.HbckInfo)">reportError</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a>&nbsp;errorCode,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+                      <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.TableInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.TableInfo</a>&nbsp;table,
+                      <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.HbckInfo</a>&nbsp;info1,
+                      <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.HbckInfo</a>&nbsp;info2)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">HBaseFsck.PrintingErrorReporter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.PrintingErrorReporter.html#reportError(org.apache.hadoop.hbase.util.HBaseFsck.ErrorReporter.ERROR_CODE,%20java.lang.String,%20org.apache.hadoop.hbase.util.HBaseFsck.TableInfo,%20org.apache.hadoop.hbase.util.HBaseFsck.HbckInfo,%20org.apache.hadoop.hbase.util.HBaseFsck.HbckInfo)">reportError</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.ErrorReporter.ERROR_CODE.html" title="enum in org.apache.hadoop.hbase.util">HBaseFsck.ErrorReporter.ERROR_CODE</a>&nbsp;errorCode,
                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
                       <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.TableInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.TableInfo</a>&nbsp;table,
                       <a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.HbckInfo.html" title="class in org.apache.hadoop.hbase.util">HBaseFsck.HbckInfo</a>&nbsp;info1,

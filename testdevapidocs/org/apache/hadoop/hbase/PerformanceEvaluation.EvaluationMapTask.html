@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Counter.html" title="enum in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.RunResult.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.FilteredScanTest.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html" target="_top">Frames</a></li>
@@ -141,12 +141,16 @@ extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.io.LongWritable,
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html" title="class in org.apache.hadoop.hbase">PerformanceEvaluation.Test</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html#cmd">cmd</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html#CMD_KEY">CMD_KEY</a></strong></code>
 <div class="block">configuration parameter name that contains the command</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html#PE_KEY">PE_KEY</a></strong></code>
 <div class="block">configuration parameter name that contains the PE impl</div>
@@ -185,12 +189,17 @@ extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.io.LongWritable,
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private &lt;Type&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends Type&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html#forName(java.lang.String,%20java.lang.Class)">forName</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;className,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;Type&gt;&nbsp;type)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html#map(org.apache.hadoop.io.LongWritable,%20org.apache.hadoop.io.Text,%20org.apache.hadoop.mapreduce.Mapper.Context)">map</a></strong>(org.apache.hadoop.io.LongWritable&nbsp;key,
       org.apache.hadoop.io.Text&nbsp;value,
       org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html#setup(org.apache.hadoop.mapreduce.Mapper.Context)">setup</a></strong>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context)</code>&nbsp;</td>
 </tr>
@@ -237,12 +246,21 @@ extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.io.LongWritable,
 <a name="PE_KEY">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>PE_KEY</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html#line.236">PE_KEY</a></pre>
 <div class="block">configuration parameter name that contains the PE impl</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.PerformanceEvaluation.EvaluationMapTask.PE_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="cmd">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>cmd</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html" title="class in org.apache.hadoop.hbase">PerformanceEvaluation.Test</a>&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html#line.238">cmd</a></pre>
 </li>
 </ul>
 </li>
@@ -285,6 +303,16 @@ extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.io.LongWritable,
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="forName(java.lang.String, java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>forName</h4>
+<pre>private&nbsp;&lt;Type&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends Type&gt;&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html#line.255">forName</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;className,
+                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;Type&gt;&nbsp;type)</pre>
 </li>
 </ul>
 <a name="map(org.apache.hadoop.io.LongWritable, org.apache.hadoop.io.Text, org.apache.hadoop.mapreduce.Mapper.Context)">
@@ -333,7 +361,7 @@ extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.io.LongWritable,
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Counter.html" title="enum in org.apache.hadoop.hbase"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.RunResult.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.FilteredScanTest.html" title="class in org.apache.hadoop.hbase"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/apache/hadoop/hbase/PerformanceEvaluation.EvaluationMapTask.html" target="_top">Frames</a></li>

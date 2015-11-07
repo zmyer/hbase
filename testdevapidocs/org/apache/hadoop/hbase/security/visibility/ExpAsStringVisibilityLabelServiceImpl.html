@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -113,6 +113,57 @@ implements org.apache.hadoop.hbase.security.visibility.VisibilityLabelService</p
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#DUMMY_VALUE">DUMMY_VALUE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.security.visibility.ExpressionExpander</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#expressionExpander">expressionExpander</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.security.visibility.ExpressionParser</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#expressionParser">expressionParser</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.Region</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#labelsRegion">labelsRegion</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.security.visibility.ScanLabelGenerator&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#scanLabelGenerators">scanLabelGenerators</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#STRING_SERIALIZATION_FORMAT">STRING_SERIALIZATION_FORMAT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.Tag</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#STRING_SERIALIZATION_FORMAT_TAG">STRING_SERIALIZATION_FORMAT_TAG</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -147,20 +198,39 @@ implements org.apache.hadoop.hbase.security.visibility.VisibilityLabelService</p
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#addLabels(java.util.List)">addLabels</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;labels)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#checkForMatchingVisibilityTagsWithSortedOrder(java.util.List,%20java.util.List)">checkForMatchingVisibilityTagsWithSortedOrder</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Tag&gt;&nbsp;putVisTags,
+                                                                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Tag&gt;&nbsp;deleteVisTags)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.regionserver.OperationStatus[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#clearAuths(byte[],%20java.util.List)">clearAuths</a></strong>(byte[]&nbsp;user,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;authLabels)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#createModifiedVisExpression(java.util.List)">createModifiedVisExpression</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Tag&gt;&nbsp;tags)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.Tag</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#createTag(org.apache.hadoop.hbase.security.visibility.expression.ExpressionNode)">createTag</a></strong>(org.apache.hadoop.hbase.security.visibility.expression.ExpressionNode&nbsp;node)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Tag&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#createVisibilityExpTags(java.lang.String,%20boolean,%20boolean)">createVisibilityExpTags</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;visExpression,
                                               boolean&nbsp;withSerializationFormat,
                                               boolean&nbsp;checkAuths)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#encodeVisibilityForReplication(java.util.List,%20java.lang.Byte)">encodeVisibilityForReplication</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Tag&gt;&nbsp;tags,
                                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Byte.html?is-external=true" title="class or interface in java.lang">Byte</a>&nbsp;serializationFormat)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#extractLabels(org.apache.hadoop.hbase.security.visibility.expression.ExpressionNode,%20java.util.List,%20java.util.List)">extractLabels</a></strong>(org.apache.hadoop.hbase.security.visibility.expression.ExpressionNode&nbsp;node,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;labels,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;notLabels)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.conf.Configuration</code></td>
@@ -228,6 +298,96 @@ implements org.apache.hadoop.hbase.security.visibility.VisibilityLabelService</p
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.72">LOG</a></pre>
+</li>
+</ul>
+<a name="DUMMY_VALUE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DUMMY_VALUE</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.74">DUMMY_VALUE</a></pre>
+</li>
+</ul>
+<a name="STRING_SERIALIZATION_FORMAT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STRING_SERIALIZATION_FORMAT</h4>
+<pre>private static final&nbsp;byte <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.75">STRING_SERIALIZATION_FORMAT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.security.visibility.ExpAsStringVisibilityLabelServiceImpl.STRING_SERIALIZATION_FORMAT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STRING_SERIALIZATION_FORMAT_TAG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STRING_SERIALIZATION_FORMAT_TAG</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.Tag <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.76">STRING_SERIALIZATION_FORMAT_TAG</a></pre>
+</li>
+</ul>
+<a name="expressionParser">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>expressionParser</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.security.visibility.ExpressionParser <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.79">expressionParser</a></pre>
+</li>
+</ul>
+<a name="expressionExpander">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>expressionExpander</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.security.visibility.ExpressionExpander <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.80">expressionExpander</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.81">conf</a></pre>
+</li>
+</ul>
+<a name="labelsRegion">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>labelsRegion</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.Region <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.82">labelsRegion</a></pre>
+</li>
+</ul>
+<a name="scanLabelGenerators">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>scanLabelGenerators</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.security.visibility.ScanLabelGenerator&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.83">scanLabelGenerators</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -389,6 +549,29 @@ implements org.apache.hadoop.hbase.security.visibility.VisibilityLabelService</p
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="createTag(org.apache.hadoop.hbase.security.visibility.expression.ExpressionNode)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTag</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.Tag&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.332">createTag</a>(org.apache.hadoop.hbase.security.visibility.expression.ExpressionNode&nbsp;node)
+                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="extractLabels(org.apache.hadoop.hbase.security.visibility.expression.ExpressionNode, java.util.List, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extractLabels</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.359">extractLabels</a>(org.apache.hadoop.hbase.security.visibility.expression.ExpressionNode&nbsp;node,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;labels,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;notLabels)</pre>
+</li>
+</ul>
 <a name="getConf()">
 <!--   -->
 </a>
@@ -463,10 +646,20 @@ implements org.apache.hadoop.hbase.security.visibility.VisibilityLabelService</p
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
+<a name="checkForMatchingVisibilityTagsWithSortedOrder(java.util.List, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkForMatchingVisibilityTagsWithSortedOrder</h4>
+<pre>private static&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.417">checkForMatchingVisibilityTagsWithSortedOrder</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Tag&gt;&nbsp;putVisTags,
+                                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Tag&gt;&nbsp;deleteVisTags)</pre>
+</li>
+</ul>
 <a name="encodeVisibilityForReplication(java.util.List, java.lang.Byte)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>encodeVisibilityForReplication</h4>
 <pre>public&nbsp;byte[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.440">encodeVisibilityForReplication</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Tag&gt;&nbsp;tags,
@@ -475,6 +668,20 @@ implements org.apache.hadoop.hbase.security.visibility.VisibilityLabelService</p
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code>encodeVisibilityForReplication</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.security.visibility.VisibilityLabelService</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createModifiedVisExpression(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createModifiedVisExpression</h4>
+<pre>private&nbsp;byte[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/ExpAsStringVisibilityLabelServiceImpl.html#line.453">createModifiedVisExpression</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Tag&gt;&nbsp;tags)
+                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>tags</code> - - all the tags associated with the current Cell</dd>
+<dt><span class="strong">Returns:</span></dt><dd>- the modified visibility expression as byte[]</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -531,13 +738,13 @@ implements org.apache.hadoop.hbase.security.visibility.VisibilityLabelService</p
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/metrics2/lib/MetricsExecutorImpl.html" title="class in org.apache.hadoop.metrics2.lib"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/metrics2/lib/MetricsExecutorImpl.ThreadPoolExecutorThreadFactory.html" title="class in org.apache.hadoop.metrics2.lib"><span class="strong">Prev Class</span></a></li>
 <li>Next Class</li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -121,6 +121,49 @@ implements <a href="../../../../../org/apache/hadoop/metrics2/MetricHistogram.ht
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#count">count</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static double</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#DEFAULT_ALPHA">DEFAULT_ALPHA</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#DEFAULT_SAMPLE_SIZE">DEFAULT_SAMPLE_SIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#desc">desc</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#max">max</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#min">min</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#name">name</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private com.yammer.metrics.stats.Sample</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#sample">sample</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#sum">sum</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.metrics2.MetricHistogram">
 <!--   -->
@@ -182,6 +225,14 @@ implements <a href="../../../../../org/apache/hadoop/metrics2/MetricHistogram.ht
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#getMin()">getMin</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#setMax(long)">setMax</a></strong>(long&nbsp;potentialMax)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#setMin(long)">setMin</a></strong>(long&nbsp;potentialMin)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html#snapshot(org.apache.hadoop.metrics2.MetricsRecordBuilder,%20boolean)">snapshot</a></strong>(org.apache.hadoop.metrics2.MetricsRecordBuilder&nbsp;metricsRecordBuilder,
                 boolean&nbsp;all)</code>&nbsp;</td>
@@ -209,6 +260,97 @@ implements <a href="../../../../../org/apache/hadoop/metrics2/MetricHistogram.ht
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="DEFAULT_SAMPLE_SIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_SAMPLE_SIZE</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.39">DEFAULT_SAMPLE_SIZE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.metrics2.lib.MutableHistogram.DEFAULT_SAMPLE_SIZE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_ALPHA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_ALPHA</h4>
+<pre>private static final&nbsp;double <a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.42">DEFAULT_ALPHA</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.metrics2.lib.MutableHistogram.DEFAULT_ALPHA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="name">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>name</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.44">name</a></pre>
+</li>
+</ul>
+<a name="desc">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>desc</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.45">desc</a></pre>
+</li>
+</ul>
+<a name="sample">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sample</h4>
+<pre>private final&nbsp;com.yammer.metrics.stats.Sample <a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.46">sample</a></pre>
+</li>
+</ul>
+<a name="min">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>min</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.47">min</a></pre>
+</li>
+</ul>
+<a name="max">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>max</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.48">max</a></pre>
+</li>
+</ul>
+<a name="sum">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sum</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.49">sum</a></pre>
+</li>
+</ul>
+<a name="count">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>count</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.50">count</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -255,6 +397,24 @@ implements <a href="../../../../../org/apache/hadoop/metrics2/MetricHistogram.ht
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/metrics2/MetricHistogram.html#add(long)">add</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/metrics2/MetricHistogram.html" title="interface in org.apache.hadoop.metrics2">MetricHistogram</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="setMax(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMax</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.75">setMax</a>(long&nbsp;potentialMax)</pre>
+</li>
+</ul>
+<a name="setMin(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMin</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/metrics2/lib/MutableHistogram.html#line.84">setMin</a>(long&nbsp;potentialMin)</pre>
 </li>
 </ul>
 <a name="getMax()">
@@ -324,7 +484,7 @@ implements <a href="../../../../../org/apache/hadoop/metrics2/MetricHistogram.ht
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/metrics2/lib/MetricsExecutorImpl.html" title="class in org.apache.hadoop.metrics2.lib"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/metrics2/lib/MetricsExecutorImpl.ThreadPoolExecutorThreadFactory.html" title="class in org.apache.hadoop.metrics2.lib"><span class="strong">Prev Class</span></a></li>
 <li>Next Class</li>
 </ul>
 <ul class="navList">
@@ -350,13 +510,13 @@ implements <a href="../../../../../org/apache/hadoop/metrics2/MetricHistogram.ht
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

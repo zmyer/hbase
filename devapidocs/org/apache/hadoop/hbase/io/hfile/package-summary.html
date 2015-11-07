@@ -186,9 +186,21 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCachesIterator.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCachesIterator</a></td>
+<td class="colLast">
+<div class="block">Iterator over an array of BlockCache CachedBlocks.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheUtil.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheUtil</a></td>
 <td class="colLast">
 <div class="block">Utilty for aggregating counts in CachedBlocks and toString/toJSON CachedBlocks and BlockCaches.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheUtil.CachedBlockCountsPerFile.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheUtil.CachedBlockCountsPerFile</a></td>
+<td class="colLast">
+<div class="block">Little data structure to hold counts for a file.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -261,6 +273,12 @@
  <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilter.html" title="class in org.apache.hadoop.hbase.io.hfile"><code>CompoundBloomFilter</code></a> class.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CompoundBloomFilterWriter.ReadyChunk.html" title="class in org.apache.hadoop.hbase.io.hfile">CompoundBloomFilterWriter.ReadyChunk</a></td>
+<td class="colLast">
+<div class="block">A Bloom filter chunk enqueued for writing</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/FixedFileTrailer.html" title="class in org.apache.hadoop.hbase.io.hfile">FixedFileTrailer</a></td>
 <td class="colLast">
@@ -294,6 +312,19 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReaderImpl.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock.FSReaderImpl</a></td>
+<td class="colLast">
+<div class="block">Reads version 2 blocks from the filesystem.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.PrefetchedHeader.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock.PrefetchedHeader</a></td>
+<td class="colLast">
+<div class="block">We always prefetch the header of the next block, so that we know its
+ on-disk size in advance and can read it in one operation.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.Writer.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock.Writer</a></td>
 <td class="colLast">
 <div class="block">Unified version 2 <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html" title="class in org.apache.hadoop.hbase.io.hfile"><code>HFile</code></a> block writer.</div>
@@ -312,9 +343,36 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexChunk.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexChunk</a></td>
+<td class="colLast">
+<div class="block">A single chunk of the block index in the process of writing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexReader.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexReader</a></td>
+<td class="colLast">
+<div class="block">The reader will always hold the root level index in the memory.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexWriter.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexWriter</a></td>
 <td class="colLast">
 <div class="block">Writes the block index into the output stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.ByteArrayKeyBlockIndexReader.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.ByteArrayKeyBlockIndexReader</a></td>
+<td class="colLast">
+<div class="block">An implementation of the BlockIndexReader that deals with block keys which are plain
+ byte[] like MetaBlock or the Bloom Block for ROW bloom.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.CellBasedKeyBlockIndexReader.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.CellBasedKeyBlockIndexReader</a></td>
+<td class="colLast">
+<div class="block">An implementation of the BlockIndexReader that deals with block keys which are the key
+ part of a cell like the Data block index or the ROW_COL bloom blocks
+ This needs a comparator to work with the Cells</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -343,6 +401,14 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFilePrettyPrinter.KeyValueStatsCollector.html" title="class in org.apache.hadoop.hbase.io.hfile">HFilePrettyPrinter.KeyValueStatsCollector</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFilePrettyPrinter.SimpleReporter.html" title="class in org.apache.hadoop.hbase.io.hfile">HFilePrettyPrinter.SimpleReporter</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl</a></td>
 <td class="colLast">
 <div class="block">Implementation that can handle all hfile versions of <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>HFile.Reader</code></a>.</div>
@@ -359,20 +425,32 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterFactory.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileWriterFactory</a></td>
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryKeyValue</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryNoTagsKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryNoTagsKeyValue</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryOffheapKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryOffheapKeyValue</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterFactory.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileWriterFactory</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileWriterImpl</a></td>
 <td class="colLast">
 <div class="block">Common functionality needed by all versions of <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html" title="class in org.apache.hadoop.hbase.io.hfile"><code>HFile</code></a> writers.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/InclusiveCombinedBlockCache.html" title="class in org.apache.hadoop.hbase.io.hfile">InclusiveCombinedBlockCache</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html" title="class in org.apache.hadoop.hbase.io.hfile">LruBlockCache</a></td>
 <td class="colLast">
 <div class="block">A block cache implementation that is memory-aware using <a href="../../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io"><code>HeapSize</code></a>,
@@ -380,6 +458,14 @@
  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent"><code>ConcurrentHashMap</code></a> and with a non-blocking eviction thread giving
  constant-time <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#cacheBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20org.apache.hadoop.hbase.io.hfile.Cacheable,%20boolean,%20boolean)"><code>LruBlockCache.cacheBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey, org.apache.hadoop.hbase.io.hfile.Cacheable, boolean, boolean)</code></a> and <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#getBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20boolean,%20boolean,%20boolean)"><code>LruBlockCache.getBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey, boolean, boolean, boolean)</code></a> operations.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.EvictionThread.html" title="class in org.apache.hadoop.hbase.io.hfile">LruBlockCache.EvictionThread</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.StatisticsThread.html" title="class in org.apache.hadoop.hbase.io.hfile">LruBlockCache.StatisticsThread</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a></td>
@@ -401,12 +487,18 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.HFileBlockTranscoder.html" title="class in org.apache.hadoop.hbase.io.hfile">MemcachedBlockCache.HFileBlockTranscoder</a></td>
+<td class="colLast">
+<div class="block">Class to encode and decode an HFileBlock to and from memecached's resulting byte arrays.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/NoOpDataBlockEncoder.html" title="class in org.apache.hadoop.hbase.io.hfile">NoOpDataBlockEncoder</a></td>
 <td class="colLast">
 <div class="block">Does not perform any kind of encoding/decoding.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/PrefetchExecutor.html" title="class in org.apache.hadoop.hbase.io.hfile">PrefetchExecutor</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -441,6 +533,16 @@
 <div class="block">SHARED means when this Cacheable is read back from cache it refers to the same memory area as
  used by the cache for caching it.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.ExternalBlockCaches.html" title="enum in org.apache.hadoop.hbase.io.hfile">CacheConfig.ExternalBlockCaches</a></td>
+<td class="colLast">
+<div class="block">Enum of all built in external block caches.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.Writer.State.html" title="enum in org.apache.hadoop.hbase.io.hfile">HFileBlock.Writer.State</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>

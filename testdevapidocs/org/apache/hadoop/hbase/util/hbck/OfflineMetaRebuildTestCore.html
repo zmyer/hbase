@@ -139,8 +139,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#connection">connection</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#FAM">FAM</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.client.Table</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#htbl">htbl</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected static byte[][]</code></td>
@@ -149,6 +157,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.TableName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#table">table</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#TABLE_BASE">TABLE_BASE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#tableIdx">tableIdx</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
@@ -201,8 +217,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                         byte[]&nbsp;endKey)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#dumpMeta(org.apache.hadoop.hbase.HTableDescriptor)">dumpMeta</a></strong>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.apache.hadoop.hbase.HTableDescriptor[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#getTables(org.apache.hadoop.conf.Configuration)">getTables</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;configuration)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#populateTable(org.apache.hadoop.hbase.client.Table)">populateTable</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;tbl)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
@@ -215,17 +239,23 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#setUpBefore()">setUpBefore</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#setupTable(org.apache.hadoop.hbase.TableName)">setupTable</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tablename)</code>
+<div class="block">Setup a clean table before we start mucking with it.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#tableRowCount(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.TableName)">tableRowCount</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                           org.apache.hadoop.hbase.TableName&nbsp;table)</code>
 <div class="block">Returns the number of rows in a given table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#tearDownAfter()">tearDownAfter</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#wipeOutMeta()">wipeOutMeta</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -251,6 +281,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.77">LOG</a></pre>
+</li>
+</ul>
 <a name="TEST_UTIL">
 <!--   -->
 </a>
@@ -269,6 +308,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>protected&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.80">conf</a></pre>
 </li>
 </ul>
+<a name="FAM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAM</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.81">FAM</a></pre>
+</li>
+</ul>
 <a name="htbl">
 <!--   -->
 </a>
@@ -285,6 +333,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>splits</h4>
 <pre>protected static final&nbsp;byte[][] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.85">splits</a></pre>
+</li>
+</ul>
+<a name="TABLE_BASE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TABLE_BASE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.88">TABLE_BASE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.util.hbck.OfflineMetaRebuildTestCore.TABLE_BASE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="tableIdx">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableIdx</h4>
+<pre>private static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.89">tableIdx</a></pre>
 </li>
 </ul>
 <a name="table">
@@ -354,13 +421,53 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="setupTable(org.apache.hadoop.hbase.TableName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setupTable</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Table&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.132">setupTable</a>(org.apache.hadoop.hbase.TableName&nbsp;tablename)
+                                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Setup a clean table before we start mucking with it.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
+<dd><code>org.apache.zookeeper.KeeperException</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="dumpMeta(org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dumpMeta</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.140">dumpMeta</a>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="populateTable(org.apache.hadoop.hbase.client.Table)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>populateTable</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.147">populateTable</a>(org.apache.hadoop.hbase.client.Table&nbsp;tbl)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="deleteRegion(org.apache.hadoop.conf.Configuration, org.apache.hadoop.hbase.client.Table, byte[], byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteRegion</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.177">deleteRegion</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.161">deleteRegion</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                 org.apache.hadoop.hbase.client.Table&nbsp;tbl,
                 byte[]&nbsp;startKey,
                 byte[]&nbsp;endKey)
@@ -375,7 +482,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createRegion</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.HRegionInfo&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.219">createRegion</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+<pre>protected&nbsp;org.apache.hadoop.hbase.HRegionInfo&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.203">createRegion</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                                org.apache.hadoop.hbase.client.Table&nbsp;htbl,
                                                byte[]&nbsp;startKey,
                                                byte[]&nbsp;endKey)
@@ -390,7 +497,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>wipeOutMeta</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.242">wipeOutMeta</a>()
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.226">wipeOutMeta</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -402,7 +509,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>tableRowCount</h4>
-<pre>protected&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.270">tableRowCount</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+<pre>protected&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.254">tableRowCount</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                 org.apache.hadoop.hbase.TableName&nbsp;table)
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Returns the number of rows in a given table. HBase must be up and the table
@@ -418,7 +525,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>scanMeta</h4>
-<pre>protected&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.290">scanMeta</a>()
+<pre>protected&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.274">scanMeta</a>()
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Dumps hbase:meta table info</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd># of entries in meta.</dd>
@@ -432,7 +539,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getTables</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.HTableDescriptor[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.296">getTables</a>(org.apache.hadoop.conf.Configuration&nbsp;configuration)
+<pre>protected&nbsp;org.apache.hadoop.hbase.HTableDescriptor[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/OfflineMetaRebuildTestCore.html#line.280">getTables</a>(org.apache.hadoop.conf.Configuration&nbsp;configuration)
                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>

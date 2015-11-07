@@ -81,6 +81,10 @@
  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>BlockCache</code></a>.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -116,6 +120,38 @@
  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent"><code>ConcurrentHashMap</code></a> and with a non-blocking eviction thread giving
  constant-time <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#cacheBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20org.apache.hadoop.hbase.io.hfile.Cacheable,%20boolean,%20boolean)"><code>LruBlockCache.cacheBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey, org.apache.hadoop.hbase.io.hfile.Cacheable, boolean, boolean)</code></a> and <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#getBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20boolean,%20boolean,%20boolean)"><code>LruBlockCache.getBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey, boolean, boolean, boolean)</code></a> operations.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/ResizableBlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">ResizableBlockCache</a> in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/ResizableBlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">ResizableBlockCache</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/ResizableBlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">ResizableBlockCache</a></code></td>
+<td class="colLast"><span class="strong">HeapMemoryManager.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryManager.html#blockCache">blockCache</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/ResizableBlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">ResizableBlockCache</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryManager.html#HeapMemoryManager(org.apache.hadoop.hbase.io.hfile.ResizableBlockCache,%20org.apache.hadoop.hbase.regionserver.FlushRequester,%20org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.regionserver.RegionServerAccounting)">HeapMemoryManager</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/ResizableBlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">ResizableBlockCache</a>&nbsp;blockCache,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a>&nbsp;memStoreFlusher,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerAccounting.html" title="class in org.apache.hadoop.hbase.regionserver">RegionServerAccounting</a>&nbsp;regionServerAccounting)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

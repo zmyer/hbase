@@ -158,34 +158,52 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#assertAlive(org.apache.hadoop.hbase.http.HttpServer)">assertAlive</a></strong>(org.apache.hadoop.hbase.http.HttpServer&nbsp;server)</code>
+<div class="block">Check that a server is alive by probing the <code>HttpServer.isAlive()</code> method
+ and the text of its toString() description</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#assertNotLive(org.apache.hadoop.hbase.http.HttpServer)">assertNotLive</a></strong>(org.apache.hadoop.hbase.http.HttpServer&nbsp;server)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#assertToStringContains(org.apache.hadoop.hbase.http.HttpServer,%20java.lang.String)">assertToStringContains</a></strong>(org.apache.hadoop.hbase.http.HttpServer&nbsp;server,
+                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</code>
+<div class="block">Assert that the result of <code>HttpServer.toString()</code> contains the specific text</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#testCreatedServerIsNotAlive()">testCreatedServerIsNotAlive</a></strong>()</code>
 <div class="block">Test that the server is alive once started</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#testStartedServerIsAlive()">testStartedServerIsAlive</a></strong>()</code>
 <div class="block">Test that the server is alive once started</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#testStoppedServerIsNotAlive()">testStoppedServerIsNotAlive</a></strong>()</code>
 <div class="block">Test that the server is not alive once stopped</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#testStoppingTwiceServerIsAllowed()">testStoppingTwiceServerIsAllowed</a></strong>()</code>
 <div class="block">Test that the server is not alive once stopped</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#testStopUnstartedServer()">testStopUnstartedServer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#testWepAppContextAfterServerStop()">testWepAppContextAfterServerStop</a></strong>()</code>
 <div class="block">Test that the server is alive once started</div>
@@ -244,6 +262,27 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="assertAlive(org.apache.hadoop.hbase.http.HttpServer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertAlive</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#line.34">assertAlive</a>(org.apache.hadoop.hbase.http.HttpServer&nbsp;server)</pre>
+<div class="block">Check that a server is alive by probing the <code>HttpServer.isAlive()</code> method
+ and the text of its toString() description</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>server</code> - server</dd></dl>
+</li>
+</ul>
+<a name="assertNotLive(org.apache.hadoop.hbase.http.HttpServer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertNotLive</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#line.39">assertNotLive</a>(org.apache.hadoop.hbase.http.HttpServer&nbsp;server)</pre>
+</li>
+</ul>
 <a name="testCreatedServerIsNotAlive()">
 <!--   -->
 </a>
@@ -280,6 +319,18 @@ extends <a href="../../../../../org/apache/hadoop/hbase/http/HttpServerFunctiona
 <div class="block">Test that the server is alive once started</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code> - on failure</dd></dl>
+</li>
+</ul>
+<a name="assertToStringContains(org.apache.hadoop.hbase.http.HttpServer, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertToStringContains</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/http/TestHttpServerLifecycle.html#line.81">assertToStringContains</a>(org.apache.hadoop.hbase.http.HttpServer&nbsp;server,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</pre>
+<div class="block">Assert that the result of <code>HttpServer.toString()</code> contains the specific text</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>server</code> - server to examine</dd><dd><code>text</code> - text to search for</dd></dl>
 </li>
 </ul>
 <a name="testStoppedServerIsNotAlive()">

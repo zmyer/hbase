@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.executor.EventHandler">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -120,6 +120,45 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/executor/EventHandler
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coordination/SplitLogWorkerCoordination.html" title="interface in org.apache.hadoop.hbase.coordination">SplitLogWorkerCoordination</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#coordination">coordination</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#inProgressTasks">inProgressTasks</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.SplitLogTask.RecoveryMode</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#mode">mode</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#reporter">reporter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#serverName">serverName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/coordination/SplitLogWorkerCoordination.SplitTaskDetails.html" title="interface in org.apache.hadoop.hbase.coordination">SplitLogWorkerCoordination.SplitTaskDetails</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#splitTaskDetails">splitTaskDetails</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitLogWorker.TaskExecutor.html" title="interface in org.apache.hadoop.hbase.regionserver">SplitLogWorker.TaskExecutor</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#splitTaskExecutor">splitTaskExecutor</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.executor.EventHandler">
 <!--   -->
@@ -194,6 +233,86 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/executor/EventHandler
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#line.44">LOG</a></pre>
+</li>
+</ul>
+<a name="serverName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverName</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#line.45">serverName</a></pre>
+</li>
+</ul>
+<a name="reporter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reporter</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#line.46">reporter</a></pre>
+</li>
+</ul>
+<a name="inProgressTasks">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>inProgressTasks</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#line.47">inProgressTasks</a></pre>
+</li>
+</ul>
+<a name="splitTaskExecutor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>splitTaskExecutor</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitLogWorker.TaskExecutor.html" title="interface in org.apache.hadoop.hbase.regionserver">SplitLogWorker.TaskExecutor</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#line.48">splitTaskExecutor</a></pre>
+</li>
+</ul>
+<a name="mode">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mode</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.SplitLogTask.RecoveryMode <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#line.49">mode</a></pre>
+</li>
+</ul>
+<a name="splitTaskDetails">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>splitTaskDetails</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/coordination/SplitLogWorkerCoordination.SplitTaskDetails.html" title="interface in org.apache.hadoop.hbase.coordination">SplitLogWorkerCoordination.SplitTaskDetails</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#line.50">splitTaskDetails</a></pre>
+</li>
+</ul>
+<a name="coordination">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>coordination</h4>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/coordination/SplitLogWorkerCoordination.html" title="interface in org.apache.hadoop.hbase.coordination">SplitLogWorkerCoordination</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html#line.51">coordination</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -293,13 +412,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/executor/EventHandler
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.executor.EventHandler">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

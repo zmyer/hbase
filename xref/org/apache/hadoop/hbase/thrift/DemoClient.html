@@ -165,13 +165,13 @@
 <a class="jxr_linenumber" name="155" href="#155">155</a>         <em class="jxr_comment">// Create the demo table with two column families, entry: and unused:</em>
 <a class="jxr_linenumber" name="156" href="#156">156</a>         <em class="jxr_comment">//</em>
 <a class="jxr_linenumber" name="157" href="#157">157</a>         ArrayList&lt;ColumnDescriptor&gt; columns = <strong class="jxr_keyword">new</strong> ArrayList&lt;ColumnDescriptor&gt;();
-<a class="jxr_linenumber" name="158" href="#158">158</a>         <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/ColumnDescriptor.html">ColumnDescriptor</a> col;
-<a class="jxr_linenumber" name="159" href="#159">159</a>         col = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/ColumnDescriptor.html">ColumnDescriptor</a>();
+<a class="jxr_linenumber" name="158" href="#158">158</a>         ColumnDescriptor col;
+<a class="jxr_linenumber" name="159" href="#159">159</a>         col = <strong class="jxr_keyword">new</strong> ColumnDescriptor();
 <a class="jxr_linenumber" name="160" href="#160">160</a>         col.name = ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:"</span>));
 <a class="jxr_linenumber" name="161" href="#161">161</a>         col.timeToLive = Integer.MAX_VALUE;
 <a class="jxr_linenumber" name="162" href="#162">162</a>         col.maxVersions = 10;
 <a class="jxr_linenumber" name="163" href="#163">163</a>         columns.add(col);
-<a class="jxr_linenumber" name="164" href="#164">164</a>         col = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/ColumnDescriptor.html">ColumnDescriptor</a>();
+<a class="jxr_linenumber" name="164" href="#164">164</a>         col = <strong class="jxr_keyword">new</strong> ColumnDescriptor();
 <a class="jxr_linenumber" name="165" href="#165">165</a>         col.name = ByteBuffer.wrap(bytes(<span class="jxr_string">"unused:"</span>));
 <a class="jxr_linenumber" name="166" href="#166">166</a>         col.timeToLive = Integer.MAX_VALUE;
 <a class="jxr_linenumber" name="167" href="#167">167</a>         columns.add(col);
@@ -205,7 +205,7 @@
 <a class="jxr_linenumber" name="195" href="#195">195</a>         ArrayList&lt;Mutation&gt; mutations;
 <a class="jxr_linenumber" name="196" href="#196">196</a>         <em class="jxr_comment">// non-utf8 is fine for data</em>
 <a class="jxr_linenumber" name="197" href="#197">197</a>         mutations = <strong class="jxr_keyword">new</strong> ArrayList&lt;Mutation&gt;();
-<a class="jxr_linenumber" name="198" href="#198">198</a>         mutations.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:foo"</span>)),
+<a class="jxr_linenumber" name="198" href="#198">198</a>         mutations.add(<strong class="jxr_keyword">new</strong> Mutation(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:foo"</span>)),
 <a class="jxr_linenumber" name="199" href="#199">199</a>             ByteBuffer.wrap(invalid), writeToWal));
 <a class="jxr_linenumber" name="200" href="#200">200</a>         client.mutateRow(ByteBuffer.wrap(t), ByteBuffer.wrap(bytes(<span class="jxr_string">"foo"</span>)),
 <a class="jxr_linenumber" name="201" href="#201">201</a>             mutations, dummyAttributes);
@@ -213,13 +213,13 @@
 <a class="jxr_linenumber" name="203" href="#203">203</a> 
 <a class="jxr_linenumber" name="204" href="#204">204</a>         <em class="jxr_comment">// this row name is valid utf8</em>
 <a class="jxr_linenumber" name="205" href="#205">205</a>         mutations = <strong class="jxr_keyword">new</strong> ArrayList&lt;Mutation&gt;();
-<a class="jxr_linenumber" name="206" href="#206">206</a>         mutations.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:foo"</span>)), ByteBuffer.wrap(valid), writeToWal));
+<a class="jxr_linenumber" name="206" href="#206">206</a>         mutations.add(<strong class="jxr_keyword">new</strong> Mutation(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:foo"</span>)), ByteBuffer.wrap(valid), writeToWal));
 <a class="jxr_linenumber" name="207" href="#207">207</a>         client.mutateRow(ByteBuffer.wrap(t), ByteBuffer.wrap(valid), mutations, dummyAttributes);
 <a class="jxr_linenumber" name="208" href="#208">208</a> 
 <a class="jxr_linenumber" name="209" href="#209">209</a>         <em class="jxr_comment">// non-utf8 is now allowed in row names because HBase stores values as binary</em>
 <a class="jxr_linenumber" name="210" href="#210">210</a> 
 <a class="jxr_linenumber" name="211" href="#211">211</a>         mutations = <strong class="jxr_keyword">new</strong> ArrayList&lt;Mutation&gt;();
-<a class="jxr_linenumber" name="212" href="#212">212</a>         mutations.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:foo"</span>)), ByteBuffer.wrap(invalid), writeToWal));
+<a class="jxr_linenumber" name="212" href="#212">212</a>         mutations.add(<strong class="jxr_keyword">new</strong> Mutation(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:foo"</span>)), ByteBuffer.wrap(invalid), writeToWal));
 <a class="jxr_linenumber" name="213" href="#213">213</a>         client.mutateRow(ByteBuffer.wrap(t), ByteBuffer.wrap(invalid), mutations, dummyAttributes);
 <a class="jxr_linenumber" name="214" href="#214">214</a> 
 <a class="jxr_linenumber" name="215" href="#215">215</a> 
@@ -249,7 +249,7 @@
 <a class="jxr_linenumber" name="239" href="#239">239</a>             byte[] row = bytes(nf.format(i));
 <a class="jxr_linenumber" name="240" href="#240">240</a> 
 <a class="jxr_linenumber" name="241" href="#241">241</a>             mutations = <strong class="jxr_keyword">new</strong> ArrayList&lt;Mutation&gt;();
-<a class="jxr_linenumber" name="242" href="#242">242</a>             mutations.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"unused:"</span>)), ByteBuffer.wrap(bytes(<span class="jxr_string">"DELETE_ME"</span>)), writeToWal));
+<a class="jxr_linenumber" name="242" href="#242">242</a>             mutations.add(<strong class="jxr_keyword">new</strong> Mutation(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"unused:"</span>)), ByteBuffer.wrap(bytes(<span class="jxr_string">"DELETE_ME"</span>)), writeToWal));
 <a class="jxr_linenumber" name="243" href="#243">243</a>             client.mutateRow(ByteBuffer.wrap(t), ByteBuffer.wrap(row), mutations, dummyAttributes);
 <a class="jxr_linenumber" name="244" href="#244">244</a>             printRow(client.getRow(ByteBuffer.wrap(t), ByteBuffer.wrap(row), dummyAttributes));
 <a class="jxr_linenumber" name="245" href="#245">245</a>             client.deleteAllRow(ByteBuffer.wrap(t), ByteBuffer.wrap(row), dummyAttributes);
@@ -262,18 +262,18 @@
 <a class="jxr_linenumber" name="252" href="#252">252</a>             }
 <a class="jxr_linenumber" name="253" href="#253">253</a> 
 <a class="jxr_linenumber" name="254" href="#254">254</a>             mutations = <strong class="jxr_keyword">new</strong> ArrayList&lt;Mutation&gt;();
-<a class="jxr_linenumber" name="255" href="#255">255</a>             mutations.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:num"</span>)), ByteBuffer.wrap(bytes(<span class="jxr_string">"0"</span>)), writeToWal));
-<a class="jxr_linenumber" name="256" href="#256">256</a>             mutations.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:foo"</span>)), ByteBuffer.wrap(bytes(<span class="jxr_string">"FOO"</span>)), writeToWal));
+<a class="jxr_linenumber" name="255" href="#255">255</a>             mutations.add(<strong class="jxr_keyword">new</strong> Mutation(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:num"</span>)), ByteBuffer.wrap(bytes(<span class="jxr_string">"0"</span>)), writeToWal));
+<a class="jxr_linenumber" name="256" href="#256">256</a>             mutations.add(<strong class="jxr_keyword">new</strong> Mutation(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:foo"</span>)), ByteBuffer.wrap(bytes(<span class="jxr_string">"FOO"</span>)), writeToWal));
 <a class="jxr_linenumber" name="257" href="#257">257</a>             client.mutateRow(ByteBuffer.wrap(t), ByteBuffer.wrap(row), mutations, dummyAttributes);
 <a class="jxr_linenumber" name="258" href="#258">258</a>             printRow(client.getRow(ByteBuffer.wrap(t), ByteBuffer.wrap(row), dummyAttributes));
 <a class="jxr_linenumber" name="259" href="#259">259</a> 
-<a class="jxr_linenumber" name="260" href="#260">260</a>             <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a> m;
+<a class="jxr_linenumber" name="260" href="#260">260</a>             Mutation m;
 <a class="jxr_linenumber" name="261" href="#261">261</a>             mutations = <strong class="jxr_keyword">new</strong> ArrayList&lt;Mutation&gt;();
-<a class="jxr_linenumber" name="262" href="#262">262</a>             m = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>();
+<a class="jxr_linenumber" name="262" href="#262">262</a>             m = <strong class="jxr_keyword">new</strong> Mutation();
 <a class="jxr_linenumber" name="263" href="#263">263</a>             m.column = ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:foo"</span>));
 <a class="jxr_linenumber" name="264" href="#264">264</a>             m.isDelete = <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="265" href="#265">265</a>             mutations.add(m);
-<a class="jxr_linenumber" name="266" href="#266">266</a>             m = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>();
+<a class="jxr_linenumber" name="266" href="#266">266</a>             m = <strong class="jxr_keyword">new</strong> Mutation();
 <a class="jxr_linenumber" name="267" href="#267">267</a>             m.column = ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:num"</span>));
 <a class="jxr_linenumber" name="268" href="#268">268</a>             m.value = ByteBuffer.wrap(bytes(<span class="jxr_string">"-1"</span>));
 <a class="jxr_linenumber" name="269" href="#269">269</a>             mutations.add(m);
@@ -281,8 +281,8 @@
 <a class="jxr_linenumber" name="271" href="#271">271</a>             printRow(client.getRow(ByteBuffer.wrap(t), ByteBuffer.wrap(row), dummyAttributes));
 <a class="jxr_linenumber" name="272" href="#272">272</a> 
 <a class="jxr_linenumber" name="273" href="#273">273</a>             mutations = <strong class="jxr_keyword">new</strong> ArrayList&lt;Mutation&gt;();
-<a class="jxr_linenumber" name="274" href="#274">274</a>             mutations.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:num"</span>)), ByteBuffer.wrap(bytes(Integer.toString(i))), writeToWal));
-<a class="jxr_linenumber" name="275" href="#275">275</a>             mutations.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:sqr"</span>)), ByteBuffer.wrap(bytes(Integer.toString(i * i))), writeToWal));
+<a class="jxr_linenumber" name="274" href="#274">274</a>             mutations.add(<strong class="jxr_keyword">new</strong> Mutation(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:num"</span>)), ByteBuffer.wrap(bytes(Integer.toString(i))), writeToWal));
+<a class="jxr_linenumber" name="275" href="#275">275</a>             mutations.add(<strong class="jxr_keyword">new</strong> Mutation(false, ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:sqr"</span>)), ByteBuffer.wrap(bytes(Integer.toString(i * i))), writeToWal));
 <a class="jxr_linenumber" name="276" href="#276">276</a>             client.mutateRow(ByteBuffer.wrap(t), ByteBuffer.wrap(row), mutations, dummyAttributes);
 <a class="jxr_linenumber" name="277" href="#277">277</a>             printRow(client.getRow(ByteBuffer.wrap(t), ByteBuffer.wrap(row), dummyAttributes));
 <a class="jxr_linenumber" name="278" href="#278">278</a> 
@@ -294,11 +294,11 @@
 <a class="jxr_linenumber" name="284" href="#284">284</a>             }
 <a class="jxr_linenumber" name="285" href="#285">285</a> 
 <a class="jxr_linenumber" name="286" href="#286">286</a>             mutations.clear();
-<a class="jxr_linenumber" name="287" href="#287">287</a>             m = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>();
+<a class="jxr_linenumber" name="287" href="#287">287</a>             m = <strong class="jxr_keyword">new</strong> Mutation();
 <a class="jxr_linenumber" name="288" href="#288">288</a>             m.column = ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:num"</span>));
 <a class="jxr_linenumber" name="289" href="#289">289</a>             m.value= ByteBuffer.wrap(bytes(<span class="jxr_string">"-999"</span>));
 <a class="jxr_linenumber" name="290" href="#290">290</a>             mutations.add(m);
-<a class="jxr_linenumber" name="291" href="#291">291</a>             m = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/generated/Mutation.html">Mutation</a>();
+<a class="jxr_linenumber" name="291" href="#291">291</a>             m = <strong class="jxr_keyword">new</strong> Mutation();
 <a class="jxr_linenumber" name="292" href="#292">292</a>             m.column = ByteBuffer.wrap(bytes(<span class="jxr_string">"entry:sqr"</span>));
 <a class="jxr_linenumber" name="293" href="#293">293</a>             m.isDelete = <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="294" href="#294">294</a>             client.mutateRowTs(ByteBuffer.wrap(t), ByteBuffer.wrap(row), mutations, 1, dummyAttributes); <em class="jxr_comment">// shouldn't override latest</em>
@@ -354,7 +354,7 @@
 <a class="jxr_linenumber" name="344" href="#344">344</a>         System.out.println(<span class="jxr_string">"row: "</span> + utf8(row.array()) + <span class="jxr_string">", values: "</span> + rowStr);
 <a class="jxr_linenumber" name="345" href="#345">345</a>     }
 <a class="jxr_linenumber" name="346" href="#346">346</a> 
-<a class="jxr_linenumber" name="347" href="#347">347</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> printRow(<a href="../../../../../org/apache/hadoop/hbase/thrift/generated/TRowResult.html">TRowResult</a> rowResult) {
+<a class="jxr_linenumber" name="347" href="#347">347</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> printRow(TRowResult rowResult) {
 <a class="jxr_linenumber" name="348" href="#348">348</a>         <em class="jxr_comment">// copy values into a TreeMap to get them in sorted order</em>
 <a class="jxr_linenumber" name="349" href="#349">349</a> 
 <a class="jxr_linenumber" name="350" href="#350">350</a>         TreeMap&lt;String, TCell&gt; sorted = <strong class="jxr_keyword">new</strong> TreeMap&lt;String, TCell&gt;();

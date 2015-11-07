@@ -133,8 +133,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.KeyValue</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteRangeWithKVSerialization.html#readCell(org.apache.hadoop.hbase.util.PositionedByteRange)">readCell</a></strong>(org.apache.hadoop.hbase.util.PositionedByteRange&nbsp;pbr)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteRangeWithKVSerialization.html#testWritingAndReadingCells()">testWritingAndReadingCells</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestByteRangeWithKVSerialization.html#writeCell(org.apache.hadoop.hbase.util.PositionedByteRange,%20org.apache.hadoop.hbase.KeyValue)">writeCell</a></strong>(org.apache.hadoop.hbase.util.PositionedByteRange&nbsp;pbr,
+                  org.apache.hadoop.hbase.KeyValue&nbsp;kv)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -175,6 +184,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="writeCell(org.apache.hadoop.hbase.util.PositionedByteRange, org.apache.hadoop.hbase.KeyValue)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeCell</h4>
+<pre>static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteRangeWithKVSerialization.html#line.34">writeCell</a>(org.apache.hadoop.hbase.util.PositionedByteRange&nbsp;pbr,
+             org.apache.hadoop.hbase.KeyValue&nbsp;kv)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="readCell(org.apache.hadoop.hbase.util.PositionedByteRange)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readCell</h4>
+<pre>static&nbsp;org.apache.hadoop.hbase.KeyValue&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestByteRangeWithKVSerialization.html#line.46">readCell</a>(org.apache.hadoop.hbase.util.PositionedByteRange&nbsp;pbr)
+                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
 <a name="testWritingAndReadingCells()">
 <!--   -->
 </a>

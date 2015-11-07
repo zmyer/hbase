@@ -79,7 +79,7 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.snapshot">org.apache.hadoop.hbase.snapshot</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -112,12 +112,38 @@
 </tr>
 </tbody>
 </table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/io/package-summary.html">org.apache.hadoop.hbase.io</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a></code></td>
+<td class="colLast"><span class="strong">FileLink.FileLinkInputStream.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.FileLinkInputStream.html#fileLink">fileLink</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a></code></td>
+<td class="colLast"><span class="strong">FSDataInputStreamWrapper.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/FSDataInputStreamWrapper.html#link">link</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/io/package-summary.html">org.apache.hadoop.hbase.io</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.FileLinkInputStream.html#FileLink.FileLinkInputStream(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.io.FileLink)">FileLink.FileLinkInputStream</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                                        <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a>&nbsp;fileLink)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.FileLinkInputStream.html#FileLink.FileLinkInputStream(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.io.FileLink,%20int)">FileLink.FileLinkInputStream</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                                        <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a>&nbsp;fileLink,
+                                                        int&nbsp;bufferSize)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/FSDataInputStreamWrapper.html#FSDataInputStreamWrapper(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.io.FileLink)">FSDataInputStreamWrapper</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                                 <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a>&nbsp;link)</code>&nbsp;</td>
@@ -127,25 +153,30 @@
                                                 <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a>&nbsp;link,
                                                 boolean&nbsp;dropBehind)</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/FSDataInputStreamWrapper.html#FSDataInputStreamWrapper(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.io.FileLink,%20org.apache.hadoop.fs.Path,%20boolean)">FSDataInputStreamWrapper</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                                <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a>&nbsp;link,
+                                                org.apache.hadoop.fs.Path&nbsp;path,
+                                                boolean&nbsp;dropBehind)</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
-<li class="blockList"><a name="org.apache.hadoop.hbase.util">
+<li class="blockList"><a name="org.apache.hadoop.hbase.snapshot">
 <!--   -->
 </a>
-<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a> in <a href="../../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a></h3>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a> in <a href="../../../../../../org/apache/hadoop/hbase/snapshot/package-summary.html">org.apache.hadoop.hbase.snapshot</a></h3>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/util/package-summary.html">org.apache.hadoop.hbase.util</a> that return <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a></span><span class="tabEnd">&nbsp;</span></caption>
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/snapshot/package-summary.html">org.apache.hadoop.hbase.snapshot</a> that return <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a></code></td>
-<td class="colLast"><span class="strong">HFileV1Detector.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HFileV1Detector.html#getFileLinkWithPreNSPath(org.apache.hadoop.fs.Path)">getFileLinkWithPreNSPath</a></strong>(org.apache.hadoop.fs.Path&nbsp;storeFilePath)</code>
-<div class="block">Creates a FileLink which adds pre-namespace paths in its list of available paths.</div>
-</td>
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/FileLink.html" title="class in org.apache.hadoop.hbase.io">FileLink</a></code></td>
+<td class="colLast"><span class="strong">ExportSnapshot.ExportMapper.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/snapshot/ExportSnapshot.ExportMapper.html#getFileLink(org.apache.hadoop.fs.Path,%20org.apache.hadoop.conf.Configuration)">getFileLink</a></strong>(org.apache.hadoop.fs.Path&nbsp;path,
+                      org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

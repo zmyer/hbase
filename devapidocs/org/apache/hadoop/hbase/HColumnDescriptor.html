@@ -133,44 +133,62 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#blocksize">blocksize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#BLOCKSIZE">BLOCKSIZE</a></strong></code>
 <div class="block">Size of storefile/hfile 'blocks'.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#BLOOMFILTER">BLOOMFILTER</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#CACHE_BLOOMS_ON_WRITE">CACHE_BLOOMS_ON_WRITE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#CACHE_DATA_IN_L1">CACHE_DATA_IN_L1</a></strong></code>
 <div class="block">Key for cache data into L1 if cache is set up with more than one tier.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#CACHE_DATA_ON_WRITE">CACHE_DATA_ON_WRITE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#CACHE_INDEX_ON_WRITE">CACHE_INDEX_ON_WRITE</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#cachedMaxVersions">cachedMaxVersions</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#COMPRESS_TAGS">COMPRESS_TAGS</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private static byte</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#COLUMN_DESCRIPTOR_VERSION">COLUMN_DESCRIPTOR_VERSION</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#COMPRESSION">COMPRESSION</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#COMPRESS_TAGS">COMPRESS_TAGS</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#COMPRESSION">COMPRESSION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#COMPRESSION_COMPACT">COMPRESSION_COMPACT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#configuration">configuration</a></strong></code>
+<div class="block">A map which holds the configuration specific to the column family.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -296,65 +314,73 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#DEFAULT_VALUES">DEFAULT_VALUES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#DEFAULT_VERSIONS">DEFAULT_VERSIONS</a></strong></code>
 <div class="block">Default number of versions of a record to keep.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#DFS_REPLICATION">DFS_REPLICATION</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#ENCODE_ON_DISK">ENCODE_ON_DISK</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#ENCRYPTION">ENCRYPTION</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#ENCRYPTION_KEY">ENCRYPTION_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#EVICT_BLOCKS_ON_CLOSE">EVICT_BLOCKS_ON_CLOSE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#FOREVER">FOREVER</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#IS_MOB">IS_MOB</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#IS_MOB_BYTES">IS_MOB_BYTES</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#KEEP_DELETED_CELLS">KEEP_DELETED_CELLS</a></strong></code>
 <div class="block">Retain all cells across flushes and compactions even if they fall behind
  a delete tombstone.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#LENGTH">LENGTH</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#MIN_VERSIONS">MIN_VERSIONS</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#MOB_THRESHOLD">MOB_THRESHOLD</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#MOB_THRESHOLD_BYTES">MOB_THRESHOLD_BYTES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#name">name</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -371,8 +397,20 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#REPLICATION_SCOPE_BYTES">REPLICATION_SCOPE_BYTES</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../org/apache/hadoop/hbase/util/Bytes.html" title="class in org.apache.hadoop.hbase.util">Bytes</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#RESERVED_KEYWORDS">RESERVED_KEYWORDS</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#TTL">TTL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#UNINITIALIZED">UNINITIALIZED</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../org/apache/hadoop/hbase/util/Bytes.html" title="class in org.apache.hadoop.hbase.util">Bytes</a>,<a href="../../../../org/apache/hadoop/hbase/util/Bytes.html" title="class in org.apache.hadoop.hbase.util">Bytes</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#values">values</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -386,21 +424,31 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#HColumnDescriptor(byte[])">HColumnDescriptor</a></strong>(byte[]&nbsp;familyName)</code>
+<td class="colFirst"><code>private </code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#HColumnDescriptor()">HColumnDescriptor</a></strong>()</code>
+<div class="block">Default constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#HColumnDescriptor(byte[])">HColumnDescriptor</a></strong>(byte[]&nbsp;familyName)</code>
 <div class="block">Construct a column descriptor specifying only the family name
  The other attributes are defaulted.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#HColumnDescriptor(org.apache.hadoop.hbase.HColumnDescriptor)">HColumnDescriptor</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;desc)</code>
+<tr class="altColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#HColumnDescriptor(org.apache.hadoop.hbase.HColumnDescriptor)">HColumnDescriptor</a></strong>(<a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;desc)</code>
 <div class="block">Constructor.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#HColumnDescriptor(java.lang.String)">HColumnDescriptor</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</code>
+<tr class="rowColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#HColumnDescriptor(java.lang.String)">HColumnDescriptor</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</code>
 <div class="block">Construct a column descriptor specifying only the family name
  The other attributes are defaulted.</div>
 </td>
@@ -559,68 +607,77 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#getValues()">getValues</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#getValues(boolean)">getValues</a></strong>(boolean&nbsp;printDefaults)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#hashCode()">hashCode</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isBlockCacheEnabled()">isBlockCacheEnabled</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isCacheBloomsOnWrite()">isCacheBloomsOnWrite</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isCacheDataInL1()">isCacheDataInL1</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isCacheDataOnWrite()">isCacheDataOnWrite</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isCacheIndexesOnWrite()">isCacheIndexesOnWrite</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isCompressTags()">isCompressTags</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isEvictBlocksOnClose()">isEvictBlocksOnClose</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isInMemory()">isInMemory</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isLegalFamilyName(byte[])">isLegalFamilyName</a></strong>(byte[]&nbsp;b)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isMobEnabled()">isMobEnabled</a></strong>()</code>
 <div class="block">Gets whether the mob is enabled for the family.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#isPrefetchBlocksOnOpen()">isPrefetchBlocksOnOpen</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#parseFrom(byte[])">parseFrom</a></strong>(byte[]&nbsp;bytes)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#remove(byte[])">remove</a></strong>(byte[]&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#removeConfiguration(java.lang.String)">removeConfiguration</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
 <div class="block">Remove a configuration setting represented by the key from the <a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#configuration"><code>configuration</code></a> map.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setAndGetBoolean(java.lang.String,%20boolean)">setAndGetBoolean</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+                                boolean&nbsp;defaultSetting)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
@@ -798,6 +855,16 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="COLUMN_DESCRIPTOR_VERSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COLUMN_DESCRIPTOR_VERSION</h4>
+<pre>private static final&nbsp;byte <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.66">COLUMN_DESCRIPTOR_VERSION</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HColumnDescriptor.COLUMN_DESCRIPTOR_VERSION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="COMPRESSION">
 <!--   -->
 </a>
@@ -1167,6 +1234,15 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HColumnDescriptor.DEFAULT_MIN_VERSIONS">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="blocksize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>blocksize</h4>
+<pre>private volatile&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.168">blocksize</a></pre>
+</li>
+</ul>
 <a name="DEFAULT_IN_MEMORY">
 <!--   -->
 </a>
@@ -1317,11 +1393,78 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <a name="DEFAULT_PREFETCH_BLOCKS_ON_OPEN">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_PREFETCH_BLOCKS_ON_OPEN</h4>
 <pre>public static final&nbsp;boolean <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.244">DEFAULT_PREFETCH_BLOCKS_ON_OPEN</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HColumnDescriptor.DEFAULT_PREFETCH_BLOCKS_ON_OPEN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_VALUES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEFAULT_VALUES</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.246">DEFAULT_VALUES</a></pre>
+</li>
+</ul>
+<a name="RESERVED_KEYWORDS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RESERVED_KEYWORDS</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../org/apache/hadoop/hbase/util/Bytes.html" title="class in org.apache.hadoop.hbase.util">Bytes</a>&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.248">RESERVED_KEYWORDS</a></pre>
+</li>
+</ul>
+<a name="UNINITIALIZED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UNINITIALIZED</h4>
+<pre>private static final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.278">UNINITIALIZED</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.hadoop.hbase.HColumnDescriptor.UNINITIALIZED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="name">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>name</h4>
+<pre>private&nbsp;byte[] <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.281">name</a></pre>
+</li>
+</ul>
+<a name="values">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>values</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../org/apache/hadoop/hbase/util/Bytes.html" title="class in org.apache.hadoop.hbase.util">Bytes</a>,<a href="../../../../org/apache/hadoop/hbase/util/Bytes.html" title="class in org.apache.hadoop.hbase.util">Bytes</a>&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.284">values</a></pre>
+</li>
+</ul>
+<a name="configuration">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>configuration</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.292">configuration</a></pre>
+<div class="block">A map which holds the configuration specific to the column family.
+ The keys of the map have the same names as config keys and override the defaults with
+ cf-specific settings. Example usage may be for compactions, etc.</div>
+</li>
+</ul>
+<a name="cachedMaxVersions">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>cachedMaxVersions</h4>
+<pre>private&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.297">cachedMaxVersions</a></pre>
 </li>
 </ul>
 </li>
@@ -1332,6 +1475,16 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
+<a name="HColumnDescriptor()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HColumnDescriptor</h4>
+<pre>private&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.302">HColumnDescriptor</a>()</pre>
+<div class="block">Default constructor. Must be present for PB deserializations.</div>
+</li>
+</ul>
 <a name="HColumnDescriptor(java.lang.String)">
 <!--   -->
 </a>
@@ -1872,6 +2025,16 @@ public&nbsp;<a href="../../../../org/apache/hadoop/hbase/io/compress/Compression
 <dt><span class="strong">Returns:</span></dt><dd>this (for chained invocation)</dd></dl>
 </li>
 </ul>
+<a name="setAndGetBoolean(java.lang.String, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAndGetBoolean</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.837">setAndGetBoolean</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+                       boolean&nbsp;defaultSetting)</pre>
+</li>
+</ul>
 <a name="isCacheIndexesOnWrite()">
 <!--   -->
 </a>
@@ -1978,6 +2141,15 @@ public&nbsp;<a href="../../../../org/apache/hadoop/hbase/io/compress/Compression
 <h4>toStringCustomizedValues</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.926">toStringCustomizedValues</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>Column family descriptor with only the customized attributes.</dd></dl>
+</li>
+</ul>
+<a name="getValues(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getValues</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HColumnDescriptor.html#line.938">getValues</a>(boolean&nbsp;printDefaults)</pre>
 </li>
 </ul>
 <a name="getUnit(java.lang.String)">

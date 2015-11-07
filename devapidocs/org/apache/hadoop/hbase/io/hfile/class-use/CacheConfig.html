@@ -96,15 +96,27 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.mob.mapreduce">org.apache.hadoop.hbase.mob.mapreduce</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.mob.compactions">org.apache.hadoop.hbase.mob.compactions</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.mob.mapreduce">org.apache.hadoop.hbase.mob.mapreduce</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.tmpl.regionserver">org.apache.hadoop.hbase.tmpl.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.util.hbck">org.apache.hadoop.hbase.util.hbck</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -223,6 +235,18 @@
 <td class="colLast"><span class="strong">HFile.WriterFactory.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.WriterFactory.html#cacheConf">cacheConf</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">HFileBlockIndex.BlockIndexWriter.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexWriter.html#cacheConf">cacheConf</a></strong></code>
+<div class="block">CacheConfig, or null if cache-on-write is disabled</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">HFileReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.html#cacheConf">cacheConf</a></strong></code>
+<div class="block">Block cache configuration.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
 <td class="colLast"><span class="strong">HFileWriterImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#cacheConf">cacheConf</a></strong></code>
 <div class="block">Cache configuration for caching data on write.</div>
@@ -254,16 +278,37 @@
                         org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
+<td class="colLast"><span class="strong">HFile.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html#createReaderFromStream(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FSDataInputStream,%20long,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.conf.Configuration)">createReaderFromStream</a></strong>(org.apache.hadoop.fs.Path&nbsp;path,
+                                            org.apache.hadoop.fs.FSDataInputStream&nbsp;fsdis,
+                                            long&nbsp;size,
+                                            <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf,
+                                            org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
+<div class="block">This factory method is used only by unit tests</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
 <td class="colLast"><span class="strong">HFileBlock.Writer.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.Writer.html#getBlockForCaching(org.apache.hadoop.hbase.io.hfile.CacheConfig)">getBlockForCaching</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf)</code>
 <div class="block">Creates a new HFileBlock.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.WriterFactory.html" title="class in org.apache.hadoop.hbase.io.hfile">HFile.WriterFactory</a></code></td>
 <td class="colLast"><span class="strong">HFile.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html#getWriterFactory(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig)">getWriterFactory</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                 <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf)</code>
 <div class="block">Returns the factory to be used to create <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html" title="class in org.apache.hadoop.hbase.io.hfile"><code>HFile</code></a> writers</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.Reader.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFile.Reader</a></code></td>
+<td class="colLast"><span class="strong">HFile.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html#pickReaderVersion(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.io.FSDataInputStreamWrapper,%20long,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.fs.HFileSystem,%20org.apache.hadoop.conf.Configuration)">pickReaderVersion</a></strong>(org.apache.hadoop.fs.Path&nbsp;path,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/FSDataInputStreamWrapper.html" title="class in org.apache.hadoop.hbase.io">FSDataInputStreamWrapper</a>&nbsp;fsdis,
+                                  long&nbsp;size,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/fs/HFileSystem.html" title="class in org.apache.hadoop.hbase.fs">HFileSystem</a>&nbsp;hfs,
+                                  org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
+<div class="block">Method returns the reader given the specified arguments.</div>
 </td>
 </tr>
 </tbody>
@@ -280,13 +325,17 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.WriterFactory.html#HFile.WriterFactory(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig)">HFile.WriterFactory</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                      <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexWriter.html#HFileBlockIndex.BlockIndexWriter(org.apache.hadoop.hbase.io.hfile.HFileBlock.Writer,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20java.lang.String)">HFileBlockIndex.BlockIndexWriter</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.Writer.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock.Writer</a>&nbsp;blockWriter,
                                                                 <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf,
                                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;nameForCaching)</code>
 <div class="block">Creates a multi-level block index writer.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.html#HFileReaderImpl(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.io.hfile.FixedFileTrailer,%20org.apache.hadoop.hbase.io.FSDataInputStreamWrapper,%20long,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.fs.HFileSystem,%20org.apache.hadoop.conf.Configuration)">HFileReaderImpl</a></strong>(org.apache.hadoop.fs.Path&nbsp;path,
                               <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/FixedFileTrailer.html" title="class in org.apache.hadoop.hbase.io.hfile">FixedFileTrailer</a>&nbsp;trailer,
                               <a href="../../../../../../../org/apache/hadoop/hbase/io/FSDataInputStreamWrapper.html" title="class in org.apache.hadoop.hbase.io">FSDataInputStreamWrapper</a>&nbsp;fsdis,
@@ -296,6 +345,10 @@
                               org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Opens a HFile.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterFactory.html#HFileWriterFactory(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig)">HFileWriterFactory</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                    <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileWriterImpl.html#HFileWriterImpl(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FSDataOutputStream,%20org.apache.hadoop.hbase.CellComparator,%20org.apache.hadoop.hbase.io.hfile.HFileContext)">HFileWriterImpl</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
@@ -399,6 +452,20 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></code></td>
+<td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#createWriter(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.HColumnDescriptor,%20org.apache.hadoop.hbase.mob.MobFileName,%20org.apache.hadoop.fs.Path,%20long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context)">createWriter</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                        org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/mob/MobFileName.html" title="class in org.apache.hadoop.hbase.mob">MobFileName</a>&nbsp;mobFileName,
+                        org.apache.hadoop.fs.Path&nbsp;basePath,
+                        long&nbsp;maxKeyCount,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/io/compress/Compression.Algorithm.html" title="enum in org.apache.hadoop.hbase.io.compress">Compression.Algorithm</a>&nbsp;compression,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Encryption.Context.html" title="class in org.apache.hadoop.hbase.io.crypto">Encryption.Context</a>&nbsp;cryptoContext)</code>
+<div class="block">Creates a writer for the mob file in temp directory.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></code></td>
 <td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#createWriter(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.HColumnDescriptor,%20java.lang.String,%20org.apache.hadoop.fs.Path,%20long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20byte[],%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context)">createWriter</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                         org.apache.hadoop.fs.FileSystem&nbsp;fs,
@@ -413,7 +480,7 @@
 <div class="block">Creates a writer for the mob file in temp directory.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></code></td>
 <td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#createWriter(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.HColumnDescriptor,%20java.lang.String,%20org.apache.hadoop.fs.Path,%20long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20java.lang.String,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context)">createWriter</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                         org.apache.hadoop.fs.FileSystem&nbsp;fs,
@@ -428,6 +495,33 @@
 <div class="block">Creates a writer for the mob file in temp directory.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#validateMobFile(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.io.hfile.CacheConfig)">validateMobFile</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                              org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                              org.apache.hadoop.fs.Path&nbsp;path,
+                              <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig)</code>
+<div class="block">Validates a mob file by opening and closing it.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.mob.compactions">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a> in <a href="../../../../../../../org/apache/hadoop/hbase/mob/compactions/package-summary.html">org.apache.hadoop.hbase.mob.compactions</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/mob/compactions/package-summary.html">org.apache.hadoop.hbase.mob.compactions</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">PartitionedMobCompactor.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactor.html#compactionCacheConfig">compactionCacheConfig</a></strong></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -435,6 +529,27 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a> in <a href="../../../../../../../org/apache/hadoop/hbase/mob/mapreduce/package-summary.html">org.apache.hadoop.hbase.mob.mapreduce</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/mob/mapreduce/package-summary.html">org.apache.hadoop.hbase.mob.mapreduce</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">MemStoreWrapper.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#cacheConfig">cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">SweepJob.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepJob.html#cacheConfig">cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">SweepReducer.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/mapreduce/SweepReducer.html#cacheConfig">cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
 <caption><span>Constructors in <a href="../../../../../../../org/apache/hadoop/hbase/mob/mapreduce/package-summary.html">org.apache.hadoop.hbase.mob.mapreduce</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -466,6 +581,14 @@
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
 <td class="colLast"><span class="strong">HStore.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#cacheConf">cacheConf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">StoreFile.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#cacheConf">cacheConf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">StoreFile.WriterBuilder.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.WriterBuilder.html#cacheConf">cacheConf</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
@@ -553,11 +676,24 @@
                                 org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html#StoreFile.Writer(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.CellComparator,%20org.apache.hadoop.hbase.regionserver.BloomType,%20long,%20java.net.InetSocketAddress[],%20org.apache.hadoop.hbase.io.hfile.HFileContext)">StoreFile.Writer</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                org.apache.hadoop.fs.Path&nbsp;path,
+                                org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf,
+                                <a href="../../../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator,
+                                <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/BloomType.html" title="enum in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType,
+                                long&nbsp;maxKeys,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</a>[]&nbsp;favoredNodes,
+                                <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContext</a>&nbsp;fileContext)</code>
+<div class="block">Creates an HFile.Writer that also write helpful meta data.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.WriterBuilder.html#StoreFile.WriterBuilder(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.fs.FileSystem)">StoreFile.WriterBuilder</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                               <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf,
                                               org.apache.hadoop.fs.FileSystem&nbsp;fs)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#StoreFile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.regionserver.BloomType)">StoreFile</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                   org.apache.hadoop.fs.Path&nbsp;p,
                   org.apache.hadoop.conf.Configuration&nbsp;conf,
@@ -566,7 +702,7 @@
 <div class="block">Constructor, loads a reader and it's indices, etc.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html#StoreFile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.regionserver.StoreFileInfo,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.regionserver.BloomType)">StoreFile</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                   <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileInfo.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileInfo</a>&nbsp;fileInfo,
                   org.apache.hadoop.conf.Configuration&nbsp;conf,
@@ -574,6 +710,127 @@
                   <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/BloomType.html" title="enum in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;cfBloomType)</code>
 <div class="block">Constructor, loads a reader and it's indices, etc.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.tmpl.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a> in <a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/package-summary.html">org.apache.hadoop.hbase.tmpl.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/package-summary.html">org.apache.hadoop.hbase.tmpl.regionserver</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">BlockCacheTmplImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmplImpl.html#cacheConfig">cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">BlockCacheViewTmplImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheViewTmplImpl.html#cacheConfig">cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">BlockCacheTmpl.ImplData.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmpl.ImplData.html#m_cacheConfig">m_cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">BlockCacheViewTmpl.ImplData.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheViewTmpl.ImplData.html#m_cacheConfig">m_cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/package-summary.html">org.apache.hadoop.hbase.tmpl.regionserver</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">BlockCacheTmpl.ImplData.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmpl.ImplData.html#getCacheConfig()">getCacheConfig</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">BlockCacheViewTmpl.ImplData.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheViewTmpl.ImplData.html#getCacheConfig()">getCacheConfig</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/package-summary.html">org.apache.hadoop.hbase.tmpl.regionserver</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">BlockCacheTmplImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmplImpl.html#__jamon_innerUnit__bc_baseInfo(java.io.Writer,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20java.lang.String,%20java.lang.String)">__jamon_innerUnit__bc_baseInfo</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;jamonWriter,
+                                                            <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
+                                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bcUrl,
+                                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bcName)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">BlockCacheTmplImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmplImpl.html#__jamon_innerUnit__bc_config(java.io.Writer,%20org.apache.hadoop.hbase.io.hfile.CacheConfig)">__jamon_innerUnit__bc_config</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;jamonWriter,
+                                                        <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">BlockCacheTmplImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmplImpl.html#__jamon_innerUnit__bc_stats(java.io.Writer,%20org.apache.hadoop.hbase.io.hfile.CacheConfig)">__jamon_innerUnit__bc_stats</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;jamonWriter,
+                                                      <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>org.jamon.Renderer</code></td>
+<td class="colLast"><span class="strong">BlockCacheTmpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmpl.html#makeRenderer(org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.conf.Configuration)">makeRenderer</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
+                        org.apache.hadoop.conf.Configuration&nbsp;config)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>org.jamon.Renderer</code></td>
+<td class="colLast"><span class="strong">BlockCacheViewTmpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheViewTmpl.html#makeRenderer(org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.conf.Configuration,%20java.lang.String,%20java.lang.String)">makeRenderer</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
+                        org.apache.hadoop.conf.Configuration&nbsp;conf,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bcn,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bcv)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BlockCacheTmpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmpl.html#render(java.io.Writer,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.conf.Configuration)">render</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;jamonWriter,
+            <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
+            org.apache.hadoop.conf.Configuration&nbsp;config)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BlockCacheViewTmpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheViewTmpl.html#render(java.io.Writer,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.conf.Configuration,%20java.lang.String,%20java.lang.String)">render</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;jamonWriter,
+            <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
+            org.apache.hadoop.conf.Configuration&nbsp;conf,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bcn,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bcv)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BlockCacheTmpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmpl.html#renderNoFlush(java.io.Writer,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.conf.Configuration)">renderNoFlush</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;jamonWriter,
+                          <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
+                          org.apache.hadoop.conf.Configuration&nbsp;config)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BlockCacheViewTmpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheViewTmpl.html#renderNoFlush(java.io.Writer,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.conf.Configuration,%20java.lang.String,%20java.lang.String)">renderNoFlush</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;jamonWriter,
+                          <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
+                          org.apache.hadoop.conf.Configuration&nbsp;conf,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bcn,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bcv)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BlockCacheTmpl.ImplData.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheTmpl.ImplData.html#setCacheConfig(org.apache.hadoop.hbase.io.hfile.CacheConfig)">setCacheConfig</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BlockCacheViewTmpl.ImplData.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/tmpl/regionserver/BlockCacheViewTmpl.ImplData.html#setCacheConfig(org.apache.hadoop.hbase.io.hfile.CacheConfig)">setCacheConfig</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -609,6 +866,24 @@
 <div class="block">Creates a new general (Row or RowCol) Bloom filter at the time of
  <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver"><code>StoreFile</code></a> writing.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.util.hbck">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a> in <a href="../../../../../../../org/apache/hadoop/hbase/util/hbck/package-summary.html">org.apache.hadoop.hbase.util.hbck</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/util/hbck/package-summary.html">org.apache.hadoop.hbase.util.hbck</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><span class="strong">HFileCorruptionChecker.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/util/hbck/HFileCorruptionChecker.html#cacheConf">cacheConf</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

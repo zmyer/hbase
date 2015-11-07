@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultCompactSelection.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultStoreEngine.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.EnvironmentEdgeForMemstoreTest.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -118,6 +118,72 @@ extends junit.framework.TestCase</pre>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.EnvironmentEdgeForMemstoreTest.html" title="class in org.apache.hadoop.hbase.regionserver">TestDefaultMemStore.EnvironmentEdgeForMemstoreTest</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.ReadOwnWritesTester.html" title="class in org.apache.hadoop.hbase.regionserver">TestDefaultMemStore.ReadOwnWritesTester</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#FAMILY">FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.DefaultMemStore</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#memstore">memstore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.MultiVersionConcurrencyControl</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#mvcc">mvcc</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#QUALIFIER_COUNT">QUALIFIER_COUNT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#ROW_COUNT">ROW_COUNT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#startSeqNum">startSeqNum</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -148,44 +214,91 @@ extends junit.framework.TestCase</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#addRows(int,%20org.apache.hadoop.hbase.regionserver.MemStore)">addRows</a></strong>(int&nbsp;count,
+              org.apache.hadoop.hbase.regionserver.MemStore&nbsp;mem)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#addRows(org.apache.hadoop.hbase.regionserver.MemStore)">addRows</a></strong>(org.apache.hadoop.hbase.regionserver.MemStore&nbsp;hmc)</code>
+<div class="block">Adds <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#ROW_COUNT"><code>ROW_COUNT</code></a> rows and <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#QUALIFIER_COUNT"><code>QUALIFIER_COUNT</code></a></div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#addRows(org.apache.hadoop.hbase.regionserver.MemStore,%20long)">addRows</a></strong>(org.apache.hadoop.hbase.regionserver.MemStore&nbsp;hmc,
+              long&nbsp;ts)</code>
+<div class="block">Adds <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#ROW_COUNT"><code>ROW_COUNT</code></a> rows and <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#QUALIFIER_COUNT"><code>QUALIFIER_COUNT</code></a></div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#assertScannerResults(org.apache.hadoop.hbase.regionserver.KeyValueScanner,%20org.apache.hadoop.hbase.KeyValue[])">assertScannerResults</a></strong>(org.apache.hadoop.hbase.regionserver.KeyValueScanner&nbsp;scanner,
+                                        org.apache.hadoop.hbase.KeyValue[]&nbsp;expected)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#checkShouldFlush(org.apache.hadoop.conf.Configuration,%20boolean)">checkShouldFlush</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                boolean&nbsp;expected)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#doScan(org.apache.hadoop.hbase.regionserver.MemStore,%20int)">doScan</a></strong>(org.apache.hadoop.hbase.regionserver.MemStore&nbsp;ms,
+            int&nbsp;iteration)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#isExpectedRowWithoutTimestamps(int,%20java.util.List)">isExpectedRowWithoutTimestamps</a></strong>(int&nbsp;rowIndex,
+                                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;kvs)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#main(java.lang.String[])">main</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#makeQualifier(int,%20int)">makeQualifier</a></strong>(int&nbsp;i1,
+                          int&nbsp;i2)</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#runSnapshot(org.apache.hadoop.hbase.regionserver.DefaultMemStore)">runSnapshot</a></strong>(org.apache.hadoop.hbase.regionserver.DefaultMemStore&nbsp;hmc)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testGet_memstoreAndSnapShot()">testGet_memstoreAndSnapShot</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testGet_memstoreAndSnapShot()">testGet_memstoreAndSnapShot</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testGetNextRow()">testGetNextRow</a></strong>()</code>
 <div class="block">Test getNextRow from memstore</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testGetWithDelete()">testGetWithDelete</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testGetWithDeleteColumn()">testGetWithDeleteColumn</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testGetWithDeleteFamily()">testGetWithDeleteFamily</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testKeepDeleteInmemstore()">testKeepDeleteInmemstore</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testMemstoreConcurrentControl()">testMemstoreConcurrentControl</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testMemstoreDeletesVisibilityWithSameKey()">testMemstoreDeletesVisibilityWithSameKey</a></strong>()</code>
 <div class="block">When we insert a higher-memstoreTS deletion of a cell but with
@@ -193,55 +306,55 @@ extends junit.framework.TestCase</pre>
  for the same scanner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testMemstoreEditsVisibilityWithSameKey()">testMemstoreEditsVisibilityWithSameKey</a></strong>()</code>
 <div class="block">Regression test for HBASE-2616, HBASE-2670.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testMultipleTimestamps()">testMultipleTimestamps</a></strong>()</code>
 <div class="block">Test to ensure correctness when using Memstore with multiple timestamps</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testMultipleVersionsSimple()">testMultipleVersionsSimple</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testPutSameKey()">testPutSameKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testReadOwnWritesUnderConcurrency()">testReadOwnWritesUnderConcurrency</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testRetainsDeleteColumn()">testRetainsDeleteColumn</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testRetainsDeleteFamily()">testRetainsDeleteFamily</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testRetainsDeleteVersion()">testRetainsDeleteVersion</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testScanAcrossSnapshot()">testScanAcrossSnapshot</a></strong>()</code>
 <div class="block">Test memstore snapshot happening while scanning.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testScanAcrossSnapshot2()">testScanAcrossSnapshot2</a></strong>()</code>
 <div class="block">A simple test which verifies the 3 possible states when scanning across snapshot.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testShouldFlush()">testShouldFlush</a></strong>()</code>
 <div class="block">Tests the HRegion.shouldFlush method - adds an edit in the memstore
@@ -250,36 +363,41 @@ extends junit.framework.TestCase</pre>
  false.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testShouldFlushMeta()">testShouldFlushMeta</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testSnapshotting()">testSnapshotting</a></strong>()</code>
 <div class="block">Test memstore snapshots</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testUpdateToTimeOfOldestEdit()">testUpdateToTimeOfOldestEdit</a></strong>()</code>
 <div class="block">Tests that the timeOfOldestEdit is updated correctly for the
  various edit operations in memstore.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testUpsertMemstoreSize()">testUpsertMemstoreSize</a></strong>()</code>
 <div class="block">Add keyvalues with a fixed memstoreTs, and checks that memstore size is decreased
  as older keyvalues are deleted from the memstore.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#testUpsertMSLAB()">testUpsertMSLAB</a></strong>()</code>
 <div class="block">Test a pathological pattern that shows why we can't currently
  use the MSLAB for upsert workloads.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#verifyScanAcrossSnapshot2(org.apache.hadoop.hbase.KeyValue,%20org.apache.hadoop.hbase.KeyValue)">verifyScanAcrossSnapshot2</a></strong>(org.apache.hadoop.hbase.KeyValue&nbsp;kv1,
+                                                  org.apache.hadoop.hbase.KeyValue&nbsp;kv2)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -304,6 +422,79 @@ extends junit.framework.TestCase</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.67">LOG</a></pre>
+</li>
+</ul>
+<a name="memstore">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>memstore</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.DefaultMemStore <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.68">memstore</a></pre>
+</li>
+</ul>
+<a name="ROW_COUNT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROW_COUNT</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.69">ROW_COUNT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestDefaultMemStore.ROW_COUNT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="QUALIFIER_COUNT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>QUALIFIER_COUNT</h4>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.70">QUALIFIER_COUNT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestDefaultMemStore.QUALIFIER_COUNT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.71">FAMILY</a></pre>
+</li>
+</ul>
+<a name="mvcc">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mvcc</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.MultiVersionConcurrencyControl <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.72">mvcc</a></pre>
+</li>
+</ul>
+<a name="startSeqNum">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>startSeqNum</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.73">startSeqNum</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -377,6 +568,32 @@ extends junit.framework.TestCase</pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/CloneNotSupportedException.html?is-external=true" title="class or interface in java.lang">CloneNotSupportedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verifyScanAcrossSnapshot2(org.apache.hadoop.hbase.KeyValue, org.apache.hadoop.hbase.KeyValue)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyScanAcrossSnapshot2</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.216">verifyScanAcrossSnapshot2</a>(org.apache.hadoop.hbase.KeyValue&nbsp;kv1,
+                             org.apache.hadoop.hbase.KeyValue&nbsp;kv2)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertScannerResults(org.apache.hadoop.hbase.regionserver.KeyValueScanner, org.apache.hadoop.hbase.KeyValue[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertScannerResults</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.227">assertScannerResults</a>(org.apache.hadoop.hbase.regionserver.KeyValueScanner&nbsp;scanner,
+                        org.apache.hadoop.hbase.KeyValue[]&nbsp;expected)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testMemstoreConcurrentControl()">
@@ -602,6 +819,16 @@ extends junit.framework.TestCase</pre>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="makeQualifier(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeQualifier</h4>
+<pre>private static&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.822">makeQualifier</a>(int&nbsp;i1,
+                   int&nbsp;i2)</pre>
+</li>
+</ul>
 <a name="testUpsertMemstoreSize()">
 <!--   -->
 </a>
@@ -646,6 +873,19 @@ extends junit.framework.TestCase</pre>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="checkShouldFlush(org.apache.hadoop.conf.Configuration, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkShouldFlush</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.922">checkShouldFlush</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                    boolean&nbsp;expected)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
 <a name="testShouldFlushMeta()">
 <!--   -->
 </a>
@@ -656,6 +896,80 @@ extends junit.framework.TestCase</pre>
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="addRows(org.apache.hadoop.hbase.regionserver.MemStore)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.993">addRows</a>(org.apache.hadoop.hbase.regionserver.MemStore&nbsp;hmc)</pre>
+<div class="block">Adds <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#ROW_COUNT"><code>ROW_COUNT</code></a> rows and <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#QUALIFIER_COUNT"><code>QUALIFIER_COUNT</code></a></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>hmc</code> - Instance to add rows to.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>How many rows we added.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="addRows(org.apache.hadoop.hbase.regionserver.MemStore, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.1003">addRows</a>(org.apache.hadoop.hbase.regionserver.MemStore&nbsp;hmc,
+          long&nbsp;ts)</pre>
+<div class="block">Adds <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#ROW_COUNT"><code>ROW_COUNT</code></a> rows and <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#QUALIFIER_COUNT"><code>QUALIFIER_COUNT</code></a></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>hmc</code> - Instance to add rows to.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>How many rows we added.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="runSnapshot(org.apache.hadoop.hbase.regionserver.DefaultMemStore)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runSnapshot</h4>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.1016">runSnapshot</a>(org.apache.hadoop.hbase.regionserver.DefaultMemStore&nbsp;hmc)
+                  throws org.apache.hadoop.hbase.regionserver.UnexpectedStateException</pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>org.apache.hadoop.hbase.regionserver.UnexpectedStateException</code></dd></dl>
+</li>
+</ul>
+<a name="isExpectedRowWithoutTimestamps(int, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isExpectedRowWithoutTimestamps</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.1028">isExpectedRowWithoutTimestamps</a>(int&nbsp;rowIndex,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;kvs)</pre>
+</li>
+</ul>
+<a name="addRows(int, org.apache.hadoop.hbase.regionserver.MemStore)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addRows</h4>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.1042">addRows</a>(int&nbsp;count,
+           org.apache.hadoop.hbase.regionserver.MemStore&nbsp;mem)</pre>
+</li>
+</ul>
+<a name="doScan(org.apache.hadoop.hbase.regionserver.MemStore, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doScan</h4>
+<pre>static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html#line.1062">doScan</a>(org.apache.hadoop.hbase.regionserver.MemStore&nbsp;ms,
+          int&nbsp;iteration)
+            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="main(java.lang.String[])">
@@ -697,7 +1011,7 @@ extends junit.framework.TestCase</pre>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultCompactSelection.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultStoreEngine.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.EnvironmentEdgeForMemstoreTest.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestDefaultMemStore.html" target="_top">Frames</a></li>
@@ -721,14 +1035,14 @@ extends junit.framework.TestCase</pre>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

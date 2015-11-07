@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -103,6 +103,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static char</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#FIRST_CHAR">FIRST_CHAR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#GOOD_BYTES">GOOD_BYTES</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#HOST_PREFIX">HOST_PREFIX</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static char</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#LAST_CHAR">LAST_CHAR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.filter.Filter</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#mainFilter">mainFilter</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -133,18 +168,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#createRow(char)">createRow</a></strong>(char&nbsp;c)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#prefixRowTests(org.apache.hadoop.hbase.filter.Filter)">prefixRowTests</a></strong>(org.apache.hadoop.hbase.filter.Filter&nbsp;filter)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#prefixRowTests(org.apache.hadoop.hbase.filter.Filter,%20boolean)">prefixRowTests</a></strong>(org.apache.hadoop.hbase.filter.Filter&nbsp;filter,
+                            boolean&nbsp;lastFilterAllRemaining)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#testPrefixOnRow()">testPrefixOnRow</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#testPrefixOnRowInsideWhileMatchRow()">testPrefixOnRowInsideWhileMatchRow</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/TestPrefixFilter.html#testSerialization()">testSerialization</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -164,6 +212,62 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="mainFilter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mainFilter</h4>
+<pre>org.apache.hadoop.hbase.filter.Filter <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestPrefixFilter.html#line.34">mainFilter</a></pre>
+</li>
+</ul>
+<a name="FIRST_CHAR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FIRST_CHAR</h4>
+<pre>static final&nbsp;char <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestPrefixFilter.html#line.35">FIRST_CHAR</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.filter.TestPrefixFilter.FIRST_CHAR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LAST_CHAR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LAST_CHAR</h4>
+<pre>static final&nbsp;char <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestPrefixFilter.html#line.36">LAST_CHAR</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.filter.TestPrefixFilter.LAST_CHAR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="HOST_PREFIX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HOST_PREFIX</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestPrefixFilter.html#line.37">HOST_PREFIX</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.filter.TestPrefixFilter.HOST_PREFIX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="GOOD_BYTES">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>GOOD_BYTES</h4>
+<pre>static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestPrefixFilter.html#line.38">GOOD_BYTES</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -226,13 +330,47 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testSerialization()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testSerialization</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestPrefixFilter.html#line.56">testSerialization</a>()
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="prefixRowTests(org.apache.hadoop.hbase.filter.Filter)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prefixRowTests</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestPrefixFilter.html#line.67">prefixRowTests</a>(org.apache.hadoop.hbase.filter.Filter&nbsp;filter)
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="prefixRowTests(org.apache.hadoop.hbase.filter.Filter, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prefixRowTests</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestPrefixFilter.html#line.71">prefixRowTests</a>(org.apache.hadoop.hbase.filter.Filter&nbsp;filter,
+                  boolean&nbsp;lastFilterAllRemaining)
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="createRow(char)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createRow</h4>
+<pre>private&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/TestPrefixFilter.html#line.86">createRow</a>(char&nbsp;c)</pre>
 </li>
 </ul>
 </li>
@@ -287,13 +425,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

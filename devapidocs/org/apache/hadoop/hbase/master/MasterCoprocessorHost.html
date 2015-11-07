@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/master/MasterAnnotationReadingPriorityFunction.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/master/MasterDumpServlet.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/master/MasterCoprocessorHost.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -86,7 +86,7 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">org.apache.hadoop.hbase.coprocessor.CoprocessorHost</a>&lt;org.apache.hadoop.hbase.master.MasterCoprocessorHost.MasterEnvironment&gt;</li>
+<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">org.apache.hadoop.hbase.coprocessor.CoprocessorHost</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.MasterEnvironment.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.MasterEnvironment</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.master.MasterCoprocessorHost</li>
@@ -102,7 +102,7 @@
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
 public class <a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#line.54">MasterCoprocessorHost</a>
-extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorHost</a>&lt;org.apache.hadoop.hbase.master.MasterCoprocessorHost.MasterEnvironment&gt;</pre>
+extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorHost</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.MasterEnvironment.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.MasterEnvironment</a>&gt;</pre>
 <div class="block">Provides the coprocessor framework and environment for master oriented
  operations.  <a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master"><code>HMaster</code></a> interacts with the loaded coprocessors
  through this class.</div>
@@ -118,6 +118,28 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <!--   -->
 </a>
 <h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.CoprocessorOperation</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.CoprocessorOperationWithResult.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.CoprocessorOperationWithResult</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.CoprocessorOperationWithResult.html" title="type parameter in MasterCoprocessorHost.CoprocessorOperationWithResult">T</a>&gt;</strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.MasterEnvironment.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.MasterEnvironment</a></strong></code>
+<div class="block">Coprocessor environment extension providing access to master related
+ services.</div>
+</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">
 <!--   -->
@@ -133,6 +155,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">
 <!--   -->
@@ -173,7 +210,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.master.MasterCoprocessorHost.MasterEnvironment</code></td>
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.MasterEnvironment.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.MasterEnvironment</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#createEnvironment(java.lang.Class,%20org.apache.hadoop.hbase.Coprocessor,%20int,%20int,%20org.apache.hadoop.conf.Configuration)">createEnvironment</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;implClass,
                                   <a href="../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;instance,
                                   int&nbsp;priority,
@@ -181,6 +218,15 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
                                   org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Called when a new Coprocessor class is loaded</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#execOperation(org.apache.hadoop.hbase.master.MasterCoprocessorHost.CoprocessorOperation)">execOperation</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.CoprocessorOperation</a>&nbsp;ctx)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#execOperationWithResult(T,%20org.apache.hadoop.hbase.master.MasterCoprocessorHost.CoprocessorOperationWithResult)">execOperationWithResult</a></strong>(T&nbsp;defaultValue,
+                                              <a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.CoprocessorOperationWithResult.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.CoprocessorOperationWithResult</a>&lt;T&gt;&nbsp;ctx)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -627,6 +673,32 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#line.57">LOG</a></pre>
+</li>
+</ul>
+<a name="masterServices">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>masterServices</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#line.79">masterServices</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -657,16 +729,16 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <ul class="blockList">
 <li class="blockList">
 <h4>createEnvironment</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.master.MasterCoprocessorHost.MasterEnvironment&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#line.95">createEnvironment</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;implClass,
-                                                                                       <a href="../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;instance,
-                                                                                       int&nbsp;priority,
-                                                                                       int&nbsp;seq,
-                                                                                       org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.MasterEnvironment.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.MasterEnvironment</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#line.95">createEnvironment</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;implClass,
+                                                        <a href="../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;instance,
+                                                        int&nbsp;priority,
+                                                        int&nbsp;seq,
+                                                        org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html#createEnvironment(java.lang.Class,%20org.apache.hadoop.hbase.Coprocessor,%20int,%20int,%20org.apache.hadoop.conf.Configuration)">CoprocessorHost</a></code></strong></div>
 <div class="block">Called when a new Coprocessor class is loaded</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html#createEnvironment(java.lang.Class,%20org.apache.hadoop.hbase.Coprocessor,%20int,%20int,%20org.apache.hadoop.conf.Configuration)">createEnvironment</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorHost</a>&lt;org.apache.hadoop.hbase.master.MasterCoprocessorHost.MasterEnvironment&gt;</code></dd>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html#createEnvironment(java.lang.Class,%20org.apache.hadoop.hbase.Coprocessor,%20int,%20int,%20org.apache.hadoop.conf.Configuration)">createEnvironment</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorHost</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.MasterEnvironment.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.MasterEnvironment</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -1818,12 +1890,39 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <a name="postSetNamespaceQuota(java.lang.String, org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Quotas)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>postSetNamespaceQuota</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#line.1088">postSetNamespaceQuota</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespace,
                          org.apache.hadoop.hbase.protobuf.generated.QuotaProtos.Quotas&nbsp;quotas)
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="execOperationWithResult(java.lang.Object,org.apache.hadoop.hbase.master.MasterCoprocessorHost.CoprocessorOperationWithResult)">
+<!--   -->
+</a><a name="execOperationWithResult(T, org.apache.hadoop.hbase.master.MasterCoprocessorHost.CoprocessorOperationWithResult)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>execOperationWithResult</h4>
+<pre>private&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#line.1116">execOperationWithResult</a>(T&nbsp;defaultValue,
+                            <a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.CoprocessorOperationWithResult.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.CoprocessorOperationWithResult</a>&lt;T&gt;&nbsp;ctx)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="execOperation(org.apache.hadoop.hbase.master.MasterCoprocessorHost.CoprocessorOperation)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>execOperation</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#line.1124">execOperation</a>(<a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.master">MasterCoprocessorHost.CoprocessorOperation</a>&nbsp;ctx)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -1855,7 +1954,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/master/MasterAnnotationReadingPriorityFunction.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/master/MasterDumpServlet.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.CoprocessorOperation.html" title="class in org.apache.hadoop.hbase.master"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/master/MasterCoprocessorHost.html" target="_top">Frames</a></li>
@@ -1879,14 +1978,14 @@ extends <a href="../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorH
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_classes_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.coprocessor.CoprocessorHost">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

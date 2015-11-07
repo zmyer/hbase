@@ -86,10 +86,14 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.balancer">org.apache.hadoop.hbase.master.balancer</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -139,10 +143,80 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.master.balancer">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a> in <a href="../../../../../org/apache/hadoop/hbase/master/balancer/package-summary.html">org.apache.hadoop.hbase.master.balancer</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/master/balancer/package-summary.html">org.apache.hadoop.hbase.master.balancer</a> with type parameters of type <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private com.google.common.cache.LoadingCache&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a>&gt;</code></td>
+<td class="colLast"><span class="strong">RegionLocationFinder.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/RegionLocationFinder.html#cache">cache</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private com.google.common.cache.CacheLoader&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a>&gt;</code></td>
+<td class="colLast"><span class="strong">RegionLocationFinder.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/RegionLocationFinder.html#loader">loader</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/master/balancer/package-summary.html">org.apache.hadoop.hbase.master.balancer</a> that return <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></code></td>
+<td class="colLast"><span class="strong">RegionLocationFinder.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/RegionLocationFinder.html#getBlockDistribution(org.apache.hadoop.hbase.HRegionInfo)">getBlockDistribution</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></code></td>
+<td class="colLast"><span class="strong">RegionLocationFinder.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/RegionLocationFinder.html#internalGetTopBlockLocation(org.apache.hadoop.hbase.HRegionInfo)">internalGetTopBlockLocation</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region)</code>
+<div class="block">Returns an ordered list of hosts that are hosting the blocks for this
+ region.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/master/balancer/package-summary.html">org.apache.hadoop.hbase.master.balancer</a> that return types with arguments of type <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private com.google.common.cache.LoadingCache&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a>&gt;</code></td>
+<td class="colLast"><span class="strong">RegionLocationFinder.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/balancer/RegionLocationFinder.html#createCache()">createCache</a></strong>()</code>
+<div class="block">Create a cache for region to list of servers</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a> in <a href="../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> declared as <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></code></td>
+<td class="colLast"><span class="strong">StoreFileInfo.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileInfo.html#hdfsBlocksDistribution">hdfsBlocksDistribution</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> that return <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -171,6 +245,19 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></code></td>
 <td class="colLast"><span class="strong">StoreFileInfo.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileInfo.html#computeHDFSBlocksDistribution(org.apache.hadoop.fs.FileSystem)">computeHDFSBlocksDistribution</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs)</code>
 <div class="block">Compute the HDFS Block Distribution for this StoreFile</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></code></td>
+<td class="colLast"><span class="strong">StoreFileInfo.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileInfo.html#computeHDFSBlocksDistributionInternal(org.apache.hadoop.fs.FileSystem)">computeHDFSBlocksDistributionInternal</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HDFSBlocksDistribution.html" title="class in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></code></td>
+<td class="colLast"><span class="strong">StoreFileInfo.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileInfo.html#computeRefFileHDFSBlockDistribution(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.io.Reference,%20org.apache.hadoop.fs.FileStatus)">computeRefFileHDFSBlockDistribution</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                                                      <a href="../../../../../org/apache/hadoop/hbase/io/Reference.html" title="class in org.apache.hadoop.hbase.io">Reference</a>&nbsp;reference,
+                                                                      org.apache.hadoop.fs.FileStatus&nbsp;status)</code>
+<div class="block">helper function to compute HDFS blocks distribution of a given reference
+ file.For reference file, we don't compute the exact value.</div>
 </td>
 </tr>
 <tr class="rowColor">

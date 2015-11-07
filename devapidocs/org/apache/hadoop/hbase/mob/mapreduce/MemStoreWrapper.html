@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -115,6 +115,69 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#cacheConfig">cacheConfig</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.mapreduce.Reducer.Context</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#context">context</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/crypto/Encryption.Context.html" title="class in org.apache.hadoop.hbase.io.crypto">Encryption.Context</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#cryptoContext">cryptoContext</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#flushSize">flushSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#hcd">hcd</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStore.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStore</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#memstore">memstore</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#mobFamilyDir">mobFamilyDir</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactionRequest.CompactionPartitionId.html" title="class in org.apache.hadoop.hbase.mob.compactions">PartitionedMobCompactionRequest.CompactionPartitionId</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#partitionId">partitionId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client">BufferedMutator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#table">table</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -162,6 +225,18 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#flushMemStoreIfNecessary()">flushMemStoreIfNecessary</a></strong>()</code>
+<div class="block">Flushes the memstore if the size is large enough.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#internalFlushCache(org.apache.hadoop.hbase.regionserver.MemStoreSnapshot)">internalFlushCache</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a>&nbsp;snapshot)</code>
+<div class="block">Flushes the snapshot of the memstore.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#setPartitionId(org.apache.hadoop.hbase.mob.compactions.PartitionedMobCompactionRequest.CompactionPartitionId)">setPartitionId</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactionRequest.CompactionPartitionId.html" title="class in org.apache.hadoop.hbase.mob.compactions">PartitionedMobCompactionRequest.CompactionPartitionId</a>&nbsp;partitionId)</code>&nbsp;</td>
 </tr>
@@ -181,6 +256,122 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.67">LOG</a></pre>
+</li>
+</ul>
+<a name="memstore">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>memstore</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStore.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStore</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.69">memstore</a></pre>
+</li>
+</ul>
+<a name="flushSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>flushSize</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.70">flushSize</a></pre>
+</li>
+</ul>
+<a name="partitionId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>partitionId</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactionRequest.CompactionPartitionId.html" title="class in org.apache.hadoop.hbase.mob.compactions">PartitionedMobCompactionRequest.CompactionPartitionId</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.71">partitionId</a></pre>
+</li>
+</ul>
+<a name="context">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>context</h4>
+<pre>private&nbsp;org.apache.hadoop.mapreduce.Reducer.Context <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.72">context</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.73">conf</a></pre>
+</li>
+</ul>
+<a name="table">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>table</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client">BufferedMutator</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.74">table</a></pre>
+</li>
+</ul>
+<a name="hcd">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hcd</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.75">hcd</a></pre>
+</li>
+</ul>
+<a name="mobFamilyDir">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mobFamilyDir</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.76">mobFamilyDir</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.77">fs</a></pre>
+</li>
+</ul>
+<a name="cacheConfig">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cacheConfig</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.78">cacheConfig</a></pre>
+</li>
+</ul>
+<a name="cryptoContext">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>cryptoContext</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/crypto/Encryption.Context.html" title="class in org.apache.hadoop.hbase.io.crypto">Encryption.Context</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.79">cryptoContext</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -221,6 +412,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.96">setPartitionId</a>(<a href="../../../../../../org/apache/hadoop/hbase/mob/compactions/PartitionedMobCompactionRequest.CompactionPartitionId.html" title="class in org.apache.hadoop.hbase.mob.compactions">PartitionedMobCompactionRequest.CompactionPartitionId</a>&nbsp;partitionId)</pre>
 </li>
 </ul>
+<a name="flushMemStoreIfNecessary()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>flushMemStoreIfNecessary</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.104">flushMemStoreIfNecessary</a>()
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Flushes the memstore if the size is large enough.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="flushMemStore()">
 <!--   -->
 </a>
@@ -231,6 +435,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Flushes the memstore anyway.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="internalFlushCache(org.apache.hadoop.hbase.regionserver.MemStoreSnapshot)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>internalFlushCache</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/mob/mapreduce/MemStoreWrapper.html#line.126">internalFlushCache</a>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a>&nbsp;snapshot)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Flushes the snapshot of the memstore.
+ Flushes the mob data to the mob files, and flushes the name of these mob files to HBase.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>snapshot</code> - The snapshot of the memstore.</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -300,13 +519,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

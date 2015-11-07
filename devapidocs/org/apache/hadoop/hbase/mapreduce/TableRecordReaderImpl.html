@@ -120,8 +120,76 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.mapreduce.TaskAttemptContext</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#context">context</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#currentScan">currentScan</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#getCounter">getCounter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#HBASE_COUNTER_GROUP_NAME">HBASE_COUNTER_GROUP_NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#htable">htable</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/io/ImmutableBytesWritable.html" title="class in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#key">key</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#lastSuccessfulRow">lastSuccessfulRow</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#LOG_PER_ROW_COUNT">LOG_PER_ROW_COUNT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#logPerRowCount">logPerRowCount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#logScannerActivity">logScannerActivity</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#numRestarts">numRestarts</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#numStale">numStale</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#rowcount">rowcount</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#scan">scan</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#scanner">scanner</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#timestamp">timestamp</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#value">value</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -218,6 +286,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#updateCounters()">updateCounters</a></strong>()</code>
+<div class="block">If hbase runs on new version of mapreduce, RecordReader has access to
+ counters thus can update counters based on scanMetrics.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#updateCounters(org.apache.hadoop.hbase.client.metrics.ScanMetrics,%20long,%20java.lang.reflect.Method,%20org.apache.hadoop.mapreduce.TaskAttemptContext,%20long)">updateCounters</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/metrics/ScanMetrics.html" title="class in org.apache.hadoop.hbase.client.metrics">ScanMetrics</a>&nbsp;scanMetrics,
                             long&nbsp;numScannerRestarts,
@@ -250,11 +325,165 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="LOG_PER_ROW_COUNT">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>LOG_PER_ROW_COUNT</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.50">LOG_PER_ROW_COUNT</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableRecordReaderImpl.LOG_PER_ROW_COUNT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.53">LOG</a></pre>
+</li>
+</ul>
+<a name="HBASE_COUNTER_GROUP_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HBASE_COUNTER_GROUP_NAME</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.56">HBASE_COUNTER_GROUP_NAME</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableRecordReaderImpl.HBASE_COUNTER_GROUP_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="scanner">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanner</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.58">scanner</a></pre>
+</li>
+</ul>
+<a name="scan">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scan</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.59">scan</a></pre>
+</li>
+</ul>
+<a name="currentScan">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>currentScan</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.60">currentScan</a></pre>
+</li>
+</ul>
+<a name="htable">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>htable</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.61">htable</a></pre>
+</li>
+</ul>
+<a name="lastSuccessfulRow">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastSuccessfulRow</h4>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.62">lastSuccessfulRow</a></pre>
+</li>
+</ul>
+<a name="key">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>key</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/io/ImmutableBytesWritable.html" title="class in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.63">key</a></pre>
+</li>
+</ul>
+<a name="value">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>value</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.64">value</a></pre>
+</li>
+</ul>
+<a name="context">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>context</h4>
+<pre>private&nbsp;org.apache.hadoop.mapreduce.TaskAttemptContext <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.65">context</a></pre>
+</li>
+</ul>
+<a name="getCounter">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCounter</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.66">getCounter</a></pre>
+</li>
+</ul>
+<a name="numRestarts">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numRestarts</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.67">numRestarts</a></pre>
+</li>
+</ul>
+<a name="numStale">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>numStale</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.68">numStale</a></pre>
+</li>
+</ul>
+<a name="timestamp">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>timestamp</h4>
+<pre>private&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.69">timestamp</a></pre>
+</li>
+</ul>
+<a name="rowcount">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rowcount</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.70">rowcount</a></pre>
+</li>
+</ul>
+<a name="logScannerActivity">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logScannerActivity</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.71">logScannerActivity</a></pre>
+</li>
+</ul>
+<a name="logPerRowCount">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>logPerRowCount</h4>
+<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.72">logPerRowCount</a></pre>
 </li>
 </ul>
 </li>
@@ -405,6 +634,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - When reading the record failed.</dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - When the job was aborted.</dd></dl>
+</li>
+</ul>
+<a name="updateCounters()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateCounters</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableRecordReaderImpl.html#line.271">updateCounters</a>()
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">If hbase runs on new version of mapreduce, RecordReader has access to
+ counters thus can update counters based on scanMetrics.
+ If hbase runs on old version of mapreduce, it won't be able to get
+ access to counters and TableRecorderReader can't update counter values.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="updateCounters(org.apache.hadoop.hbase.client.metrics.ScanMetrics, long, java.lang.reflect.Method, org.apache.hadoop.mapreduce.TaskAttemptContext, long)">

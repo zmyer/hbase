@@ -75,10 +75,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.handler">org.apache.hadoop.hbase.master.handler</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.master">org.apache.hadoop.hbase.master</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.handler">org.apache.hadoop.hbase.master.handler</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.master.procedure">org.apache.hadoop.hbase.master.procedure</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -87,6 +91,45 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.master">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/CoordinatedStateException.html" title="class in org.apache.hadoop.hbase">CoordinatedStateException</a> in <a href="../../../../../org/apache/hadoop/hbase/master/package-summary.html">org.apache.hadoop.hbase.master</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/master/package-summary.html">org.apache.hadoop.hbase.master</a> that throw <a href="../../../../../org/apache/hadoop/hbase/CoordinatedStateException.html" title="class in org.apache.hadoop.hbase">CoordinatedStateException</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#finishActiveMasterInitialization(org.apache.hadoop.hbase.monitoring.MonitoredTask)">finishActiveMasterInitialization</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/monitoring/MonitoredTask.html" title="interface in org.apache.hadoop.hbase.monitoring">MonitoredTask</a>&nbsp;status)</code>
+<div class="block">Finish initialization of HMaster after becoming the primary master.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#initializeZKBasedSystemTrackers()">initializeZKBasedSystemTrackers</a></strong>()</code>
+<div class="block">Initialize all ZK based system trackers.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><span class="strong">AssignmentManager.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html#joinCluster()">joinCluster</a></strong>()</code>
+<div class="block">Called on startup.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><span class="strong">AssignmentManager.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html#processDeadServersAndRegionsInTransition(java.util.Set)">processDeadServersAndRegionsInTransition</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;deadServers)</code>
+<div class="block">Process all regions that are in transition in zookeeper and also
+ processes the list of dead servers.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.master.handler">
 <!--   -->
 </a>
@@ -99,6 +142,12 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">CreateTableHandler.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/handler/CreateTableHandler.html#handleCreateTable(org.apache.hadoop.hbase.TableName)">handleCreateTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>
+<div class="block">Responsible of table creation (on-disk and META) and assignment.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected abstract void</code></td>
 <td class="colLast"><span class="strong">TableEventHandler.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#handleTableOperation(java.util.List)">handleTableOperation</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions)</code>&nbsp;</td>
 </tr>

@@ -97,10 +97,39 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.NoNonceGenerator.html" title="class in org.apache.hadoop.hbase.client">ConnectionImplementation.NoNonceGenerator</a></strong></code>
+<div class="block">Dummy nonce generator for disabled nonces.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/PerClientRandomNonceGenerator.html" title="class in org.apache.hadoop.hbase.client">PerClientRandomNonceGenerator</a></strong></code>
 <div class="block">NonceGenerator implementation that uses client ID hash + random int as nonce group,
  and random numbers as nonces.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
+<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#ng">ng</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
+<td class="colLast"><span class="strong">CoprocessorHConnection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/CoprocessorHConnection.html#NO_NONCE_GEN">NO_NONCE_GEN</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#nonceGenerator">nonceGenerator</a></strong></code>
+<div class="block">Global nonceGenerator shared per client.Currently there's no reason to limit its scope.</div>
 </td>
 </tr>
 </tbody>
@@ -118,15 +147,24 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#getNonceGenerator()">getNonceGenerator</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
 <td class="colLast"><span class="strong">HConnection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HConnection.html#getNonceGenerator()">getNonceGenerator</a></strong>()</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>internal method, do not use thru HConnection</i></div>
 </div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
 <td class="colLast"><span class="strong">CoprocessorHConnection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/CoprocessorHConnection.html#getNonceGenerator()">getNonceGenerator</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#injectNonceGeneratorForTesting(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.NonceGenerator)">injectNonceGeneratorForTesting</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;conn,
+                                                            <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a>&nbsp;cnm)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
@@ -143,9 +181,20 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) static <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#injectNonceGeneratorForTesting(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.NonceGenerator)">injectNonceGeneratorForTesting</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;conn,
+                                                            <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a>&nbsp;cnm)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a></code></td>
 <td class="colLast"><span class="strong">ConnectionUtils.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionUtils.html#injectNonceGeneratorForTesting(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.NonceGenerator)">injectNonceGeneratorForTesting</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;conn,
                                                             <a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a>&nbsp;cnm)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><span class="strong">AsyncProcess.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/AsyncProcess.html#setNonce(org.apache.hadoop.hbase.client.NonceGenerator,%20org.apache.hadoop.hbase.client.Row,%20org.apache.hadoop.hbase.client.Action)">setNonce</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/NonceGenerator.html" title="interface in org.apache.hadoop.hbase.client">NonceGenerator</a>&nbsp;ng,
+                <a href="../../../../../../org/apache/hadoop/hbase/client/Row.html" title="interface in org.apache.hadoop.hbase.client">Row</a>&nbsp;r,
+                <a href="../../../../../../org/apache/hadoop/hbase/client/Action.html" title="class in org.apache.hadoop.hbase.client">Action</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Row.html" title="interface in org.apache.hadoop.hbase.client">Row</a>&gt;&nbsp;action)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

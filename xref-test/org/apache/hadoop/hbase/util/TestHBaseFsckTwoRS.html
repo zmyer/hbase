@@ -200,7 +200,7 @@
 <a class="jxr_linenumber" name="190" href="#190">190</a>       <em class="jxr_comment">// different regions with the same start/endkeys since it doesn't</em>
 <a class="jxr_linenumber" name="191" href="#191">191</a>       <em class="jxr_comment">// differentiate on ts/regionId!  We actually need to recheck</em>
 <a class="jxr_linenumber" name="192" href="#192">192</a>       <em class="jxr_comment">// deployments!</em>
-<a class="jxr_linenumber" name="193" href="#193">193</a>       <strong class="jxr_keyword">while</strong> (findDeployedHSI(getDeployedHRIs((HBaseAdmin) admin), hriDupe) == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="193" href="#193">193</a>       <strong class="jxr_keyword">while</strong> (findDeployedHSI(getDeployedHRIs(admin), hriDupe) == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="194" href="#194">194</a>         Thread.sleep(250);
 <a class="jxr_linenumber" name="195" href="#195">195</a>       }
 <a class="jxr_linenumber" name="196" href="#196">196</a> 

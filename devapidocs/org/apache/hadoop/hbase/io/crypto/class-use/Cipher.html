@@ -82,6 +82,10 @@
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.io.crypto.aes">org.apache.hadoop.hbase.io.crypto.aes</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security">org.apache.hadoop.hbase.security</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -91,6 +95,19 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Cipher.html" title="class in org.apache.hadoop.hbase.io.crypto">Cipher</a> in <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/package-summary.html">org.apache.hadoop.hbase.io.crypto</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/package-summary.html">org.apache.hadoop.hbase.io.crypto</a> declared as <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Cipher.html" title="class in org.apache.hadoop.hbase.io.crypto">Cipher</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Cipher.html" title="class in org.apache.hadoop.hbase.io.crypto">Cipher</a></code></td>
+<td class="colLast"><span class="strong">Context.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Context.html#cipher">cipher</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/package-summary.html">org.apache.hadoop.hbase.io.crypto</a> that return <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Cipher.html" title="class in org.apache.hadoop.hbase.io.crypto">Cipher</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -178,6 +195,27 @@
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/aes/AES.html" title="class in org.apache.hadoop.hbase.io.crypto.aes">AES</a></strong></code>
 <div class="block">AES-128, provided by the JCE</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.security">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Cipher.html" title="class in org.apache.hadoop.hbase.io.crypto">Cipher</a> in <a href="../../../../../../../org/apache/hadoop/hbase/security/package-summary.html">org.apache.hadoop.hbase.security</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/security/package-summary.html">org.apache.hadoop.hbase.security</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Cipher.html" title="class in org.apache.hadoop.hbase.io.crypto">Cipher</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/security/Key.html?is-external=true" title="class or interface in java.security">Key</a></code></td>
+<td class="colLast"><span class="strong">EncryptionUtil.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/security/EncryptionUtil.html#getUnwrapKey(org.apache.hadoop.conf.Configuration,%20java.lang.String,%20org.apache.hadoop.hbase.protobuf.generated.EncryptionProtos.WrappedKey,%20org.apache.hadoop.hbase.io.crypto.Cipher)">getUnwrapKey</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;subject,
+                        org.apache.hadoop.hbase.protobuf.generated.EncryptionProtos.WrappedKey&nbsp;wrappedKey,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/io/crypto/Cipher.html" title="class in org.apache.hadoop.hbase.io.crypto">Cipher</a>&nbsp;cipher)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

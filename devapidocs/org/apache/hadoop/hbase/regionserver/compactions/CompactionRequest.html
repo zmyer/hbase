@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionProgress.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionThroughputController.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.DisplayCompactionType.html" title="enum in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html" target="_top">Frames</a></li>
@@ -60,14 +60,14 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -111,6 +111,84 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.DisplayCompactionType.html" title="enum in org.apache.hadoop.hbase.regionserver.compactions">CompactionRequest.DisplayCompactionType</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#filesToCompact">filesToCompact</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.DisplayCompactionType.html" title="enum in org.apache.hadoop.hbase.regionserver.compactions">CompactionRequest.DisplayCompactionType</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#isMajor">isMajor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#isOffPeak">isOffPeak</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#priority">priority</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#regionName">regionName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#retainDeleteMarkers">retainDeleteMarkers</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#selectionTime">selectionTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#storeName">storeName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#timeInNanos">timeInNanos</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#totalSize">totalSize</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -219,30 +297,36 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#isRetainDeleteMarkers()">isRetainDeleteMarkers</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#recalculateSize()">recalculateSize</a></strong>()</code>
+<div class="block">Recalculate the size of the compaction based on current files.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#setDescription(java.lang.String,%20java.lang.String)">setDescription</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionName,
                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;storeName)</code>
 <div class="block">Sets the region/store name, for logging.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#setIsMajor(boolean,%20boolean)">setIsMajor</a></strong>(boolean&nbsp;isMajor,
                     boolean&nbsp;isAllFiles)</code>
 <div class="block">Specify if this compaction should be a major compaction based on the state of the store</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#setOffPeak(boolean)">setOffPeak</a></strong>(boolean&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#setPriority(int)">setPriority</a></strong>(int&nbsp;p)</code>
 <div class="block">Sets the priority for the request</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#toString()">toString</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -262,6 +346,113 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.46">LOG</a></pre>
+</li>
+</ul>
+<a name="isOffPeak">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOffPeak</h4>
+<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.48">isOffPeak</a></pre>
+</li>
+</ul>
+<a name="isMajor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMajor</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.DisplayCompactionType.html" title="enum in org.apache.hadoop.hbase.regionserver.compactions">CompactionRequest.DisplayCompactionType</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.50">isMajor</a></pre>
+</li>
+</ul>
+<a name="priority">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>priority</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.51">priority</a></pre>
+</li>
+</ul>
+<a name="filesToCompact">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>filesToCompact</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.52">filesToCompact</a></pre>
+</li>
+</ul>
+<a name="selectionTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>selectionTime</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.55">selectionTime</a></pre>
+</li>
+</ul>
+<a name="timeInNanos">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>timeInNanos</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.57">timeInNanos</a></pre>
+</li>
+</ul>
+<a name="regionName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>regionName</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.58">regionName</a></pre>
+</li>
+</ul>
+<a name="storeName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>storeName</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.59">storeName</a></pre>
+</li>
+</ul>
+<a name="totalSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>totalSize</h4>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.60">totalSize</a></pre>
+</li>
+</ul>
+<a name="retainDeleteMarkers">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>retainDeleteMarkers</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.62">retainDeleteMarkers</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -496,7 +687,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <a name="toString()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.223">toString</a>()</pre>
@@ -504,6 +695,17 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="recalculateSize()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>recalculateSize</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#line.249">recalculateSize</a>()</pre>
+<div class="block">Recalculate the size of the compaction based on current files.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>files</code> - files that should be included in the compaction</dd></dl>
 </li>
 </ul>
 </li>
@@ -533,7 +735,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionProgress.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionThroughputController.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.DisplayCompactionType.html" title="enum in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html" target="_top">Frames</a></li>
@@ -557,14 +759,14 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

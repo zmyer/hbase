@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide3.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.ListAppender.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/TestFromClientSide.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -110,6 +110,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.ListAppender.html" title="class in org.apache.hadoop.hbase.client">TestFromClientSide.ListAppender</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="field_summary">
@@ -123,12 +142,32 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#FAMILY">FAMILY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#QUALIFIER">QUALIFIER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#ROW">ROW</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#SLAVES">SLAVES</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#VALUE">VALUE</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -163,12 +202,387 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertDoubleResult(org.apache.hadoop.hbase.client.Result,%20byte[],%20byte[],%20byte[],%20byte[],%20byte[],%20byte[],%20byte[])">assertDoubleResult</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                                    byte[]&nbsp;row,
+                                    byte[]&nbsp;familyA,
+                                    byte[]&nbsp;qualifierA,
+                                    byte[]&nbsp;valueA,
+                                    byte[]&nbsp;familyB,
+                                    byte[]&nbsp;qualifierB,
+                                    byte[]&nbsp;valueB)</code>
+<div class="block">Validate that result contains two specified keys, exactly.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertEmptyResult(org.apache.hadoop.hbase.client.Result)">assertEmptyResult</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertIncrementKey(org.apache.hadoop.hbase.Cell,%20byte[],%20byte[],%20byte[],%20long)">assertIncrementKey</a></strong>(org.apache.hadoop.hbase.Cell&nbsp;key,
+                                    byte[]&nbsp;row,
+                                    byte[]&nbsp;family,
+                                    byte[]&nbsp;qualifier,
+                                    long&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertKey(org.apache.hadoop.hbase.Cell,%20byte[],%20byte[],%20byte[],%20byte[])">assertKey</a></strong>(org.apache.hadoop.hbase.Cell&nbsp;key,
+                  byte[]&nbsp;row,
+                  byte[]&nbsp;family,
+                  byte[]&nbsp;qualifier,
+                  byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertNResult(org.apache.hadoop.hbase.client.Result,%20byte[],%20byte[][],%20byte[][],%20byte[][],%20int[][])">assertNResult</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                          byte[]&nbsp;row,
+                          byte[][]&nbsp;families,
+                          byte[][]&nbsp;qualifiers,
+                          byte[][]&nbsp;values,
+                          int[][]&nbsp;idxs)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertNResult(org.apache.hadoop.hbase.client.Result,%20byte[],%20byte[],%20byte[],%20long[],%20byte[][],%20int,%20int)">assertNResult</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                          byte[]&nbsp;row,
+                          byte[]&nbsp;family,
+                          byte[]&nbsp;qualifier,
+                          long[]&nbsp;stamps,
+                          byte[][]&nbsp;values,
+                          int&nbsp;start,
+                          int&nbsp;end)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertNullResult(org.apache.hadoop.hbase.client.Result)">assertNullResult</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertNumKeys(org.apache.hadoop.hbase.client.Result,%20int)">assertNumKeys</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                          int&nbsp;n)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertRowCount(org.apache.hadoop.hbase.client.Table,%20int)">assertRowCount</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;t,
+                            int&nbsp;expected)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertSingleResult(org.apache.hadoop.hbase.client.Result,%20byte[],%20byte[],%20byte[],%20byte[])">assertSingleResult</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                                    byte[]&nbsp;row,
+                                    byte[]&nbsp;family,
+                                    byte[]&nbsp;qualifier,
+                                    byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#assertSingleResult(org.apache.hadoop.hbase.client.Result,%20byte[],%20byte[],%20byte[],%20long,%20byte[])">assertSingleResult</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                                    byte[]&nbsp;row,
+                                    byte[]&nbsp;family,
+                                    byte[]&nbsp;qualifier,
+                                    long&nbsp;ts,
+                                    byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.ResultScanner</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#buildScanner(java.lang.String,%20java.lang.String,%20org.apache.hadoop.hbase.client.Table)">buildScanner</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;keyPrefix,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+                        org.apache.hadoop.hbase.client.Table&nbsp;ht)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#checkTableIsIllegal(org.apache.hadoop.hbase.HTableDescriptor)">checkTableIsIllegal</a></strong>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#checkTableIsLegal(org.apache.hadoop.hbase.HTableDescriptor)">checkTableIsLegal</a></strong>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#countRows(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Scan)">countRows</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;t,
+                  org.apache.hadoop.hbase.client.Scan&nbsp;s)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Scan</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#createScanWithRowFilter(byte[])">createScanWithRowFilter</a></strong>(byte[]&nbsp;key)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Scan</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#createScanWithRowFilter(byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp)">createScanWithRowFilter</a></strong>(byte[]&nbsp;key,
+                                              byte[]&nbsp;startRow,
+                                              org.apache.hadoop.hbase.filter.CompareFilter.CompareOp&nbsp;op)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#deleteColumns(org.apache.hadoop.hbase.client.Table,%20java.lang.String,%20java.lang.String)">deleteColumns</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;keyPrefix)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#equals(byte[],%20byte[])">equals</a></strong>(byte[]&nbsp;left,
+            byte[]&nbsp;right)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getAllVersionsAndVerify(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long[],%20byte[][],%20int,%20int)">getAllVersionsAndVerify</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                              byte[]&nbsp;row,
+                                              byte[]&nbsp;family,
+                                              byte[]&nbsp;qualifier,
+                                              long[]&nbsp;stamps,
+                                              byte[][]&nbsp;values,
+                                              int&nbsp;start,
+                                              int&nbsp;end)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getNumberOfRows(java.lang.String,%20java.lang.String,%20org.apache.hadoop.hbase.client.Table)">getNumberOfRows</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;keyPrefix,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+                              org.apache.hadoop.hbase.client.Table&nbsp;ht)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.HRegionLocation&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getRegionsInRange(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[])">getRegionsInRange</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                                  byte[]&nbsp;startKey,
+                                  byte[]&nbsp;endKey)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Result</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getReverseScanResult(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[])">getReverseScanResult</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
+                                        byte[]&nbsp;row,
+                                        byte[]&nbsp;fam)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.metrics.ScanMetrics</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getScanMetrics(org.apache.hadoop.hbase.client.Scan)">getScanMetrics</a></strong>(org.apache.hadoop.hbase.client.Scan&nbsp;scan)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Result</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getSingleScanResult(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Scan)">getSingleScanResult</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                      org.apache.hadoop.hbase.client.Scan&nbsp;scan)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getTestNull(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[])">getTestNull</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                      byte[]&nbsp;row,
+                      byte[]&nbsp;family,
+                      byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getVerifySingleColumn(org.apache.hadoop.hbase.client.Table,%20byte[][],%20int,%20byte[][],%20int,%20byte[][],%20int,%20byte[][],%20int)">getVerifySingleColumn</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                          byte[][]&nbsp;ROWS,
+                                          int&nbsp;ROWIDX,
+                                          byte[][]&nbsp;FAMILIES,
+                                          int&nbsp;FAMILYIDX,
+                                          byte[][]&nbsp;QUALIFIERS,
+                                          int&nbsp;QUALIFIERIDX,
+                                          byte[][]&nbsp;VALUES,
+                                          int&nbsp;VALUEIDX)</code>
+<div class="block">Verify a single column using gets.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getVerifySingleEmpty(org.apache.hadoop.hbase.client.Table,%20byte[][],%20int,%20byte[][],%20int,%20byte[][],%20int)">getVerifySingleEmpty</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                        byte[][]&nbsp;ROWS,
+                                        int&nbsp;ROWIDX,
+                                        byte[][]&nbsp;FAMILIES,
+                                        int&nbsp;FAMILYIDX,
+                                        byte[][]&nbsp;QUALIFIERS,
+                                        int&nbsp;QUALIFIERIDX)</code>
+<div class="block">Verify we do not read any values by accident around a single column
+ Same requirements as getVerifySingleColumn</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getVersionAndVerify(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long,%20byte[])">getVersionAndVerify</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                      byte[]&nbsp;row,
+                                      byte[]&nbsp;family,
+                                      byte[]&nbsp;qualifier,
+                                      long&nbsp;stamp,
+                                      byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getVersionAndVerifyMissing(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long)">getVersionAndVerifyMissing</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                                    byte[]&nbsp;row,
+                                                    byte[]&nbsp;family,
+                                                    byte[]&nbsp;qualifier,
+                                                    long&nbsp;stamp)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getVersionRangeAndVerify(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long[],%20byte[][],%20int,%20int)">getVersionRangeAndVerify</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                                byte[]&nbsp;row,
+                                                byte[]&nbsp;family,
+                                                byte[]&nbsp;qualifier,
+                                                long[]&nbsp;stamps,
+                                                byte[][]&nbsp;values,
+                                                int&nbsp;start,
+                                                int&nbsp;end)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#getVersionRangeAndVerifyGreaterThan(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long[],%20byte[][],%20int,%20int)">getVersionRangeAndVerifyGreaterThan</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                                                      byte[]&nbsp;row,
+                                                                      byte[]&nbsp;family,
+                                                                      byte[]&nbsp;qualifier,
+                                                                      long[]&nbsp;stamps,
+                                                                      byte[][]&nbsp;values,
+                                                                      int&nbsp;start,
+                                                                      int&nbsp;end)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#makeN(byte[],%20int)">makeN</a></strong>(byte[]&nbsp;base,
+          int&nbsp;n)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#makeNAscii(byte[],%20int)">makeNAscii</a></strong>(byte[]&nbsp;base,
+                    int&nbsp;n)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private byte[][]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#makeNBig(byte[],%20int)">makeNBig</a></strong>(byte[]&nbsp;base,
+                int&nbsp;n)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#makeStamps(int)">makeStamps</a></strong>(int&nbsp;n)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#putRows(org.apache.hadoop.hbase.client.Table,%20int,%20java.lang.String,%20java.lang.String)">putRows</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+              int&nbsp;numRows,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#reverseScanTest(org.apache.hadoop.hbase.client.Table,%20boolean)">reverseScanTest</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
+                              boolean&nbsp;small)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#scanAllVersionsAndVerify(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long[],%20byte[][],%20int,%20int)">scanAllVersionsAndVerify</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                                byte[]&nbsp;row,
+                                                byte[]&nbsp;family,
+                                                byte[]&nbsp;qualifier,
+                                                long[]&nbsp;stamps,
+                                                byte[][]&nbsp;values,
+                                                int&nbsp;start,
+                                                int&nbsp;end)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#scanTestNull(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[])">scanTestNull</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                        byte[]&nbsp;row,
+                        byte[]&nbsp;family,
+                        byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#scanTestNull(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20boolean)">scanTestNull</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                        byte[]&nbsp;row,
+                        byte[]&nbsp;family,
+                        byte[]&nbsp;value,
+                        boolean&nbsp;isReversedScan)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#scanVerifySingleColumn(org.apache.hadoop.hbase.client.Table,%20byte[][],%20int,%20byte[][],%20int,%20byte[][],%20int,%20byte[][],%20int)">scanVerifySingleColumn</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                            byte[][]&nbsp;ROWS,
+                                            int&nbsp;ROWIDX,
+                                            byte[][]&nbsp;FAMILIES,
+                                            int&nbsp;FAMILYIDX,
+                                            byte[][]&nbsp;QUALIFIERS,
+                                            int&nbsp;QUALIFIERIDX,
+                                            byte[][]&nbsp;VALUES,
+                                            int&nbsp;VALUEIDX)</code>
+<div class="block">Verify a single column using scanners.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#scanVerifySingleEmpty(org.apache.hadoop.hbase.client.Table,%20byte[][],%20int,%20byte[][],%20int,%20byte[][],%20int)">scanVerifySingleEmpty</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                          byte[][]&nbsp;ROWS,
+                                          int&nbsp;ROWIDX,
+                                          byte[][]&nbsp;FAMILIES,
+                                          int&nbsp;FAMILYIDX,
+                                          byte[][]&nbsp;QUALIFIERS,
+                                          int&nbsp;QUALIFIERIDX)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#scanVersionAndVerify(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long,%20byte[])">scanVersionAndVerify</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                        byte[]&nbsp;row,
+                                        byte[]&nbsp;family,
+                                        byte[]&nbsp;qualifier,
+                                        long&nbsp;stamp,
+                                        byte[]&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#scanVersionAndVerifyMissing(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long)">scanVersionAndVerifyMissing</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                                      byte[]&nbsp;row,
+                                                      byte[]&nbsp;family,
+                                                      byte[]&nbsp;qualifier,
+                                                      long&nbsp;stamp)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#scanVersionRangeAndVerify(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long[],%20byte[][],%20int,%20int)">scanVersionRangeAndVerify</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                                  byte[]&nbsp;row,
+                                                  byte[]&nbsp;family,
+                                                  byte[]&nbsp;qualifier,
+                                                  long[]&nbsp;stamps,
+                                                  byte[][]&nbsp;values,
+                                                  int&nbsp;start,
+                                                  int&nbsp;end)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#scanVersionRangeAndVerifyGreaterThan(org.apache.hadoop.hbase.client.Table,%20byte[],%20byte[],%20byte[],%20long[],%20byte[][],%20int,%20int)">scanVersionRangeAndVerifyGreaterThan</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                                                        byte[]&nbsp;row,
+                                                                        byte[]&nbsp;family,
+                                                                        byte[]&nbsp;qualifier,
+                                                                        long[]&nbsp;stamps,
+                                                                        byte[][]&nbsp;values,
+                                                                        int&nbsp;start,
+                                                                        int&nbsp;end)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#singleRowGetTest(org.apache.hadoop.hbase.client.Table,%20byte[][],%20byte[][],%20byte[][],%20byte[][])">singleRowGetTest</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                byte[][]&nbsp;ROWS,
+                                byte[][]&nbsp;FAMILIES,
+                                byte[][]&nbsp;QUALIFIERS,
+                                byte[][]&nbsp;VALUES)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#singleRowScanTest(org.apache.hadoop.hbase.client.Table,%20byte[][],%20byte[][],%20byte[][],%20byte[][])">singleRowScanTest</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                  byte[][]&nbsp;ROWS,
+                                  byte[][]&nbsp;FAMILIES,
+                                  byte[][]&nbsp;QUALIFIERS,
+                                  byte[][]&nbsp;VALUES)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.HRegionLocation&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#splitTable(org.apache.hadoop.hbase.client.Table)">splitTable</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;t)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -562,6 +976,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  involves deletes.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#waitForStoreFileCount(org.apache.hadoop.hbase.regionserver.Store,%20int,%20int)">waitForStoreFileCount</a></strong>(org.apache.hadoop.hbase.regionserver.Store&nbsp;store,
+                                          int&nbsp;count,
+                                          int&nbsp;timeout)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.HRegionLocation&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html#waitOnSplit(org.apache.hadoop.hbase.client.Table)">waitOnSplit</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;t)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -584,6 +1008,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.122">LOG</a></pre>
+</li>
+</ul>
 <a name="TEST_UTIL">
 <!--   -->
 </a>
@@ -591,6 +1024,42 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>TEST_UTIL</h4>
 <pre>protected static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.123">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="ROW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ROW</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.124">ROW</a></pre>
+</li>
+</ul>
+<a name="FAMILY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FAMILY</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.125">FAMILY</a></pre>
+</li>
+</ul>
+<a name="QUALIFIER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>QUALIFIER</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.126">QUALIFIER</a></pre>
+</li>
+</ul>
+<a name="VALUE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VALUE</h4>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.127">VALUE</a></pre>
 </li>
 </ul>
 <a name="SLAVES">
@@ -729,6 +1198,63 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="deleteColumns(org.apache.hadoop.hbase.client.Table, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteColumns</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.355">deleteColumns</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;keyPrefix)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getNumberOfRows(java.lang.String, java.lang.String, org.apache.hadoop.hbase.client.Table)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNumberOfRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.370">getNumberOfRows</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;keyPrefix,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+                  org.apache.hadoop.hbase.client.Table&nbsp;ht)
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="buildScanner(java.lang.String, java.lang.String, org.apache.hadoop.hbase.client.Table)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildScanner</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.ResultScanner&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.387">buildScanner</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;keyPrefix,
+                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+                                                        org.apache.hadoop.hbase.client.Table&nbsp;ht)
+                                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="putRows(org.apache.hadoop.hbase.client.Table, int, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>putRows</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.413">putRows</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+           int&nbsp;numRows,
+           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value,
+           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)
+              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testFilterAcrossMultipleRegions()">
 <!--   -->
 </a>
@@ -744,6 +1270,78 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createScanWithRowFilter(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createScanWithRowFilter</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Scan&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.498">createScanWithRowFilter</a>(byte[]&nbsp;key)</pre>
+</li>
+</ul>
+<a name="createScanWithRowFilter(byte[], byte[], org.apache.hadoop.hbase.filter.CompareFilter.CompareOp)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createScanWithRowFilter</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Scan&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.508">createScanWithRowFilter</a>(byte[]&nbsp;key,
+                                                          byte[]&nbsp;startRow,
+                                                          org.apache.hadoop.hbase.filter.CompareFilter.CompareOp&nbsp;op)</pre>
+</li>
+</ul>
+<a name="countRows(org.apache.hadoop.hbase.client.Table, org.apache.hadoop.hbase.client.Scan)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>countRows</h4>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.527">countRows</a>(org.apache.hadoop.hbase.client.Table&nbsp;t,
+            org.apache.hadoop.hbase.client.Scan&nbsp;s)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertRowCount(org.apache.hadoop.hbase.client.Table, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertRowCount</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.540">assertRowCount</a>(org.apache.hadoop.hbase.client.Table&nbsp;t,
+                  int&nbsp;expected)
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="splitTable(org.apache.hadoop.hbase.client.Table)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>splitTable</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.HRegionLocation&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.551">splitTable</a>(org.apache.hadoop.hbase.client.Table&nbsp;t)
+                                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="waitOnSplit(org.apache.hadoop.hbase.client.Table)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitOnSplit</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.HRegionLocation&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.568">waitOnSplit</a>(org.apache.hadoop.hbase.client.Table&nbsp;t)
+                                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testSuperSimple()">
@@ -1033,6 +1631,570 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="getVersionRangeAndVerifyGreaterThan(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long[], byte[][], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVersionRangeAndVerifyGreaterThan</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2485">getVersionRangeAndVerifyGreaterThan</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                       byte[]&nbsp;row,
+                                       byte[]&nbsp;family,
+                                       byte[]&nbsp;qualifier,
+                                       long[]&nbsp;stamps,
+                                       byte[][]&nbsp;values,
+                                       int&nbsp;start,
+                                       int&nbsp;end)
+                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getVersionRangeAndVerify(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long[], byte[][], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVersionRangeAndVerify</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2497">getVersionRangeAndVerify</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                            byte[]&nbsp;row,
+                            byte[]&nbsp;family,
+                            byte[]&nbsp;qualifier,
+                            long[]&nbsp;stamps,
+                            byte[][]&nbsp;values,
+                            int&nbsp;start,
+                            int&nbsp;end)
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getAllVersionsAndVerify(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long[], byte[][], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAllVersionsAndVerify</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2508">getAllVersionsAndVerify</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                           byte[]&nbsp;row,
+                           byte[]&nbsp;family,
+                           byte[]&nbsp;qualifier,
+                           long[]&nbsp;stamps,
+                           byte[][]&nbsp;values,
+                           int&nbsp;start,
+                           int&nbsp;end)
+                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanVersionRangeAndVerifyGreaterThan(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long[], byte[][], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanVersionRangeAndVerifyGreaterThan</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2518">scanVersionRangeAndVerifyGreaterThan</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                        byte[]&nbsp;row,
+                                        byte[]&nbsp;family,
+                                        byte[]&nbsp;qualifier,
+                                        long[]&nbsp;stamps,
+                                        byte[][]&nbsp;values,
+                                        int&nbsp;start,
+                                        int&nbsp;end)
+                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanVersionRangeAndVerify(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long[], byte[][], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanVersionRangeAndVerify</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2530">scanVersionRangeAndVerify</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                             byte[]&nbsp;row,
+                             byte[]&nbsp;family,
+                             byte[]&nbsp;qualifier,
+                             long[]&nbsp;stamps,
+                             byte[][]&nbsp;values,
+                             int&nbsp;start,
+                             int&nbsp;end)
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanAllVersionsAndVerify(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long[], byte[][], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanAllVersionsAndVerify</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2541">scanAllVersionsAndVerify</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                            byte[]&nbsp;row,
+                            byte[]&nbsp;family,
+                            byte[]&nbsp;qualifier,
+                            long[]&nbsp;stamps,
+                            byte[][]&nbsp;values,
+                            int&nbsp;start,
+                            int&nbsp;end)
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getVersionAndVerify(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVersionAndVerify</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2551">getVersionAndVerify</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                       byte[]&nbsp;row,
+                       byte[]&nbsp;family,
+                       byte[]&nbsp;qualifier,
+                       long&nbsp;stamp,
+                       byte[]&nbsp;value)
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getVersionAndVerifyMissing(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVersionAndVerifyMissing</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2562">getVersionAndVerifyMissing</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                              byte[]&nbsp;row,
+                              byte[]&nbsp;family,
+                              byte[]&nbsp;qualifier,
+                              long&nbsp;stamp)
+                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanVersionAndVerify(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanVersionAndVerify</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2573">scanVersionAndVerify</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                        byte[]&nbsp;row,
+                        byte[]&nbsp;family,
+                        byte[]&nbsp;qualifier,
+                        long&nbsp;stamp,
+                        byte[]&nbsp;value)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanVersionAndVerifyMissing(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanVersionAndVerifyMissing</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2584">scanVersionAndVerifyMissing</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                               byte[]&nbsp;row,
+                               byte[]&nbsp;family,
+                               byte[]&nbsp;qualifier,
+                               long&nbsp;stamp)
+                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getTestNull(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTestNull</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2595">getTestNull</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+               byte[]&nbsp;row,
+               byte[]&nbsp;family,
+               byte[]&nbsp;value)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanTestNull(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanTestNull</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2620">scanTestNull</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                byte[]&nbsp;row,
+                byte[]&nbsp;family,
+                byte[]&nbsp;value)
+                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanTestNull(org.apache.hadoop.hbase.client.Table, byte[], byte[], byte[], boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanTestNull</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2625">scanTestNull</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                byte[]&nbsp;row,
+                byte[]&nbsp;family,
+                byte[]&nbsp;value,
+                boolean&nbsp;isReversedScan)
+                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="singleRowGetTest(org.apache.hadoop.hbase.client.Table, byte[][], byte[][], byte[][], byte[][])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>singleRowGetTest</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2653">singleRowGetTest</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                    byte[][]&nbsp;ROWS,
+                    byte[][]&nbsp;FAMILIES,
+                    byte[][]&nbsp;QUALIFIERS,
+                    byte[][]&nbsp;VALUES)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="singleRowScanTest(org.apache.hadoop.hbase.client.Table, byte[][], byte[][], byte[][], byte[][])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>singleRowScanTest</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2751">singleRowScanTest</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                     byte[][]&nbsp;ROWS,
+                     byte[][]&nbsp;FAMILIES,
+                     byte[][]&nbsp;QUALIFIERS,
+                     byte[][]&nbsp;VALUES)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getVerifySingleColumn(org.apache.hadoop.hbase.client.Table, byte[][], int, byte[][], int, byte[][], int, byte[][], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVerifySingleColumn</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2853">getVerifySingleColumn</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                         byte[][]&nbsp;ROWS,
+                         int&nbsp;ROWIDX,
+                         byte[][]&nbsp;FAMILIES,
+                         int&nbsp;FAMILYIDX,
+                         byte[][]&nbsp;QUALIFIERS,
+                         int&nbsp;QUALIFIERIDX,
+                         byte[][]&nbsp;VALUES,
+                         int&nbsp;VALUEIDX)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Verify a single column using gets.
+ Expects family and qualifier arrays to be valid for at least
+ the range:  idx-2 < idx < idx+2</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanVerifySingleColumn(org.apache.hadoop.hbase.client.Table, byte[][], int, byte[][], int, byte[][], int, byte[][], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanVerifySingleColumn</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2911">scanVerifySingleColumn</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                          byte[][]&nbsp;ROWS,
+                          int&nbsp;ROWIDX,
+                          byte[][]&nbsp;FAMILIES,
+                          int&nbsp;FAMILYIDX,
+                          byte[][]&nbsp;QUALIFIERS,
+                          int&nbsp;QUALIFIERIDX,
+                          byte[][]&nbsp;VALUES,
+                          int&nbsp;VALUEIDX)
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Verify a single column using scanners.
+ Expects family and qualifier arrays to be valid for at least
+ the range:  idx-2 to idx+2
+ Expects row array to be valid for at least idx to idx+2</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getVerifySingleEmpty(org.apache.hadoop.hbase.client.Table, byte[][], int, byte[][], int, byte[][], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getVerifySingleEmpty</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.2971">getVerifySingleEmpty</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                        byte[][]&nbsp;ROWS,
+                        int&nbsp;ROWIDX,
+                        byte[][]&nbsp;FAMILIES,
+                        int&nbsp;FAMILYIDX,
+                        byte[][]&nbsp;QUALIFIERS,
+                        int&nbsp;QUALIFIERIDX)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Verify we do not read any values by accident around a single column
+ Same requirements as getVerifySingleColumn</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="scanVerifySingleEmpty(org.apache.hadoop.hbase.client.Table, byte[][], int, byte[][], int, byte[][], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>scanVerifySingleEmpty</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3002">scanVerifySingleEmpty</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                         byte[][]&nbsp;ROWS,
+                         int&nbsp;ROWIDX,
+                         byte[][]&nbsp;FAMILIES,
+                         int&nbsp;FAMILYIDX,
+                         byte[][]&nbsp;QUALIFIERS,
+                         int&nbsp;QUALIFIERIDX)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertKey(org.apache.hadoop.hbase.Cell, byte[], byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertKey</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3032">assertKey</a>(org.apache.hadoop.hbase.Cell&nbsp;key,
+             byte[]&nbsp;row,
+             byte[]&nbsp;family,
+             byte[]&nbsp;qualifier,
+             byte[]&nbsp;value)
+                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertIncrementKey(org.apache.hadoop.hbase.Cell, byte[], byte[], byte[], long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertIncrementKey</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3049">assertIncrementKey</a>(org.apache.hadoop.hbase.Cell&nbsp;key,
+                      byte[]&nbsp;row,
+                      byte[]&nbsp;family,
+                      byte[]&nbsp;qualifier,
+                      long&nbsp;value)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertNumKeys(org.apache.hadoop.hbase.client.Result, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertNumKeys</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3066">assertNumKeys</a>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                 int&nbsp;n)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertNResult(org.apache.hadoop.hbase.client.Result, byte[], byte[][], byte[][], byte[][], int[][])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertNResult</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3071">assertNResult</a>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                 byte[]&nbsp;row,
+                 byte[][]&nbsp;families,
+                 byte[][]&nbsp;qualifiers,
+                 byte[][]&nbsp;values,
+                 int[][]&nbsp;idxs)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertNResult(org.apache.hadoop.hbase.client.Result, byte[], byte[], byte[], long[], byte[][], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertNResult</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3104">assertNResult</a>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                 byte[]&nbsp;row,
+                 byte[]&nbsp;family,
+                 byte[]&nbsp;qualifier,
+                 long[]&nbsp;stamps,
+                 byte[][]&nbsp;values,
+                 int&nbsp;start,
+                 int&nbsp;end)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertDoubleResult(org.apache.hadoop.hbase.client.Result, byte[], byte[], byte[], byte[], byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertDoubleResult</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3139">assertDoubleResult</a>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                      byte[]&nbsp;row,
+                      byte[]&nbsp;familyA,
+                      byte[]&nbsp;qualifierA,
+                      byte[]&nbsp;valueA,
+                      byte[]&nbsp;familyB,
+                      byte[]&nbsp;qualifierB,
+                      byte[]&nbsp;valueB)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Validate that result contains two specified keys, exactly.
+ It is assumed key A sorts before key B.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertSingleResult(org.apache.hadoop.hbase.client.Result, byte[], byte[], byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertSingleResult</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3171">assertSingleResult</a>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                      byte[]&nbsp;row,
+                      byte[]&nbsp;family,
+                      byte[]&nbsp;qualifier,
+                      byte[]&nbsp;value)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertSingleResult(org.apache.hadoop.hbase.client.Result, byte[], byte[], byte[], long, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertSingleResult</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3191">assertSingleResult</a>(org.apache.hadoop.hbase.client.Result&nbsp;result,
+                      byte[]&nbsp;row,
+                      byte[]&nbsp;family,
+                      byte[]&nbsp;qualifier,
+                      long&nbsp;ts,
+                      byte[]&nbsp;value)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertEmptyResult(org.apache.hadoop.hbase.client.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertEmptyResult</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3213">assertEmptyResult</a>(org.apache.hadoop.hbase.client.Result&nbsp;result)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertNullResult(org.apache.hadoop.hbase.client.Result)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertNullResult</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3218">assertNullResult</a>(org.apache.hadoop.hbase.client.Result&nbsp;result)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getSingleScanResult(org.apache.hadoop.hbase.client.Table, org.apache.hadoop.hbase.client.Scan)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSingleScanResult</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Result&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3227">getSingleScanResult</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+                                                        org.apache.hadoop.hbase.client.Scan&nbsp;scan)
+                                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="makeNAscii(byte[], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeNAscii</h4>
+<pre>private&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3234">makeNAscii</a>(byte[]&nbsp;base,
+                  int&nbsp;n)</pre>
+</li>
+</ul>
+<a name="makeN(byte[], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeN</h4>
+<pre>private&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3246">makeN</a>(byte[]&nbsp;base,
+             int&nbsp;n)</pre>
+</li>
+</ul>
+<a name="makeNBig(byte[], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeNBig</h4>
+<pre>private&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3257">makeNBig</a>(byte[]&nbsp;base,
+                int&nbsp;n)</pre>
+</li>
+</ul>
+<a name="makeStamps(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeStamps</h4>
+<pre>private&nbsp;long[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3267">makeStamps</a>(int&nbsp;n)</pre>
+</li>
+</ul>
+<a name="equals(byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3273">equals</a>(byte[]&nbsp;left,
+             byte[]&nbsp;right)</pre>
+</li>
+</ul>
 <a name="testDuplicateVersions()">
 <!--   -->
 </a>
@@ -1087,7 +2249,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testGet_EmptyTable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3674">testGet_EmptyTable</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3673">testGet_EmptyTable</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1099,7 +2261,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testGet_NullQualifier</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3683">testGet_NullQualifier</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3682">testGet_NullQualifier</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1111,7 +2273,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testGet_NonExistentRow</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3706">testGet_NonExistentRow</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3705">testGet_NonExistentRow</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1123,7 +2285,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testPut</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3728">testPut</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3727">testPut</a>()
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1135,7 +2297,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testPutNoCF</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3768">testPutNoCF</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3767">testPutNoCF</a>()
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1147,7 +2309,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRowsPut</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3787">testRowsPut</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3786">testRowsPut</a>()
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1159,7 +2321,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRowsPutBufferedOneFlush</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3814">testRowsPutBufferedOneFlush</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3813">testRowsPutBufferedOneFlush</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1171,7 +2333,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRowsPutBufferedManyManyFlushes</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3859">testRowsPutBufferedManyManyFlushes</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3858">testRowsPutBufferedManyManyFlushes</a>()
                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1183,7 +2345,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testAddKeyValue</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3888">testAddKeyValue</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3887">testAddKeyValue</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1195,7 +2357,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testHBase737</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3922">testHBase737</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.3921">testHBase737</a>()
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">test for HBASE-737</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -1208,7 +2370,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testListTables</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4013">testListTables</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4012">testListTables</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -1222,7 +2384,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testUnmanagedHConnection</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4046">testUnmanagedHConnection</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4045">testUnmanagedHConnection</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">simple test that just executes parts of the client
  API that accept a pre-created HConnection instance</div>
@@ -1236,7 +2398,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testUnmanagedHConnectionReconnect</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4064">testUnmanagedHConnectionReconnect</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4063">testUnmanagedHConnectionReconnect</a>()
                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">test of that unmanaged HConnections are able to reconnect
  properly (see HBASE-5058)</div>
@@ -1250,7 +2412,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMiscHTableStuff</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4092">testMiscHTableStuff</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4091">testMiscHTableStuff</a>()
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1262,12 +2424,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testGetClosestRowBefore</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4169">testGetClosestRowBefore</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4168">testGetClosestRowBefore</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getReverseScanResult(org.apache.hadoop.hbase.client.Table, byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getReverseScanResult</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Result&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4268">getReverseScanResult</a>(org.apache.hadoop.hbase.client.Table&nbsp;table,
+                                                         byte[]&nbsp;row,
+                                                         byte[]&nbsp;fam)
+                                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testScanVariableReuse()">
@@ -1276,7 +2452,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testScanVariableReuse</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4285">testScanVariableReuse</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4284">testScanVariableReuse</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">For HBASE-2156</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -1289,7 +2465,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMultiRowMutation</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4300">testMultiRowMutation</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4299">testMultiRowMutation</a>()
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1301,7 +2477,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRowMutation</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4331">testRowMutation</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4330">testRowMutation</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1313,7 +2489,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testAppend</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4374">testAppend</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4373">testAppend</a>()
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1325,7 +2501,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testIncrementWithDeletes</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4403">testIncrementWithDeletes</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4402">testIncrementWithDeletes</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1337,7 +2513,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testIncrementingInvalidValue</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4425">testIncrementingInvalidValue</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4424">testIncrementingInvalidValue</a>()
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1349,7 +2525,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testIncrementInvalidArguments</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4451">testIncrementInvalidArguments</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4450">testIncrementInvalidArguments</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1361,7 +2537,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testIncrementOutOfOrder</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4506">testIncrementOutOfOrder</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4505">testIncrementOutOfOrder</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1373,7 +2549,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testIncrementOnSameColumn</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4546">testIncrementOnSameColumn</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4545">testIncrementOnSameColumn</a>()
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1385,7 +2561,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testIncrement</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4589">testIncrement</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4588">testIncrement</a>()
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1397,7 +2573,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testClientPoolRoundRobin</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4661">testClientPoolRoundRobin</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4660">testClientPoolRoundRobin</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1409,7 +2585,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testClientPoolThreadLocal</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4697">testClientPoolThreadLocal</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4696">testClientPoolThreadLocal</a>()
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1421,7 +2597,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testCheckAndPut</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4779">testCheckAndPut</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4778">testCheckAndPut</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1433,7 +2609,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testCheckAndPutWithCompareOp</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4818">testCheckAndPutWithCompareOp</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4817">testCheckAndPutWithCompareOp</a>()
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1445,7 +2621,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testCheckAndDeleteWithCompareOp</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4883">testCheckAndDeleteWithCompareOp</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4882">testCheckAndDeleteWithCompareOp</a>()
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1457,9 +2633,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testScanMetrics</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4962">testScanMetrics</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.4961">testScanMetrics</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test ScanMetrics</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getScanMetrics(org.apache.hadoop.hbase.client.Scan)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getScanMetrics</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.metrics.ScanMetrics&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5081">getScanMetrics</a>(org.apache.hadoop.hbase.client.Scan&nbsp;scan)
+                                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -1470,7 +2658,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testCacheOnWriteEvictOnClose</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5100">testCacheOnWriteEvictOnClose</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5099">testCacheOnWriteEvictOnClose</a>()
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Tests that cache on write works all the way up from the client-side.
 
@@ -1480,13 +2668,27 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="waitForStoreFileCount(org.apache.hadoop.hbase.regionserver.Store, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitForStoreFileCount</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5200">waitForStoreFileCount</a>(org.apache.hadoop.hbase.regionserver.Store&nbsp;store,
+                         int&nbsp;count,
+                         int&nbsp;timeout)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testNonCachedGetRegionLocation()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>testNonCachedGetRegionLocation</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5217">testNonCachedGetRegionLocation</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5216">testNonCachedGetRegionLocation</a>()
                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1498,10 +2700,24 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testGetRegionsInRange</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5265">testGetRegionsInRange</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5264">testGetRegionsInRange</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getRegionsInRange(org.apache.hadoop.hbase.TableName, byte[], byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRegionsInRange</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.HRegionLocation&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5324">getRegionsInRange</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                                                              byte[]&nbsp;startKey,
+                                                              byte[]&nbsp;endKey)
+                                                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testJira6912()">
@@ -1510,7 +2726,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testJira6912</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5342">testJira6912</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5341">testJira6912</a>()
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1522,7 +2738,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testScan_NullQualifier</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5369">testScan_NullQualifier</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5368">testScan_NullQualifier</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1534,7 +2750,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNegativeTimestamp</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5398">testNegativeTimestamp</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5397">testNegativeTimestamp</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1546,10 +2762,34 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testIllegalTableDescriptor</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5458">testIllegalTableDescriptor</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5457">testIllegalTableDescriptor</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkTableIsLegal(org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkTableIsLegal</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5582">checkTableIsLegal</a>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="checkTableIsIllegal(org.apache.hadoop.hbase.HTableDescriptor)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkTableIsIllegal</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5590">checkTableIsIllegal</a>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd)
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testRawScanRespectsVersions()">
@@ -1558,7 +2798,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRawScanRespectsVersions</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5603">testRawScanRespectsVersions</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5602">testRawScanRespectsVersions</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1570,7 +2810,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSmallScan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5673">testSmallScan</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5672">testSmallScan</a>()
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1582,7 +2822,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSuperSimpleWithReverseScan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5710">testSuperSimpleWithReverseScan</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5709">testSuperSimpleWithReverseScan</a>()
                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1594,7 +2834,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testFiltersWithReverseScan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5755">testFiltersWithReverseScan</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5754">testFiltersWithReverseScan</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1606,7 +2846,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testKeyOnlyFilterWithReverseScan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5797">testKeyOnlyFilterWithReverseScan</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5796">testKeyOnlyFilterWithReverseScan</a>()
                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1618,7 +2858,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSimpleMissingWithReverseScan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5838">testSimpleMissingWithReverseScan</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5837">testSimpleMissingWithReverseScan</a>()
                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test simple table and non-existent row cases.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -1631,7 +2871,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNullWithReverseScan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5903">testNullWithReverseScan</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5902">testNullWithReverseScan</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1643,7 +2883,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testDeletesWithReverseScan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5940">testDeletesWithReverseScan</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.5939">testDeletesWithReverseScan</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -1655,7 +2895,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testReversedScanUnderMultiRegions</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.6125">testReversedScanUnderMultiRegions</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.6124">testReversedScanUnderMultiRegions</a>()
                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Tests reversed scan under multi regions</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -1668,11 +2908,24 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSmallReversedScanUnderMultiRegions</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.6184">testSmallReversedScanUnderMultiRegions</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.6183">testSmallReversedScanUnderMultiRegions</a>()
                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Tests reversed scan under multi regions</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="reverseScanTest(org.apache.hadoop.hbase.client.Table, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reverseScanTest</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.6223">reverseScanTest</a>(org.apache.hadoop.hbase.client.Table&nbsp;table,
+                   boolean&nbsp;small)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testGetStartEndKeysWithRegionReplicas()">
@@ -1681,7 +2934,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testGetStartEndKeysWithRegionReplicas</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.6348">testGetStartEndKeysWithRegionReplicas</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.6347">testGetStartEndKeysWithRegionReplicas</a>()
                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1693,7 +2946,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>testFilterAllRecords</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.6385">testFilterAllRecords</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFromClientSide.html#line.6384">testFilterAllRecords</a>()
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1726,7 +2979,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide3.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.ListAppender.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/TestFromClientSide.html" target="_top">Frames</a></li>
@@ -1750,7 +3003,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

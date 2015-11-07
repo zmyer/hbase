@@ -85,7 +85,15 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.codec.prefixtree">org.apache.hadoop.hbase.codec.prefixtree</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.io">org.apache.hadoop.hbase.io</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.io.encoding">org.apache.hadoop.hbase.io.encoding</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -219,6 +227,31 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.codec.prefixtree">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a> in <a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/package-summary.html">org.apache.hadoop.hbase.codec.prefixtree</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/package-summary.html">org.apache.hadoop.hbase.codec.prefixtree</a> that implement <a href="../../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.OffheapPrefixTreeCell.html" title="class in org.apache.hadoop.hbase.codec.prefixtree">PrefixTreeSeeker.OffheapPrefixTreeCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/codec/prefixtree/PrefixTreeSeeker.OnheapPrefixTreeCell.html" title="class in org.apache.hadoop.hbase.codec.prefixtree">PrefixTreeSeeker.OnheapPrefixTreeCell</a></strong></code>
+<div class="block">Cloned version of the PrefixTreeCell where except the value part, the rest
+ of the key part is deep copied</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.io">
 <!--   -->
 </a>
@@ -234,6 +267,31 @@
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/SizedCellScanner.html" title="interface in org.apache.hadoop.hbase.io">SizedCellScanner</a></strong></code>
 <div class="block">A CellScanner that knows its size in memory in bytes.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.io.encoding">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a> in <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/package-summary.html">org.apache.hadoop.hbase.io.encoding</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/package-summary.html">org.apache.hadoop.hbase.io.encoding</a> that implement <a href="../../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.OffheapDecodedCell.html" title="class in org.apache.hadoop.hbase.io.encoding">BufferedDataBlockEncoder.OffheapDecodedCell</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.OnheapDecodedCell.html" title="class in org.apache.hadoop.hbase.io.encoding">BufferedDataBlockEncoder.OnheapDecodedCell</a></strong></code>
+<div class="block">Copies only the key part of the keybuffer by doing a deep copy and passes the
+ seeker state members for taking a clone.</div>
 </td>
 </tr>
 </tbody>
@@ -285,10 +343,43 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.BlockIndexReader.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.BlockIndexReader</a></strong></code>
+<div class="block">The reader will always hold the root level index in the memory.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.ByteArrayKeyBlockIndexReader.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.ByteArrayKeyBlockIndexReader</a></strong></code>
+<div class="block">An implementation of the BlockIndexReader that deals with block keys which are plain
+ byte[] like MetaBlock or the Bloom Block for ROW bloom.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.CellBasedKeyBlockIndexReader.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlockIndex.CellBasedKeyBlockIndexReader</a></strong></code>
+<div class="block">An implementation of the BlockIndexReader that deals with block keys which are the key
+ part of a cell like the Data block index or the ROW_COL bloom blocks
+ This needs a comparator to work with the Cells</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileContext.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileContext</a></strong></code>
 <div class="block">This carries the information on some of the meta data about the HFile.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryKeyValue</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryNoTagsKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryNoTagsKeyValue</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryOffheapKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryOffheapKeyValue</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>

@@ -154,6 +154,10 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#env">env</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static org.apache.commons.logging.Log</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#log">log</a></strong></code>&nbsp;</td>
 </tr>
@@ -197,6 +201,10 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/coprocessor/ColumnInterpreter.html" title="class in org.apache.hadoop.hbase.coprocessor">ColumnInterpreter</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">T</a>,<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">S</a>,<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">P</a>,<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">Q</a>,<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">R</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#constructColumnInterpreterFromRequest(org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest)">constructColumnInterpreterFromRequest</a></strong>(org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest&nbsp;request)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#getAvg(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest,%20com.google.protobuf.RpcCallback)">getAvg</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
             org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest&nbsp;request,
@@ -206,7 +214,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
  the given row range as defined in the Scan object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#getMax(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest,%20com.google.protobuf.RpcCallback)">getMax</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
             org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest&nbsp;request,
@@ -215,7 +223,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
  family, in the given row range as defined in the Scan object.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#getMedian(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest,%20com.google.protobuf.RpcCallback)">getMedian</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
                   org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest&nbsp;request,
@@ -223,7 +231,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
 <div class="block">Gives a List containing sum of values and sum of weights.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#getMin(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest,%20com.google.protobuf.RpcCallback)">getMin</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
             org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest&nbsp;request,
@@ -232,7 +240,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
  family, in the given row range as defined in the Scan object.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#getRowNum(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest,%20com.google.protobuf.RpcCallback)">getRowNum</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
                   org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest&nbsp;request,
@@ -241,11 +249,11 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
  the given row range as defined in the Scan object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>com.google.protobuf.Service</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#getService()">getService</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#getStd(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest,%20com.google.protobuf.RpcCallback)">getStd</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
             org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest&nbsp;request,
@@ -254,7 +262,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
  and the second object as row count.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#getSum(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest,%20com.google.protobuf.RpcCallback)">getSum</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
             org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest&nbsp;request,
@@ -263,7 +271,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
  family, in the given row range as defined in the Scan object.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#start(org.apache.hadoop.hbase.CoprocessorEnvironment)">start</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/CoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase">CoprocessorEnvironment</a>&nbsp;env)</code>
 <div class="block">Stores a reference to the coprocessor environment provided by the
@@ -271,7 +279,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
  coprocessor is loaded.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#stop(org.apache.hadoop.hbase.CoprocessorEnvironment)">stop</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/CoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase">CoprocessorEnvironment</a>&nbsp;env)</code>&nbsp;</td>
 </tr>
@@ -307,10 +315,19 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
 <a name="log">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>log</h4>
 <pre>protected static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#line.63">log</a></pre>
+</li>
+</ul>
+<a name="env">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>env</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#line.64">env</a></pre>
 </li>
 </ul>
 </li>
@@ -482,6 +499,18 @@ implements <a href="../../../../../org/apache/hadoop/hbase/coprocessor/Coprocess
 <dt><strong>Specified by:</strong></dt>
 <dd><code>getMedian</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateService</code></dd>
 </dl>
+</li>
+</ul>
+<a name="constructColumnInterpreterFromRequest(org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>constructColumnInterpreterFromRequest</h4>
+<pre><a href="../../../../../org/apache/hadoop/hbase/coprocessor/ColumnInterpreter.html" title="class in org.apache.hadoop.hbase.coprocessor">ColumnInterpreter</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">T</a>,<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">S</a>,<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">P</a>,<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">Q</a>,<a href="../../../../../org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html" title="type parameter in AggregateImplementation">R</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/AggregateImplementation.html#line.477">constructColumnInterpreterFromRequest</a>(org.apache.hadoop.hbase.protobuf.generated.AggregateProtos.AggregateRequest&nbsp;request)
+                                                                                                                                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="getService()">

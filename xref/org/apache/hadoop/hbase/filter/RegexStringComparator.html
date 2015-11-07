@@ -82,7 +82,7 @@
 <a class="jxr_linenumber" name="72" href="#72">72</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="73" href="#73">73</a>  @InterfaceAudience.Public
 <a class="jxr_linenumber" name="74" href="#74">74</a>  @InterfaceStability.Stable
-<a class="jxr_linenumber" name="75" href="#75">75</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">ByteArrayComparable</a> {
+<a class="jxr_linenumber" name="75" href="#75">75</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html">ByteArrayComparable</a> {
 <a class="jxr_linenumber" name="76" href="#76">76</a>  
 <a class="jxr_linenumber" name="77" href="#77">77</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Log LOG = LogFactory.getLog(RegexStringComparator.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="78" href="#78">78</a>  
@@ -101,7 +101,7 @@
 <a class="jxr_linenumber" name="91" href="#91">91</a>  <em class="jxr_javadoccomment">   * Adds Pattern.DOTALL to the underlying Pattern</em>
 <a class="jxr_linenumber" name="92" href="#92">92</a>  <em class="jxr_javadoccomment">   * @param expr a valid regular expression</em>
 <a class="jxr_linenumber" name="93" href="#93">93</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="94" href="#94">94</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a>(String expr) {
+<a class="jxr_linenumber" name="94" href="#94">94</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a>(String expr) {
 <a class="jxr_linenumber" name="95" href="#95">95</a>      <strong class="jxr_keyword">this</strong>(expr, Pattern.DOTALL);
 <a class="jxr_linenumber" name="96" href="#96">96</a>    }
 <a class="jxr_linenumber" name="97" href="#97">97</a>  
@@ -111,7 +111,7 @@
 <a class="jxr_linenumber" name="101" href="#101">101</a> <em class="jxr_javadoccomment">   * @param expr a valid regular expression</em>
 <a class="jxr_linenumber" name="102" href="#102">102</a> <em class="jxr_javadoccomment">   * @param engine engine implementation type</em>
 <a class="jxr_linenumber" name="103" href="#103">103</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="104" href="#104">104</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a>(String expr, <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">EngineType</a> engine) {
+<a class="jxr_linenumber" name="104" href="#104">104</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a>(String expr, <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">EngineType</a> engine) {
 <a class="jxr_linenumber" name="105" href="#105">105</a>     <strong class="jxr_keyword">this</strong>(expr, Pattern.DOTALL, engine);
 <a class="jxr_linenumber" name="106" href="#106">106</a>   }
 <a class="jxr_linenumber" name="107" href="#107">107</a> 
@@ -120,7 +120,7 @@
 <a class="jxr_linenumber" name="110" href="#110">110</a> <em class="jxr_javadoccomment">   * @param expr a valid regular expression</em>
 <a class="jxr_linenumber" name="111" href="#111">111</a> <em class="jxr_javadoccomment">   * @param flags java.util.regex.Pattern flags</em>
 <a class="jxr_linenumber" name="112" href="#112">112</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="113" href="#113">113</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a>(String expr, <strong class="jxr_keyword">int</strong> flags) {
+<a class="jxr_linenumber" name="113" href="#113">113</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a>(String expr, <strong class="jxr_keyword">int</strong> flags) {
 <a class="jxr_linenumber" name="114" href="#114">114</a>     <strong class="jxr_keyword">this</strong>(expr, flags, EngineType.JAVA);
 <a class="jxr_linenumber" name="115" href="#115">115</a>   }
 <a class="jxr_linenumber" name="116" href="#116">116</a> 
@@ -130,7 +130,7 @@
 <a class="jxr_linenumber" name="120" href="#120">120</a> <em class="jxr_javadoccomment">   * @param flags java.util.regex.Pattern flags</em>
 <a class="jxr_linenumber" name="121" href="#121">121</a> <em class="jxr_javadoccomment">   * @param engine engine implementation type</em>
 <a class="jxr_linenumber" name="122" href="#122">122</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="123" href="#123">123</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a>(String expr, <strong class="jxr_keyword">int</strong> flags, <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">EngineType</a> engine) {
+<a class="jxr_linenumber" name="123" href="#123">123</a>   <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a>(String expr, <strong class="jxr_keyword">int</strong> flags, <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">EngineType</a> engine) {
 <a class="jxr_linenumber" name="124" href="#124">124</a>     <strong class="jxr_keyword">super</strong>(Bytes.toBytes(expr));
 <a class="jxr_linenumber" name="125" href="#125">125</a>     <strong class="jxr_keyword">switch</strong> (engine) {
 <a class="jxr_linenumber" name="126" href="#126">126</a>       <strong class="jxr_keyword">case</strong> JAVA:
@@ -176,7 +176,7 @@
 <a class="jxr_linenumber" name="166" href="#166">166</a> <em class="jxr_javadoccomment">   * @throws DeserializationException</em>
 <a class="jxr_linenumber" name="167" href="#167">167</a> <em class="jxr_javadoccomment">   * @see #toByteArray</em>
 <a class="jxr_linenumber" name="168" href="#168">168</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="169" href="#169">169</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a> parseFrom(<strong class="jxr_keyword">final</strong> byte [] pbBytes)
+<a class="jxr_linenumber" name="169" href="#169">169</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a> parseFrom(<strong class="jxr_keyword">final</strong> byte [] pbBytes)
 <a class="jxr_linenumber" name="170" href="#170">170</a>   <strong class="jxr_keyword">throws</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a> {
 <a class="jxr_linenumber" name="171" href="#171">171</a>     ComparatorProtos.RegexStringComparator proto;
 <a class="jxr_linenumber" name="172" href="#172">172</a>     <strong class="jxr_keyword">try</strong> {
@@ -184,13 +184,13 @@
 <a class="jxr_linenumber" name="174" href="#174">174</a>     } <strong class="jxr_keyword">catch</strong> (InvalidProtocolBufferException e) {
 <a class="jxr_linenumber" name="175" href="#175">175</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html">DeserializationException</a>(e);
 <a class="jxr_linenumber" name="176" href="#176">176</a>     }
-<a class="jxr_linenumber" name="177" href="#177">177</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a> comparator;
+<a class="jxr_linenumber" name="177" href="#177">177</a>     <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a> comparator;
 <a class="jxr_linenumber" name="178" href="#178">178</a>     <strong class="jxr_keyword">if</strong> (proto.hasEngine()) {
 <a class="jxr_linenumber" name="179" href="#179">179</a>       <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">EngineType</a> engine = EngineType.valueOf(proto.getEngine());
-<a class="jxr_linenumber" name="180" href="#180">180</a>       comparator = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a>(proto.getPattern(), proto.getPatternFlags(),
+<a class="jxr_linenumber" name="180" href="#180">180</a>       comparator = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a>(proto.getPattern(), proto.getPatternFlags(),
 <a class="jxr_linenumber" name="181" href="#181">181</a>         engine);
 <a class="jxr_linenumber" name="182" href="#182">182</a>     } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="183" href="#183">183</a>       comparator = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a>(proto.getPattern(), proto.getPatternFlags());
+<a class="jxr_linenumber" name="183" href="#183">183</a>       comparator = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a>(proto.getPattern(), proto.getPatternFlags());
 <a class="jxr_linenumber" name="184" href="#184">184</a>     }
 <a class="jxr_linenumber" name="185" href="#185">185</a>     String charset = proto.getCharset();
 <a class="jxr_linenumber" name="186" href="#186">186</a>     <strong class="jxr_keyword">if</strong> (charset.length() &gt; 0) {
@@ -209,10 +209,10 @@
 <a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_javadoccomment">   * are equal to the corresponding fields in other.  Used for testing.</em>
 <a class="jxr_linenumber" name="200" href="#200">200</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="201" href="#201">201</a>   @Override
-<a class="jxr_linenumber" name="202" href="#202">202</a>   <strong class="jxr_keyword">boolean</strong> areSerializedFieldsEqual(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">ByteArrayComparable</a> other) {
+<a class="jxr_linenumber" name="202" href="#202">202</a>   <strong class="jxr_keyword">boolean</strong> areSerializedFieldsEqual(<a href="../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html">ByteArrayComparable</a> other) {
 <a class="jxr_linenumber" name="203" href="#203">203</a>     <strong class="jxr_keyword">if</strong> (other == <strong class="jxr_keyword">this</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="204" href="#204">204</a>     <strong class="jxr_keyword">if</strong> (!(other instanceof RegexStringComparator)) <strong class="jxr_keyword">return</strong> false;
-<a class="jxr_linenumber" name="205" href="#205">205</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ComparatorProtos.html">RegexStringComparator</a> comparator = (RegexStringComparator)other;
+<a class="jxr_linenumber" name="205" href="#205">205</a>     <a href="../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html">RegexStringComparator</a> comparator = (RegexStringComparator)other;
 <a class="jxr_linenumber" name="206" href="#206">206</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">super</strong>.areSerializedFieldsEqual(comparator)
 <a class="jxr_linenumber" name="207" href="#207">207</a>       &amp;&amp; engine.getClass().isInstance(comparator.getEngine())
 <a class="jxr_linenumber" name="208" href="#208">208</a>       &amp;&amp; engine.getPattern().equals(comparator.getEngine().getPattern())

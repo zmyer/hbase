@@ -638,11 +638,11 @@
 <a class="jxr_linenumber" name="628" href="#628">628</a>     }
 <a class="jxr_linenumber" name="629" href="#629">629</a> 
 <a class="jxr_linenumber" name="630" href="#630">630</a>     @Override
-<a class="jxr_linenumber" name="631" href="#631">631</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">ReplicateWALEntryResponse</a> call(<strong class="jxr_keyword">int</strong> timeout) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="631" href="#631">631</a>     <strong class="jxr_keyword">public</strong> ReplicateWALEntryResponse call(<strong class="jxr_keyword">int</strong> timeout) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="632" href="#632">632</a>       <strong class="jxr_keyword">return</strong> replayToServer(<strong class="jxr_keyword">this</strong>.entries, timeout);
 <a class="jxr_linenumber" name="633" href="#633">633</a>     }
 <a class="jxr_linenumber" name="634" href="#634">634</a> 
-<a class="jxr_linenumber" name="635" href="#635">635</a>     <strong class="jxr_keyword">private</strong> <a href="../../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">ReplicateWALEntryResponse</a> replayToServer(List&lt;Entry&gt; entries, <strong class="jxr_keyword">int</strong> timeout)
+<a class="jxr_linenumber" name="635" href="#635">635</a>     <strong class="jxr_keyword">private</strong> ReplicateWALEntryResponse replayToServer(List&lt;Entry&gt; entries, <strong class="jxr_keyword">int</strong> timeout)
 <a class="jxr_linenumber" name="636" href="#636">636</a>         <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="637" href="#637">637</a>       <em class="jxr_comment">// check whether we should still replay this entry. If the regions are changed, or the</em>
 <a class="jxr_linenumber" name="638" href="#638">638</a>       <em class="jxr_comment">// entry is not coming form the primary region, filter it out because we do not need it.</em>

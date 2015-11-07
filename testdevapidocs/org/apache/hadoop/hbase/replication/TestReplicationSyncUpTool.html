@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateZKImpl.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateZKImpl.DummyServer.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationTrackerZKImpl.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.replication.TestReplicationBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -118,6 +118,69 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#famName">famName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#ht1Source">ht1Source</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#ht1TargetAtPeer1">ht1TargetAtPeer1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#ht2Source">ht2Source</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#ht2TargetAtPeer1">ht2TargetAtPeer1</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#LOG">LOG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#noRepfamName">noRepfamName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#qualName">qualName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#t1_su">t1_su</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#t1_syncupSource">t1_syncupSource</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#t1_syncupTarget">t1_syncupTarget</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#t2_su">t2_su</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#t2_syncupSource">t2_syncupSource</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#t2_syncupTarget">t2_syncupTarget</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.replication.TestReplicationBase">
 <!--   -->
@@ -157,10 +220,30 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#mimicSyncUpAfterDelete()">mimicSyncUpAfterDelete</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#mimicSyncUpAfterPut()">mimicSyncUpAfterPut</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#putAndReplicateRows()">putAndReplicateRows</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#setupReplication()">setupReplication</a></strong>()</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#syncUp(org.apache.hadoop.hbase.HBaseTestingUtility)">syncUp</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;ut)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#testSyncUpTool()">testSyncUpTool</a></strong>()</code>
 <div class="block">Add a row to a table in each cluster, check it's replicated, delete it,
@@ -191,6 +274,140 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="LOG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG</h4>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.50">LOG</a></pre>
+</li>
+</ul>
+<a name="t1_su">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>t1_su</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.52">t1_su</a></pre>
+</li>
+</ul>
+<a name="t2_su">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>t2_su</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.53">t2_su</a></pre>
+</li>
+</ul>
+<a name="famName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>famName</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.55">famName</a></pre>
+</li>
+</ul>
+<a name="qualName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qualName</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.56">qualName</a></pre>
+</li>
+</ul>
+<a name="noRepfamName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>noRepfamName</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.58">noRepfamName</a></pre>
+</li>
+</ul>
+<a name="t1_syncupSource">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>t1_syncupSource</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.60">t1_syncupSource</a></pre>
+</li>
+</ul>
+<a name="t1_syncupTarget">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>t1_syncupTarget</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.60">t1_syncupTarget</a></pre>
+</li>
+</ul>
+<a name="t2_syncupSource">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>t2_syncupSource</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.61">t2_syncupSource</a></pre>
+</li>
+</ul>
+<a name="t2_syncupTarget">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>t2_syncupTarget</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.61">t2_syncupTarget</a></pre>
+</li>
+</ul>
+<a name="ht1Source">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ht1Source</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.63">ht1Source</a></pre>
+</li>
+</ul>
+<a name="ht2Source">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ht2Source</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.63">ht2Source</a></pre>
+</li>
+</ul>
+<a name="ht1TargetAtPeer1">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ht1TargetAtPeer1</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.63">ht1TargetAtPeer1</a></pre>
+</li>
+</ul>
+<a name="ht2TargetAtPeer1">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ht2TargetAtPeer1</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.63">ht2TargetAtPeer1</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -229,7 +446,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <a name="testSyncUpTool()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testSyncUpTool</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.104">testSyncUpTool</a>()
@@ -237,6 +454,66 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <div class="block">Add a row to a table in each cluster, check it's replicated, delete it,
  check's gone Also check the puts and deletes are not replicated back to
  the originating cluster.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="setupReplication()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setupReplication</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.182">setupReplication</a>()
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="putAndReplicateRows()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>putAndReplicateRows</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.220">putAndReplicateRows</a>()
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="mimicSyncUpAfterDelete()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mimicSyncUpAfterDelete</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.274">mimicSyncUpAfterDelete</a>()
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="mimicSyncUpAfterPut()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mimicSyncUpAfterPut</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.344">mimicSyncUpAfterPut</a>()
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="syncUp(org.apache.hadoop.hbase.HBaseTestingUtility)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>syncUp</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSyncUpTool.html#line.421">syncUp</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;ut)
+             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -267,7 +544,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateZKImpl.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationStateZKImpl.DummyServer.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationTrackerZKImpl.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -293,13 +570,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.replication.TestReplicationBase">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

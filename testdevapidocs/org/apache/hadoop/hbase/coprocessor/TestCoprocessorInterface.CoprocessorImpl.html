@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorII.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorStop.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CustomScanner.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html" target="_top">Frames</a></li>
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -144,6 +144,69 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postCloseCalled">postCloseCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postCompactCalled">postCompactCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postFlushCalled">postFlushCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postOpenCalled">postOpenCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postSplitCalled">postSplitCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preCloseCalled">preCloseCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preCompactCalled">preCompactCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preFlushCalled">preFlushCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preOpenCalled">preOpenCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preSplitCalled">preSplitCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preSplitWithSplitRowCalled">preSplitWithSplitRowCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#sharedData">sharedData</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#startCalled">startCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#stopCalled">stopCalled</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.Coprocessor">
 <!--   -->
@@ -183,72 +246,104 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#getSharedData()">getSharedData</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20boolean)">postClose</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e,
                   boolean&nbsp;abortRequested)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postCompact(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.StoreFile)">postCompact</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e,
                       org.apache.hadoop.hbase.regionserver.Store&nbsp;store,
                       org.apache.hadoop.hbase.regionserver.StoreFile&nbsp;resultFile)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postFlush(org.apache.hadoop.hbase.coprocessor.ObserverContext)">postFlush</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext)">postOpen</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.regionserver.RegionScanner</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.RegionScanner)">postScannerOpen</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e,
                               org.apache.hadoop.hbase.client.Scan&nbsp;scan,
                               org.apache.hadoop.hbase.regionserver.RegionScanner&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#postSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.regionserver.Region)">postSplit</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e,
                   org.apache.hadoop.hbase.regionserver.Region&nbsp;l,
                   org.apache.hadoop.hbase.regionserver.Region&nbsp;r)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20boolean)">preClose</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e,
                 boolean&nbsp;abortRequested)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.regionserver.InternalScanner</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preCompact(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.ScanType)">preCompact</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e,
                     org.apache.hadoop.hbase.regionserver.Store&nbsp;store,
                     org.apache.hadoop.hbase.regionserver.InternalScanner&nbsp;scanner,
                     org.apache.hadoop.hbase.regionserver.ScanType&nbsp;scanType)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preFlush(org.apache.hadoop.hbase.coprocessor.ObserverContext)">preFlush</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext)">preOpen</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext)">preSplit</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#preSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[])">preSplit</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;c,
                 byte[]&nbsp;splitRow)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#start(org.apache.hadoop.hbase.CoprocessorEnvironment)">start</a></strong>(org.apache.hadoop.hbase.CoprocessorEnvironment&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#stop(org.apache.hadoop.hbase.CoprocessorEnvironment)">stop</a></strong>(org.apache.hadoop.hbase.CoprocessorEnvironment&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#wasClosed()">wasClosed</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#wasCompacted()">wasCompacted</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#wasFlushed()">wasFlushed</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#wasOpened()">wasOpened</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#wasSplit()">wasSplit</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#wasStarted()">wasStarted</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#wasStopped()">wasStopped</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -273,6 +368,140 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="startCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.156">startCalled</a></pre>
+</li>
+</ul>
+<a name="stopCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stopCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.157">stopCalled</a></pre>
+</li>
+</ul>
+<a name="preOpenCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preOpenCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.158">preOpenCalled</a></pre>
+</li>
+</ul>
+<a name="postOpenCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postOpenCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.159">postOpenCalled</a></pre>
+</li>
+</ul>
+<a name="preCloseCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preCloseCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.160">preCloseCalled</a></pre>
+</li>
+</ul>
+<a name="postCloseCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postCloseCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.161">postCloseCalled</a></pre>
+</li>
+</ul>
+<a name="preCompactCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preCompactCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.162">preCompactCalled</a></pre>
+</li>
+</ul>
+<a name="postCompactCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postCompactCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.163">postCompactCalled</a></pre>
+</li>
+</ul>
+<a name="preFlushCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preFlushCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.164">preFlushCalled</a></pre>
+</li>
+</ul>
+<a name="postFlushCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postFlushCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.165">postFlushCalled</a></pre>
+</li>
+</ul>
+<a name="preSplitCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preSplitCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.166">preSplitCalled</a></pre>
+</li>
+</ul>
+<a name="postSplitCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postSplitCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.167">postSplitCalled</a></pre>
+</li>
+</ul>
+<a name="preSplitWithSplitRowCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preSplitWithSplitRowCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.168">preSplitWithSplitRowCalled</a></pre>
+</li>
+</ul>
+<a name="sharedData">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>sharedData</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.169">sharedData</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -506,7 +735,7 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <a name="postScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext, org.apache.hadoop.hbase.client.Scan, org.apache.hadoop.hbase.regionserver.RegionScanner)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>postScannerOpen</h4>
 <pre>public&nbsp;org.apache.hadoop.hbase.regionserver.RegionScanner&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.236">postScannerOpen</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;e,
@@ -520,6 +749,78 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <dd><code>postScannerOpen</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="wasStarted()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wasStarted</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.241">wasStarted</a>()</pre>
+</li>
+</ul>
+<a name="wasStopped()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wasStopped</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.244">wasStopped</a>()</pre>
+</li>
+</ul>
+<a name="wasOpened()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wasOpened</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.247">wasOpened</a>()</pre>
+</li>
+</ul>
+<a name="wasClosed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wasClosed</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.250">wasClosed</a>()</pre>
+</li>
+</ul>
+<a name="wasFlushed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wasFlushed</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.253">wasFlushed</a>()</pre>
+</li>
+</ul>
+<a name="wasCompacted()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wasCompacted</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.256">wasCompacted</a>()</pre>
+</li>
+</ul>
+<a name="wasSplit()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wasSplit</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.259">wasSplit</a>()</pre>
+</li>
+</ul>
+<a name="getSharedData()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getSharedData</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html#line.262">getSharedData</a>()</pre>
 </li>
 </ul>
 </li>
@@ -549,7 +850,7 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorII.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorStop.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CustomScanner.html" title="class in org.apache.hadoop.hbase.coprocessor"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.CoprocessorImpl.html" target="_top">Frames</a></li>
@@ -574,13 +875,13 @@ extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

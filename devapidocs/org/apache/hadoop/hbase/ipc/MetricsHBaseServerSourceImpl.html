@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceFactoryImpl.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceFactoryImpl.SourceStorage.html" title="enum in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerWrapper.html" title="interface in org.apache.hadoop.hbase.ipc"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -61,13 +61,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.metrics.BaseSourceImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -120,6 +120,93 @@ implements <a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServe
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#authenticationFailures">authenticationFailures</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#authenticationFallbacks">authenticationFallbacks</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#authenticationSuccesses">authenticationSuccesses</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#authorizationFailures">authorizationFailures</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#authorizationSuccesses">authorizationSuccesses</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#exceptions">exceptions</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#exceptionsBusy">exceptionsBusy</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#exceptionsMoved">exceptionsMoved</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#exceptionsNSRE">exceptionsNSRE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#exceptionsOOO">exceptionsOOO</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#exceptionsSanity">exceptionsSanity</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#exceptionsUnknown">exceptionsUnknown</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#processCallTime">processCallTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#queueCallTime">queueCallTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#receivedBytes">receivedBytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#requestSize">requestSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#responseSize">responseSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.metrics2.lib.MutableCounterLong</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#sentBytes">sentBytes</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#totalCallTime">totalCallTime</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerWrapper.html" title="interface in org.apache.hadoop.hbase.ipc">MetricsHBaseServerWrapper</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#wrapper">wrapper</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.metrics.BaseSourceImpl">
 <!--   -->
@@ -289,6 +376,194 @@ implements <a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServe
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="wrapper">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wrapper</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerWrapper.html" title="interface in org.apache.hadoop.hbase.ipc">MetricsHBaseServerWrapper</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.34">wrapper</a></pre>
+</li>
+</ul>
+<a name="authorizationSuccesses">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>authorizationSuccesses</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.35">authorizationSuccesses</a></pre>
+</li>
+</ul>
+<a name="authorizationFailures">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>authorizationFailures</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.36">authorizationFailures</a></pre>
+</li>
+</ul>
+<a name="authenticationSuccesses">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>authenticationSuccesses</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.37">authenticationSuccesses</a></pre>
+</li>
+</ul>
+<a name="authenticationFailures">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>authenticationFailures</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.38">authenticationFailures</a></pre>
+</li>
+</ul>
+<a name="authenticationFallbacks">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>authenticationFallbacks</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.39">authenticationFallbacks</a></pre>
+</li>
+</ul>
+<a name="sentBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sentBytes</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.40">sentBytes</a></pre>
+</li>
+</ul>
+<a name="receivedBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>receivedBytes</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.41">receivedBytes</a></pre>
+</li>
+</ul>
+<a name="exceptions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exceptions</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.43">exceptions</a></pre>
+</li>
+</ul>
+<a name="exceptionsOOO">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exceptionsOOO</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.44">exceptionsOOO</a></pre>
+</li>
+</ul>
+<a name="exceptionsBusy">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exceptionsBusy</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.45">exceptionsBusy</a></pre>
+</li>
+</ul>
+<a name="exceptionsUnknown">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exceptionsUnknown</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.46">exceptionsUnknown</a></pre>
+</li>
+</ul>
+<a name="exceptionsSanity">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exceptionsSanity</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.47">exceptionsSanity</a></pre>
+</li>
+</ul>
+<a name="exceptionsNSRE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exceptionsNSRE</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.48">exceptionsNSRE</a></pre>
+</li>
+</ul>
+<a name="exceptionsMoved">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exceptionsMoved</h4>
+<pre>private final&nbsp;org.apache.hadoop.metrics2.lib.MutableCounterLong <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.49">exceptionsMoved</a></pre>
+</li>
+</ul>
+<a name="queueCallTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>queueCallTime</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.52">queueCallTime</a></pre>
+</li>
+</ul>
+<a name="processCallTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processCallTime</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.53">processCallTime</a></pre>
+</li>
+</ul>
+<a name="totalCallTime">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>totalCallTime</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.54">totalCallTime</a></pre>
+</li>
+</ul>
+<a name="requestSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>requestSize</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.55">requestSize</a></pre>
+</li>
+</ul>
+<a name="responseSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>responseSize</h4>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/metrics2/lib/MutableHistogram.html" title="class in org.apache.hadoop.metrics2.lib">MutableHistogram</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceImpl.html#line.56">responseSize</a></pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -607,7 +882,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServe
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceFactoryImpl.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerSourceFactoryImpl.SourceStorage.html" title="enum in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServerWrapper.html" title="interface in org.apache.hadoop.hbase.ipc"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -633,13 +908,13 @@ implements <a href="../../../../../org/apache/hadoop/hbase/ipc/MetricsHBaseServe
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.metrics.BaseSourceImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

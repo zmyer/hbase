@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationThrottler.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Prev Class</span></a></li>
-<li>Next Class</li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.PathWatcher.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -103,6 +103,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.PathWatcher.html" title="class in org.apache.hadoop.hbase.replication.regionserver">TestReplicationWALReaderManager.PathWatcher</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="field_summary">
@@ -116,8 +135,72 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hdfs.MiniDFSCluster</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#cluster">cluster</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.conf.Configuration</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#conf">conf</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#family">family</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.fs.FileSystem</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#fs">fs</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#htd">htd</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#info">info</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.wal.WAL</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#log">log</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.replication.regionserver.ReplicationWALReaderManager</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#logManager">logManager</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.MultiVersionConcurrencyControl</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#mvcc">mvcc</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#nbRows">nbRows</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.PathWatcher.html" title="class in org.apache.hadoop.hbase.replication.regionserver">TestReplicationWALReaderManager.PathWatcher</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#pathWatcher">pathWatcher</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#qualifier">qualifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#sequenceId">sequenceId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#tableName">tableName</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.junit.rules.TestName</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#tn">tn</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#walEditKVs">walEditKVs</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -154,26 +237,38 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#appendToLog()">appendToLog</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#appendToLogPlus(int)">appendToLogPlus</a></strong>(int&nbsp;count)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.wal.WALEdit</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#getWALEdits(int)">getWALEdits</a></strong>(int&nbsp;count)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#parameters()">parameters</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#setUp()">setUp</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#tearDown()">tearDown</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#test()">test</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -199,13 +294,157 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="TEST_UTIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TEST_UTIL</h4>
+<pre>private static&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.68">TEST_UTIL</a></pre>
+</li>
+</ul>
+<a name="conf">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>conf</h4>
+<pre>private static&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.69">conf</a></pre>
+</li>
+</ul>
+<a name="fs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs</h4>
+<pre>private static&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.70">fs</a></pre>
+</li>
+</ul>
+<a name="cluster">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cluster</h4>
+<pre>private static&nbsp;org.apache.hadoop.hdfs.MiniDFSCluster <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.71">cluster</a></pre>
+</li>
+</ul>
+<a name="tableName">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tableName</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.72">tableName</a></pre>
+</li>
+</ul>
+<a name="family">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>family</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.73">family</a></pre>
+</li>
+</ul>
+<a name="qualifier">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>qualifier</h4>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.74">qualifier</a></pre>
+</li>
+</ul>
+<a name="info">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>info</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.HRegionInfo <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.75">info</a></pre>
+</li>
+</ul>
+<a name="htd">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>htd</h4>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.77">htd</a></pre>
+</li>
+</ul>
+<a name="log">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>log</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.wal.WAL <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.79">log</a></pre>
+</li>
+</ul>
+<a name="logManager">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logManager</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.replication.regionserver.ReplicationWALReaderManager <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.80">logManager</a></pre>
+</li>
+</ul>
+<a name="pathWatcher">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pathWatcher</h4>
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.PathWatcher.html" title="class in org.apache.hadoop.hbase.replication.regionserver">TestReplicationWALReaderManager.PathWatcher</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.81">pathWatcher</a></pre>
+</li>
+</ul>
+<a name="nbRows">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>nbRows</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.82">nbRows</a></pre>
+</li>
+</ul>
+<a name="walEditKVs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>walEditKVs</h4>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.83">walEditKVs</a></pre>
+</li>
+</ul>
+<a name="sequenceId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sequenceId</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.84">sequenceId</a></pre>
+</li>
+</ul>
 <a name="tn">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tn</h4>
+<pre>public&nbsp;org.junit.rules.TestName <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.85">tn</a></pre>
+</li>
+</ul>
+<a name="mvcc">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>tn</h4>
-<pre>public&nbsp;org.junit.rules.TestName <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.85">tn</a></pre>
+<h4>mvcc</h4>
+<pre>private final&nbsp;org.apache.hadoop.hbase.regionserver.MultiVersionConcurrencyControl <a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.86">mvcc</a></pre>
 </li>
 </ul>
 </li>
@@ -295,13 +534,46 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="test()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>test</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.149">test</a>()
           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="appendToLog()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>appendToLog</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.202">appendToLog</a>()
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="appendToLogPlus(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>appendToLogPlus</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.206">appendToLogPlus</a>(int&nbsp;count)
+                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getWALEdits(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getWALEdits</h4>
+<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html#line.213">getWALEdits</a>(int&nbsp;count)</pre>
 </li>
 </ul>
 </li>
@@ -331,7 +603,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationThrottler.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Prev Class</span></a></li>
-<li>Next Class</li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.PathWatcher.html" title="class in org.apache.hadoop.hbase.replication.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/replication/regionserver/TestReplicationWALReaderManager.html" target="_top">Frames</a></li>
@@ -355,7 +627,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

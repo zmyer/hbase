@@ -378,7 +378,7 @@
 <a class="jxr_linenumber" name="368" href="#368">368</a> <em class="jxr_javadoccomment">   * @param proto the GetTableDescriptorsResponse</em>
 <a class="jxr_linenumber" name="369" href="#369">369</a> <em class="jxr_javadoccomment">   * @return HTableDescriptor[]</em>
 <a class="jxr_linenumber" name="370" href="#370">370</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="371" href="#371">371</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a>[] getHTableDescriptorArray(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/MasterProtos.html">GetTableDescriptorsResponse</a> proto) {
+<a class="jxr_linenumber" name="371" href="#371">371</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a>[] getHTableDescriptorArray(GetTableDescriptorsResponse proto) {
 <a class="jxr_linenumber" name="372" href="#372">372</a>     <strong class="jxr_keyword">if</strong> (proto == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="373" href="#373">373</a> 
 <a class="jxr_linenumber" name="374" href="#374">374</a>     <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a>[] ret = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html">HTableDescriptor</a>[proto.getTableSchemaCount()];
@@ -531,7 +531,7 @@
 <a class="jxr_linenumber" name="521" href="#521">521</a> <em class="jxr_javadoccomment">   * @return A client Put.</em>
 <a class="jxr_linenumber" name="522" href="#522">522</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="523" href="#523">523</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="524" href="#524">524</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Put.html">Put</a> toPut(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> proto)
+<a class="jxr_linenumber" name="524" href="#524">524</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Put.html">Put</a> toPut(<strong class="jxr_keyword">final</strong> MutationProto proto)
 <a class="jxr_linenumber" name="525" href="#525">525</a>   <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="526" href="#526">526</a>     <strong class="jxr_keyword">return</strong> toPut(proto, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="527" href="#527">527</a>   }
@@ -544,10 +544,10 @@
 <a class="jxr_linenumber" name="534" href="#534">534</a> <em class="jxr_javadoccomment">   * @return A client Put.</em>
 <a class="jxr_linenumber" name="535" href="#535">535</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="536" href="#536">536</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="537" href="#537">537</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Put.html">Put</a> toPut(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> proto, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html">CellScanner</a> cellScanner)
+<a class="jxr_linenumber" name="537" href="#537">537</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Put.html">Put</a> toPut(<strong class="jxr_keyword">final</strong> MutationProto proto, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html">CellScanner</a> cellScanner)
 <a class="jxr_linenumber" name="538" href="#538">538</a>   <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="539" href="#539">539</a>     <em class="jxr_comment">// TODO: Server-side at least why do we convert back to the Client types?  Why not just pb it?</em>
-<a class="jxr_linenumber" name="540" href="#540">540</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type = proto.getMutateType();
+<a class="jxr_linenumber" name="540" href="#540">540</a>     MutationType type = proto.getMutateType();
 <a class="jxr_linenumber" name="541" href="#541">541</a>     assert type == MutationType.PUT: type.name();
 <a class="jxr_linenumber" name="542" href="#542">542</a>     <strong class="jxr_keyword">long</strong> timestamp = proto.hasTimestamp()? proto.getTimestamp(): HConstants.LATEST_TIMESTAMP;
 <a class="jxr_linenumber" name="543" href="#543">543</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Put.html">Put</a> put = <strong class="jxr_keyword">null</strong>;
@@ -632,7 +632,7 @@
 <a class="jxr_linenumber" name="622" href="#622">622</a> <em class="jxr_javadoccomment">   * @return the converted client Delete</em>
 <a class="jxr_linenumber" name="623" href="#623">623</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="624" href="#624">624</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="625" href="#625">625</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html">Delete</a> toDelete(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> proto)
+<a class="jxr_linenumber" name="625" href="#625">625</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html">Delete</a> toDelete(<strong class="jxr_keyword">final</strong> MutationProto proto)
 <a class="jxr_linenumber" name="626" href="#626">626</a>   <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="627" href="#627">627</a>     <strong class="jxr_keyword">return</strong> toDelete(proto, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="628" href="#628">628</a>   }
@@ -645,9 +645,9 @@
 <a class="jxr_linenumber" name="635" href="#635">635</a> <em class="jxr_javadoccomment">   * @return the converted client Delete</em>
 <a class="jxr_linenumber" name="636" href="#636">636</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="637" href="#637">637</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="638" href="#638">638</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html">Delete</a> toDelete(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> proto, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html">CellScanner</a> cellScanner)
+<a class="jxr_linenumber" name="638" href="#638">638</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Delete.html">Delete</a> toDelete(<strong class="jxr_keyword">final</strong> MutationProto proto, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html">CellScanner</a> cellScanner)
 <a class="jxr_linenumber" name="639" href="#639">639</a>   <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="640" href="#640">640</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type = proto.getMutateType();
+<a class="jxr_linenumber" name="640" href="#640">640</a>     MutationType type = proto.getMutateType();
 <a class="jxr_linenumber" name="641" href="#641">641</a>     assert type == MutationType.DELETE : type.name();
 <a class="jxr_linenumber" name="642" href="#642">642</a>     byte [] row = proto.hasRow()? proto.getRow().toByteArray(): <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="643" href="#643">643</a>     <strong class="jxr_keyword">long</strong> timestamp = HConstants.LATEST_TIMESTAMP;
@@ -681,7 +681,7 @@
 <a class="jxr_linenumber" name="671" href="#671">671</a>       <strong class="jxr_keyword">for</strong> (ColumnValue column: proto.getColumnValueList()) {
 <a class="jxr_linenumber" name="672" href="#672">672</a>         byte[] family = column.getFamily().toByteArray();
 <a class="jxr_linenumber" name="673" href="#673">673</a>         <strong class="jxr_keyword">for</strong> (QualifierValue qv: column.getQualifierValueList()) {
-<a class="jxr_linenumber" name="674" href="#674">674</a>           <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">DeleteType</a> deleteType = qv.getDeleteType();
+<a class="jxr_linenumber" name="674" href="#674">674</a>           DeleteType deleteType = qv.getDeleteType();
 <a class="jxr_linenumber" name="675" href="#675">675</a>           byte[] qualifier = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="676" href="#676">676</a>           <strong class="jxr_keyword">if</strong> (qv.hasQualifier()) {
 <a class="jxr_linenumber" name="677" href="#677">677</a>             qualifier = qv.getQualifier().toByteArray();
@@ -716,9 +716,9 @@
 <a class="jxr_linenumber" name="706" href="#706">706</a> <em class="jxr_javadoccomment">   * @return the converted client Append</em>
 <a class="jxr_linenumber" name="707" href="#707">707</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="708" href="#708">708</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="709" href="#709">709</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> toAppend(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> proto, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html">CellScanner</a> cellScanner)
+<a class="jxr_linenumber" name="709" href="#709">709</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> toAppend(<strong class="jxr_keyword">final</strong> MutationProto proto, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html">CellScanner</a> cellScanner)
 <a class="jxr_linenumber" name="710" href="#710">710</a>   <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="711" href="#711">711</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type = proto.getMutateType();
+<a class="jxr_linenumber" name="711" href="#711">711</a>     MutationType type = proto.getMutateType();
 <a class="jxr_linenumber" name="712" href="#712">712</a>     assert type == MutationType.APPEND : type.name();
 <a class="jxr_linenumber" name="713" href="#713">713</a>     byte [] row = proto.hasRow()? proto.getRow().toByteArray(): <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="714" href="#714">714</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Append.html">Append</a> append = <strong class="jxr_keyword">null</strong>;
@@ -774,8 +774,8 @@
 <a class="jxr_linenumber" name="764" href="#764">764</a> <em class="jxr_javadoccomment">   * @return the converted Mutation</em>
 <a class="jxr_linenumber" name="765" href="#765">765</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="766" href="#766">766</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="767" href="#767">767</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> toMutation(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> proto) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="768" href="#768">768</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type = proto.getMutateType();
+<a class="jxr_linenumber" name="767" href="#767">767</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> toMutation(<strong class="jxr_keyword">final</strong> MutationProto proto) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="768" href="#768">768</a>     MutationType type = proto.getMutateType();
 <a class="jxr_linenumber" name="769" href="#769">769</a>     <strong class="jxr_keyword">if</strong> (type == MutationType.APPEND) {
 <a class="jxr_linenumber" name="770" href="#770">770</a>       <strong class="jxr_keyword">return</strong> toAppend(proto, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="771" href="#771">771</a>     }
@@ -795,9 +795,9 @@
 <a class="jxr_linenumber" name="785" href="#785">785</a> <em class="jxr_javadoccomment">   * @return the converted client Increment</em>
 <a class="jxr_linenumber" name="786" href="#786">786</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="787" href="#787">787</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="788" href="#788">788</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> toIncrement(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> proto, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html">CellScanner</a> cellScanner)
+<a class="jxr_linenumber" name="788" href="#788">788</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> toIncrement(<strong class="jxr_keyword">final</strong> MutationProto proto, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html">CellScanner</a> cellScanner)
 <a class="jxr_linenumber" name="789" href="#789">789</a>   <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="790" href="#790">790</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type = proto.getMutateType();
+<a class="jxr_linenumber" name="790" href="#790">790</a>     MutationType type = proto.getMutateType();
 <a class="jxr_linenumber" name="791" href="#791">791</a>     assert type == MutationType.INCREMENT : type.name();
 <a class="jxr_linenumber" name="792" href="#792">792</a>     byte [] row = proto.hasRow()? proto.getRow().toByteArray(): <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="793" href="#793">793</a>     <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> increment = <strong class="jxr_keyword">null</strong>;
@@ -1106,7 +1106,7 @@
 <a class="jxr_linenumber" name="1096" href="#1096">1096</a> <em class="jxr_javadoccomment">   * @param increment</em>
 <a class="jxr_linenumber" name="1097" href="#1097">1097</a> <em class="jxr_javadoccomment">   * @return the converted mutate</em>
 <a class="jxr_linenumber" name="1098" href="#1098">1098</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1099" href="#1099">1099</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> toMutation(
+<a class="jxr_linenumber" name="1099" href="#1099">1099</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> MutationProto toMutation(
 <a class="jxr_linenumber" name="1100" href="#1100">1100</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Increment.html">Increment</a> increment, <strong class="jxr_keyword">final</strong> MutationProto.Builder builder, <strong class="jxr_keyword">long</strong> nonce) {
 <a class="jxr_linenumber" name="1101" href="#1101">1101</a>     builder.setRow(ByteStringer.wrap(increment.getRow()));
 <a class="jxr_linenumber" name="1102" href="#1102">1102</a>     builder.setMutateType(MutationType.INCREMENT);
@@ -1156,7 +1156,7 @@
 <a class="jxr_linenumber" name="1146" href="#1146">1146</a>     <strong class="jxr_keyword">return</strong> builder.build();
 <a class="jxr_linenumber" name="1147" href="#1147">1147</a>   }
 <a class="jxr_linenumber" name="1148" href="#1148">1148</a> 
-<a class="jxr_linenumber" name="1149" href="#1149">1149</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> toMutation(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation)
+<a class="jxr_linenumber" name="1149" href="#1149">1149</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> MutationProto toMutation(<strong class="jxr_keyword">final</strong> MutationType type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation)
 <a class="jxr_linenumber" name="1150" href="#1150">1150</a>     <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1151" href="#1151">1151</a>     <strong class="jxr_keyword">return</strong> toMutation(type, mutation, HConstants.NO_NONCE);
 <a class="jxr_linenumber" name="1152" href="#1152">1152</a>   }
@@ -1169,18 +1169,18 @@
 <a class="jxr_linenumber" name="1159" href="#1159">1159</a> <em class="jxr_javadoccomment">   * @return a protobuf'd Mutation</em>
 <a class="jxr_linenumber" name="1160" href="#1160">1160</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="1161" href="#1161">1161</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1162" href="#1162">1162</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> toMutation(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
+<a class="jxr_linenumber" name="1162" href="#1162">1162</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> MutationProto toMutation(<strong class="jxr_keyword">final</strong> MutationType type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
 <a class="jxr_linenumber" name="1163" href="#1163">1163</a>     <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> nonce) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1164" href="#1164">1164</a>     <strong class="jxr_keyword">return</strong> toMutation(type, mutation, MutationProto.newBuilder(), nonce);
 <a class="jxr_linenumber" name="1165" href="#1165">1165</a>   }
 <a class="jxr_linenumber" name="1166" href="#1166">1166</a> 
-<a class="jxr_linenumber" name="1167" href="#1167">1167</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> toMutation(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
+<a class="jxr_linenumber" name="1167" href="#1167">1167</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> MutationProto toMutation(<strong class="jxr_keyword">final</strong> MutationType type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
 <a class="jxr_linenumber" name="1168" href="#1168">1168</a>       MutationProto.Builder builder) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1169" href="#1169">1169</a>     <strong class="jxr_keyword">return</strong> toMutation(type, mutation, builder, HConstants.NO_NONCE);
 <a class="jxr_linenumber" name="1170" href="#1170">1170</a>   }
 <a class="jxr_linenumber" name="1171" href="#1171">1171</a> 
 <a class="jxr_linenumber" name="1172" href="#1172">1172</a>   @SuppressWarnings(<span class="jxr_string">"deprecation"</span>)
-<a class="jxr_linenumber" name="1173" href="#1173">1173</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> toMutation(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
+<a class="jxr_linenumber" name="1173" href="#1173">1173</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> MutationProto toMutation(<strong class="jxr_keyword">final</strong> MutationType type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
 <a class="jxr_linenumber" name="1174" href="#1174">1174</a>       MutationProto.Builder builder, <strong class="jxr_keyword">long</strong> nonce)
 <a class="jxr_linenumber" name="1175" href="#1175">1175</a>   <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1176" href="#1176">1176</a>     builder = getMutationBuilderAndSetCommonFields(type, mutation, builder);
@@ -1223,7 +1223,7 @@
 <a class="jxr_linenumber" name="1213" href="#1213">1213</a> <em class="jxr_javadoccomment">   * @return a protobuf'd Mutation</em>
 <a class="jxr_linenumber" name="1214" href="#1214">1214</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="1215" href="#1215">1215</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1216" href="#1216">1216</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> toMutationNoData(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
+<a class="jxr_linenumber" name="1216" href="#1216">1216</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> MutationProto toMutationNoData(<strong class="jxr_keyword">final</strong> MutationType type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
 <a class="jxr_linenumber" name="1217" href="#1217">1217</a>       <strong class="jxr_keyword">final</strong> MutationProto.Builder builder)  <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1218" href="#1218">1218</a>     <strong class="jxr_keyword">return</strong> toMutationNoData(type, mutation, builder, HConstants.NO_NONCE);
 <a class="jxr_linenumber" name="1219" href="#1219">1219</a>   }
@@ -1236,13 +1236,13 @@
 <a class="jxr_linenumber" name="1226" href="#1226">1226</a> <em class="jxr_javadoccomment">   * @return a protobuf'd Mutation</em>
 <a class="jxr_linenumber" name="1227" href="#1227">1227</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="1228" href="#1228">1228</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1229" href="#1229">1229</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> toMutationNoData(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation)
+<a class="jxr_linenumber" name="1229" href="#1229">1229</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> MutationProto toMutationNoData(<strong class="jxr_keyword">final</strong> MutationType type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation)
 <a class="jxr_linenumber" name="1230" href="#1230">1230</a>   <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1231" href="#1231">1231</a>     MutationProto.Builder builder =  MutationProto.newBuilder();
 <a class="jxr_linenumber" name="1232" href="#1232">1232</a>     <strong class="jxr_keyword">return</strong> toMutationNoData(type, mutation, builder);
 <a class="jxr_linenumber" name="1233" href="#1233">1233</a>   }
 <a class="jxr_linenumber" name="1234" href="#1234">1234</a> 
-<a class="jxr_linenumber" name="1235" href="#1235">1235</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> toMutationNoData(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
+<a class="jxr_linenumber" name="1235" href="#1235">1235</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> MutationProto toMutationNoData(<strong class="jxr_keyword">final</strong> MutationType type, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation,
 <a class="jxr_linenumber" name="1236" href="#1236">1236</a>       <strong class="jxr_keyword">final</strong> MutationProto.Builder builder, <strong class="jxr_keyword">long</strong> nonce) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1237" href="#1237">1237</a>     getMutationBuilderAndSetCommonFields(type, mutation, builder);
 <a class="jxr_linenumber" name="1238" href="#1238">1238</a>     builder.setAssociatedCellCount(mutation.size());
@@ -1259,7 +1259,7 @@
 <a class="jxr_linenumber" name="1249" href="#1249">1249</a> <em class="jxr_javadoccomment">   * @param mutation</em>
 <a class="jxr_linenumber" name="1250" href="#1250">1250</a> <em class="jxr_javadoccomment">   * @return A partly-filled out protobuf'd Mutation.</em>
 <a class="jxr_linenumber" name="1251" href="#1251">1251</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1252" href="#1252">1252</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> MutationProto.Builder getMutationBuilderAndSetCommonFields(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationType</a> type,
+<a class="jxr_linenumber" name="1252" href="#1252">1252</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> MutationProto.Builder getMutationBuilderAndSetCommonFields(<strong class="jxr_keyword">final</strong> MutationType type,
 <a class="jxr_linenumber" name="1253" href="#1253">1253</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html">Mutation</a> mutation, MutationProto.Builder builder) {
 <a class="jxr_linenumber" name="1254" href="#1254">1254</a>     builder.setRow(ByteStringer.wrap(mutation.getRow()));
 <a class="jxr_linenumber" name="1255" href="#1255">1255</a>     builder.setMutateType(type);
@@ -1492,7 +1492,7 @@
 <a class="jxr_linenumber" name="1482" href="#1482">1482</a> <em class="jxr_javadoccomment">   * @return protocol buffer DeleteType</em>
 <a class="jxr_linenumber" name="1483" href="#1483">1483</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="1484" href="#1484">1484</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1485" href="#1485">1485</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">DeleteType</a> toDeleteType(
+<a class="jxr_linenumber" name="1485" href="#1485">1485</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> DeleteType toDeleteType(
 <a class="jxr_linenumber" name="1486" href="#1486">1486</a>       KeyValue.Type type) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1487" href="#1487">1487</a>     <strong class="jxr_keyword">switch</strong> (type) {
 <a class="jxr_linenumber" name="1488" href="#1488">1488</a>     <strong class="jxr_keyword">case</strong> Delete:
@@ -1516,7 +1516,7 @@
 <a class="jxr_linenumber" name="1506" href="#1506">1506</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="1507" href="#1507">1507</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="1508" href="#1508">1508</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> KeyValue.Type fromDeleteType(
-<a class="jxr_linenumber" name="1509" href="#1509">1509</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">DeleteType</a> type) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="1509" href="#1509">1509</a>       DeleteType type) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1510" href="#1510">1510</a>     <strong class="jxr_keyword">switch</strong> (type) {
 <a class="jxr_linenumber" name="1511" href="#1511">1511</a>     <strong class="jxr_keyword">case</strong> DELETE_ONE_VERSION:
 <a class="jxr_linenumber" name="1512" href="#1512">1512</a>       <strong class="jxr_keyword">return</strong> KeyValue.Type.Delete;
@@ -1539,7 +1539,7 @@
 <a class="jxr_linenumber" name="1529" href="#1529">1529</a> <em class="jxr_javadoccomment">   * @throws IOException if failed to deserialize the parameter</em>
 <a class="jxr_linenumber" name="1530" href="#1530">1530</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="1531" href="#1531">1531</a>   @SuppressWarnings(<span class="jxr_string">"unchecked"</span>)
-<a class="jxr_linenumber" name="1532" href="#1532">1532</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Throwable toException(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">NameBytesPair</a> parameter) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="1532" href="#1532">1532</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Throwable toException(<strong class="jxr_keyword">final</strong> NameBytesPair parameter) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1533" href="#1533">1533</a>     <strong class="jxr_keyword">if</strong> (parameter == <strong class="jxr_keyword">null</strong> || !parameter.hasValue()) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="1534" href="#1534">1534</a>     String desc = parameter.getValue().toStringUtf8();
 <a class="jxr_linenumber" name="1535" href="#1535">1535</a>     String type = parameter.getName();
@@ -1575,10 +1575,10 @@
 <a class="jxr_linenumber" name="1565" href="#1565">1565</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> bulkLoadHFile(<strong class="jxr_keyword">final</strong> ClientService.BlockingInterface client,
 <a class="jxr_linenumber" name="1566" href="#1566">1566</a>       <strong class="jxr_keyword">final</strong> List&lt;Pair&lt;byte[], String&gt;&gt; familyPaths,
 <a class="jxr_linenumber" name="1567" href="#1567">1567</a>       <strong class="jxr_keyword">final</strong> byte[] regionName, <strong class="jxr_keyword">boolean</strong> assignSeqNum) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1568" href="#1568">1568</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">BulkLoadHFileRequest</a> request =
+<a class="jxr_linenumber" name="1568" href="#1568">1568</a>     BulkLoadHFileRequest request =
 <a class="jxr_linenumber" name="1569" href="#1569">1569</a>       RequestConverter.buildBulkLoadHFileRequest(familyPaths, regionName, assignSeqNum);
 <a class="jxr_linenumber" name="1570" href="#1570">1570</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="1571" href="#1571">1571</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">BulkLoadHFileResponse</a> response =
+<a class="jxr_linenumber" name="1571" href="#1571">1571</a>       BulkLoadHFileResponse response =
 <a class="jxr_linenumber" name="1572" href="#1572">1572</a>         client.bulkLoadHFile(<strong class="jxr_keyword">null</strong>, request);
 <a class="jxr_linenumber" name="1573" href="#1573">1573</a>       <strong class="jxr_keyword">return</strong> response.getLoaded();
 <a class="jxr_linenumber" name="1574" href="#1574">1574</a>     } <strong class="jxr_keyword">catch</strong> (ServiceException se) {
@@ -1586,13 +1586,13 @@
 <a class="jxr_linenumber" name="1576" href="#1576">1576</a>     }
 <a class="jxr_linenumber" name="1577" href="#1577">1577</a>   }
 <a class="jxr_linenumber" name="1578" href="#1578">1578</a> 
-<a class="jxr_linenumber" name="1579" href="#1579">1579</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> execService(<strong class="jxr_keyword">final</strong> ClientService.BlockingInterface client,
-<a class="jxr_linenumber" name="1580" href="#1580">1580</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceCall</a> call, <strong class="jxr_keyword">final</strong> byte[] regionName) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1581" href="#1581">1581</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceRequest</a> request = CoprocessorServiceRequest.newBuilder()
+<a class="jxr_linenumber" name="1579" href="#1579">1579</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> CoprocessorServiceResponse execService(<strong class="jxr_keyword">final</strong> ClientService.BlockingInterface client,
+<a class="jxr_linenumber" name="1580" href="#1580">1580</a>       <strong class="jxr_keyword">final</strong> CoprocessorServiceCall call, <strong class="jxr_keyword">final</strong> byte[] regionName) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="1581" href="#1581">1581</a>     CoprocessorServiceRequest request = CoprocessorServiceRequest.newBuilder()
 <a class="jxr_linenumber" name="1582" href="#1582">1582</a>         .setCall(call).setRegion(
 <a class="jxr_linenumber" name="1583" href="#1583">1583</a>             RequestConverter.buildRegionSpecifier(REGION_NAME, regionName)).build();
 <a class="jxr_linenumber" name="1584" href="#1584">1584</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="1585" href="#1585">1585</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> response =
+<a class="jxr_linenumber" name="1585" href="#1585">1585</a>       CoprocessorServiceResponse response =
 <a class="jxr_linenumber" name="1586" href="#1586">1586</a>           client.execService(<strong class="jxr_keyword">null</strong>, request);
 <a class="jxr_linenumber" name="1587" href="#1587">1587</a>       <strong class="jxr_keyword">return</strong> response;
 <a class="jxr_linenumber" name="1588" href="#1588">1588</a>     } <strong class="jxr_keyword">catch</strong> (ServiceException se) {
@@ -1600,14 +1600,14 @@
 <a class="jxr_linenumber" name="1590" href="#1590">1590</a>     }
 <a class="jxr_linenumber" name="1591" href="#1591">1591</a>   }
 <a class="jxr_linenumber" name="1592" href="#1592">1592</a> 
-<a class="jxr_linenumber" name="1593" href="#1593">1593</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> execService(
-<a class="jxr_linenumber" name="1594" href="#1594">1594</a>     <strong class="jxr_keyword">final</strong> MasterService.BlockingInterface client, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceCall</a> call)
+<a class="jxr_linenumber" name="1593" href="#1593">1593</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> CoprocessorServiceResponse execService(
+<a class="jxr_linenumber" name="1594" href="#1594">1594</a>     <strong class="jxr_keyword">final</strong> MasterService.BlockingInterface client, <strong class="jxr_keyword">final</strong> CoprocessorServiceCall call)
 <a class="jxr_linenumber" name="1595" href="#1595">1595</a>   <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1596" href="#1596">1596</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceRequest</a> request = CoprocessorServiceRequest.newBuilder()
+<a class="jxr_linenumber" name="1596" href="#1596">1596</a>     CoprocessorServiceRequest request = CoprocessorServiceRequest.newBuilder()
 <a class="jxr_linenumber" name="1597" href="#1597">1597</a>         .setCall(call).setRegion(
 <a class="jxr_linenumber" name="1598" href="#1598">1598</a>            RequestConverter.buildRegionSpecifier(REGION_NAME, HConstants.EMPTY_BYTE_ARRAY)).build();
 <a class="jxr_linenumber" name="1599" href="#1599">1599</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="1600" href="#1600">1600</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> response =
+<a class="jxr_linenumber" name="1600" href="#1600">1600</a>       CoprocessorServiceResponse response =
 <a class="jxr_linenumber" name="1601" href="#1601">1601</a>           client.execMasterService(<strong class="jxr_keyword">null</strong>, request);
 <a class="jxr_linenumber" name="1602" href="#1602">1602</a>       <strong class="jxr_keyword">return</strong> response;
 <a class="jxr_linenumber" name="1603" href="#1603">1603</a>     } <strong class="jxr_keyword">catch</strong> (ServiceException se) {
@@ -1622,18 +1622,18 @@
 <a class="jxr_linenumber" name="1612" href="#1612">1612</a> <em class="jxr_javadoccomment">   * @return CoprocessorServiceResponse</em>
 <a class="jxr_linenumber" name="1613" href="#1613">1613</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="1614" href="#1614">1614</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1615" href="#1615">1615</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> execRegionServerService(
-<a class="jxr_linenumber" name="1616" href="#1616">1616</a>       <strong class="jxr_keyword">final</strong> ClientService.BlockingInterface client, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceCall</a> call)
+<a class="jxr_linenumber" name="1615" href="#1615">1615</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> CoprocessorServiceResponse execRegionServerService(
+<a class="jxr_linenumber" name="1616" href="#1616">1616</a>       <strong class="jxr_keyword">final</strong> ClientService.BlockingInterface client, <strong class="jxr_keyword">final</strong> CoprocessorServiceCall call)
 <a class="jxr_linenumber" name="1617" href="#1617">1617</a>       <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1618" href="#1618">1618</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceRequest</a> request =
-<a class="jxr_linenumber" name="1619" href="#1619">1619</a>         <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceRequest</a>
+<a class="jxr_linenumber" name="1618" href="#1618">1618</a>     CoprocessorServiceRequest request =
+<a class="jxr_linenumber" name="1619" href="#1619">1619</a>         CoprocessorServiceRequest
 <a class="jxr_linenumber" name="1620" href="#1620">1620</a>             .newBuilder()
 <a class="jxr_linenumber" name="1621" href="#1621">1621</a>             .setCall(call)
 <a class="jxr_linenumber" name="1622" href="#1622">1622</a>             .setRegion(
 <a class="jxr_linenumber" name="1623" href="#1623">1623</a>               RequestConverter.buildRegionSpecifier(REGION_NAME, HConstants.EMPTY_BYTE_ARRAY))
 <a class="jxr_linenumber" name="1624" href="#1624">1624</a>             .build();
 <a class="jxr_linenumber" name="1625" href="#1625">1625</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="1626" href="#1626">1626</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CoprocessorServiceResponse</a> response = client.execRegionServerService(<strong class="jxr_keyword">null</strong>, request);
+<a class="jxr_linenumber" name="1626" href="#1626">1626</a>       CoprocessorServiceResponse response = client.execRegionServerService(<strong class="jxr_keyword">null</strong>, request);
 <a class="jxr_linenumber" name="1627" href="#1627">1627</a>       <strong class="jxr_keyword">return</strong> response;
 <a class="jxr_linenumber" name="1628" href="#1628">1628</a>     } <strong class="jxr_keyword">catch</strong> (ServiceException se) {
 <a class="jxr_linenumber" name="1629" href="#1629">1629</a>       <strong class="jxr_keyword">throw</strong> getRemoteException(se);
@@ -1662,9 +1662,9 @@
 <a class="jxr_linenumber" name="1652" href="#1652">1652</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> getRegionInfo(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin,
 <a class="jxr_linenumber" name="1653" href="#1653">1653</a>       <strong class="jxr_keyword">final</strong> byte[] regionName) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="1654" href="#1654">1654</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="1655" href="#1655">1655</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">GetRegionInfoRequest</a> request =
+<a class="jxr_linenumber" name="1655" href="#1655">1655</a>       GetRegionInfoRequest request =
 <a class="jxr_linenumber" name="1656" href="#1656">1656</a>         RequestConverter.buildGetRegionInfoRequest(regionName);
-<a class="jxr_linenumber" name="1657" href="#1657">1657</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">GetRegionInfoResponse</a> response =
+<a class="jxr_linenumber" name="1657" href="#1657">1657</a>       GetRegionInfoResponse response =
 <a class="jxr_linenumber" name="1658" href="#1658">1658</a>         admin.getRegionInfo(<strong class="jxr_keyword">null</strong>, request);
 <a class="jxr_linenumber" name="1659" href="#1659">1659</a>       <strong class="jxr_keyword">return</strong> HRegionInfo.convert(response.getRegionInfo());
 <a class="jxr_linenumber" name="1660" href="#1660">1660</a>     } <strong class="jxr_keyword">catch</strong> (ServiceException se) {
@@ -1682,7 +1682,7 @@
 <a class="jxr_linenumber" name="1672" href="#1672">1672</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="1673" href="#1673">1673</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> closeRegion(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin,
 <a class="jxr_linenumber" name="1674" href="#1674">1674</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/ServerName.html">ServerName</a> server, <strong class="jxr_keyword">final</strong> byte[] regionName) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1675" href="#1675">1675</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">CloseRegionRequest</a> closeRegionRequest =
+<a class="jxr_linenumber" name="1675" href="#1675">1675</a>     CloseRegionRequest closeRegionRequest =
 <a class="jxr_linenumber" name="1676" href="#1676">1676</a>       RequestConverter.buildCloseRegionRequest(server, regionName);
 <a class="jxr_linenumber" name="1677" href="#1677">1677</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="1678" href="#1678">1678</a>       admin.closeRegion(<strong class="jxr_keyword">null</strong>, closeRegionRequest);
@@ -1703,11 +1703,11 @@
 <a class="jxr_linenumber" name="1693" href="#1693">1693</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> closeRegion(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin,
 <a class="jxr_linenumber" name="1694" href="#1694">1694</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/ServerName.html">ServerName</a> server, <strong class="jxr_keyword">final</strong> byte[] regionName,
 <a class="jxr_linenumber" name="1695" href="#1695">1695</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/ServerName.html">ServerName</a> destinationServer) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1696" href="#1696">1696</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">CloseRegionRequest</a> closeRegionRequest =
+<a class="jxr_linenumber" name="1696" href="#1696">1696</a>     CloseRegionRequest closeRegionRequest =
 <a class="jxr_linenumber" name="1697" href="#1697">1697</a>       RequestConverter.buildCloseRegionRequest(server,
 <a class="jxr_linenumber" name="1698" href="#1698">1698</a>         regionName, destinationServer);
 <a class="jxr_linenumber" name="1699" href="#1699">1699</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="1700" href="#1700">1700</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">CloseRegionResponse</a> response = admin.closeRegion(<strong class="jxr_keyword">null</strong>, closeRegionRequest);
+<a class="jxr_linenumber" name="1700" href="#1700">1700</a>       CloseRegionResponse response = admin.closeRegion(<strong class="jxr_keyword">null</strong>, closeRegionRequest);
 <a class="jxr_linenumber" name="1701" href="#1701">1701</a>       <strong class="jxr_keyword">return</strong> ResponseConverter.isClosed(response);
 <a class="jxr_linenumber" name="1702" href="#1702">1702</a>     } <strong class="jxr_keyword">catch</strong> (ServiceException se) {
 <a class="jxr_linenumber" name="1703" href="#1703">1703</a>       <strong class="jxr_keyword">throw</strong> getRemoteException(se);
@@ -1726,7 +1726,7 @@
 <a class="jxr_linenumber" name="1716" href="#1716">1716</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> regionInfo) <strong class="jxr_keyword">throws</strong> IOException  {
 <a class="jxr_linenumber" name="1717" href="#1717">1717</a> 
 <a class="jxr_linenumber" name="1718" href="#1718">1718</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="1719" href="#1719">1719</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">WarmupRegionRequest</a> warmupRegionRequest =
+<a class="jxr_linenumber" name="1719" href="#1719">1719</a>       WarmupRegionRequest warmupRegionRequest =
 <a class="jxr_linenumber" name="1720" href="#1720">1720</a>            RequestConverter.buildWarmupRegionRequest(regionInfo);
 <a class="jxr_linenumber" name="1721" href="#1721">1721</a> 
 <a class="jxr_linenumber" name="1722" href="#1722">1722</a>       admin.warmupRegion(<strong class="jxr_keyword">null</strong>, warmupRegionRequest);
@@ -1743,7 +1743,7 @@
 <a class="jxr_linenumber" name="1733" href="#1733">1733</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="1734" href="#1734">1734</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> openRegion(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin,
 <a class="jxr_linenumber" name="1735" href="#1735">1735</a>       <a href="../../../../../org/apache/hadoop/hbase/ServerName.html">ServerName</a> server, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> region) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1736" href="#1736">1736</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">OpenRegionRequest</a> request =
+<a class="jxr_linenumber" name="1736" href="#1736">1736</a>     OpenRegionRequest request =
 <a class="jxr_linenumber" name="1737" href="#1737">1737</a>       RequestConverter.buildOpenRegionRequest(server, region, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="1738" href="#1738">1738</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="1739" href="#1739">1739</a>       admin.openRegion(<strong class="jxr_keyword">null</strong>, request);
@@ -1763,8 +1763,8 @@
 <a class="jxr_linenumber" name="1753" href="#1753">1753</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="1754" href="#1754">1754</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> List&lt;HRegionInfo&gt; getOnlineRegions(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin)
 <a class="jxr_linenumber" name="1755" href="#1755">1755</a>   <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1756" href="#1756">1756</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">GetOnlineRegionRequest</a> request = RequestConverter.buildGetOnlineRegionRequest();
-<a class="jxr_linenumber" name="1757" href="#1757">1757</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">GetOnlineRegionResponse</a> response = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="1756" href="#1756">1756</a>     GetOnlineRegionRequest request = RequestConverter.buildGetOnlineRegionRequest();
+<a class="jxr_linenumber" name="1757" href="#1757">1757</a>     GetOnlineRegionResponse response = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="1758" href="#1758">1758</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="1759" href="#1759">1759</a>       response = admin.getOnlineRegion(<strong class="jxr_keyword">null</strong>, request);
 <a class="jxr_linenumber" name="1760" href="#1760">1760</a>     } <strong class="jxr_keyword">catch</strong> (ServiceException se) {
@@ -1779,7 +1779,7 @@
 <a class="jxr_linenumber" name="1769" href="#1769">1769</a> <em class="jxr_javadoccomment">   * @param proto the GetOnlineRegionResponse</em>
 <a class="jxr_linenumber" name="1770" href="#1770">1770</a> <em class="jxr_javadoccomment">   * @return the list of region info or null if &lt;code&gt;proto&lt;/code&gt; is null</em>
 <a class="jxr_linenumber" name="1771" href="#1771">1771</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1772" href="#1772">1772</a>   <strong class="jxr_keyword">static</strong> List&lt;HRegionInfo&gt; getRegionInfos(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">GetOnlineRegionResponse</a> proto) {
+<a class="jxr_linenumber" name="1772" href="#1772">1772</a>   <strong class="jxr_keyword">static</strong> List&lt;HRegionInfo&gt; getRegionInfos(<strong class="jxr_keyword">final</strong> GetOnlineRegionResponse proto) {
 <a class="jxr_linenumber" name="1773" href="#1773">1773</a>     <strong class="jxr_keyword">if</strong> (proto == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="1774" href="#1774">1774</a>     List&lt;HRegionInfo&gt; regionInfos = <strong class="jxr_keyword">new</strong> ArrayList&lt;HRegionInfo&gt;();
 <a class="jxr_linenumber" name="1775" href="#1775">1775</a>     <strong class="jxr_keyword">for</strong> (RegionInfo regionInfo: proto.getRegionInfoList()) {
@@ -1795,11 +1795,11 @@
 <a class="jxr_linenumber" name="1785" href="#1785">1785</a> <em class="jxr_javadoccomment">   * @return the server name</em>
 <a class="jxr_linenumber" name="1786" href="#1786">1786</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
 <a class="jxr_linenumber" name="1787" href="#1787">1787</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1788" href="#1788">1788</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">ServerInfo</a> getServerInfo(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin)
+<a class="jxr_linenumber" name="1788" href="#1788">1788</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ServerInfo getServerInfo(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin)
 <a class="jxr_linenumber" name="1789" href="#1789">1789</a>   <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1790" href="#1790">1790</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">GetServerInfoRequest</a> request = RequestConverter.buildGetServerInfoRequest();
+<a class="jxr_linenumber" name="1790" href="#1790">1790</a>     GetServerInfoRequest request = RequestConverter.buildGetServerInfoRequest();
 <a class="jxr_linenumber" name="1791" href="#1791">1791</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="1792" href="#1792">1792</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">GetServerInfoResponse</a> response = admin.getServerInfo(<strong class="jxr_keyword">null</strong>, request);
+<a class="jxr_linenumber" name="1792" href="#1792">1792</a>       GetServerInfoResponse response = admin.getServerInfo(<strong class="jxr_keyword">null</strong>, request);
 <a class="jxr_linenumber" name="1793" href="#1793">1793</a>       <strong class="jxr_keyword">return</strong> response.getServerInfo();
 <a class="jxr_linenumber" name="1794" href="#1794">1794</a>     } <strong class="jxr_keyword">catch</strong> (ServiceException se) {
 <a class="jxr_linenumber" name="1795" href="#1795">1795</a>       <strong class="jxr_keyword">throw</strong> getRemoteException(se);
@@ -1819,10 +1819,10 @@
 <a class="jxr_linenumber" name="1809" href="#1809">1809</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> List&lt;String&gt; getStoreFiles(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin,
 <a class="jxr_linenumber" name="1810" href="#1810">1810</a>       <strong class="jxr_keyword">final</strong> byte[] regionName, <strong class="jxr_keyword">final</strong> byte[] family)
 <a class="jxr_linenumber" name="1811" href="#1811">1811</a>   <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1812" href="#1812">1812</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">GetStoreFileRequest</a> request =
+<a class="jxr_linenumber" name="1812" href="#1812">1812</a>     GetStoreFileRequest request =
 <a class="jxr_linenumber" name="1813" href="#1813">1813</a>       RequestConverter.buildGetStoreFileRequest(regionName, family);
 <a class="jxr_linenumber" name="1814" href="#1814">1814</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="1815" href="#1815">1815</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">GetStoreFileResponse</a> response = admin.getStoreFile(<strong class="jxr_keyword">null</strong>, request);
+<a class="jxr_linenumber" name="1815" href="#1815">1815</a>       GetStoreFileResponse response = admin.getStoreFile(<strong class="jxr_keyword">null</strong>, request);
 <a class="jxr_linenumber" name="1816" href="#1816">1816</a>       <strong class="jxr_keyword">return</strong> response.getStoreFileList();
 <a class="jxr_linenumber" name="1817" href="#1817">1817</a>     } <strong class="jxr_keyword">catch</strong> (ServiceException se) {
 <a class="jxr_linenumber" name="1818" href="#1818">1818</a>       <strong class="jxr_keyword">throw</strong> ProtobufUtil.getRemoteException(se);
@@ -1839,7 +1839,7 @@
 <a class="jxr_linenumber" name="1829" href="#1829">1829</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="1830" href="#1830">1830</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> split(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin,
 <a class="jxr_linenumber" name="1831" href="#1831">1831</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri, byte[] splitPoint) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1832" href="#1832">1832</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">SplitRegionRequest</a> request =
+<a class="jxr_linenumber" name="1832" href="#1832">1832</a>     SplitRegionRequest request =
 <a class="jxr_linenumber" name="1833" href="#1833">1833</a>       RequestConverter.buildSplitRegionRequest(hri.getRegionName(), splitPoint);
 <a class="jxr_linenumber" name="1834" href="#1834">1834</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="1835" href="#1835">1835</a>       admin.splitRegion(<strong class="jxr_keyword">null</strong>, request);
@@ -1861,7 +1861,7 @@
 <a class="jxr_linenumber" name="1851" href="#1851">1851</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> mergeRegions(<strong class="jxr_keyword">final</strong> AdminService.BlockingInterface admin,
 <a class="jxr_linenumber" name="1852" href="#1852">1852</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> region_a, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> region_b,
 <a class="jxr_linenumber" name="1853" href="#1853">1853</a>       <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> forcible) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1854" href="#1854">1854</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AdminProtos.html">MergeRegionsRequest</a> request = RequestConverter.buildMergeRegionsRequest(
+<a class="jxr_linenumber" name="1854" href="#1854">1854</a>     MergeRegionsRequest request = RequestConverter.buildMergeRegionsRequest(
 <a class="jxr_linenumber" name="1855" href="#1855">1855</a>         region_a.getRegionName(), region_b.getRegionName(),forcible);
 <a class="jxr_linenumber" name="1856" href="#1856">1856</a>     <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="1857" href="#1857">1857</a>       admin.mergeRegions(<strong class="jxr_keyword">null</strong>, request);
@@ -1903,13 +1903,13 @@
 <a class="jxr_linenumber" name="1893" href="#1893">1893</a> <em class="jxr_javadoccomment">   * @param proto the protobuf Permission</em>
 <a class="jxr_linenumber" name="1894" href="#1894">1894</a> <em class="jxr_javadoccomment">   * @return the converted Permission</em>
 <a class="jxr_linenumber" name="1895" href="#1895">1895</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1896" href="#1896">1896</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">Permission</a> toPermission(AccessControlProtos.Permission proto) {
+<a class="jxr_linenumber" name="1896" href="#1896">1896</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html">Permission</a> toPermission(AccessControlProtos.Permission proto) {
 <a class="jxr_linenumber" name="1897" href="#1897">1897</a>     <strong class="jxr_keyword">if</strong> (proto.getType() != AccessControlProtos.Permission.Type.Global) {
 <a class="jxr_linenumber" name="1898" href="#1898">1898</a>       <strong class="jxr_keyword">return</strong> toTablePermission(proto);
 <a class="jxr_linenumber" name="1899" href="#1899">1899</a>     } <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="1900" href="#1900">1900</a>       List&lt;Permission.Action&gt; actions = toPermissionActions(
 <a class="jxr_linenumber" name="1901" href="#1901">1901</a>         proto.getGlobalPermission().getActionList());
-<a class="jxr_linenumber" name="1902" href="#1902">1902</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">Permission</a>(actions.toArray(<strong class="jxr_keyword">new</strong> Permission.Action[actions.size()]));
+<a class="jxr_linenumber" name="1902" href="#1902">1902</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html">Permission</a>(actions.toArray(<strong class="jxr_keyword">new</strong> Permission.Action[actions.size()]));
 <a class="jxr_linenumber" name="1903" href="#1903">1903</a>     }
 <a class="jxr_linenumber" name="1904" href="#1904">1904</a>   }
 <a class="jxr_linenumber" name="1905" href="#1905">1905</a> 
@@ -1919,12 +1919,12 @@
 <a class="jxr_linenumber" name="1909" href="#1909">1909</a> <em class="jxr_javadoccomment">   * @param proto the protobuf Permission</em>
 <a class="jxr_linenumber" name="1910" href="#1910">1910</a> <em class="jxr_javadoccomment">   * @return the converted TablePermission</em>
 <a class="jxr_linenumber" name="1911" href="#1911">1911</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1912" href="#1912">1912</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">TablePermission</a> toTablePermission(AccessControlProtos.Permission proto) {
+<a class="jxr_linenumber" name="1912" href="#1912">1912</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html">TablePermission</a> toTablePermission(AccessControlProtos.Permission proto) {
 <a class="jxr_linenumber" name="1913" href="#1913">1913</a>     <strong class="jxr_keyword">if</strong>(proto.getType() == AccessControlProtos.Permission.Type.Global) {
 <a class="jxr_linenumber" name="1914" href="#1914">1914</a>       AccessControlProtos.GlobalPermission perm = proto.getGlobalPermission();
 <a class="jxr_linenumber" name="1915" href="#1915">1915</a>       List&lt;Permission.Action&gt; actions = toPermissionActions(perm.getActionList());
 <a class="jxr_linenumber" name="1916" href="#1916">1916</a> 
-<a class="jxr_linenumber" name="1917" href="#1917">1917</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">TablePermission</a>(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="1917" href="#1917">1917</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html">TablePermission</a>(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="1918" href="#1918">1918</a>           actions.toArray(<strong class="jxr_keyword">new</strong> Permission.Action[actions.size()]));
 <a class="jxr_linenumber" name="1919" href="#1919">1919</a>     }
 <a class="jxr_linenumber" name="1920" href="#1920">1920</a>     <strong class="jxr_keyword">if</strong>(proto.getType() == AccessControlProtos.Permission.Type.Namespace) {
@@ -1935,7 +1935,7 @@
 <a class="jxr_linenumber" name="1925" href="#1925">1925</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException(<span class="jxr_string">"Namespace must not be empty in NamespacePermission"</span>);
 <a class="jxr_linenumber" name="1926" href="#1926">1926</a>       }
 <a class="jxr_linenumber" name="1927" href="#1927">1927</a>       String namespace = perm.getNamespaceName().toStringUtf8();
-<a class="jxr_linenumber" name="1928" href="#1928">1928</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">TablePermission</a>(namespace, actions.toArray(<strong class="jxr_keyword">new</strong> Permission.Action[actions.size()]));
+<a class="jxr_linenumber" name="1928" href="#1928">1928</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html">TablePermission</a>(namespace, actions.toArray(<strong class="jxr_keyword">new</strong> Permission.Action[actions.size()]));
 <a class="jxr_linenumber" name="1929" href="#1929">1929</a>     }
 <a class="jxr_linenumber" name="1930" href="#1930">1930</a>     <strong class="jxr_keyword">if</strong>(proto.getType() == AccessControlProtos.Permission.Type.Table) {
 <a class="jxr_linenumber" name="1931" href="#1931">1931</a>       AccessControlProtos.TablePermission perm = proto.getTablePermission();
@@ -1953,7 +1953,7 @@
 <a class="jxr_linenumber" name="1943" href="#1943">1943</a>       <strong class="jxr_keyword">if</strong> (perm.hasFamily()) family = perm.getFamily().toByteArray();
 <a class="jxr_linenumber" name="1944" href="#1944">1944</a>       <strong class="jxr_keyword">if</strong> (perm.hasQualifier()) qualifier = perm.getQualifier().toByteArray();
 <a class="jxr_linenumber" name="1945" href="#1945">1945</a> 
-<a class="jxr_linenumber" name="1946" href="#1946">1946</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">TablePermission</a>(table, family, qualifier,
+<a class="jxr_linenumber" name="1946" href="#1946">1946</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html">TablePermission</a>(table, family, qualifier,
 <a class="jxr_linenumber" name="1947" href="#1947">1947</a>           actions.toArray(<strong class="jxr_keyword">new</strong> Permission.Action[actions.size()]));
 <a class="jxr_linenumber" name="1948" href="#1948">1948</a>     }
 <a class="jxr_linenumber" name="1949" href="#1949">1949</a>     <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException(<span class="jxr_string">"Unrecognize Perm Type: "</span>+proto.getType());
@@ -1965,10 +1965,10 @@
 <a class="jxr_linenumber" name="1955" href="#1955">1955</a> <em class="jxr_javadoccomment">   * @param perm the client Permission</em>
 <a class="jxr_linenumber" name="1956" href="#1956">1956</a> <em class="jxr_javadoccomment">   * @return the protobuf Permission</em>
 <a class="jxr_linenumber" name="1957" href="#1957">1957</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="1958" href="#1958">1958</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> AccessControlProtos.Permission toPermission(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">Permission</a> perm) {
+<a class="jxr_linenumber" name="1958" href="#1958">1958</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> AccessControlProtos.Permission toPermission(<a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html">Permission</a> perm) {
 <a class="jxr_linenumber" name="1959" href="#1959">1959</a>     AccessControlProtos.Permission.Builder ret = AccessControlProtos.Permission.newBuilder();
 <a class="jxr_linenumber" name="1960" href="#1960">1960</a>     <strong class="jxr_keyword">if</strong> (perm instanceof TablePermission) {
-<a class="jxr_linenumber" name="1961" href="#1961">1961</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">TablePermission</a> tablePerm = (TablePermission)perm;
+<a class="jxr_linenumber" name="1961" href="#1961">1961</a>       <a href="../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html">TablePermission</a> tablePerm = (TablePermission)perm;
 <a class="jxr_linenumber" name="1962" href="#1962">1962</a>       <strong class="jxr_keyword">if</strong>(tablePerm.hasNamespace()) {
 <a class="jxr_linenumber" name="1963" href="#1963">1963</a>         ret.setType(AccessControlProtos.Permission.Type.Namespace);
 <a class="jxr_linenumber" name="1964" href="#1964">1964</a> 
@@ -2087,7 +2087,7 @@
 <a class="jxr_linenumber" name="2077" href="#2077">2077</a> <em class="jxr_javadoccomment">   * @param perm the client UserPermission</em>
 <a class="jxr_linenumber" name="2078" href="#2078">2078</a> <em class="jxr_javadoccomment">   * @return the protobuf UserPermission</em>
 <a class="jxr_linenumber" name="2079" href="#2079">2079</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2080" href="#2080">2080</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> AccessControlProtos.UserPermission toUserPermission(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a> perm) {
+<a class="jxr_linenumber" name="2080" href="#2080">2080</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> AccessControlProtos.UserPermission toUserPermission(<a href="../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a> perm) {
 <a class="jxr_linenumber" name="2081" href="#2081">2081</a>     <strong class="jxr_keyword">return</strong> AccessControlProtos.UserPermission.newBuilder()
 <a class="jxr_linenumber" name="2082" href="#2082">2082</a>         .setUser(ByteStringer.wrap(perm.getUser()))
 <a class="jxr_linenumber" name="2083" href="#2083">2083</a>         .setPermission(toPermission(perm))
@@ -2100,8 +2100,8 @@
 <a class="jxr_linenumber" name="2090" href="#2090">2090</a> <em class="jxr_javadoccomment">   * @param proto the protobuf UserPermission</em>
 <a class="jxr_linenumber" name="2091" href="#2091">2091</a> <em class="jxr_javadoccomment">   * @return the converted UserPermission</em>
 <a class="jxr_linenumber" name="2092" href="#2092">2092</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2093" href="#2093">2093</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a> toUserPermission(AccessControlProtos.UserPermission proto) {
-<a class="jxr_linenumber" name="2094" href="#2094">2094</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">UserPermission</a>(proto.getUser().toByteArray(),
+<a class="jxr_linenumber" name="2093" href="#2093">2093</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a> toUserPermission(AccessControlProtos.UserPermission proto) {
+<a class="jxr_linenumber" name="2094" href="#2094">2094</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/security/access/UserPermission.html">UserPermission</a>(proto.getUser().toByteArray(),
 <a class="jxr_linenumber" name="2095" href="#2095">2095</a>         toTablePermission(proto.getPermission()));
 <a class="jxr_linenumber" name="2096" href="#2096">2096</a>   }
 <a class="jxr_linenumber" name="2097" href="#2097">2097</a> 
@@ -2373,7 +2373,7 @@
 <a class="jxr_linenumber" name="2363" href="#2363">2363</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; proto.getUserPermissionsCount(); i++) {
 <a class="jxr_linenumber" name="2364" href="#2364">2364</a>       userPerm = proto.getUserPermissions(i);
 <a class="jxr_linenumber" name="2365" href="#2365">2365</a>       <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> j = 0; j &lt; userPerm.getPermissionsCount(); j++) {
-<a class="jxr_linenumber" name="2366" href="#2366">2366</a>         <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">TablePermission</a> tablePerm = toTablePermission(userPerm.getPermissions(j));
+<a class="jxr_linenumber" name="2366" href="#2366">2366</a>         <a href="../../../../../org/apache/hadoop/hbase/security/access/TablePermission.html">TablePermission</a> tablePerm = toTablePermission(userPerm.getPermissions(j));
 <a class="jxr_linenumber" name="2367" href="#2367">2367</a>         perms.put(userPerm.getUser().toStringUtf8(), tablePerm);
 <a class="jxr_linenumber" name="2368" href="#2368">2368</a>       }
 <a class="jxr_linenumber" name="2369" href="#2369">2369</a>     }
@@ -2419,9 +2419,9 @@
 <a class="jxr_linenumber" name="2409" href="#2409">2409</a> <em class="jxr_javadoccomment">   * @throws DoNotRetryIOException if the specifier type is unsupported</em>
 <a class="jxr_linenumber" name="2410" href="#2410">2410</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="2411" href="#2411">2411</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getRegionEncodedName(
-<a class="jxr_linenumber" name="2412" href="#2412">2412</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">RegionSpecifier</a> regionSpecifier) <strong class="jxr_keyword">throws</strong> DoNotRetryIOException {
+<a class="jxr_linenumber" name="2412" href="#2412">2412</a>       <strong class="jxr_keyword">final</strong> RegionSpecifier regionSpecifier) <strong class="jxr_keyword">throws</strong> DoNotRetryIOException {
 <a class="jxr_linenumber" name="2413" href="#2413">2413</a>     byte[] value = regionSpecifier.getValue().toByteArray();
-<a class="jxr_linenumber" name="2414" href="#2414">2414</a>     <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">RegionSpecifierType</a> type = regionSpecifier.getType();
+<a class="jxr_linenumber" name="2414" href="#2414">2414</a>     RegionSpecifierType type = regionSpecifier.getType();
 <a class="jxr_linenumber" name="2415" href="#2415">2415</a>     <strong class="jxr_keyword">switch</strong> (type) {
 <a class="jxr_linenumber" name="2416" href="#2416">2416</a>       <strong class="jxr_keyword">case</strong> REGION_NAME:
 <a class="jxr_linenumber" name="2417" href="#2417">2417</a>         <strong class="jxr_keyword">return</strong> HRegionInfo.encodeRegionName(value);
@@ -2569,7 +2569,7 @@
 <a class="jxr_linenumber" name="2559" href="#2559">2559</a>   }
 <a class="jxr_linenumber" name="2560" href="#2560">2560</a> 
 <a class="jxr_linenumber" name="2561" href="#2561">2561</a>   @SuppressWarnings(<span class="jxr_string">"deprecation"</span>)
-<a class="jxr_linenumber" name="2562" href="#2562">2562</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">CompactionDescriptor</a> toCompactionDescriptor(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> info, byte[] family,
+<a class="jxr_linenumber" name="2562" href="#2562">2562</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> CompactionDescriptor toCompactionDescriptor(<a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> info, byte[] family,
 <a class="jxr_linenumber" name="2563" href="#2563">2563</a>       List&lt;Path&gt; inputPaths, List&lt;Path&gt; outputPaths, Path storeDir) {
 <a class="jxr_linenumber" name="2564" href="#2564">2564</a>     <em class="jxr_comment">// compaction descriptor contains relative paths.</em>
 <a class="jxr_linenumber" name="2565" href="#2565">2565</a>     <em class="jxr_comment">// input / output paths are relative to the store dir</em>
@@ -2589,7 +2589,7 @@
 <a class="jxr_linenumber" name="2579" href="#2579">2579</a>     <strong class="jxr_keyword">return</strong> builder.build();
 <a class="jxr_linenumber" name="2580" href="#2580">2580</a>   }
 <a class="jxr_linenumber" name="2581" href="#2581">2581</a> 
-<a class="jxr_linenumber" name="2582" href="#2582">2582</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushDescriptor</a> toFlushDescriptor(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">FlushAction</a> action, <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri,
+<a class="jxr_linenumber" name="2582" href="#2582">2582</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> FlushDescriptor toFlushDescriptor(FlushAction action, <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri,
 <a class="jxr_linenumber" name="2583" href="#2583">2583</a>       <strong class="jxr_keyword">long</strong> flushSeqId, Map&lt;byte[], List&lt;Path&gt;&gt; committedFiles) {
 <a class="jxr_linenumber" name="2584" href="#2584">2584</a>     FlushDescriptor.Builder desc = FlushDescriptor.newBuilder()
 <a class="jxr_linenumber" name="2585" href="#2585">2585</a>         .setAction(action)
@@ -2613,8 +2613,8 @@
 <a class="jxr_linenumber" name="2603" href="#2603">2603</a>     <strong class="jxr_keyword">return</strong> desc.build();
 <a class="jxr_linenumber" name="2604" href="#2604">2604</a>   }
 <a class="jxr_linenumber" name="2605" href="#2605">2605</a> 
-<a class="jxr_linenumber" name="2606" href="#2606">2606</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">RegionEventDescriptor</a> toRegionEventDescriptor(
-<a class="jxr_linenumber" name="2607" href="#2607">2607</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/WALProtos.html">EventType</a> eventType, <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri, <strong class="jxr_keyword">long</strong> seqId, <a href="../../../../../org/apache/hadoop/hbase/ServerName.html">ServerName</a> server,
+<a class="jxr_linenumber" name="2606" href="#2606">2606</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> RegionEventDescriptor toRegionEventDescriptor(
+<a class="jxr_linenumber" name="2607" href="#2607">2607</a>       EventType eventType, <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html">HRegionInfo</a> hri, <strong class="jxr_keyword">long</strong> seqId, <a href="../../../../../org/apache/hadoop/hbase/ServerName.html">ServerName</a> server,
 <a class="jxr_linenumber" name="2608" href="#2608">2608</a>       Map&lt;byte[], List&lt;Path&gt;&gt; storeFiles) {
 <a class="jxr_linenumber" name="2609" href="#2609">2609</a>     RegionEventDescriptor.Builder desc = RegionEventDescriptor.newBuilder()
 <a class="jxr_linenumber" name="2610" href="#2610">2610</a>         .setEventType(eventType)
@@ -2651,7 +2651,7 @@
 <a class="jxr_linenumber" name="2641" href="#2641">2641</a>       <strong class="jxr_keyword">return</strong> TextFormat.shortDebugString(m);
 <a class="jxr_linenumber" name="2642" href="#2642">2642</a>     } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (m instanceof RegionServerReportRequest) {
 <a class="jxr_linenumber" name="2643" href="#2643">2643</a>       <em class="jxr_comment">// Print a short message only, just the servername and the requests, not the full load.</em>
-<a class="jxr_linenumber" name="2644" href="#2644">2644</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/RegionServerStatusProtos.html">RegionServerReportRequest</a> r = (RegionServerReportRequest)m;
+<a class="jxr_linenumber" name="2644" href="#2644">2644</a>       RegionServerReportRequest r = (RegionServerReportRequest)m;
 <a class="jxr_linenumber" name="2645" href="#2645">2645</a>       <strong class="jxr_keyword">return</strong> <span class="jxr_string">"server "</span> + TextFormat.shortDebugString(r.getServer()) +
 <a class="jxr_linenumber" name="2646" href="#2646">2646</a>         <span class="jxr_string">" load { numberOfRequests: "</span> + r.getLoad().getNumberOfRequests() + <span class="jxr_string">" }"</span>;
 <a class="jxr_linenumber" name="2647" href="#2647">2647</a>     } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (m instanceof RegionServerStartupRequest) {
@@ -2660,7 +2660,7 @@
 <a class="jxr_linenumber" name="2650" href="#2650">2650</a>     } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (m instanceof MutationProto) {
 <a class="jxr_linenumber" name="2651" href="#2651">2651</a>       <strong class="jxr_keyword">return</strong> toShortString((MutationProto)m);
 <a class="jxr_linenumber" name="2652" href="#2652">2652</a>     } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (m instanceof GetRequest) {
-<a class="jxr_linenumber" name="2653" href="#2653">2653</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">GetRequest</a> r = (GetRequest) m;
+<a class="jxr_linenumber" name="2653" href="#2653">2653</a>       GetRequest r = (GetRequest) m;
 <a class="jxr_linenumber" name="2654" href="#2654">2654</a>       <strong class="jxr_keyword">return</strong> <span class="jxr_string">"region= "</span> + getStringForByteString(r.getRegion().getValue()) +
 <a class="jxr_linenumber" name="2655" href="#2655">2655</a>           <span class="jxr_string">", row="</span> + getStringForByteString(r.getGet().getRow());
 <a class="jxr_linenumber" name="2656" href="#2656">2656</a>     } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (m instanceof ClientProtos.MultiRequest) {
@@ -2691,7 +2691,7 @@
 <a class="jxr_linenumber" name="2681" href="#2681">2681</a> <em class="jxr_javadoccomment">   * @param proto Protobuf to print out</em>
 <a class="jxr_linenumber" name="2682" href="#2682">2682</a> <em class="jxr_javadoccomment">   * @return Short String of mutation proto</em>
 <a class="jxr_linenumber" name="2683" href="#2683">2683</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2684" href="#2684">2684</a>   <strong class="jxr_keyword">static</strong> String toShortString(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">MutationProto</a> proto) {
+<a class="jxr_linenumber" name="2684" href="#2684">2684</a>   <strong class="jxr_keyword">static</strong> String toShortString(<strong class="jxr_keyword">final</strong> MutationProto proto) {
 <a class="jxr_linenumber" name="2685" href="#2685">2685</a>     <strong class="jxr_keyword">return</strong> <span class="jxr_string">"row="</span> + Bytes.toString(proto.getRow().toByteArray()) +
 <a class="jxr_linenumber" name="2686" href="#2686">2686</a>         <span class="jxr_string">", type="</span> + proto.getMutateType().toString();
 <a class="jxr_linenumber" name="2687" href="#2687">2687</a>   }
@@ -2724,9 +2724,9 @@
 <a class="jxr_linenumber" name="2714" href="#2714">2714</a> <em class="jxr_javadoccomment">   * @param proto</em>
 <a class="jxr_linenumber" name="2715" href="#2715">2715</a> <em class="jxr_javadoccomment">   * @return the converted client CellVisibility</em>
 <a class="jxr_linenumber" name="2716" href="#2716">2716</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2717" href="#2717">2717</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CellVisibility</a> toCellVisibility(ClientProtos.CellVisibility proto) {
+<a class="jxr_linenumber" name="2717" href="#2717">2717</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/security/visibility/CellVisibility.html">CellVisibility</a> toCellVisibility(ClientProtos.CellVisibility proto) {
 <a class="jxr_linenumber" name="2718" href="#2718">2718</a>     <strong class="jxr_keyword">if</strong> (proto == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="2719" href="#2719">2719</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CellVisibility</a>(proto.getExpression());
+<a class="jxr_linenumber" name="2719" href="#2719">2719</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/security/visibility/CellVisibility.html">CellVisibility</a>(proto.getExpression());
 <a class="jxr_linenumber" name="2720" href="#2720">2720</a>   }
 <a class="jxr_linenumber" name="2721" href="#2721">2721</a> 
 <a class="jxr_linenumber" name="2722" href="#2722">2722</a>   <em class="jxr_javadoccomment">/**</em>
@@ -2736,7 +2736,7 @@
 <a class="jxr_linenumber" name="2726" href="#2726">2726</a> <em class="jxr_javadoccomment">   * @return the converted client CellVisibility</em>
 <a class="jxr_linenumber" name="2727" href="#2727">2727</a> <em class="jxr_javadoccomment">   * @throws DeserializationException</em>
 <a class="jxr_linenumber" name="2728" href="#2728">2728</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2729" href="#2729">2729</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CellVisibility</a> toCellVisibility(byte[] protoBytes) <strong class="jxr_keyword">throws</strong> DeserializationException {
+<a class="jxr_linenumber" name="2729" href="#2729">2729</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/security/visibility/CellVisibility.html">CellVisibility</a> toCellVisibility(byte[] protoBytes) <strong class="jxr_keyword">throws</strong> DeserializationException {
 <a class="jxr_linenumber" name="2730" href="#2730">2730</a>     <strong class="jxr_keyword">if</strong> (protoBytes == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="2731" href="#2731">2731</a>     ClientProtos.CellVisibility.Builder builder = ClientProtos.CellVisibility.newBuilder();
 <a class="jxr_linenumber" name="2732" href="#2732">2732</a>     ClientProtos.CellVisibility proto = <strong class="jxr_keyword">null</strong>;
@@ -2755,7 +2755,7 @@
 <a class="jxr_linenumber" name="2745" href="#2745">2745</a> <em class="jxr_javadoccomment">   * @param cellVisibility</em>
 <a class="jxr_linenumber" name="2746" href="#2746">2746</a> <em class="jxr_javadoccomment">   * @return a protocol buffer CellVisibility</em>
 <a class="jxr_linenumber" name="2747" href="#2747">2747</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2748" href="#2748">2748</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ClientProtos.CellVisibility toCellVisibility(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">CellVisibility</a> cellVisibility) {
+<a class="jxr_linenumber" name="2748" href="#2748">2748</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ClientProtos.CellVisibility toCellVisibility(<a href="../../../../../org/apache/hadoop/hbase/security/visibility/CellVisibility.html">CellVisibility</a> cellVisibility) {
 <a class="jxr_linenumber" name="2749" href="#2749">2749</a>     ClientProtos.CellVisibility.Builder builder = ClientProtos.CellVisibility.newBuilder();
 <a class="jxr_linenumber" name="2750" href="#2750">2750</a>     builder.setExpression(cellVisibility.getExpression());
 <a class="jxr_linenumber" name="2751" href="#2751">2751</a>     <strong class="jxr_keyword">return</strong> builder.build();
@@ -2767,9 +2767,9 @@
 <a class="jxr_linenumber" name="2757" href="#2757">2757</a> <em class="jxr_javadoccomment">   * @param proto</em>
 <a class="jxr_linenumber" name="2758" href="#2758">2758</a> <em class="jxr_javadoccomment">   * @return the converted client Authorizations</em>
 <a class="jxr_linenumber" name="2759" href="#2759">2759</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2760" href="#2760">2760</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">Authorizations</a> toAuthorizations(ClientProtos.Authorizations proto) {
+<a class="jxr_linenumber" name="2760" href="#2760">2760</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html">Authorizations</a> toAuthorizations(ClientProtos.Authorizations proto) {
 <a class="jxr_linenumber" name="2761" href="#2761">2761</a>     <strong class="jxr_keyword">if</strong> (proto == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="2762" href="#2762">2762</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">Authorizations</a>(proto.getLabelList());
+<a class="jxr_linenumber" name="2762" href="#2762">2762</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html">Authorizations</a>(proto.getLabelList());
 <a class="jxr_linenumber" name="2763" href="#2763">2763</a>   }
 <a class="jxr_linenumber" name="2764" href="#2764">2764</a> 
 <a class="jxr_linenumber" name="2765" href="#2765">2765</a>   <em class="jxr_javadoccomment">/**</em>
@@ -2779,7 +2779,7 @@
 <a class="jxr_linenumber" name="2769" href="#2769">2769</a> <em class="jxr_javadoccomment">   * @return the converted client Authorizations</em>
 <a class="jxr_linenumber" name="2770" href="#2770">2770</a> <em class="jxr_javadoccomment">   * @throws DeserializationException</em>
 <a class="jxr_linenumber" name="2771" href="#2771">2771</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2772" href="#2772">2772</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">Authorizations</a> toAuthorizations(byte[] protoBytes) <strong class="jxr_keyword">throws</strong> DeserializationException {
+<a class="jxr_linenumber" name="2772" href="#2772">2772</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html">Authorizations</a> toAuthorizations(byte[] protoBytes) <strong class="jxr_keyword">throws</strong> DeserializationException {
 <a class="jxr_linenumber" name="2773" href="#2773">2773</a>     <strong class="jxr_keyword">if</strong> (protoBytes == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="2774" href="#2774">2774</a>     ClientProtos.Authorizations.Builder builder = ClientProtos.Authorizations.newBuilder();
 <a class="jxr_linenumber" name="2775" href="#2775">2775</a>     ClientProtos.Authorizations proto = <strong class="jxr_keyword">null</strong>;
@@ -2798,7 +2798,7 @@
 <a class="jxr_linenumber" name="2788" href="#2788">2788</a> <em class="jxr_javadoccomment">   * @param authorizations</em>
 <a class="jxr_linenumber" name="2789" href="#2789">2789</a> <em class="jxr_javadoccomment">   * @return a protocol buffer Authorizations</em>
 <a class="jxr_linenumber" name="2790" href="#2790">2790</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2791" href="#2791">2791</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ClientProtos.Authorizations toAuthorizations(<a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClientProtos.html">Authorizations</a> authorizations) {
+<a class="jxr_linenumber" name="2791" href="#2791">2791</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ClientProtos.Authorizations toAuthorizations(<a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html">Authorizations</a> authorizations) {
 <a class="jxr_linenumber" name="2792" href="#2792">2792</a>     ClientProtos.Authorizations.Builder builder = ClientProtos.Authorizations.newBuilder();
 <a class="jxr_linenumber" name="2793" href="#2793">2793</a>     <strong class="jxr_keyword">for</strong> (String label : authorizations.getLabels()) {
 <a class="jxr_linenumber" name="2794" href="#2794">2794</a>       builder.addLabel(label);
@@ -2807,7 +2807,7 @@
 <a class="jxr_linenumber" name="2797" href="#2797">2797</a>   }
 <a class="jxr_linenumber" name="2798" href="#2798">2798</a> 
 <a class="jxr_linenumber" name="2799" href="#2799">2799</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> AccessControlProtos.UsersAndPermissions toUsersAndPermissions(String user,
-<a class="jxr_linenumber" name="2800" href="#2800">2800</a>       <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.html">Permission</a> perms) {
+<a class="jxr_linenumber" name="2800" href="#2800">2800</a>       <a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html">Permission</a> perms) {
 <a class="jxr_linenumber" name="2801" href="#2801">2801</a>     <strong class="jxr_keyword">return</strong> AccessControlProtos.UsersAndPermissions.newBuilder()
 <a class="jxr_linenumber" name="2802" href="#2802">2802</a>       .addUserPermissions(AccessControlProtos.UsersAndPermissions.UserPermissions.newBuilder()
 <a class="jxr_linenumber" name="2803" href="#2803">2803</a>         .setUser(ByteString.copyFromUtf8(user))
@@ -2851,7 +2851,7 @@
 <a class="jxr_linenumber" name="2841" href="#2841">2841</a> <em class="jxr_javadoccomment">   * @param proto</em>
 <a class="jxr_linenumber" name="2842" href="#2842">2842</a> <em class="jxr_javadoccomment">   * @return the converted client TimeUnit</em>
 <a class="jxr_linenumber" name="2843" href="#2843">2843</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2844" href="#2844">2844</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TimeUnit</a> toTimeUnit(<strong class="jxr_keyword">final</strong> HBaseProtos.TimeUnit proto) {
+<a class="jxr_linenumber" name="2844" href="#2844">2844</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> TimeUnit toTimeUnit(<strong class="jxr_keyword">final</strong> HBaseProtos.TimeUnit proto) {
 <a class="jxr_linenumber" name="2845" href="#2845">2845</a>     <strong class="jxr_keyword">switch</strong> (proto) {
 <a class="jxr_linenumber" name="2846" href="#2846">2846</a>       <strong class="jxr_keyword">case</strong> NANOSECONDS:  <strong class="jxr_keyword">return</strong> TimeUnit.NANOSECONDS;
 <a class="jxr_linenumber" name="2847" href="#2847">2847</a>       <strong class="jxr_keyword">case</strong> MICROSECONDS: <strong class="jxr_keyword">return</strong> TimeUnit.MICROSECONDS;
@@ -2870,7 +2870,7 @@
 <a class="jxr_linenumber" name="2860" href="#2860">2860</a> <em class="jxr_javadoccomment">   * @param timeUnit</em>
 <a class="jxr_linenumber" name="2861" href="#2861">2861</a> <em class="jxr_javadoccomment">   * @return the converted protocol buffer TimeUnit</em>
 <a class="jxr_linenumber" name="2862" href="#2862">2862</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2863" href="#2863">2863</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> HBaseProtos.TimeUnit toProtoTimeUnit(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TimeUnit</a> timeUnit) {
+<a class="jxr_linenumber" name="2863" href="#2863">2863</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> HBaseProtos.TimeUnit toProtoTimeUnit(<strong class="jxr_keyword">final</strong> TimeUnit timeUnit) {
 <a class="jxr_linenumber" name="2864" href="#2864">2864</a>     <strong class="jxr_keyword">switch</strong> (timeUnit) {
 <a class="jxr_linenumber" name="2865" href="#2865">2865</a>       <strong class="jxr_keyword">case</strong> NANOSECONDS:  <strong class="jxr_keyword">return</strong> HBaseProtos.TimeUnit.NANOSECONDS;
 <a class="jxr_linenumber" name="2866" href="#2866">2866</a>       <strong class="jxr_keyword">case</strong> MICROSECONDS: <strong class="jxr_keyword">return</strong> HBaseProtos.TimeUnit.MICROSECONDS;
@@ -2889,7 +2889,7 @@
 <a class="jxr_linenumber" name="2879" href="#2879">2879</a> <em class="jxr_javadoccomment">   * @param proto</em>
 <a class="jxr_linenumber" name="2880" href="#2880">2880</a> <em class="jxr_javadoccomment">   * @return the converted client ThrottleType</em>
 <a class="jxr_linenumber" name="2881" href="#2881">2881</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2882" href="#2882">2882</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">ThrottleType</a> toThrottleType(<strong class="jxr_keyword">final</strong> QuotaProtos.ThrottleType proto) {
+<a class="jxr_linenumber" name="2882" href="#2882">2882</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottleType.html">ThrottleType</a> toThrottleType(<strong class="jxr_keyword">final</strong> QuotaProtos.ThrottleType proto) {
 <a class="jxr_linenumber" name="2883" href="#2883">2883</a>     <strong class="jxr_keyword">switch</strong> (proto) {
 <a class="jxr_linenumber" name="2884" href="#2884">2884</a>       <strong class="jxr_keyword">case</strong> REQUEST_NUMBER: <strong class="jxr_keyword">return</strong> ThrottleType.REQUEST_NUMBER;
 <a class="jxr_linenumber" name="2885" href="#2885">2885</a>       <strong class="jxr_keyword">case</strong> REQUEST_SIZE:   <strong class="jxr_keyword">return</strong> ThrottleType.REQUEST_SIZE;
@@ -2907,7 +2907,7 @@
 <a class="jxr_linenumber" name="2897" href="#2897">2897</a> <em class="jxr_javadoccomment">   * @param type</em>
 <a class="jxr_linenumber" name="2898" href="#2898">2898</a> <em class="jxr_javadoccomment">   * @return the converted protocol buffer ThrottleType</em>
 <a class="jxr_linenumber" name="2899" href="#2899">2899</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2900" href="#2900">2900</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> QuotaProtos.ThrottleType toProtoThrottleType(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">ThrottleType</a> type) {
+<a class="jxr_linenumber" name="2900" href="#2900">2900</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> QuotaProtos.ThrottleType toProtoThrottleType(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/ThrottleType.html">ThrottleType</a> type) {
 <a class="jxr_linenumber" name="2901" href="#2901">2901</a>     <strong class="jxr_keyword">switch</strong> (type) {
 <a class="jxr_linenumber" name="2902" href="#2902">2902</a>       <strong class="jxr_keyword">case</strong> REQUEST_NUMBER: <strong class="jxr_keyword">return</strong> QuotaProtos.ThrottleType.REQUEST_NUMBER;
 <a class="jxr_linenumber" name="2903" href="#2903">2903</a>       <strong class="jxr_keyword">case</strong> REQUEST_SIZE:   <strong class="jxr_keyword">return</strong> QuotaProtos.ThrottleType.REQUEST_SIZE;
@@ -2925,7 +2925,7 @@
 <a class="jxr_linenumber" name="2915" href="#2915">2915</a> <em class="jxr_javadoccomment">   * @param proto</em>
 <a class="jxr_linenumber" name="2916" href="#2916">2916</a> <em class="jxr_javadoccomment">   * @return the converted client QuotaScope</em>
 <a class="jxr_linenumber" name="2917" href="#2917">2917</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2918" href="#2918">2918</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">QuotaScope</a> toQuotaScope(<strong class="jxr_keyword">final</strong> QuotaProtos.QuotaScope proto) {
+<a class="jxr_linenumber" name="2918" href="#2918">2918</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaScope.html">QuotaScope</a> toQuotaScope(<strong class="jxr_keyword">final</strong> QuotaProtos.QuotaScope proto) {
 <a class="jxr_linenumber" name="2919" href="#2919">2919</a>     <strong class="jxr_keyword">switch</strong> (proto) {
 <a class="jxr_linenumber" name="2920" href="#2920">2920</a>       <strong class="jxr_keyword">case</strong> CLUSTER: <strong class="jxr_keyword">return</strong> QuotaScope.CLUSTER;
 <a class="jxr_linenumber" name="2921" href="#2921">2921</a>       <strong class="jxr_keyword">case</strong> MACHINE: <strong class="jxr_keyword">return</strong> QuotaScope.MACHINE;
@@ -2939,7 +2939,7 @@
 <a class="jxr_linenumber" name="2929" href="#2929">2929</a> <em class="jxr_javadoccomment">   * @param scope</em>
 <a class="jxr_linenumber" name="2930" href="#2930">2930</a> <em class="jxr_javadoccomment">   * @return the converted protocol buffer QuotaScope</em>
 <a class="jxr_linenumber" name="2931" href="#2931">2931</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2932" href="#2932">2932</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> QuotaProtos.QuotaScope toProtoQuotaScope(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">QuotaScope</a> scope) {
+<a class="jxr_linenumber" name="2932" href="#2932">2932</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> QuotaProtos.QuotaScope toProtoQuotaScope(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaScope.html">QuotaScope</a> scope) {
 <a class="jxr_linenumber" name="2933" href="#2933">2933</a>     <strong class="jxr_keyword">switch</strong> (scope) {
 <a class="jxr_linenumber" name="2934" href="#2934">2934</a>       <strong class="jxr_keyword">case</strong> CLUSTER: <strong class="jxr_keyword">return</strong> QuotaProtos.QuotaScope.CLUSTER;
 <a class="jxr_linenumber" name="2935" href="#2935">2935</a>       <strong class="jxr_keyword">case</strong> MACHINE: <strong class="jxr_keyword">return</strong> QuotaProtos.QuotaScope.MACHINE;
@@ -2953,7 +2953,7 @@
 <a class="jxr_linenumber" name="2943" href="#2943">2943</a> <em class="jxr_javadoccomment">   * @param proto</em>
 <a class="jxr_linenumber" name="2944" href="#2944">2944</a> <em class="jxr_javadoccomment">   * @return the converted client QuotaType</em>
 <a class="jxr_linenumber" name="2945" href="#2945">2945</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2946" href="#2946">2946</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">QuotaType</a> toQuotaScope(<strong class="jxr_keyword">final</strong> QuotaProtos.QuotaType proto) {
+<a class="jxr_linenumber" name="2946" href="#2946">2946</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaType.html">QuotaType</a> toQuotaScope(<strong class="jxr_keyword">final</strong> QuotaProtos.QuotaType proto) {
 <a class="jxr_linenumber" name="2947" href="#2947">2947</a>     <strong class="jxr_keyword">switch</strong> (proto) {
 <a class="jxr_linenumber" name="2948" href="#2948">2948</a>       <strong class="jxr_keyword">case</strong> THROTTLE: <strong class="jxr_keyword">return</strong> QuotaType.THROTTLE;
 <a class="jxr_linenumber" name="2949" href="#2949">2949</a>     }
@@ -2966,7 +2966,7 @@
 <a class="jxr_linenumber" name="2956" href="#2956">2956</a> <em class="jxr_javadoccomment">   * @param type</em>
 <a class="jxr_linenumber" name="2957" href="#2957">2957</a> <em class="jxr_javadoccomment">   * @return the converted protocol buffer QuotaType</em>
 <a class="jxr_linenumber" name="2958" href="#2958">2958</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2959" href="#2959">2959</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> QuotaProtos.QuotaType toProtoQuotaScope(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">QuotaType</a> type) {
+<a class="jxr_linenumber" name="2959" href="#2959">2959</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> QuotaProtos.QuotaType toProtoQuotaScope(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaType.html">QuotaType</a> type) {
 <a class="jxr_linenumber" name="2960" href="#2960">2960</a>     <strong class="jxr_keyword">switch</strong> (type) {
 <a class="jxr_linenumber" name="2961" href="#2961">2961</a>       <strong class="jxr_keyword">case</strong> THROTTLE: <strong class="jxr_keyword">return</strong> QuotaProtos.QuotaType.THROTTLE;
 <a class="jxr_linenumber" name="2962" href="#2962">2962</a>     }
@@ -2981,8 +2981,8 @@
 <a class="jxr_linenumber" name="2971" href="#2971">2971</a> <em class="jxr_javadoccomment">   * @param scope the quota scope</em>
 <a class="jxr_linenumber" name="2972" href="#2972">2972</a> <em class="jxr_javadoccomment">   * @return the protocol buffer TimedQuota</em>
 <a class="jxr_linenumber" name="2973" href="#2973">2973</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="2974" href="#2974">2974</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> QuotaProtos.TimedQuota toTimedQuota(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> limit, <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/HBaseProtos.html">TimeUnit</a> timeUnit,
-<a class="jxr_linenumber" name="2975" href="#2975">2975</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/QuotaProtos.html">QuotaScope</a> scope) {
+<a class="jxr_linenumber" name="2974" href="#2974">2974</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> QuotaProtos.TimedQuota toTimedQuota(<strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> limit, <strong class="jxr_keyword">final</strong> TimeUnit timeUnit,
+<a class="jxr_linenumber" name="2975" href="#2975">2975</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/quotas/QuotaScope.html">QuotaScope</a> scope) {
 <a class="jxr_linenumber" name="2976" href="#2976">2976</a>     <strong class="jxr_keyword">return</strong> QuotaProtos.TimedQuota.newBuilder()
 <a class="jxr_linenumber" name="2977" href="#2977">2977</a>             .setSoftLimit(limit)
 <a class="jxr_linenumber" name="2978" href="#2978">2978</a>             .setTimeUnit(toProtoTimeUnit(timeUnit))
@@ -3118,14 +3118,14 @@
 <a class="jxr_linenumber" name="3108" href="#3108">3108</a>     codedInput.checkLastTagWas(0);
 <a class="jxr_linenumber" name="3109" href="#3109">3109</a>   }
 <a class="jxr_linenumber" name="3110" href="#3110">3110</a> 
-<a class="jxr_linenumber" name="3111" href="#3111">3111</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ReplicationLoadSink</a> toReplicationLoadSink(
+<a class="jxr_linenumber" name="3111" href="#3111">3111</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationLoadSink.html">ReplicationLoadSink</a> toReplicationLoadSink(
 <a class="jxr_linenumber" name="3112" href="#3112">3112</a>       ClusterStatusProtos.ReplicationLoadSink cls) {
-<a class="jxr_linenumber" name="3113" href="#3113">3113</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ReplicationLoadSink</a>(cls.getAgeOfLastAppliedOp(), cls.getTimeStampsOfLastAppliedOp());
+<a class="jxr_linenumber" name="3113" href="#3113">3113</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationLoadSink.html">ReplicationLoadSink</a>(cls.getAgeOfLastAppliedOp(), cls.getTimeStampsOfLastAppliedOp());
 <a class="jxr_linenumber" name="3114" href="#3114">3114</a>   }
 <a class="jxr_linenumber" name="3115" href="#3115">3115</a> 
-<a class="jxr_linenumber" name="3116" href="#3116">3116</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ReplicationLoadSource</a> toReplicationLoadSource(
+<a class="jxr_linenumber" name="3116" href="#3116">3116</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationLoadSource.html">ReplicationLoadSource</a> toReplicationLoadSource(
 <a class="jxr_linenumber" name="3117" href="#3117">3117</a>       ClusterStatusProtos.ReplicationLoadSource cls) {
-<a class="jxr_linenumber" name="3118" href="#3118">3118</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/protobuf/generated/ClusterStatusProtos.html">ReplicationLoadSource</a>(cls.getPeerID(), cls.getAgeOfLastShippedOp(),
+<a class="jxr_linenumber" name="3118" href="#3118">3118</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationLoadSource.html">ReplicationLoadSource</a>(cls.getPeerID(), cls.getAgeOfLastShippedOp(),
 <a class="jxr_linenumber" name="3119" href="#3119">3119</a>         cls.getSizeOfLogQueue(), cls.getTimeStampOfLastShippedOp(), cls.getReplicationLag());
 <a class="jxr_linenumber" name="3120" href="#3120">3120</a>   }
 <a class="jxr_linenumber" name="3121" href="#3121">3121</a> 
