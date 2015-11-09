@@ -3459,472 +3459,473 @@
 <span class="sourceLineNo">3451</span>    do {<a name="line.3451"></a>
 <span class="sourceLineNo">3452</span>      port = randomPort();<a name="line.3452"></a>
 <span class="sourceLineNo">3453</span>      if (takenRandomPorts.contains(port)) {<a name="line.3453"></a>
-<span class="sourceLineNo">3454</span>        continue;<a name="line.3454"></a>
-<span class="sourceLineNo">3455</span>      }<a name="line.3455"></a>
-<span class="sourceLineNo">3456</span>      takenRandomPorts.add(port);<a name="line.3456"></a>
-<span class="sourceLineNo">3457</span><a name="line.3457"></a>
-<span class="sourceLineNo">3458</span>      try {<a name="line.3458"></a>
-<span class="sourceLineNo">3459</span>        ServerSocket sock = new ServerSocket(port);<a name="line.3459"></a>
-<span class="sourceLineNo">3460</span>        sock.close();<a name="line.3460"></a>
-<span class="sourceLineNo">3461</span>      } catch (IOException ex) {<a name="line.3461"></a>
-<span class="sourceLineNo">3462</span>        port = 0;<a name="line.3462"></a>
-<span class="sourceLineNo">3463</span>      }<a name="line.3463"></a>
-<span class="sourceLineNo">3464</span>    } while (port == 0);<a name="line.3464"></a>
-<span class="sourceLineNo">3465</span>    return port;<a name="line.3465"></a>
-<span class="sourceLineNo">3466</span>  }<a name="line.3466"></a>
-<span class="sourceLineNo">3467</span><a name="line.3467"></a>
+<span class="sourceLineNo">3454</span>        port = 0;<a name="line.3454"></a>
+<span class="sourceLineNo">3455</span>        continue;<a name="line.3455"></a>
+<span class="sourceLineNo">3456</span>      }<a name="line.3456"></a>
+<span class="sourceLineNo">3457</span>      takenRandomPorts.add(port);<a name="line.3457"></a>
+<span class="sourceLineNo">3458</span><a name="line.3458"></a>
+<span class="sourceLineNo">3459</span>      try {<a name="line.3459"></a>
+<span class="sourceLineNo">3460</span>        ServerSocket sock = new ServerSocket(port);<a name="line.3460"></a>
+<span class="sourceLineNo">3461</span>        sock.close();<a name="line.3461"></a>
+<span class="sourceLineNo">3462</span>      } catch (IOException ex) {<a name="line.3462"></a>
+<span class="sourceLineNo">3463</span>        port = 0;<a name="line.3463"></a>
+<span class="sourceLineNo">3464</span>      }<a name="line.3464"></a>
+<span class="sourceLineNo">3465</span>    } while (port == 0);<a name="line.3465"></a>
+<span class="sourceLineNo">3466</span>    return port;<a name="line.3466"></a>
+<span class="sourceLineNo">3467</span>  }<a name="line.3467"></a>
 <span class="sourceLineNo">3468</span><a name="line.3468"></a>
-<span class="sourceLineNo">3469</span>  public static String randomMultiCastAddress() {<a name="line.3469"></a>
-<span class="sourceLineNo">3470</span>    return "226.1.1." + random.nextInt(254);<a name="line.3470"></a>
-<span class="sourceLineNo">3471</span>  }<a name="line.3471"></a>
-<span class="sourceLineNo">3472</span><a name="line.3472"></a>
+<span class="sourceLineNo">3469</span><a name="line.3469"></a>
+<span class="sourceLineNo">3470</span>  public static String randomMultiCastAddress() {<a name="line.3470"></a>
+<span class="sourceLineNo">3471</span>    return "226.1.1." + random.nextInt(254);<a name="line.3471"></a>
+<span class="sourceLineNo">3472</span>  }<a name="line.3472"></a>
 <span class="sourceLineNo">3473</span><a name="line.3473"></a>
 <span class="sourceLineNo">3474</span><a name="line.3474"></a>
-<span class="sourceLineNo">3475</span>  public static void waitForHostPort(String host, int port)<a name="line.3475"></a>
-<span class="sourceLineNo">3476</span>      throws IOException {<a name="line.3476"></a>
-<span class="sourceLineNo">3477</span>    final int maxTimeMs = 10000;<a name="line.3477"></a>
-<span class="sourceLineNo">3478</span>    final int maxNumAttempts = maxTimeMs / HConstants.SOCKET_RETRY_WAIT_MS;<a name="line.3478"></a>
-<span class="sourceLineNo">3479</span>    IOException savedException = null;<a name="line.3479"></a>
-<span class="sourceLineNo">3480</span>    LOG.info("Waiting for server at " + host + ":" + port);<a name="line.3480"></a>
-<span class="sourceLineNo">3481</span>    for (int attempt = 0; attempt &lt; maxNumAttempts; ++attempt) {<a name="line.3481"></a>
-<span class="sourceLineNo">3482</span>      try {<a name="line.3482"></a>
-<span class="sourceLineNo">3483</span>        Socket sock = new Socket(InetAddress.getByName(host), port);<a name="line.3483"></a>
-<span class="sourceLineNo">3484</span>        sock.close();<a name="line.3484"></a>
-<span class="sourceLineNo">3485</span>        savedException = null;<a name="line.3485"></a>
-<span class="sourceLineNo">3486</span>        LOG.info("Server at " + host + ":" + port + " is available");<a name="line.3486"></a>
-<span class="sourceLineNo">3487</span>        break;<a name="line.3487"></a>
-<span class="sourceLineNo">3488</span>      } catch (UnknownHostException e) {<a name="line.3488"></a>
-<span class="sourceLineNo">3489</span>        throw new IOException("Failed to look up " + host, e);<a name="line.3489"></a>
-<span class="sourceLineNo">3490</span>      } catch (IOException e) {<a name="line.3490"></a>
-<span class="sourceLineNo">3491</span>        savedException = e;<a name="line.3491"></a>
-<span class="sourceLineNo">3492</span>      }<a name="line.3492"></a>
-<span class="sourceLineNo">3493</span>      Threads.sleepWithoutInterrupt(HConstants.SOCKET_RETRY_WAIT_MS);<a name="line.3493"></a>
-<span class="sourceLineNo">3494</span>    }<a name="line.3494"></a>
-<span class="sourceLineNo">3495</span><a name="line.3495"></a>
-<span class="sourceLineNo">3496</span>    if (savedException != null) {<a name="line.3496"></a>
-<span class="sourceLineNo">3497</span>      throw savedException;<a name="line.3497"></a>
-<span class="sourceLineNo">3498</span>    }<a name="line.3498"></a>
-<span class="sourceLineNo">3499</span>  }<a name="line.3499"></a>
-<span class="sourceLineNo">3500</span><a name="line.3500"></a>
-<span class="sourceLineNo">3501</span>  /**<a name="line.3501"></a>
-<span class="sourceLineNo">3502</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3502"></a>
-<span class="sourceLineNo">3503</span>   * logs a warning and continues.<a name="line.3503"></a>
-<span class="sourceLineNo">3504</span>   * @return the number of regions the table was split into<a name="line.3504"></a>
-<span class="sourceLineNo">3505</span>   */<a name="line.3505"></a>
-<span class="sourceLineNo">3506</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3506"></a>
-<span class="sourceLineNo">3507</span>      TableName tableName, byte[] columnFamily, Algorithm compression,<a name="line.3507"></a>
-<span class="sourceLineNo">3508</span>      DataBlockEncoding dataBlockEncoding) throws IOException {<a name="line.3508"></a>
-<span class="sourceLineNo">3509</span>    return createPreSplitLoadTestTable(conf, tableName,<a name="line.3509"></a>
-<span class="sourceLineNo">3510</span>      columnFamily, compression, dataBlockEncoding, DEFAULT_REGIONS_PER_SERVER, 1,<a name="line.3510"></a>
-<span class="sourceLineNo">3511</span>      Durability.USE_DEFAULT);<a name="line.3511"></a>
-<span class="sourceLineNo">3512</span>  }<a name="line.3512"></a>
-<span class="sourceLineNo">3513</span>  /**<a name="line.3513"></a>
-<span class="sourceLineNo">3514</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3514"></a>
-<span class="sourceLineNo">3515</span>   * logs a warning and continues.<a name="line.3515"></a>
-<span class="sourceLineNo">3516</span>   * @return the number of regions the table was split into<a name="line.3516"></a>
-<span class="sourceLineNo">3517</span>   */<a name="line.3517"></a>
-<span class="sourceLineNo">3518</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3518"></a>
-<span class="sourceLineNo">3519</span>      TableName tableName, byte[] columnFamily, Algorithm compression,<a name="line.3519"></a>
-<span class="sourceLineNo">3520</span>      DataBlockEncoding dataBlockEncoding, int numRegionsPerServer, int regionReplication,<a name="line.3520"></a>
-<span class="sourceLineNo">3521</span>      Durability durability)<a name="line.3521"></a>
-<span class="sourceLineNo">3522</span>          throws IOException {<a name="line.3522"></a>
-<span class="sourceLineNo">3523</span>    HTableDescriptor desc = new HTableDescriptor(tableName);<a name="line.3523"></a>
-<span class="sourceLineNo">3524</span>    desc.setDurability(durability);<a name="line.3524"></a>
-<span class="sourceLineNo">3525</span>    desc.setRegionReplication(regionReplication);<a name="line.3525"></a>
-<span class="sourceLineNo">3526</span>    HColumnDescriptor hcd = new HColumnDescriptor(columnFamily);<a name="line.3526"></a>
-<span class="sourceLineNo">3527</span>    hcd.setDataBlockEncoding(dataBlockEncoding);<a name="line.3527"></a>
-<span class="sourceLineNo">3528</span>    hcd.setCompressionType(compression);<a name="line.3528"></a>
-<span class="sourceLineNo">3529</span>    return createPreSplitLoadTestTable(conf, desc, hcd, numRegionsPerServer);<a name="line.3529"></a>
-<span class="sourceLineNo">3530</span>  }<a name="line.3530"></a>
-<span class="sourceLineNo">3531</span><a name="line.3531"></a>
-<span class="sourceLineNo">3532</span>  /**<a name="line.3532"></a>
-<span class="sourceLineNo">3533</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3533"></a>
-<span class="sourceLineNo">3534</span>   * logs a warning and continues.<a name="line.3534"></a>
-<span class="sourceLineNo">3535</span>   * @return the number of regions the table was split into<a name="line.3535"></a>
-<span class="sourceLineNo">3536</span>   */<a name="line.3536"></a>
-<span class="sourceLineNo">3537</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3537"></a>
-<span class="sourceLineNo">3538</span>      TableName tableName, byte[][] columnFamilies, Algorithm compression,<a name="line.3538"></a>
-<span class="sourceLineNo">3539</span>      DataBlockEncoding dataBlockEncoding, int numRegionsPerServer, int regionReplication,<a name="line.3539"></a>
-<span class="sourceLineNo">3540</span>      Durability durability)<a name="line.3540"></a>
-<span class="sourceLineNo">3541</span>          throws IOException {<a name="line.3541"></a>
-<span class="sourceLineNo">3542</span>    HTableDescriptor desc = new HTableDescriptor(tableName);<a name="line.3542"></a>
-<span class="sourceLineNo">3543</span>    desc.setDurability(durability);<a name="line.3543"></a>
-<span class="sourceLineNo">3544</span>    desc.setRegionReplication(regionReplication);<a name="line.3544"></a>
-<span class="sourceLineNo">3545</span>    HColumnDescriptor[] hcds = new HColumnDescriptor[columnFamilies.length];<a name="line.3545"></a>
-<span class="sourceLineNo">3546</span>    for (int i = 0; i &lt; columnFamilies.length; i++) {<a name="line.3546"></a>
-<span class="sourceLineNo">3547</span>      HColumnDescriptor hcd = new HColumnDescriptor(columnFamilies[i]);<a name="line.3547"></a>
-<span class="sourceLineNo">3548</span>      hcd.setDataBlockEncoding(dataBlockEncoding);<a name="line.3548"></a>
-<span class="sourceLineNo">3549</span>      hcd.setCompressionType(compression);<a name="line.3549"></a>
-<span class="sourceLineNo">3550</span>      hcds[i] = hcd;<a name="line.3550"></a>
-<span class="sourceLineNo">3551</span>    }<a name="line.3551"></a>
-<span class="sourceLineNo">3552</span>    return createPreSplitLoadTestTable(conf, desc, hcds, numRegionsPerServer);<a name="line.3552"></a>
-<span class="sourceLineNo">3553</span>  }<a name="line.3553"></a>
-<span class="sourceLineNo">3554</span><a name="line.3554"></a>
-<span class="sourceLineNo">3555</span>  /**<a name="line.3555"></a>
-<span class="sourceLineNo">3556</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3556"></a>
-<span class="sourceLineNo">3557</span>   * logs a warning and continues.<a name="line.3557"></a>
-<span class="sourceLineNo">3558</span>   * @return the number of regions the table was split into<a name="line.3558"></a>
-<span class="sourceLineNo">3559</span>   */<a name="line.3559"></a>
-<span class="sourceLineNo">3560</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3560"></a>
-<span class="sourceLineNo">3561</span>      HTableDescriptor desc, HColumnDescriptor hcd) throws IOException {<a name="line.3561"></a>
-<span class="sourceLineNo">3562</span>    return createPreSplitLoadTestTable(conf, desc, hcd, DEFAULT_REGIONS_PER_SERVER);<a name="line.3562"></a>
-<span class="sourceLineNo">3563</span>  }<a name="line.3563"></a>
-<span class="sourceLineNo">3564</span><a name="line.3564"></a>
-<span class="sourceLineNo">3565</span>  /**<a name="line.3565"></a>
-<span class="sourceLineNo">3566</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3566"></a>
-<span class="sourceLineNo">3567</span>   * logs a warning and continues.<a name="line.3567"></a>
-<span class="sourceLineNo">3568</span>   * @return the number of regions the table was split into<a name="line.3568"></a>
-<span class="sourceLineNo">3569</span>   */<a name="line.3569"></a>
-<span class="sourceLineNo">3570</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3570"></a>
-<span class="sourceLineNo">3571</span>      HTableDescriptor desc, HColumnDescriptor hcd, int numRegionsPerServer) throws IOException {<a name="line.3571"></a>
-<span class="sourceLineNo">3572</span>    return createPreSplitLoadTestTable(conf, desc, new HColumnDescriptor[] {hcd},<a name="line.3572"></a>
-<span class="sourceLineNo">3573</span>        numRegionsPerServer);<a name="line.3573"></a>
-<span class="sourceLineNo">3574</span>  }<a name="line.3574"></a>
-<span class="sourceLineNo">3575</span><a name="line.3575"></a>
-<span class="sourceLineNo">3576</span>  /**<a name="line.3576"></a>
-<span class="sourceLineNo">3577</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3577"></a>
-<span class="sourceLineNo">3578</span>   * logs a warning and continues.<a name="line.3578"></a>
-<span class="sourceLineNo">3579</span>   * @return the number of regions the table was split into<a name="line.3579"></a>
-<span class="sourceLineNo">3580</span>   */<a name="line.3580"></a>
-<span class="sourceLineNo">3581</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3581"></a>
-<span class="sourceLineNo">3582</span>      HTableDescriptor desc, HColumnDescriptor[] hcds, int numRegionsPerServer) throws IOException {<a name="line.3582"></a>
-<span class="sourceLineNo">3583</span>    for (HColumnDescriptor hcd : hcds) {<a name="line.3583"></a>
-<span class="sourceLineNo">3584</span>      if (!desc.hasFamily(hcd.getName())) {<a name="line.3584"></a>
-<span class="sourceLineNo">3585</span>        desc.addFamily(hcd);<a name="line.3585"></a>
-<span class="sourceLineNo">3586</span>      }<a name="line.3586"></a>
-<span class="sourceLineNo">3587</span>    }<a name="line.3587"></a>
-<span class="sourceLineNo">3588</span><a name="line.3588"></a>
-<span class="sourceLineNo">3589</span>    int totalNumberOfRegions = 0;<a name="line.3589"></a>
-<span class="sourceLineNo">3590</span>    Connection unmanagedConnection = ConnectionFactory.createConnection(conf);<a name="line.3590"></a>
-<span class="sourceLineNo">3591</span>    Admin admin = unmanagedConnection.getAdmin();<a name="line.3591"></a>
-<span class="sourceLineNo">3592</span><a name="line.3592"></a>
-<span class="sourceLineNo">3593</span>    try {<a name="line.3593"></a>
-<span class="sourceLineNo">3594</span>      // create a table a pre-splits regions.<a name="line.3594"></a>
-<span class="sourceLineNo">3595</span>      // The number of splits is set as:<a name="line.3595"></a>
-<span class="sourceLineNo">3596</span>      //    region servers * regions per region server).<a name="line.3596"></a>
-<span class="sourceLineNo">3597</span>      int numberOfServers = admin.getClusterStatus().getServers().size();<a name="line.3597"></a>
-<span class="sourceLineNo">3598</span>      if (numberOfServers == 0) {<a name="line.3598"></a>
-<span class="sourceLineNo">3599</span>        throw new IllegalStateException("No live regionservers");<a name="line.3599"></a>
-<span class="sourceLineNo">3600</span>      }<a name="line.3600"></a>
-<span class="sourceLineNo">3601</span><a name="line.3601"></a>
-<span class="sourceLineNo">3602</span>      totalNumberOfRegions = numberOfServers * numRegionsPerServer;<a name="line.3602"></a>
-<span class="sourceLineNo">3603</span>      LOG.info("Number of live regionservers: " + numberOfServers + ", " +<a name="line.3603"></a>
-<span class="sourceLineNo">3604</span>          "pre-splitting table into " + totalNumberOfRegions + " regions " +<a name="line.3604"></a>
-<span class="sourceLineNo">3605</span>          "(regions per server: " + numRegionsPerServer + ")");<a name="line.3605"></a>
-<span class="sourceLineNo">3606</span><a name="line.3606"></a>
-<span class="sourceLineNo">3607</span>      byte[][] splits = new RegionSplitter.HexStringSplit().split(<a name="line.3607"></a>
-<span class="sourceLineNo">3608</span>          totalNumberOfRegions);<a name="line.3608"></a>
-<span class="sourceLineNo">3609</span><a name="line.3609"></a>
-<span class="sourceLineNo">3610</span>      admin.createTable(desc, splits);<a name="line.3610"></a>
-<span class="sourceLineNo">3611</span>    } catch (MasterNotRunningException e) {<a name="line.3611"></a>
-<span class="sourceLineNo">3612</span>      LOG.error("Master not running", e);<a name="line.3612"></a>
-<span class="sourceLineNo">3613</span>      throw new IOException(e);<a name="line.3613"></a>
-<span class="sourceLineNo">3614</span>    } catch (TableExistsException e) {<a name="line.3614"></a>
-<span class="sourceLineNo">3615</span>      LOG.warn("Table " + desc.getTableName() +<a name="line.3615"></a>
-<span class="sourceLineNo">3616</span>          " already exists, continuing");<a name="line.3616"></a>
-<span class="sourceLineNo">3617</span>    } finally {<a name="line.3617"></a>
-<span class="sourceLineNo">3618</span>      admin.close();<a name="line.3618"></a>
-<span class="sourceLineNo">3619</span>      unmanagedConnection.close();<a name="line.3619"></a>
-<span class="sourceLineNo">3620</span>    }<a name="line.3620"></a>
-<span class="sourceLineNo">3621</span>    return totalNumberOfRegions;<a name="line.3621"></a>
-<span class="sourceLineNo">3622</span>  }<a name="line.3622"></a>
-<span class="sourceLineNo">3623</span><a name="line.3623"></a>
-<span class="sourceLineNo">3624</span>  public static int getMetaRSPort(Connection connection) throws IOException {<a name="line.3624"></a>
-<span class="sourceLineNo">3625</span>    try (RegionLocator locator = connection.getRegionLocator(TableName.META_TABLE_NAME)) {<a name="line.3625"></a>
-<span class="sourceLineNo">3626</span>      return locator.getRegionLocation(Bytes.toBytes("")).getPort();<a name="line.3626"></a>
-<span class="sourceLineNo">3627</span>    }<a name="line.3627"></a>
-<span class="sourceLineNo">3628</span>  }<a name="line.3628"></a>
-<span class="sourceLineNo">3629</span><a name="line.3629"></a>
-<span class="sourceLineNo">3630</span>  /**<a name="line.3630"></a>
-<span class="sourceLineNo">3631</span>   *  Due to async racing issue, a region may not be in<a name="line.3631"></a>
-<span class="sourceLineNo">3632</span>   *  the online region list of a region server yet, after<a name="line.3632"></a>
-<span class="sourceLineNo">3633</span>   *  the assignment znode is deleted and the new assignment<a name="line.3633"></a>
-<span class="sourceLineNo">3634</span>   *  is recorded in master.<a name="line.3634"></a>
-<span class="sourceLineNo">3635</span>   */<a name="line.3635"></a>
-<span class="sourceLineNo">3636</span>  public void assertRegionOnServer(<a name="line.3636"></a>
-<span class="sourceLineNo">3637</span>      final HRegionInfo hri, final ServerName server,<a name="line.3637"></a>
-<span class="sourceLineNo">3638</span>      final long timeout) throws IOException, InterruptedException {<a name="line.3638"></a>
-<span class="sourceLineNo">3639</span>    long timeoutTime = System.currentTimeMillis() + timeout;<a name="line.3639"></a>
-<span class="sourceLineNo">3640</span>    while (true) {<a name="line.3640"></a>
-<span class="sourceLineNo">3641</span>      List&lt;HRegionInfo&gt; regions = getHBaseAdmin().getOnlineRegions(server);<a name="line.3641"></a>
-<span class="sourceLineNo">3642</span>      if (regions.contains(hri)) return;<a name="line.3642"></a>
-<span class="sourceLineNo">3643</span>      long now = System.currentTimeMillis();<a name="line.3643"></a>
-<span class="sourceLineNo">3644</span>      if (now &gt; timeoutTime) break;<a name="line.3644"></a>
-<span class="sourceLineNo">3645</span>      Thread.sleep(10);<a name="line.3645"></a>
-<span class="sourceLineNo">3646</span>    }<a name="line.3646"></a>
-<span class="sourceLineNo">3647</span>    fail("Could not find region " + hri.getRegionNameAsString()<a name="line.3647"></a>
-<span class="sourceLineNo">3648</span>      + " on server " + server);<a name="line.3648"></a>
-<span class="sourceLineNo">3649</span>  }<a name="line.3649"></a>
-<span class="sourceLineNo">3650</span><a name="line.3650"></a>
-<span class="sourceLineNo">3651</span>  /**<a name="line.3651"></a>
-<span class="sourceLineNo">3652</span>   * Check to make sure the region is open on the specified<a name="line.3652"></a>
-<span class="sourceLineNo">3653</span>   * region server, but not on any other one.<a name="line.3653"></a>
-<span class="sourceLineNo">3654</span>   */<a name="line.3654"></a>
-<span class="sourceLineNo">3655</span>  public void assertRegionOnlyOnServer(<a name="line.3655"></a>
-<span class="sourceLineNo">3656</span>      final HRegionInfo hri, final ServerName server,<a name="line.3656"></a>
-<span class="sourceLineNo">3657</span>      final long timeout) throws IOException, InterruptedException {<a name="line.3657"></a>
-<span class="sourceLineNo">3658</span>    long timeoutTime = System.currentTimeMillis() + timeout;<a name="line.3658"></a>
-<span class="sourceLineNo">3659</span>    while (true) {<a name="line.3659"></a>
-<span class="sourceLineNo">3660</span>      List&lt;HRegionInfo&gt; regions = getHBaseAdmin().getOnlineRegions(server);<a name="line.3660"></a>
-<span class="sourceLineNo">3661</span>      if (regions.contains(hri)) {<a name="line.3661"></a>
-<span class="sourceLineNo">3662</span>        List&lt;JVMClusterUtil.RegionServerThread&gt; rsThreads =<a name="line.3662"></a>
-<span class="sourceLineNo">3663</span>          getHBaseCluster().getLiveRegionServerThreads();<a name="line.3663"></a>
-<span class="sourceLineNo">3664</span>        for (JVMClusterUtil.RegionServerThread rsThread: rsThreads) {<a name="line.3664"></a>
-<span class="sourceLineNo">3665</span>          HRegionServer rs = rsThread.getRegionServer();<a name="line.3665"></a>
-<span class="sourceLineNo">3666</span>          if (server.equals(rs.getServerName())) {<a name="line.3666"></a>
-<span class="sourceLineNo">3667</span>            continue;<a name="line.3667"></a>
-<span class="sourceLineNo">3668</span>          }<a name="line.3668"></a>
-<span class="sourceLineNo">3669</span>          Collection&lt;Region&gt; hrs = rs.getOnlineRegionsLocalContext();<a name="line.3669"></a>
-<span class="sourceLineNo">3670</span>          for (Region r: hrs) {<a name="line.3670"></a>
-<span class="sourceLineNo">3671</span>            assertTrue("Region should not be double assigned",<a name="line.3671"></a>
-<span class="sourceLineNo">3672</span>              r.getRegionInfo().getRegionId() != hri.getRegionId());<a name="line.3672"></a>
-<span class="sourceLineNo">3673</span>          }<a name="line.3673"></a>
-<span class="sourceLineNo">3674</span>        }<a name="line.3674"></a>
-<span class="sourceLineNo">3675</span>        return; // good, we are happy<a name="line.3675"></a>
-<span class="sourceLineNo">3676</span>      }<a name="line.3676"></a>
-<span class="sourceLineNo">3677</span>      long now = System.currentTimeMillis();<a name="line.3677"></a>
-<span class="sourceLineNo">3678</span>      if (now &gt; timeoutTime) break;<a name="line.3678"></a>
-<span class="sourceLineNo">3679</span>      Thread.sleep(10);<a name="line.3679"></a>
-<span class="sourceLineNo">3680</span>    }<a name="line.3680"></a>
-<span class="sourceLineNo">3681</span>    fail("Could not find region " + hri.getRegionNameAsString()<a name="line.3681"></a>
-<span class="sourceLineNo">3682</span>      + " on server " + server);<a name="line.3682"></a>
-<span class="sourceLineNo">3683</span>  }<a name="line.3683"></a>
-<span class="sourceLineNo">3684</span><a name="line.3684"></a>
-<span class="sourceLineNo">3685</span>  public HRegion createTestRegion(String tableName, HColumnDescriptor hcd)<a name="line.3685"></a>
-<span class="sourceLineNo">3686</span>      throws IOException {<a name="line.3686"></a>
-<span class="sourceLineNo">3687</span>    HTableDescriptor htd = new HTableDescriptor(TableName.valueOf(tableName));<a name="line.3687"></a>
-<span class="sourceLineNo">3688</span>    htd.addFamily(hcd);<a name="line.3688"></a>
-<span class="sourceLineNo">3689</span>    HRegionInfo info =<a name="line.3689"></a>
-<span class="sourceLineNo">3690</span>        new HRegionInfo(TableName.valueOf(tableName), null, null, false);<a name="line.3690"></a>
-<span class="sourceLineNo">3691</span>    return createRegionAndWAL(info, getDataTestDir(), getConfiguration(), htd);<a name="line.3691"></a>
-<span class="sourceLineNo">3692</span>  }<a name="line.3692"></a>
-<span class="sourceLineNo">3693</span><a name="line.3693"></a>
-<span class="sourceLineNo">3694</span>  public void setFileSystemURI(String fsURI) {<a name="line.3694"></a>
-<span class="sourceLineNo">3695</span>    FS_URI = fsURI;<a name="line.3695"></a>
-<span class="sourceLineNo">3696</span>  }<a name="line.3696"></a>
-<span class="sourceLineNo">3697</span><a name="line.3697"></a>
-<span class="sourceLineNo">3698</span>  /**<a name="line.3698"></a>
-<span class="sourceLineNo">3699</span>   * Wrapper method for {@link Waiter#waitFor(Configuration, long, Predicate)}.<a name="line.3699"></a>
-<span class="sourceLineNo">3700</span>   */<a name="line.3700"></a>
-<span class="sourceLineNo">3701</span>  public &lt;E extends Exception&gt; long waitFor(long timeout, Predicate&lt;E&gt; predicate)<a name="line.3701"></a>
-<span class="sourceLineNo">3702</span>      throws E {<a name="line.3702"></a>
-<span class="sourceLineNo">3703</span>    return Waiter.waitFor(this.conf, timeout, predicate);<a name="line.3703"></a>
-<span class="sourceLineNo">3704</span>  }<a name="line.3704"></a>
-<span class="sourceLineNo">3705</span><a name="line.3705"></a>
-<span class="sourceLineNo">3706</span>  /**<a name="line.3706"></a>
-<span class="sourceLineNo">3707</span>   * Wrapper method for {@link Waiter#waitFor(Configuration, long, long, Predicate)}.<a name="line.3707"></a>
-<span class="sourceLineNo">3708</span>   */<a name="line.3708"></a>
-<span class="sourceLineNo">3709</span>  public &lt;E extends Exception&gt; long waitFor(long timeout, long interval, Predicate&lt;E&gt; predicate)<a name="line.3709"></a>
-<span class="sourceLineNo">3710</span>      throws E {<a name="line.3710"></a>
-<span class="sourceLineNo">3711</span>    return Waiter.waitFor(this.conf, timeout, interval, predicate);<a name="line.3711"></a>
-<span class="sourceLineNo">3712</span>  }<a name="line.3712"></a>
-<span class="sourceLineNo">3713</span><a name="line.3713"></a>
-<span class="sourceLineNo">3714</span>  /**<a name="line.3714"></a>
-<span class="sourceLineNo">3715</span>   * Wrapper method for {@link Waiter#waitFor(Configuration, long, long, boolean, Predicate)}.<a name="line.3715"></a>
-<span class="sourceLineNo">3716</span>   */<a name="line.3716"></a>
-<span class="sourceLineNo">3717</span>  public &lt;E extends Exception&gt; long waitFor(long timeout, long interval,<a name="line.3717"></a>
-<span class="sourceLineNo">3718</span>      boolean failIfTimeout, Predicate&lt;E&gt; predicate) throws E {<a name="line.3718"></a>
-<span class="sourceLineNo">3719</span>    return Waiter.waitFor(this.conf, timeout, interval, failIfTimeout, predicate);<a name="line.3719"></a>
-<span class="sourceLineNo">3720</span>  }<a name="line.3720"></a>
-<span class="sourceLineNo">3721</span><a name="line.3721"></a>
-<span class="sourceLineNo">3722</span>  /**<a name="line.3722"></a>
-<span class="sourceLineNo">3723</span>   * Returns a {@link Predicate} for checking that there are no regions in transition in master<a name="line.3723"></a>
-<span class="sourceLineNo">3724</span>   */<a name="line.3724"></a>
-<span class="sourceLineNo">3725</span>  public ExplainingPredicate&lt;IOException&gt; predicateNoRegionsInTransition() {<a name="line.3725"></a>
-<span class="sourceLineNo">3726</span>    return new ExplainingPredicate&lt;IOException&gt;() {<a name="line.3726"></a>
-<span class="sourceLineNo">3727</span>      @Override<a name="line.3727"></a>
-<span class="sourceLineNo">3728</span>      public String explainFailure() throws IOException {<a name="line.3728"></a>
-<span class="sourceLineNo">3729</span>        final RegionStates regionStates = getMiniHBaseCluster().getMaster()<a name="line.3729"></a>
-<span class="sourceLineNo">3730</span>            .getAssignmentManager().getRegionStates();<a name="line.3730"></a>
-<span class="sourceLineNo">3731</span>        return "found in transition: " + regionStates.getRegionsInTransition().toString();<a name="line.3731"></a>
-<span class="sourceLineNo">3732</span>      }<a name="line.3732"></a>
-<span class="sourceLineNo">3733</span><a name="line.3733"></a>
-<span class="sourceLineNo">3734</span>      @Override<a name="line.3734"></a>
-<span class="sourceLineNo">3735</span>      public boolean evaluate() throws IOException {<a name="line.3735"></a>
-<span class="sourceLineNo">3736</span>        final RegionStates regionStates = getMiniHBaseCluster().getMaster()<a name="line.3736"></a>
-<span class="sourceLineNo">3737</span>            .getAssignmentManager().getRegionStates();<a name="line.3737"></a>
-<span class="sourceLineNo">3738</span>        return !regionStates.isRegionsInTransition();<a name="line.3738"></a>
-<span class="sourceLineNo">3739</span>      }<a name="line.3739"></a>
-<span class="sourceLineNo">3740</span>    };<a name="line.3740"></a>
-<span class="sourceLineNo">3741</span>  }<a name="line.3741"></a>
-<span class="sourceLineNo">3742</span><a name="line.3742"></a>
-<span class="sourceLineNo">3743</span>  /**<a name="line.3743"></a>
-<span class="sourceLineNo">3744</span>   * Returns a {@link Predicate} for checking that table is enabled<a name="line.3744"></a>
-<span class="sourceLineNo">3745</span>   */<a name="line.3745"></a>
-<span class="sourceLineNo">3746</span>  public Waiter.Predicate&lt;IOException&gt; predicateTableEnabled(final TableName tableName) {<a name="line.3746"></a>
-<span class="sourceLineNo">3747</span>    return new ExplainingPredicate&lt;IOException&gt;() {<a name="line.3747"></a>
-<span class="sourceLineNo">3748</span>      @Override<a name="line.3748"></a>
-<span class="sourceLineNo">3749</span>      public String explainFailure() throws IOException {<a name="line.3749"></a>
-<span class="sourceLineNo">3750</span>        return explainTableState(tableName, TableState.State.ENABLED);<a name="line.3750"></a>
-<span class="sourceLineNo">3751</span>      }<a name="line.3751"></a>
-<span class="sourceLineNo">3752</span><a name="line.3752"></a>
-<span class="sourceLineNo">3753</span>      @Override<a name="line.3753"></a>
-<span class="sourceLineNo">3754</span>      public boolean evaluate() throws IOException {<a name="line.3754"></a>
-<span class="sourceLineNo">3755</span>        return getHBaseAdmin().tableExists(tableName) &amp;&amp; getHBaseAdmin().isTableEnabled(tableName);<a name="line.3755"></a>
-<span class="sourceLineNo">3756</span>      }<a name="line.3756"></a>
-<span class="sourceLineNo">3757</span>    };<a name="line.3757"></a>
-<span class="sourceLineNo">3758</span>  }<a name="line.3758"></a>
-<span class="sourceLineNo">3759</span><a name="line.3759"></a>
-<span class="sourceLineNo">3760</span>  /**<a name="line.3760"></a>
-<span class="sourceLineNo">3761</span>   * Returns a {@link Predicate} for checking that table is enabled<a name="line.3761"></a>
-<span class="sourceLineNo">3762</span>   */<a name="line.3762"></a>
-<span class="sourceLineNo">3763</span>  public Waiter.Predicate&lt;IOException&gt; predicateTableDisabled(final TableName tableName) {<a name="line.3763"></a>
-<span class="sourceLineNo">3764</span>    return new ExplainingPredicate&lt;IOException&gt;() {<a name="line.3764"></a>
-<span class="sourceLineNo">3765</span>      @Override<a name="line.3765"></a>
-<span class="sourceLineNo">3766</span>      public String explainFailure() throws IOException {<a name="line.3766"></a>
-<span class="sourceLineNo">3767</span>        return explainTableState(tableName, TableState.State.DISABLED);<a name="line.3767"></a>
-<span class="sourceLineNo">3768</span>      }<a name="line.3768"></a>
-<span class="sourceLineNo">3769</span><a name="line.3769"></a>
-<span class="sourceLineNo">3770</span>      @Override<a name="line.3770"></a>
-<span class="sourceLineNo">3771</span>      public boolean evaluate() throws IOException {<a name="line.3771"></a>
-<span class="sourceLineNo">3772</span>        return getHBaseAdmin().isTableDisabled(tableName);<a name="line.3772"></a>
-<span class="sourceLineNo">3773</span>      }<a name="line.3773"></a>
-<span class="sourceLineNo">3774</span>    };<a name="line.3774"></a>
-<span class="sourceLineNo">3775</span>  }<a name="line.3775"></a>
-<span class="sourceLineNo">3776</span><a name="line.3776"></a>
-<span class="sourceLineNo">3777</span>  /**<a name="line.3777"></a>
-<span class="sourceLineNo">3778</span>   * Returns a {@link Predicate} for checking that table is enabled<a name="line.3778"></a>
-<span class="sourceLineNo">3779</span>   */<a name="line.3779"></a>
-<span class="sourceLineNo">3780</span>  public Waiter.Predicate&lt;IOException&gt; predicateTableAvailable(final TableName tableName) {<a name="line.3780"></a>
-<span class="sourceLineNo">3781</span>    return new ExplainingPredicate&lt;IOException&gt;() {<a name="line.3781"></a>
-<span class="sourceLineNo">3782</span>      @Override<a name="line.3782"></a>
-<span class="sourceLineNo">3783</span>      public String explainFailure() throws IOException {<a name="line.3783"></a>
-<span class="sourceLineNo">3784</span>        return explainTableAvailability(tableName);<a name="line.3784"></a>
-<span class="sourceLineNo">3785</span>      }<a name="line.3785"></a>
-<span class="sourceLineNo">3786</span><a name="line.3786"></a>
-<span class="sourceLineNo">3787</span>      @Override<a name="line.3787"></a>
-<span class="sourceLineNo">3788</span>      public boolean evaluate() throws IOException {<a name="line.3788"></a>
-<span class="sourceLineNo">3789</span>        boolean tableAvailable = getHBaseAdmin().isTableAvailable(tableName);<a name="line.3789"></a>
-<span class="sourceLineNo">3790</span>        if (tableAvailable) {<a name="line.3790"></a>
-<span class="sourceLineNo">3791</span>          try {<a name="line.3791"></a>
-<span class="sourceLineNo">3792</span>            Canary.sniff(getHBaseAdmin(), tableName);<a name="line.3792"></a>
-<span class="sourceLineNo">3793</span>          } catch (Exception e) {<a name="line.3793"></a>
-<span class="sourceLineNo">3794</span>            throw new IOException("Canary sniff failed for table " + tableName, e);<a name="line.3794"></a>
-<span class="sourceLineNo">3795</span>          }<a name="line.3795"></a>
-<span class="sourceLineNo">3796</span>        }<a name="line.3796"></a>
-<span class="sourceLineNo">3797</span>        return tableAvailable;<a name="line.3797"></a>
-<span class="sourceLineNo">3798</span>      }<a name="line.3798"></a>
-<span class="sourceLineNo">3799</span>    };<a name="line.3799"></a>
-<span class="sourceLineNo">3800</span>  }<a name="line.3800"></a>
-<span class="sourceLineNo">3801</span><a name="line.3801"></a>
-<span class="sourceLineNo">3802</span>  /**<a name="line.3802"></a>
-<span class="sourceLineNo">3803</span>   * Wait until no regions in transition.<a name="line.3803"></a>
-<span class="sourceLineNo">3804</span>   * @param timeout How long to wait.<a name="line.3804"></a>
-<span class="sourceLineNo">3805</span>   * @throws Exception<a name="line.3805"></a>
-<span class="sourceLineNo">3806</span>   */<a name="line.3806"></a>
-<span class="sourceLineNo">3807</span>  public void waitUntilNoRegionsInTransition(<a name="line.3807"></a>
-<span class="sourceLineNo">3808</span>      final long timeout) throws Exception {<a name="line.3808"></a>
-<span class="sourceLineNo">3809</span>    waitFor(timeout, predicateNoRegionsInTransition());<a name="line.3809"></a>
-<span class="sourceLineNo">3810</span>  }<a name="line.3810"></a>
-<span class="sourceLineNo">3811</span><a name="line.3811"></a>
-<span class="sourceLineNo">3812</span>  /**<a name="line.3812"></a>
-<span class="sourceLineNo">3813</span>   * Wait until labels is ready in VisibilityLabelsCache.<a name="line.3813"></a>
-<span class="sourceLineNo">3814</span>   * @param timeoutMillis<a name="line.3814"></a>
-<span class="sourceLineNo">3815</span>   * @param labels<a name="line.3815"></a>
-<span class="sourceLineNo">3816</span>   */<a name="line.3816"></a>
-<span class="sourceLineNo">3817</span>  public void waitLabelAvailable(long timeoutMillis, final String... labels) {<a name="line.3817"></a>
-<span class="sourceLineNo">3818</span>    final VisibilityLabelsCache labelsCache = VisibilityLabelsCache.get();<a name="line.3818"></a>
-<span class="sourceLineNo">3819</span>    waitFor(timeoutMillis, new Waiter.ExplainingPredicate&lt;RuntimeException&gt;() {<a name="line.3819"></a>
-<span class="sourceLineNo">3820</span><a name="line.3820"></a>
-<span class="sourceLineNo">3821</span>      @Override<a name="line.3821"></a>
-<span class="sourceLineNo">3822</span>      public boolean evaluate() {<a name="line.3822"></a>
-<span class="sourceLineNo">3823</span>        for (String label : labels) {<a name="line.3823"></a>
-<span class="sourceLineNo">3824</span>          if (labelsCache.getLabelOrdinal(label) == 0) {<a name="line.3824"></a>
-<span class="sourceLineNo">3825</span>            return false;<a name="line.3825"></a>
-<span class="sourceLineNo">3826</span>          }<a name="line.3826"></a>
-<span class="sourceLineNo">3827</span>        }<a name="line.3827"></a>
-<span class="sourceLineNo">3828</span>        return true;<a name="line.3828"></a>
-<span class="sourceLineNo">3829</span>      }<a name="line.3829"></a>
-<span class="sourceLineNo">3830</span><a name="line.3830"></a>
-<span class="sourceLineNo">3831</span>      @Override<a name="line.3831"></a>
-<span class="sourceLineNo">3832</span>      public String explainFailure() {<a name="line.3832"></a>
-<span class="sourceLineNo">3833</span>        for (String label : labels) {<a name="line.3833"></a>
-<span class="sourceLineNo">3834</span>          if (labelsCache.getLabelOrdinal(label) == 0) {<a name="line.3834"></a>
-<span class="sourceLineNo">3835</span>            return label + " is not available yet";<a name="line.3835"></a>
-<span class="sourceLineNo">3836</span>          }<a name="line.3836"></a>
-<span class="sourceLineNo">3837</span>        }<a name="line.3837"></a>
-<span class="sourceLineNo">3838</span>        return "";<a name="line.3838"></a>
-<span class="sourceLineNo">3839</span>      }<a name="line.3839"></a>
-<span class="sourceLineNo">3840</span>    });<a name="line.3840"></a>
-<span class="sourceLineNo">3841</span>  }<a name="line.3841"></a>
-<span class="sourceLineNo">3842</span><a name="line.3842"></a>
-<span class="sourceLineNo">3843</span>  /**<a name="line.3843"></a>
-<span class="sourceLineNo">3844</span>   * Create a set of column descriptors with the combination of compression,<a name="line.3844"></a>
-<span class="sourceLineNo">3845</span>   * encoding, bloom codecs available.<a name="line.3845"></a>
-<span class="sourceLineNo">3846</span>   * @return the list of column descriptors<a name="line.3846"></a>
-<span class="sourceLineNo">3847</span>   */<a name="line.3847"></a>
-<span class="sourceLineNo">3848</span>  public static List&lt;HColumnDescriptor&gt; generateColumnDescriptors() {<a name="line.3848"></a>
-<span class="sourceLineNo">3849</span>    return generateColumnDescriptors("");<a name="line.3849"></a>
-<span class="sourceLineNo">3850</span>  }<a name="line.3850"></a>
-<span class="sourceLineNo">3851</span><a name="line.3851"></a>
-<span class="sourceLineNo">3852</span>  /**<a name="line.3852"></a>
-<span class="sourceLineNo">3853</span>   * Create a set of column descriptors with the combination of compression,<a name="line.3853"></a>
-<span class="sourceLineNo">3854</span>   * encoding, bloom codecs available.<a name="line.3854"></a>
-<span class="sourceLineNo">3855</span>   * @param prefix family names prefix<a name="line.3855"></a>
-<span class="sourceLineNo">3856</span>   * @return the list of column descriptors<a name="line.3856"></a>
-<span class="sourceLineNo">3857</span>   */<a name="line.3857"></a>
-<span class="sourceLineNo">3858</span>  public static List&lt;HColumnDescriptor&gt; generateColumnDescriptors(final String prefix) {<a name="line.3858"></a>
-<span class="sourceLineNo">3859</span>    List&lt;HColumnDescriptor&gt; htds = new ArrayList&lt;HColumnDescriptor&gt;();<a name="line.3859"></a>
-<span class="sourceLineNo">3860</span>    long familyId = 0;<a name="line.3860"></a>
-<span class="sourceLineNo">3861</span>    for (Compression.Algorithm compressionType: getSupportedCompressionAlgorithms()) {<a name="line.3861"></a>
-<span class="sourceLineNo">3862</span>      for (DataBlockEncoding encodingType: DataBlockEncoding.values()) {<a name="line.3862"></a>
-<span class="sourceLineNo">3863</span>        for (BloomType bloomType: BloomType.values()) {<a name="line.3863"></a>
-<span class="sourceLineNo">3864</span>          String name = String.format("%s-cf-!@#&amp;-%d!@#", prefix, familyId);<a name="line.3864"></a>
-<span class="sourceLineNo">3865</span>          HColumnDescriptor htd = new HColumnDescriptor(name);<a name="line.3865"></a>
-<span class="sourceLineNo">3866</span>          htd.setCompressionType(compressionType);<a name="line.3866"></a>
-<span class="sourceLineNo">3867</span>          htd.setDataBlockEncoding(encodingType);<a name="line.3867"></a>
-<span class="sourceLineNo">3868</span>          htd.setBloomFilterType(bloomType);<a name="line.3868"></a>
-<span class="sourceLineNo">3869</span>          htds.add(htd);<a name="line.3869"></a>
-<span class="sourceLineNo">3870</span>          familyId++;<a name="line.3870"></a>
-<span class="sourceLineNo">3871</span>        }<a name="line.3871"></a>
-<span class="sourceLineNo">3872</span>      }<a name="line.3872"></a>
-<span class="sourceLineNo">3873</span>    }<a name="line.3873"></a>
-<span class="sourceLineNo">3874</span>    return htds;<a name="line.3874"></a>
-<span class="sourceLineNo">3875</span>  }<a name="line.3875"></a>
-<span class="sourceLineNo">3876</span><a name="line.3876"></a>
-<span class="sourceLineNo">3877</span>  /**<a name="line.3877"></a>
-<span class="sourceLineNo">3878</span>   * Get supported compression algorithms.<a name="line.3878"></a>
-<span class="sourceLineNo">3879</span>   * @return supported compression algorithms.<a name="line.3879"></a>
-<span class="sourceLineNo">3880</span>   */<a name="line.3880"></a>
-<span class="sourceLineNo">3881</span>  public static Compression.Algorithm[] getSupportedCompressionAlgorithms() {<a name="line.3881"></a>
-<span class="sourceLineNo">3882</span>    String[] allAlgos = HFile.getSupportedCompressionAlgorithms();<a name="line.3882"></a>
-<span class="sourceLineNo">3883</span>    List&lt;Compression.Algorithm&gt; supportedAlgos = new ArrayList&lt;Compression.Algorithm&gt;();<a name="line.3883"></a>
-<span class="sourceLineNo">3884</span>    for (String algoName : allAlgos) {<a name="line.3884"></a>
-<span class="sourceLineNo">3885</span>      try {<a name="line.3885"></a>
-<span class="sourceLineNo">3886</span>        Compression.Algorithm algo = Compression.getCompressionAlgorithmByName(algoName);<a name="line.3886"></a>
-<span class="sourceLineNo">3887</span>        algo.getCompressor();<a name="line.3887"></a>
-<span class="sourceLineNo">3888</span>        supportedAlgos.add(algo);<a name="line.3888"></a>
-<span class="sourceLineNo">3889</span>      } catch (Throwable t) {<a name="line.3889"></a>
-<span class="sourceLineNo">3890</span>        // this algo is not available<a name="line.3890"></a>
-<span class="sourceLineNo">3891</span>      }<a name="line.3891"></a>
-<span class="sourceLineNo">3892</span>    }<a name="line.3892"></a>
-<span class="sourceLineNo">3893</span>    return supportedAlgos.toArray(new Algorithm[supportedAlgos.size()]);<a name="line.3893"></a>
-<span class="sourceLineNo">3894</span>  }<a name="line.3894"></a>
-<span class="sourceLineNo">3895</span><a name="line.3895"></a>
-<span class="sourceLineNo">3896</span>  public Result getClosestRowBefore(Region r, byte[] row, byte[] family) throws IOException {<a name="line.3896"></a>
-<span class="sourceLineNo">3897</span>    Scan scan = new Scan(row);<a name="line.3897"></a>
-<span class="sourceLineNo">3898</span>    scan.setSmall(true);<a name="line.3898"></a>
-<span class="sourceLineNo">3899</span>    scan.setCaching(1);<a name="line.3899"></a>
-<span class="sourceLineNo">3900</span>    scan.setReversed(true);<a name="line.3900"></a>
-<span class="sourceLineNo">3901</span>    scan.addFamily(family);<a name="line.3901"></a>
-<span class="sourceLineNo">3902</span>    try (RegionScanner scanner = r.getScanner(scan)) {<a name="line.3902"></a>
-<span class="sourceLineNo">3903</span>      List&lt;Cell&gt; cells = new ArrayList&lt;Cell&gt;(1);<a name="line.3903"></a>
-<span class="sourceLineNo">3904</span>      scanner.next(cells);<a name="line.3904"></a>
-<span class="sourceLineNo">3905</span>      if (r.getRegionInfo().isMetaRegion() &amp;&amp; !isTargetTable(row, cells.get(0))) {<a name="line.3905"></a>
-<span class="sourceLineNo">3906</span>        return null;<a name="line.3906"></a>
-<span class="sourceLineNo">3907</span>      }<a name="line.3907"></a>
-<span class="sourceLineNo">3908</span>      return Result.create(cells);<a name="line.3908"></a>
-<span class="sourceLineNo">3909</span>    }<a name="line.3909"></a>
-<span class="sourceLineNo">3910</span>  }<a name="line.3910"></a>
-<span class="sourceLineNo">3911</span><a name="line.3911"></a>
-<span class="sourceLineNo">3912</span>  private boolean isTargetTable(final byte[] inRow, Cell c) {<a name="line.3912"></a>
-<span class="sourceLineNo">3913</span>    String inputRowString = Bytes.toString(inRow);<a name="line.3913"></a>
-<span class="sourceLineNo">3914</span>    int i = inputRowString.indexOf(HConstants.DELIMITER);<a name="line.3914"></a>
-<span class="sourceLineNo">3915</span>    String outputRowString = Bytes.toString(c.getRowArray(), c.getRowOffset(), c.getRowLength());<a name="line.3915"></a>
-<span class="sourceLineNo">3916</span>    int o = outputRowString.indexOf(HConstants.DELIMITER);<a name="line.3916"></a>
-<span class="sourceLineNo">3917</span>    return inputRowString.substring(0, i).equals(outputRowString.substring(0, o));<a name="line.3917"></a>
-<span class="sourceLineNo">3918</span>  }<a name="line.3918"></a>
-<span class="sourceLineNo">3919</span>}<a name="line.3919"></a>
+<span class="sourceLineNo">3475</span><a name="line.3475"></a>
+<span class="sourceLineNo">3476</span>  public static void waitForHostPort(String host, int port)<a name="line.3476"></a>
+<span class="sourceLineNo">3477</span>      throws IOException {<a name="line.3477"></a>
+<span class="sourceLineNo">3478</span>    final int maxTimeMs = 10000;<a name="line.3478"></a>
+<span class="sourceLineNo">3479</span>    final int maxNumAttempts = maxTimeMs / HConstants.SOCKET_RETRY_WAIT_MS;<a name="line.3479"></a>
+<span class="sourceLineNo">3480</span>    IOException savedException = null;<a name="line.3480"></a>
+<span class="sourceLineNo">3481</span>    LOG.info("Waiting for server at " + host + ":" + port);<a name="line.3481"></a>
+<span class="sourceLineNo">3482</span>    for (int attempt = 0; attempt &lt; maxNumAttempts; ++attempt) {<a name="line.3482"></a>
+<span class="sourceLineNo">3483</span>      try {<a name="line.3483"></a>
+<span class="sourceLineNo">3484</span>        Socket sock = new Socket(InetAddress.getByName(host), port);<a name="line.3484"></a>
+<span class="sourceLineNo">3485</span>        sock.close();<a name="line.3485"></a>
+<span class="sourceLineNo">3486</span>        savedException = null;<a name="line.3486"></a>
+<span class="sourceLineNo">3487</span>        LOG.info("Server at " + host + ":" + port + " is available");<a name="line.3487"></a>
+<span class="sourceLineNo">3488</span>        break;<a name="line.3488"></a>
+<span class="sourceLineNo">3489</span>      } catch (UnknownHostException e) {<a name="line.3489"></a>
+<span class="sourceLineNo">3490</span>        throw new IOException("Failed to look up " + host, e);<a name="line.3490"></a>
+<span class="sourceLineNo">3491</span>      } catch (IOException e) {<a name="line.3491"></a>
+<span class="sourceLineNo">3492</span>        savedException = e;<a name="line.3492"></a>
+<span class="sourceLineNo">3493</span>      }<a name="line.3493"></a>
+<span class="sourceLineNo">3494</span>      Threads.sleepWithoutInterrupt(HConstants.SOCKET_RETRY_WAIT_MS);<a name="line.3494"></a>
+<span class="sourceLineNo">3495</span>    }<a name="line.3495"></a>
+<span class="sourceLineNo">3496</span><a name="line.3496"></a>
+<span class="sourceLineNo">3497</span>    if (savedException != null) {<a name="line.3497"></a>
+<span class="sourceLineNo">3498</span>      throw savedException;<a name="line.3498"></a>
+<span class="sourceLineNo">3499</span>    }<a name="line.3499"></a>
+<span class="sourceLineNo">3500</span>  }<a name="line.3500"></a>
+<span class="sourceLineNo">3501</span><a name="line.3501"></a>
+<span class="sourceLineNo">3502</span>  /**<a name="line.3502"></a>
+<span class="sourceLineNo">3503</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3503"></a>
+<span class="sourceLineNo">3504</span>   * logs a warning and continues.<a name="line.3504"></a>
+<span class="sourceLineNo">3505</span>   * @return the number of regions the table was split into<a name="line.3505"></a>
+<span class="sourceLineNo">3506</span>   */<a name="line.3506"></a>
+<span class="sourceLineNo">3507</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3507"></a>
+<span class="sourceLineNo">3508</span>      TableName tableName, byte[] columnFamily, Algorithm compression,<a name="line.3508"></a>
+<span class="sourceLineNo">3509</span>      DataBlockEncoding dataBlockEncoding) throws IOException {<a name="line.3509"></a>
+<span class="sourceLineNo">3510</span>    return createPreSplitLoadTestTable(conf, tableName,<a name="line.3510"></a>
+<span class="sourceLineNo">3511</span>      columnFamily, compression, dataBlockEncoding, DEFAULT_REGIONS_PER_SERVER, 1,<a name="line.3511"></a>
+<span class="sourceLineNo">3512</span>      Durability.USE_DEFAULT);<a name="line.3512"></a>
+<span class="sourceLineNo">3513</span>  }<a name="line.3513"></a>
+<span class="sourceLineNo">3514</span>  /**<a name="line.3514"></a>
+<span class="sourceLineNo">3515</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3515"></a>
+<span class="sourceLineNo">3516</span>   * logs a warning and continues.<a name="line.3516"></a>
+<span class="sourceLineNo">3517</span>   * @return the number of regions the table was split into<a name="line.3517"></a>
+<span class="sourceLineNo">3518</span>   */<a name="line.3518"></a>
+<span class="sourceLineNo">3519</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3519"></a>
+<span class="sourceLineNo">3520</span>      TableName tableName, byte[] columnFamily, Algorithm compression,<a name="line.3520"></a>
+<span class="sourceLineNo">3521</span>      DataBlockEncoding dataBlockEncoding, int numRegionsPerServer, int regionReplication,<a name="line.3521"></a>
+<span class="sourceLineNo">3522</span>      Durability durability)<a name="line.3522"></a>
+<span class="sourceLineNo">3523</span>          throws IOException {<a name="line.3523"></a>
+<span class="sourceLineNo">3524</span>    HTableDescriptor desc = new HTableDescriptor(tableName);<a name="line.3524"></a>
+<span class="sourceLineNo">3525</span>    desc.setDurability(durability);<a name="line.3525"></a>
+<span class="sourceLineNo">3526</span>    desc.setRegionReplication(regionReplication);<a name="line.3526"></a>
+<span class="sourceLineNo">3527</span>    HColumnDescriptor hcd = new HColumnDescriptor(columnFamily);<a name="line.3527"></a>
+<span class="sourceLineNo">3528</span>    hcd.setDataBlockEncoding(dataBlockEncoding);<a name="line.3528"></a>
+<span class="sourceLineNo">3529</span>    hcd.setCompressionType(compression);<a name="line.3529"></a>
+<span class="sourceLineNo">3530</span>    return createPreSplitLoadTestTable(conf, desc, hcd, numRegionsPerServer);<a name="line.3530"></a>
+<span class="sourceLineNo">3531</span>  }<a name="line.3531"></a>
+<span class="sourceLineNo">3532</span><a name="line.3532"></a>
+<span class="sourceLineNo">3533</span>  /**<a name="line.3533"></a>
+<span class="sourceLineNo">3534</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3534"></a>
+<span class="sourceLineNo">3535</span>   * logs a warning and continues.<a name="line.3535"></a>
+<span class="sourceLineNo">3536</span>   * @return the number of regions the table was split into<a name="line.3536"></a>
+<span class="sourceLineNo">3537</span>   */<a name="line.3537"></a>
+<span class="sourceLineNo">3538</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3538"></a>
+<span class="sourceLineNo">3539</span>      TableName tableName, byte[][] columnFamilies, Algorithm compression,<a name="line.3539"></a>
+<span class="sourceLineNo">3540</span>      DataBlockEncoding dataBlockEncoding, int numRegionsPerServer, int regionReplication,<a name="line.3540"></a>
+<span class="sourceLineNo">3541</span>      Durability durability)<a name="line.3541"></a>
+<span class="sourceLineNo">3542</span>          throws IOException {<a name="line.3542"></a>
+<span class="sourceLineNo">3543</span>    HTableDescriptor desc = new HTableDescriptor(tableName);<a name="line.3543"></a>
+<span class="sourceLineNo">3544</span>    desc.setDurability(durability);<a name="line.3544"></a>
+<span class="sourceLineNo">3545</span>    desc.setRegionReplication(regionReplication);<a name="line.3545"></a>
+<span class="sourceLineNo">3546</span>    HColumnDescriptor[] hcds = new HColumnDescriptor[columnFamilies.length];<a name="line.3546"></a>
+<span class="sourceLineNo">3547</span>    for (int i = 0; i &lt; columnFamilies.length; i++) {<a name="line.3547"></a>
+<span class="sourceLineNo">3548</span>      HColumnDescriptor hcd = new HColumnDescriptor(columnFamilies[i]);<a name="line.3548"></a>
+<span class="sourceLineNo">3549</span>      hcd.setDataBlockEncoding(dataBlockEncoding);<a name="line.3549"></a>
+<span class="sourceLineNo">3550</span>      hcd.setCompressionType(compression);<a name="line.3550"></a>
+<span class="sourceLineNo">3551</span>      hcds[i] = hcd;<a name="line.3551"></a>
+<span class="sourceLineNo">3552</span>    }<a name="line.3552"></a>
+<span class="sourceLineNo">3553</span>    return createPreSplitLoadTestTable(conf, desc, hcds, numRegionsPerServer);<a name="line.3553"></a>
+<span class="sourceLineNo">3554</span>  }<a name="line.3554"></a>
+<span class="sourceLineNo">3555</span><a name="line.3555"></a>
+<span class="sourceLineNo">3556</span>  /**<a name="line.3556"></a>
+<span class="sourceLineNo">3557</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3557"></a>
+<span class="sourceLineNo">3558</span>   * logs a warning and continues.<a name="line.3558"></a>
+<span class="sourceLineNo">3559</span>   * @return the number of regions the table was split into<a name="line.3559"></a>
+<span class="sourceLineNo">3560</span>   */<a name="line.3560"></a>
+<span class="sourceLineNo">3561</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3561"></a>
+<span class="sourceLineNo">3562</span>      HTableDescriptor desc, HColumnDescriptor hcd) throws IOException {<a name="line.3562"></a>
+<span class="sourceLineNo">3563</span>    return createPreSplitLoadTestTable(conf, desc, hcd, DEFAULT_REGIONS_PER_SERVER);<a name="line.3563"></a>
+<span class="sourceLineNo">3564</span>  }<a name="line.3564"></a>
+<span class="sourceLineNo">3565</span><a name="line.3565"></a>
+<span class="sourceLineNo">3566</span>  /**<a name="line.3566"></a>
+<span class="sourceLineNo">3567</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3567"></a>
+<span class="sourceLineNo">3568</span>   * logs a warning and continues.<a name="line.3568"></a>
+<span class="sourceLineNo">3569</span>   * @return the number of regions the table was split into<a name="line.3569"></a>
+<span class="sourceLineNo">3570</span>   */<a name="line.3570"></a>
+<span class="sourceLineNo">3571</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3571"></a>
+<span class="sourceLineNo">3572</span>      HTableDescriptor desc, HColumnDescriptor hcd, int numRegionsPerServer) throws IOException {<a name="line.3572"></a>
+<span class="sourceLineNo">3573</span>    return createPreSplitLoadTestTable(conf, desc, new HColumnDescriptor[] {hcd},<a name="line.3573"></a>
+<span class="sourceLineNo">3574</span>        numRegionsPerServer);<a name="line.3574"></a>
+<span class="sourceLineNo">3575</span>  }<a name="line.3575"></a>
+<span class="sourceLineNo">3576</span><a name="line.3576"></a>
+<span class="sourceLineNo">3577</span>  /**<a name="line.3577"></a>
+<span class="sourceLineNo">3578</span>   * Creates a pre-split table for load testing. If the table already exists,<a name="line.3578"></a>
+<span class="sourceLineNo">3579</span>   * logs a warning and continues.<a name="line.3579"></a>
+<span class="sourceLineNo">3580</span>   * @return the number of regions the table was split into<a name="line.3580"></a>
+<span class="sourceLineNo">3581</span>   */<a name="line.3581"></a>
+<span class="sourceLineNo">3582</span>  public static int createPreSplitLoadTestTable(Configuration conf,<a name="line.3582"></a>
+<span class="sourceLineNo">3583</span>      HTableDescriptor desc, HColumnDescriptor[] hcds, int numRegionsPerServer) throws IOException {<a name="line.3583"></a>
+<span class="sourceLineNo">3584</span>    for (HColumnDescriptor hcd : hcds) {<a name="line.3584"></a>
+<span class="sourceLineNo">3585</span>      if (!desc.hasFamily(hcd.getName())) {<a name="line.3585"></a>
+<span class="sourceLineNo">3586</span>        desc.addFamily(hcd);<a name="line.3586"></a>
+<span class="sourceLineNo">3587</span>      }<a name="line.3587"></a>
+<span class="sourceLineNo">3588</span>    }<a name="line.3588"></a>
+<span class="sourceLineNo">3589</span><a name="line.3589"></a>
+<span class="sourceLineNo">3590</span>    int totalNumberOfRegions = 0;<a name="line.3590"></a>
+<span class="sourceLineNo">3591</span>    Connection unmanagedConnection = ConnectionFactory.createConnection(conf);<a name="line.3591"></a>
+<span class="sourceLineNo">3592</span>    Admin admin = unmanagedConnection.getAdmin();<a name="line.3592"></a>
+<span class="sourceLineNo">3593</span><a name="line.3593"></a>
+<span class="sourceLineNo">3594</span>    try {<a name="line.3594"></a>
+<span class="sourceLineNo">3595</span>      // create a table a pre-splits regions.<a name="line.3595"></a>
+<span class="sourceLineNo">3596</span>      // The number of splits is set as:<a name="line.3596"></a>
+<span class="sourceLineNo">3597</span>      //    region servers * regions per region server).<a name="line.3597"></a>
+<span class="sourceLineNo">3598</span>      int numberOfServers = admin.getClusterStatus().getServers().size();<a name="line.3598"></a>
+<span class="sourceLineNo">3599</span>      if (numberOfServers == 0) {<a name="line.3599"></a>
+<span class="sourceLineNo">3600</span>        throw new IllegalStateException("No live regionservers");<a name="line.3600"></a>
+<span class="sourceLineNo">3601</span>      }<a name="line.3601"></a>
+<span class="sourceLineNo">3602</span><a name="line.3602"></a>
+<span class="sourceLineNo">3603</span>      totalNumberOfRegions = numberOfServers * numRegionsPerServer;<a name="line.3603"></a>
+<span class="sourceLineNo">3604</span>      LOG.info("Number of live regionservers: " + numberOfServers + ", " +<a name="line.3604"></a>
+<span class="sourceLineNo">3605</span>          "pre-splitting table into " + totalNumberOfRegions + " regions " +<a name="line.3605"></a>
+<span class="sourceLineNo">3606</span>          "(regions per server: " + numRegionsPerServer + ")");<a name="line.3606"></a>
+<span class="sourceLineNo">3607</span><a name="line.3607"></a>
+<span class="sourceLineNo">3608</span>      byte[][] splits = new RegionSplitter.HexStringSplit().split(<a name="line.3608"></a>
+<span class="sourceLineNo">3609</span>          totalNumberOfRegions);<a name="line.3609"></a>
+<span class="sourceLineNo">3610</span><a name="line.3610"></a>
+<span class="sourceLineNo">3611</span>      admin.createTable(desc, splits);<a name="line.3611"></a>
+<span class="sourceLineNo">3612</span>    } catch (MasterNotRunningException e) {<a name="line.3612"></a>
+<span class="sourceLineNo">3613</span>      LOG.error("Master not running", e);<a name="line.3613"></a>
+<span class="sourceLineNo">3614</span>      throw new IOException(e);<a name="line.3614"></a>
+<span class="sourceLineNo">3615</span>    } catch (TableExistsException e) {<a name="line.3615"></a>
+<span class="sourceLineNo">3616</span>      LOG.warn("Table " + desc.getTableName() +<a name="line.3616"></a>
+<span class="sourceLineNo">3617</span>          " already exists, continuing");<a name="line.3617"></a>
+<span class="sourceLineNo">3618</span>    } finally {<a name="line.3618"></a>
+<span class="sourceLineNo">3619</span>      admin.close();<a name="line.3619"></a>
+<span class="sourceLineNo">3620</span>      unmanagedConnection.close();<a name="line.3620"></a>
+<span class="sourceLineNo">3621</span>    }<a name="line.3621"></a>
+<span class="sourceLineNo">3622</span>    return totalNumberOfRegions;<a name="line.3622"></a>
+<span class="sourceLineNo">3623</span>  }<a name="line.3623"></a>
+<span class="sourceLineNo">3624</span><a name="line.3624"></a>
+<span class="sourceLineNo">3625</span>  public static int getMetaRSPort(Connection connection) throws IOException {<a name="line.3625"></a>
+<span class="sourceLineNo">3626</span>    try (RegionLocator locator = connection.getRegionLocator(TableName.META_TABLE_NAME)) {<a name="line.3626"></a>
+<span class="sourceLineNo">3627</span>      return locator.getRegionLocation(Bytes.toBytes("")).getPort();<a name="line.3627"></a>
+<span class="sourceLineNo">3628</span>    }<a name="line.3628"></a>
+<span class="sourceLineNo">3629</span>  }<a name="line.3629"></a>
+<span class="sourceLineNo">3630</span><a name="line.3630"></a>
+<span class="sourceLineNo">3631</span>  /**<a name="line.3631"></a>
+<span class="sourceLineNo">3632</span>   *  Due to async racing issue, a region may not be in<a name="line.3632"></a>
+<span class="sourceLineNo">3633</span>   *  the online region list of a region server yet, after<a name="line.3633"></a>
+<span class="sourceLineNo">3634</span>   *  the assignment znode is deleted and the new assignment<a name="line.3634"></a>
+<span class="sourceLineNo">3635</span>   *  is recorded in master.<a name="line.3635"></a>
+<span class="sourceLineNo">3636</span>   */<a name="line.3636"></a>
+<span class="sourceLineNo">3637</span>  public void assertRegionOnServer(<a name="line.3637"></a>
+<span class="sourceLineNo">3638</span>      final HRegionInfo hri, final ServerName server,<a name="line.3638"></a>
+<span class="sourceLineNo">3639</span>      final long timeout) throws IOException, InterruptedException {<a name="line.3639"></a>
+<span class="sourceLineNo">3640</span>    long timeoutTime = System.currentTimeMillis() + timeout;<a name="line.3640"></a>
+<span class="sourceLineNo">3641</span>    while (true) {<a name="line.3641"></a>
+<span class="sourceLineNo">3642</span>      List&lt;HRegionInfo&gt; regions = getHBaseAdmin().getOnlineRegions(server);<a name="line.3642"></a>
+<span class="sourceLineNo">3643</span>      if (regions.contains(hri)) return;<a name="line.3643"></a>
+<span class="sourceLineNo">3644</span>      long now = System.currentTimeMillis();<a name="line.3644"></a>
+<span class="sourceLineNo">3645</span>      if (now &gt; timeoutTime) break;<a name="line.3645"></a>
+<span class="sourceLineNo">3646</span>      Thread.sleep(10);<a name="line.3646"></a>
+<span class="sourceLineNo">3647</span>    }<a name="line.3647"></a>
+<span class="sourceLineNo">3648</span>    fail("Could not find region " + hri.getRegionNameAsString()<a name="line.3648"></a>
+<span class="sourceLineNo">3649</span>      + " on server " + server);<a name="line.3649"></a>
+<span class="sourceLineNo">3650</span>  }<a name="line.3650"></a>
+<span class="sourceLineNo">3651</span><a name="line.3651"></a>
+<span class="sourceLineNo">3652</span>  /**<a name="line.3652"></a>
+<span class="sourceLineNo">3653</span>   * Check to make sure the region is open on the specified<a name="line.3653"></a>
+<span class="sourceLineNo">3654</span>   * region server, but not on any other one.<a name="line.3654"></a>
+<span class="sourceLineNo">3655</span>   */<a name="line.3655"></a>
+<span class="sourceLineNo">3656</span>  public void assertRegionOnlyOnServer(<a name="line.3656"></a>
+<span class="sourceLineNo">3657</span>      final HRegionInfo hri, final ServerName server,<a name="line.3657"></a>
+<span class="sourceLineNo">3658</span>      final long timeout) throws IOException, InterruptedException {<a name="line.3658"></a>
+<span class="sourceLineNo">3659</span>    long timeoutTime = System.currentTimeMillis() + timeout;<a name="line.3659"></a>
+<span class="sourceLineNo">3660</span>    while (true) {<a name="line.3660"></a>
+<span class="sourceLineNo">3661</span>      List&lt;HRegionInfo&gt; regions = getHBaseAdmin().getOnlineRegions(server);<a name="line.3661"></a>
+<span class="sourceLineNo">3662</span>      if (regions.contains(hri)) {<a name="line.3662"></a>
+<span class="sourceLineNo">3663</span>        List&lt;JVMClusterUtil.RegionServerThread&gt; rsThreads =<a name="line.3663"></a>
+<span class="sourceLineNo">3664</span>          getHBaseCluster().getLiveRegionServerThreads();<a name="line.3664"></a>
+<span class="sourceLineNo">3665</span>        for (JVMClusterUtil.RegionServerThread rsThread: rsThreads) {<a name="line.3665"></a>
+<span class="sourceLineNo">3666</span>          HRegionServer rs = rsThread.getRegionServer();<a name="line.3666"></a>
+<span class="sourceLineNo">3667</span>          if (server.equals(rs.getServerName())) {<a name="line.3667"></a>
+<span class="sourceLineNo">3668</span>            continue;<a name="line.3668"></a>
+<span class="sourceLineNo">3669</span>          }<a name="line.3669"></a>
+<span class="sourceLineNo">3670</span>          Collection&lt;Region&gt; hrs = rs.getOnlineRegionsLocalContext();<a name="line.3670"></a>
+<span class="sourceLineNo">3671</span>          for (Region r: hrs) {<a name="line.3671"></a>
+<span class="sourceLineNo">3672</span>            assertTrue("Region should not be double assigned",<a name="line.3672"></a>
+<span class="sourceLineNo">3673</span>              r.getRegionInfo().getRegionId() != hri.getRegionId());<a name="line.3673"></a>
+<span class="sourceLineNo">3674</span>          }<a name="line.3674"></a>
+<span class="sourceLineNo">3675</span>        }<a name="line.3675"></a>
+<span class="sourceLineNo">3676</span>        return; // good, we are happy<a name="line.3676"></a>
+<span class="sourceLineNo">3677</span>      }<a name="line.3677"></a>
+<span class="sourceLineNo">3678</span>      long now = System.currentTimeMillis();<a name="line.3678"></a>
+<span class="sourceLineNo">3679</span>      if (now &gt; timeoutTime) break;<a name="line.3679"></a>
+<span class="sourceLineNo">3680</span>      Thread.sleep(10);<a name="line.3680"></a>
+<span class="sourceLineNo">3681</span>    }<a name="line.3681"></a>
+<span class="sourceLineNo">3682</span>    fail("Could not find region " + hri.getRegionNameAsString()<a name="line.3682"></a>
+<span class="sourceLineNo">3683</span>      + " on server " + server);<a name="line.3683"></a>
+<span class="sourceLineNo">3684</span>  }<a name="line.3684"></a>
+<span class="sourceLineNo">3685</span><a name="line.3685"></a>
+<span class="sourceLineNo">3686</span>  public HRegion createTestRegion(String tableName, HColumnDescriptor hcd)<a name="line.3686"></a>
+<span class="sourceLineNo">3687</span>      throws IOException {<a name="line.3687"></a>
+<span class="sourceLineNo">3688</span>    HTableDescriptor htd = new HTableDescriptor(TableName.valueOf(tableName));<a name="line.3688"></a>
+<span class="sourceLineNo">3689</span>    htd.addFamily(hcd);<a name="line.3689"></a>
+<span class="sourceLineNo">3690</span>    HRegionInfo info =<a name="line.3690"></a>
+<span class="sourceLineNo">3691</span>        new HRegionInfo(TableName.valueOf(tableName), null, null, false);<a name="line.3691"></a>
+<span class="sourceLineNo">3692</span>    return createRegionAndWAL(info, getDataTestDir(), getConfiguration(), htd);<a name="line.3692"></a>
+<span class="sourceLineNo">3693</span>  }<a name="line.3693"></a>
+<span class="sourceLineNo">3694</span><a name="line.3694"></a>
+<span class="sourceLineNo">3695</span>  public void setFileSystemURI(String fsURI) {<a name="line.3695"></a>
+<span class="sourceLineNo">3696</span>    FS_URI = fsURI;<a name="line.3696"></a>
+<span class="sourceLineNo">3697</span>  }<a name="line.3697"></a>
+<span class="sourceLineNo">3698</span><a name="line.3698"></a>
+<span class="sourceLineNo">3699</span>  /**<a name="line.3699"></a>
+<span class="sourceLineNo">3700</span>   * Wrapper method for {@link Waiter#waitFor(Configuration, long, Predicate)}.<a name="line.3700"></a>
+<span class="sourceLineNo">3701</span>   */<a name="line.3701"></a>
+<span class="sourceLineNo">3702</span>  public &lt;E extends Exception&gt; long waitFor(long timeout, Predicate&lt;E&gt; predicate)<a name="line.3702"></a>
+<span class="sourceLineNo">3703</span>      throws E {<a name="line.3703"></a>
+<span class="sourceLineNo">3704</span>    return Waiter.waitFor(this.conf, timeout, predicate);<a name="line.3704"></a>
+<span class="sourceLineNo">3705</span>  }<a name="line.3705"></a>
+<span class="sourceLineNo">3706</span><a name="line.3706"></a>
+<span class="sourceLineNo">3707</span>  /**<a name="line.3707"></a>
+<span class="sourceLineNo">3708</span>   * Wrapper method for {@link Waiter#waitFor(Configuration, long, long, Predicate)}.<a name="line.3708"></a>
+<span class="sourceLineNo">3709</span>   */<a name="line.3709"></a>
+<span class="sourceLineNo">3710</span>  public &lt;E extends Exception&gt; long waitFor(long timeout, long interval, Predicate&lt;E&gt; predicate)<a name="line.3710"></a>
+<span class="sourceLineNo">3711</span>      throws E {<a name="line.3711"></a>
+<span class="sourceLineNo">3712</span>    return Waiter.waitFor(this.conf, timeout, interval, predicate);<a name="line.3712"></a>
+<span class="sourceLineNo">3713</span>  }<a name="line.3713"></a>
+<span class="sourceLineNo">3714</span><a name="line.3714"></a>
+<span class="sourceLineNo">3715</span>  /**<a name="line.3715"></a>
+<span class="sourceLineNo">3716</span>   * Wrapper method for {@link Waiter#waitFor(Configuration, long, long, boolean, Predicate)}.<a name="line.3716"></a>
+<span class="sourceLineNo">3717</span>   */<a name="line.3717"></a>
+<span class="sourceLineNo">3718</span>  public &lt;E extends Exception&gt; long waitFor(long timeout, long interval,<a name="line.3718"></a>
+<span class="sourceLineNo">3719</span>      boolean failIfTimeout, Predicate&lt;E&gt; predicate) throws E {<a name="line.3719"></a>
+<span class="sourceLineNo">3720</span>    return Waiter.waitFor(this.conf, timeout, interval, failIfTimeout, predicate);<a name="line.3720"></a>
+<span class="sourceLineNo">3721</span>  }<a name="line.3721"></a>
+<span class="sourceLineNo">3722</span><a name="line.3722"></a>
+<span class="sourceLineNo">3723</span>  /**<a name="line.3723"></a>
+<span class="sourceLineNo">3724</span>   * Returns a {@link Predicate} for checking that there are no regions in transition in master<a name="line.3724"></a>
+<span class="sourceLineNo">3725</span>   */<a name="line.3725"></a>
+<span class="sourceLineNo">3726</span>  public ExplainingPredicate&lt;IOException&gt; predicateNoRegionsInTransition() {<a name="line.3726"></a>
+<span class="sourceLineNo">3727</span>    return new ExplainingPredicate&lt;IOException&gt;() {<a name="line.3727"></a>
+<span class="sourceLineNo">3728</span>      @Override<a name="line.3728"></a>
+<span class="sourceLineNo">3729</span>      public String explainFailure() throws IOException {<a name="line.3729"></a>
+<span class="sourceLineNo">3730</span>        final RegionStates regionStates = getMiniHBaseCluster().getMaster()<a name="line.3730"></a>
+<span class="sourceLineNo">3731</span>            .getAssignmentManager().getRegionStates();<a name="line.3731"></a>
+<span class="sourceLineNo">3732</span>        return "found in transition: " + regionStates.getRegionsInTransition().toString();<a name="line.3732"></a>
+<span class="sourceLineNo">3733</span>      }<a name="line.3733"></a>
+<span class="sourceLineNo">3734</span><a name="line.3734"></a>
+<span class="sourceLineNo">3735</span>      @Override<a name="line.3735"></a>
+<span class="sourceLineNo">3736</span>      public boolean evaluate() throws IOException {<a name="line.3736"></a>
+<span class="sourceLineNo">3737</span>        final RegionStates regionStates = getMiniHBaseCluster().getMaster()<a name="line.3737"></a>
+<span class="sourceLineNo">3738</span>            .getAssignmentManager().getRegionStates();<a name="line.3738"></a>
+<span class="sourceLineNo">3739</span>        return !regionStates.isRegionsInTransition();<a name="line.3739"></a>
+<span class="sourceLineNo">3740</span>      }<a name="line.3740"></a>
+<span class="sourceLineNo">3741</span>    };<a name="line.3741"></a>
+<span class="sourceLineNo">3742</span>  }<a name="line.3742"></a>
+<span class="sourceLineNo">3743</span><a name="line.3743"></a>
+<span class="sourceLineNo">3744</span>  /**<a name="line.3744"></a>
+<span class="sourceLineNo">3745</span>   * Returns a {@link Predicate} for checking that table is enabled<a name="line.3745"></a>
+<span class="sourceLineNo">3746</span>   */<a name="line.3746"></a>
+<span class="sourceLineNo">3747</span>  public Waiter.Predicate&lt;IOException&gt; predicateTableEnabled(final TableName tableName) {<a name="line.3747"></a>
+<span class="sourceLineNo">3748</span>    return new ExplainingPredicate&lt;IOException&gt;() {<a name="line.3748"></a>
+<span class="sourceLineNo">3749</span>      @Override<a name="line.3749"></a>
+<span class="sourceLineNo">3750</span>      public String explainFailure() throws IOException {<a name="line.3750"></a>
+<span class="sourceLineNo">3751</span>        return explainTableState(tableName, TableState.State.ENABLED);<a name="line.3751"></a>
+<span class="sourceLineNo">3752</span>      }<a name="line.3752"></a>
+<span class="sourceLineNo">3753</span><a name="line.3753"></a>
+<span class="sourceLineNo">3754</span>      @Override<a name="line.3754"></a>
+<span class="sourceLineNo">3755</span>      public boolean evaluate() throws IOException {<a name="line.3755"></a>
+<span class="sourceLineNo">3756</span>        return getHBaseAdmin().tableExists(tableName) &amp;&amp; getHBaseAdmin().isTableEnabled(tableName);<a name="line.3756"></a>
+<span class="sourceLineNo">3757</span>      }<a name="line.3757"></a>
+<span class="sourceLineNo">3758</span>    };<a name="line.3758"></a>
+<span class="sourceLineNo">3759</span>  }<a name="line.3759"></a>
+<span class="sourceLineNo">3760</span><a name="line.3760"></a>
+<span class="sourceLineNo">3761</span>  /**<a name="line.3761"></a>
+<span class="sourceLineNo">3762</span>   * Returns a {@link Predicate} for checking that table is enabled<a name="line.3762"></a>
+<span class="sourceLineNo">3763</span>   */<a name="line.3763"></a>
+<span class="sourceLineNo">3764</span>  public Waiter.Predicate&lt;IOException&gt; predicateTableDisabled(final TableName tableName) {<a name="line.3764"></a>
+<span class="sourceLineNo">3765</span>    return new ExplainingPredicate&lt;IOException&gt;() {<a name="line.3765"></a>
+<span class="sourceLineNo">3766</span>      @Override<a name="line.3766"></a>
+<span class="sourceLineNo">3767</span>      public String explainFailure() throws IOException {<a name="line.3767"></a>
+<span class="sourceLineNo">3768</span>        return explainTableState(tableName, TableState.State.DISABLED);<a name="line.3768"></a>
+<span class="sourceLineNo">3769</span>      }<a name="line.3769"></a>
+<span class="sourceLineNo">3770</span><a name="line.3770"></a>
+<span class="sourceLineNo">3771</span>      @Override<a name="line.3771"></a>
+<span class="sourceLineNo">3772</span>      public boolean evaluate() throws IOException {<a name="line.3772"></a>
+<span class="sourceLineNo">3773</span>        return getHBaseAdmin().isTableDisabled(tableName);<a name="line.3773"></a>
+<span class="sourceLineNo">3774</span>      }<a name="line.3774"></a>
+<span class="sourceLineNo">3775</span>    };<a name="line.3775"></a>
+<span class="sourceLineNo">3776</span>  }<a name="line.3776"></a>
+<span class="sourceLineNo">3777</span><a name="line.3777"></a>
+<span class="sourceLineNo">3778</span>  /**<a name="line.3778"></a>
+<span class="sourceLineNo">3779</span>   * Returns a {@link Predicate} for checking that table is enabled<a name="line.3779"></a>
+<span class="sourceLineNo">3780</span>   */<a name="line.3780"></a>
+<span class="sourceLineNo">3781</span>  public Waiter.Predicate&lt;IOException&gt; predicateTableAvailable(final TableName tableName) {<a name="line.3781"></a>
+<span class="sourceLineNo">3782</span>    return new ExplainingPredicate&lt;IOException&gt;() {<a name="line.3782"></a>
+<span class="sourceLineNo">3783</span>      @Override<a name="line.3783"></a>
+<span class="sourceLineNo">3784</span>      public String explainFailure() throws IOException {<a name="line.3784"></a>
+<span class="sourceLineNo">3785</span>        return explainTableAvailability(tableName);<a name="line.3785"></a>
+<span class="sourceLineNo">3786</span>      }<a name="line.3786"></a>
+<span class="sourceLineNo">3787</span><a name="line.3787"></a>
+<span class="sourceLineNo">3788</span>      @Override<a name="line.3788"></a>
+<span class="sourceLineNo">3789</span>      public boolean evaluate() throws IOException {<a name="line.3789"></a>
+<span class="sourceLineNo">3790</span>        boolean tableAvailable = getHBaseAdmin().isTableAvailable(tableName);<a name="line.3790"></a>
+<span class="sourceLineNo">3791</span>        if (tableAvailable) {<a name="line.3791"></a>
+<span class="sourceLineNo">3792</span>          try {<a name="line.3792"></a>
+<span class="sourceLineNo">3793</span>            Canary.sniff(getHBaseAdmin(), tableName);<a name="line.3793"></a>
+<span class="sourceLineNo">3794</span>          } catch (Exception e) {<a name="line.3794"></a>
+<span class="sourceLineNo">3795</span>            throw new IOException("Canary sniff failed for table " + tableName, e);<a name="line.3795"></a>
+<span class="sourceLineNo">3796</span>          }<a name="line.3796"></a>
+<span class="sourceLineNo">3797</span>        }<a name="line.3797"></a>
+<span class="sourceLineNo">3798</span>        return tableAvailable;<a name="line.3798"></a>
+<span class="sourceLineNo">3799</span>      }<a name="line.3799"></a>
+<span class="sourceLineNo">3800</span>    };<a name="line.3800"></a>
+<span class="sourceLineNo">3801</span>  }<a name="line.3801"></a>
+<span class="sourceLineNo">3802</span><a name="line.3802"></a>
+<span class="sourceLineNo">3803</span>  /**<a name="line.3803"></a>
+<span class="sourceLineNo">3804</span>   * Wait until no regions in transition.<a name="line.3804"></a>
+<span class="sourceLineNo">3805</span>   * @param timeout How long to wait.<a name="line.3805"></a>
+<span class="sourceLineNo">3806</span>   * @throws Exception<a name="line.3806"></a>
+<span class="sourceLineNo">3807</span>   */<a name="line.3807"></a>
+<span class="sourceLineNo">3808</span>  public void waitUntilNoRegionsInTransition(<a name="line.3808"></a>
+<span class="sourceLineNo">3809</span>      final long timeout) throws Exception {<a name="line.3809"></a>
+<span class="sourceLineNo">3810</span>    waitFor(timeout, predicateNoRegionsInTransition());<a name="line.3810"></a>
+<span class="sourceLineNo">3811</span>  }<a name="line.3811"></a>
+<span class="sourceLineNo">3812</span><a name="line.3812"></a>
+<span class="sourceLineNo">3813</span>  /**<a name="line.3813"></a>
+<span class="sourceLineNo">3814</span>   * Wait until labels is ready in VisibilityLabelsCache.<a name="line.3814"></a>
+<span class="sourceLineNo">3815</span>   * @param timeoutMillis<a name="line.3815"></a>
+<span class="sourceLineNo">3816</span>   * @param labels<a name="line.3816"></a>
+<span class="sourceLineNo">3817</span>   */<a name="line.3817"></a>
+<span class="sourceLineNo">3818</span>  public void waitLabelAvailable(long timeoutMillis, final String... labels) {<a name="line.3818"></a>
+<span class="sourceLineNo">3819</span>    final VisibilityLabelsCache labelsCache = VisibilityLabelsCache.get();<a name="line.3819"></a>
+<span class="sourceLineNo">3820</span>    waitFor(timeoutMillis, new Waiter.ExplainingPredicate&lt;RuntimeException&gt;() {<a name="line.3820"></a>
+<span class="sourceLineNo">3821</span><a name="line.3821"></a>
+<span class="sourceLineNo">3822</span>      @Override<a name="line.3822"></a>
+<span class="sourceLineNo">3823</span>      public boolean evaluate() {<a name="line.3823"></a>
+<span class="sourceLineNo">3824</span>        for (String label : labels) {<a name="line.3824"></a>
+<span class="sourceLineNo">3825</span>          if (labelsCache.getLabelOrdinal(label) == 0) {<a name="line.3825"></a>
+<span class="sourceLineNo">3826</span>            return false;<a name="line.3826"></a>
+<span class="sourceLineNo">3827</span>          }<a name="line.3827"></a>
+<span class="sourceLineNo">3828</span>        }<a name="line.3828"></a>
+<span class="sourceLineNo">3829</span>        return true;<a name="line.3829"></a>
+<span class="sourceLineNo">3830</span>      }<a name="line.3830"></a>
+<span class="sourceLineNo">3831</span><a name="line.3831"></a>
+<span class="sourceLineNo">3832</span>      @Override<a name="line.3832"></a>
+<span class="sourceLineNo">3833</span>      public String explainFailure() {<a name="line.3833"></a>
+<span class="sourceLineNo">3834</span>        for (String label : labels) {<a name="line.3834"></a>
+<span class="sourceLineNo">3835</span>          if (labelsCache.getLabelOrdinal(label) == 0) {<a name="line.3835"></a>
+<span class="sourceLineNo">3836</span>            return label + " is not available yet";<a name="line.3836"></a>
+<span class="sourceLineNo">3837</span>          }<a name="line.3837"></a>
+<span class="sourceLineNo">3838</span>        }<a name="line.3838"></a>
+<span class="sourceLineNo">3839</span>        return "";<a name="line.3839"></a>
+<span class="sourceLineNo">3840</span>      }<a name="line.3840"></a>
+<span class="sourceLineNo">3841</span>    });<a name="line.3841"></a>
+<span class="sourceLineNo">3842</span>  }<a name="line.3842"></a>
+<span class="sourceLineNo">3843</span><a name="line.3843"></a>
+<span class="sourceLineNo">3844</span>  /**<a name="line.3844"></a>
+<span class="sourceLineNo">3845</span>   * Create a set of column descriptors with the combination of compression,<a name="line.3845"></a>
+<span class="sourceLineNo">3846</span>   * encoding, bloom codecs available.<a name="line.3846"></a>
+<span class="sourceLineNo">3847</span>   * @return the list of column descriptors<a name="line.3847"></a>
+<span class="sourceLineNo">3848</span>   */<a name="line.3848"></a>
+<span class="sourceLineNo">3849</span>  public static List&lt;HColumnDescriptor&gt; generateColumnDescriptors() {<a name="line.3849"></a>
+<span class="sourceLineNo">3850</span>    return generateColumnDescriptors("");<a name="line.3850"></a>
+<span class="sourceLineNo">3851</span>  }<a name="line.3851"></a>
+<span class="sourceLineNo">3852</span><a name="line.3852"></a>
+<span class="sourceLineNo">3853</span>  /**<a name="line.3853"></a>
+<span class="sourceLineNo">3854</span>   * Create a set of column descriptors with the combination of compression,<a name="line.3854"></a>
+<span class="sourceLineNo">3855</span>   * encoding, bloom codecs available.<a name="line.3855"></a>
+<span class="sourceLineNo">3856</span>   * @param prefix family names prefix<a name="line.3856"></a>
+<span class="sourceLineNo">3857</span>   * @return the list of column descriptors<a name="line.3857"></a>
+<span class="sourceLineNo">3858</span>   */<a name="line.3858"></a>
+<span class="sourceLineNo">3859</span>  public static List&lt;HColumnDescriptor&gt; generateColumnDescriptors(final String prefix) {<a name="line.3859"></a>
+<span class="sourceLineNo">3860</span>    List&lt;HColumnDescriptor&gt; htds = new ArrayList&lt;HColumnDescriptor&gt;();<a name="line.3860"></a>
+<span class="sourceLineNo">3861</span>    long familyId = 0;<a name="line.3861"></a>
+<span class="sourceLineNo">3862</span>    for (Compression.Algorithm compressionType: getSupportedCompressionAlgorithms()) {<a name="line.3862"></a>
+<span class="sourceLineNo">3863</span>      for (DataBlockEncoding encodingType: DataBlockEncoding.values()) {<a name="line.3863"></a>
+<span class="sourceLineNo">3864</span>        for (BloomType bloomType: BloomType.values()) {<a name="line.3864"></a>
+<span class="sourceLineNo">3865</span>          String name = String.format("%s-cf-!@#&amp;-%d!@#", prefix, familyId);<a name="line.3865"></a>
+<span class="sourceLineNo">3866</span>          HColumnDescriptor htd = new HColumnDescriptor(name);<a name="line.3866"></a>
+<span class="sourceLineNo">3867</span>          htd.setCompressionType(compressionType);<a name="line.3867"></a>
+<span class="sourceLineNo">3868</span>          htd.setDataBlockEncoding(encodingType);<a name="line.3868"></a>
+<span class="sourceLineNo">3869</span>          htd.setBloomFilterType(bloomType);<a name="line.3869"></a>
+<span class="sourceLineNo">3870</span>          htds.add(htd);<a name="line.3870"></a>
+<span class="sourceLineNo">3871</span>          familyId++;<a name="line.3871"></a>
+<span class="sourceLineNo">3872</span>        }<a name="line.3872"></a>
+<span class="sourceLineNo">3873</span>      }<a name="line.3873"></a>
+<span class="sourceLineNo">3874</span>    }<a name="line.3874"></a>
+<span class="sourceLineNo">3875</span>    return htds;<a name="line.3875"></a>
+<span class="sourceLineNo">3876</span>  }<a name="line.3876"></a>
+<span class="sourceLineNo">3877</span><a name="line.3877"></a>
+<span class="sourceLineNo">3878</span>  /**<a name="line.3878"></a>
+<span class="sourceLineNo">3879</span>   * Get supported compression algorithms.<a name="line.3879"></a>
+<span class="sourceLineNo">3880</span>   * @return supported compression algorithms.<a name="line.3880"></a>
+<span class="sourceLineNo">3881</span>   */<a name="line.3881"></a>
+<span class="sourceLineNo">3882</span>  public static Compression.Algorithm[] getSupportedCompressionAlgorithms() {<a name="line.3882"></a>
+<span class="sourceLineNo">3883</span>    String[] allAlgos = HFile.getSupportedCompressionAlgorithms();<a name="line.3883"></a>
+<span class="sourceLineNo">3884</span>    List&lt;Compression.Algorithm&gt; supportedAlgos = new ArrayList&lt;Compression.Algorithm&gt;();<a name="line.3884"></a>
+<span class="sourceLineNo">3885</span>    for (String algoName : allAlgos) {<a name="line.3885"></a>
+<span class="sourceLineNo">3886</span>      try {<a name="line.3886"></a>
+<span class="sourceLineNo">3887</span>        Compression.Algorithm algo = Compression.getCompressionAlgorithmByName(algoName);<a name="line.3887"></a>
+<span class="sourceLineNo">3888</span>        algo.getCompressor();<a name="line.3888"></a>
+<span class="sourceLineNo">3889</span>        supportedAlgos.add(algo);<a name="line.3889"></a>
+<span class="sourceLineNo">3890</span>      } catch (Throwable t) {<a name="line.3890"></a>
+<span class="sourceLineNo">3891</span>        // this algo is not available<a name="line.3891"></a>
+<span class="sourceLineNo">3892</span>      }<a name="line.3892"></a>
+<span class="sourceLineNo">3893</span>    }<a name="line.3893"></a>
+<span class="sourceLineNo">3894</span>    return supportedAlgos.toArray(new Algorithm[supportedAlgos.size()]);<a name="line.3894"></a>
+<span class="sourceLineNo">3895</span>  }<a name="line.3895"></a>
+<span class="sourceLineNo">3896</span><a name="line.3896"></a>
+<span class="sourceLineNo">3897</span>  public Result getClosestRowBefore(Region r, byte[] row, byte[] family) throws IOException {<a name="line.3897"></a>
+<span class="sourceLineNo">3898</span>    Scan scan = new Scan(row);<a name="line.3898"></a>
+<span class="sourceLineNo">3899</span>    scan.setSmall(true);<a name="line.3899"></a>
+<span class="sourceLineNo">3900</span>    scan.setCaching(1);<a name="line.3900"></a>
+<span class="sourceLineNo">3901</span>    scan.setReversed(true);<a name="line.3901"></a>
+<span class="sourceLineNo">3902</span>    scan.addFamily(family);<a name="line.3902"></a>
+<span class="sourceLineNo">3903</span>    try (RegionScanner scanner = r.getScanner(scan)) {<a name="line.3903"></a>
+<span class="sourceLineNo">3904</span>      List&lt;Cell&gt; cells = new ArrayList&lt;Cell&gt;(1);<a name="line.3904"></a>
+<span class="sourceLineNo">3905</span>      scanner.next(cells);<a name="line.3905"></a>
+<span class="sourceLineNo">3906</span>      if (r.getRegionInfo().isMetaRegion() &amp;&amp; !isTargetTable(row, cells.get(0))) {<a name="line.3906"></a>
+<span class="sourceLineNo">3907</span>        return null;<a name="line.3907"></a>
+<span class="sourceLineNo">3908</span>      }<a name="line.3908"></a>
+<span class="sourceLineNo">3909</span>      return Result.create(cells);<a name="line.3909"></a>
+<span class="sourceLineNo">3910</span>    }<a name="line.3910"></a>
+<span class="sourceLineNo">3911</span>  }<a name="line.3911"></a>
+<span class="sourceLineNo">3912</span><a name="line.3912"></a>
+<span class="sourceLineNo">3913</span>  private boolean isTargetTable(final byte[] inRow, Cell c) {<a name="line.3913"></a>
+<span class="sourceLineNo">3914</span>    String inputRowString = Bytes.toString(inRow);<a name="line.3914"></a>
+<span class="sourceLineNo">3915</span>    int i = inputRowString.indexOf(HConstants.DELIMITER);<a name="line.3915"></a>
+<span class="sourceLineNo">3916</span>    String outputRowString = Bytes.toString(c.getRowArray(), c.getRowOffset(), c.getRowLength());<a name="line.3916"></a>
+<span class="sourceLineNo">3917</span>    int o = outputRowString.indexOf(HConstants.DELIMITER);<a name="line.3917"></a>
+<span class="sourceLineNo">3918</span>    return inputRowString.substring(0, i).equals(outputRowString.substring(0, o));<a name="line.3918"></a>
+<span class="sourceLineNo">3919</span>  }<a name="line.3919"></a>
+<span class="sourceLineNo">3920</span>}<a name="line.3920"></a>
 
 
 

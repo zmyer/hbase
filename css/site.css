@@ -61,7 +61,6 @@ li#publishDate.pull-right {
 .navbar-fixed-bottom .container,
 .navbar-inner {
   width: 100%;
-  margin: 2px;
 }
 
 /* Change the color and effect when clicking in menus */
@@ -76,7 +75,7 @@ li#publishDate.pull-right {
 }
 
 /* On small screens, put the search form on its own line */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 979px) {
   body {
     width: 100%;
     font-size: 120%;
@@ -90,11 +89,16 @@ li#publishDate.pull-right {
     margin-left: 5px;
     margin-right: 5px;
     clear: both;
-    margin-bottom: 2px;
+    height: auto;
   }
-  div#banner {
-    margin-top: 90px;
+  .collapse.in {
+      height: auto;  /* this style already exists in bootstrap.css */
+      overflow: visible;  /* this one doesn't. Add it! */
   }
+  .navbar-inner {
+    margin-top: -60px;
+  }
+
   form#search-form.navbar-search.pull-right, .pull-right {
     width: 95%;
     margin: 2px;
