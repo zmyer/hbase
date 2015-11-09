@@ -62,7 +62,9 @@ li#publishDate.pull-right {
 .navbar-inner {
   width: 100%;
 }
-
+.dropdown-backdrop {
+  position: static;
+}
 /* Change the color and effect when clicking in menus */
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus,
