@@ -94,7 +94,6 @@ li#publishDate.pull-right {
   .gsc-results-wrapper-visible {
       box-sizing: content-box;
       line-height: normal;
-      height: auto !important;
   }
   div#search-form.navbar-search.pull-right {
     padding: 0;
