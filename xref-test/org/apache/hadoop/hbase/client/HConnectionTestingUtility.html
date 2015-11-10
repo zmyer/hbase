@@ -127,36 +127,34 @@
 <a class="jxr_linenumber" name="117" href="#117">117</a>     Mockito.when(c.getAsyncProcess()).thenReturn(
 <a class="jxr_linenumber" name="118" href="#118">118</a>       <strong class="jxr_keyword">new</strong> AsyncProcess(c, conf, <strong class="jxr_keyword">null</strong>, RpcRetryingCallerFactory.instantiate(conf), false,
 <a class="jxr_linenumber" name="119" href="#119">119</a>           RpcControllerFactory.instantiate(conf)));
-<a class="jxr_linenumber" name="120" href="#120">120</a>     Mockito.doNothing().when(c).incCount();
-<a class="jxr_linenumber" name="121" href="#121">121</a>     Mockito.doNothing().when(c).decCount();
-<a class="jxr_linenumber" name="122" href="#122">122</a>     Mockito.when(c.getNewRpcRetryingCallerFactory(conf)).thenReturn(
-<a class="jxr_linenumber" name="123" href="#123">123</a>         RpcRetryingCallerFactory.instantiate(conf,
-<a class="jxr_linenumber" name="124" href="#124">124</a>             RetryingCallerInterceptorFactory.NO_OP_INTERCEPTOR, <strong class="jxr_keyword">null</strong>));
-<a class="jxr_linenumber" name="125" href="#125">125</a>     HTableInterface t = Mockito.mock(HTableInterface.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="126" href="#126">126</a>     Mockito.when(c.getTable((TableName)Mockito.any())).thenReturn(t);
-<a class="jxr_linenumber" name="127" href="#127">127</a>     ResultScanner rs = Mockito.mock(ResultScanner.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="128" href="#128">128</a>     Mockito.when(t.getScanner((Scan)Mockito.any())).thenReturn(rs);
-<a class="jxr_linenumber" name="129" href="#129">129</a>     <strong class="jxr_keyword">return</strong> c;
-<a class="jxr_linenumber" name="130" href="#130">130</a>   }
-<a class="jxr_linenumber" name="131" href="#131">131</a> 
-<a class="jxr_linenumber" name="132" href="#132">132</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="133" href="#133">133</a> <em class="jxr_javadoccomment">   * Get a Mockito spied-upon {@link ClusterConnection} that goes with the passed</em>
-<a class="jxr_linenumber" name="134" href="#134">134</a> <em class="jxr_javadoccomment">   * &lt;code&gt;conf&lt;/code&gt; configuration instance.</em>
-<a class="jxr_linenumber" name="135" href="#135">135</a> <em class="jxr_javadoccomment">   * Be sure to shutdown the connection when done by calling</em>
-<a class="jxr_linenumber" name="136" href="#136">136</a> <em class="jxr_javadoccomment">   * {@link Connection#close()} else it will stick around; this is probably not what you want.</em>
-<a class="jxr_linenumber" name="137" href="#137">137</a> <em class="jxr_javadoccomment">   * @param conf configuration</em>
-<a class="jxr_linenumber" name="138" href="#138">138</a> <em class="jxr_javadoccomment">   * @return HConnection object for &lt;code&gt;conf&lt;/code&gt;</em>
-<a class="jxr_linenumber" name="139" href="#139">139</a> <em class="jxr_javadoccomment">   * @throws ZooKeeperConnectionException</em>
-<a class="jxr_linenumber" name="140" href="#140">140</a> <em class="jxr_javadoccomment">   * @see @link</em>
-<a class="jxr_linenumber" name="141" href="#141">141</a> <em class="jxr_javadoccomment">   * {<a href="http://mockito.googlecode.com/svn/branches/1.6/javadoc/org/mockito/Mockito.html" target="alexandria_uri">http://mockito.googlecode.com/svn/branches/1.6/javadoc/org/mockito/Mockito.html</a>#spy(T)}</em>
-<a class="jxr_linenumber" name="142" href="#142">142</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="143" href="#143">143</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ClusterConnection getSpiedConnection(<strong class="jxr_keyword">final</strong> Configuration conf)
-<a class="jxr_linenumber" name="144" href="#144">144</a>   <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="145" href="#145">145</a>     ConnectionImplementation connection =
-<a class="jxr_linenumber" name="146" href="#146">146</a>       Mockito.spy(<strong class="jxr_keyword">new</strong> ConnectionImplementation(conf, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>));
-<a class="jxr_linenumber" name="147" href="#147">147</a>     <strong class="jxr_keyword">return</strong> connection;
-<a class="jxr_linenumber" name="148" href="#148">148</a>   }
-<a class="jxr_linenumber" name="149" href="#149">149</a> }
+<a class="jxr_linenumber" name="120" href="#120">120</a>     Mockito.when(c.getNewRpcRetryingCallerFactory(conf)).thenReturn(
+<a class="jxr_linenumber" name="121" href="#121">121</a>         RpcRetryingCallerFactory.instantiate(conf,
+<a class="jxr_linenumber" name="122" href="#122">122</a>             RetryingCallerInterceptorFactory.NO_OP_INTERCEPTOR, <strong class="jxr_keyword">null</strong>));
+<a class="jxr_linenumber" name="123" href="#123">123</a>     HTableInterface t = Mockito.mock(HTableInterface.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="124" href="#124">124</a>     Mockito.when(c.getTable((TableName)Mockito.any())).thenReturn(t);
+<a class="jxr_linenumber" name="125" href="#125">125</a>     ResultScanner rs = Mockito.mock(ResultScanner.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="126" href="#126">126</a>     Mockito.when(t.getScanner((Scan)Mockito.any())).thenReturn(rs);
+<a class="jxr_linenumber" name="127" href="#127">127</a>     <strong class="jxr_keyword">return</strong> c;
+<a class="jxr_linenumber" name="128" href="#128">128</a>   }
+<a class="jxr_linenumber" name="129" href="#129">129</a>
+<a class="jxr_linenumber" name="130" href="#130">130</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="131" href="#131">131</a> <em class="jxr_javadoccomment">   * Get a Mockito spied-upon {@link ClusterConnection} that goes with the passed</em>
+<a class="jxr_linenumber" name="132" href="#132">132</a> <em class="jxr_javadoccomment">   * &lt;code&gt;conf&lt;/code&gt; configuration instance.</em>
+<a class="jxr_linenumber" name="133" href="#133">133</a> <em class="jxr_javadoccomment">   * Be sure to shutdown the connection when done by calling</em>
+<a class="jxr_linenumber" name="134" href="#134">134</a> <em class="jxr_javadoccomment">   * {@link Connection#close()} else it will stick around; this is probably not what you want.</em>
+<a class="jxr_linenumber" name="135" href="#135">135</a> <em class="jxr_javadoccomment">   * @param conf configuration</em>
+<a class="jxr_linenumber" name="136" href="#136">136</a> <em class="jxr_javadoccomment">   * @return HConnection object for &lt;code&gt;conf&lt;/code&gt;</em>
+<a class="jxr_linenumber" name="137" href="#137">137</a> <em class="jxr_javadoccomment">   * @throws ZooKeeperConnectionException</em>
+<a class="jxr_linenumber" name="138" href="#138">138</a> <em class="jxr_javadoccomment">   * @see @link</em>
+<a class="jxr_linenumber" name="139" href="#139">139</a> <em class="jxr_javadoccomment">   * {<a href="http://mockito.googlecode.com/svn/branches/1.6/javadoc/org/mockito/Mockito.html" target="alexandria_uri">http://mockito.googlecode.com/svn/branches/1.6/javadoc/org/mockito/Mockito.html</a>#spy(T)}</em>
+<a class="jxr_linenumber" name="140" href="#140">140</a> <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="141" href="#141">141</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ClusterConnection getSpiedConnection(<strong class="jxr_keyword">final</strong> Configuration conf)
+<a class="jxr_linenumber" name="142" href="#142">142</a>   <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="143" href="#143">143</a>     ConnectionImplementation connection =
+<a class="jxr_linenumber" name="144" href="#144">144</a>       Mockito.spy(<strong class="jxr_keyword">new</strong> ConnectionImplementation(conf, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>));
+<a class="jxr_linenumber" name="145" href="#145">145</a>     <strong class="jxr_keyword">return</strong> connection;
+<a class="jxr_linenumber" name="146" href="#146">146</a>   }
+<a class="jxr_linenumber" name="147" href="#147">147</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

@@ -99,7 +99,7 @@
 </dl>
 <hr>
 <br>
-<pre>public static class <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.html#line.49">ProcedureStoreTracker.BitSetNode</a>
+<pre>public static class <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.html#line.52">ProcedureStoreTracker.BitSetNode</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 </li>
 </ul>
@@ -286,9 +286,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#update(long)">update</a></strong>(long&nbsp;procId)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#unsetPartialFlag()">unsetPartialFlag</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#update(long)">update</a></strong>(long&nbsp;procId)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#updateState(long,%20boolean)">updateState</a></strong>(long&nbsp;procId,
                       boolean&nbsp;isDeleted)</code>&nbsp;</td>
@@ -321,7 +325,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>WORD_MASK</h4>
-<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.50">WORD_MASK</a></pre>
+<pre>private static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.53">WORD_MASK</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.procedure2.store.ProcedureStoreTracker.BitSetNode.WORD_MASK">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -331,7 +335,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>ADDRESS_BITS_PER_WORD</h4>
-<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.51">ADDRESS_BITS_PER_WORD</a></pre>
+<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.54">ADDRESS_BITS_PER_WORD</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.procedure2.store.ProcedureStoreTracker.BitSetNode.ADDRESS_BITS_PER_WORD">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -341,7 +345,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>BITS_PER_WORD</h4>
-<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.52">BITS_PER_WORD</a></pre>
+<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.55">BITS_PER_WORD</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.procedure2.store.ProcedureStoreTracker.BitSetNode.BITS_PER_WORD">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -351,7 +355,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>MAX_NODE_SIZE</h4>
-<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.53">MAX_NODE_SIZE</a></pre>
+<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.56">MAX_NODE_SIZE</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.procedure2.store.ProcedureStoreTracker.BitSetNode.MAX_NODE_SIZE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -361,7 +365,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>partial</h4>
-<pre>private final&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.55">partial</a></pre>
+<pre>private final&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.58">partial</a></pre>
 </li>
 </ul>
 <a name="updated">
@@ -370,7 +374,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updated</h4>
-<pre>private&nbsp;long[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.56">updated</a></pre>
+<pre>private&nbsp;long[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.59">updated</a></pre>
 </li>
 </ul>
 <a name="deleted">
@@ -379,7 +383,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>deleted</h4>
-<pre>private&nbsp;long[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.57">deleted</a></pre>
+<pre>private&nbsp;long[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.60">deleted</a></pre>
 </li>
 </ul>
 <a name="start">
@@ -388,7 +392,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>start</h4>
-<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.58">start</a></pre>
+<pre>private&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.61">start</a></pre>
 </li>
 </ul>
 </li>
@@ -405,7 +409,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>ProcedureStoreTracker.BitSetNode</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.81">ProcedureStoreTracker.BitSetNode</a>(long&nbsp;procId,
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.84">ProcedureStoreTracker.BitSetNode</a>(long&nbsp;procId,
                                 boolean&nbsp;partial)</pre>
 </li>
 </ul>
@@ -415,7 +419,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ProcedureStoreTracker.BitSetNode</h4>
-<pre>protected&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.96">ProcedureStoreTracker.BitSetNode</a>(long&nbsp;start,
+<pre>protected&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.99">ProcedureStoreTracker.BitSetNode</a>(long&nbsp;start,
                                 long[]&nbsp;updated,
                                 long[]&nbsp;deleted)</pre>
 </li>
@@ -434,7 +438,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>dump</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.60">dump</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.63">dump</a>()</pre>
 </li>
 </ul>
 <a name="update(long)">
@@ -443,7 +447,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.103">update</a>(long&nbsp;procId)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.106">update</a>(long&nbsp;procId)</pre>
 </li>
 </ul>
 <a name="delete(long)">
@@ -452,7 +456,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>delete</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.107">delete</a>(long&nbsp;procId)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.110">delete</a>(long&nbsp;procId)</pre>
 </li>
 </ul>
 <a name="getStart()">
@@ -461,7 +465,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getStart</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.111">getStart</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.114">getStart</a>()</pre>
 </li>
 </ul>
 <a name="getEnd()">
@@ -470,7 +474,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getEnd</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.115">getEnd</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.118">getEnd</a>()</pre>
 </li>
 </ul>
 <a name="contains(long)">
@@ -479,7 +483,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>contains</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.119">contains</a>(long&nbsp;procId)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.122">contains</a>(long&nbsp;procId)</pre>
 </li>
 </ul>
 <a name="isDeleted(long)">
@@ -488,7 +492,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>isDeleted</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.DeleteState.html" title="enum in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker.DeleteState</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.123">isDeleted</a>(long&nbsp;procId)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.DeleteState.html" title="enum in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker.DeleteState</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.126">isDeleted</a>(long&nbsp;procId)</pre>
 </li>
 </ul>
 <a name="isUpdated(long)">
@@ -497,7 +501,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>isUpdated</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.132">isUpdated</a>(long&nbsp;procId)</pre>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.135">isUpdated</a>(long&nbsp;procId)</pre>
 </li>
 </ul>
 <a name="isUpdated()">
@@ -506,7 +510,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>isUpdated</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.141">isUpdated</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.144">isUpdated</a>()</pre>
 </li>
 </ul>
 <a name="isEmpty()">
@@ -515,7 +519,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>isEmpty</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.152">isEmpty</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.154">isEmpty</a>()</pre>
 </li>
 </ul>
 <a name="resetUpdates()">
@@ -524,7 +528,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>resetUpdates</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.162">resetUpdates</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.164">resetUpdates</a>()</pre>
 </li>
 </ul>
 <a name="undeleteAll()">
@@ -533,7 +537,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>undeleteAll</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.168">undeleteAll</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.170">undeleteAll</a>()</pre>
+</li>
+</ul>
+<a name="unsetPartialFlag()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>unsetPartialFlag</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.176">unsetPartialFlag</a>()</pre>
 </li>
 </ul>
 <a name="convert()">
@@ -542,7 +555,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>convert</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureStoreTracker.TrackerNode&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.174">convert</a>()</pre>
+<pre>public&nbsp;org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureStoreTracker.TrackerNode&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.186">convert</a>()</pre>
 </li>
 </ul>
 <a name="convert(org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureStoreTracker.TrackerNode)">
@@ -551,7 +564,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>convert</h4>
-<pre>public static&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker.BitSetNode</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.185">convert</a>(org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureStoreTracker.TrackerNode&nbsp;data)</pre>
+<pre>public static&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker.BitSetNode</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.197">convert</a>(org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureStoreTracker.TrackerNode&nbsp;data)</pre>
 </li>
 </ul>
 <a name="canGrow(long)">
@@ -560,7 +573,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>canGrow</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.200">canGrow</a>(long&nbsp;procId)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.212">canGrow</a>(long&nbsp;procId)</pre>
 </li>
 </ul>
 <a name="canMerge(org.apache.hadoop.hbase.procedure2.store.ProcedureStoreTracker.BitSetNode)">
@@ -569,7 +582,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>canMerge</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.204">canMerge</a>(<a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker.BitSetNode</a>&nbsp;rightNode)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.216">canMerge</a>(<a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker.BitSetNode</a>&nbsp;rightNode)</pre>
 </li>
 </ul>
 <a name="grow(long)">
@@ -578,7 +591,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>grow</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.209">grow</a>(long&nbsp;procId)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.221">grow</a>(long&nbsp;procId)</pre>
 </li>
 </ul>
 <a name="merge(org.apache.hadoop.hbase.procedure2.store.ProcedureStoreTracker.BitSetNode)">
@@ -587,7 +600,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>merge</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.243">merge</a>(<a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker.BitSetNode</a>&nbsp;rightNode)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.255">merge</a>(<a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker.BitSetNode</a>&nbsp;rightNode)</pre>
 </li>
 </ul>
 <a name="toString()">
@@ -596,7 +609,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.268">toString</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.280">toString</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
@@ -609,7 +622,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getMinProcId</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.275">getMinProcId</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.287">getMinProcId</a>()</pre>
 </li>
 </ul>
 <a name="getMaxProcId()">
@@ -618,7 +631,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getMaxProcId</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.295">getMaxProcId</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.307">getMaxProcId</a>()</pre>
 </li>
 </ul>
 <a name="getBitmapIndex(long)">
@@ -627,7 +640,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getBitmapIndex</h4>
-<pre>private&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.317">getBitmapIndex</a>(long&nbsp;procId)</pre>
+<pre>private&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.329">getBitmapIndex</a>(long&nbsp;procId)</pre>
 </li>
 </ul>
 <a name="updateState(long, boolean)">
@@ -636,7 +649,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updateState</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.321">updateState</a>(long&nbsp;procId,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.333">updateState</a>(long&nbsp;procId,
                boolean&nbsp;isDeleted)</pre>
 </li>
 </ul>
@@ -646,7 +659,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>alignUp</h4>
-<pre>private static&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.338">alignUp</a>(long&nbsp;x)</pre>
+<pre>private static&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.350">alignUp</a>(long&nbsp;x)</pre>
 </li>
 </ul>
 <a name="alignDown(long)">
@@ -655,7 +668,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>alignDown</h4>
-<pre>private static&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.342">alignDown</a>(long&nbsp;x)</pre>
+<pre>private static&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.BitSetNode.html#line.354">alignDown</a>(long&nbsp;x)</pre>
 </li>
 </ul>
 </li>

@@ -96,7 +96,7 @@
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.49">MetricsConnection</a>
+public class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.53">MetricsConnection</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">This class is for maintaining the various connection statistics and publishing them through
  the metrics interfaces.
@@ -138,6 +138,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.NewMetric.html" title="interface in org.apache.hadoop.hbase.client">MetricsConnection.NewMetric</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.NewMetric.html" title="type parameter in MetricsConnection.NewMetric">T</a>&gt;</strong></code>
 <div class="block">A lambda for dispatching to the appropriate metric factory method</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RegionStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RegionStats</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RunnerStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RunnerStats</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -194,18 +202,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#getTracker">getTracker</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#HEAP_BASE">HEAP_BASE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.NewMetric.html" title="interface in org.apache.hadoop.hbase.client">MetricsConnection.NewMetric</a>&lt;com.yammer.metrics.core.Histogram&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#histogramFactory">histogramFactory</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#incrementTracker">incrementTracker</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private static float</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#LOAD_FACTOR">LOAD_FACTOR</a></strong></code>
 <div class="block">Default load factor from <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true#DEFAULT_LOAD_FACTOR" title="class or interface in java.util"><code>HashMap.DEFAULT_LOAD_FACTOR</code></a></div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#MEMLOAD_BASE">MEMLOAD_BASE</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected com.yammer.metrics.core.Counter</code></td>
@@ -248,12 +264,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#rpcTimers">rpcTimers</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RunnerStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RunnerStats</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#runnerStats">runnerStats</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#scanTracker">scanTracker</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#scope">scope</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;byte[],<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RegionStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RegionStats</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#serverStats">serverStats</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.NewMetric.html" title="interface in org.apache.hadoop.hbase.client">MetricsConnection.NewMetric</a>&lt;com.yammer.metrics.core.Timer&gt;</code></td>
@@ -301,14 +325,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#incrMetaCacheHit()">incrMetaCacheHit</a></strong>()</code>
-<div class="block">Increment the number of meta cache hits.</div>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#incrDelayRunners()">incrDelayRunners</a></strong>()</code>
+<div class="block">Increment the number of delay runner counts.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#incrMetaCacheHit()">incrMetaCacheHit</a></strong>()</code>
+<div class="block">Increment the number of meta cache hits.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#incrMetaCacheMiss()">incrMetaCacheMiss</a></strong>()</code>
 <div class="block">Increment the number of meta cache misses.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#incrNormalRunners()">incrNormalRunners</a></strong>()</code>
+<div class="block">Increment the number of normal runner counts.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -323,18 +359,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#updateDelayInterval(long)">updateDelayInterval</a></strong>(long&nbsp;interval)</code>
+<div class="block">Update delay interval of delay runner.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#updateRpc(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20org.apache.hadoop.hbase.client.MetricsConnection.CallStats)">updateRpc</a></strong>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
                   com.google.protobuf.Message&nbsp;param,
                   <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallStats</a>&nbsp;stats)</code>
 <div class="block">Report RPC context to metrics system.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#updateRpcGeneric(com.google.protobuf.Descriptors.MethodDescriptor,%20org.apache.hadoop.hbase.client.MetricsConnection.CallStats)">updateRpcGeneric</a></strong>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
                                 <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallStats</a>&nbsp;stats)</code>
 <div class="block">Update call stats for non-critical-path methods</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html#updateServerStats(org.apache.hadoop.hbase.ServerName,%20byte[],%20java.lang.Object)">updateServerStats</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                                  byte[]&nbsp;regionName,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;r)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -364,7 +412,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>CLIENT_SIDE_METRICS_ENABLED_KEY</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.52">CLIENT_SIDE_METRICS_ENABLED_KEY</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.56">CLIENT_SIDE_METRICS_ENABLED_KEY</a></pre>
 <div class="block">Set this key to <code>true</code> to enable metrics collection of client requests.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.MetricsConnection.CLIENT_SIDE_METRICS_ENABLED_KEY">Constant Field Values</a></dd></dl>
 </li>
@@ -375,7 +423,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DRTN_BASE</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.54">DRTN_BASE</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.58">DRTN_BASE</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.MetricsConnection.DRTN_BASE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -385,7 +433,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>REQ_BASE</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.55">REQ_BASE</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.59">REQ_BASE</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.MetricsConnection.REQ_BASE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -395,8 +443,28 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>RESP_BASE</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.56">RESP_BASE</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.60">RESP_BASE</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.MetricsConnection.RESP_BASE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MEMLOAD_BASE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MEMLOAD_BASE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.61">MEMLOAD_BASE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.MetricsConnection.MEMLOAD_BASE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="HEAP_BASE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HEAP_BASE</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.62">HEAP_BASE</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.MetricsConnection.HEAP_BASE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="CLIENT_SVC">
@@ -405,7 +473,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>CLIENT_SVC</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.57">CLIENT_SVC</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.63">CLIENT_SVC</a></pre>
+</li>
+</ul>
+<a name="serverStats">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverStats</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;byte[],<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RegionStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RegionStats</a>&gt;&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.184">serverStats</a></pre>
 </li>
 </ul>
 <a name="CAPACITY">
@@ -414,7 +491,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>CAPACITY</h4>
-<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.139">CAPACITY</a></pre>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.227">CAPACITY</a></pre>
 <div class="block">Anticipated number of metric entries</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.MetricsConnection.CAPACITY">Constant Field Values</a></dd></dl>
 </li>
@@ -425,7 +502,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>LOAD_FACTOR</h4>
-<pre>private static final&nbsp;float <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.141">LOAD_FACTOR</a></pre>
+<pre>private static final&nbsp;float <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.229">LOAD_FACTOR</a></pre>
 <div class="block">Default load factor from <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html?is-external=true#DEFAULT_LOAD_FACTOR" title="class or interface in java.util"><code>HashMap.DEFAULT_LOAD_FACTOR</code></a></div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.MetricsConnection.LOAD_FACTOR">Constant Field Values</a></dd></dl>
 </li>
@@ -436,7 +513,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>CONCURRENCY_LEVEL</h4>
-<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.146">CONCURRENCY_LEVEL</a></pre>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.234">CONCURRENCY_LEVEL</a></pre>
 <div class="block">Anticipated number of concurrent accessor threads, from
  <a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#getBatchPool()"><code>ConnectionImplementation.getBatchPool()</code></a></div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.client.MetricsConnection.CONCURRENCY_LEVEL">Constant Field Values</a></dd></dl>
@@ -448,7 +525,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>registry</h4>
-<pre>private final&nbsp;com.yammer.metrics.core.MetricsRegistry <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.148">registry</a></pre>
+<pre>private final&nbsp;com.yammer.metrics.core.MetricsRegistry <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.236">registry</a></pre>
 </li>
 </ul>
 <a name="reporter">
@@ -457,7 +534,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>reporter</h4>
-<pre>private final&nbsp;com.yammer.metrics.reporting.JmxReporter <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.149">reporter</a></pre>
+<pre>private final&nbsp;com.yammer.metrics.reporting.JmxReporter <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.237">reporter</a></pre>
 </li>
 </ul>
 <a name="scope">
@@ -466,7 +543,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>scope</h4>
-<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.150">scope</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.238">scope</a></pre>
 </li>
 </ul>
 <a name="timerFactory">
@@ -475,7 +552,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>timerFactory</h4>
-<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.NewMetric.html" title="interface in org.apache.hadoop.hbase.client">MetricsConnection.NewMetric</a>&lt;com.yammer.metrics.core.Timer&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.152">timerFactory</a></pre>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.NewMetric.html" title="interface in org.apache.hadoop.hbase.client">MetricsConnection.NewMetric</a>&lt;com.yammer.metrics.core.Timer&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.240">timerFactory</a></pre>
 </li>
 </ul>
 <a name="histogramFactory">
@@ -484,7 +561,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>histogramFactory</h4>
-<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.NewMetric.html" title="interface in org.apache.hadoop.hbase.client">MetricsConnection.NewMetric</a>&lt;com.yammer.metrics.core.Histogram&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.158">histogramFactory</a></pre>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.NewMetric.html" title="interface in org.apache.hadoop.hbase.client">MetricsConnection.NewMetric</a>&lt;com.yammer.metrics.core.Histogram&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.246">histogramFactory</a></pre>
 </li>
 </ul>
 <a name="metaCacheHits">
@@ -493,7 +570,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>metaCacheHits</h4>
-<pre>protected final&nbsp;com.yammer.metrics.core.Counter <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.166">metaCacheHits</a></pre>
+<pre>protected final&nbsp;com.yammer.metrics.core.Counter <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.254">metaCacheHits</a></pre>
 </li>
 </ul>
 <a name="metaCacheMisses">
@@ -502,7 +579,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>metaCacheMisses</h4>
-<pre>protected final&nbsp;com.yammer.metrics.core.Counter <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.167">metaCacheMisses</a></pre>
+<pre>protected final&nbsp;com.yammer.metrics.core.Counter <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.255">metaCacheMisses</a></pre>
 </li>
 </ul>
 <a name="getTracker">
@@ -511,7 +588,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getTracker</h4>
-<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.168">getTracker</a></pre>
+<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.256">getTracker</a></pre>
 </li>
 </ul>
 <a name="scanTracker">
@@ -520,7 +597,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>scanTracker</h4>
-<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.169">scanTracker</a></pre>
+<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.257">scanTracker</a></pre>
 </li>
 </ul>
 <a name="appendTracker">
@@ -529,7 +606,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>appendTracker</h4>
-<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.170">appendTracker</a></pre>
+<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.258">appendTracker</a></pre>
 </li>
 </ul>
 <a name="deleteTracker">
@@ -538,7 +615,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteTracker</h4>
-<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.171">deleteTracker</a></pre>
+<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.259">deleteTracker</a></pre>
 </li>
 </ul>
 <a name="incrementTracker">
@@ -547,7 +624,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>incrementTracker</h4>
-<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.172">incrementTracker</a></pre>
+<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.260">incrementTracker</a></pre>
 </li>
 </ul>
 <a name="putTracker">
@@ -556,7 +633,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>putTracker</h4>
-<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.173">putTracker</a></pre>
+<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.261">putTracker</a></pre>
 </li>
 </ul>
 <a name="multiTracker">
@@ -565,7 +642,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>multiTracker</h4>
-<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.174">multiTracker</a></pre>
+<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.262">multiTracker</a></pre>
+</li>
+</ul>
+<a name="runnerStats">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runnerStats</h4>
+<pre>protected final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RunnerStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RunnerStats</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.263">runnerStats</a></pre>
 </li>
 </ul>
 <a name="rpcTimers">
@@ -574,7 +660,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>rpcTimers</h4>
-<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,com.yammer.metrics.core.Timer&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.181">rpcTimers</a></pre>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,com.yammer.metrics.core.Timer&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.270">rpcTimers</a></pre>
 </li>
 </ul>
 <a name="rpcHistograms">
@@ -583,7 +669,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>rpcHistograms</h4>
-<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,com.yammer.metrics.core.Histogram&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.183">rpcHistograms</a></pre>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,com.yammer.metrics.core.Histogram&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.272">rpcHistograms</a></pre>
 </li>
 </ul>
 </li>
@@ -600,7 +686,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MetricsConnection</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.187">MetricsConnection</a>(<a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html" title="class in org.apache.hadoop.hbase.client">ConnectionImplementation</a>&nbsp;conn)</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.276">MetricsConnection</a>(<a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html" title="class in org.apache.hadoop.hbase.client">ConnectionImplementation</a>&nbsp;conn)</pre>
 </li>
 </ul>
 </li>
@@ -611,13 +697,24 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="updateServerStats(org.apache.hadoop.hbase.ServerName, byte[], java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateServerStats</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.187">updateServerStats</a>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+                     byte[]&nbsp;regionName,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;r)</pre>
+</li>
+</ul>
 <a name="shutdown()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>shutdown</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.224">shutdown</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.315">shutdown</a>()</pre>
 </li>
 </ul>
 <a name="newCallStats()">
@@ -626,7 +723,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>newCallStats</h4>
-<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallStats</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.230">newCallStats</a>()</pre>
+<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallStats</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.321">newCallStats</a>()</pre>
 <div class="block">Produce an instance of <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallStats.html" title="class in org.apache.hadoop.hbase.client"><code>MetricsConnection.CallStats</code></a> for clients to attach to RPCs.</div>
 </li>
 </ul>
@@ -636,7 +733,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>incrMetaCacheHit</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.236">incrMetaCacheHit</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.327">incrMetaCacheHit</a>()</pre>
 <div class="block">Increment the number of meta cache hits.</div>
 </li>
 </ul>
@@ -646,8 +743,38 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>incrMetaCacheMiss</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.241">incrMetaCacheMiss</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.332">incrMetaCacheMiss</a>()</pre>
 <div class="block">Increment the number of meta cache misses.</div>
+</li>
+</ul>
+<a name="incrNormalRunners()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>incrNormalRunners</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.337">incrNormalRunners</a>()</pre>
+<div class="block">Increment the number of normal runner counts.</div>
+</li>
+</ul>
+<a name="incrDelayRunners()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>incrDelayRunners</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.342">incrDelayRunners</a>()</pre>
+<div class="block">Increment the number of delay runner counts.</div>
+</li>
+</ul>
+<a name="updateDelayInterval(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateDelayInterval</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.347">updateDelayInterval</a>(long&nbsp;interval)</pre>
+<div class="block">Update delay interval of delay runner.</div>
 </li>
 </ul>
 <a name="getMetric(java.lang.String, java.util.concurrent.ConcurrentMap, org.apache.hadoop.hbase.client.MetricsConnection.NewMetric)">
@@ -656,7 +783,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getMetric</h4>
-<pre>private&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.248">getMetric</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+<pre>private&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.354">getMetric</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,T&gt;&nbsp;map,
               <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.NewMetric.html" title="interface in org.apache.hadoop.hbase.client">MetricsConnection.NewMetric</a>&lt;T&gt;&nbsp;factory)</pre>
 <div class="block">Get a metric for <code>key</code> from <code>map</code>, or create it with <code>factory</code>.</div>
@@ -668,7 +795,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updateRpcGeneric</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.258">updateRpcGeneric</a>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.364">updateRpcGeneric</a>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
                     <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallStats</a>&nbsp;stats)</pre>
 <div class="block">Update call stats for non-critical-path methods</div>
 </li>
@@ -679,7 +806,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>updateRpc</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.269">updateRpc</a>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/MetricsConnection.html#line.375">updateRpc</a>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
              com.google.protobuf.Message&nbsp;param,
              <a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallStats</a>&nbsp;stats)</pre>
 <div class="block">Report RPC context to metrics system.</div>

@@ -145,6 +145,14 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#maxProcId">maxProcId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#minProcId">minProcId</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#startPos">startPos</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -212,6 +220,14 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#getMaxProcId()">getMaxProcId</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#getMinProcId()">getMinProcId</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#getSize()">getSize</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -243,6 +259,11 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#removeFile()">removeFile</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#setProcIds(long,%20long)">setProcIds</a></strong>(long&nbsp;minId,
+                    long&nbsp;maxId)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#toString()">toString</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -325,10 +346,28 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <a name="startPos">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>startPos</h4>
 <pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.48">startPos</a></pre>
+</li>
+</ul>
+<a name="minProcId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>minProcId</h4>
+<pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.49">minProcId</a></pre>
+</li>
+</ul>
+<a name="maxProcId">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>maxProcId</h4>
+<pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.50">maxProcId</a></pre>
 </li>
 </ul>
 </li>
@@ -345,7 +384,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>ProcedureWALFile</h4>
-<pre>public&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.50">ProcedureWALFile</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.52">ProcedureWALFile</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                 org.apache.hadoop.fs.FileStatus&nbsp;logStatus)</pre>
 </li>
 </ul>
@@ -355,7 +394,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ProcedureWALFile</h4>
-<pre>public&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.56">ProcedureWALFile</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.58">ProcedureWALFile</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                 org.apache.hadoop.fs.Path&nbsp;logFile,
                 org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureWALHeader&nbsp;header,
                 long&nbsp;startPos)</pre>
@@ -375,7 +414,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>open</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.63">open</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.65">open</a>()
           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -387,7 +426,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>readTrailer</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureWALTrailer&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.76">readTrailer</a>()
+<pre>public&nbsp;org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureWALTrailer&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.78">readTrailer</a>()
                                                                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -399,7 +438,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>readTracker</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.84">readTracker</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker</a>&nbsp;tracker)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.86">readTracker</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker</a>&nbsp;tracker)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -411,7 +450,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>close</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.94">close</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.96">close</a>()</pre>
 </li>
 </ul>
 <a name="getStream()">
@@ -420,7 +459,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>getStream</h4>
-<pre>public&nbsp;org.apache.hadoop.fs.FSDataInputStream&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.105">getStream</a>()</pre>
+<pre>public&nbsp;org.apache.hadoop.fs.FSDataInputStream&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.107">getStream</a>()</pre>
 </li>
 </ul>
 <a name="getHeader()">
@@ -429,7 +468,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>getHeader</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureWALHeader&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.109">getHeader</a>()</pre>
+<pre>public&nbsp;org.apache.hadoop.hbase.protobuf.generated.ProcedureProtos.ProcedureWALHeader&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.111">getHeader</a>()</pre>
 </li>
 </ul>
 <a name="isCompacted()">
@@ -438,7 +477,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>isCompacted</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.113">isCompacted</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.115">isCompacted</a>()</pre>
 </li>
 </ul>
 <a name="getLogId()">
@@ -447,7 +486,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>getLogId</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.117">getLogId</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.119">getLogId</a>()</pre>
 </li>
 </ul>
 <a name="getSize()">
@@ -456,7 +495,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>getSize</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.121">getSize</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.123">getSize</a>()</pre>
 </li>
 </ul>
 <a name="removeFile()">
@@ -465,10 +504,38 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>removeFile</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.125">removeFile</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.127">removeFile</a>()
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setProcIds(long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setProcIds</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.132">setProcIds</a>(long&nbsp;minId,
+              long&nbsp;maxId)</pre>
+</li>
+</ul>
+<a name="getMinProcId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMinProcId</h4>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.137">getMinProcId</a>()</pre>
+</li>
+</ul>
+<a name="getMaxProcId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaxProcId</h4>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.141">getMaxProcId</a>()</pre>
 </li>
 </ul>
 <a name="compareTo(org.apache.hadoop.hbase.procedure2.store.wal.ProcedureWALFile)">
@@ -477,7 +544,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>compareTo</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.131">compareTo</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&nbsp;other)</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.146">compareTo</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&nbsp;other)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html?is-external=true#compareTo(T)" title="class or interface in java.lang">compareTo</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&gt;</code></dd>
@@ -490,7 +557,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>equals</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.137">equals</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.152">equals</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
@@ -503,7 +570,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockList">
 <li class="blockList">
 <h4>hashCode</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.144">hashCode</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.159">hashCode</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
@@ -516,7 +583,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparabl
 <ul class="blockListLast">
 <li class="blockList">
 <h4>toString</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.149">toString</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html#line.164">toString</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
