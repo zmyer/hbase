@@ -95,6 +95,11 @@ li#publishDate.pull-right {
       box-sizing: content-box;
       line-height: normal;
   }
+  .gsc-results-wrapper-visible {
+    min-height: 400px;
+    min-width: 300px;
+    z-index: 20000;
+  }
   div#search-form.navbar-search.pull-right {
     padding: 0;
     margin-left: ;
