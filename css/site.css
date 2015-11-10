@@ -85,6 +85,15 @@ li#publishDate.pull-right {
   .collapse.in {
       height: auto !important;
   }
+  /* Fix Google Search Results box on small screens */
+  input.gsc-input,
+  .gsc-input-box,
+  .gsc-input-box-hover,
+  .gsc-input-box-focus,
+  .gsc-search-button {
+      box-sizing: content-box;
+      line-height: normal;
+  }
   div#search-form.navbar-search.pull-right {
     padding: 0;
     margin-left: ;
