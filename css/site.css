@@ -90,9 +90,11 @@ li#publishDate.pull-right {
   .gsc-input-box,
   .gsc-input-box-hover,
   .gsc-input-box-focus,
-  .gsc-search-button {
+  .gsc-search-button,
+  .gsc-results-wrapper-visible {
       box-sizing: content-box;
       line-height: normal;
+      height: auto !important;
   }
   div#search-form.navbar-search.pull-right {
     padding: 0;
