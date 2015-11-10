@@ -83,8 +83,7 @@ li#publishDate.pull-right {
   /* Without this rule, drop-down divs are a fixed height
    * the first time they are expanded */
   .collapse.in {
-    height: auto;
-    overflow: visible;
+      height: auto !important;
   }
   div#search-form.navbar-search.pull-right {
     padding: 0;
