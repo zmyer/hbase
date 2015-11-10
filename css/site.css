@@ -90,7 +90,7 @@ li#publishDate.pull-right {
   /* Without this rule, drop-down divs are a fixed height
    * the first time they are expanded */
   .collapse.in {
-      height: auto !important;
+      height: auto;
   }
   /* Fix Google Search Results box on small screens */
   input.gsc-input,
