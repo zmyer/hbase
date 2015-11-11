@@ -823,14 +823,14 @@
 <a class="jxr_linenumber" name="813" href="#813">813</a>
 <a class="jxr_linenumber" name="814" href="#814">814</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> removeLogFile(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html">ProcedureWALFile</a> log) {
 <a class="jxr_linenumber" name="815" href="#815">815</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="816" href="#816">816</a>       <strong class="jxr_keyword">if</strong> (LOG.isDebugEnabled()) {
-<a class="jxr_linenumber" name="817" href="#817">817</a>         LOG.debug(<span class="jxr_string">"Remove log: "</span> + log);
+<a class="jxr_linenumber" name="816" href="#816">816</a>       <strong class="jxr_keyword">if</strong> (LOG.isTraceEnabled()) {
+<a class="jxr_linenumber" name="817" href="#817">817</a>         LOG.trace(<span class="jxr_string">"Removing log="</span> + log);
 <a class="jxr_linenumber" name="818" href="#818">818</a>       }
 <a class="jxr_linenumber" name="819" href="#819">819</a>       log.removeFile();
 <a class="jxr_linenumber" name="820" href="#820">820</a>       logs.remove(log);
-<a class="jxr_linenumber" name="821" href="#821">821</a>       LOG.info(<span class="jxr_string">"Remove log: "</span> + log);
-<a class="jxr_linenumber" name="822" href="#822">822</a>       LOG.info(<span class="jxr_string">"Removed logs: "</span> + logs);
-<a class="jxr_linenumber" name="823" href="#823">823</a>       <strong class="jxr_keyword">if</strong> (logs.size() == 0) { LOG.error(<span class="jxr_string">"Expected at least one log"</span>); }
+<a class="jxr_linenumber" name="821" href="#821">821</a>       <strong class="jxr_keyword">if</strong> (LOG.isDebugEnabled()) {
+<a class="jxr_linenumber" name="822" href="#822">822</a>         LOG.info(<span class="jxr_string">"Removed log="</span> + log + <span class="jxr_string">" activeLogs="</span> + logs);
+<a class="jxr_linenumber" name="823" href="#823">823</a>       }
 <a class="jxr_linenumber" name="824" href="#824">824</a>       assert logs.size() &gt; 0 : <span class="jxr_string">"expected at least one log"</span>;
 <a class="jxr_linenumber" name="825" href="#825">825</a>     } <strong class="jxr_keyword">catch</strong> (IOException e) {
 <a class="jxr_linenumber" name="826" href="#826">826</a>       LOG.error(<span class="jxr_string">"Unable to remove log: "</span> + log, e);

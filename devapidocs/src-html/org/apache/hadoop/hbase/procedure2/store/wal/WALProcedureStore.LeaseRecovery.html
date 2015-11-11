@@ -821,14 +821,14 @@
 <span class="sourceLineNo">813</span><a name="line.813"></a>
 <span class="sourceLineNo">814</span>  private boolean removeLogFile(final ProcedureWALFile log) {<a name="line.814"></a>
 <span class="sourceLineNo">815</span>    try {<a name="line.815"></a>
-<span class="sourceLineNo">816</span>      if (LOG.isDebugEnabled()) {<a name="line.816"></a>
-<span class="sourceLineNo">817</span>        LOG.debug("Remove log: " + log);<a name="line.817"></a>
+<span class="sourceLineNo">816</span>      if (LOG.isTraceEnabled()) {<a name="line.816"></a>
+<span class="sourceLineNo">817</span>        LOG.trace("Removing log=" + log);<a name="line.817"></a>
 <span class="sourceLineNo">818</span>      }<a name="line.818"></a>
 <span class="sourceLineNo">819</span>      log.removeFile();<a name="line.819"></a>
 <span class="sourceLineNo">820</span>      logs.remove(log);<a name="line.820"></a>
-<span class="sourceLineNo">821</span>      LOG.info("Remove log: " + log);<a name="line.821"></a>
-<span class="sourceLineNo">822</span>      LOG.info("Removed logs: " + logs);<a name="line.822"></a>
-<span class="sourceLineNo">823</span>      if (logs.size() == 0) { LOG.error("Expected at least one log"); }<a name="line.823"></a>
+<span class="sourceLineNo">821</span>      if (LOG.isDebugEnabled()) {<a name="line.821"></a>
+<span class="sourceLineNo">822</span>        LOG.info("Removed log=" + log + " activeLogs=" + logs);<a name="line.822"></a>
+<span class="sourceLineNo">823</span>      }<a name="line.823"></a>
 <span class="sourceLineNo">824</span>      assert logs.size() &gt; 0 : "expected at least one log";<a name="line.824"></a>
 <span class="sourceLineNo">825</span>    } catch (IOException e) {<a name="line.825"></a>
 <span class="sourceLineNo">826</span>      LOG.error("Unable to remove log: " + log, e);<a name="line.826"></a>

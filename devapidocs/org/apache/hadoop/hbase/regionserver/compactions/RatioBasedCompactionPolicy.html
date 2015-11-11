@@ -231,7 +231,8 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#skipLargeFiles(java.util.ArrayList)">skipLargeFiles</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#skipLargeFiles(java.util.ArrayList,%20boolean)">skipLargeFiles</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
+                            boolean&nbsp;mayUseOffpeak)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -281,7 +282,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <ul class="blockListLast">
 <li class="blockList">
 <h4>random</h4>
-<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.343">random</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.344">random</a></pre>
 <div class="block">Used calculation jitter</div>
 </li>
 </ul>
@@ -349,13 +350,14 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
-<a name="skipLargeFiles(java.util.ArrayList)">
+<a name="skipLargeFiles(java.util.ArrayList, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>skipLargeFiles</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.131">skipLargeFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates)</pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.131">skipLargeFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
+                                  boolean&nbsp;mayUseOffpeak)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>candidates</code> - pre-filtrate</dd>
 <dt><span class="strong">Returns:</span></dt><dd>filtered subset
  exclude all files above maxCompactSize
@@ -368,7 +370,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <ul class="blockList">
 <li class="blockList">
 <h4>filterBulk</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.150">filterBulk</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates)</pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.151">filterBulk</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>candidates</code> - pre-filtrate</dd>
 <dt><span class="strong">Returns:</span></dt><dd>filtered subset
  exclude all bulk load files if configured</dd></dl>
@@ -380,7 +382,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <ul class="blockList">
 <li class="blockList">
 <h4>removeExcessFiles</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.166">removeExcessFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.167">removeExcessFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
                                      boolean&nbsp;isUserCompaction,
                                      boolean&nbsp;isMajorCompaction)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>candidates</code> - pre-filtrate</dd>
@@ -394,7 +396,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <ul class="blockList">
 <li class="blockList">
 <h4>checkMinFilesCriteria</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.186">checkMinFilesCriteria</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates)</pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.187">checkMinFilesCriteria</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>candidates</code> - pre-filtrate</dd>
 <dt><span class="strong">Returns:</span></dt><dd>filtered subset
  forget the compactionSelection if we don't have enough files</dd></dl>
@@ -406,7 +408,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <ul class="blockList">
 <li class="blockList">
 <h4>applyCompactionPolicy</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.228">applyCompactionPolicy</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.229">applyCompactionPolicy</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
                                          boolean&nbsp;mayUseOffPeak,
                                          boolean&nbsp;mayBeStuck)
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -448,7 +450,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <ul class="blockList">
 <li class="blockList">
 <h4>isMajorCompaction</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.281">isMajorCompaction</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.282">isMajorCompaction</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -465,7 +467,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <ul class="blockList">
 <li class="blockList">
 <h4>getNextMajorCompactTime</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.349">getNextMajorCompactTime</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.350">getNextMajorCompactTime</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>filesToCompact</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>When to run next major compaction</dd></dl>
 </li>
@@ -476,7 +478,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <ul class="blockList">
 <li class="blockList">
 <h4>throttleCompaction</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.380">throttleCompaction</a>(long&nbsp;compactionSize)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.381">throttleCompaction</a>(long&nbsp;compactionSize)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionPolicy.html#throttleCompaction(long)">throttleCompaction</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionPolicy</a></code></dd>
@@ -490,7 +492,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compacti
 <ul class="blockListLast">
 <li class="blockList">
 <h4>needsCompaction</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.384">needsCompaction</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;storeFiles,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#line.385">needsCompaction</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;storeFiles,
                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</pre>
 </li>
 </ul>

@@ -19,7 +19,6 @@
 
 /*@import(https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css);
 @import(https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css);*/
-
 html {
   background-color: #fff;
 }
@@ -81,23 +80,15 @@ li#publishDate.pull-right {
 }
 
 @media only screen and (max-width: 977px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
   /* Without this rule, drop-down divs are a fixed height
    * the first time they are expanded */
   .collapse.in {
-      height: auto;
+      height: auto !important;
   }
-  /* Fix Google Search Results box on small screens */
-  input.gsc-input,
-  .gsc-input-box,
-  .gsc-input-box-hover,
-  .gsc-input-box-focus,
-  .gsc-search-button,
-  .gsc-results-wrapper-visible {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-  }
-
   div#search-form.navbar-search.pull-right {
     padding: 0;
     margin-left: ;
@@ -106,9 +97,16 @@ li#publishDate.pull-right {
   }
 }
 
-/* Fix Google Custom Search results div on very narrow screens */
+/* Fix Google Custom Search results on very narrow screens */
 @media(max-width: 480px) {
     .gsc-overflow-hidden .nav-collapse {
         -webkit-transform: none;
     }
+}
+
+/* Override weird body padding thing that causes scrolling */
+@media (max-width: 767px)
+body {
+    padding-right: 0;
+    padding-left: 0;
 }

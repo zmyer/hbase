@@ -182,24 +182,22 @@
 <span class="sourceLineNo">174</span>    return 0;<a name="line.174"></a>
 <span class="sourceLineNo">175</span>  }<a name="line.175"></a>
 <span class="sourceLineNo">176</span><a name="line.176"></a>
-<span class="sourceLineNo">177</span>  @Override // CM is not intended to be run with this test<a name="line.177"></a>
+<span class="sourceLineNo">177</span>  @Override // Chaos Monkey is not intended to be run with this test<a name="line.177"></a>
 <span class="sourceLineNo">178</span>  public TableName getTablename() {<a name="line.178"></a>
 <span class="sourceLineNo">179</span>    return null;<a name="line.179"></a>
 <span class="sourceLineNo">180</span>  }<a name="line.180"></a>
 <span class="sourceLineNo">181</span><a name="line.181"></a>
-<span class="sourceLineNo">182</span>  @Override<a name="line.182"></a>
-<span class="sourceLineNo">183</span>  protected Set&lt;String&gt; getColumnFamilies() {<a name="line.183"></a>
-<span class="sourceLineNo">184</span>    return null;<a name="line.184"></a>
-<span class="sourceLineNo">185</span>  }<a name="line.185"></a>
-<span class="sourceLineNo">186</span><a name="line.186"></a>
-<span class="sourceLineNo">187</span>  public static void main(String[] args) throws Exception {<a name="line.187"></a>
-<span class="sourceLineNo">188</span>    Configuration conf = HBaseConfiguration.create();<a name="line.188"></a>
-<span class="sourceLineNo">189</span>    IntegrationTestingUtility.setUseDistributedCluster(conf);<a name="line.189"></a>
-<span class="sourceLineNo">190</span>    int ret = ToolRunner.run(conf, new IntegrationTestTableSnapshotInputFormat(), args);<a name="line.190"></a>
-<span class="sourceLineNo">191</span>    System.exit(ret);<a name="line.191"></a>
-<span class="sourceLineNo">192</span>  }<a name="line.192"></a>
-<span class="sourceLineNo">193</span><a name="line.193"></a>
-<span class="sourceLineNo">194</span>}<a name="line.194"></a>
+<span class="sourceLineNo">182</span>  @Override // Chaos Monkey is not inteded to be run with this test<a name="line.182"></a>
+<span class="sourceLineNo">183</span>  protected Set&lt;String&gt; getColumnFamilies() { return null; }<a name="line.183"></a>
+<span class="sourceLineNo">184</span><a name="line.184"></a>
+<span class="sourceLineNo">185</span>  public static void main(String[] args) throws Exception {<a name="line.185"></a>
+<span class="sourceLineNo">186</span>    Configuration conf = HBaseConfiguration.create();<a name="line.186"></a>
+<span class="sourceLineNo">187</span>    IntegrationTestingUtility.setUseDistributedCluster(conf);<a name="line.187"></a>
+<span class="sourceLineNo">188</span>    int ret = ToolRunner.run(conf, new IntegrationTestTableSnapshotInputFormat(), args);<a name="line.188"></a>
+<span class="sourceLineNo">189</span>    System.exit(ret);<a name="line.189"></a>
+<span class="sourceLineNo">190</span>  }<a name="line.190"></a>
+<span class="sourceLineNo">191</span><a name="line.191"></a>
+<span class="sourceLineNo">192</span>}<a name="line.192"></a>
 
 
 

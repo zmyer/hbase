@@ -95,7 +95,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.51">TestHBaseTestingUtility</a>
+<pre>public class <a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.56">TestHBaseTestingUtility</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Test our testing utility class</div>
 </li>
@@ -196,9 +196,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestHBaseTestingUtility.html#testSetupClusterTestBuildDir()">testSetupClusterTestBuildDir</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestHBaseTestingUtility.html#testResolvePortConflict()">testResolvePortConflict</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestHBaseTestingUtility.html#testSetupClusterTestBuildDir()">testSetupClusterTestBuildDir</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/TestHBaseTestingUtility.html#testTestDir()">testTestDir</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -230,7 +234,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.52">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.57">LOG</a></pre>
 </li>
 </ul>
 </li>
@@ -247,7 +251,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestHBaseTestingUtility</h4>
-<pre>public&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.51">TestHBaseTestingUtility</a>()</pre>
+<pre>public&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.56">TestHBaseTestingUtility</a>()</pre>
 </li>
 </ul>
 </li>
@@ -264,7 +268,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMultiClusters</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.61">testMultiClusters</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.66">testMultiClusters</a>()
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Basic sanity test that spins up multiple HDFS and HBase clusters that share
  the same ZK ensemble. We then create the same table in both and make sure
@@ -279,7 +283,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMiniCluster</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.122">testMiniCluster</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.127">testMiniCluster</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -291,7 +295,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMiniClusterBindToWildcard</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.134">testMiniClusterBindToWildcard</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.139">testMiniClusterBindToWildcard</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -303,7 +307,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMiniClusterWithSSLOn</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.146">testMiniClusterWithSSLOn</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.151">testMiniClusterWithSSLOn</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -315,7 +319,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMultipleStartStop</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.175">testMultipleStartStop</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.180">testMultipleStartStop</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test that we can start and stop multiple time a cluster
    with the same HBaseTestingUtility.</div>
@@ -329,7 +333,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMiniZooKeeperWithOneServer</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.192">testMiniZooKeeperWithOneServer</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.197">testMiniZooKeeperWithOneServer</a>()
                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -341,7 +345,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMiniZooKeeperWithMultipleServers</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.204">testMiniZooKeeperWithMultipleServers</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.209">testMiniZooKeeperWithMultipleServers</a>()
                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -353,7 +357,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMiniZooKeeperWithMultipleClientPorts</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.246">testMiniZooKeeperWithMultipleClientPorts</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.251">testMiniZooKeeperWithMultipleClientPorts</a>()
                                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -365,7 +369,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMiniDFSCluster</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.350">testMiniDFSCluster</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.355">testMiniDFSCluster</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -377,7 +381,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSetupClusterTestBuildDir</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.363">testSetupClusterTestBuildDir</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.368">testSetupClusterTestBuildDir</a>()
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -386,11 +390,23 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testTestDir()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testTestDir</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.378">testTestDir</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.383">testTestDir</a>()
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testResolvePortConflict()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>testResolvePortConflict</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/TestHBaseTestingUtility.html#line.393">testResolvePortConflict</a>()
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>

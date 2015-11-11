@@ -161,12 +161,12 @@
 <a class="jxr_linenumber" name="151" href="#151">151</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="152" href="#152">152</a> <em class="jxr_javadoccomment">   * Get the percent of HFiles' that are local.</em>
 <a class="jxr_linenumber" name="153" href="#153">153</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="154" href="#154">154</a>   <strong class="jxr_keyword">int</strong> getPercentFileLocal();
+<a class="jxr_linenumber" name="154" href="#154">154</a>   <strong class="jxr_keyword">double</strong> getPercentFileLocal();
 <a class="jxr_linenumber" name="155" href="#155">155</a> 
 <a class="jxr_linenumber" name="156" href="#156">156</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="157" href="#157">157</a> <em class="jxr_javadoccomment">   * Get the percent of HFiles' that are local for secondary region replicas.</em>
 <a class="jxr_linenumber" name="158" href="#158">158</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="159" href="#159">159</a>   <strong class="jxr_keyword">int</strong> getPercentFileLocalSecondaryRegions();
+<a class="jxr_linenumber" name="159" href="#159">159</a>   <strong class="jxr_keyword">double</strong> getPercentFileLocalSecondaryRegions();
 <a class="jxr_linenumber" name="160" href="#160">160</a> 
 <a class="jxr_linenumber" name="161" href="#161">161</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="162" href="#162">162</a> <em class="jxr_javadoccomment">   * Get the size of the split queue</em>
@@ -241,7 +241,7 @@
 <a class="jxr_linenumber" name="231" href="#231">231</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="232" href="#232">232</a> <em class="jxr_javadoccomment">   * Get the percent of requests with the block cache turned on that hit the block cache.</em>
 <a class="jxr_linenumber" name="233" href="#233">233</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="234" href="#234">234</a>   <strong class="jxr_keyword">int</strong> getBlockCacheHitCachingPercent();
+<a class="jxr_linenumber" name="234" href="#234">234</a>   <strong class="jxr_keyword">double</strong> getBlockCacheHitCachingPercent();
 <a class="jxr_linenumber" name="235" href="#235">235</a> 
 <a class="jxr_linenumber" name="236" href="#236">236</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="237" href="#237">237</a> <em class="jxr_javadoccomment">   * Force a re-computation of the metrics.</em>
@@ -351,22 +351,22 @@
 <a class="jxr_linenumber" name="341" href="#341">341</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="342" href="#342">342</a> <em class="jxr_javadoccomment">   * Gets the hit percent to the mob file cache.</em>
 <a class="jxr_linenumber" name="343" href="#343">343</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="344" href="#344">344</a>   <strong class="jxr_keyword">int</strong> getMobFileCacheHitPercent();
+<a class="jxr_linenumber" name="344" href="#344">344</a>   <strong class="jxr_keyword">double</strong> getMobFileCacheHitPercent();
 <a class="jxr_linenumber" name="345" href="#345">345</a> 
 <a class="jxr_linenumber" name="346" href="#346">346</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="347" href="#347">347</a> <em class="jxr_javadoccomment">   * @return Count of hedged read operations</em>
 <a class="jxr_linenumber" name="348" href="#348">348</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="349" href="#349">349</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">long</strong> getHedgedReadOps();
+<a class="jxr_linenumber" name="349" href="#349">349</a>   <strong class="jxr_keyword">long</strong> getHedgedReadOps();
 <a class="jxr_linenumber" name="350" href="#350">350</a> 
 <a class="jxr_linenumber" name="351" href="#351">351</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="352" href="#352">352</a> <em class="jxr_javadoccomment">   * @return Count of times a hedged read beat out the primary read.</em>
 <a class="jxr_linenumber" name="353" href="#353">353</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="354" href="#354">354</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">long</strong> getHedgedReadWins();
+<a class="jxr_linenumber" name="354" href="#354">354</a>   <strong class="jxr_keyword">long</strong> getHedgedReadWins();
 <a class="jxr_linenumber" name="355" href="#355">355</a> 
 <a class="jxr_linenumber" name="356" href="#356">356</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="357" href="#357">357</a> <em class="jxr_javadoccomment">   * @return Count of requests blocked because the memstore size is larger than blockingMemStoreSize</em>
 <a class="jxr_linenumber" name="358" href="#358">358</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="359" href="#359">359</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">long</strong> getBlockedRequestsCount();
+<a class="jxr_linenumber" name="359" href="#359">359</a>   <strong class="jxr_keyword">long</strong> getBlockedRequestsCount();
 <a class="jxr_linenumber" name="360" href="#360">360</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>

@@ -238,7 +238,9 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected abstract <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html#getColumnFamilies()">getColumnFamilies</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html#getColumnFamilies()">getColumnFamilies</a></strong>()</code>
+<div class="block">Provides the name of the CFs that are protected from random Chaos monkey activity (alter)</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.conf.Configuration</code></td>
@@ -250,7 +252,9 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract org.apache.hadoop.hbase.TableName</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html#getTablename()">getTablename</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/IntegrationTestBase.html#getTablename()">getTablename</a></strong>()</code>
+<div class="block">Provides the name of the table that is protected from random Chaos monkey activity</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../org/apache/hadoop/hbase/IntegrationTestingUtility.html" title="class in org.apache.hadoop.hbase">IntegrationTestingUtility</a></code></td>
@@ -636,7 +640,9 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTablename</h4>
-<pre>public abstract&nbsp;org.apache.hadoop.hbase.TableName&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestBase.html#line.206">getTablename</a>()</pre>
+<pre>public abstract&nbsp;org.apache.hadoop.hbase.TableName&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestBase.html#line.210">getTablename</a>()</pre>
+<div class="block">Provides the name of the table that is protected from random Chaos monkey activity</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>table to not delete.</dd></dl>
 </li>
 </ul>
 <a name="getColumnFamilies()">
@@ -645,7 +651,9 @@ extends org.apache.hadoop.hbase.util.AbstractHBaseTool</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getColumnFamilies</h4>
-<pre>protected abstract&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestBase.html#line.208">getColumnFamilies</a>()</pre>
+<pre>protected abstract&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/IntegrationTestBase.html#line.216">getColumnFamilies</a>()</pre>
+<div class="block">Provides the name of the CFs that are protected from random Chaos monkey activity (alter)</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>set of cf names to protect.</dd></dl>
 </li>
 </ul>
 </li>
