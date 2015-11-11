@@ -105,3 +105,10 @@ li#publishDate.pull-right {
     clear: both;
   }
 }
+
+/* Fix Google Custom Search results div on very narrow screens */
+@media(max-width: 480px) {
+    .gsc-overflow-hidden .nav-collapse {
+        -webkit-transform: none;
+    }
+}
