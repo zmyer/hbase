@@ -2216,7 +2216,7 @@
 <span class="sourceLineNo">2208</span>              perm.getQualifier(), Action.ADMIN);<a name="line.2208"></a>
 <span class="sourceLineNo">2209</span>            break;<a name="line.2209"></a>
 <span class="sourceLineNo">2210</span>          case Namespace :<a name="line.2210"></a>
-<span class="sourceLineNo">2211</span>            requireGlobalPermission("grant", Action.ADMIN, perm.getNamespace());<a name="line.2211"></a>
+<span class="sourceLineNo">2211</span>            requireNamespacePermission("grant", perm.getNamespace(), Action.ADMIN);<a name="line.2211"></a>
 <span class="sourceLineNo">2212</span>           break;<a name="line.2212"></a>
 <span class="sourceLineNo">2213</span>        }<a name="line.2213"></a>
 <span class="sourceLineNo">2214</span><a name="line.2214"></a>
@@ -2267,7 +2267,7 @@
 <span class="sourceLineNo">2259</span>              perm.getQualifier(), Action.ADMIN);<a name="line.2259"></a>
 <span class="sourceLineNo">2260</span>            break;<a name="line.2260"></a>
 <span class="sourceLineNo">2261</span>          case Namespace :<a name="line.2261"></a>
-<span class="sourceLineNo">2262</span>            requireGlobalPermission("revoke", Action.ADMIN, perm.getNamespace());<a name="line.2262"></a>
+<span class="sourceLineNo">2262</span>            requireNamespacePermission("revoke", perm.getNamespace(), Action.ADMIN);<a name="line.2262"></a>
 <span class="sourceLineNo">2263</span>            break;<a name="line.2263"></a>
 <span class="sourceLineNo">2264</span>        }<a name="line.2264"></a>
 <span class="sourceLineNo">2265</span><a name="line.2265"></a>

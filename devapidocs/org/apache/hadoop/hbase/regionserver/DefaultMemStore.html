@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DefaultMemStore (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
@@ -604,7 +604,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <ul class="blockList">
 <li class="blockList">
 <h4>FIXED_OVERHEAD</h4>
-<pre>public static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.907">FIXED_OVERHEAD</a></pre>
+<pre>public static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.906">FIXED_OVERHEAD</a></pre>
 </li>
 </ul>
 <a name="DEEP_OVERHEAD">
@@ -613,7 +613,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <ul class="blockListLast">
 <li class="blockList">
 <h4>DEEP_OVERHEAD</h4>
-<pre>public static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.910">DEEP_OVERHEAD</a></pre>
+<pre>public static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.909">DEEP_OVERHEAD</a></pre>
 </li>
 </ul>
 </li>
@@ -976,7 +976,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <ul class="blockList">
 <li class="blockList">
 <h4>heapSizeChange</h4>
-<pre>static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.921">heapSizeChange</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
+<pre>static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.920">heapSizeChange</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
                   boolean&nbsp;notpresent)</pre>
 </li>
 </ul>
@@ -986,7 +986,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <ul class="blockList">
 <li class="blockList">
 <h4>keySize</h4>
-<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.926">keySize</a>()</pre>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.925">keySize</a>()</pre>
 </li>
 </ul>
 <a name="heapSize()">
@@ -995,7 +995,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <ul class="blockList">
 <li class="blockList">
 <h4>heapSize</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.935">heapSize</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.934">heapSize</a>()</pre>
 <div class="block">Get the entire heap usage for this MemStore not including keys in the
  snapshot.</div>
 <dl>
@@ -1011,7 +1011,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <ul class="blockList">
 <li class="blockList">
 <h4>size</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.940">size</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.939">size</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore.html#size()">size</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStore</a></code></dd>
@@ -1024,7 +1024,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore
 <ul class="blockListLast">
 <li class="blockList">
 <h4>main</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.951">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#line.950">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</pre>
 <div class="block">Code to help figure if our approximation of object heap sizes is close
  enough.  See hbase-900.  Fills memstores then waits so user can heap
  dump and bring up resultant hprof in something like jprofiler which

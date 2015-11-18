@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class org.apache.hadoop.hbase.io.TimeRange (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
 </head>
@@ -102,15 +102,28 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
-<td class="colLast"><span class="strong">Get.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Get.html#tr">tr</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">Increment.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html#tr">tr</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
-<td class="colLast"><span class="strong">Increment.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html#tr">tr</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">Get.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Get.html#tr">tr</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#tr">tr</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> with type parameters of type <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a>&gt;</code></td>
+<td class="colLast"><span class="strong">Query.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html#colFamTimeRangeMap">colFamTimeRangeMap</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -123,19 +136,32 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
-<td class="colLast"><span class="strong">Get.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Get.html#getTimeRange()">getTimeRange</a></strong>()</code>
-<div class="block">Method for retrieving the get's TimeRange</div>
+<td class="colLast"><span class="strong">Increment.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html#getTimeRange()">getTimeRange</a></strong>()</code>
+<div class="block">Gets the TimeRange used for this increment.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
-<td class="colLast"><span class="strong">Increment.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html#getTimeRange()">getTimeRange</a></strong>()</code>
-<div class="block">Gets the TimeRange used for this increment.</div>
+<td class="colLast"><span class="strong">Get.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Get.html#getTimeRange()">getTimeRange</a></strong>()</code>
+<div class="block">Method for retrieving the get's TimeRange</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#getTimeRange()">getTimeRange</a></strong>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/client/package-summary.html">org.apache.hadoop.hbase.client</a> that return types with arguments of type <a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a>&gt;</code></td>
+<td class="colLast"><span class="strong">Query.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html#getColumnFamilyTimeRange()">getColumnFamilyTimeRange</a></strong>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -177,6 +203,14 @@
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">TimeRangeTracker.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html#includesTimeRange(org.apache.hadoop.hbase.io.TimeRange)">includesTimeRange</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a>&nbsp;tr)</code>
 <div class="block">Check if the range has any overlap with TimeRange</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><span class="strong">StoreFile.Reader.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html#passesTimerangeFilter(org.apache.hadoop.hbase.io.TimeRange,%20long)">passesTimerangeFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a>&nbsp;timeRange,
+                                          long&nbsp;oldestUnexpiredTS)</code>
+<div class="block">Check if this storeFile may contain keys within the TimeRange that
+ have not expired (i.e.</div>
 </td>
 </tr>
 </tbody>

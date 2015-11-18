@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>KeyValueScanner (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
@@ -96,7 +96,7 @@
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.32">KeyValueScanner</a>
+public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.31">KeyValueScanner</a>
 extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.html" title="interface in org.apache.hadoop.hbase.regionserver">Shipper</a></pre>
 <div class="block">Scanner that returns the next KeyValue.</div>
 </li>
@@ -211,8 +211,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#shouldUseScanner(org.apache.hadoop.hbase.client.Scan,%20java.util.SortedSet,%20long)">shouldUseScanner</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
-                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</a>&lt;byte[]&gt;&nbsp;columns,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#shouldUseScanner(org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.Store,%20long)">shouldUseScanner</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                                <a href="../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                                 long&nbsp;oldestUnexpiredTS)</code>
 <div class="block">Allows to filter out scanners (both StoreFile and memstore) that we don't
  want to use based on criteria such as Bloom filters and timestamp ranges.</div>
@@ -246,7 +246,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>peek</h4>
-<pre><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.37">peek</a>()</pre>
+<pre><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.36">peek</a>()</pre>
 <div class="block">Look at the next Cell in this scanner, but do not iterate scanner.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the next Cell</dd></dl>
 </li>
@@ -257,7 +257,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>next</h4>
-<pre><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.43">next</a>()
+<pre><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.42">next</a>()
           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Return the next Cell in this scanner, iterating the scanner</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the next Cell</dd>
@@ -271,7 +271,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>seek</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.50">seek</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key)
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.49">seek</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key)
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Seek the scanner at or after the specified KeyValue.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - seek value</dd>
@@ -286,7 +286,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>reseek</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.60">reseek</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key)
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.59">reseek</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key)
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Reseek the scanner at or after the specified KeyValue.
  This method is guaranteed to seek at or after the required key only if the
@@ -304,7 +304,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>getSequenceID</h4>
-<pre>long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.68">getSequenceID</a>()</pre>
+<pre>long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.67">getSequenceID</a>()</pre>
 <div class="block">Get the sequence id associated with this KeyValueScanner. This is required
  for comparing multiple files to find out which one has the latest data.
  The default implementation for this would be to return 0. A file having
@@ -317,23 +317,22 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>close</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.73">close</a>()</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.72">close</a>()</pre>
 <div class="block">Close the KeyValue scanner.</div>
 </li>
 </ul>
-<a name="shouldUseScanner(org.apache.hadoop.hbase.client.Scan, java.util.SortedSet, long)">
+<a name="shouldUseScanner(org.apache.hadoop.hbase.client.Scan, org.apache.hadoop.hbase.regionserver.Store, long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>shouldUseScanner</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.85">shouldUseScanner</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
-                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</a>&lt;byte[]&gt;&nbsp;columns,
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.83">shouldUseScanner</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                       <a href="../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                        long&nbsp;oldestUnexpiredTS)</pre>
 <div class="block">Allows to filter out scanners (both StoreFile and memstore) that we don't
  want to use based on criteria such as Bloom filters and timestamp ranges.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>scan</code> - the scan that we are selecting scanners for</dd><dd><code>columns</code> - the set of columns in the current column family, or null if
-          not specified by the scan</dd><dd><code>oldestUnexpiredTS</code> - the oldest timestamp we are interested in for
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>scan</code> - the scan that we are selecting scanners for</dd><dd><code>store</code> - the store we are performing the scan on.</dd><dd><code>oldestUnexpiredTS</code> - the oldest timestamp we are interested in for
           this query, based on TTL</dd>
 <dt><span class="strong">Returns:</span></dt><dd>true if the scanner should be included in the query</dd></dl>
 </li>
@@ -344,7 +343,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>requestSeek</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.101">requestSeek</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv,
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.97">requestSeek</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv,
                   boolean&nbsp;forward,
                   boolean&nbsp;useBloom)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -365,7 +364,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>realSeekDone</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.110">realSeekDone</a>()</pre>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.106">realSeekDone</a>()</pre>
 <div class="block">We optimize our store scanners by checking the most recent store file
  first, so we sometimes pretend we have done a seek but delay it until the
  store scanner bubbles up to the top of the key-value heap. This method is
@@ -378,7 +377,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>enforceSeek</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.119">enforceSeek</a>()
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.115">enforceSeek</a>()
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Does the real seek operation in case it was skipped by
  seekToRowCol(KeyValue, boolean) (TODO: Whats this?). Note that this function should
@@ -395,7 +394,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>isFileScanner</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.125">isFileScanner</a>()</pre>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.121">isFileScanner</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if this is a file scanner. Otherwise a memory scanner is
          assumed.</dd></dl>
 </li>
@@ -406,7 +405,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>backwardSeek</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.140">backwardSeek</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key)
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.136">backwardSeek</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key)
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Seek the scanner at or before the row of specified Cell, it firstly
  tries to seek the scanner at or after the specified Cell, return if
@@ -426,7 +425,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>seekToPreviousRow</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.149">seekToPreviousRow</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key)
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.145">seekToPreviousRow</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;key)
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Seek the scanner at the first Cell of the row which is the previous row
  of specified key</div>
@@ -443,7 +442,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>seekToLastRow</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.158">seekToLastRow</a>()
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.154">seekToLastRow</a>()
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Seek the scanner at the first KeyValue of last row</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if scanner has values left, false if the underlying data is
@@ -458,7 +457,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.htm
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getNextIndexedKey</h4>
-<pre><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.164">getNextIndexedKey</a>()</pre>
+<pre><a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#line.160">getNextIndexedKey</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the next key in the index (the key to seek to the next block)
  if known, or null otherwise</dd></dl>
 </li>

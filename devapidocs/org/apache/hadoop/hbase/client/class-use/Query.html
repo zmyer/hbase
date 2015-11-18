@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class org.apache.hadoop.hbase.client.Query (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
 </head>
@@ -142,23 +142,32 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></td>
+<td class="colLast"><span class="strong">Query.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html#setColumnFamilyTimeRange(byte[],%20long,%20long)">setColumnFamilyTimeRange</a></strong>(byte[]&nbsp;cf,
+                                                long&nbsp;minStamp,
+                                                long&nbsp;maxStamp)</code>
+<div class="block">Get versions of columns only within the specified timestamp range,
+ [minStamp, maxStamp) on a per CF bases.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></td>
 <td class="colLast"><span class="strong">Query.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html#setConsistency(org.apache.hadoop.hbase.client.Consistency)">setConsistency</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a>&nbsp;consistency)</code>
 <div class="block">Sets the consistency level for this operation</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></td>
 <td class="colLast"><span class="strong">Query.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html#setFilter(org.apache.hadoop.hbase.filter.Filter)">setFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;filter)</code>
 <div class="block">Apply the specified server-side filter when performing the Query.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></td>
 <td class="colLast"><span class="strong">Query.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html#setIsolationLevel(org.apache.hadoop.hbase.client.IsolationLevel)">setIsolationLevel</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/IsolationLevel.html" title="enum in org.apache.hadoop.hbase.client">IsolationLevel</a>&nbsp;level)</code>
 <div class="block">Set the isolation level for this query.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></td>
 <td class="colLast"><span class="strong">Query.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html#setReplicaId(int)">setReplicaId</a></strong>(int&nbsp;Id)</code>
 <div class="block">Specify region replica id where Query will fetch data from.</div>

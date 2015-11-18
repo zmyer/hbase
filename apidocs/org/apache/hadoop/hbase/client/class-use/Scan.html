@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class org.apache.hadoop.hbase.client.Scan (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
 </head>
@@ -176,111 +176,117 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
-<td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setConsistency(org.apache.hadoop.hbase.client.Consistency)">setConsistency</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a>&nbsp;consistency)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setColumnFamilyTimeRange(byte[],%20long,%20long)">setColumnFamilyTimeRange</a></strong>(byte[]&nbsp;cf,
+                                                long&nbsp;minStamp,
+                                                long&nbsp;maxStamp)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
+<td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setConsistency(org.apache.hadoop.hbase.client.Consistency)">setConsistency</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a>&nbsp;consistency)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setFamilyMap(java.util.Map)">setFamilyMap</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;byte[]&gt;&gt;&nbsp;familyMap)</code>
 <div class="block">Setting the familyMap</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setFilter(org.apache.hadoop.hbase.filter.Filter)">setFilter</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;filter)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setId(java.lang.String)">setId</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setIsolationLevel(org.apache.hadoop.hbase.client.IsolationLevel)">setIsolationLevel</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/IsolationLevel.html" title="enum in org.apache.hadoop.hbase.client">IsolationLevel</a>&nbsp;level)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setLoadColumnFamiliesOnDemand(boolean)">setLoadColumnFamiliesOnDemand</a></strong>(boolean&nbsp;value)</code>
 <div class="block">Set the value indicating whether loading CFs on demand should be allowed (cluster
  default is false).</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxResultSize(long)">setMaxResultSize</a></strong>(long&nbsp;maxResultSize)</code>
 <div class="block">Set the maximum result size.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxResultsPerColumnFamily(int)">setMaxResultsPerColumnFamily</a></strong>(int&nbsp;limit)</code>
 <div class="block">Set the maximum number of values to return per row per Column Family</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxVersions()">setMaxVersions</a></strong>()</code>
 <div class="block">Get all available versions.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxVersions(int)">setMaxVersions</a></strong>(int&nbsp;maxVersions)</code>
 <div class="block">Get up to the specified number of versions of each column.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setRaw(boolean)">setRaw</a></strong>(boolean&nbsp;raw)</code>
 <div class="block">Enable/disable "raw" mode for this scan.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setReplicaId(int)">setReplicaId</a></strong>(int&nbsp;Id)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setReversed(boolean)">setReversed</a></strong>(boolean&nbsp;reversed)</code>
 <div class="block">Set whether this scan is a reversed one</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setRowOffsetPerColumnFamily(int)">setRowOffsetPerColumnFamily</a></strong>(int&nbsp;offset)</code>
 <div class="block">Set offset for the row per Column Family.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setRowPrefixFilter(byte[])">setRowPrefixFilter</a></strong>(byte[]&nbsp;rowPrefix)</code>
 <div class="block">Set a filter (using stopRow and startRow) so the result set only contains rows where the
  rowKey starts with the specified prefix.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setScanMetricsEnabled(boolean)">setScanMetricsEnabled</a></strong>(boolean&nbsp;enabled)</code>
 <div class="block">Enable collection of <code>ScanMetrics</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setSmall(boolean)">setSmall</a></strong>(boolean&nbsp;small)</code>
 <div class="block">Set whether this scan is a small scan</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setStartRow(byte[])">setStartRow</a></strong>(byte[]&nbsp;startRow)</code>
 <div class="block">Set the start row of the scan.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setStopRow(byte[])">setStopRow</a></strong>(byte[]&nbsp;stopRow)</code>
 <div class="block">Set the stop row of the scan.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setTimeRange(long,%20long)">setTimeRange</a></strong>(long&nbsp;minStamp,
                         long&nbsp;maxStamp)</code>
@@ -288,7 +294,7 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
  [minStamp, maxStamp).</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><span class="strong">Scan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html#setTimeStamp(long)">setTimeStamp</a></strong>(long&nbsp;timestamp)</code>
 <div class="block">Get versions of columns with the specified timestamp.</div>

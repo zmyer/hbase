@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Constant Field Values (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
 </head>
@@ -7113,46 +7113,60 @@
 <td class="colLast"><code>0.75f</code></td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.io.hfile.LruBlockCache.DEFAULT_MAX_BLOCK_SIZE">
+<!--   -->
+</a><code>private&nbsp;static&nbsp;final&nbsp;long</code></td>
+<td><code><a href="org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#DEFAULT_MAX_BLOCK_SIZE">DEFAULT_MAX_BLOCK_SIZE</a></code></td>
+<td class="colLast"><code>16777216L</code></td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.io.hfile.LruBlockCache.DEFAULT_MEMORY_FACTOR">
 <!--   -->
 </a><code>static&nbsp;final&nbsp;float</code></td>
 <td><code><a href="org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#DEFAULT_MEMORY_FACTOR">DEFAULT_MEMORY_FACTOR</a></code></td>
 <td class="colLast"><code>0.25f</code></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.io.hfile.LruBlockCache.DEFAULT_MIN_FACTOR">
 <!--   -->
 </a><code>static&nbsp;final&nbsp;float</code></td>
 <td><code><a href="org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#DEFAULT_MIN_FACTOR">DEFAULT_MIN_FACTOR</a></code></td>
 <td class="colLast"><code>0.949999988079071f</code></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.io.hfile.LruBlockCache.DEFAULT_MULTI_FACTOR">
 <!--   -->
 </a><code>static&nbsp;final&nbsp;float</code></td>
 <td><code><a href="org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#DEFAULT_MULTI_FACTOR">DEFAULT_MULTI_FACTOR</a></code></td>
 <td class="colLast"><code>0.5f</code></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.io.hfile.LruBlockCache.DEFAULT_SINGLE_FACTOR">
 <!--   -->
 </a><code>static&nbsp;final&nbsp;float</code></td>
 <td><code><a href="org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#DEFAULT_SINGLE_FACTOR">DEFAULT_SINGLE_FACTOR</a></code></td>
 <td class="colLast"><code>0.25f</code></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.io.hfile.LruBlockCache.LRU_ACCEPTABLE_FACTOR_CONFIG_NAME">
 <!--   -->
 </a><code>static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td><code><a href="org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#LRU_ACCEPTABLE_FACTOR_CONFIG_NAME">LRU_ACCEPTABLE_FACTOR_CONFIG_NAME</a></code></td>
 <td class="colLast"><code>"hbase.lru.blockcache.acceptable.factor"</code></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.io.hfile.LruBlockCache.LRU_IN_MEMORY_FORCE_MODE_CONFIG_NAME">
 <!--   -->
 </a><code>static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td><code><a href="org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#LRU_IN_MEMORY_FORCE_MODE_CONFIG_NAME">LRU_IN_MEMORY_FORCE_MODE_CONFIG_NAME</a></code></td>
 <td class="colLast"><code>"hbase.lru.rs.inmemoryforcemode"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.io.hfile.LruBlockCache.LRU_MAX_BLOCK_SIZE">
+<!--   -->
+</a><code>private&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#LRU_MAX_BLOCK_SIZE">LRU_MAX_BLOCK_SIZE</a></code></td>
+<td class="colLast"><code>"hbase.lru.max.block.size"</code></td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.io.hfile.LruBlockCache.LRU_MEMORY_PERCENTAGE_CONFIG_NAME">
@@ -13755,6 +13769,20 @@
 </a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td><code><a href="org/apache/hadoop/hbase/regionserver/MetricsRegionServerSource.html#BLOCK_CACHE_EXPRESS_HIT_PERCENT_DESC">BLOCK_CACHE_EXPRESS_HIT_PERCENT_DESC</a></code></td>
 <td class="colLast"><code>"The percent of the time that requests with the cache turned on hit the cache."</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.regionserver.MetricsRegionServerSource.BLOCK_CACHE_FAILED_INSERTION_COUNT">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/apache/hadoop/hbase/regionserver/MetricsRegionServerSource.html#BLOCK_CACHE_FAILED_INSERTION_COUNT">BLOCK_CACHE_FAILED_INSERTION_COUNT</a></code></td>
+<td class="colLast"><code>"blockCacheFailedInsertionCount"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.regionserver.MetricsRegionServerSource.BLOCK_CACHE_FAILED_INSERTION_COUNT_DESC">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/apache/hadoop/hbase/regionserver/MetricsRegionServerSource.html#BLOCK_CACHE_FAILED_INSERTION_COUNT_DESC">BLOCK_CACHE_FAILED_INSERTION_COUNT_DESC</a></code></td>
+<td class="colLast"><code>"Number of times that a block cache insertion failed. Usually due to size restrictions."</code></td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.regionserver.MetricsRegionServerSource.BLOCK_CACHE_FREE_DESC">

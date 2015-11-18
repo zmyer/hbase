@@ -1908,7 +1908,7 @@
 <a class="jxr_linenumber" name="1898" href="#1898">1898</a>           ? <strong class="jxr_keyword">new</strong> TraceInfo(header.getTraceInfo().getTraceId(), header.getTraceInfo().getParentId())
 <a class="jxr_linenumber" name="1899" href="#1899">1899</a>           : <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="1900" href="#1900">1900</a>       <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcServer.html">Call</a> call = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcServer.html">Call</a>(id, <strong class="jxr_keyword">this</strong>.service, md, header, param, cellScanner, <strong class="jxr_keyword">this</strong>, responder,
-<a class="jxr_linenumber" name="1901" href="#1901">1901</a>               totalRequestSize, traceInfo, RpcServer.getRemoteIp());
+<a class="jxr_linenumber" name="1901" href="#1901">1901</a>               totalRequestSize, traceInfo, <strong class="jxr_keyword">this</strong>.addr);
 <a class="jxr_linenumber" name="1902" href="#1902">1902</a>       scheduler.dispatch(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/ipc/CallRunner.html">CallRunner</a>(RpcServer.<strong class="jxr_keyword">this</strong>, call));
 <a class="jxr_linenumber" name="1903" href="#1903">1903</a>     }
 <a class="jxr_linenumber" name="1904" href="#1904">1904</a> 

@@ -8635,15 +8635,17 @@ The rowkey of LOG_TYPES would be:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>[type] (e.g., byte indicating hostname vs. event-type)</p>
+<p><code>[type]</code> (e.g., byte indicating hostname vs. event-type)</p>
 </li>
 <li>
-<p>[bytes] variable length bytes for raw hostname or event-type.</p>
+<p><code>[bytes]</code> variable length bytes for raw hostname or event-type.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>A column for this rowkey could be a long with an assigned number, which could be obtained by using an <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Table.html#incrementColumnValue%28byte" class="bare">http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Table.html#incrementColumnValue%28byte</a>,%20byte[],%20byte[],%20long%29[HBase counter].</p>
+<p>A column for this rowkey could be a long with an assigned number, which could be obtained
+by using an
+<a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Table.html#incrementColumnValue%28byte[],%20byte[],%20byte[],%20long%29">HBase counter</a>.</p>
 </div>
 <div class="paragraph">
 <p>So the resulting composite rowkey would be:</p>
@@ -8671,7 +8673,9 @@ The rowkey of LOG_TYPES would be:</p>
 <div class="paragraph">
 <p>This effectively is the OpenTSDB approach.
 What OpenTSDB does is re-write data and pack rows into columns for certain time-periods.
-For a detailed explanation, see: link:http://opentsdb.net/schema.html, and <a href="http://www.cloudera.com/content/cloudera/en/resources/library/hbasecon/video-hbasecon-2012-lessons-learned-from-opentsdb.html">Lessons Learned from OpenTSDB</a> from HBaseCon2012.</p>
+For a detailed explanation, see: link:http://opentsdb.net/schema.html, and
+<a href="http://www.cloudera.com/content/cloudera/en/resources/library/hbasecon/video-hbasecon-2012-lessons-learned-from-opentsdb.html">Lessons Learned from OpenTSDB</a>
+from HBaseCon2012.</p>
 </div>
 <div class="paragraph">
 <p>But this is how the general concept works: data is ingested, for example, in this manner&#8230;&#8203;</p>
@@ -8855,10 +8859,10 @@ Assume that the class structure is as follows:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>[order-rowkey]</p>
+<p><code>[order-rowkey]</code></p>
 </li>
 <li>
-<p>[shipping location number] (e.g., 1st location, 2nd, etc.)</p>
+<p><code>[shipping location number]</code> (e.g., 1st location, 2nd, etc.)</p>
 </li>
 </ul>
 </div>
@@ -8868,13 +8872,13 @@ Assume that the class structure is as follows:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>[order-rowkey]</p>
+<p><code>[order-rowkey]</code></p>
 </li>
 <li>
-<p>[shipping location number] (e.g., 1st location, 2nd, etc.)</p>
+<p><code>[shipping location number]</code> (e.g., 1st location, 2nd, etc.)</p>
 </li>
 <li>
-<p>[line item number] (e.g., 1st lineitem, 2nd, etc.)</p>
+<p><code>[line item number]</code> (e.g., 1st lineitem, 2nd, etc.)</p>
 </li>
 </ul>
 </div>
@@ -8910,10 +8914,10 @@ The cons of such an approach is that to retrieve information about any Order, yo
 <div class="ulist">
 <ul>
 <li>
-<p>[order-rowkey]</p>
+<p><code>[order-rowkey]</code></p>
 </li>
 <li>
-<p>[ORDER record type]</p>
+<p><code>[ORDER record type]</code></p>
 </li>
 </ul>
 </div>
@@ -8923,13 +8927,13 @@ The cons of such an approach is that to retrieve information about any Order, yo
 <div class="ulist">
 <ul>
 <li>
-<p>[order-rowkey]</p>
+<p><code>[order-rowkey]</code></p>
 </li>
 <li>
-<p>[SHIPPING record type]</p>
+<p><code>[SHIPPING record type]</code></p>
 </li>
 <li>
-<p>[shipping location number] (e.g., 1st location, 2nd, etc.)</p>
+<p><code>[shipping location number]</code> (e.g., 1st location, 2nd, etc.)</p>
 </li>
 </ul>
 </div>
@@ -8939,16 +8943,16 @@ The cons of such an approach is that to retrieve information about any Order, yo
 <div class="ulist">
 <ul>
 <li>
-<p>[order-rowkey]</p>
+<p><code>[order-rowkey]</code></p>
 </li>
 <li>
-<p>[LINE record type]</p>
+<p><code>[LINE record type]</code></p>
 </li>
 <li>
-<p>[shipping location number] (e.g., 1st location, 2nd, etc.)</p>
+<p><code>[shipping location number]</code> (e.g., 1st location, 2nd, etc.)</p>
 </li>
 <li>
-<p>[line item number] (e.g., 1st lineitem, 2nd, etc.)</p>
+<p><code>[line item number]</code> (e.g., 1st lineitem, 2nd, etc.)</p>
 </li>
 </ul>
 </div>
@@ -8964,13 +8968,13 @@ The cons of such an approach is that to retrieve information about any Order, yo
 <div class="ulist">
 <ul>
 <li>
-<p>[order-rowkey]</p>
+<p><code>[order-rowkey]</code></p>
 </li>
 <li>
-<p>[LINE record type]</p>
+<p><code>[LINE record type]</code></p>
 </li>
 <li>
-<p>[line item number] (e.g., 1st lineitem, 2nd, etc., care must be taken that there are unique across the entire order)</p>
+<p><code>[line item number]</code> (e.g., 1st lineitem, 2nd, etc., care must be taken that there are unique across the entire order)</p>
 </li>
 </ul>
 </div>
@@ -11782,13 +11786,23 @@ The correct way to apply cell level labels is to do so in the application code w
 </li>
 </ol>
 </div>
+</div>
+<div class="sect3">
+<h4 id="reading_cells_with_labels"><a class="anchor" href="#reading_cells_with_labels"></a>59.3.3. Reading Cells with Labels</h4>
 <div class="paragraph">
-<p><a href="#reading_cells_with_labels">[reading_cells_with_labels]</a>
-==== Reading Cells with Labels
-When you issue a Scan or Get, HBase uses your default set of authorizations to filter out cells that you do not have access to. A superuser can set the default set of authorizations for a given user by using the <code>set_auths</code> HBase Shell command or the <a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#setAuths(org.apache.hadoop.hbase.client.Connection,%20java.lang.String" class="bare">http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#setAuths(org.apache.hadoop.hbase.client.Connection,%20java.lang.String</a>,%20java.lang.String)[VisibilityClient.setAuths()] method.</p>
+<p>When you issue a Scan or Get, HBase uses your default set of authorizations to
+filter out cells that you do not have access to. A superuser can set the default
+set of authorizations for a given user by using the <code>set_auths</code> HBase Shell command
+or the
+<a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/security/visibility/VisibilityClient.html#setAuths(org.apache.hadoop.hbase.client.Connection,%20java.lang.String\">],%20java.lang.String)[VisibilityClient.setAuths()</a> method.</p>
 </div>
 <div class="paragraph">
-<p>You can specify a different authorization during the Scan or Get, by passing the AUTHORIZATIONS option in HBase Shell, or the <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Scan.html#setAuthorizations%28org.apache.hadoop.hbase.security.visibility.Authorizations%29">setAuthorizations()</a> method if you use the API. This authorization will be combined with your default set as an additional filter. It will further filter your results, rather than giving you additional authorization.</p>
+<p>You can specify a different authorization during the Scan or Get, by passing the
+AUTHORIZATIONS option in HBase Shell, or the
+<a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Scan.html#setAuthorizations%28org.apache.hadoop.hbase.security.visibility.Authorizations%29">setAuthorizations()</a>
+method if you use the API. This authorization will be combined with your default
+set as an additional filter. It will further filter your results, rather than
+giving you additional authorization.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 33. HBase Shell</div>
@@ -11835,7 +11849,7 @@ public <span class="predefined-type">Void</span> run() <span class="directive">t
 </div>
 </div>
 <div class="sect3">
-<h4 id="_implementing_your_own_visibility_label_algorithm"><a class="anchor" href="#_implementing_your_own_visibility_label_algorithm"></a>59.3.3. Implementing Your Own Visibility Label Algorithm</h4>
+<h4 id="_implementing_your_own_visibility_label_algorithm"><a class="anchor" href="#_implementing_your_own_visibility_label_algorithm"></a>59.3.4. Implementing Your Own Visibility Label Algorithm</h4>
 <div class="paragraph">
 <p>Interpreting the labels authenticated for a given get/scan request is a pluggable algorithm.</p>
 </div>
@@ -11843,11 +11857,11 @@ public <span class="predefined-type">Void</span> run() <span class="directive">t
 <p>You can specify a custom plugin or plugins by using the property <code>hbase.regionserver.scan.visibility.label.generator.class</code>. The output for the first <code>ScanLabelGenerator</code> will be the input for the next one, until the end of the list.</p>
 </div>
 <div class="paragraph">
-<p>The default implementation, which was implemented in <a href="https://issues.apache.org/jira/browse/HBASE-12466">HBASE-12466</a>, loads two plugins, <code>FeedUserAuthScanLabelGenerator</code> and <code>DefinedSetFilterScanLabelGenerator</code>. See <a href="#reading_cells_with_labels">[reading_cells_with_labels]</a>.</p>
+<p>The default implementation, which was implemented in <a href="https://issues.apache.org/jira/browse/HBASE-12466">HBASE-12466</a>, loads two plugins, <code>FeedUserAuthScanLabelGenerator</code> and <code>DefinedSetFilterScanLabelGenerator</code>. See <a href="#reading_cells_with_labels">Reading Cells with Labels</a>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_replicating_visibility_tags_as_strings"><a class="anchor" href="#_replicating_visibility_tags_as_strings"></a>59.3.4. Replicating Visibility Tags as Strings</h4>
+<h4 id="_replicating_visibility_tags_as_strings"><a class="anchor" href="#_replicating_visibility_tags_as_strings"></a>59.3.5. Replicating Visibility Tags as Strings</h4>
 <div class="paragraph">
 <p>As mentioned in the above sections, the interface <code>VisibilityLabelService</code> could be used to implement a different way of storing the visibility expressions in the cells. Clusters with replication enabled also must replicate the visibility expressions to the peer cluster. If <code>DefaultVisibilityLabelServiceImpl</code> is used as the implementation for <code>VisibilityLabelService</code>, all the visibility expression are converted to the corresponding expression based on the ordinals for each visibility label stored in the labels table. During replication, visible cells are also replicated with the ordinal-based expression intact. The peer cluster may not have the same <code>labels</code> table with the same ordinal mapping for the visibility labels. In that case, replicating the ordinals makes no sense. It would be better if the replication occurred with the visibility expressions transmitted as strings. To replicate the visibility expression as strings to the peer cluster, create a <code>RegionServerObserver</code> configuration which works based on the implementation of the <code>VisibilityLabelService</code> interface. The configuration below enables replication of visibility expressions to peer clusters as strings. See <a href="https://issues.apache.org/jira/browse/HBASE-11639">HBASE-11639</a> for more details.</p>
 </div>
@@ -12114,8 +12128,10 @@ Next, configure fallback to the old master key in the <em>hbase-site.xml</em> fi
 <h3 id="hbase.secure.bulkload"><a class="anchor" href="#hbase.secure.bulkload"></a>59.5. Secure Bulk Load</h3>
 <div class="paragraph">
 <p>Bulk loading in secure mode is a bit more involved than normal setup, since the client has to transfer the ownership of the files generated from the MapReduce job to HBase.
-Secure bulk loading is implemented by a coprocessor, named link:http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html
-[SecureBulkLoadEndpoint], which uses a staging directory configured by the configuration property <code>hbase.bulkload.staging.dir</code>, which defaults to <em>/tmp/hbase-staging/</em>.</p>
+Secure bulk loading is implemented by a coprocessor, named
+<a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.html">SecureBulkLoadEndpoint</a>,
+which uses a staging directory configured by the configuration property <code>hbase.bulkload.staging.dir</code>, which defaults to
+<em>/tmp/hbase-staging/</em>.</p>
 </div>
 <div class="ulist">
 <div class="title">Secure Bulk Load Algorithm</div>
@@ -12506,7 +12522,7 @@ If a region has both an empty start and an empty end key, it is the only region 
 <div class="paragraph">
 <p>In the (hopefully unlikely) event that programmatic processing of catalog metadata
 is required, see the
-<a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/util/Writables.html#getHRegionInfo%28byte" class="bare">http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/util/Writables.html#getHRegionInfo%28byte</a>%29[Writables]
+<a href="http://hbase.apache.org/devapidocs/org/apache/hadoop/hbase/util/Writables.html#getHRegionInfo%28byte[]%29">Writables</a>
 utility.</p>
 </div>
 </div>
@@ -15003,112 +15019,152 @@ This list is not exhaustive.
 To tune these parameters from the defaults, edit the <em>hbase-default.xml</em> file.
 For a full list of all configuration parameters available, see <a href="#config.files">config.files</a></p>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.hstore.compaction.min</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>The minimum number of StoreFiles which must be eligible for compaction before compaction can run. The goal of tuning <code>hbase.hstore.compaction.min</code> is to avoid ending up with too many tiny StoreFiles to compact. Setting this value to 2 would cause a minor compaction each time you have two StoreFiles in a Store, and this is probably not appropriate. If you set this value too high, all the other values will need to be adjusted accordingly. For most cases, the default value is appropriate. In previous versions of HBase, the parameter hbase.hstore.compaction.min was called <code>hbase.hstore.compactionThreshold</code>.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.hstore.compaction.max</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>The maximum number of StoreFiles which will be selected for a single minor compaction, regardless of the number of eligible StoreFiles. Effectively, the value of hbase.hstore.compaction.max controls the length of time it takes a single compaction to complete. Setting it larger means that more StoreFiles are included in a compaction. For most cases, the default value is appropriate.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.hstore.compaction.min.size</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>A StoreFile smaller than this size will always be eligible for minor compaction. StoreFiles this size or larger are evaluated by <code>hbase.hstore.compaction.ratio</code> to determine if they are eligible. Because this limit represents the "automatic include" limit for all StoreFiles smaller than this value, this value may need to be reduced in write-heavy environments where many files in the 1-2 MB range are being flushed, because every StoreFile will be targeted for compaction and the resulting StoreFiles may still be under the minimum size and require further compaction. If this parameter is lowered, the ratio check is triggered more quickly. This addressed some issues seen in earlier versions of HBase but changing this parameter is no longer necessary in most situations.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">128 MB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.hstore.compaction.max.size</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>An StoreFile larger than this size will be excluded from compaction. The effect of raising <code>hbase.hstore.compaction.max.size</code> is fewer, larger StoreFiles that do not get compacted often. If you feel that compaction is happening too often without much benefit, you can try raising this value.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Long.MAX_VALUE</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.hstore.compaction.ratio</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>For minor compaction, this ratio is used to determine whether a given StoreFile which is larger than <code>hbase.hstore.compaction.min.size</code> is eligible for compaction. Its effect is to limit compaction of large StoreFile. The value of <code>hbase.hstore.compaction.ratio</code> is expressed as a floating-point decimal.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>hbase.hstore.compaction.min</code></dt>
+<dd>
+<p>The minimum number of StoreFiles which must be eligible for compaction before compaction can run.
+The goal of tuning <code>hbase.hstore.compaction.min</code> is to avoid ending up with too many tiny StoreFiles
+to compact. Setting this value to 2 would cause a minor compaction each time you have two StoreFiles
+in a Store, and this is probably not appropriate. If you set this value too high, all the other
+values will need to be adjusted accordingly. For most cases, the default value is appropriate.
+In previous versions of HBase, the parameter <code>hbase.hstore.compaction.min</code> was called
+<code>hbase.hstore.compactionThreshold</code>.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: 3</p>
 </div>
+</dd>
+<dt class="hdlist1"><code>hbase.hstore.compaction.max</code></dt>
+<dd>
+<p>The maximum number of StoreFiles which will be selected for a single minor compaction,
+regardless of the number of eligible StoreFiles. Effectively, the value of
+<code>hbase.hstore.compaction.max</code> controls the length of time it takes a single
+compaction to complete. Setting it larger means that more StoreFiles are included
+in a compaction. For most cases, the default value is appropriate.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: 10</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>hbase.hstore.compaction.min.size</code></dt>
+<dd>
+<p>A StoreFile smaller than this size will always be eligible for minor compaction.
+StoreFiles this size or larger are evaluated by <code>hbase.hstore.compaction.ratio</code>
+to determine if they are eligible. Because this limit represents the "automatic
+include" limit for all StoreFiles smaller than this value, this value may need
+to be reduced in write-heavy environments where many files in the 1-2 MB range
+are being flushed, because every StoreFile will be targeted for compaction and
+the resulting StoreFiles may still be under the minimum size and require further
+compaction. If this parameter is lowered, the ratio check is triggered more quickly.
+This addressed some issues seen in earlier versions of HBase but changing this
+parameter is no longer necessary in most situations.</p>
+<div class="paragraph">
+<p><strong>Default</strong>:128 MB</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>hbase.hstore.compaction.max.size</code></dt>
+<dd>
+<p>A StoreFile larger than this size will be excluded from compaction. The effect of
+raising <code>hbase.hstore.compaction.max.size</code> is fewer, larger StoreFiles that do not
+get compacted often. If you feel that compaction is happening too often without
+much benefit, you can try raising this value.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: <code>Long.MAX_VALUE</code></p>
+</div>
+</dd>
+<dt class="hdlist1"><code>hbase.hstore.compaction.ratio</code></dt>
+<dd>
+<p>For minor compaction, this ratio is used to determine whether a given StoreFile
+which is larger than <code>hbase.hstore.compaction.min.size</code> is eligible for compaction.
+Its effect is to limit compaction of large StoreFile. The value of
+<code>hbase.hstore.compaction.ratio</code> is expressed as a floating-point decimal.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>A large ratio, such as 10, will produce a single giant StoreFile. Conversely, a value of .25, will produce behavior similar to the BigTable compaction algorithm, producing four StoreFiles.</p>
+<p>A large ratio, such as 10, will produce a single giant StoreFile. Conversely,
+a value of .25, will produce behavior similar to the BigTable compaction algorithm,
+producing four StoreFiles.</p>
 </li>
 <li>
-<p>A moderate value of between 1.0 and 1.4 is recommended. When tuning this value, you are balancing write costs with read costs. Raising the value (to something like 1.4) will have more write costs, because you will compact larger StoreFiles. However, during reads, HBase will need to seek through fewer StoreFiles to accomplish the read. Consider this approach if you cannot take advantage of <a href="#bloom">[bloom]</a>.</p>
+<p>A moderate value of between 1.0 and 1.4 is recommended. When tuning this value,
+you are balancing write costs with read costs. Raising the value (to something like
+1.4) will have more write costs, because you will compact larger StoreFiles.
+However, during reads, HBase will need to seek through fewer StoreFiles to
+accomplish the read. Consider this approach if you cannot take advantage of <a href="#bloom">[bloom]</a>.</p>
 </li>
 <li>
-<p>Alternatively, you can lower this value to something like 1.0 to reduce the background cost of writes, and use  to limit the number of StoreFiles touched during reads. For most cases, the default value is appropriate.</p>
+<p>Alternatively, you can lower this value to something like 1.0 to reduce the
+background cost of writes, and use  to limit the number of StoreFiles touched
+during reads. For most cases, the default value is appropriate.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: <code>1.2F</code></p>
+</div>
 </li>
 </ul>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1.2F</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.hstore.compaction.ratio.offpeak</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>The compaction ratio used during off-peak compactions, if off-peak hours are also configured (see below). Expressed as a floating-point decimal. This allows for more aggressive (or less aggressive, if you set it lower than <code>hbase.hstore.compaction.ratio</code>) compaction during a set time period. Ignored if off-peak is disabled (default). This works the same as hbase.hstore.compaction.ratio.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5.0F</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.offpeak.start.hour</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>The start of off-peak hours, expressed as an integer between 0 and 23, inclusive. Set to -1 to disable off-peak.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-1</code> (disabled)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.offpeak.end.hour</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>The end of off-peak hours, expressed as an integer between 0 and 23, inclusive. Set to -1 to disable off-peak.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-1</code> (disabled)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.regionserver.thread.compaction.throttle</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>There are two different thread pools for compactions, one for large compactions and the other for small compactions. This helps to keep compaction of lean tables (such as <code>hbase:meta</code>) fast. If a compaction is larger than this threshold, it goes into the large compaction pool. In most cases, the default value is appropriate.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 x hbase.hstore.compaction.max x hbase.hregion.memstore.flush.size</code> (which defaults to <code>128</code>)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.hregion.majorcompaction</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>Time between major compactions, expressed in milliseconds. Set to 0 to disable time-based automatic major compactions. User-requested and size-based major compactions will still run. This value is multiplied by <code>hbase.hregion.majorcompaction.jitter</code> to cause compaction to start at a somewhat-random time during a given window of time.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7 days (<code>604800000</code> milliseconds)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hbase.hregion.majorcompaction.jitter</code></p></td>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>A multiplier applied to hbase.hregion.majorcompaction to cause compaction to occur a given amount of time either side of <code>hbase.hregion.majorcompaction</code>. The smaller the number, the closer the compactions will happen to the <code>hbase.hregion.majorcompaction</code> interval. Expressed as a floating-point decimal.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>.50F</code></p></td>
-</tr>
-</tbody>
-</table>
+</div>
+</dd>
+<dt class="hdlist1"><code>hbase.hstore.compaction.ratio.offpeak</code></dt>
+<dd>
+<p>The compaction ratio used during off-peak compactions, if off-peak hours are
+also configured (see below). Expressed as a floating-point decimal. This allows
+for more aggressive (or less aggressive, if you set it lower than
+<code>hbase.hstore.compaction.ratio</code>) compaction during a set time period. Ignored
+if off-peak is disabled (default). This works the same as
+<code>hbase.hstore.compaction.ratio</code>.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: <code>5.0F</code></p>
+</div>
+</dd>
+<dt class="hdlist1"><code>hbase.offpeak.start.hour</code></dt>
+<dd>
+<p>The start of off-peak hours, expressed as an integer between 0 and 23, inclusive.
+Set to -1 to disable off-peak.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: <code>-1</code> (disabled)</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>hbase.offpeak.end.hour</code></dt>
+<dd>
+<p>The end of off-peak hours, expressed as an integer between 0 and 23, inclusive.
+Set to -1 to disable off-peak.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: <code>-1</code> (disabled)</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>hbase.regionserver.thread.compaction.throttle</code></dt>
+<dd>
+<p>There are two different thread pools for compactions, one for large compactions
+and the other for small compactions. This helps to keep compaction of lean tables
+(such as <code>hbase:meta</code>) fast. If a compaction is larger than this threshold,
+it goes into the large compaction pool. In most cases, the default value is
+appropriate.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: <code>2 x hbase.hstore.compaction.max x hbase.hregion.memstore.flush.size</code>
+(which defaults to <code>128</code>)</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>hbase.hregion.majorcompaction</code></dt>
+<dd>
+<p>Time between major compactions, expressed in milliseconds. Set to 0 to disable
+time-based automatic major compactions. User-requested and size-based major
+compactions will still run. This value is multiplied by
+<code>hbase.hregion.majorcompaction.jitter</code> to cause compaction to start at a
+somewhat-random time during a given window of time.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: 7 days (<code>604800000</code> milliseconds)</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>hbase.hregion.majorcompaction.jitter</code></dt>
+<dd>
+<p>A multiplier applied to hbase.hregion.majorcompaction to cause compaction to
+occur a given amount of time either side of <code>hbase.hregion.majorcompaction</code>.
+The smaller the number, the closer the compactions will happen to the
+<code>hbase.hregion.majorcompaction</code> interval. Expressed as a floating-point decimal.</p>
+<div class="paragraph">
+<p><strong>Default</strong>: <code>.50F</code></p>
+</div>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -20516,7 +20572,8 @@ It will execute an RegionServer RPC with each invocation.
 For a large number of deletes, consider <code>Table.delete(List)</code>.</p>
 </div>
 <div class="paragraph">
-<p>See <a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Table.html#delete%28org.apache.hadoop.hbase.client.Delete%29" class="bare">http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Table.html#delete%28org.apache.hadoop.hbase.client.Delete%29</a></p>
+<p>See
+<a href="http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Table.html#delete%28org.apache.hadoop.hbase.client.Delete%29">hbase.client.Delete</a>.</p>
 </div>
 </div>
 </div>
@@ -31924,8 +31981,11 @@ Every non-root index block is structured as follows.</p>
 <p>numEntries: the number of entries (int).</p>
 </li>
 <li>
-<p>entryOffsets: the <code>secondary index'' of offsets of entries in the block, to facilitate a quick binary search on the key (numEntries + 1 int values). The last value is the total length of all entries in this index block.
-For example, in a non-root index block with entry sizes 60, 80, 50 the </code>secondary index'' will contain the following int array: {0, 60, 140, 190}.</p>
+<p>entryOffsets: the "secondary index" of offsets of entries in the block, to facilitate
+a quick binary search on the key (<code>numEntries + 1</code> int values). The last value
+is the total length of all entries in this index block. For example, in a non-root
+index block with entry sizes 60, 80, 50 the "secondary index" will contain the
+following int array: <code>{0, 60, 140, 190}</code>.</p>
 </li>
 <li>
 <p>Entries.
@@ -32808,7 +32868,7 @@ The server will return cellblocks compressed using this same compressor as long 
 <div id="footer">
 <div id="footer-text">
 Version 2.0.0-SNAPSHOT<br>
-Last updated 2015-11-11 13:50:01 +10:00
+Last updated 2015-11-18 06:06:59 UTC
 </div>
 </div>
 </body>

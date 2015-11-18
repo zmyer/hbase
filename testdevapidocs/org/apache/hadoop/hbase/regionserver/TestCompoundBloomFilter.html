@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>TestCompoundBloomFilter (Apache HBase 2.0.0-SNAPSHOT Test API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
@@ -95,7 +95,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.67">TestCompoundBloomFilter</a>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.69">TestCompoundBloomFilter</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Tests writing Bloom filter blocks in the same part of the file as data
  blocks.</div>
@@ -307,7 +307,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>TEST_UTIL</h4>
-<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.69">TEST_UTIL</a></pre>
+<pre>private static final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.71">TEST_UTIL</a></pre>
 </li>
 </ul>
 <a name="LOG">
@@ -316,7 +316,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.72">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.74">LOG</a></pre>
 </li>
 </ul>
 <a name="NUM_TESTS">
@@ -325,7 +325,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>NUM_TESTS</h4>
-<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.75">NUM_TESTS</a></pre>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.77">NUM_TESTS</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestCompoundBloomFilter.NUM_TESTS">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -335,7 +335,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>BLOOM_TYPES</h4>
-<pre>private static final&nbsp;org.apache.hadoop.hbase.regionserver.BloomType[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.76">BLOOM_TYPES</a></pre>
+<pre>private static final&nbsp;org.apache.hadoop.hbase.regionserver.BloomType[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.78">BLOOM_TYPES</a></pre>
 </li>
 </ul>
 <a name="NUM_KV">
@@ -344,7 +344,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>NUM_KV</h4>
-<pre>private static final&nbsp;int[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.80">NUM_KV</a></pre>
+<pre>private static final&nbsp;int[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.82">NUM_KV</a></pre>
 </li>
 </ul>
 <a name="BLOCK_SIZES">
@@ -353,7 +353,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>BLOCK_SIZES</h4>
-<pre>private static final&nbsp;int[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.87">BLOCK_SIZES</a></pre>
+<pre>private static final&nbsp;int[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.89">BLOCK_SIZES</a></pre>
 </li>
 </ul>
 <a name="BLOOM_BLOCK_SIZES">
@@ -362,7 +362,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>BLOOM_BLOCK_SIZES</h4>
-<pre>private static final&nbsp;int[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.100">BLOOM_BLOCK_SIZES</a></pre>
+<pre>private static final&nbsp;int[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.102">BLOOM_BLOCK_SIZES</a></pre>
 <div class="block">Be careful not to specify too high a Bloom filter block size, otherwise
  there will only be one oversized chunk and the observed false positive
  rate will be too low.</div>
@@ -374,7 +374,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>TARGET_ERROR_RATES</h4>
-<pre>private static final&nbsp;double[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.104">TARGET_ERROR_RATES</a></pre>
+<pre>private static final&nbsp;double[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.106">TARGET_ERROR_RATES</a></pre>
 </li>
 </ul>
 <a name="TOO_HIGH_ERROR_RATE">
@@ -383,7 +383,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>TOO_HIGH_ERROR_RATE</h4>
-<pre>private static final&nbsp;double <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.109">TOO_HIGH_ERROR_RATE</a></pre>
+<pre>private static final&nbsp;double <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.111">TOO_HIGH_ERROR_RATE</a></pre>
 <div class="block">A false positive rate that is obviously too high.</div>
 </li>
 </ul>
@@ -393,7 +393,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>conf</h4>
-<pre>private static&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.117">conf</a></pre>
+<pre>private static&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.119">conf</a></pre>
 </li>
 </ul>
 <a name="cacheConf">
@@ -402,7 +402,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cacheConf</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.io.hfile.CacheConfig <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.118">cacheConf</a></pre>
+<pre>private static&nbsp;org.apache.hadoop.hbase.io.hfile.CacheConfig <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.120">cacheConf</a></pre>
 </li>
 </ul>
 <a name="fs">
@@ -411,7 +411,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>fs</h4>
-<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.119">fs</a></pre>
+<pre>private&nbsp;org.apache.hadoop.fs.FileSystem <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.121">fs</a></pre>
 </li>
 </ul>
 <a name="blockCache">
@@ -420,7 +420,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>blockCache</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.io.hfile.BlockCache <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.120">blockCache</a></pre>
+<pre>private&nbsp;org.apache.hadoop.hbase.io.hfile.BlockCache <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.122">blockCache</a></pre>
 </li>
 </ul>
 <a name="testIdMsg">
@@ -429,7 +429,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testIdMsg</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.123">testIdMsg</a></pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.125">testIdMsg</a></pre>
 <div class="block">A message of the form "in test#<number>:" to include in logging.</div>
 </li>
 </ul>
@@ -439,7 +439,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>GENERATION_SEED</h4>
-<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.125">GENERATION_SEED</a></pre>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.127">GENERATION_SEED</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestCompoundBloomFilter.GENERATION_SEED">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -449,7 +449,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>EVALUATION_SEED</h4>
-<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.126">EVALUATION_SEED</a></pre>
+<pre>private static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.128">EVALUATION_SEED</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.TestCompoundBloomFilter.EVALUATION_SEED">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -467,7 +467,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestCompoundBloomFilter</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.67">TestCompoundBloomFilter</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.69">TestCompoundBloomFilter</a>()</pre>
 </li>
 </ul>
 </li>
@@ -484,7 +484,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setUp</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.129">setUp</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.131">setUp</a>()
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -496,7 +496,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createSortedKeyValues</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.142">createSortedKeyValues</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;rand,
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.144">createSortedKeyValues</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;rand,
                                                            int&nbsp;n)</pre>
 </li>
 </ul>
@@ -506,7 +506,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testCompoundBloomFilter</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.151">testCompoundBloomFilter</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.153">testCompoundBloomFilter</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -518,7 +518,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>validateFalsePosRate</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.178">validateFalsePosRate</a>(double&nbsp;falsePosRate,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.180">validateFalsePosRate</a>(double&nbsp;falsePosRate,
                         int&nbsp;nTrials,
                         double&nbsp;zValueBoundary,
                         org.apache.hadoop.hbase.io.hfile.CompoundBloomFilter&nbsp;cbf,
@@ -536,7 +536,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>readStoreFile</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.199">readStoreFile</a>(int&nbsp;t,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.201">readStoreFile</a>(int&nbsp;t,
                  org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bt,
                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;kvs,
                  org.apache.hadoop.fs.Path&nbsp;sfPath)
@@ -551,7 +551,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>isInBloom</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.279">isInBloom</a>(org.apache.hadoop.hbase.regionserver.StoreFileScanner&nbsp;scanner,
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.281">isInBloom</a>(org.apache.hadoop.hbase.regionserver.StoreFileScanner&nbsp;scanner,
                 byte[]&nbsp;row,
                 org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bt,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;rand)</pre>
@@ -563,7 +563,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>isInBloom</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.285">isInBloom</a>(org.apache.hadoop.hbase.regionserver.StoreFileScanner&nbsp;scanner,
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.286">isInBloom</a>(org.apache.hadoop.hbase.regionserver.StoreFileScanner&nbsp;scanner,
                 byte[]&nbsp;row,
                 byte[]&nbsp;qualifier)</pre>
 </li>
@@ -574,7 +574,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>writeStoreFile</h4>
-<pre>private&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.293">writeStoreFile</a>(int&nbsp;t,
+<pre>private&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.297">writeStoreFile</a>(int&nbsp;t,
                                        org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bt,
                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;kvs)
                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -588,7 +588,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testCompoundBloomSizing</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.335">testCompoundBloomSizing</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.339">testCompoundBloomSizing</a>()</pre>
 </li>
 </ul>
 <a name="testCreateKey()">
@@ -597,7 +597,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>testCreateKey</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.351">testCreateKey</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html#line.355">testCreateKey</a>()</pre>
 </li>
 </ul>
 </li>

@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ServerCrashProcedure (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
 </head>
@@ -212,30 +212,36 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#META_REGION_SET">META_REGION_SET</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#notifiedDeadServer">notifiedDeadServer</a></strong></code>
+<div class="block">Whether DeadServer knows that we are processing it.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#previousState">previousState</a></strong></code>
 <div class="block">Ordinal of the previous state.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#regionsAssigned">regionsAssigned</a></strong></code>
 <div class="block">Regions assigned.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#regionsOnCrashedServer">regionsOnCrashedServer</a></strong></code>
 <div class="block">Regions that were on the crashed server.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#serverName">serverName</a></strong></code>
 <div class="block">Name of the crashed server to process.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#shouldSplitWal">shouldSplitWal</a></strong></code>&nbsp;</td>
 </tr>
@@ -572,13 +578,23 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <div class="block">Name of the crashed server to process.</div>
 </li>
 </ul>
+<a name="notifiedDeadServer">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>notifiedDeadServer</h4>
+<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.115">notifiedDeadServer</a></pre>
+<div class="block">Whether DeadServer knows that we are processing it.</div>
+</li>
+</ul>
 <a name="regionsOnCrashedServer">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>regionsOnCrashedServer</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.115">regionsOnCrashedServer</a></pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.120">regionsOnCrashedServer</a></pre>
 <div class="block">Regions that were on the crashed server.</div>
 </li>
 </ul>
@@ -588,7 +604,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>regionsAssigned</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.120">regionsAssigned</a></pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.125">regionsAssigned</a></pre>
 <div class="block">Regions assigned. Usually some subset of <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#regionsOnCrashedServer"><code>regionsOnCrashedServer</code></a>.</div>
 </li>
 </ul>
@@ -598,7 +614,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>distributedLogReplay</h4>
-<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.122">distributedLogReplay</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.127">distributedLogReplay</a></pre>
 </li>
 </ul>
 <a name="carryingMeta">
@@ -607,7 +623,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>carryingMeta</h4>
-<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.123">carryingMeta</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.128">carryingMeta</a></pre>
 </li>
 </ul>
 <a name="shouldSplitWal">
@@ -616,7 +632,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>shouldSplitWal</h4>
-<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.124">shouldSplitWal</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.129">shouldSplitWal</a></pre>
 </li>
 </ul>
 <a name="cycles">
@@ -625,7 +641,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>cycles</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.129">cycles</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.134">cycles</a></pre>
 <div class="block">Cycles on same state. Good for figuring if we are stuck.</div>
 </li>
 </ul>
@@ -635,7 +651,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockListLast">
 <li class="blockList">
 <h4>previousState</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.135">previousState</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.140">previousState</a></pre>
 <div class="block">Ordinal of the previous state. So we can tell if we are progressing or not. TODO: if useful,
  move this back up into StateMachineProcedure</div>
 </li>
@@ -654,7 +670,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>ServerCrashProcedure</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.143">ServerCrashProcedure</a>(<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.148">ServerCrashProcedure</a>(<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                     boolean&nbsp;shouldSplitWal,
                     boolean&nbsp;carryingMeta)</pre>
 <div class="block">Call this constructor queuing up a Procedure.</div>
@@ -667,7 +683,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ServerCrashProcedure</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.155">ServerCrashProcedure</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.160">ServerCrashProcedure</a>()</pre>
 <div class="block">Used when deserializing from a procedure store; we'll construct one of these then call
  <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#deserializeStateData(java.io.InputStream)"><code>deserializeStateData(InputStream)</code></a>. Do not use directly.</div>
 </li>
@@ -686,7 +702,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>throwProcedureYieldException</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.159">throwProcedureYieldException</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msg)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.164">throwProcedureYieldException</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msg)
                                    throws <a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureYieldException.html" title="class in org.apache.hadoop.hbase.procedure2">ProcedureYieldException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureYieldException.html" title="class in org.apache.hadoop.hbase.procedure2">ProcedureYieldException</a></code></dd></dl>
@@ -698,7 +714,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>executeFromState</h4>
-<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.Flow.html" title="enum in org.apache.hadoop.hbase.procedure2">StateMachineProcedure.Flow</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.169">executeFromState</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
+<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.Flow.html" title="enum in org.apache.hadoop.hbase.procedure2">StateMachineProcedure.Flow</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.174">executeFromState</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
                                           org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ServerCrashState&nbsp;state)
                                                throws <a href="../../../../../../org/apache/hadoop/hbase/procedure2/ProcedureYieldException.html" title="class in org.apache.hadoop.hbase.procedure2">ProcedureYieldException</a></pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html#executeFromState(TEnvironment,%20TState)">StateMachineProcedure</a></code></strong></div>
@@ -719,7 +735,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>start</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.299">start</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.311">start</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Start processing of crashed server. In here we'll just set configs. and return.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>env</code> - </dd>
@@ -733,7 +749,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>processMeta</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.312">processMeta</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.324">processMeta</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>env</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>False if we fail to assign and split logs on meta ('process').</dd>
@@ -748,7 +764,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>waitOnRegionToClearRegionsInTransition</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.351">waitOnRegionToClearRegionsInTransition</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html" title="class in org.apache.hadoop.hbase.master">AssignmentManager</a>&nbsp;am,
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.363">waitOnRegionToClearRegionsInTransition</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html" title="class in org.apache.hadoop.hbase.master">AssignmentManager</a>&nbsp;am,
                                              <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                                              int&nbsp;timeout)
                                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InterruptedIOException.html?is-external=true" title="class or interface in java.io">InterruptedIOException</a></pre>
@@ -763,7 +779,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>prepareLogReplay</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.368">prepareLogReplay</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.380">prepareLogReplay</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions)
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -776,7 +792,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>splitLogs</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.380">splitLogs</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.392">splitLogs</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -788,7 +804,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>size</h4>
-<pre>static&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.392">size</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;hris)</pre>
+<pre>static&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.404">size</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;hris)</pre>
 </li>
 </ul>
 <a name="calcRegionsToAssign(org.apache.hadoop.hbase.master.procedure.MasterProcedureEnv)">
@@ -797,7 +813,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>calcRegionsToAssign</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.402">calcRegionsToAssign</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.414">calcRegionsToAssign</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Figure out what we need to assign. Should be idempotent.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>env</code> - </dd>
@@ -812,7 +828,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>assign</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.486">assign</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.498">assign</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;hris)
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InterruptedIOException.html?is-external=true" title="class or interface in java.io">InterruptedIOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -825,7 +841,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>waitOnAssign</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.501">waitOnAssign</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.513">waitOnAssign</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;hris)
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InterruptedIOException.html?is-external=true" title="class or interface in java.io">InterruptedIOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -838,7 +854,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>rollbackState</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.515">rollbackState</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.527">rollbackState</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
                  org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ServerCrashState&nbsp;state)
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html#rollbackState(TEnvironment,%20TState)">StateMachineProcedure</a></code></strong></div>
@@ -857,7 +873,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>getState</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ServerCrashState&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.522">getState</a>(int&nbsp;stateId)</pre>
+<pre>protected&nbsp;org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ServerCrashState&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.534">getState</a>(int&nbsp;stateId)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html#getState(int)">StateMachineProcedure</a></code></strong></div>
 <div class="block">Convert an ordinal (or state id) to an Enum (or more descriptive) state object.</div>
 <dl>
@@ -873,7 +889,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>getStateId</h4>
-<pre>protected&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.527">getStateId</a>(org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ServerCrashState&nbsp;state)</pre>
+<pre>protected&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.539">getStateId</a>(org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ServerCrashState&nbsp;state)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html#getStateId(TState)">StateMachineProcedure</a></code></strong></div>
 <div class="block">Convert the Enum (or more descriptive) state object to an ordinal (or state id).</div>
 <dl>
@@ -889,7 +905,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>getInitialState</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ServerCrashState&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.532">getInitialState</a>()</pre>
+<pre>protected&nbsp;org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ServerCrashState&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.544">getInitialState</a>()</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/StateMachineProcedure.html#getInitialState()">StateMachineProcedure</a></code></strong></div>
 <div class="block">Return the initial state object that will be used for the first call to executeFromState().</div>
 <dl>
@@ -904,7 +920,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>abort</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.537">abort</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</pre>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.549">abort</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html#abort(TEnvironment)">Procedure</a></code></strong></div>
 <div class="block">The abort() call is asynchronous and each procedure must decide how to deal
  with that, if they want to be abortable. The simplest implementation
@@ -928,7 +944,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>acquireLock</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.543">acquireLock</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</pre>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.555">acquireLock</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html#acquireLock(TEnvironment)">Procedure</a></code></strong></div>
 <div class="block">The user should override this method, and try to take a lock if necessary.
  A lock can be anything, and it is up to the implementor.
@@ -947,7 +963,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>releaseLock</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.549">releaseLock</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.561">releaseLock</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html#releaseLock(TEnvironment)">Procedure</a></code></strong></div>
 <div class="block">The user should override this method, and release lock if necessary.</div>
 <dl>
@@ -962,7 +978,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>toStringClassDetails</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.554">toStringClassDetails</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</a>&nbsp;sb)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.566">toStringClassDetails</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</a>&nbsp;sb)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html#toStringClassDetails(java.lang.StringBuilder)">Procedure</a></code></strong></div>
 <div class="block">Extend the toString() information with the procedure details
  e.g. className and parameters</div>
@@ -978,7 +994,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>serializeStateData</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.565">serializeStateData</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.577">serializeStateData</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html#serializeStateData(java.io.OutputStream)">Procedure</a></code></strong></div>
 <div class="block">The user-level code of the procedure may have some state to
@@ -997,7 +1013,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>deserializeStateData</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.588">deserializeStateData</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.600">deserializeStateData</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html#deserializeStateData(java.io.InputStream)">Procedure</a></code></strong></div>
 <div class="block">Called on store load to allow the user to decode the previously serialized
@@ -1016,7 +1032,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>processDeadRegion</h4>
-<pre>private static&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.623">processDeadRegion</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
+<pre>private static&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.635">processDeadRegion</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri,
                         <a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html" title="class in org.apache.hadoop.hbase.master">AssignmentManager</a>&nbsp;assignmentManager)
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Process a dead region from a dead RS. Checks if the region is disabled or
@@ -1033,7 +1049,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyAndAssignMetaWithRetries</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.657">verifyAndAssignMetaWithRetries</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.669">verifyAndAssignMetaWithRetries</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">If hbase:meta is not assigned already, assign.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -1046,7 +1062,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyAndAssignMeta</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.694">verifyAndAssignMeta</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.706">verifyAndAssignMeta</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                  org.apache.zookeeper.KeeperException</pre>
@@ -1063,7 +1079,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>isMetaAssignedQuickTest</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.714">isMetaAssignedQuickTest</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.726">isMetaAssignedQuickTest</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env)
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">A quick test that hbase:meta is assigned; blocks for short time only.</div>
@@ -1079,7 +1095,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>getServerName</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.733">getServerName</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.745">getServerName</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html#getServerName()">getServerName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">ServerProcedureInterface</a></code></dd>
@@ -1092,7 +1108,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockList">
 <li class="blockList">
 <h4>hasMetaTableRegion</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.738">hasMetaTableRegion</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.750">hasMetaTableRegion</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html#hasMetaTableRegion()">hasMetaTableRegion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure">ServerProcedureInterface</a></code></dd>
@@ -1105,7 +1121,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/S
 <ul class="blockListLast">
 <li class="blockList">
 <h4>isYieldBeforeExecuteFromState</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.750">isYieldBeforeExecuteFromState</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/ServerCrashProcedure.html#line.762">isYieldBeforeExecuteFromState</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html" title="class in org.apache.hadoop.hbase.master.procedure">MasterProcedureEnv</a>&nbsp;env,
                                     org.apache.hadoop.hbase.protobuf.generated.MasterProcedureProtos.ServerCrashState&nbsp;state)</pre>
 <div class="block">For this procedure, yield at end of each successful flow step so that all crashed servers
  can make progress rather than do the default which has each procedure running to completion

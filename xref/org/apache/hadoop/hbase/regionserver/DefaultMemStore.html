@@ -837,163 +837,162 @@
 <a class="jxr_linenumber" name="827" href="#827">827</a>     }
 <a class="jxr_linenumber" name="828" href="#828">828</a> 
 <a class="jxr_linenumber" name="829" href="#829">829</a>     @Override
-<a class="jxr_linenumber" name="830" href="#830">830</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> shouldUseScanner(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html">Scan</a> scan, SortedSet&lt;byte[]&gt; columns,
-<a class="jxr_linenumber" name="831" href="#831">831</a>         <strong class="jxr_keyword">long</strong> oldestUnexpiredTS) {
-<a class="jxr_linenumber" name="832" href="#832">832</a>       <strong class="jxr_keyword">return</strong> shouldSeek(scan, oldestUnexpiredTS);
-<a class="jxr_linenumber" name="833" href="#833">833</a>     }
-<a class="jxr_linenumber" name="834" href="#834">834</a> 
-<a class="jxr_linenumber" name="835" href="#835">835</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="836" href="#836">836</a> <em class="jxr_javadoccomment">     * Seek scanner to the given key first. If it returns false(means</em>
-<a class="jxr_linenumber" name="837" href="#837">837</a> <em class="jxr_javadoccomment">     * peek()==null) or scanner's peek row is bigger than row of given key, seek</em>
-<a class="jxr_linenumber" name="838" href="#838">838</a> <em class="jxr_javadoccomment">     * the scanner to the previous row of given key</em>
-<a class="jxr_linenumber" name="839" href="#839">839</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="840" href="#840">840</a>     @Override
-<a class="jxr_linenumber" name="841" href="#841">841</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">synchronized</strong> <strong class="jxr_keyword">boolean</strong> backwardSeek(<a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> key) {
-<a class="jxr_linenumber" name="842" href="#842">842</a>       seek(key);
-<a class="jxr_linenumber" name="843" href="#843">843</a>       <strong class="jxr_keyword">if</strong> (peek() == <strong class="jxr_keyword">null</strong> || comparator.compareRows(peek(), key) &gt; 0) {
-<a class="jxr_linenumber" name="844" href="#844">844</a>         <strong class="jxr_keyword">return</strong> seekToPreviousRow(key);
-<a class="jxr_linenumber" name="845" href="#845">845</a>       }
-<a class="jxr_linenumber" name="846" href="#846">846</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="847" href="#847">847</a>     }
-<a class="jxr_linenumber" name="848" href="#848">848</a> 
-<a class="jxr_linenumber" name="849" href="#849">849</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="850" href="#850">850</a> <em class="jxr_javadoccomment">     * Separately get the KeyValue before the specified key from kvset and</em>
-<a class="jxr_linenumber" name="851" href="#851">851</a> <em class="jxr_javadoccomment">     * snapshotset, and use the row of higher one as the previous row of</em>
-<a class="jxr_linenumber" name="852" href="#852">852</a> <em class="jxr_javadoccomment">     * specified key, then seek to the first KeyValue of previous row</em>
-<a class="jxr_linenumber" name="853" href="#853">853</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="854" href="#854">854</a>     @Override
-<a class="jxr_linenumber" name="855" href="#855">855</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">synchronized</strong> <strong class="jxr_keyword">boolean</strong> seekToPreviousRow(<a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> originalKey) {
-<a class="jxr_linenumber" name="856" href="#856">856</a>       <strong class="jxr_keyword">boolean</strong> keepSeeking = false;
-<a class="jxr_linenumber" name="857" href="#857">857</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> key = originalKey;
-<a class="jxr_linenumber" name="858" href="#858">858</a>       <strong class="jxr_keyword">do</strong> {
-<a class="jxr_linenumber" name="859" href="#859">859</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> firstKeyOnRow = CellUtil.createFirstOnRow(key);
-<a class="jxr_linenumber" name="860" href="#860">860</a>         SortedSet&lt;Cell&gt; cellHead = cellSetAtCreation.headSet(firstKeyOnRow);
-<a class="jxr_linenumber" name="861" href="#861">861</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> cellSetBeforeRow = cellHead.isEmpty() ? <strong class="jxr_keyword">null</strong> : cellHead.last();
-<a class="jxr_linenumber" name="862" href="#862">862</a>         SortedSet&lt;Cell&gt; snapshotHead = snapshotAtCreation
-<a class="jxr_linenumber" name="863" href="#863">863</a>             .headSet(firstKeyOnRow);
-<a class="jxr_linenumber" name="864" href="#864">864</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> snapshotBeforeRow = snapshotHead.isEmpty() ? <strong class="jxr_keyword">null</strong> : snapshotHead
-<a class="jxr_linenumber" name="865" href="#865">865</a>             .last();
-<a class="jxr_linenumber" name="866" href="#866">866</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> lastCellBeforeRow = getHighest(cellSetBeforeRow, snapshotBeforeRow);
-<a class="jxr_linenumber" name="867" href="#867">867</a>         <strong class="jxr_keyword">if</strong> (lastCellBeforeRow == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="868" href="#868">868</a>           theNext = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="869" href="#869">869</a>           <strong class="jxr_keyword">return</strong> false;
-<a class="jxr_linenumber" name="870" href="#870">870</a>         }
-<a class="jxr_linenumber" name="871" href="#871">871</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> firstKeyOnPreviousRow = CellUtil.createFirstOnRow(lastCellBeforeRow);
-<a class="jxr_linenumber" name="872" href="#872">872</a>         <strong class="jxr_keyword">this</strong>.stopSkippingCellsIfNextRow = <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="873" href="#873">873</a>         seek(firstKeyOnPreviousRow);
-<a class="jxr_linenumber" name="874" href="#874">874</a>         <strong class="jxr_keyword">this</strong>.stopSkippingCellsIfNextRow = false;
-<a class="jxr_linenumber" name="875" href="#875">875</a>         <strong class="jxr_keyword">if</strong> (peek() == <strong class="jxr_keyword">null</strong>
-<a class="jxr_linenumber" name="876" href="#876">876</a>             || comparator.compareRows(peek(), firstKeyOnPreviousRow) &gt; 0) {
-<a class="jxr_linenumber" name="877" href="#877">877</a>           keepSeeking = <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="878" href="#878">878</a>           key = firstKeyOnPreviousRow;
-<a class="jxr_linenumber" name="879" href="#879">879</a>           <strong class="jxr_keyword">continue</strong>;
-<a class="jxr_linenumber" name="880" href="#880">880</a>         } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="881" href="#881">881</a>           keepSeeking = false;
-<a class="jxr_linenumber" name="882" href="#882">882</a>         }
-<a class="jxr_linenumber" name="883" href="#883">883</a>       } <strong class="jxr_keyword">while</strong> (keepSeeking);
-<a class="jxr_linenumber" name="884" href="#884">884</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="885" href="#885">885</a>     }
-<a class="jxr_linenumber" name="886" href="#886">886</a> 
-<a class="jxr_linenumber" name="887" href="#887">887</a>     @Override
-<a class="jxr_linenumber" name="888" href="#888">888</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">synchronized</strong> <strong class="jxr_keyword">boolean</strong> seekToLastRow() {
-<a class="jxr_linenumber" name="889" href="#889">889</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> first = cellSetAtCreation.isEmpty() ? <strong class="jxr_keyword">null</strong> : cellSetAtCreation
-<a class="jxr_linenumber" name="890" href="#890">890</a>           .last();
-<a class="jxr_linenumber" name="891" href="#891">891</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> second = snapshotAtCreation.isEmpty() ? <strong class="jxr_keyword">null</strong>
-<a class="jxr_linenumber" name="892" href="#892">892</a>           : snapshotAtCreation.last();
-<a class="jxr_linenumber" name="893" href="#893">893</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> higherCell = getHighest(first, second);
-<a class="jxr_linenumber" name="894" href="#894">894</a>       <strong class="jxr_keyword">if</strong> (higherCell == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="895" href="#895">895</a>         <strong class="jxr_keyword">return</strong> false;
-<a class="jxr_linenumber" name="896" href="#896">896</a>       }
-<a class="jxr_linenumber" name="897" href="#897">897</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> firstCellOnLastRow = CellUtil.createFirstOnRow(higherCell);
-<a class="jxr_linenumber" name="898" href="#898">898</a>       <strong class="jxr_keyword">if</strong> (seek(firstCellOnLastRow)) {
-<a class="jxr_linenumber" name="899" href="#899">899</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="900" href="#900">900</a>       } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="901" href="#901">901</a>         <strong class="jxr_keyword">return</strong> seekToPreviousRow(higherCell);
-<a class="jxr_linenumber" name="902" href="#902">902</a>       }
-<a class="jxr_linenumber" name="903" href="#903">903</a> 
-<a class="jxr_linenumber" name="904" href="#904">904</a>     }
-<a class="jxr_linenumber" name="905" href="#905">905</a>   }
-<a class="jxr_linenumber" name="906" href="#906">906</a> 
-<a class="jxr_linenumber" name="907" href="#907">907</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">long</strong> FIXED_OVERHEAD = ClassSize.align(ClassSize.OBJECT
-<a class="jxr_linenumber" name="908" href="#908">908</a>       + (9 * ClassSize.REFERENCE) + (3 * Bytes.SIZEOF_LONG) + Bytes.SIZEOF_BOOLEAN);
-<a class="jxr_linenumber" name="909" href="#909">909</a> 
-<a class="jxr_linenumber" name="910" href="#910">910</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">long</strong> DEEP_OVERHEAD = ClassSize.align(FIXED_OVERHEAD +
-<a class="jxr_linenumber" name="911" href="#911">911</a>       ClassSize.ATOMIC_LONG + (2 * ClassSize.TIMERANGE_TRACKER) +
-<a class="jxr_linenumber" name="912" href="#912">912</a>       (2 * ClassSize.CELL_SKIPLIST_SET) + (2 * ClassSize.CONCURRENT_SKIPLISTMAP));
-<a class="jxr_linenumber" name="913" href="#913">913</a> 
-<a class="jxr_linenumber" name="914" href="#914">914</a>   <em class="jxr_comment">/*</em>
-<a class="jxr_linenumber" name="915" href="#915">915</a> <em class="jxr_comment">   * Calculate how the MemStore size has changed.  Includes overhead of the</em>
-<a class="jxr_linenumber" name="916" href="#916">916</a> <em class="jxr_comment">   * backing Map.</em>
-<a class="jxr_linenumber" name="917" href="#917">917</a> <em class="jxr_comment">   * @param cell</em>
-<a class="jxr_linenumber" name="918" href="#918">918</a> <em class="jxr_comment">   * @param notpresent True if the cell was NOT present in the set.</em>
-<a class="jxr_linenumber" name="919" href="#919">919</a> <em class="jxr_comment">   * @return Size</em>
-<a class="jxr_linenumber" name="920" href="#920">920</a> <em class="jxr_comment">   */</em>
-<a class="jxr_linenumber" name="921" href="#921">921</a>   <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">long</strong> heapSizeChange(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> cell, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> notpresent) {
-<a class="jxr_linenumber" name="922" href="#922">922</a>     <strong class="jxr_keyword">return</strong> notpresent ? ClassSize.align(ClassSize.CONCURRENT_SKIPLISTMAP_ENTRY
-<a class="jxr_linenumber" name="923" href="#923">923</a>         + CellUtil.estimatedHeapSizeOf(cell)) : 0;
-<a class="jxr_linenumber" name="924" href="#924">924</a>   }
-<a class="jxr_linenumber" name="925" href="#925">925</a> 
-<a class="jxr_linenumber" name="926" href="#926">926</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">long</strong> keySize() {
-<a class="jxr_linenumber" name="927" href="#927">927</a>     <strong class="jxr_keyword">return</strong> heapSize() - DEEP_OVERHEAD;
-<a class="jxr_linenumber" name="928" href="#928">928</a>   }
-<a class="jxr_linenumber" name="929" href="#929">929</a> 
-<a class="jxr_linenumber" name="930" href="#930">930</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="931" href="#931">931</a> <em class="jxr_javadoccomment">   * Get the entire heap usage for this MemStore not including keys in the</em>
-<a class="jxr_linenumber" name="932" href="#932">932</a> <em class="jxr_javadoccomment">   * snapshot.</em>
-<a class="jxr_linenumber" name="933" href="#933">933</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="934" href="#934">934</a>   @Override
-<a class="jxr_linenumber" name="935" href="#935">935</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">long</strong> heapSize() {
-<a class="jxr_linenumber" name="936" href="#936">936</a>     <strong class="jxr_keyword">return</strong> size.get();
-<a class="jxr_linenumber" name="937" href="#937">937</a>   }
-<a class="jxr_linenumber" name="938" href="#938">938</a> 
-<a class="jxr_linenumber" name="939" href="#939">939</a>   @Override
-<a class="jxr_linenumber" name="940" href="#940">940</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">long</strong> size() {
-<a class="jxr_linenumber" name="941" href="#941">941</a>     <strong class="jxr_keyword">return</strong> heapSize();
-<a class="jxr_linenumber" name="942" href="#942">942</a>   }
-<a class="jxr_linenumber" name="943" href="#943">943</a> 
-<a class="jxr_linenumber" name="944" href="#944">944</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="945" href="#945">945</a> <em class="jxr_javadoccomment">   * Code to help figure if our approximation of object heap sizes is close</em>
-<a class="jxr_linenumber" name="946" href="#946">946</a> <em class="jxr_javadoccomment">   * enough.  See hbase-900.  Fills memstores then waits so user can heap</em>
-<a class="jxr_linenumber" name="947" href="#947">947</a> <em class="jxr_javadoccomment">   * dump and bring up resultant hprof in something like jprofiler which</em>
-<a class="jxr_linenumber" name="948" href="#948">948</a> <em class="jxr_javadoccomment">   * allows you get 'deep size' on objects.</em>
-<a class="jxr_linenumber" name="949" href="#949">949</a> <em class="jxr_javadoccomment">   * @param args main args</em>
-<a class="jxr_linenumber" name="950" href="#950">950</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="951" href="#951">951</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String [] args) {
-<a class="jxr_linenumber" name="952" href="#952">952</a>     RuntimeMXBean runtime = ManagementFactory.getRuntimeMXBean();
-<a class="jxr_linenumber" name="953" href="#953">953</a>     LOG.info(<span class="jxr_string">"vmName="</span> + runtime.getVmName() + <span class="jxr_string">", vmVendor="</span> +
-<a class="jxr_linenumber" name="954" href="#954">954</a>       runtime.getVmVendor() + <span class="jxr_string">", vmVersion="</span> + runtime.getVmVersion());
-<a class="jxr_linenumber" name="955" href="#955">955</a>     LOG.info(<span class="jxr_string">"vmInputArguments="</span> + runtime.getInputArguments());
-<a class="jxr_linenumber" name="956" href="#956">956</a>     <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html">DefaultMemStore</a> memstore1 = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html">DefaultMemStore</a>();
-<a class="jxr_linenumber" name="957" href="#957">957</a>     <em class="jxr_comment">// TODO: x32 vs x64</em>
-<a class="jxr_linenumber" name="958" href="#958">958</a>     <strong class="jxr_keyword">long</strong> size = 0;
-<a class="jxr_linenumber" name="959" href="#959">959</a>     <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> count = 10000;
-<a class="jxr_linenumber" name="960" href="#960">960</a>     byte [] fam = Bytes.toBytes(<span class="jxr_string">"col"</span>);
-<a class="jxr_linenumber" name="961" href="#961">961</a>     byte [] qf = Bytes.toBytes(<span class="jxr_string">"umn"</span>);
-<a class="jxr_linenumber" name="962" href="#962">962</a>     byte [] empty = <strong class="jxr_keyword">new</strong> byte[0];
-<a class="jxr_linenumber" name="963" href="#963">963</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; count; i++) {
-<a class="jxr_linenumber" name="964" href="#964">964</a>       <em class="jxr_comment">// Give each its own ts</em>
-<a class="jxr_linenumber" name="965" href="#965">965</a>       size += memstore1.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a>(Bytes.toBytes(i), fam, qf, i, empty));
-<a class="jxr_linenumber" name="966" href="#966">966</a>     }
-<a class="jxr_linenumber" name="967" href="#967">967</a>     LOG.info(<span class="jxr_string">"memstore1 estimated size="</span> + size);
-<a class="jxr_linenumber" name="968" href="#968">968</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; count; i++) {
-<a class="jxr_linenumber" name="969" href="#969">969</a>       size += memstore1.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a>(Bytes.toBytes(i), fam, qf, i, empty));
-<a class="jxr_linenumber" name="970" href="#970">970</a>     }
-<a class="jxr_linenumber" name="971" href="#971">971</a>     LOG.info(<span class="jxr_string">"memstore1 estimated size (2nd loading of same data)="</span> + size);
-<a class="jxr_linenumber" name="972" href="#972">972</a>     <em class="jxr_comment">// Make a variably sized memstore.</em>
-<a class="jxr_linenumber" name="973" href="#973">973</a>     <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html">DefaultMemStore</a> memstore2 = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html">DefaultMemStore</a>();
-<a class="jxr_linenumber" name="974" href="#974">974</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; count; i++) {
-<a class="jxr_linenumber" name="975" href="#975">975</a>       size += memstore2.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a>(Bytes.toBytes(i), fam, qf, i, <strong class="jxr_keyword">new</strong> byte[i]));
-<a class="jxr_linenumber" name="976" href="#976">976</a>     }
-<a class="jxr_linenumber" name="977" href="#977">977</a>     LOG.info(<span class="jxr_string">"memstore2 estimated size="</span> + size);
-<a class="jxr_linenumber" name="978" href="#978">978</a>     <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> seconds = 30;
-<a class="jxr_linenumber" name="979" href="#979">979</a>     LOG.info(<span class="jxr_string">"Waiting "</span> + seconds + <span class="jxr_string">" seconds while heap dump is taken"</span>);
-<a class="jxr_linenumber" name="980" href="#980">980</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; seconds; i++) {
-<a class="jxr_linenumber" name="981" href="#981">981</a>       <em class="jxr_comment">// Thread.sleep(1000);</em>
-<a class="jxr_linenumber" name="982" href="#982">982</a>     }
-<a class="jxr_linenumber" name="983" href="#983">983</a>     LOG.info(<span class="jxr_string">"Exiting."</span>);
-<a class="jxr_linenumber" name="984" href="#984">984</a>   }
-<a class="jxr_linenumber" name="985" href="#985">985</a> 
-<a class="jxr_linenumber" name="986" href="#986">986</a> }
+<a class="jxr_linenumber" name="830" href="#830">830</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> shouldUseScanner(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html">Scan</a> scan, <a href="../../../../../org/apache/hadoop/hbase/regionserver/Store.html">Store</a> store, <strong class="jxr_keyword">long</strong> oldestUnexpiredTS) {
+<a class="jxr_linenumber" name="831" href="#831">831</a>       <strong class="jxr_keyword">return</strong> shouldSeek(scan, oldestUnexpiredTS);
+<a class="jxr_linenumber" name="832" href="#832">832</a>     }
+<a class="jxr_linenumber" name="833" href="#833">833</a> 
+<a class="jxr_linenumber" name="834" href="#834">834</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="835" href="#835">835</a> <em class="jxr_javadoccomment">     * Seek scanner to the given key first. If it returns false(means</em>
+<a class="jxr_linenumber" name="836" href="#836">836</a> <em class="jxr_javadoccomment">     * peek()==null) or scanner's peek row is bigger than row of given key, seek</em>
+<a class="jxr_linenumber" name="837" href="#837">837</a> <em class="jxr_javadoccomment">     * the scanner to the previous row of given key</em>
+<a class="jxr_linenumber" name="838" href="#838">838</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="839" href="#839">839</a>     @Override
+<a class="jxr_linenumber" name="840" href="#840">840</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">synchronized</strong> <strong class="jxr_keyword">boolean</strong> backwardSeek(<a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> key) {
+<a class="jxr_linenumber" name="841" href="#841">841</a>       seek(key);
+<a class="jxr_linenumber" name="842" href="#842">842</a>       <strong class="jxr_keyword">if</strong> (peek() == <strong class="jxr_keyword">null</strong> || comparator.compareRows(peek(), key) &gt; 0) {
+<a class="jxr_linenumber" name="843" href="#843">843</a>         <strong class="jxr_keyword">return</strong> seekToPreviousRow(key);
+<a class="jxr_linenumber" name="844" href="#844">844</a>       }
+<a class="jxr_linenumber" name="845" href="#845">845</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="846" href="#846">846</a>     }
+<a class="jxr_linenumber" name="847" href="#847">847</a> 
+<a class="jxr_linenumber" name="848" href="#848">848</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="849" href="#849">849</a> <em class="jxr_javadoccomment">     * Separately get the KeyValue before the specified key from kvset and</em>
+<a class="jxr_linenumber" name="850" href="#850">850</a> <em class="jxr_javadoccomment">     * snapshotset, and use the row of higher one as the previous row of</em>
+<a class="jxr_linenumber" name="851" href="#851">851</a> <em class="jxr_javadoccomment">     * specified key, then seek to the first KeyValue of previous row</em>
+<a class="jxr_linenumber" name="852" href="#852">852</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="853" href="#853">853</a>     @Override
+<a class="jxr_linenumber" name="854" href="#854">854</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">synchronized</strong> <strong class="jxr_keyword">boolean</strong> seekToPreviousRow(<a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> originalKey) {
+<a class="jxr_linenumber" name="855" href="#855">855</a>       <strong class="jxr_keyword">boolean</strong> keepSeeking = false;
+<a class="jxr_linenumber" name="856" href="#856">856</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> key = originalKey;
+<a class="jxr_linenumber" name="857" href="#857">857</a>       <strong class="jxr_keyword">do</strong> {
+<a class="jxr_linenumber" name="858" href="#858">858</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> firstKeyOnRow = CellUtil.createFirstOnRow(key);
+<a class="jxr_linenumber" name="859" href="#859">859</a>         SortedSet&lt;Cell&gt; cellHead = cellSetAtCreation.headSet(firstKeyOnRow);
+<a class="jxr_linenumber" name="860" href="#860">860</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> cellSetBeforeRow = cellHead.isEmpty() ? <strong class="jxr_keyword">null</strong> : cellHead.last();
+<a class="jxr_linenumber" name="861" href="#861">861</a>         SortedSet&lt;Cell&gt; snapshotHead = snapshotAtCreation
+<a class="jxr_linenumber" name="862" href="#862">862</a>             .headSet(firstKeyOnRow);
+<a class="jxr_linenumber" name="863" href="#863">863</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> snapshotBeforeRow = snapshotHead.isEmpty() ? <strong class="jxr_keyword">null</strong> : snapshotHead
+<a class="jxr_linenumber" name="864" href="#864">864</a>             .last();
+<a class="jxr_linenumber" name="865" href="#865">865</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> lastCellBeforeRow = getHighest(cellSetBeforeRow, snapshotBeforeRow);
+<a class="jxr_linenumber" name="866" href="#866">866</a>         <strong class="jxr_keyword">if</strong> (lastCellBeforeRow == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="867" href="#867">867</a>           theNext = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="868" href="#868">868</a>           <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="869" href="#869">869</a>         }
+<a class="jxr_linenumber" name="870" href="#870">870</a>         <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> firstKeyOnPreviousRow = CellUtil.createFirstOnRow(lastCellBeforeRow);
+<a class="jxr_linenumber" name="871" href="#871">871</a>         <strong class="jxr_keyword">this</strong>.stopSkippingCellsIfNextRow = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="872" href="#872">872</a>         seek(firstKeyOnPreviousRow);
+<a class="jxr_linenumber" name="873" href="#873">873</a>         <strong class="jxr_keyword">this</strong>.stopSkippingCellsIfNextRow = false;
+<a class="jxr_linenumber" name="874" href="#874">874</a>         <strong class="jxr_keyword">if</strong> (peek() == <strong class="jxr_keyword">null</strong>
+<a class="jxr_linenumber" name="875" href="#875">875</a>             || comparator.compareRows(peek(), firstKeyOnPreviousRow) &gt; 0) {
+<a class="jxr_linenumber" name="876" href="#876">876</a>           keepSeeking = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="877" href="#877">877</a>           key = firstKeyOnPreviousRow;
+<a class="jxr_linenumber" name="878" href="#878">878</a>           <strong class="jxr_keyword">continue</strong>;
+<a class="jxr_linenumber" name="879" href="#879">879</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="880" href="#880">880</a>           keepSeeking = false;
+<a class="jxr_linenumber" name="881" href="#881">881</a>         }
+<a class="jxr_linenumber" name="882" href="#882">882</a>       } <strong class="jxr_keyword">while</strong> (keepSeeking);
+<a class="jxr_linenumber" name="883" href="#883">883</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="884" href="#884">884</a>     }
+<a class="jxr_linenumber" name="885" href="#885">885</a> 
+<a class="jxr_linenumber" name="886" href="#886">886</a>     @Override
+<a class="jxr_linenumber" name="887" href="#887">887</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">synchronized</strong> <strong class="jxr_keyword">boolean</strong> seekToLastRow() {
+<a class="jxr_linenumber" name="888" href="#888">888</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> first = cellSetAtCreation.isEmpty() ? <strong class="jxr_keyword">null</strong> : cellSetAtCreation
+<a class="jxr_linenumber" name="889" href="#889">889</a>           .last();
+<a class="jxr_linenumber" name="890" href="#890">890</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> second = snapshotAtCreation.isEmpty() ? <strong class="jxr_keyword">null</strong>
+<a class="jxr_linenumber" name="891" href="#891">891</a>           : snapshotAtCreation.last();
+<a class="jxr_linenumber" name="892" href="#892">892</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> higherCell = getHighest(first, second);
+<a class="jxr_linenumber" name="893" href="#893">893</a>       <strong class="jxr_keyword">if</strong> (higherCell == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="894" href="#894">894</a>         <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="895" href="#895">895</a>       }
+<a class="jxr_linenumber" name="896" href="#896">896</a>       <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> firstCellOnLastRow = CellUtil.createFirstOnRow(higherCell);
+<a class="jxr_linenumber" name="897" href="#897">897</a>       <strong class="jxr_keyword">if</strong> (seek(firstCellOnLastRow)) {
+<a class="jxr_linenumber" name="898" href="#898">898</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="899" href="#899">899</a>       } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="900" href="#900">900</a>         <strong class="jxr_keyword">return</strong> seekToPreviousRow(higherCell);
+<a class="jxr_linenumber" name="901" href="#901">901</a>       }
+<a class="jxr_linenumber" name="902" href="#902">902</a> 
+<a class="jxr_linenumber" name="903" href="#903">903</a>     }
+<a class="jxr_linenumber" name="904" href="#904">904</a>   }
+<a class="jxr_linenumber" name="905" href="#905">905</a> 
+<a class="jxr_linenumber" name="906" href="#906">906</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">long</strong> FIXED_OVERHEAD = ClassSize.align(ClassSize.OBJECT
+<a class="jxr_linenumber" name="907" href="#907">907</a>       + (9 * ClassSize.REFERENCE) + (3 * Bytes.SIZEOF_LONG) + Bytes.SIZEOF_BOOLEAN);
+<a class="jxr_linenumber" name="908" href="#908">908</a> 
+<a class="jxr_linenumber" name="909" href="#909">909</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">long</strong> DEEP_OVERHEAD = ClassSize.align(FIXED_OVERHEAD +
+<a class="jxr_linenumber" name="910" href="#910">910</a>       ClassSize.ATOMIC_LONG + (2 * ClassSize.TIMERANGE_TRACKER) +
+<a class="jxr_linenumber" name="911" href="#911">911</a>       (2 * ClassSize.CELL_SKIPLIST_SET) + (2 * ClassSize.CONCURRENT_SKIPLISTMAP));
+<a class="jxr_linenumber" name="912" href="#912">912</a> 
+<a class="jxr_linenumber" name="913" href="#913">913</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="914" href="#914">914</a> <em class="jxr_comment">   * Calculate how the MemStore size has changed.  Includes overhead of the</em>
+<a class="jxr_linenumber" name="915" href="#915">915</a> <em class="jxr_comment">   * backing Map.</em>
+<a class="jxr_linenumber" name="916" href="#916">916</a> <em class="jxr_comment">   * @param cell</em>
+<a class="jxr_linenumber" name="917" href="#917">917</a> <em class="jxr_comment">   * @param notpresent True if the cell was NOT present in the set.</em>
+<a class="jxr_linenumber" name="918" href="#918">918</a> <em class="jxr_comment">   * @return Size</em>
+<a class="jxr_linenumber" name="919" href="#919">919</a> <em class="jxr_comment">   */</em>
+<a class="jxr_linenumber" name="920" href="#920">920</a>   <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">long</strong> heapSizeChange(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/Cell.html">Cell</a> cell, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">boolean</strong> notpresent) {
+<a class="jxr_linenumber" name="921" href="#921">921</a>     <strong class="jxr_keyword">return</strong> notpresent ? ClassSize.align(ClassSize.CONCURRENT_SKIPLISTMAP_ENTRY
+<a class="jxr_linenumber" name="922" href="#922">922</a>         + CellUtil.estimatedHeapSizeOf(cell)) : 0;
+<a class="jxr_linenumber" name="923" href="#923">923</a>   }
+<a class="jxr_linenumber" name="924" href="#924">924</a> 
+<a class="jxr_linenumber" name="925" href="#925">925</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">long</strong> keySize() {
+<a class="jxr_linenumber" name="926" href="#926">926</a>     <strong class="jxr_keyword">return</strong> heapSize() - DEEP_OVERHEAD;
+<a class="jxr_linenumber" name="927" href="#927">927</a>   }
+<a class="jxr_linenumber" name="928" href="#928">928</a> 
+<a class="jxr_linenumber" name="929" href="#929">929</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="930" href="#930">930</a> <em class="jxr_javadoccomment">   * Get the entire heap usage for this MemStore not including keys in the</em>
+<a class="jxr_linenumber" name="931" href="#931">931</a> <em class="jxr_javadoccomment">   * snapshot.</em>
+<a class="jxr_linenumber" name="932" href="#932">932</a> <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="933" href="#933">933</a>   @Override
+<a class="jxr_linenumber" name="934" href="#934">934</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">long</strong> heapSize() {
+<a class="jxr_linenumber" name="935" href="#935">935</a>     <strong class="jxr_keyword">return</strong> size.get();
+<a class="jxr_linenumber" name="936" href="#936">936</a>   }
+<a class="jxr_linenumber" name="937" href="#937">937</a> 
+<a class="jxr_linenumber" name="938" href="#938">938</a>   @Override
+<a class="jxr_linenumber" name="939" href="#939">939</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">long</strong> size() {
+<a class="jxr_linenumber" name="940" href="#940">940</a>     <strong class="jxr_keyword">return</strong> heapSize();
+<a class="jxr_linenumber" name="941" href="#941">941</a>   }
+<a class="jxr_linenumber" name="942" href="#942">942</a> 
+<a class="jxr_linenumber" name="943" href="#943">943</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="944" href="#944">944</a> <em class="jxr_javadoccomment">   * Code to help figure if our approximation of object heap sizes is close</em>
+<a class="jxr_linenumber" name="945" href="#945">945</a> <em class="jxr_javadoccomment">   * enough.  See hbase-900.  Fills memstores then waits so user can heap</em>
+<a class="jxr_linenumber" name="946" href="#946">946</a> <em class="jxr_javadoccomment">   * dump and bring up resultant hprof in something like jprofiler which</em>
+<a class="jxr_linenumber" name="947" href="#947">947</a> <em class="jxr_javadoccomment">   * allows you get 'deep size' on objects.</em>
+<a class="jxr_linenumber" name="948" href="#948">948</a> <em class="jxr_javadoccomment">   * @param args main args</em>
+<a class="jxr_linenumber" name="949" href="#949">949</a> <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="950" href="#950">950</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String [] args) {
+<a class="jxr_linenumber" name="951" href="#951">951</a>     RuntimeMXBean runtime = ManagementFactory.getRuntimeMXBean();
+<a class="jxr_linenumber" name="952" href="#952">952</a>     LOG.info(<span class="jxr_string">"vmName="</span> + runtime.getVmName() + <span class="jxr_string">", vmVendor="</span> +
+<a class="jxr_linenumber" name="953" href="#953">953</a>       runtime.getVmVendor() + <span class="jxr_string">", vmVersion="</span> + runtime.getVmVersion());
+<a class="jxr_linenumber" name="954" href="#954">954</a>     LOG.info(<span class="jxr_string">"vmInputArguments="</span> + runtime.getInputArguments());
+<a class="jxr_linenumber" name="955" href="#955">955</a>     <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html">DefaultMemStore</a> memstore1 = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html">DefaultMemStore</a>();
+<a class="jxr_linenumber" name="956" href="#956">956</a>     <em class="jxr_comment">// TODO: x32 vs x64</em>
+<a class="jxr_linenumber" name="957" href="#957">957</a>     <strong class="jxr_keyword">long</strong> size = 0;
+<a class="jxr_linenumber" name="958" href="#958">958</a>     <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> count = 10000;
+<a class="jxr_linenumber" name="959" href="#959">959</a>     byte [] fam = Bytes.toBytes(<span class="jxr_string">"col"</span>);
+<a class="jxr_linenumber" name="960" href="#960">960</a>     byte [] qf = Bytes.toBytes(<span class="jxr_string">"umn"</span>);
+<a class="jxr_linenumber" name="961" href="#961">961</a>     byte [] empty = <strong class="jxr_keyword">new</strong> byte[0];
+<a class="jxr_linenumber" name="962" href="#962">962</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; count; i++) {
+<a class="jxr_linenumber" name="963" href="#963">963</a>       <em class="jxr_comment">// Give each its own ts</em>
+<a class="jxr_linenumber" name="964" href="#964">964</a>       size += memstore1.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a>(Bytes.toBytes(i), fam, qf, i, empty));
+<a class="jxr_linenumber" name="965" href="#965">965</a>     }
+<a class="jxr_linenumber" name="966" href="#966">966</a>     LOG.info(<span class="jxr_string">"memstore1 estimated size="</span> + size);
+<a class="jxr_linenumber" name="967" href="#967">967</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; count; i++) {
+<a class="jxr_linenumber" name="968" href="#968">968</a>       size += memstore1.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a>(Bytes.toBytes(i), fam, qf, i, empty));
+<a class="jxr_linenumber" name="969" href="#969">969</a>     }
+<a class="jxr_linenumber" name="970" href="#970">970</a>     LOG.info(<span class="jxr_string">"memstore1 estimated size (2nd loading of same data)="</span> + size);
+<a class="jxr_linenumber" name="971" href="#971">971</a>     <em class="jxr_comment">// Make a variably sized memstore.</em>
+<a class="jxr_linenumber" name="972" href="#972">972</a>     <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html">DefaultMemStore</a> memstore2 = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html">DefaultMemStore</a>();
+<a class="jxr_linenumber" name="973" href="#973">973</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; count; i++) {
+<a class="jxr_linenumber" name="974" href="#974">974</a>       size += memstore2.add(<strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/KeyValue.html">KeyValue</a>(Bytes.toBytes(i), fam, qf, i, <strong class="jxr_keyword">new</strong> byte[i]));
+<a class="jxr_linenumber" name="975" href="#975">975</a>     }
+<a class="jxr_linenumber" name="976" href="#976">976</a>     LOG.info(<span class="jxr_string">"memstore2 estimated size="</span> + size);
+<a class="jxr_linenumber" name="977" href="#977">977</a>     <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> seconds = 30;
+<a class="jxr_linenumber" name="978" href="#978">978</a>     LOG.info(<span class="jxr_string">"Waiting "</span> + seconds + <span class="jxr_string">" seconds while heap dump is taken"</span>);
+<a class="jxr_linenumber" name="979" href="#979">979</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; seconds; i++) {
+<a class="jxr_linenumber" name="980" href="#980">980</a>       <em class="jxr_comment">// Thread.sleep(1000);</em>
+<a class="jxr_linenumber" name="981" href="#981">981</a>     }
+<a class="jxr_linenumber" name="982" href="#982">982</a>     LOG.info(<span class="jxr_string">"Exiting."</span>);
+<a class="jxr_linenumber" name="983" href="#983">983</a>   }
+<a class="jxr_linenumber" name="984" href="#984">984</a> 
+<a class="jxr_linenumber" name="985" href="#985">985</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class org.apache.hadoop.hbase.RegionLocations (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
@@ -174,7 +174,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentSkipListMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentSkipListMap</a>&lt;byte[],<a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a>&gt;&gt;</code></td>
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;byte[],<a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a>&gt;&gt;</code></td>
 <td class="colLast"><span class="strong">MetaCache.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetaCache.html#cachedRegionLocations">cachedRegionLocations</a></strong></code>
 <div class="block">Map of table to table <a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase"><code>HRegionLocation</code></a>s.</div>
 </td>
@@ -239,21 +239,21 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a></code></td>
-<td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#locateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean,%20boolean)">locateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#locateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean,%20boolean)">locateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                         byte[]&nbsp;row,
                         boolean&nbsp;useCache,
                         boolean&nbsp;retry)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a></code></td>
-<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#locateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean,%20boolean)">locateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+<td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#locateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean,%20boolean)">locateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                         byte[]&nbsp;row,
                         boolean&nbsp;useCache,
                         boolean&nbsp;retry)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a></code></td>
-<td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#locateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean,%20boolean,%20int)">locateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#locateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean,%20boolean,%20int)">locateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                         byte[]&nbsp;row,
                         boolean&nbsp;useCache,
                         boolean&nbsp;retry,
@@ -261,7 +261,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a></code></td>
-<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#locateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean,%20boolean,%20int)">locateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+<td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#locateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean,%20boolean,%20int)">locateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                         byte[]&nbsp;row,
                         boolean&nbsp;useCache,
                         boolean&nbsp;retry,
@@ -277,18 +277,18 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#relocateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20int)">relocateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                            byte[]&nbsp;row,
+                            int&nbsp;replicaId)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a></code></td>
 <td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#relocateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20int)">relocateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                             byte[]&nbsp;row,
                             int&nbsp;replicaId)</code>
 <div class="block">Find the location of the region of <i>tableName</i> that <i>row</i>
  lives in, ignoring any value that might be in the cache.</div>
 </td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a></code></td>
-<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#relocateRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20int)">relocateRegion</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                            byte[]&nbsp;row,
-                            int&nbsp;replicaId)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -300,7 +300,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentSkipListMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentSkipListMap</a>&lt;byte[],<a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a>&gt;</code></td>
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;byte[],<a href="../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a>&gt;</code></td>
 <td class="colLast"><span class="strong">MetaCache.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/MetaCache.html#getTableLocations(org.apache.hadoop.hbase.TableName)">getTableLocations</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">

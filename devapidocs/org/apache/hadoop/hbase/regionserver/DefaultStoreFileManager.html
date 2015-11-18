@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DefaultStoreFileManager (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
@@ -393,7 +393,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>insertNewFiles</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.77">insertNewFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.78">insertNewFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#insertNewFiles(java.util.Collection)">StoreFileManager</a></code></strong></div>
 <div class="block">Adds new files, either for from MemStore flush or bulk insert, into the structure.</div>
@@ -411,7 +411,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>clearFiles</h4>
-<pre>public&nbsp;com.google.common.collect.ImmutableCollection&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.84">clearFiles</a>()</pre>
+<pre>public&nbsp;com.google.common.collect.ImmutableCollection&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.85">clearFiles</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#clearFiles()">StoreFileManager</a></code></strong></div>
 <div class="block">Clears all the files currently in use and returns them.</div>
 <dl>
@@ -426,7 +426,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>getStorefileCount</h4>
-<pre>public final&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.91">getStorefileCount</a>()</pre>
+<pre>public final&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.92">getStorefileCount</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#getStorefileCount()">StoreFileManager</a></code></strong></div>
 <div class="block">Returns the number of files currently in use.</div>
 <dl>
@@ -441,7 +441,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>addCompactionResults</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.96">addCompactionResults</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;compactedFiles,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.97">addCompactionResults</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;compactedFiles,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;results)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#addCompactionResults(java.util.Collection,%20java.util.Collection)">StoreFileManager</a></code></strong></div>
 <div class="block">Adds compaction results into the structure.</div>
@@ -457,7 +457,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>getCandidateFilesForRowKeyBefore</h4>
-<pre>public final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.107">getCandidateFilesForRowKeyBefore</a>(<a href="../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&nbsp;targetKey)</pre>
+<pre>public final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.108">getCandidateFilesForRowKeyBefore</a>(<a href="../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&nbsp;targetKey)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#getCandidateFilesForRowKeyBefore(org.apache.hadoop.hbase.KeyValue)">StoreFileManager</a></code></strong></div>
 <div class="block">Gets initial, full list of candidate store files to check for row-key-before.</div>
 <dl>
@@ -474,7 +474,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>updateCandidateFilesForRowKeyBefore</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.112">updateCandidateFilesForRowKeyBefore</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidateFiles,
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.113">updateCandidateFilesForRowKeyBefore</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidateFiles,
                                                       <a href="../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&nbsp;targetKey,
                                                       <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;candidate)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#updateCandidateFilesForRowKeyBefore(java.util.Iterator,%20org.apache.hadoop.hbase.KeyValue,%20org.apache.hadoop.hbase.Cell)">StoreFileManager</a></code></strong></div>
@@ -496,7 +496,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>getSplitPoint</h4>
-<pre>public final&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.122">getSplitPoint</a>()
+<pre>public final&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.123">getSplitPoint</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#getSplitPoint()">StoreFileManager</a></code></strong></div>
 <div class="block">Gets the split point for the split of this set of store files (approx. middle).</div>
@@ -514,7 +514,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>getFilesForScanOrGet</h4>
-<pre>public final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.130">getFilesForScanOrGet</a>(boolean&nbsp;isGet,
+<pre>public final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.131">getFilesForScanOrGet</a>(boolean&nbsp;isGet,
                                          byte[]&nbsp;startRow,
                                          byte[]&nbsp;stopRow)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#getFilesForScanOrGet(boolean,%20byte[],%20byte[])">StoreFileManager</a></code></strong></div>
@@ -532,7 +532,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>getStoreCompactionPriority</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.137">getStoreCompactionPriority</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.138">getStoreCompactionPriority</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#getStoreCompactionPriority()">getStoreCompactionPriority</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html" title="interface in org.apache.hadoop.hbase.regionserver">StoreFileManager</a></code></dd>
@@ -545,7 +545,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>getUnneededFiles</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.143">getUnneededFiles</a>(long&nbsp;maxTs,
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.144">getUnneededFiles</a>(long&nbsp;maxTs,
                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -560,7 +560,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockList">
 <li class="blockList">
 <h4>sortAndSetStoreFiles</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.163">sortAndSetStoreFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;storeFiles)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.164">sortAndSetStoreFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;storeFiles)</pre>
 </li>
 </ul>
 <a name="getCompactionPressure()">
@@ -569,7 +569,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFil
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getCompactionPressure</h4>
-<pre>public&nbsp;double&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.169">getCompactionPressure</a>()</pre>
+<pre>public&nbsp;double&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html#line.170">getCompactionPressure</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html#getCompactionPressure()">getCompactionPressure</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileManager.html" title="interface in org.apache.hadoop.hbase.regionserver">StoreFileManager</a></code></dd>

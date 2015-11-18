@@ -835,163 +835,162 @@
 <span class="sourceLineNo">827</span>    }<a name="line.827"></a>
 <span class="sourceLineNo">828</span><a name="line.828"></a>
 <span class="sourceLineNo">829</span>    @Override<a name="line.829"></a>
-<span class="sourceLineNo">830</span>    public boolean shouldUseScanner(Scan scan, SortedSet&lt;byte[]&gt; columns,<a name="line.830"></a>
-<span class="sourceLineNo">831</span>        long oldestUnexpiredTS) {<a name="line.831"></a>
-<span class="sourceLineNo">832</span>      return shouldSeek(scan, oldestUnexpiredTS);<a name="line.832"></a>
-<span class="sourceLineNo">833</span>    }<a name="line.833"></a>
-<span class="sourceLineNo">834</span><a name="line.834"></a>
-<span class="sourceLineNo">835</span>    /**<a name="line.835"></a>
-<span class="sourceLineNo">836</span>     * Seek scanner to the given key first. If it returns false(means<a name="line.836"></a>
-<span class="sourceLineNo">837</span>     * peek()==null) or scanner's peek row is bigger than row of given key, seek<a name="line.837"></a>
-<span class="sourceLineNo">838</span>     * the scanner to the previous row of given key<a name="line.838"></a>
-<span class="sourceLineNo">839</span>     */<a name="line.839"></a>
-<span class="sourceLineNo">840</span>    @Override<a name="line.840"></a>
-<span class="sourceLineNo">841</span>    public synchronized boolean backwardSeek(Cell key) {<a name="line.841"></a>
-<span class="sourceLineNo">842</span>      seek(key);<a name="line.842"></a>
-<span class="sourceLineNo">843</span>      if (peek() == null || comparator.compareRows(peek(), key) &gt; 0) {<a name="line.843"></a>
-<span class="sourceLineNo">844</span>        return seekToPreviousRow(key);<a name="line.844"></a>
-<span class="sourceLineNo">845</span>      }<a name="line.845"></a>
-<span class="sourceLineNo">846</span>      return true;<a name="line.846"></a>
-<span class="sourceLineNo">847</span>    }<a name="line.847"></a>
-<span class="sourceLineNo">848</span><a name="line.848"></a>
-<span class="sourceLineNo">849</span>    /**<a name="line.849"></a>
-<span class="sourceLineNo">850</span>     * Separately get the KeyValue before the specified key from kvset and<a name="line.850"></a>
-<span class="sourceLineNo">851</span>     * snapshotset, and use the row of higher one as the previous row of<a name="line.851"></a>
-<span class="sourceLineNo">852</span>     * specified key, then seek to the first KeyValue of previous row<a name="line.852"></a>
-<span class="sourceLineNo">853</span>     */<a name="line.853"></a>
-<span class="sourceLineNo">854</span>    @Override<a name="line.854"></a>
-<span class="sourceLineNo">855</span>    public synchronized boolean seekToPreviousRow(Cell originalKey) {<a name="line.855"></a>
-<span class="sourceLineNo">856</span>      boolean keepSeeking = false;<a name="line.856"></a>
-<span class="sourceLineNo">857</span>      Cell key = originalKey;<a name="line.857"></a>
-<span class="sourceLineNo">858</span>      do {<a name="line.858"></a>
-<span class="sourceLineNo">859</span>        Cell firstKeyOnRow = CellUtil.createFirstOnRow(key);<a name="line.859"></a>
-<span class="sourceLineNo">860</span>        SortedSet&lt;Cell&gt; cellHead = cellSetAtCreation.headSet(firstKeyOnRow);<a name="line.860"></a>
-<span class="sourceLineNo">861</span>        Cell cellSetBeforeRow = cellHead.isEmpty() ? null : cellHead.last();<a name="line.861"></a>
-<span class="sourceLineNo">862</span>        SortedSet&lt;Cell&gt; snapshotHead = snapshotAtCreation<a name="line.862"></a>
-<span class="sourceLineNo">863</span>            .headSet(firstKeyOnRow);<a name="line.863"></a>
-<span class="sourceLineNo">864</span>        Cell snapshotBeforeRow = snapshotHead.isEmpty() ? null : snapshotHead<a name="line.864"></a>
-<span class="sourceLineNo">865</span>            .last();<a name="line.865"></a>
-<span class="sourceLineNo">866</span>        Cell lastCellBeforeRow = getHighest(cellSetBeforeRow, snapshotBeforeRow);<a name="line.866"></a>
-<span class="sourceLineNo">867</span>        if (lastCellBeforeRow == null) {<a name="line.867"></a>
-<span class="sourceLineNo">868</span>          theNext = null;<a name="line.868"></a>
-<span class="sourceLineNo">869</span>          return false;<a name="line.869"></a>
-<span class="sourceLineNo">870</span>        }<a name="line.870"></a>
-<span class="sourceLineNo">871</span>        Cell firstKeyOnPreviousRow = CellUtil.createFirstOnRow(lastCellBeforeRow);<a name="line.871"></a>
-<span class="sourceLineNo">872</span>        this.stopSkippingCellsIfNextRow = true;<a name="line.872"></a>
-<span class="sourceLineNo">873</span>        seek(firstKeyOnPreviousRow);<a name="line.873"></a>
-<span class="sourceLineNo">874</span>        this.stopSkippingCellsIfNextRow = false;<a name="line.874"></a>
-<span class="sourceLineNo">875</span>        if (peek() == null<a name="line.875"></a>
-<span class="sourceLineNo">876</span>            || comparator.compareRows(peek(), firstKeyOnPreviousRow) &gt; 0) {<a name="line.876"></a>
-<span class="sourceLineNo">877</span>          keepSeeking = true;<a name="line.877"></a>
-<span class="sourceLineNo">878</span>          key = firstKeyOnPreviousRow;<a name="line.878"></a>
-<span class="sourceLineNo">879</span>          continue;<a name="line.879"></a>
-<span class="sourceLineNo">880</span>        } else {<a name="line.880"></a>
-<span class="sourceLineNo">881</span>          keepSeeking = false;<a name="line.881"></a>
-<span class="sourceLineNo">882</span>        }<a name="line.882"></a>
-<span class="sourceLineNo">883</span>      } while (keepSeeking);<a name="line.883"></a>
-<span class="sourceLineNo">884</span>      return true;<a name="line.884"></a>
-<span class="sourceLineNo">885</span>    }<a name="line.885"></a>
-<span class="sourceLineNo">886</span><a name="line.886"></a>
-<span class="sourceLineNo">887</span>    @Override<a name="line.887"></a>
-<span class="sourceLineNo">888</span>    public synchronized boolean seekToLastRow() {<a name="line.888"></a>
-<span class="sourceLineNo">889</span>      Cell first = cellSetAtCreation.isEmpty() ? null : cellSetAtCreation<a name="line.889"></a>
-<span class="sourceLineNo">890</span>          .last();<a name="line.890"></a>
-<span class="sourceLineNo">891</span>      Cell second = snapshotAtCreation.isEmpty() ? null<a name="line.891"></a>
-<span class="sourceLineNo">892</span>          : snapshotAtCreation.last();<a name="line.892"></a>
-<span class="sourceLineNo">893</span>      Cell higherCell = getHighest(first, second);<a name="line.893"></a>
-<span class="sourceLineNo">894</span>      if (higherCell == null) {<a name="line.894"></a>
-<span class="sourceLineNo">895</span>        return false;<a name="line.895"></a>
-<span class="sourceLineNo">896</span>      }<a name="line.896"></a>
-<span class="sourceLineNo">897</span>      Cell firstCellOnLastRow = CellUtil.createFirstOnRow(higherCell);<a name="line.897"></a>
-<span class="sourceLineNo">898</span>      if (seek(firstCellOnLastRow)) {<a name="line.898"></a>
-<span class="sourceLineNo">899</span>        return true;<a name="line.899"></a>
-<span class="sourceLineNo">900</span>      } else {<a name="line.900"></a>
-<span class="sourceLineNo">901</span>        return seekToPreviousRow(higherCell);<a name="line.901"></a>
-<span class="sourceLineNo">902</span>      }<a name="line.902"></a>
-<span class="sourceLineNo">903</span><a name="line.903"></a>
-<span class="sourceLineNo">904</span>    }<a name="line.904"></a>
-<span class="sourceLineNo">905</span>  }<a name="line.905"></a>
-<span class="sourceLineNo">906</span><a name="line.906"></a>
-<span class="sourceLineNo">907</span>  public final static long FIXED_OVERHEAD = ClassSize.align(ClassSize.OBJECT<a name="line.907"></a>
-<span class="sourceLineNo">908</span>      + (9 * ClassSize.REFERENCE) + (3 * Bytes.SIZEOF_LONG) + Bytes.SIZEOF_BOOLEAN);<a name="line.908"></a>
-<span class="sourceLineNo">909</span><a name="line.909"></a>
-<span class="sourceLineNo">910</span>  public final static long DEEP_OVERHEAD = ClassSize.align(FIXED_OVERHEAD +<a name="line.910"></a>
-<span class="sourceLineNo">911</span>      ClassSize.ATOMIC_LONG + (2 * ClassSize.TIMERANGE_TRACKER) +<a name="line.911"></a>
-<span class="sourceLineNo">912</span>      (2 * ClassSize.CELL_SKIPLIST_SET) + (2 * ClassSize.CONCURRENT_SKIPLISTMAP));<a name="line.912"></a>
-<span class="sourceLineNo">913</span><a name="line.913"></a>
-<span class="sourceLineNo">914</span>  /*<a name="line.914"></a>
-<span class="sourceLineNo">915</span>   * Calculate how the MemStore size has changed.  Includes overhead of the<a name="line.915"></a>
-<span class="sourceLineNo">916</span>   * backing Map.<a name="line.916"></a>
-<span class="sourceLineNo">917</span>   * @param cell<a name="line.917"></a>
-<span class="sourceLineNo">918</span>   * @param notpresent True if the cell was NOT present in the set.<a name="line.918"></a>
-<span class="sourceLineNo">919</span>   * @return Size<a name="line.919"></a>
-<span class="sourceLineNo">920</span>   */<a name="line.920"></a>
-<span class="sourceLineNo">921</span>  static long heapSizeChange(final Cell cell, final boolean notpresent) {<a name="line.921"></a>
-<span class="sourceLineNo">922</span>    return notpresent ? ClassSize.align(ClassSize.CONCURRENT_SKIPLISTMAP_ENTRY<a name="line.922"></a>
-<span class="sourceLineNo">923</span>        + CellUtil.estimatedHeapSizeOf(cell)) : 0;<a name="line.923"></a>
-<span class="sourceLineNo">924</span>  }<a name="line.924"></a>
-<span class="sourceLineNo">925</span><a name="line.925"></a>
-<span class="sourceLineNo">926</span>  private long keySize() {<a name="line.926"></a>
-<span class="sourceLineNo">927</span>    return heapSize() - DEEP_OVERHEAD;<a name="line.927"></a>
-<span class="sourceLineNo">928</span>  }<a name="line.928"></a>
-<span class="sourceLineNo">929</span><a name="line.929"></a>
-<span class="sourceLineNo">930</span>  /**<a name="line.930"></a>
-<span class="sourceLineNo">931</span>   * Get the entire heap usage for this MemStore not including keys in the<a name="line.931"></a>
-<span class="sourceLineNo">932</span>   * snapshot.<a name="line.932"></a>
-<span class="sourceLineNo">933</span>   */<a name="line.933"></a>
-<span class="sourceLineNo">934</span>  @Override<a name="line.934"></a>
-<span class="sourceLineNo">935</span>  public long heapSize() {<a name="line.935"></a>
-<span class="sourceLineNo">936</span>    return size.get();<a name="line.936"></a>
-<span class="sourceLineNo">937</span>  }<a name="line.937"></a>
-<span class="sourceLineNo">938</span><a name="line.938"></a>
-<span class="sourceLineNo">939</span>  @Override<a name="line.939"></a>
-<span class="sourceLineNo">940</span>  public long size() {<a name="line.940"></a>
-<span class="sourceLineNo">941</span>    return heapSize();<a name="line.941"></a>
-<span class="sourceLineNo">942</span>  }<a name="line.942"></a>
-<span class="sourceLineNo">943</span><a name="line.943"></a>
-<span class="sourceLineNo">944</span>  /**<a name="line.944"></a>
-<span class="sourceLineNo">945</span>   * Code to help figure if our approximation of object heap sizes is close<a name="line.945"></a>
-<span class="sourceLineNo">946</span>   * enough.  See hbase-900.  Fills memstores then waits so user can heap<a name="line.946"></a>
-<span class="sourceLineNo">947</span>   * dump and bring up resultant hprof in something like jprofiler which<a name="line.947"></a>
-<span class="sourceLineNo">948</span>   * allows you get 'deep size' on objects.<a name="line.948"></a>
-<span class="sourceLineNo">949</span>   * @param args main args<a name="line.949"></a>
-<span class="sourceLineNo">950</span>   */<a name="line.950"></a>
-<span class="sourceLineNo">951</span>  public static void main(String [] args) {<a name="line.951"></a>
-<span class="sourceLineNo">952</span>    RuntimeMXBean runtime = ManagementFactory.getRuntimeMXBean();<a name="line.952"></a>
-<span class="sourceLineNo">953</span>    LOG.info("vmName=" + runtime.getVmName() + ", vmVendor=" +<a name="line.953"></a>
-<span class="sourceLineNo">954</span>      runtime.getVmVendor() + ", vmVersion=" + runtime.getVmVersion());<a name="line.954"></a>
-<span class="sourceLineNo">955</span>    LOG.info("vmInputArguments=" + runtime.getInputArguments());<a name="line.955"></a>
-<span class="sourceLineNo">956</span>    DefaultMemStore memstore1 = new DefaultMemStore();<a name="line.956"></a>
-<span class="sourceLineNo">957</span>    // TODO: x32 vs x64<a name="line.957"></a>
-<span class="sourceLineNo">958</span>    long size = 0;<a name="line.958"></a>
-<span class="sourceLineNo">959</span>    final int count = 10000;<a name="line.959"></a>
-<span class="sourceLineNo">960</span>    byte [] fam = Bytes.toBytes("col");<a name="line.960"></a>
-<span class="sourceLineNo">961</span>    byte [] qf = Bytes.toBytes("umn");<a name="line.961"></a>
-<span class="sourceLineNo">962</span>    byte [] empty = new byte[0];<a name="line.962"></a>
-<span class="sourceLineNo">963</span>    for (int i = 0; i &lt; count; i++) {<a name="line.963"></a>
-<span class="sourceLineNo">964</span>      // Give each its own ts<a name="line.964"></a>
-<span class="sourceLineNo">965</span>      size += memstore1.add(new KeyValue(Bytes.toBytes(i), fam, qf, i, empty));<a name="line.965"></a>
-<span class="sourceLineNo">966</span>    }<a name="line.966"></a>
-<span class="sourceLineNo">967</span>    LOG.info("memstore1 estimated size=" + size);<a name="line.967"></a>
-<span class="sourceLineNo">968</span>    for (int i = 0; i &lt; count; i++) {<a name="line.968"></a>
-<span class="sourceLineNo">969</span>      size += memstore1.add(new KeyValue(Bytes.toBytes(i), fam, qf, i, empty));<a name="line.969"></a>
-<span class="sourceLineNo">970</span>    }<a name="line.970"></a>
-<span class="sourceLineNo">971</span>    LOG.info("memstore1 estimated size (2nd loading of same data)=" + size);<a name="line.971"></a>
-<span class="sourceLineNo">972</span>    // Make a variably sized memstore.<a name="line.972"></a>
-<span class="sourceLineNo">973</span>    DefaultMemStore memstore2 = new DefaultMemStore();<a name="line.973"></a>
-<span class="sourceLineNo">974</span>    for (int i = 0; i &lt; count; i++) {<a name="line.974"></a>
-<span class="sourceLineNo">975</span>      size += memstore2.add(new KeyValue(Bytes.toBytes(i), fam, qf, i, new byte[i]));<a name="line.975"></a>
-<span class="sourceLineNo">976</span>    }<a name="line.976"></a>
-<span class="sourceLineNo">977</span>    LOG.info("memstore2 estimated size=" + size);<a name="line.977"></a>
-<span class="sourceLineNo">978</span>    final int seconds = 30;<a name="line.978"></a>
-<span class="sourceLineNo">979</span>    LOG.info("Waiting " + seconds + " seconds while heap dump is taken");<a name="line.979"></a>
-<span class="sourceLineNo">980</span>    for (int i = 0; i &lt; seconds; i++) {<a name="line.980"></a>
-<span class="sourceLineNo">981</span>      // Thread.sleep(1000);<a name="line.981"></a>
-<span class="sourceLineNo">982</span>    }<a name="line.982"></a>
-<span class="sourceLineNo">983</span>    LOG.info("Exiting.");<a name="line.983"></a>
-<span class="sourceLineNo">984</span>  }<a name="line.984"></a>
-<span class="sourceLineNo">985</span><a name="line.985"></a>
-<span class="sourceLineNo">986</span>}<a name="line.986"></a>
+<span class="sourceLineNo">830</span>    public boolean shouldUseScanner(Scan scan, Store store, long oldestUnexpiredTS) {<a name="line.830"></a>
+<span class="sourceLineNo">831</span>      return shouldSeek(scan, oldestUnexpiredTS);<a name="line.831"></a>
+<span class="sourceLineNo">832</span>    }<a name="line.832"></a>
+<span class="sourceLineNo">833</span><a name="line.833"></a>
+<span class="sourceLineNo">834</span>    /**<a name="line.834"></a>
+<span class="sourceLineNo">835</span>     * Seek scanner to the given key first. If it returns false(means<a name="line.835"></a>
+<span class="sourceLineNo">836</span>     * peek()==null) or scanner's peek row is bigger than row of given key, seek<a name="line.836"></a>
+<span class="sourceLineNo">837</span>     * the scanner to the previous row of given key<a name="line.837"></a>
+<span class="sourceLineNo">838</span>     */<a name="line.838"></a>
+<span class="sourceLineNo">839</span>    @Override<a name="line.839"></a>
+<span class="sourceLineNo">840</span>    public synchronized boolean backwardSeek(Cell key) {<a name="line.840"></a>
+<span class="sourceLineNo">841</span>      seek(key);<a name="line.841"></a>
+<span class="sourceLineNo">842</span>      if (peek() == null || comparator.compareRows(peek(), key) &gt; 0) {<a name="line.842"></a>
+<span class="sourceLineNo">843</span>        return seekToPreviousRow(key);<a name="line.843"></a>
+<span class="sourceLineNo">844</span>      }<a name="line.844"></a>
+<span class="sourceLineNo">845</span>      return true;<a name="line.845"></a>
+<span class="sourceLineNo">846</span>    }<a name="line.846"></a>
+<span class="sourceLineNo">847</span><a name="line.847"></a>
+<span class="sourceLineNo">848</span>    /**<a name="line.848"></a>
+<span class="sourceLineNo">849</span>     * Separately get the KeyValue before the specified key from kvset and<a name="line.849"></a>
+<span class="sourceLineNo">850</span>     * snapshotset, and use the row of higher one as the previous row of<a name="line.850"></a>
+<span class="sourceLineNo">851</span>     * specified key, then seek to the first KeyValue of previous row<a name="line.851"></a>
+<span class="sourceLineNo">852</span>     */<a name="line.852"></a>
+<span class="sourceLineNo">853</span>    @Override<a name="line.853"></a>
+<span class="sourceLineNo">854</span>    public synchronized boolean seekToPreviousRow(Cell originalKey) {<a name="line.854"></a>
+<span class="sourceLineNo">855</span>      boolean keepSeeking = false;<a name="line.855"></a>
+<span class="sourceLineNo">856</span>      Cell key = originalKey;<a name="line.856"></a>
+<span class="sourceLineNo">857</span>      do {<a name="line.857"></a>
+<span class="sourceLineNo">858</span>        Cell firstKeyOnRow = CellUtil.createFirstOnRow(key);<a name="line.858"></a>
+<span class="sourceLineNo">859</span>        SortedSet&lt;Cell&gt; cellHead = cellSetAtCreation.headSet(firstKeyOnRow);<a name="line.859"></a>
+<span class="sourceLineNo">860</span>        Cell cellSetBeforeRow = cellHead.isEmpty() ? null : cellHead.last();<a name="line.860"></a>
+<span class="sourceLineNo">861</span>        SortedSet&lt;Cell&gt; snapshotHead = snapshotAtCreation<a name="line.861"></a>
+<span class="sourceLineNo">862</span>            .headSet(firstKeyOnRow);<a name="line.862"></a>
+<span class="sourceLineNo">863</span>        Cell snapshotBeforeRow = snapshotHead.isEmpty() ? null : snapshotHead<a name="line.863"></a>
+<span class="sourceLineNo">864</span>            .last();<a name="line.864"></a>
+<span class="sourceLineNo">865</span>        Cell lastCellBeforeRow = getHighest(cellSetBeforeRow, snapshotBeforeRow);<a name="line.865"></a>
+<span class="sourceLineNo">866</span>        if (lastCellBeforeRow == null) {<a name="line.866"></a>
+<span class="sourceLineNo">867</span>          theNext = null;<a name="line.867"></a>
+<span class="sourceLineNo">868</span>          return false;<a name="line.868"></a>
+<span class="sourceLineNo">869</span>        }<a name="line.869"></a>
+<span class="sourceLineNo">870</span>        Cell firstKeyOnPreviousRow = CellUtil.createFirstOnRow(lastCellBeforeRow);<a name="line.870"></a>
+<span class="sourceLineNo">871</span>        this.stopSkippingCellsIfNextRow = true;<a name="line.871"></a>
+<span class="sourceLineNo">872</span>        seek(firstKeyOnPreviousRow);<a name="line.872"></a>
+<span class="sourceLineNo">873</span>        this.stopSkippingCellsIfNextRow = false;<a name="line.873"></a>
+<span class="sourceLineNo">874</span>        if (peek() == null<a name="line.874"></a>
+<span class="sourceLineNo">875</span>            || comparator.compareRows(peek(), firstKeyOnPreviousRow) &gt; 0) {<a name="line.875"></a>
+<span class="sourceLineNo">876</span>          keepSeeking = true;<a name="line.876"></a>
+<span class="sourceLineNo">877</span>          key = firstKeyOnPreviousRow;<a name="line.877"></a>
+<span class="sourceLineNo">878</span>          continue;<a name="line.878"></a>
+<span class="sourceLineNo">879</span>        } else {<a name="line.879"></a>
+<span class="sourceLineNo">880</span>          keepSeeking = false;<a name="line.880"></a>
+<span class="sourceLineNo">881</span>        }<a name="line.881"></a>
+<span class="sourceLineNo">882</span>      } while (keepSeeking);<a name="line.882"></a>
+<span class="sourceLineNo">883</span>      return true;<a name="line.883"></a>
+<span class="sourceLineNo">884</span>    }<a name="line.884"></a>
+<span class="sourceLineNo">885</span><a name="line.885"></a>
+<span class="sourceLineNo">886</span>    @Override<a name="line.886"></a>
+<span class="sourceLineNo">887</span>    public synchronized boolean seekToLastRow() {<a name="line.887"></a>
+<span class="sourceLineNo">888</span>      Cell first = cellSetAtCreation.isEmpty() ? null : cellSetAtCreation<a name="line.888"></a>
+<span class="sourceLineNo">889</span>          .last();<a name="line.889"></a>
+<span class="sourceLineNo">890</span>      Cell second = snapshotAtCreation.isEmpty() ? null<a name="line.890"></a>
+<span class="sourceLineNo">891</span>          : snapshotAtCreation.last();<a name="line.891"></a>
+<span class="sourceLineNo">892</span>      Cell higherCell = getHighest(first, second);<a name="line.892"></a>
+<span class="sourceLineNo">893</span>      if (higherCell == null) {<a name="line.893"></a>
+<span class="sourceLineNo">894</span>        return false;<a name="line.894"></a>
+<span class="sourceLineNo">895</span>      }<a name="line.895"></a>
+<span class="sourceLineNo">896</span>      Cell firstCellOnLastRow = CellUtil.createFirstOnRow(higherCell);<a name="line.896"></a>
+<span class="sourceLineNo">897</span>      if (seek(firstCellOnLastRow)) {<a name="line.897"></a>
+<span class="sourceLineNo">898</span>        return true;<a name="line.898"></a>
+<span class="sourceLineNo">899</span>      } else {<a name="line.899"></a>
+<span class="sourceLineNo">900</span>        return seekToPreviousRow(higherCell);<a name="line.900"></a>
+<span class="sourceLineNo">901</span>      }<a name="line.901"></a>
+<span class="sourceLineNo">902</span><a name="line.902"></a>
+<span class="sourceLineNo">903</span>    }<a name="line.903"></a>
+<span class="sourceLineNo">904</span>  }<a name="line.904"></a>
+<span class="sourceLineNo">905</span><a name="line.905"></a>
+<span class="sourceLineNo">906</span>  public final static long FIXED_OVERHEAD = ClassSize.align(ClassSize.OBJECT<a name="line.906"></a>
+<span class="sourceLineNo">907</span>      + (9 * ClassSize.REFERENCE) + (3 * Bytes.SIZEOF_LONG) + Bytes.SIZEOF_BOOLEAN);<a name="line.907"></a>
+<span class="sourceLineNo">908</span><a name="line.908"></a>
+<span class="sourceLineNo">909</span>  public final static long DEEP_OVERHEAD = ClassSize.align(FIXED_OVERHEAD +<a name="line.909"></a>
+<span class="sourceLineNo">910</span>      ClassSize.ATOMIC_LONG + (2 * ClassSize.TIMERANGE_TRACKER) +<a name="line.910"></a>
+<span class="sourceLineNo">911</span>      (2 * ClassSize.CELL_SKIPLIST_SET) + (2 * ClassSize.CONCURRENT_SKIPLISTMAP));<a name="line.911"></a>
+<span class="sourceLineNo">912</span><a name="line.912"></a>
+<span class="sourceLineNo">913</span>  /*<a name="line.913"></a>
+<span class="sourceLineNo">914</span>   * Calculate how the MemStore size has changed.  Includes overhead of the<a name="line.914"></a>
+<span class="sourceLineNo">915</span>   * backing Map.<a name="line.915"></a>
+<span class="sourceLineNo">916</span>   * @param cell<a name="line.916"></a>
+<span class="sourceLineNo">917</span>   * @param notpresent True if the cell was NOT present in the set.<a name="line.917"></a>
+<span class="sourceLineNo">918</span>   * @return Size<a name="line.918"></a>
+<span class="sourceLineNo">919</span>   */<a name="line.919"></a>
+<span class="sourceLineNo">920</span>  static long heapSizeChange(final Cell cell, final boolean notpresent) {<a name="line.920"></a>
+<span class="sourceLineNo">921</span>    return notpresent ? ClassSize.align(ClassSize.CONCURRENT_SKIPLISTMAP_ENTRY<a name="line.921"></a>
+<span class="sourceLineNo">922</span>        + CellUtil.estimatedHeapSizeOf(cell)) : 0;<a name="line.922"></a>
+<span class="sourceLineNo">923</span>  }<a name="line.923"></a>
+<span class="sourceLineNo">924</span><a name="line.924"></a>
+<span class="sourceLineNo">925</span>  private long keySize() {<a name="line.925"></a>
+<span class="sourceLineNo">926</span>    return heapSize() - DEEP_OVERHEAD;<a name="line.926"></a>
+<span class="sourceLineNo">927</span>  }<a name="line.927"></a>
+<span class="sourceLineNo">928</span><a name="line.928"></a>
+<span class="sourceLineNo">929</span>  /**<a name="line.929"></a>
+<span class="sourceLineNo">930</span>   * Get the entire heap usage for this MemStore not including keys in the<a name="line.930"></a>
+<span class="sourceLineNo">931</span>   * snapshot.<a name="line.931"></a>
+<span class="sourceLineNo">932</span>   */<a name="line.932"></a>
+<span class="sourceLineNo">933</span>  @Override<a name="line.933"></a>
+<span class="sourceLineNo">934</span>  public long heapSize() {<a name="line.934"></a>
+<span class="sourceLineNo">935</span>    return size.get();<a name="line.935"></a>
+<span class="sourceLineNo">936</span>  }<a name="line.936"></a>
+<span class="sourceLineNo">937</span><a name="line.937"></a>
+<span class="sourceLineNo">938</span>  @Override<a name="line.938"></a>
+<span class="sourceLineNo">939</span>  public long size() {<a name="line.939"></a>
+<span class="sourceLineNo">940</span>    return heapSize();<a name="line.940"></a>
+<span class="sourceLineNo">941</span>  }<a name="line.941"></a>
+<span class="sourceLineNo">942</span><a name="line.942"></a>
+<span class="sourceLineNo">943</span>  /**<a name="line.943"></a>
+<span class="sourceLineNo">944</span>   * Code to help figure if our approximation of object heap sizes is close<a name="line.944"></a>
+<span class="sourceLineNo">945</span>   * enough.  See hbase-900.  Fills memstores then waits so user can heap<a name="line.945"></a>
+<span class="sourceLineNo">946</span>   * dump and bring up resultant hprof in something like jprofiler which<a name="line.946"></a>
+<span class="sourceLineNo">947</span>   * allows you get 'deep size' on objects.<a name="line.947"></a>
+<span class="sourceLineNo">948</span>   * @param args main args<a name="line.948"></a>
+<span class="sourceLineNo">949</span>   */<a name="line.949"></a>
+<span class="sourceLineNo">950</span>  public static void main(String [] args) {<a name="line.950"></a>
+<span class="sourceLineNo">951</span>    RuntimeMXBean runtime = ManagementFactory.getRuntimeMXBean();<a name="line.951"></a>
+<span class="sourceLineNo">952</span>    LOG.info("vmName=" + runtime.getVmName() + ", vmVendor=" +<a name="line.952"></a>
+<span class="sourceLineNo">953</span>      runtime.getVmVendor() + ", vmVersion=" + runtime.getVmVersion());<a name="line.953"></a>
+<span class="sourceLineNo">954</span>    LOG.info("vmInputArguments=" + runtime.getInputArguments());<a name="line.954"></a>
+<span class="sourceLineNo">955</span>    DefaultMemStore memstore1 = new DefaultMemStore();<a name="line.955"></a>
+<span class="sourceLineNo">956</span>    // TODO: x32 vs x64<a name="line.956"></a>
+<span class="sourceLineNo">957</span>    long size = 0;<a name="line.957"></a>
+<span class="sourceLineNo">958</span>    final int count = 10000;<a name="line.958"></a>
+<span class="sourceLineNo">959</span>    byte [] fam = Bytes.toBytes("col");<a name="line.959"></a>
+<span class="sourceLineNo">960</span>    byte [] qf = Bytes.toBytes("umn");<a name="line.960"></a>
+<span class="sourceLineNo">961</span>    byte [] empty = new byte[0];<a name="line.961"></a>
+<span class="sourceLineNo">962</span>    for (int i = 0; i &lt; count; i++) {<a name="line.962"></a>
+<span class="sourceLineNo">963</span>      // Give each its own ts<a name="line.963"></a>
+<span class="sourceLineNo">964</span>      size += memstore1.add(new KeyValue(Bytes.toBytes(i), fam, qf, i, empty));<a name="line.964"></a>
+<span class="sourceLineNo">965</span>    }<a name="line.965"></a>
+<span class="sourceLineNo">966</span>    LOG.info("memstore1 estimated size=" + size);<a name="line.966"></a>
+<span class="sourceLineNo">967</span>    for (int i = 0; i &lt; count; i++) {<a name="line.967"></a>
+<span class="sourceLineNo">968</span>      size += memstore1.add(new KeyValue(Bytes.toBytes(i), fam, qf, i, empty));<a name="line.968"></a>
+<span class="sourceLineNo">969</span>    }<a name="line.969"></a>
+<span class="sourceLineNo">970</span>    LOG.info("memstore1 estimated size (2nd loading of same data)=" + size);<a name="line.970"></a>
+<span class="sourceLineNo">971</span>    // Make a variably sized memstore.<a name="line.971"></a>
+<span class="sourceLineNo">972</span>    DefaultMemStore memstore2 = new DefaultMemStore();<a name="line.972"></a>
+<span class="sourceLineNo">973</span>    for (int i = 0; i &lt; count; i++) {<a name="line.973"></a>
+<span class="sourceLineNo">974</span>      size += memstore2.add(new KeyValue(Bytes.toBytes(i), fam, qf, i, new byte[i]));<a name="line.974"></a>
+<span class="sourceLineNo">975</span>    }<a name="line.975"></a>
+<span class="sourceLineNo">976</span>    LOG.info("memstore2 estimated size=" + size);<a name="line.976"></a>
+<span class="sourceLineNo">977</span>    final int seconds = 30;<a name="line.977"></a>
+<span class="sourceLineNo">978</span>    LOG.info("Waiting " + seconds + " seconds while heap dump is taken");<a name="line.978"></a>
+<span class="sourceLineNo">979</span>    for (int i = 0; i &lt; seconds; i++) {<a name="line.979"></a>
+<span class="sourceLineNo">980</span>      // Thread.sleep(1000);<a name="line.980"></a>
+<span class="sourceLineNo">981</span>    }<a name="line.981"></a>
+<span class="sourceLineNo">982</span>    LOG.info("Exiting.");<a name="line.982"></a>
+<span class="sourceLineNo">983</span>  }<a name="line.983"></a>
+<span class="sourceLineNo">984</span><a name="line.984"></a>
+<span class="sourceLineNo">985</span>}<a name="line.985"></a>
 
 
 

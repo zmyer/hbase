@@ -2218,7 +2218,7 @@
 <a class="jxr_linenumber" name="2208" href="#2208">2208</a>               perm.getQualifier(), Action.ADMIN);
 <a class="jxr_linenumber" name="2209" href="#2209">2209</a>             <strong class="jxr_keyword">break</strong>;
 <a class="jxr_linenumber" name="2210" href="#2210">2210</a>           <strong class="jxr_keyword">case</strong> Namespace :
-<a class="jxr_linenumber" name="2211" href="#2211">2211</a>             requireGlobalPermission(<span class="jxr_string">"grant"</span>, Action.ADMIN, perm.getNamespace());
+<a class="jxr_linenumber" name="2211" href="#2211">2211</a>             requireNamespacePermission(<span class="jxr_string">"grant"</span>, perm.getNamespace(), Action.ADMIN);
 <a class="jxr_linenumber" name="2212" href="#2212">2212</a>            <strong class="jxr_keyword">break</strong>;
 <a class="jxr_linenumber" name="2213" href="#2213">2213</a>         }
 <a class="jxr_linenumber" name="2214" href="#2214">2214</a> 
@@ -2269,7 +2269,7 @@
 <a class="jxr_linenumber" name="2259" href="#2259">2259</a>               perm.getQualifier(), Action.ADMIN);
 <a class="jxr_linenumber" name="2260" href="#2260">2260</a>             <strong class="jxr_keyword">break</strong>;
 <a class="jxr_linenumber" name="2261" href="#2261">2261</a>           <strong class="jxr_keyword">case</strong> Namespace :
-<a class="jxr_linenumber" name="2262" href="#2262">2262</a>             requireGlobalPermission(<span class="jxr_string">"revoke"</span>, Action.ADMIN, perm.getNamespace());
+<a class="jxr_linenumber" name="2262" href="#2262">2262</a>             requireNamespacePermission(<span class="jxr_string">"revoke"</span>, perm.getNamespace(), Action.ADMIN);
 <a class="jxr_linenumber" name="2263" href="#2263">2263</a>             <strong class="jxr_keyword">break</strong>;
 <a class="jxr_linenumber" name="2264" href="#2264">2264</a>         }
 <a class="jxr_linenumber" name="2265" href="#2265">2265</a> 

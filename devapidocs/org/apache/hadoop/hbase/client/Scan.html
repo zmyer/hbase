@@ -2,7 +2,7 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Scan (Apache HBase 2.0.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
@@ -301,7 +301,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.client.<a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#consistency">consistency</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#filter">filter</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#targetReplicaId">targetReplicaId</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#colFamTimeRangeMap">colFamTimeRangeMap</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#consistency">consistency</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#filter">filter</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#targetReplicaId">targetReplicaId</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.client.OperationWithAttributes">
@@ -570,121 +570,130 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setColumnFamilyTimeRange(byte[],%20long,%20long)">setColumnFamilyTimeRange</a></strong>(byte[]&nbsp;cf,
+                                                long&nbsp;minStamp,
+                                                long&nbsp;maxStamp)</code>
+<div class="block">Get versions of columns only within the specified timestamp range,
+ [minStamp, maxStamp) on a per CF bases.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setConsistency(org.apache.hadoop.hbase.client.Consistency)">setConsistency</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a>&nbsp;consistency)</code>
 <div class="block">Sets the consistency level for this operation</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setFamilyMap(java.util.Map)">setFamilyMap</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;byte[]&gt;&gt;&nbsp;familyMap)</code>
 <div class="block">Setting the familyMap</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setFilter(org.apache.hadoop.hbase.filter.Filter)">setFilter</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;filter)</code>
 <div class="block">Apply the specified server-side filter when performing the Query.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setId(java.lang.String)">setId</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>
 <div class="block">This method allows you to set an identifier on an operation.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setIsolationLevel(org.apache.hadoop.hbase.client.IsolationLevel)">setIsolationLevel</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/IsolationLevel.html" title="enum in org.apache.hadoop.hbase.client">IsolationLevel</a>&nbsp;level)</code>
 <div class="block">Set the isolation level for this query.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setLoadColumnFamiliesOnDemand(boolean)">setLoadColumnFamiliesOnDemand</a></strong>(boolean&nbsp;value)</code>
 <div class="block">Set the value indicating whether loading CFs on demand should be allowed (cluster
  default is false).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxResultSize(long)">setMaxResultSize</a></strong>(long&nbsp;maxResultSize)</code>
 <div class="block">Set the maximum result size.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxResultsPerColumnFamily(int)">setMaxResultsPerColumnFamily</a></strong>(int&nbsp;limit)</code>
 <div class="block">Set the maximum number of values to return per row per Column Family</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxVersions()">setMaxVersions</a></strong>()</code>
 <div class="block">Get all available versions.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxVersions(int)">setMaxVersions</a></strong>(int&nbsp;maxVersions)</code>
 <div class="block">Get up to the specified number of versions of each column.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setRaw(boolean)">setRaw</a></strong>(boolean&nbsp;raw)</code>
 <div class="block">Enable/disable "raw" mode for this scan.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setReplicaId(int)">setReplicaId</a></strong>(int&nbsp;Id)</code>
 <div class="block">Specify region replica id where Query will fetch data from.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setReversed(boolean)">setReversed</a></strong>(boolean&nbsp;reversed)</code>
 <div class="block">Set whether this scan is a reversed one</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setRowOffsetPerColumnFamily(int)">setRowOffsetPerColumnFamily</a></strong>(int&nbsp;offset)</code>
 <div class="block">Set offset for the row per Column Family.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setRowPrefixFilter(byte[])">setRowPrefixFilter</a></strong>(byte[]&nbsp;rowPrefix)</code>
 <div class="block">Set a filter (using stopRow and startRow) so the result set only contains rows where the
  rowKey starts with the specified prefix.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setScanMetricsEnabled(boolean)">setScanMetricsEnabled</a></strong>(boolean&nbsp;enabled)</code>
 <div class="block">Enable collection of <a href="../../../../../org/apache/hadoop/hbase/client/metrics/ScanMetrics.html" title="class in org.apache.hadoop.hbase.client.metrics"><code>ScanMetrics</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setSmall(boolean)">setSmall</a></strong>(boolean&nbsp;small)</code>
 <div class="block">Set whether this scan is a small scan</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setStartRow(byte[])">setStartRow</a></strong>(byte[]&nbsp;startRow)</code>
 <div class="block">Set the start row of the scan.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setStopRow(byte[])">setStopRow</a></strong>(byte[]&nbsp;stopRow)</code>
 <div class="block">Set the stop row of the scan.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setTimeRange(long,%20long)">setTimeRange</a></strong>(long&nbsp;minStamp,
                         long&nbsp;maxStamp)</code>
@@ -692,13 +701,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title
  [minStamp, maxStamp).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setTimeStamp(long)">setTimeStamp</a></strong>(long&nbsp;timestamp)</code>
 <div class="block">Get versions of columns with the specified timestamp.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#toMap(int)">toMap</a></strong>(int&nbsp;maxCols)</code>
 <div class="block">Compile the details beyond the scope of getFingerprint (row, columns,
@@ -711,7 +720,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.client.<a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getACL()">getACL</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getAuthorizations()">getAuthorizations</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getConsistency()">getConsistency</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getIsolationLevel()">getIsolationLevel</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getReplicaId()">getReplicaId</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getACL()">getACL</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getAuthorizations()">getAuthorizations</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getColumnFamilyTimeRange()">getColumnFamilyTimeRange</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getConsistency()">getConsistency</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getIsolationLevel()">getIsolationLevel</a>, <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getReplicaId()">getReplicaId</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.client.OperationWithAttributes">
@@ -1079,7 +1088,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Scan</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.257">Scan</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.261">Scan</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)</pre>
 <div class="block">Builds a scan object with the same specs as get.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>get</code> - get to model scan after</dd></dl>
 </li>
@@ -1098,7 +1107,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>isGetScan</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.275">isGetScan</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.283">isGetScan</a>()</pre>
 </li>
 </ul>
 <a name="isStartRowAndEqualsStopRow()">
@@ -1107,7 +1116,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>isStartRowAndEqualsStopRow</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.279">isStartRowAndEqualsStopRow</a>()</pre>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.287">isStartRowAndEqualsStopRow</a>()</pre>
 </li>
 </ul>
 <a name="addFamily(byte[])">
@@ -1116,7 +1125,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>addFamily</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.290">addFamily</a>(byte[]&nbsp;family)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.298">addFamily</a>(byte[]&nbsp;family)</pre>
 <div class="block">Get all columns from the specified family.
  <p>
  Overrides previous calls to addColumn for this family.</div>
@@ -1130,7 +1139,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>addColumn</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.304">addColumn</a>(byte[]&nbsp;family,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.312">addColumn</a>(byte[]&nbsp;family,
              byte[]&nbsp;qualifier)</pre>
 <div class="block">Get the column from the specified family with the specified qualifier.
  <p>
@@ -1145,7 +1154,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setTimeRange</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.329">setTimeRange</a>(long&nbsp;minStamp,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.336">setTimeRange</a>(long&nbsp;minStamp,
                 long&nbsp;maxStamp)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Get versions of columns only within the specified timestamp range,
@@ -1155,7 +1164,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>minStamp</code> - minimum timestamp value, inclusive</dd><dd><code>maxStamp</code> - maximum timestamp value, exclusive</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if invalid time range</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxVersions()"><code>setMaxVersions()</code></a>, 
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxVersions()"><code>setMaxVersions()</code></a>, 
 <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxVersions(int)"><code>setMaxVersions(int)</code></a></dd></dl>
 </li>
 </ul>
@@ -1165,7 +1174,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setTimeStamp</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.345">setTimeStamp</a>(long&nbsp;timestamp)
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.351">setTimeStamp</a>(long&nbsp;timestamp)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Get versions of columns with the specified timestamp. Note, default maximum
  versions to return is 1.  If your time range spans more than one version
@@ -1178,13 +1187,35 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxVersions(int)"><code>setMaxVersions(int)</code></a></dd></dl>
 </li>
 </ul>
+<a name="setColumnFamilyTimeRange(byte[], long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setColumnFamilyTimeRange</h4>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.363">setColumnFamilyTimeRange</a>(byte[]&nbsp;cf,
+                            long&nbsp;minStamp,
+                            long&nbsp;maxStamp)</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setColumnFamilyTimeRange(byte[],%20long,%20long)">Query</a></code></strong></div>
+<div class="block">Get versions of columns only within the specified timestamp range,
+ [minStamp, maxStamp) on a per CF bases.  Note, default maximum versions to return is 1.  If
+ your time range spans more than one version and you want all versions
+ returned, up the number of versions beyond the default.
+ Column Family time ranges take precedence over the global time range.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setColumnFamilyTimeRange(byte[],%20long,%20long)">setColumnFamilyTimeRange</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>cf</code> - the column family for which you want to restrict</dd><dd><code>minStamp</code> - minimum timestamp value, inclusive</dd><dd><code>maxStamp</code> - maximum timestamp value, exclusive</dd>
+<dt><span class="strong">Returns:</span></dt><dd>this</dd></dl>
+</li>
+</ul>
 <a name="setStartRow(byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setStartRow</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.365">setStartRow</a>(byte[]&nbsp;startRow)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.375">setStartRow</a>(byte[]&nbsp;startRow)</pre>
 <div class="block">Set the start row of the scan.
  <p>
  If the specified row does not exist, the Scanner will start from the
@@ -1199,7 +1230,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setStopRow</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.381">setStopRow</a>(byte[]&nbsp;stopRow)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.391">setStopRow</a>(byte[]&nbsp;stopRow)</pre>
 <div class="block">Set the stop row of the scan.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>stopRow</code> - row to end at (exclusive)
  <p>
@@ -1217,7 +1248,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setRowPrefixFilter</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.397">setRowPrefixFilter</a>(byte[]&nbsp;rowPrefix)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.407">setRowPrefixFilter</a>(byte[]&nbsp;rowPrefix)</pre>
 <div class="block"><p>Set a filter (using stopRow and startRow) so the result set only contains rows where the
  rowKey starts with the specified prefix.</p>
  <p>This is a utility method that converts the desired rowPrefix into the appropriate values
@@ -1235,7 +1266,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>calculateTheClosestNextRowKeyForPrefix</h4>
-<pre>private&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.425">calculateTheClosestNextRowKeyForPrefix</a>(byte[]&nbsp;rowKeyPrefix)</pre>
+<pre>private&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.435">calculateTheClosestNextRowKeyForPrefix</a>(byte[]&nbsp;rowKeyPrefix)</pre>
 <div class="block"><p>When scanning for a prefix the scan should stop immediately after the the last row that
  has the specified prefix. This method calculates the closest next rowKey immediately following
  the given rowKeyPrefix.</p>
@@ -1258,7 +1289,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setMaxVersions</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.454">setMaxVersions</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.464">setMaxVersions</a>()</pre>
 <div class="block">Get all available versions.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this</dd></dl>
 </li>
@@ -1269,7 +1300,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setMaxVersions</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.464">setMaxVersions</a>(int&nbsp;maxVersions)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.474">setMaxVersions</a>(int&nbsp;maxVersions)</pre>
 <div class="block">Get up to the specified number of versions of each column.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>maxVersions</code> - maximum versions for each column</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this</dd></dl>
@@ -1281,7 +1312,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setBatch</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.473">setBatch</a>(int&nbsp;batch)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.483">setBatch</a>(int&nbsp;batch)</pre>
 <div class="block">Set the maximum number of values to return for each call to next()</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>batch</code> - the maximum number of values</dd></dl>
 </li>
@@ -1292,7 +1323,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setMaxResultsPerColumnFamily</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.487">setMaxResultsPerColumnFamily</a>(int&nbsp;limit)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.497">setMaxResultsPerColumnFamily</a>(int&nbsp;limit)</pre>
 <div class="block">Set the maximum number of values to return per row per Column Family</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>limit</code> - the maximum number of values returned / row / CF</dd></dl>
 </li>
@@ -1303,7 +1334,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setRowOffsetPerColumnFamily</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.496">setRowOffsetPerColumnFamily</a>(int&nbsp;offset)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.506">setRowOffsetPerColumnFamily</a>(int&nbsp;offset)</pre>
 <div class="block">Set offset for the row per Column Family.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>offset</code> - is the number of kvs that will be skipped.</dd></dl>
 </li>
@@ -1314,7 +1345,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setCaching</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.508">setCaching</a>(int&nbsp;caching)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.518">setCaching</a>(int&nbsp;caching)</pre>
 <div class="block">Set the number of rows for caching that will be passed to scanners.
  If not set, the Configuration setting <a href="../../../../../org/apache/hadoop/hbase/HConstants.html#HBASE_CLIENT_SCANNER_CACHING"><code>HConstants.HBASE_CLIENT_SCANNER_CACHING</code></a> will
  apply.
@@ -1328,7 +1359,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getMaxResultSize</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.516">getMaxResultSize</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.526">getMaxResultSize</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the maximum result size in bytes. See <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setMaxResultSize(long)"><code>setMaxResultSize(long)</code></a></dd></dl>
 </li>
 </ul>
@@ -1338,7 +1369,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setMaxResultSize</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.527">setMaxResultSize</a>(long&nbsp;maxResultSize)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.537">setMaxResultSize</a>(long&nbsp;maxResultSize)</pre>
 <div class="block">Set the maximum result size. The default is -1; this means that no specific
  maximum result size will be set for this scan, and the global configured
  value will be used instead. (Defaults to unlimited).</div>
@@ -1351,7 +1382,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setFilter</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.533">setFilter</a>(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;filter)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.543">setFilter</a>(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;filter)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setFilter(org.apache.hadoop.hbase.filter.Filter)">Query</a></code></strong></div>
 <div class="block">Apply the specified server-side filter when performing the Query.
  Only <a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html#filterKeyValue(org.apache.hadoop.hbase.Cell)"><code>Filter.filterKeyValue(Cell)</code></a> is called AFTER all tests
@@ -1369,7 +1400,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setFamilyMap</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.543">setFamilyMap</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;byte[]&gt;&gt;&nbsp;familyMap)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.553">setFamilyMap</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;byte[]&gt;&gt;&nbsp;familyMap)</pre>
 <div class="block">Setting the familyMap</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>familyMap</code> - map of family to qualifier</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this</dd></dl>
@@ -1381,7 +1412,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getFamilyMap</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;byte[]&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.552">getFamilyMap</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;byte[]&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.562">getFamilyMap</a>()</pre>
 <div class="block">Getting the familyMap</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>familyMap</dd></dl>
 </li>
@@ -1392,7 +1423,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>numFamilies</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.559">numFamilies</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.569">numFamilies</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the number of families in familyMap</dd></dl>
 </li>
 </ul>
@@ -1402,7 +1433,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>hasFamilies</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.569">hasFamilies</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.579">hasFamilies</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if familyMap is non empty, false otherwise</dd></dl>
 </li>
 </ul>
@@ -1412,7 +1443,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getFamilies</h4>
-<pre>public&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.576">getFamilies</a>()</pre>
+<pre>public&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.586">getFamilies</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the keys of the familyMap</dd></dl>
 </li>
 </ul>
@@ -1422,7 +1453,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getStartRow</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.586">getStartRow</a>()</pre>
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.596">getStartRow</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the startrow</dd></dl>
 </li>
 </ul>
@@ -1432,7 +1463,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getStopRow</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.593">getStopRow</a>()</pre>
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.603">getStopRow</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the stoprow</dd></dl>
 </li>
 </ul>
@@ -1442,7 +1473,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getMaxVersions</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.600">getMaxVersions</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.610">getMaxVersions</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the max number of versions to fetch</dd></dl>
 </li>
 </ul>
@@ -1452,7 +1483,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getBatch</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.607">getBatch</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.617">getBatch</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>maximum number of values to return for a single call to next()</dd></dl>
 </li>
 </ul>
@@ -1462,7 +1493,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getMaxResultsPerColumnFamily</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.614">getMaxResultsPerColumnFamily</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.624">getMaxResultsPerColumnFamily</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>maximum number of values to return per row per CF</dd></dl>
 </li>
 </ul>
@@ -1472,7 +1503,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getRowOffsetPerColumnFamily</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.623">getRowOffsetPerColumnFamily</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.633">getRowOffsetPerColumnFamily</a>()</pre>
 <div class="block">Method for retrieving the scan's offset per row per column
  family (#kvs to be skipped)</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>row offset</dd></dl>
@@ -1484,7 +1515,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getCaching</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.630">getCaching</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.640">getCaching</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>caching the number of rows fetched when calling next on a scanner</dd></dl>
 </li>
 </ul>
@@ -1494,7 +1525,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getTimeRange</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.637">getTimeRange</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.647">getTimeRange</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>TimeRange</dd></dl>
 </li>
 </ul>
@@ -1504,7 +1535,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getFilter</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.645">getFilter</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.655">getFilter</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#getFilter()">getFilter</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></dd>
@@ -1517,7 +1548,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>hasFilter</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.652">hasFilter</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.662">hasFilter</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true is a filter has been specified, false if not</dd></dl>
 </li>
 </ul>
@@ -1527,7 +1558,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setCacheBlocks</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.666">setCacheBlocks</a>(boolean&nbsp;cacheBlocks)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.676">setCacheBlocks</a>(boolean&nbsp;cacheBlocks)</pre>
 <div class="block">Set whether blocks should be cached for this Scan.
  <p>
  This is true by default.  When true, default settings of the table and
@@ -1543,7 +1574,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getCacheBlocks</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.676">getCacheBlocks</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.686">getCacheBlocks</a>()</pre>
 <div class="block">Get whether blocks should be cached for this Scan.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if default caching should be used, false if blocks should not
  be cached</dd></dl>
@@ -1555,7 +1586,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setReversed</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.688">setReversed</a>(boolean&nbsp;reversed)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.698">setReversed</a>(boolean&nbsp;reversed)</pre>
 <div class="block">Set whether this scan is a reversed one
  <p>
  This is false by default which means forward(normal) scan.</div>
@@ -1569,7 +1600,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>isReversed</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.697">isReversed</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.707">isReversed</a>()</pre>
 <div class="block">Get whether this scan is a reversed one.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if backward scan, false if forward(default) scan</dd></dl>
 </li>
@@ -1580,7 +1611,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setAllowPartialResults</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.708">setAllowPartialResults</a>(boolean&nbsp;allowPartialResults)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.718">setAllowPartialResults</a>(boolean&nbsp;allowPartialResults)</pre>
 <div class="block">Setting whether the caller wants to see the partial results that may be returned from the
  server. By default this value is false and the complete results will be assembled client side
  before being delivered to the caller.</div>
@@ -1594,7 +1625,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getAllowPartialResults</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.718">getAllowPartialResults</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.728">getAllowPartialResults</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true when the constructor of this scan understands that the results they will see may
          only represent a partial portion of a row. The entire row would be retrieved by
          subsequent calls to <a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html#next()"><code>ResultScanner.next()</code></a></dd></dl>
@@ -1606,7 +1637,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setLoadColumnFamiliesOnDemand</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.738">setLoadColumnFamiliesOnDemand</a>(boolean&nbsp;value)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.748">setLoadColumnFamiliesOnDemand</a>(boolean&nbsp;value)</pre>
 <div class="block">Set the value indicating whether loading CFs on demand should be allowed (cluster
  default is false). On-demand CF loading doesn't load column families until necessary, e.g.
  if you filter on one column, the other column family data will be loaded only for the rows
@@ -1629,7 +1660,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getLoadColumnFamiliesOnDemandValue</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.746">getLoadColumnFamiliesOnDemandValue</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.756">getLoadColumnFamiliesOnDemandValue</a>()</pre>
 <div class="block">Get the raw loadColumnFamiliesOnDemand setting; if it's not set, can be null.</div>
 </li>
 </ul>
@@ -1639,7 +1670,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>doLoadColumnFamiliesOnDemand</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.753">doLoadColumnFamiliesOnDemand</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.763">doLoadColumnFamiliesOnDemand</a>()</pre>
 <div class="block">Get the logical value indicating whether on-demand CF loading should be allowed.</div>
 </li>
 </ul>
@@ -1649,7 +1680,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getFingerprint</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.765">getFingerprint</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.775">getFingerprint</a>()</pre>
 <div class="block">Compile the table and column family (i.e. schema) information
  into a String. Useful for parsing and aggregation by debugging,
  logging, and administration tools.</div>
@@ -1665,7 +1696,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>toMap</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.789">toMap</a>(int&nbsp;maxCols)</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.799">toMap</a>(int&nbsp;maxCols)</pre>
 <div class="block">Compile the details beyond the scope of getFingerprint (row, columns,
  timestamps, etc.) into a Map along with the fingerprinted information.
  Useful for debugging, logging, and administration tools.</div>
@@ -1682,7 +1713,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setRaw</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.853">setRaw</a>(boolean&nbsp;raw)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.863">setRaw</a>(boolean&nbsp;raw)</pre>
 <div class="block">Enable/disable "raw" mode for this scan.
  If "raw" is enabled the scan will return all
  delete marker and deleted rows that have not
@@ -1699,7 +1730,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>isRaw</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.861">isRaw</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.871">isRaw</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>True if this Scan is in "raw" mode.</dd></dl>
 </li>
 </ul>
@@ -1709,7 +1740,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setSmall</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.888">setSmall</a>(boolean&nbsp;small)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.898">setSmall</a>(boolean&nbsp;small)</pre>
 <div class="block">Set whether this scan is a small scan
  <p>
  Small scan should use pread and big scan can use seek + read
@@ -1735,7 +1766,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>isSmall</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.897">isSmall</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.907">isSmall</a>()</pre>
 <div class="block">Get whether this scan is a small scan</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if small scan</dd></dl>
 </li>
@@ -1746,7 +1777,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setAttribute</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.902">setAttribute</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.912">setAttribute</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                 byte[]&nbsp;value)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Attributes.html#setAttribute(java.lang.String,%20byte[])">Attributes</a></code></strong></div>
 <div class="block">Sets an attribute.
@@ -1766,7 +1797,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setId</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.907">setId</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.917">setId</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/OperationWithAttributes.html#setId(java.lang.String)">OperationWithAttributes</a></code></strong></div>
 <div class="block">This method allows you to set an identifier on an operation. The original
  motivation for this was to allow the identifier to be used in slow query
@@ -1785,7 +1816,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setAuthorizations</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.912">setAuthorizations</a>(<a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html" title="class in org.apache.hadoop.hbase.security.visibility">Authorizations</a>&nbsp;authorizations)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.922">setAuthorizations</a>(<a href="../../../../../org/apache/hadoop/hbase/security/visibility/Authorizations.html" title="class in org.apache.hadoop.hbase.security.visibility">Authorizations</a>&nbsp;authorizations)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setAuthorizations(org.apache.hadoop.hbase.security.visibility.Authorizations)">Query</a></code></strong></div>
 <div class="block">Sets the authorizations to be used by this Query</div>
 <dl>
@@ -1800,7 +1831,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setACL</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.917">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&gt;&nbsp;perms)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.927">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&gt;&nbsp;perms)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setACL(java.util.Map)">setACL</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></code></dd>
@@ -1813,7 +1844,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setACL</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.922">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.932">setACL</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user,
           <a href="../../../../../org/apache/hadoop/hbase/security/access/Permission.html" title="class in org.apache.hadoop.hbase.security.access">Permission</a>&nbsp;perms)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
@@ -1827,7 +1858,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setConsistency</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.927">setConsistency</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a>&nbsp;consistency)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.937">setConsistency</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a>&nbsp;consistency)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setConsistency(org.apache.hadoop.hbase.client.Consistency)">Query</a></code></strong></div>
 <div class="block">Sets the consistency level for this operation</div>
 <dl>
@@ -1842,7 +1873,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setReplicaId</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.932">setReplicaId</a>(int&nbsp;Id)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.942">setReplicaId</a>(int&nbsp;Id)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setReplicaId(int)">Query</a></code></strong></div>
 <div class="block">Specify region replica id where Query will fetch data from. Use this together with
  <a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setConsistency(org.apache.hadoop.hbase.client.Consistency)"><code>Query.setConsistency(Consistency)</code></a> passing <a href="../../../../../org/apache/hadoop/hbase/client/Consistency.html#TIMELINE"><code>Consistency.TIMELINE</code></a> to read data from
@@ -1860,7 +1891,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setIsolationLevel</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.937">setIsolationLevel</a>(<a href="../../../../../org/apache/hadoop/hbase/client/IsolationLevel.html" title="enum in org.apache.hadoop.hbase.client">IsolationLevel</a>&nbsp;level)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.947">setIsolationLevel</a>(<a href="../../../../../org/apache/hadoop/hbase/client/IsolationLevel.html" title="enum in org.apache.hadoop.hbase.client">IsolationLevel</a>&nbsp;level)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/Query.html#setIsolationLevel(org.apache.hadoop.hbase.client.IsolationLevel)">Query</a></code></strong></div>
 <div class="block">Set the isolation level for this query. If the
  isolation level is set to READ_UNCOMMITTED, then
@@ -1882,7 +1913,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>setScanMetricsEnabled</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.945">setScanMetricsEnabled</a>(boolean&nbsp;enabled)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.955">setScanMetricsEnabled</a>(boolean&nbsp;enabled)</pre>
 <div class="block">Enable collection of <a href="../../../../../org/apache/hadoop/hbase/client/metrics/ScanMetrics.html" title="class in org.apache.hadoop.hbase.client.metrics"><code>ScanMetrics</code></a>. For advanced users.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>enabled</code> - Set to true to enable accumulating scan metrics</dd></dl>
 </li>
@@ -1893,7 +1924,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>isScanMetricsEnabled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.953">isScanMetricsEnabled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.963">isScanMetricsEnabled</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>True if collection of scan metrics is enabled. For advanced users.</dd></dl>
 </li>
 </ul>
@@ -1903,7 +1934,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>getScanMetrics</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/metrics/ScanMetrics.html" title="class in org.apache.hadoop.hbase.client.metrics">ScanMetrics</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.962">getScanMetrics</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/metrics/ScanMetrics.html" title="class in org.apache.hadoop.hbase.client.metrics">ScanMetrics</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.972">getScanMetrics</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>Metrics on this Scan, if metrics were enabled.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html#setScanMetricsEnabled(boolean)"><code>setScanMetricsEnabled(boolean)</code></a></dd></dl>
 </li>
 </ul>
@@ -1913,7 +1944,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockList">
 <li class="blockList">
 <h4>isAsyncPrefetch</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.968">isAsyncPrefetch</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.978">isAsyncPrefetch</a>()</pre>
 </li>
 </ul>
 <a name="setAsyncPrefetch(boolean)">
@@ -1922,7 +1953,7 @@ public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setAsyncPrefetch</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.972">setAsyncPrefetch</a>(boolean&nbsp;asyncPrefetch)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/Scan.html#line.982">setAsyncPrefetch</a>(boolean&nbsp;asyncPrefetch)</pre>
 </li>
 </ul>
 </li>

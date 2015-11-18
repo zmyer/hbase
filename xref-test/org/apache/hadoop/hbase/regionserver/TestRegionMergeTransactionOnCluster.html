@@ -491,15 +491,15 @@
 <a class="jxr_linenumber" name="481" href="#481">481</a> 
 <a class="jxr_linenumber" name="482" href="#482">482</a>     @Override
 <a class="jxr_linenumber" name="483" href="#483">483</a>     <strong class="jxr_keyword">protected</strong> RSRpcServices createRpcServices() <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="484" href="#484">484</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html">MyMasterRpcServices</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="484" href="#484">484</a>       <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransactionOnCluster.html">MyMasterRpcServices</a>(<strong class="jxr_keyword">this</strong>);
 <a class="jxr_linenumber" name="485" href="#485">485</a>     }
 <a class="jxr_linenumber" name="486" href="#486">486</a>   }
 <a class="jxr_linenumber" name="487" href="#487">487</a> 
-<a class="jxr_linenumber" name="488" href="#488">488</a>   <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html">MyMasterRpcServices</a> <strong class="jxr_keyword">extends</strong> MasterRpcServices {
+<a class="jxr_linenumber" name="488" href="#488">488</a>   <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransactionOnCluster.html">MyMasterRpcServices</a> <strong class="jxr_keyword">extends</strong> MasterRpcServices {
 <a class="jxr_linenumber" name="489" href="#489">489</a>     <strong class="jxr_keyword">static</strong> AtomicBoolean enabled = <strong class="jxr_keyword">new</strong> AtomicBoolean(false);
 <a class="jxr_linenumber" name="490" href="#490">490</a> 
 <a class="jxr_linenumber" name="491" href="#491">491</a>     <strong class="jxr_keyword">private</strong> HMaster myMaster;
-<a class="jxr_linenumber" name="492" href="#492">492</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html">MyMasterRpcServices</a>(HMaster master) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="492" href="#492">492</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransactionOnCluster.html">MyMasterRpcServices</a>(HMaster master) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="493" href="#493">493</a>       <strong class="jxr_keyword">super</strong>(master);
 <a class="jxr_linenumber" name="494" href="#494">494</a>       myMaster = master;
 <a class="jxr_linenumber" name="495" href="#495">495</a>     }
