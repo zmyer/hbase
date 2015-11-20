@@ -549,7 +549,7 @@
 <a class="jxr_linenumber" name="539" href="#539">539</a>         <a href="../../../../../org/apache/hadoop/hbase/thrift/CallQueue.html">CallQueue</a> callQueue =
 <a class="jxr_linenumber" name="540" href="#540">540</a>             <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/CallQueue.html">CallQueue</a>(<strong class="jxr_keyword">new</strong> LinkedBlockingQueue&lt;Call&gt;(), metrics);
 <a class="jxr_linenumber" name="541" href="#541">541</a>         ExecutorService executorService = createExecutor(
-<a class="jxr_linenumber" name="542" href="#542">542</a>             callQueue, serverArgs.getWorkerThreads());
+<a class="jxr_linenumber" name="542" href="#542">542</a>             callQueue, serverArgs.getMinWorkerThreads(), serverArgs.getMaxWorkerThreads());
 <a class="jxr_linenumber" name="543" href="#543">543</a>         serverArgs.executorService(executorService)
 <a class="jxr_linenumber" name="544" href="#544">544</a>                   .processor(processor)
 <a class="jxr_linenumber" name="545" href="#545">545</a>                   .transportFactory(transportFactory)
@@ -561,7 +561,7 @@
 <a class="jxr_linenumber" name="551" href="#551">551</a>         <a href="../../../../../org/apache/hadoop/hbase/thrift/CallQueue.html">CallQueue</a> callQueue =
 <a class="jxr_linenumber" name="552" href="#552">552</a>             <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/thrift/CallQueue.html">CallQueue</a>(<strong class="jxr_keyword">new</strong> LinkedBlockingQueue&lt;Call&gt;(), metrics);
 <a class="jxr_linenumber" name="553" href="#553">553</a>         ExecutorService executorService = createExecutor(
-<a class="jxr_linenumber" name="554" href="#554">554</a>             callQueue, serverArgs.getWorkerThreads());
+<a class="jxr_linenumber" name="554" href="#554">554</a>             callQueue, serverArgs.getWorkerThreads(), serverArgs.getWorkerThreads());
 <a class="jxr_linenumber" name="555" href="#555">555</a>         serverArgs.executorService(executorService)
 <a class="jxr_linenumber" name="556" href="#556">556</a>                   .processor(processor)
 <a class="jxr_linenumber" name="557" href="#557">557</a>                   .transportFactory(transportFactory)
@@ -607,11 +607,11 @@
 <a class="jxr_linenumber" name="597" href="#597">597</a>   }
 <a class="jxr_linenumber" name="598" href="#598">598</a> 
 <a class="jxr_linenumber" name="599" href="#599">599</a>   ExecutorService createExecutor(BlockingQueue&lt;Runnable&gt; callQueue,
-<a class="jxr_linenumber" name="600" href="#600">600</a>                                  <strong class="jxr_keyword">int</strong> workerThreads) {
+<a class="jxr_linenumber" name="600" href="#600">600</a>                                  <strong class="jxr_keyword">int</strong> minWorkers, <strong class="jxr_keyword">int</strong> maxWorkers) {
 <a class="jxr_linenumber" name="601" href="#601">601</a>     ThreadFactoryBuilder tfb = <strong class="jxr_keyword">new</strong> ThreadFactoryBuilder();
 <a class="jxr_linenumber" name="602" href="#602">602</a>     tfb.setDaemon(<strong class="jxr_keyword">true</strong>);
 <a class="jxr_linenumber" name="603" href="#603">603</a>     tfb.setNameFormat(<span class="jxr_string">"thrift-worker-%d"</span>);
-<a class="jxr_linenumber" name="604" href="#604">604</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ThreadPoolExecutor(workerThreads, workerThreads,
+<a class="jxr_linenumber" name="604" href="#604">604</a>     <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ThreadPoolExecutor(minWorkers, maxWorkers,
 <a class="jxr_linenumber" name="605" href="#605">605</a>             Long.MAX_VALUE, TimeUnit.SECONDS, callQueue, tfb.build());
 <a class="jxr_linenumber" name="606" href="#606">606</a>   }
 <a class="jxr_linenumber" name="607" href="#607">607</a> 

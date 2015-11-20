@@ -1375,45 +1375,50 @@
                                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
+<td class="colLast"><span class="strong">FIFOCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html#getExpiredStores(java.util.Collection,%20java.util.Collection)">getExpiredStores</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;files,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><span class="strong">CompactionRequest.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html#getFiles()">getFiles</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><span class="strong">StripeCompactionPolicy.StripeInformationProvider.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactionPolicy.StripeInformationProvider.html#getLevel0Files()">getLevel0Files</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><span class="strong">StripeCompactionPolicy.StripeInformationProvider.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactionPolicy.StripeInformationProvider.html#getStorefiles()">getStorefiles</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;com.google.common.collect.ImmutableList&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&gt;</code></td>
 <td class="colLast"><span class="strong">StripeCompactionPolicy.StripeInformationProvider.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactionPolicy.StripeInformationProvider.html#getStripes()">getStripes</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><span class="strong">CompactionContext.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionContext.html#preSelect(java.util.List)">preSelect</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>
 <div class="block">Called before coprocessor preCompactSelection and should filter the candidates
  for coprocessor; i.e.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><span class="strong">RatioBasedCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#preSelectCompactionForCoprocessor(java.util.Collection,%20java.util.List)">preSelectCompactionForCoprocessor</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
                                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><span class="strong">StripeCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactionPolicy.html#preSelectFilesForCoprocessor(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20java.util.List)">preSelectFilesForCoprocessor</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactionPolicy.StripeInformationProvider.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><span class="strong">RatioBasedCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#removeExcessFiles(java.util.ArrayList,%20boolean,%20boolean)">removeExcessFiles</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
                                   boolean&nbsp;isUserCompaction,
                                   boolean&nbsp;isMajorCompaction)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><span class="strong">StripeCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactionPolicy.html#selectSimpleCompaction(java.util.List,%20boolean,%20boolean)">selectSimpleCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs,
                                             boolean&nbsp;allFilesOnly,
@@ -1421,7 +1426,7 @@
 <div class="block">Selects the compaction of a single stripe using default policy.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><span class="strong">RatioBasedCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#skipLargeFiles(java.util.ArrayList,%20boolean)">skipLargeFiles</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
                             boolean&nbsp;mayUseOffpeak)</code>&nbsp;</td>
@@ -1502,6 +1507,16 @@
                                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
+<td class="colLast"><span class="strong">FIFOCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html#getExpiredStores(java.util.Collection,%20java.util.Collection)">getExpiredStores</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;files,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
+<td class="colLast"><span class="strong">FIFOCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html#getExpiredStores(java.util.Collection,%20java.util.Collection)">getExpiredStores</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;files,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.FileDetails.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">Compactor.FileDetails</a></code></td>
 <td class="colLast"><span class="strong">Compactor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#getFileDetails(java.util.Collection,%20boolean)">getFileDetails</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact,
                             boolean&nbsp;allFiles)</code>
@@ -1528,11 +1543,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private boolean</code></td>
-<td class="colLast"><span class="strong">ExploringCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ExploringCompactionPolicy.html#isBetterSelection(java.util.List,%20long,%20java.util.List,%20long,%20boolean)">isBetterSelection</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;bestSelection,
-                                  long&nbsp;bestSize,
-                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;selection,
-                                  long&nbsp;size,
-                                  boolean&nbsp;mightBeStuck)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">FIFOCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html#hasExpiredStores(java.util.Collection)">hasExpiredStores</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;files)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private boolean</code></td>
@@ -1543,16 +1554,28 @@
                                   boolean&nbsp;mightBeStuck)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">RatioBasedCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#isMajorCompaction(java.util.Collection)">isMajorCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)</code>&nbsp;</td>
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><span class="strong">ExploringCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ExploringCompactionPolicy.html#isBetterSelection(java.util.List,%20long,%20java.util.List,%20long,%20boolean)">isBetterSelection</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;bestSelection,
+                                  long&nbsp;bestSize,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;selection,
+                                  long&nbsp;size,
+                                  boolean&nbsp;mightBeStuck)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">StripeCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactionPolicy.html#isMajorCompaction(java.util.Collection)">isMajorCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">RatioBasedCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#isMajorCompaction(java.util.Collection)">isMajorCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">StripeCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactionPolicy.html#isMajorCompaction(java.util.Collection)">isMajorCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>abstract boolean</code></td>
 <td class="colLast"><span class="strong">CompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionPolicy.html#isMajorCompaction(java.util.Collection)">isMajorCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">FIFOCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html#isMajorCompaction(java.util.Collection)">isMajorCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesToCompact)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -1562,6 +1585,16 @@
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RatioBasedCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#needsCompaction(java.util.Collection,%20java.util.List)">needsCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;storeFiles,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">FIFOCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html#needsCompaction(java.util.Collection,%20java.util.List)">needsCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;storeFiles,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">FIFOCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html#needsCompaction(java.util.Collection,%20java.util.List)">needsCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;storeFiles,
                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -1617,6 +1650,22 @@
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionRequest</a></code></td>
 <td class="colLast"><span class="strong">RatioBasedCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html#selectCompaction(java.util.Collection,%20java.util.List,%20boolean,%20boolean,%20boolean)">selectCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidateFiles,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting,
+                                boolean&nbsp;isUserCompaction,
+                                boolean&nbsp;mayUseOffPeak,
+                                boolean&nbsp;forceMajor)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionRequest</a></code></td>
+<td class="colLast"><span class="strong">FIFOCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html#selectCompaction(java.util.Collection,%20java.util.List,%20boolean,%20boolean,%20boolean)">selectCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidateFiles,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting,
+                                boolean&nbsp;isUserCompaction,
+                                boolean&nbsp;mayUseOffPeak,
+                                boolean&nbsp;forceMajor)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionRequest</a></code></td>
+<td class="colLast"><span class="strong">FIFOCompactionPolicy.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html#selectCompaction(java.util.Collection,%20java.util.List,%20boolean,%20boolean,%20boolean)">selectCompaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidateFiles,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting,
                                 boolean&nbsp;isUserCompaction,
                                 boolean&nbsp;mayUseOffPeak,

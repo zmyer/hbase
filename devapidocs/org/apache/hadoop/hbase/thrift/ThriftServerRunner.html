@@ -330,8 +330,9 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#createExecutor(java.util.concurrent.BlockingQueue,%20int)">createExecutor</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&gt;&nbsp;callQueue,
-                            int&nbsp;workerThreads)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#createExecutor(java.util.concurrent.BlockingQueue,%20int,%20int)">createExecutor</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&gt;&nbsp;callQueue,
+                            int&nbsp;minWorkers,
+                            int&nbsp;maxWorkers)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a></code></td>
@@ -780,14 +781,15 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
-<a name="createExecutor(java.util.concurrent.BlockingQueue, int)">
+<a name="createExecutor(java.util.concurrent.BlockingQueue, int, int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createExecutor</h4>
 <pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#line.599">createExecutor</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&gt;&nbsp;callQueue,
-                             int&nbsp;workerThreads)</pre>
+                             int&nbsp;minWorkers,
+                             int&nbsp;maxWorkers)</pre>
 </li>
 </ul>
 <a name="getBindAddress(org.apache.hadoop.conf.Configuration)">

@@ -241,7 +241,7 @@
 <a class="jxr_linenumber" name="231" href="#231">231</a>             <strong class="jxr_keyword">new</strong> byte[]{0, 1, 2}, <em class="jxr_comment">// fuzzy row</em>
 <a class="jxr_linenumber" name="232" href="#232">232</a>             <strong class="jxr_keyword">new</strong> byte[]{0, -1, -1}, <em class="jxr_comment">// mask</em>
 <a class="jxr_linenumber" name="233" href="#233">233</a>             <strong class="jxr_keyword">new</strong> byte[]{1, 2, 1, 0, 1}, <em class="jxr_comment">// current</em>
-<a class="jxr_linenumber" name="234" href="#234">234</a>             <strong class="jxr_keyword">new</strong> byte[]{2, 1, 2, 0, 0}); <em class="jxr_comment">// expected next</em>
+<a class="jxr_linenumber" name="234" href="#234">234</a>             <strong class="jxr_keyword">new</strong> byte[]{2, 1, 2}); <em class="jxr_comment">// expected next</em>
 <a class="jxr_linenumber" name="235" href="#235">235</a> 
 <a class="jxr_linenumber" name="236" href="#236">236</a>     assertNext(false,
 <a class="jxr_linenumber" name="237" href="#237">237</a>             <strong class="jxr_keyword">new</strong> byte[]{0, 1, 2}, <em class="jxr_comment">// fuzzy row</em>
@@ -253,13 +253,13 @@
 <a class="jxr_linenumber" name="243" href="#243">243</a>             <strong class="jxr_keyword">new</strong> byte[]{0, 1, 0, 2, 0}, <em class="jxr_comment">// fuzzy row</em>
 <a class="jxr_linenumber" name="244" href="#244">244</a>             <strong class="jxr_keyword">new</strong> byte[]{0, -1, 0, -1, 0}, <em class="jxr_comment">// mask</em>
 <a class="jxr_linenumber" name="245" href="#245">245</a>             <strong class="jxr_keyword">new</strong> byte[]{1, 0, 2, 0, 1}, <em class="jxr_comment">// current</em>
-<a class="jxr_linenumber" name="246" href="#246">246</a>             <strong class="jxr_keyword">new</strong> byte[]{1, 1, 0, 2, 0}); <em class="jxr_comment">// expected next</em>
+<a class="jxr_linenumber" name="246" href="#246">246</a>             <strong class="jxr_keyword">new</strong> byte[]{1, 1, 0, 2}); <em class="jxr_comment">// expected next</em>
 <a class="jxr_linenumber" name="247" href="#247">247</a> 
 <a class="jxr_linenumber" name="248" href="#248">248</a>     assertNext(false,
 <a class="jxr_linenumber" name="249" href="#249">249</a>             <strong class="jxr_keyword">new</strong> byte[]{1, 0, 1},
 <a class="jxr_linenumber" name="250" href="#250">250</a>             <strong class="jxr_keyword">new</strong> byte[]{-1, 0, -1},
 <a class="jxr_linenumber" name="251" href="#251">251</a>             <strong class="jxr_keyword">new</strong> byte[]{1, (byte) 128, 2, 0, 1},
-<a class="jxr_linenumber" name="252" href="#252">252</a>             <strong class="jxr_keyword">new</strong> byte[]{1, (byte) 129, 1, 0, 0});
+<a class="jxr_linenumber" name="252" href="#252">252</a>             <strong class="jxr_keyword">new</strong> byte[]{1, (byte) 129, 1});
 <a class="jxr_linenumber" name="253" href="#253">253</a> 
 <a class="jxr_linenumber" name="254" href="#254">254</a>     assertNext(false,
 <a class="jxr_linenumber" name="255" href="#255">255</a>             <strong class="jxr_keyword">new</strong> byte[]{0, 1, 0, 1},
@@ -325,7 +325,7 @@
 <a class="jxr_linenumber" name="315" href="#315">315</a>             <strong class="jxr_keyword">new</strong> byte[]{1, 1, 0, 0},
 <a class="jxr_linenumber" name="316" href="#316">316</a>             <strong class="jxr_keyword">new</strong> byte[]{-1, -1, 0, 0},
 <a class="jxr_linenumber" name="317" href="#317">317</a>             <strong class="jxr_keyword">new</strong> byte[]{0, 1, 3, 2},
-<a class="jxr_linenumber" name="318" href="#318">318</a>             <strong class="jxr_keyword">new</strong> byte[]{1, 1, 0, 0});
+<a class="jxr_linenumber" name="318" href="#318">318</a>             <strong class="jxr_keyword">new</strong> byte[]{1, 1});
 <a class="jxr_linenumber" name="319" href="#319">319</a> 
 <a class="jxr_linenumber" name="320" href="#320">320</a>     <em class="jxr_comment">// No next for this one</em>
 <a class="jxr_linenumber" name="321" href="#321">321</a>     Assert.assertNull(FuzzyRowFilter.getNextForFuzzyRule(

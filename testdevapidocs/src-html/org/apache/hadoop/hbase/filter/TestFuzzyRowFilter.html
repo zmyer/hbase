@@ -239,7 +239,7 @@
 <span class="sourceLineNo">231</span>            new byte[]{0, 1, 2}, // fuzzy row<a name="line.231"></a>
 <span class="sourceLineNo">232</span>            new byte[]{0, -1, -1}, // mask<a name="line.232"></a>
 <span class="sourceLineNo">233</span>            new byte[]{1, 2, 1, 0, 1}, // current<a name="line.233"></a>
-<span class="sourceLineNo">234</span>            new byte[]{2, 1, 2, 0, 0}); // expected next<a name="line.234"></a>
+<span class="sourceLineNo">234</span>            new byte[]{2, 1, 2}); // expected next<a name="line.234"></a>
 <span class="sourceLineNo">235</span><a name="line.235"></a>
 <span class="sourceLineNo">236</span>    assertNext(false,<a name="line.236"></a>
 <span class="sourceLineNo">237</span>            new byte[]{0, 1, 2}, // fuzzy row<a name="line.237"></a>
@@ -251,13 +251,13 @@
 <span class="sourceLineNo">243</span>            new byte[]{0, 1, 0, 2, 0}, // fuzzy row<a name="line.243"></a>
 <span class="sourceLineNo">244</span>            new byte[]{0, -1, 0, -1, 0}, // mask<a name="line.244"></a>
 <span class="sourceLineNo">245</span>            new byte[]{1, 0, 2, 0, 1}, // current<a name="line.245"></a>
-<span class="sourceLineNo">246</span>            new byte[]{1, 1, 0, 2, 0}); // expected next<a name="line.246"></a>
+<span class="sourceLineNo">246</span>            new byte[]{1, 1, 0, 2}); // expected next<a name="line.246"></a>
 <span class="sourceLineNo">247</span><a name="line.247"></a>
 <span class="sourceLineNo">248</span>    assertNext(false,<a name="line.248"></a>
 <span class="sourceLineNo">249</span>            new byte[]{1, 0, 1},<a name="line.249"></a>
 <span class="sourceLineNo">250</span>            new byte[]{-1, 0, -1},<a name="line.250"></a>
 <span class="sourceLineNo">251</span>            new byte[]{1, (byte) 128, 2, 0, 1},<a name="line.251"></a>
-<span class="sourceLineNo">252</span>            new byte[]{1, (byte) 129, 1, 0, 0});<a name="line.252"></a>
+<span class="sourceLineNo">252</span>            new byte[]{1, (byte) 129, 1});<a name="line.252"></a>
 <span class="sourceLineNo">253</span><a name="line.253"></a>
 <span class="sourceLineNo">254</span>    assertNext(false,<a name="line.254"></a>
 <span class="sourceLineNo">255</span>            new byte[]{0, 1, 0, 1},<a name="line.255"></a>
@@ -323,7 +323,7 @@
 <span class="sourceLineNo">315</span>            new byte[]{1, 1, 0, 0},<a name="line.315"></a>
 <span class="sourceLineNo">316</span>            new byte[]{-1, -1, 0, 0},<a name="line.316"></a>
 <span class="sourceLineNo">317</span>            new byte[]{0, 1, 3, 2},<a name="line.317"></a>
-<span class="sourceLineNo">318</span>            new byte[]{1, 1, 0, 0});<a name="line.318"></a>
+<span class="sourceLineNo">318</span>            new byte[]{1, 1});<a name="line.318"></a>
 <span class="sourceLineNo">319</span><a name="line.319"></a>
 <span class="sourceLineNo">320</span>    // No next for this one<a name="line.320"></a>
 <span class="sourceLineNo">321</span>    Assert.assertNull(FuzzyRowFilter.getNextForFuzzyRule(<a name="line.321"></a>

@@ -1745,21 +1745,26 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#checkCompression(org.apache.hadoop.hbase.HTableDescriptor)">checkCompression</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#checkCompactionPolicy(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HTableDescriptor)">checkCompactionPolicy</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                          <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#checkCompression(org.apache.hadoop.hbase.HTableDescriptor)">checkCompression</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#checkEncryption(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HTableDescriptor)">checkEncryption</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                               <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#createTable(org.apache.hadoop.hbase.HTableDescriptor,%20byte[][],%20long,%20long)">createTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor,
                       byte[][]&nbsp;splitKeys,
                       long&nbsp;nonceGroup,
                       long&nbsp;nonce)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><span class="strong">MasterServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html#createTable(org.apache.hadoop.hbase.HTableDescriptor,%20byte[][],%20long,%20long)">createTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                       byte[][]&nbsp;splitKeys,
@@ -1768,14 +1773,14 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <div class="block">Create a table using the given table definition.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#modifyTable(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HTableDescriptor,%20long,%20long)">modifyTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                       <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;descriptor,
                       long&nbsp;nonceGroup,
                       long&nbsp;nonce)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><span class="strong">MasterServices.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterServices.html#modifyTable(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HTableDescriptor,%20long,%20long)">modifyTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                       <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;descriptor,
@@ -1784,84 +1789,84 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <div class="block">Modify the descriptor of an existing table</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postCloneSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">postCloneSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
                                   <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postCreateTable(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.HRegionInfo[])">postCreateTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
                               <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>[]&nbsp;regions)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postCreateTableHandler(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.HRegionInfo[])">postCreateTableHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
                                             <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>[]&nbsp;regions)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postModifyTable(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HTableDescriptor)">postModifyTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                               <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postModifyTableHandler(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HTableDescriptor)">postModifyTableHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                             <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postRestoreSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">postRestoreSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
                                       <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">postSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
                         <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preCloneSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">preCloneSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
                                 <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preCreateTable(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.HRegionInfo[])">preCreateTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
                             <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>[]&nbsp;regions)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preCreateTableHandler(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.HRegionInfo[])">preCreateTableHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
                                           <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>[]&nbsp;regions)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preModifyTable(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HTableDescriptor)">preModifyTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                             <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preModifyTableHandler(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HTableDescriptor)">preModifyTableHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                           <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preRestoreSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">preRestoreSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
                                     <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">preSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
                       <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/HMaster.html#sanityCheckTableDescriptor(org.apache.hadoop.hbase.HTableDescriptor)">sanityCheckTableDescriptor</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>
 <div class="block">Checks whether the table conforms to some sane limits, and configured
  values (compression, etc) work.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><span class="strong">MasterFileSystem.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterFileSystem.html#setInfoFamilyCachingForMeta(org.apache.hadoop.hbase.HTableDescriptor,%20boolean)">setInfoFamilyCachingForMeta</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;metaDescriptor,
                                                       boolean&nbsp;b)</code>

@@ -352,106 +352,108 @@
 <span class="sourceLineNo">344</span>    Configuration conf = new Configuration(TEST_UTIL.getConfiguration());<a name="line.344"></a>
 <span class="sourceLineNo">345</span>    conf.setBoolean(ExportSnapshot.CONF_TEST_FAILURE, true);<a name="line.345"></a>
 <span class="sourceLineNo">346</span>    conf.setBoolean(ExportSnapshot.CONF_TEST_RETRY, retry);<a name="line.346"></a>
-<span class="sourceLineNo">347</span><a name="line.347"></a>
-<span class="sourceLineNo">348</span>    // Export Snapshot<a name="line.348"></a>
-<span class="sourceLineNo">349</span>    Path sourceDir = TEST_UTIL.getHBaseCluster().getMaster().getMasterFileSystem().getRootDir();<a name="line.349"></a>
-<span class="sourceLineNo">350</span>    int res = ExportSnapshot.innerMain(conf, new String[] {<a name="line.350"></a>
-<span class="sourceLineNo">351</span>      "-snapshot", Bytes.toString(snapshotName),<a name="line.351"></a>
-<span class="sourceLineNo">352</span>      "-copy-from", sourceDir.toString(),<a name="line.352"></a>
-<span class="sourceLineNo">353</span>      "-copy-to", copyDir.toString()<a name="line.353"></a>
-<span class="sourceLineNo">354</span>    });<a name="line.354"></a>
-<span class="sourceLineNo">355</span>    return res;<a name="line.355"></a>
-<span class="sourceLineNo">356</span>  }<a name="line.356"></a>
-<span class="sourceLineNo">357</span><a name="line.357"></a>
-<span class="sourceLineNo">358</span>  /*<a name="line.358"></a>
-<span class="sourceLineNo">359</span>   * verify if the snapshot folder on file-system 1 match the one on file-system 2<a name="line.359"></a>
-<span class="sourceLineNo">360</span>   */<a name="line.360"></a>
-<span class="sourceLineNo">361</span>  private void verifySnapshotDir(final FileSystem fs1, final Path root1,<a name="line.361"></a>
-<span class="sourceLineNo">362</span>      final FileSystem fs2, final Path root2) throws IOException {<a name="line.362"></a>
-<span class="sourceLineNo">363</span>    assertEquals(listFiles(fs1, root1, root1), listFiles(fs2, root2, root2));<a name="line.363"></a>
-<span class="sourceLineNo">364</span>  }<a name="line.364"></a>
-<span class="sourceLineNo">365</span><a name="line.365"></a>
-<span class="sourceLineNo">366</span>  protected boolean bypassRegion(HRegionInfo regionInfo) {<a name="line.366"></a>
-<span class="sourceLineNo">367</span>    return false;<a name="line.367"></a>
-<span class="sourceLineNo">368</span>  }<a name="line.368"></a>
-<span class="sourceLineNo">369</span><a name="line.369"></a>
-<span class="sourceLineNo">370</span>  /*<a name="line.370"></a>
-<span class="sourceLineNo">371</span>   * Verify if the files exists<a name="line.371"></a>
-<span class="sourceLineNo">372</span>   */<a name="line.372"></a>
-<span class="sourceLineNo">373</span>  private Set&lt;String&gt; verifySnapshot(final FileSystem fs, final Path rootDir,<a name="line.373"></a>
-<span class="sourceLineNo">374</span>      final TableName tableName, final String snapshotName) throws IOException {<a name="line.374"></a>
-<span class="sourceLineNo">375</span>    final Path exportedSnapshot = new Path(rootDir,<a name="line.375"></a>
-<span class="sourceLineNo">376</span>      new Path(HConstants.SNAPSHOT_DIR_NAME, snapshotName));<a name="line.376"></a>
-<span class="sourceLineNo">377</span>    final Set&lt;String&gt; snapshotFiles = new HashSet&lt;String&gt;();<a name="line.377"></a>
-<span class="sourceLineNo">378</span>    final Path exportedArchive = new Path(rootDir, HConstants.HFILE_ARCHIVE_DIRECTORY);<a name="line.378"></a>
-<span class="sourceLineNo">379</span>    SnapshotReferenceUtil.visitReferencedFiles(TEST_UTIL.getConfiguration(), fs, exportedSnapshot,<a name="line.379"></a>
-<span class="sourceLineNo">380</span>          new SnapshotReferenceUtil.SnapshotVisitor() {<a name="line.380"></a>
-<span class="sourceLineNo">381</span>        @Override<a name="line.381"></a>
-<span class="sourceLineNo">382</span>        public void storeFile(final HRegionInfo regionInfo, final String family,<a name="line.382"></a>
-<span class="sourceLineNo">383</span>            final SnapshotRegionManifest.StoreFile storeFile) throws IOException {<a name="line.383"></a>
-<span class="sourceLineNo">384</span>          if (bypassRegion(regionInfo))<a name="line.384"></a>
-<span class="sourceLineNo">385</span>            return;<a name="line.385"></a>
-<span class="sourceLineNo">386</span><a name="line.386"></a>
-<span class="sourceLineNo">387</span>          String hfile = storeFile.getName();<a name="line.387"></a>
-<span class="sourceLineNo">388</span>          snapshotFiles.add(hfile);<a name="line.388"></a>
-<span class="sourceLineNo">389</span>          if (storeFile.hasReference()) {<a name="line.389"></a>
-<span class="sourceLineNo">390</span>            // Nothing to do here, we have already the reference embedded<a name="line.390"></a>
-<span class="sourceLineNo">391</span>          } else {<a name="line.391"></a>
-<span class="sourceLineNo">392</span>            verifyNonEmptyFile(new Path(exportedArchive,<a name="line.392"></a>
-<span class="sourceLineNo">393</span>              new Path(FSUtils.getTableDir(new Path("./"), tableName),<a name="line.393"></a>
-<span class="sourceLineNo">394</span>                  new Path(regionInfo.getEncodedName(), new Path(family, hfile)))));<a name="line.394"></a>
-<span class="sourceLineNo">395</span>          }<a name="line.395"></a>
-<span class="sourceLineNo">396</span>        }<a name="line.396"></a>
-<span class="sourceLineNo">397</span><a name="line.397"></a>
-<span class="sourceLineNo">398</span>        private void verifyNonEmptyFile(final Path path) throws IOException {<a name="line.398"></a>
-<span class="sourceLineNo">399</span>          assertTrue(path + " should exists", fs.exists(path));<a name="line.399"></a>
-<span class="sourceLineNo">400</span>          assertTrue(path + " should not be empty", fs.getFileStatus(path).getLen() &gt; 0);<a name="line.400"></a>
-<span class="sourceLineNo">401</span>        }<a name="line.401"></a>
-<span class="sourceLineNo">402</span>    });<a name="line.402"></a>
-<span class="sourceLineNo">403</span><a name="line.403"></a>
-<span class="sourceLineNo">404</span>    // Verify Snapshot description<a name="line.404"></a>
-<span class="sourceLineNo">405</span>    SnapshotDescription desc = SnapshotDescriptionUtils.readSnapshotInfo(fs, exportedSnapshot);<a name="line.405"></a>
-<span class="sourceLineNo">406</span>    assertTrue(desc.getName().equals(snapshotName));<a name="line.406"></a>
-<span class="sourceLineNo">407</span>    assertTrue(desc.getTable().equals(tableName.getNameAsString()));<a name="line.407"></a>
-<span class="sourceLineNo">408</span>    return snapshotFiles;<a name="line.408"></a>
-<span class="sourceLineNo">409</span>  }<a name="line.409"></a>
-<span class="sourceLineNo">410</span><a name="line.410"></a>
-<span class="sourceLineNo">411</span>  private Set&lt;String&gt; listFiles(final FileSystem fs, final Path root, final Path dir)<a name="line.411"></a>
-<span class="sourceLineNo">412</span>      throws IOException {<a name="line.412"></a>
-<span class="sourceLineNo">413</span>    Set&lt;String&gt; files = new HashSet&lt;String&gt;();<a name="line.413"></a>
-<span class="sourceLineNo">414</span>    int rootPrefix = root.toString().length();<a name="line.414"></a>
-<span class="sourceLineNo">415</span>    FileStatus[] list = FSUtils.listStatus(fs, dir);<a name="line.415"></a>
-<span class="sourceLineNo">416</span>    if (list != null) {<a name="line.416"></a>
-<span class="sourceLineNo">417</span>      for (FileStatus fstat: list) {<a name="line.417"></a>
-<span class="sourceLineNo">418</span>        LOG.debug(fstat.getPath());<a name="line.418"></a>
-<span class="sourceLineNo">419</span>        if (fstat.isDirectory()) {<a name="line.419"></a>
-<span class="sourceLineNo">420</span>          files.addAll(listFiles(fs, root, fstat.getPath()));<a name="line.420"></a>
-<span class="sourceLineNo">421</span>        } else {<a name="line.421"></a>
-<span class="sourceLineNo">422</span>          files.add(fstat.getPath().toString().substring(rootPrefix));<a name="line.422"></a>
-<span class="sourceLineNo">423</span>        }<a name="line.423"></a>
-<span class="sourceLineNo">424</span>      }<a name="line.424"></a>
-<span class="sourceLineNo">425</span>    }<a name="line.425"></a>
-<span class="sourceLineNo">426</span>    return files;<a name="line.426"></a>
-<span class="sourceLineNo">427</span>  }<a name="line.427"></a>
-<span class="sourceLineNo">428</span><a name="line.428"></a>
-<span class="sourceLineNo">429</span>  private Path getHdfsDestinationDir() {<a name="line.429"></a>
-<span class="sourceLineNo">430</span>    Path rootDir = TEST_UTIL.getHBaseCluster().getMaster().getMasterFileSystem().getRootDir();<a name="line.430"></a>
-<span class="sourceLineNo">431</span>    Path path = new Path(new Path(rootDir, "export-test"), "export-" + System.currentTimeMillis());<a name="line.431"></a>
-<span class="sourceLineNo">432</span>    LOG.info("HDFS export destination path: " + path);<a name="line.432"></a>
-<span class="sourceLineNo">433</span>    return path;<a name="line.433"></a>
-<span class="sourceLineNo">434</span>  }<a name="line.434"></a>
-<span class="sourceLineNo">435</span><a name="line.435"></a>
-<span class="sourceLineNo">436</span>  private Path getLocalDestinationDir() {<a name="line.436"></a>
-<span class="sourceLineNo">437</span>    Path path = TEST_UTIL.getDataTestDir("local-export-" + System.currentTimeMillis());<a name="line.437"></a>
-<span class="sourceLineNo">438</span>    LOG.info("Local export destination path: " + path);<a name="line.438"></a>
-<span class="sourceLineNo">439</span>    return path;<a name="line.439"></a>
-<span class="sourceLineNo">440</span>  }<a name="line.440"></a>
-<span class="sourceLineNo">441</span><a name="line.441"></a>
-<span class="sourceLineNo">442</span>  private void removeExportDir(final Path path) throws IOException {<a name="line.442"></a>
-<span class="sourceLineNo">443</span>    FileSystem fs = FileSystem.get(path.toUri(), new Configuration());<a name="line.443"></a>
-<span class="sourceLineNo">444</span>    fs.delete(path, true);<a name="line.444"></a>
-<span class="sourceLineNo">445</span>  }<a name="line.445"></a>
-<span class="sourceLineNo">446</span>}<a name="line.446"></a>
+<span class="sourceLineNo">347</span>    if (!retry) {<a name="line.347"></a>
+<span class="sourceLineNo">348</span>      conf.setInt("mapreduce.map.maxattempts", 3);<a name="line.348"></a>
+<span class="sourceLineNo">349</span>    }<a name="line.349"></a>
+<span class="sourceLineNo">350</span>    // Export Snapshot<a name="line.350"></a>
+<span class="sourceLineNo">351</span>    Path sourceDir = TEST_UTIL.getHBaseCluster().getMaster().getMasterFileSystem().getRootDir();<a name="line.351"></a>
+<span class="sourceLineNo">352</span>    int res = ExportSnapshot.innerMain(conf, new String[] {<a name="line.352"></a>
+<span class="sourceLineNo">353</span>      "-snapshot", Bytes.toString(snapshotName),<a name="line.353"></a>
+<span class="sourceLineNo">354</span>      "-copy-from", sourceDir.toString(),<a name="line.354"></a>
+<span class="sourceLineNo">355</span>      "-copy-to", copyDir.toString()<a name="line.355"></a>
+<span class="sourceLineNo">356</span>    });<a name="line.356"></a>
+<span class="sourceLineNo">357</span>    return res;<a name="line.357"></a>
+<span class="sourceLineNo">358</span>  }<a name="line.358"></a>
+<span class="sourceLineNo">359</span><a name="line.359"></a>
+<span class="sourceLineNo">360</span>  /*<a name="line.360"></a>
+<span class="sourceLineNo">361</span>   * verify if the snapshot folder on file-system 1 match the one on file-system 2<a name="line.361"></a>
+<span class="sourceLineNo">362</span>   */<a name="line.362"></a>
+<span class="sourceLineNo">363</span>  private void verifySnapshotDir(final FileSystem fs1, final Path root1,<a name="line.363"></a>
+<span class="sourceLineNo">364</span>      final FileSystem fs2, final Path root2) throws IOException {<a name="line.364"></a>
+<span class="sourceLineNo">365</span>    assertEquals(listFiles(fs1, root1, root1), listFiles(fs2, root2, root2));<a name="line.365"></a>
+<span class="sourceLineNo">366</span>  }<a name="line.366"></a>
+<span class="sourceLineNo">367</span><a name="line.367"></a>
+<span class="sourceLineNo">368</span>  protected boolean bypassRegion(HRegionInfo regionInfo) {<a name="line.368"></a>
+<span class="sourceLineNo">369</span>    return false;<a name="line.369"></a>
+<span class="sourceLineNo">370</span>  }<a name="line.370"></a>
+<span class="sourceLineNo">371</span><a name="line.371"></a>
+<span class="sourceLineNo">372</span>  /*<a name="line.372"></a>
+<span class="sourceLineNo">373</span>   * Verify if the files exists<a name="line.373"></a>
+<span class="sourceLineNo">374</span>   */<a name="line.374"></a>
+<span class="sourceLineNo">375</span>  private Set&lt;String&gt; verifySnapshot(final FileSystem fs, final Path rootDir,<a name="line.375"></a>
+<span class="sourceLineNo">376</span>      final TableName tableName, final String snapshotName) throws IOException {<a name="line.376"></a>
+<span class="sourceLineNo">377</span>    final Path exportedSnapshot = new Path(rootDir,<a name="line.377"></a>
+<span class="sourceLineNo">378</span>      new Path(HConstants.SNAPSHOT_DIR_NAME, snapshotName));<a name="line.378"></a>
+<span class="sourceLineNo">379</span>    final Set&lt;String&gt; snapshotFiles = new HashSet&lt;String&gt;();<a name="line.379"></a>
+<span class="sourceLineNo">380</span>    final Path exportedArchive = new Path(rootDir, HConstants.HFILE_ARCHIVE_DIRECTORY);<a name="line.380"></a>
+<span class="sourceLineNo">381</span>    SnapshotReferenceUtil.visitReferencedFiles(TEST_UTIL.getConfiguration(), fs, exportedSnapshot,<a name="line.381"></a>
+<span class="sourceLineNo">382</span>          new SnapshotReferenceUtil.SnapshotVisitor() {<a name="line.382"></a>
+<span class="sourceLineNo">383</span>        @Override<a name="line.383"></a>
+<span class="sourceLineNo">384</span>        public void storeFile(final HRegionInfo regionInfo, final String family,<a name="line.384"></a>
+<span class="sourceLineNo">385</span>            final SnapshotRegionManifest.StoreFile storeFile) throws IOException {<a name="line.385"></a>
+<span class="sourceLineNo">386</span>          if (bypassRegion(regionInfo))<a name="line.386"></a>
+<span class="sourceLineNo">387</span>            return;<a name="line.387"></a>
+<span class="sourceLineNo">388</span><a name="line.388"></a>
+<span class="sourceLineNo">389</span>          String hfile = storeFile.getName();<a name="line.389"></a>
+<span class="sourceLineNo">390</span>          snapshotFiles.add(hfile);<a name="line.390"></a>
+<span class="sourceLineNo">391</span>          if (storeFile.hasReference()) {<a name="line.391"></a>
+<span class="sourceLineNo">392</span>            // Nothing to do here, we have already the reference embedded<a name="line.392"></a>
+<span class="sourceLineNo">393</span>          } else {<a name="line.393"></a>
+<span class="sourceLineNo">394</span>            verifyNonEmptyFile(new Path(exportedArchive,<a name="line.394"></a>
+<span class="sourceLineNo">395</span>              new Path(FSUtils.getTableDir(new Path("./"), tableName),<a name="line.395"></a>
+<span class="sourceLineNo">396</span>                  new Path(regionInfo.getEncodedName(), new Path(family, hfile)))));<a name="line.396"></a>
+<span class="sourceLineNo">397</span>          }<a name="line.397"></a>
+<span class="sourceLineNo">398</span>        }<a name="line.398"></a>
+<span class="sourceLineNo">399</span><a name="line.399"></a>
+<span class="sourceLineNo">400</span>        private void verifyNonEmptyFile(final Path path) throws IOException {<a name="line.400"></a>
+<span class="sourceLineNo">401</span>          assertTrue(path + " should exists", fs.exists(path));<a name="line.401"></a>
+<span class="sourceLineNo">402</span>          assertTrue(path + " should not be empty", fs.getFileStatus(path).getLen() &gt; 0);<a name="line.402"></a>
+<span class="sourceLineNo">403</span>        }<a name="line.403"></a>
+<span class="sourceLineNo">404</span>    });<a name="line.404"></a>
+<span class="sourceLineNo">405</span><a name="line.405"></a>
+<span class="sourceLineNo">406</span>    // Verify Snapshot description<a name="line.406"></a>
+<span class="sourceLineNo">407</span>    SnapshotDescription desc = SnapshotDescriptionUtils.readSnapshotInfo(fs, exportedSnapshot);<a name="line.407"></a>
+<span class="sourceLineNo">408</span>    assertTrue(desc.getName().equals(snapshotName));<a name="line.408"></a>
+<span class="sourceLineNo">409</span>    assertTrue(desc.getTable().equals(tableName.getNameAsString()));<a name="line.409"></a>
+<span class="sourceLineNo">410</span>    return snapshotFiles;<a name="line.410"></a>
+<span class="sourceLineNo">411</span>  }<a name="line.411"></a>
+<span class="sourceLineNo">412</span><a name="line.412"></a>
+<span class="sourceLineNo">413</span>  private Set&lt;String&gt; listFiles(final FileSystem fs, final Path root, final Path dir)<a name="line.413"></a>
+<span class="sourceLineNo">414</span>      throws IOException {<a name="line.414"></a>
+<span class="sourceLineNo">415</span>    Set&lt;String&gt; files = new HashSet&lt;String&gt;();<a name="line.415"></a>
+<span class="sourceLineNo">416</span>    int rootPrefix = root.toString().length();<a name="line.416"></a>
+<span class="sourceLineNo">417</span>    FileStatus[] list = FSUtils.listStatus(fs, dir);<a name="line.417"></a>
+<span class="sourceLineNo">418</span>    if (list != null) {<a name="line.418"></a>
+<span class="sourceLineNo">419</span>      for (FileStatus fstat: list) {<a name="line.419"></a>
+<span class="sourceLineNo">420</span>        LOG.debug(fstat.getPath());<a name="line.420"></a>
+<span class="sourceLineNo">421</span>        if (fstat.isDirectory()) {<a name="line.421"></a>
+<span class="sourceLineNo">422</span>          files.addAll(listFiles(fs, root, fstat.getPath()));<a name="line.422"></a>
+<span class="sourceLineNo">423</span>        } else {<a name="line.423"></a>
+<span class="sourceLineNo">424</span>          files.add(fstat.getPath().toString().substring(rootPrefix));<a name="line.424"></a>
+<span class="sourceLineNo">425</span>        }<a name="line.425"></a>
+<span class="sourceLineNo">426</span>      }<a name="line.426"></a>
+<span class="sourceLineNo">427</span>    }<a name="line.427"></a>
+<span class="sourceLineNo">428</span>    return files;<a name="line.428"></a>
+<span class="sourceLineNo">429</span>  }<a name="line.429"></a>
+<span class="sourceLineNo">430</span><a name="line.430"></a>
+<span class="sourceLineNo">431</span>  private Path getHdfsDestinationDir() {<a name="line.431"></a>
+<span class="sourceLineNo">432</span>    Path rootDir = TEST_UTIL.getHBaseCluster().getMaster().getMasterFileSystem().getRootDir();<a name="line.432"></a>
+<span class="sourceLineNo">433</span>    Path path = new Path(new Path(rootDir, "export-test"), "export-" + System.currentTimeMillis());<a name="line.433"></a>
+<span class="sourceLineNo">434</span>    LOG.info("HDFS export destination path: " + path);<a name="line.434"></a>
+<span class="sourceLineNo">435</span>    return path;<a name="line.435"></a>
+<span class="sourceLineNo">436</span>  }<a name="line.436"></a>
+<span class="sourceLineNo">437</span><a name="line.437"></a>
+<span class="sourceLineNo">438</span>  private Path getLocalDestinationDir() {<a name="line.438"></a>
+<span class="sourceLineNo">439</span>    Path path = TEST_UTIL.getDataTestDir("local-export-" + System.currentTimeMillis());<a name="line.439"></a>
+<span class="sourceLineNo">440</span>    LOG.info("Local export destination path: " + path);<a name="line.440"></a>
+<span class="sourceLineNo">441</span>    return path;<a name="line.441"></a>
+<span class="sourceLineNo">442</span>  }<a name="line.442"></a>
+<span class="sourceLineNo">443</span><a name="line.443"></a>
+<span class="sourceLineNo">444</span>  private void removeExportDir(final Path path) throws IOException {<a name="line.444"></a>
+<span class="sourceLineNo">445</span>    FileSystem fs = FileSystem.get(path.toUri(), new Configuration());<a name="line.445"></a>
+<span class="sourceLineNo">446</span>    fs.delete(path, true);<a name="line.446"></a>
+<span class="sourceLineNo">447</span>  }<a name="line.447"></a>
+<span class="sourceLineNo">448</span>}<a name="line.448"></a>
 
 
 
