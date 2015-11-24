@@ -137,215 +137,216 @@
 <a class="jxr_linenumber" name="127" href="#127">127</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(filterWrapper))));
 <a class="jxr_linenumber" name="128" href="#128">128</a>   }
 <a class="jxr_linenumber" name="129" href="#129">129</a> 
-<a class="jxr_linenumber" name="130" href="#130">130</a>   @Test
-<a class="jxr_linenumber" name="131" href="#131">131</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFirstKeyValueMatchingQualifiersFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="132" href="#132">132</a>     <em class="jxr_comment">// empty qualifiers set</em>
-<a class="jxr_linenumber" name="133" href="#133">133</a>     TreeSet&lt;byte []&gt; set = <strong class="jxr_keyword">new</strong> TreeSet&lt;byte []&gt;(Bytes.BYTES_COMPARATOR);
-<a class="jxr_linenumber" name="134" href="#134">134</a>     FirstKeyValueMatchingQualifiersFilter firstKeyValueMatchingQualifiersFilter =
-<a class="jxr_linenumber" name="135" href="#135">135</a>       <strong class="jxr_keyword">new</strong> FirstKeyValueMatchingQualifiersFilter(set);
-<a class="jxr_linenumber" name="136" href="#136">136</a>     assertTrue(firstKeyValueMatchingQualifiersFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="137" href="#137">137</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(firstKeyValueMatchingQualifiersFilter))));
-<a class="jxr_linenumber" name="138" href="#138">138</a> 
-<a class="jxr_linenumber" name="139" href="#139">139</a>     <em class="jxr_comment">// non-empty qualifiers set</em>
-<a class="jxr_linenumber" name="140" href="#140">140</a>     set.add(Bytes.toBytes(<span class="jxr_string">"col0"</span>));
-<a class="jxr_linenumber" name="141" href="#141">141</a>     set.add(Bytes.toBytes(<span class="jxr_string">"col1"</span>));
-<a class="jxr_linenumber" name="142" href="#142">142</a>     firstKeyValueMatchingQualifiersFilter =
-<a class="jxr_linenumber" name="143" href="#143">143</a>       <strong class="jxr_keyword">new</strong> FirstKeyValueMatchingQualifiersFilter(set);
-<a class="jxr_linenumber" name="144" href="#144">144</a>     assertTrue(firstKeyValueMatchingQualifiersFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="145" href="#145">145</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(firstKeyValueMatchingQualifiersFilter))));
-<a class="jxr_linenumber" name="146" href="#146">146</a>   }
-<a class="jxr_linenumber" name="147" href="#147">147</a> 
-<a class="jxr_linenumber" name="148" href="#148">148</a>   @Test
-<a class="jxr_linenumber" name="149" href="#149">149</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFirstKeyOnlyFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="150" href="#150">150</a>     FirstKeyOnlyFilter firstKeyOnlyFilter = <strong class="jxr_keyword">new</strong> FirstKeyOnlyFilter();
-<a class="jxr_linenumber" name="151" href="#151">151</a>     assertTrue(firstKeyOnlyFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="152" href="#152">152</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(firstKeyOnlyFilter))));
-<a class="jxr_linenumber" name="153" href="#153">153</a>   }
-<a class="jxr_linenumber" name="154" href="#154">154</a> 
-<a class="jxr_linenumber" name="155" href="#155">155</a>   @Test
-<a class="jxr_linenumber" name="156" href="#156">156</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFuzzyRowFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="157" href="#157">157</a>     LinkedList&lt;Pair&lt;byte[], byte[]&gt;&gt; fuzzyList = <strong class="jxr_keyword">new</strong> LinkedList&lt;Pair&lt;byte[], byte[]&gt;&gt;();
-<a class="jxr_linenumber" name="158" href="#158">158</a>     fuzzyList.add(<strong class="jxr_keyword">new</strong> Pair&lt;byte[], byte[]&gt;(Bytes.toBytes(<span class="jxr_string">"999"</span>),<strong class="jxr_keyword">new</strong> byte[] {0, 0, 1}));
-<a class="jxr_linenumber" name="159" href="#159">159</a>     fuzzyList.add(<strong class="jxr_keyword">new</strong> Pair&lt;byte[], byte[]&gt;(Bytes.toBytes(<span class="jxr_string">"abcd"</span>),<strong class="jxr_keyword">new</strong> byte[] {1, 0, 1, 1}));
-<a class="jxr_linenumber" name="160" href="#160">160</a>     FuzzyRowFilter fuzzyRowFilter = <strong class="jxr_keyword">new</strong> FuzzyRowFilter(fuzzyList);
-<a class="jxr_linenumber" name="161" href="#161">161</a>     assertTrue(fuzzyRowFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="162" href="#162">162</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(fuzzyRowFilter))));
-<a class="jxr_linenumber" name="163" href="#163">163</a>   }
-<a class="jxr_linenumber" name="164" href="#164">164</a> 
-<a class="jxr_linenumber" name="165" href="#165">165</a>   @Test
-<a class="jxr_linenumber" name="166" href="#166">166</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testInclusiveStopFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="167" href="#167">167</a>     <em class="jxr_comment">// InclusveStopFilter with null stopRowKey</em>
-<a class="jxr_linenumber" name="168" href="#168">168</a>     InclusiveStopFilter inclusiveStopFilter = <strong class="jxr_keyword">new</strong> InclusiveStopFilter(<strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="169" href="#169">169</a>     assertTrue(inclusiveStopFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="170" href="#170">170</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(inclusiveStopFilter))));
-<a class="jxr_linenumber" name="171" href="#171">171</a> 
-<a class="jxr_linenumber" name="172" href="#172">172</a>     <em class="jxr_comment">// InclusveStopFilter with non-null stopRowKey</em>
-<a class="jxr_linenumber" name="173" href="#173">173</a>     inclusiveStopFilter = <strong class="jxr_keyword">new</strong> InclusiveStopFilter(Bytes.toBytes(<span class="jxr_string">"inclusiveStopFilter"</span>));
-<a class="jxr_linenumber" name="174" href="#174">174</a>     assertTrue(inclusiveStopFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="175" href="#175">175</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(inclusiveStopFilter))));
-<a class="jxr_linenumber" name="176" href="#176">176</a>   }
-<a class="jxr_linenumber" name="177" href="#177">177</a> 
-<a class="jxr_linenumber" name="178" href="#178">178</a>   @Test
-<a class="jxr_linenumber" name="179" href="#179">179</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testKeyOnlyFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="180" href="#180">180</a>     <em class="jxr_comment">// KeyOnlyFilter with lenAsVal</em>
-<a class="jxr_linenumber" name="181" href="#181">181</a>     KeyOnlyFilter keyOnlyFilter = <strong class="jxr_keyword">new</strong> KeyOnlyFilter(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="182" href="#182">182</a>     assertTrue(keyOnlyFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="183" href="#183">183</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(keyOnlyFilter))));
-<a class="jxr_linenumber" name="184" href="#184">184</a> 
-<a class="jxr_linenumber" name="185" href="#185">185</a>     <em class="jxr_comment">// KeyOnlyFilter without lenAsVal</em>
-<a class="jxr_linenumber" name="186" href="#186">186</a>     keyOnlyFilter = <strong class="jxr_keyword">new</strong> KeyOnlyFilter();
-<a class="jxr_linenumber" name="187" href="#187">187</a>     assertTrue(keyOnlyFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="188" href="#188">188</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(keyOnlyFilter))));
-<a class="jxr_linenumber" name="189" href="#189">189</a>   }
-<a class="jxr_linenumber" name="190" href="#190">190</a> 
-<a class="jxr_linenumber" name="191" href="#191">191</a>   @Test
-<a class="jxr_linenumber" name="192" href="#192">192</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMultipleColumnPrefixFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="193" href="#193">193</a>     <em class="jxr_comment">// empty array</em>
-<a class="jxr_linenumber" name="194" href="#194">194</a>     byte [][] prefixes = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="195" href="#195">195</a>     MultipleColumnPrefixFilter multipleColumnPrefixFilter =
-<a class="jxr_linenumber" name="196" href="#196">196</a>       <strong class="jxr_keyword">new</strong> MultipleColumnPrefixFilter(prefixes);
-<a class="jxr_linenumber" name="197" href="#197">197</a>     assertTrue(multipleColumnPrefixFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="198" href="#198">198</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(multipleColumnPrefixFilter))));
-<a class="jxr_linenumber" name="199" href="#199">199</a> 
-<a class="jxr_linenumber" name="200" href="#200">200</a>     <em class="jxr_comment">// non-empty array</em>
-<a class="jxr_linenumber" name="201" href="#201">201</a>     prefixes = <strong class="jxr_keyword">new</strong> byte[2][];
-<a class="jxr_linenumber" name="202" href="#202">202</a>     prefixes[0] = Bytes.toBytes(<span class="jxr_string">"a"</span>);
-<a class="jxr_linenumber" name="203" href="#203">203</a>     prefixes[1] = Bytes.toBytes(<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="204" href="#204">204</a>     multipleColumnPrefixFilter = <strong class="jxr_keyword">new</strong> MultipleColumnPrefixFilter(prefixes);
-<a class="jxr_linenumber" name="205" href="#205">205</a>     assertTrue(multipleColumnPrefixFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="206" href="#206">206</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(multipleColumnPrefixFilter))));
-<a class="jxr_linenumber" name="207" href="#207">207</a>   }
-<a class="jxr_linenumber" name="208" href="#208">208</a> 
-<a class="jxr_linenumber" name="209" href="#209">209</a>   @Test
-<a class="jxr_linenumber" name="210" href="#210">210</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testPageFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="211" href="#211">211</a>     PageFilter pageFilter = <strong class="jxr_keyword">new</strong> PageFilter(6);
-<a class="jxr_linenumber" name="212" href="#212">212</a>     assertTrue(pageFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="213" href="#213">213</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(pageFilter))));
-<a class="jxr_linenumber" name="214" href="#214">214</a>   }
-<a class="jxr_linenumber" name="215" href="#215">215</a> 
-<a class="jxr_linenumber" name="216" href="#216">216</a>   @Test
-<a class="jxr_linenumber" name="217" href="#217">217</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testPrefixFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="218" href="#218">218</a>     <em class="jxr_comment">// null prefix</em>
-<a class="jxr_linenumber" name="219" href="#219">219</a>     PrefixFilter prefixFilter = <strong class="jxr_keyword">new</strong> PrefixFilter(<strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="220" href="#220">220</a>     assertTrue(prefixFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="221" href="#221">221</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(prefixFilter))));
-<a class="jxr_linenumber" name="222" href="#222">222</a> 
-<a class="jxr_linenumber" name="223" href="#223">223</a>     <em class="jxr_comment">// non-null prefix</em>
-<a class="jxr_linenumber" name="224" href="#224">224</a>     prefixFilter = <strong class="jxr_keyword">new</strong> PrefixFilter(Bytes.toBytes(<span class="jxr_string">"abc"</span>));
-<a class="jxr_linenumber" name="225" href="#225">225</a>     assertTrue(prefixFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="226" href="#226">226</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(prefixFilter))));
-<a class="jxr_linenumber" name="227" href="#227">227</a>   }
-<a class="jxr_linenumber" name="228" href="#228">228</a> 
-<a class="jxr_linenumber" name="229" href="#229">229</a>   @Test
-<a class="jxr_linenumber" name="230" href="#230">230</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testQualifierFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="231" href="#231">231</a>     QualifierFilter qualifierFilter = <strong class="jxr_keyword">new</strong> QualifierFilter(CompareFilter.CompareOp.EQUAL,
-<a class="jxr_linenumber" name="232" href="#232">232</a>       <strong class="jxr_keyword">new</strong> NullComparator());
-<a class="jxr_linenumber" name="233" href="#233">233</a>     assertTrue(qualifierFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="234" href="#234">234</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(qualifierFilter))));
-<a class="jxr_linenumber" name="235" href="#235">235</a>   }
-<a class="jxr_linenumber" name="236" href="#236">236</a> 
-<a class="jxr_linenumber" name="237" href="#237">237</a>   @Test
-<a class="jxr_linenumber" name="238" href="#238">238</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRandomRowFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="239" href="#239">239</a>     RandomRowFilter randomRowFilter = <strong class="jxr_keyword">new</strong> RandomRowFilter((<strong class="jxr_keyword">float</strong>)0.1);
-<a class="jxr_linenumber" name="240" href="#240">240</a>     assertTrue(randomRowFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="241" href="#241">241</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(randomRowFilter))));
-<a class="jxr_linenumber" name="242" href="#242">242</a>   }
-<a class="jxr_linenumber" name="243" href="#243">243</a> 
-<a class="jxr_linenumber" name="244" href="#244">244</a>   @Test
-<a class="jxr_linenumber" name="245" href="#245">245</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRowFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="246" href="#246">246</a>     RowFilter rowFilter = <strong class="jxr_keyword">new</strong> RowFilter(CompareFilter.CompareOp.EQUAL,
-<a class="jxr_linenumber" name="247" href="#247">247</a>       <strong class="jxr_keyword">new</strong> SubstringComparator(<span class="jxr_string">"testRowFilter"</span>));
-<a class="jxr_linenumber" name="248" href="#248">248</a>     assertTrue(rowFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="249" href="#249">249</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(rowFilter))));
-<a class="jxr_linenumber" name="250" href="#250">250</a>   }
-<a class="jxr_linenumber" name="251" href="#251">251</a> 
-<a class="jxr_linenumber" name="252" href="#252">252</a>   @Test
-<a class="jxr_linenumber" name="253" href="#253">253</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSingleColumnValueExcludeFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="254" href="#254">254</a>     <em class="jxr_comment">// null family/column SingleColumnValueExcludeFilter</em>
-<a class="jxr_linenumber" name="255" href="#255">255</a>     SingleColumnValueExcludeFilter singleColumnValueExcludeFilter =
-<a class="jxr_linenumber" name="256" href="#256">256</a>       <strong class="jxr_keyword">new</strong> SingleColumnValueExcludeFilter(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
-<a class="jxr_linenumber" name="257" href="#257">257</a>       CompareFilter.CompareOp.GREATER_OR_EQUAL, Bytes.toBytes(<span class="jxr_string">"value"</span>));
-<a class="jxr_linenumber" name="258" href="#258">258</a>     assertTrue(singleColumnValueExcludeFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="259" href="#259">259</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(singleColumnValueExcludeFilter))));
-<a class="jxr_linenumber" name="260" href="#260">260</a> 
-<a class="jxr_linenumber" name="261" href="#261">261</a>     <em class="jxr_comment">// non-null family/column SingleColumnValueFilter</em>
-<a class="jxr_linenumber" name="262" href="#262">262</a>     singleColumnValueExcludeFilter =
-<a class="jxr_linenumber" name="263" href="#263">263</a>       <strong class="jxr_keyword">new</strong> SingleColumnValueExcludeFilter(Bytes.toBytes(<span class="jxr_string">"fam"</span>), Bytes.toBytes(<span class="jxr_string">"qual"</span>),
-<a class="jxr_linenumber" name="264" href="#264">264</a>       CompareFilter.CompareOp.LESS_OR_EQUAL, <strong class="jxr_keyword">new</strong> NullComparator(), false, false);
-<a class="jxr_linenumber" name="265" href="#265">265</a>     assertTrue(singleColumnValueExcludeFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="266" href="#266">266</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(singleColumnValueExcludeFilter))));
-<a class="jxr_linenumber" name="267" href="#267">267</a>   }
-<a class="jxr_linenumber" name="268" href="#268">268</a> 
-<a class="jxr_linenumber" name="269" href="#269">269</a>   @Test
-<a class="jxr_linenumber" name="270" href="#270">270</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSingleColumnValueFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="271" href="#271">271</a>     <em class="jxr_comment">// null family/column SingleColumnValueFilter</em>
-<a class="jxr_linenumber" name="272" href="#272">272</a>     SingleColumnValueFilter singleColumnValueFilter =
-<a class="jxr_linenumber" name="273" href="#273">273</a>       <strong class="jxr_keyword">new</strong> SingleColumnValueFilter(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
-<a class="jxr_linenumber" name="274" href="#274">274</a>       CompareFilter.CompareOp.LESS, Bytes.toBytes(<span class="jxr_string">"value"</span>));
-<a class="jxr_linenumber" name="275" href="#275">275</a>     assertTrue(singleColumnValueFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="276" href="#276">276</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(singleColumnValueFilter))));
-<a class="jxr_linenumber" name="277" href="#277">277</a> 
-<a class="jxr_linenumber" name="278" href="#278">278</a>     <em class="jxr_comment">// non-null family/column SingleColumnValueFilter</em>
-<a class="jxr_linenumber" name="279" href="#279">279</a>     singleColumnValueFilter =
-<a class="jxr_linenumber" name="280" href="#280">280</a>       <strong class="jxr_keyword">new</strong> SingleColumnValueFilter(Bytes.toBytes(<span class="jxr_string">"family"</span>), Bytes.toBytes(<span class="jxr_string">"qualifier"</span>),
-<a class="jxr_linenumber" name="281" href="#281">281</a>       CompareFilter.CompareOp.NOT_EQUAL, <strong class="jxr_keyword">new</strong> NullComparator(), <strong class="jxr_keyword">true</strong>, <strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="282" href="#282">282</a>     assertTrue(singleColumnValueFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="283" href="#283">283</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(singleColumnValueFilter))));
-<a class="jxr_linenumber" name="284" href="#284">284</a>   }
-<a class="jxr_linenumber" name="285" href="#285">285</a> 
-<a class="jxr_linenumber" name="286" href="#286">286</a>   @Test
-<a class="jxr_linenumber" name="287" href="#287">287</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSkipFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="288" href="#288">288</a>     SkipFilter skipFilter = <strong class="jxr_keyword">new</strong> SkipFilter(<strong class="jxr_keyword">new</strong> PageFilter(6));
-<a class="jxr_linenumber" name="289" href="#289">289</a>     assertTrue(skipFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="290" href="#290">290</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(skipFilter))));
-<a class="jxr_linenumber" name="291" href="#291">291</a>   }
-<a class="jxr_linenumber" name="292" href="#292">292</a> 
-<a class="jxr_linenumber" name="293" href="#293">293</a>   @Test
-<a class="jxr_linenumber" name="294" href="#294">294</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testTimestampsFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="295" href="#295">295</a>     <em class="jxr_comment">// Empty timestamp list</em>
-<a class="jxr_linenumber" name="296" href="#296">296</a>     TimestampsFilter timestampsFilter = <strong class="jxr_keyword">new</strong> TimestampsFilter(<strong class="jxr_keyword">new</strong> LinkedList&lt;Long&gt;());
-<a class="jxr_linenumber" name="297" href="#297">297</a>     assertTrue(timestampsFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="298" href="#298">298</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(timestampsFilter))));
-<a class="jxr_linenumber" name="299" href="#299">299</a> 
-<a class="jxr_linenumber" name="300" href="#300">300</a>     <em class="jxr_comment">// Non-empty timestamp list</em>
-<a class="jxr_linenumber" name="301" href="#301">301</a>     LinkedList&lt;Long&gt; list = <strong class="jxr_keyword">new</strong> LinkedList&lt;Long&gt;();
-<a class="jxr_linenumber" name="302" href="#302">302</a>     list.add(<strong class="jxr_keyword">new</strong> Long(System.currentTimeMillis()));
+<a class="jxr_linenumber" name="130" href="#130">130</a>   @SuppressWarnings(<span class="jxr_string">"deprecation"</span>)
+<a class="jxr_linenumber" name="131" href="#131">131</a>   @Test
+<a class="jxr_linenumber" name="132" href="#132">132</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFirstKeyValueMatchingQualifiersFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="133" href="#133">133</a>     <em class="jxr_comment">// empty qualifiers set</em>
+<a class="jxr_linenumber" name="134" href="#134">134</a>     TreeSet&lt;byte []&gt; set = <strong class="jxr_keyword">new</strong> TreeSet&lt;byte []&gt;(Bytes.BYTES_COMPARATOR);
+<a class="jxr_linenumber" name="135" href="#135">135</a>     FirstKeyValueMatchingQualifiersFilter firstKeyValueMatchingQualifiersFilter =
+<a class="jxr_linenumber" name="136" href="#136">136</a>       <strong class="jxr_keyword">new</strong> FirstKeyValueMatchingQualifiersFilter(set);
+<a class="jxr_linenumber" name="137" href="#137">137</a>     assertTrue(firstKeyValueMatchingQualifiersFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="138" href="#138">138</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(firstKeyValueMatchingQualifiersFilter))));
+<a class="jxr_linenumber" name="139" href="#139">139</a> 
+<a class="jxr_linenumber" name="140" href="#140">140</a>     <em class="jxr_comment">// non-empty qualifiers set</em>
+<a class="jxr_linenumber" name="141" href="#141">141</a>     set.add(Bytes.toBytes(<span class="jxr_string">"col0"</span>));
+<a class="jxr_linenumber" name="142" href="#142">142</a>     set.add(Bytes.toBytes(<span class="jxr_string">"col1"</span>));
+<a class="jxr_linenumber" name="143" href="#143">143</a>     firstKeyValueMatchingQualifiersFilter =
+<a class="jxr_linenumber" name="144" href="#144">144</a>       <strong class="jxr_keyword">new</strong> FirstKeyValueMatchingQualifiersFilter(set);
+<a class="jxr_linenumber" name="145" href="#145">145</a>     assertTrue(firstKeyValueMatchingQualifiersFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="146" href="#146">146</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(firstKeyValueMatchingQualifiersFilter))));
+<a class="jxr_linenumber" name="147" href="#147">147</a>   }
+<a class="jxr_linenumber" name="148" href="#148">148</a> 
+<a class="jxr_linenumber" name="149" href="#149">149</a>   @Test
+<a class="jxr_linenumber" name="150" href="#150">150</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFirstKeyOnlyFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="151" href="#151">151</a>     FirstKeyOnlyFilter firstKeyOnlyFilter = <strong class="jxr_keyword">new</strong> FirstKeyOnlyFilter();
+<a class="jxr_linenumber" name="152" href="#152">152</a>     assertTrue(firstKeyOnlyFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="153" href="#153">153</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(firstKeyOnlyFilter))));
+<a class="jxr_linenumber" name="154" href="#154">154</a>   }
+<a class="jxr_linenumber" name="155" href="#155">155</a> 
+<a class="jxr_linenumber" name="156" href="#156">156</a>   @Test
+<a class="jxr_linenumber" name="157" href="#157">157</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFuzzyRowFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="158" href="#158">158</a>     LinkedList&lt;Pair&lt;byte[], byte[]&gt;&gt; fuzzyList = <strong class="jxr_keyword">new</strong> LinkedList&lt;Pair&lt;byte[], byte[]&gt;&gt;();
+<a class="jxr_linenumber" name="159" href="#159">159</a>     fuzzyList.add(<strong class="jxr_keyword">new</strong> Pair&lt;byte[], byte[]&gt;(Bytes.toBytes(<span class="jxr_string">"999"</span>),<strong class="jxr_keyword">new</strong> byte[] {0, 0, 1}));
+<a class="jxr_linenumber" name="160" href="#160">160</a>     fuzzyList.add(<strong class="jxr_keyword">new</strong> Pair&lt;byte[], byte[]&gt;(Bytes.toBytes(<span class="jxr_string">"abcd"</span>),<strong class="jxr_keyword">new</strong> byte[] {1, 0, 1, 1}));
+<a class="jxr_linenumber" name="161" href="#161">161</a>     FuzzyRowFilter fuzzyRowFilter = <strong class="jxr_keyword">new</strong> FuzzyRowFilter(fuzzyList);
+<a class="jxr_linenumber" name="162" href="#162">162</a>     assertTrue(fuzzyRowFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="163" href="#163">163</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(fuzzyRowFilter))));
+<a class="jxr_linenumber" name="164" href="#164">164</a>   }
+<a class="jxr_linenumber" name="165" href="#165">165</a> 
+<a class="jxr_linenumber" name="166" href="#166">166</a>   @Test
+<a class="jxr_linenumber" name="167" href="#167">167</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testInclusiveStopFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="168" href="#168">168</a>     <em class="jxr_comment">// InclusveStopFilter with null stopRowKey</em>
+<a class="jxr_linenumber" name="169" href="#169">169</a>     InclusiveStopFilter inclusiveStopFilter = <strong class="jxr_keyword">new</strong> InclusiveStopFilter(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="170" href="#170">170</a>     assertTrue(inclusiveStopFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="171" href="#171">171</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(inclusiveStopFilter))));
+<a class="jxr_linenumber" name="172" href="#172">172</a> 
+<a class="jxr_linenumber" name="173" href="#173">173</a>     <em class="jxr_comment">// InclusveStopFilter with non-null stopRowKey</em>
+<a class="jxr_linenumber" name="174" href="#174">174</a>     inclusiveStopFilter = <strong class="jxr_keyword">new</strong> InclusiveStopFilter(Bytes.toBytes(<span class="jxr_string">"inclusiveStopFilter"</span>));
+<a class="jxr_linenumber" name="175" href="#175">175</a>     assertTrue(inclusiveStopFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="176" href="#176">176</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(inclusiveStopFilter))));
+<a class="jxr_linenumber" name="177" href="#177">177</a>   }
+<a class="jxr_linenumber" name="178" href="#178">178</a> 
+<a class="jxr_linenumber" name="179" href="#179">179</a>   @Test
+<a class="jxr_linenumber" name="180" href="#180">180</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testKeyOnlyFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="181" href="#181">181</a>     <em class="jxr_comment">// KeyOnlyFilter with lenAsVal</em>
+<a class="jxr_linenumber" name="182" href="#182">182</a>     KeyOnlyFilter keyOnlyFilter = <strong class="jxr_keyword">new</strong> KeyOnlyFilter(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="183" href="#183">183</a>     assertTrue(keyOnlyFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="184" href="#184">184</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(keyOnlyFilter))));
+<a class="jxr_linenumber" name="185" href="#185">185</a> 
+<a class="jxr_linenumber" name="186" href="#186">186</a>     <em class="jxr_comment">// KeyOnlyFilter without lenAsVal</em>
+<a class="jxr_linenumber" name="187" href="#187">187</a>     keyOnlyFilter = <strong class="jxr_keyword">new</strong> KeyOnlyFilter();
+<a class="jxr_linenumber" name="188" href="#188">188</a>     assertTrue(keyOnlyFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="189" href="#189">189</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(keyOnlyFilter))));
+<a class="jxr_linenumber" name="190" href="#190">190</a>   }
+<a class="jxr_linenumber" name="191" href="#191">191</a> 
+<a class="jxr_linenumber" name="192" href="#192">192</a>   @Test
+<a class="jxr_linenumber" name="193" href="#193">193</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMultipleColumnPrefixFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="194" href="#194">194</a>     <em class="jxr_comment">// empty array</em>
+<a class="jxr_linenumber" name="195" href="#195">195</a>     byte [][] prefixes = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="196" href="#196">196</a>     MultipleColumnPrefixFilter multipleColumnPrefixFilter =
+<a class="jxr_linenumber" name="197" href="#197">197</a>       <strong class="jxr_keyword">new</strong> MultipleColumnPrefixFilter(prefixes);
+<a class="jxr_linenumber" name="198" href="#198">198</a>     assertTrue(multipleColumnPrefixFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="199" href="#199">199</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(multipleColumnPrefixFilter))));
+<a class="jxr_linenumber" name="200" href="#200">200</a> 
+<a class="jxr_linenumber" name="201" href="#201">201</a>     <em class="jxr_comment">// non-empty array</em>
+<a class="jxr_linenumber" name="202" href="#202">202</a>     prefixes = <strong class="jxr_keyword">new</strong> byte[2][];
+<a class="jxr_linenumber" name="203" href="#203">203</a>     prefixes[0] = Bytes.toBytes(<span class="jxr_string">"a"</span>);
+<a class="jxr_linenumber" name="204" href="#204">204</a>     prefixes[1] = Bytes.toBytes(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="205" href="#205">205</a>     multipleColumnPrefixFilter = <strong class="jxr_keyword">new</strong> MultipleColumnPrefixFilter(prefixes);
+<a class="jxr_linenumber" name="206" href="#206">206</a>     assertTrue(multipleColumnPrefixFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="207" href="#207">207</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(multipleColumnPrefixFilter))));
+<a class="jxr_linenumber" name="208" href="#208">208</a>   }
+<a class="jxr_linenumber" name="209" href="#209">209</a> 
+<a class="jxr_linenumber" name="210" href="#210">210</a>   @Test
+<a class="jxr_linenumber" name="211" href="#211">211</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testPageFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="212" href="#212">212</a>     PageFilter pageFilter = <strong class="jxr_keyword">new</strong> PageFilter(6);
+<a class="jxr_linenumber" name="213" href="#213">213</a>     assertTrue(pageFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="214" href="#214">214</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(pageFilter))));
+<a class="jxr_linenumber" name="215" href="#215">215</a>   }
+<a class="jxr_linenumber" name="216" href="#216">216</a> 
+<a class="jxr_linenumber" name="217" href="#217">217</a>   @Test
+<a class="jxr_linenumber" name="218" href="#218">218</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testPrefixFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="219" href="#219">219</a>     <em class="jxr_comment">// null prefix</em>
+<a class="jxr_linenumber" name="220" href="#220">220</a>     PrefixFilter prefixFilter = <strong class="jxr_keyword">new</strong> PrefixFilter(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="221" href="#221">221</a>     assertTrue(prefixFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="222" href="#222">222</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(prefixFilter))));
+<a class="jxr_linenumber" name="223" href="#223">223</a> 
+<a class="jxr_linenumber" name="224" href="#224">224</a>     <em class="jxr_comment">// non-null prefix</em>
+<a class="jxr_linenumber" name="225" href="#225">225</a>     prefixFilter = <strong class="jxr_keyword">new</strong> PrefixFilter(Bytes.toBytes(<span class="jxr_string">"abc"</span>));
+<a class="jxr_linenumber" name="226" href="#226">226</a>     assertTrue(prefixFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="227" href="#227">227</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(prefixFilter))));
+<a class="jxr_linenumber" name="228" href="#228">228</a>   }
+<a class="jxr_linenumber" name="229" href="#229">229</a> 
+<a class="jxr_linenumber" name="230" href="#230">230</a>   @Test
+<a class="jxr_linenumber" name="231" href="#231">231</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testQualifierFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="232" href="#232">232</a>     QualifierFilter qualifierFilter = <strong class="jxr_keyword">new</strong> QualifierFilter(CompareFilter.CompareOp.EQUAL,
+<a class="jxr_linenumber" name="233" href="#233">233</a>       <strong class="jxr_keyword">new</strong> NullComparator());
+<a class="jxr_linenumber" name="234" href="#234">234</a>     assertTrue(qualifierFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="235" href="#235">235</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(qualifierFilter))));
+<a class="jxr_linenumber" name="236" href="#236">236</a>   }
+<a class="jxr_linenumber" name="237" href="#237">237</a> 
+<a class="jxr_linenumber" name="238" href="#238">238</a>   @Test
+<a class="jxr_linenumber" name="239" href="#239">239</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRandomRowFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="240" href="#240">240</a>     RandomRowFilter randomRowFilter = <strong class="jxr_keyword">new</strong> RandomRowFilter((<strong class="jxr_keyword">float</strong>)0.1);
+<a class="jxr_linenumber" name="241" href="#241">241</a>     assertTrue(randomRowFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="242" href="#242">242</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(randomRowFilter))));
+<a class="jxr_linenumber" name="243" href="#243">243</a>   }
+<a class="jxr_linenumber" name="244" href="#244">244</a> 
+<a class="jxr_linenumber" name="245" href="#245">245</a>   @Test
+<a class="jxr_linenumber" name="246" href="#246">246</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRowFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="247" href="#247">247</a>     RowFilter rowFilter = <strong class="jxr_keyword">new</strong> RowFilter(CompareFilter.CompareOp.EQUAL,
+<a class="jxr_linenumber" name="248" href="#248">248</a>       <strong class="jxr_keyword">new</strong> SubstringComparator(<span class="jxr_string">"testRowFilter"</span>));
+<a class="jxr_linenumber" name="249" href="#249">249</a>     assertTrue(rowFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="250" href="#250">250</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(rowFilter))));
+<a class="jxr_linenumber" name="251" href="#251">251</a>   }
+<a class="jxr_linenumber" name="252" href="#252">252</a> 
+<a class="jxr_linenumber" name="253" href="#253">253</a>   @Test
+<a class="jxr_linenumber" name="254" href="#254">254</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSingleColumnValueExcludeFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="255" href="#255">255</a>     <em class="jxr_comment">// null family/column SingleColumnValueExcludeFilter</em>
+<a class="jxr_linenumber" name="256" href="#256">256</a>     SingleColumnValueExcludeFilter singleColumnValueExcludeFilter =
+<a class="jxr_linenumber" name="257" href="#257">257</a>       <strong class="jxr_keyword">new</strong> SingleColumnValueExcludeFilter(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="258" href="#258">258</a>       CompareFilter.CompareOp.GREATER_OR_EQUAL, Bytes.toBytes(<span class="jxr_string">"value"</span>));
+<a class="jxr_linenumber" name="259" href="#259">259</a>     assertTrue(singleColumnValueExcludeFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="260" href="#260">260</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(singleColumnValueExcludeFilter))));
+<a class="jxr_linenumber" name="261" href="#261">261</a> 
+<a class="jxr_linenumber" name="262" href="#262">262</a>     <em class="jxr_comment">// non-null family/column SingleColumnValueFilter</em>
+<a class="jxr_linenumber" name="263" href="#263">263</a>     singleColumnValueExcludeFilter =
+<a class="jxr_linenumber" name="264" href="#264">264</a>       <strong class="jxr_keyword">new</strong> SingleColumnValueExcludeFilter(Bytes.toBytes(<span class="jxr_string">"fam"</span>), Bytes.toBytes(<span class="jxr_string">"qual"</span>),
+<a class="jxr_linenumber" name="265" href="#265">265</a>       CompareFilter.CompareOp.LESS_OR_EQUAL, <strong class="jxr_keyword">new</strong> NullComparator(), false, false);
+<a class="jxr_linenumber" name="266" href="#266">266</a>     assertTrue(singleColumnValueExcludeFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="267" href="#267">267</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(singleColumnValueExcludeFilter))));
+<a class="jxr_linenumber" name="268" href="#268">268</a>   }
+<a class="jxr_linenumber" name="269" href="#269">269</a> 
+<a class="jxr_linenumber" name="270" href="#270">270</a>   @Test
+<a class="jxr_linenumber" name="271" href="#271">271</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSingleColumnValueFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="272" href="#272">272</a>     <em class="jxr_comment">// null family/column SingleColumnValueFilter</em>
+<a class="jxr_linenumber" name="273" href="#273">273</a>     SingleColumnValueFilter singleColumnValueFilter =
+<a class="jxr_linenumber" name="274" href="#274">274</a>       <strong class="jxr_keyword">new</strong> SingleColumnValueFilter(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="275" href="#275">275</a>       CompareFilter.CompareOp.LESS, Bytes.toBytes(<span class="jxr_string">"value"</span>));
+<a class="jxr_linenumber" name="276" href="#276">276</a>     assertTrue(singleColumnValueFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="277" href="#277">277</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(singleColumnValueFilter))));
+<a class="jxr_linenumber" name="278" href="#278">278</a> 
+<a class="jxr_linenumber" name="279" href="#279">279</a>     <em class="jxr_comment">// non-null family/column SingleColumnValueFilter</em>
+<a class="jxr_linenumber" name="280" href="#280">280</a>     singleColumnValueFilter =
+<a class="jxr_linenumber" name="281" href="#281">281</a>       <strong class="jxr_keyword">new</strong> SingleColumnValueFilter(Bytes.toBytes(<span class="jxr_string">"family"</span>), Bytes.toBytes(<span class="jxr_string">"qualifier"</span>),
+<a class="jxr_linenumber" name="282" href="#282">282</a>       CompareFilter.CompareOp.NOT_EQUAL, <strong class="jxr_keyword">new</strong> NullComparator(), <strong class="jxr_keyword">true</strong>, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="283" href="#283">283</a>     assertTrue(singleColumnValueFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="284" href="#284">284</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(singleColumnValueFilter))));
+<a class="jxr_linenumber" name="285" href="#285">285</a>   }
+<a class="jxr_linenumber" name="286" href="#286">286</a> 
+<a class="jxr_linenumber" name="287" href="#287">287</a>   @Test
+<a class="jxr_linenumber" name="288" href="#288">288</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSkipFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="289" href="#289">289</a>     SkipFilter skipFilter = <strong class="jxr_keyword">new</strong> SkipFilter(<strong class="jxr_keyword">new</strong> PageFilter(6));
+<a class="jxr_linenumber" name="290" href="#290">290</a>     assertTrue(skipFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="291" href="#291">291</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(skipFilter))));
+<a class="jxr_linenumber" name="292" href="#292">292</a>   }
+<a class="jxr_linenumber" name="293" href="#293">293</a> 
+<a class="jxr_linenumber" name="294" href="#294">294</a>   @Test
+<a class="jxr_linenumber" name="295" href="#295">295</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testTimestampsFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="296" href="#296">296</a>     <em class="jxr_comment">// Empty timestamp list</em>
+<a class="jxr_linenumber" name="297" href="#297">297</a>     TimestampsFilter timestampsFilter = <strong class="jxr_keyword">new</strong> TimestampsFilter(<strong class="jxr_keyword">new</strong> LinkedList&lt;Long&gt;());
+<a class="jxr_linenumber" name="298" href="#298">298</a>     assertTrue(timestampsFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="299" href="#299">299</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(timestampsFilter))));
+<a class="jxr_linenumber" name="300" href="#300">300</a> 
+<a class="jxr_linenumber" name="301" href="#301">301</a>     <em class="jxr_comment">// Non-empty timestamp list</em>
+<a class="jxr_linenumber" name="302" href="#302">302</a>     LinkedList&lt;Long&gt; list = <strong class="jxr_keyword">new</strong> LinkedList&lt;Long&gt;();
 <a class="jxr_linenumber" name="303" href="#303">303</a>     list.add(<strong class="jxr_keyword">new</strong> Long(System.currentTimeMillis()));
-<a class="jxr_linenumber" name="304" href="#304">304</a>     timestampsFilter = <strong class="jxr_keyword">new</strong> TimestampsFilter(list);
-<a class="jxr_linenumber" name="305" href="#305">305</a>     assertTrue(timestampsFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="306" href="#306">306</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(timestampsFilter))));
-<a class="jxr_linenumber" name="307" href="#307">307</a>   }
-<a class="jxr_linenumber" name="308" href="#308">308</a> 
-<a class="jxr_linenumber" name="309" href="#309">309</a>   @Test
-<a class="jxr_linenumber" name="310" href="#310">310</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testValueFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="311" href="#311">311</a>     ValueFilter valueFilter = <strong class="jxr_keyword">new</strong> ValueFilter(CompareFilter.CompareOp.NO_OP,
-<a class="jxr_linenumber" name="312" href="#312">312</a>       <strong class="jxr_keyword">new</strong> BinaryComparator(Bytes.toBytes(<span class="jxr_string">"testValueOne"</span>)));
-<a class="jxr_linenumber" name="313" href="#313">313</a>     assertTrue(valueFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="314" href="#314">314</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(valueFilter))));
-<a class="jxr_linenumber" name="315" href="#315">315</a>   }
-<a class="jxr_linenumber" name="316" href="#316">316</a> 
-<a class="jxr_linenumber" name="317" href="#317">317</a>   @Test
-<a class="jxr_linenumber" name="318" href="#318">318</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testWhileMatchFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="319" href="#319">319</a>     WhileMatchFilter whileMatchFilter =
-<a class="jxr_linenumber" name="320" href="#320">320</a>       <strong class="jxr_keyword">new</strong> WhileMatchFilter(
-<a class="jxr_linenumber" name="321" href="#321">321</a>         <strong class="jxr_keyword">new</strong> ColumnRangeFilter(Bytes.toBytes(<span class="jxr_string">"c"</span>), false, Bytes.toBytes(<span class="jxr_string">"d"</span>), <strong class="jxr_keyword">true</strong>));
-<a class="jxr_linenumber" name="322" href="#322">322</a>     assertTrue(whileMatchFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="323" href="#323">323</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(whileMatchFilter))));
-<a class="jxr_linenumber" name="324" href="#324">324</a>   }
-<a class="jxr_linenumber" name="325" href="#325">325</a> 
-<a class="jxr_linenumber" name="326" href="#326">326</a>   @Test
-<a class="jxr_linenumber" name="327" href="#327">327</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMultiRowRangeFilter() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="328" href="#328">328</a>     List&lt;RowRange&gt; ranges = <strong class="jxr_keyword">new</strong> ArrayList&lt;RowRange&gt;();
-<a class="jxr_linenumber" name="329" href="#329">329</a>     ranges.add(<strong class="jxr_keyword">new</strong> RowRange(Bytes.toBytes(30), <strong class="jxr_keyword">true</strong>, Bytes.toBytes(40), false));
-<a class="jxr_linenumber" name="330" href="#330">330</a>     ranges.add(<strong class="jxr_keyword">new</strong> RowRange(Bytes.toBytes(10), <strong class="jxr_keyword">true</strong>, Bytes.toBytes(20), false));
-<a class="jxr_linenumber" name="331" href="#331">331</a>     ranges.add(<strong class="jxr_keyword">new</strong> RowRange(Bytes.toBytes(60), <strong class="jxr_keyword">true</strong>, Bytes.toBytes(70), false));
-<a class="jxr_linenumber" name="332" href="#332">332</a> 
-<a class="jxr_linenumber" name="333" href="#333">333</a>     MultiRowRangeFilter multiRowRangeFilter =
-<a class="jxr_linenumber" name="334" href="#334">334</a>       <strong class="jxr_keyword">new</strong> MultiRowRangeFilter(ranges);
-<a class="jxr_linenumber" name="335" href="#335">335</a>     assertTrue(multiRowRangeFilter.areSerializedFieldsEqual(
-<a class="jxr_linenumber" name="336" href="#336">336</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(multiRowRangeFilter))));
-<a class="jxr_linenumber" name="337" href="#337">337</a>   }
-<a class="jxr_linenumber" name="338" href="#338">338</a> }
+<a class="jxr_linenumber" name="304" href="#304">304</a>     list.add(<strong class="jxr_keyword">new</strong> Long(System.currentTimeMillis()));
+<a class="jxr_linenumber" name="305" href="#305">305</a>     timestampsFilter = <strong class="jxr_keyword">new</strong> TimestampsFilter(list);
+<a class="jxr_linenumber" name="306" href="#306">306</a>     assertTrue(timestampsFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="307" href="#307">307</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(timestampsFilter))));
+<a class="jxr_linenumber" name="308" href="#308">308</a>   }
+<a class="jxr_linenumber" name="309" href="#309">309</a> 
+<a class="jxr_linenumber" name="310" href="#310">310</a>   @Test
+<a class="jxr_linenumber" name="311" href="#311">311</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testValueFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="312" href="#312">312</a>     ValueFilter valueFilter = <strong class="jxr_keyword">new</strong> ValueFilter(CompareFilter.CompareOp.NO_OP,
+<a class="jxr_linenumber" name="313" href="#313">313</a>       <strong class="jxr_keyword">new</strong> BinaryComparator(Bytes.toBytes(<span class="jxr_string">"testValueOne"</span>)));
+<a class="jxr_linenumber" name="314" href="#314">314</a>     assertTrue(valueFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="315" href="#315">315</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(valueFilter))));
+<a class="jxr_linenumber" name="316" href="#316">316</a>   }
+<a class="jxr_linenumber" name="317" href="#317">317</a> 
+<a class="jxr_linenumber" name="318" href="#318">318</a>   @Test
+<a class="jxr_linenumber" name="319" href="#319">319</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testWhileMatchFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="320" href="#320">320</a>     WhileMatchFilter whileMatchFilter =
+<a class="jxr_linenumber" name="321" href="#321">321</a>       <strong class="jxr_keyword">new</strong> WhileMatchFilter(
+<a class="jxr_linenumber" name="322" href="#322">322</a>         <strong class="jxr_keyword">new</strong> ColumnRangeFilter(Bytes.toBytes(<span class="jxr_string">"c"</span>), false, Bytes.toBytes(<span class="jxr_string">"d"</span>), <strong class="jxr_keyword">true</strong>));
+<a class="jxr_linenumber" name="323" href="#323">323</a>     assertTrue(whileMatchFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="324" href="#324">324</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(whileMatchFilter))));
+<a class="jxr_linenumber" name="325" href="#325">325</a>   }
+<a class="jxr_linenumber" name="326" href="#326">326</a> 
+<a class="jxr_linenumber" name="327" href="#327">327</a>   @Test
+<a class="jxr_linenumber" name="328" href="#328">328</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMultiRowRangeFilter() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="329" href="#329">329</a>     List&lt;RowRange&gt; ranges = <strong class="jxr_keyword">new</strong> ArrayList&lt;RowRange&gt;();
+<a class="jxr_linenumber" name="330" href="#330">330</a>     ranges.add(<strong class="jxr_keyword">new</strong> RowRange(Bytes.toBytes(30), <strong class="jxr_keyword">true</strong>, Bytes.toBytes(40), false));
+<a class="jxr_linenumber" name="331" href="#331">331</a>     ranges.add(<strong class="jxr_keyword">new</strong> RowRange(Bytes.toBytes(10), <strong class="jxr_keyword">true</strong>, Bytes.toBytes(20), false));
+<a class="jxr_linenumber" name="332" href="#332">332</a>     ranges.add(<strong class="jxr_keyword">new</strong> RowRange(Bytes.toBytes(60), <strong class="jxr_keyword">true</strong>, Bytes.toBytes(70), false));
+<a class="jxr_linenumber" name="333" href="#333">333</a> 
+<a class="jxr_linenumber" name="334" href="#334">334</a>     MultiRowRangeFilter multiRowRangeFilter =
+<a class="jxr_linenumber" name="335" href="#335">335</a>       <strong class="jxr_keyword">new</strong> MultiRowRangeFilter(ranges);
+<a class="jxr_linenumber" name="336" href="#336">336</a>     assertTrue(multiRowRangeFilter.areSerializedFieldsEqual(
+<a class="jxr_linenumber" name="337" href="#337">337</a>       ProtobufUtil.toFilter(ProtobufUtil.toFilter(multiRowRangeFilter))));
+<a class="jxr_linenumber" name="338" href="#338">338</a>   }
+<a class="jxr_linenumber" name="339" href="#339">339</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

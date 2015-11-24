@@ -109,10 +109,14 @@
 <ul class="blockList">
 <li class="blockList">
 <hr>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Deprecated in 2.0. See HBASE-13347</i></div>
+</div>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Public.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Public</a>
 <a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceStability.Stable.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceStability.Stable</a>
-public class <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.49">FirstKeyValueMatchingQualifiersFilter</a>
+<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public class <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.51">FirstKeyValueMatchingQualifiersFilter</a>
 extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilter.html" title="class in org.apache.hadoop.hbase.filter">FirstKeyOnlyFilter</a></pre>
 <div class="block">The filter looks for the given columns in KeyValue. Once there is a match for
  any one of the columns, it returns ReturnCode.NEXT_ROW for remaining
@@ -158,7 +162,9 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;byte[]&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#qualifiers">qualifiers</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#qualifiers">qualifiers</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -183,6 +189,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#FirstKeyValueMatchingQualifiersFilter(java.util.Set)">FirstKeyValueMatchingQualifiersFilter</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;byte[]&gt;&nbsp;qualifiers)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
 <div class="block">Constructor which takes a set of columns.</div>
 </td>
 </tr>
@@ -204,26 +211,33 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 <tr class="altColor">
 <td class="colFirst"><code>(package private) boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.Filter)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;o)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
 <div class="block">Default implementation so that writers of custom filters aren't forced to implement.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#filterKeyValue(org.apache.hadoop.hbase.Cell)">filterKeyValue</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;v)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
 <div class="block">A way to filter based on the column family, column qualifier and/or the column value.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#hasOneMatchingQualifier(org.apache.hadoop.hbase.Cell)">hasOneMatchingQualifier</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;v)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#hasOneMatchingQualifier(org.apache.hadoop.hbase.Cell)">hasOneMatchingQualifier</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;v)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html" title="class in org.apache.hadoop.hbase.filter">FirstKeyValueMatchingQualifiersFilter</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#parseFrom(byte[])">parseFrom</a></strong>(byte[]&nbsp;pbBytes)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#parseFrom(byte[])">parseFrom</a></strong>(byte[]&nbsp;pbBytes)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#toByteArray()">toByteArray</a></strong>()</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
 <div class="block">Return length 0 byte array for Filters that don't require special serialization</div>
 </td>
 </tr>
@@ -276,7 +290,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 <ul class="blockListLast">
 <li class="blockList">
 <h4>qualifiers</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;byte[]&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.51">qualifiers</a></pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;byte[]&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.53">qualifiers</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 </li>
@@ -293,7 +308,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 <ul class="blockListLast">
 <li class="blockList">
 <h4>FirstKeyValueMatchingQualifiersFilter</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.59">FirstKeyValueMatchingQualifiersFilter</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;byte[]&gt;&nbsp;qualifiers)</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.61">FirstKeyValueMatchingQualifiersFilter</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;byte[]&gt;&nbsp;qualifiers)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
 <div class="block">Constructor which takes a set of columns. As soon as first KeyValue
  matching any of these columns is found, filter moves to next row.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>qualifiers</code> - the set of columns to me matched.</dd></dl>
@@ -313,7 +329,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 <ul class="blockList">
 <li class="blockList">
 <h4>filterKeyValue</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.64">filterKeyValue</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;v)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.ReturnCode.html" title="enum in org.apache.hadoop.hbase.filter">Filter.ReturnCode</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.66">filterKeyValue</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;v)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html#filterKeyValue(org.apache.hadoop.hbase.Cell)">Filter</a></code></strong></div>
 <div class="block">A way to filter based on the column family, column qualifier and/or the column value. Return
  code is described below. This allows filters to filter only certain number of columns, then
@@ -342,7 +359,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 <ul class="blockList">
 <li class="blockList">
 <h4>hasOneMatchingQualifier</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.73">hasOneMatchingQualifier</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;v)</pre>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.75">hasOneMatchingQualifier</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;v)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 <a name="toByteArray()">
@@ -351,7 +369,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 <ul class="blockList">
 <li class="blockList">
 <h4>toByteArray</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.85">toByteArray</a>()</pre>
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.87">toByteArray</a>()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/filter/FilterBase.html#toByteArray()">FilterBase</a></code></strong></div>
 <div class="block">Return length 0 byte array for Filters that don't require special serialization</div>
 <dl>
@@ -366,8 +385,9 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 <ul class="blockList">
 <li class="blockList">
 <h4>parseFrom</h4>
-<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html" title="class in org.apache.hadoop.hbase.filter">FirstKeyValueMatchingQualifiersFilter</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.100">parseFrom</a>(byte[]&nbsp;pbBytes)
+<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html" title="class in org.apache.hadoop.hbase.filter">FirstKeyValueMatchingQualifiersFilter</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.102">parseFrom</a>(byte[]&nbsp;pbBytes)
                                                        throws <a href="../../../../../org/apache/hadoop/hbase/exceptions/DeserializationException.html" title="class in org.apache.hadoop.hbase.exceptions">DeserializationException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>pbBytes</code> - A pb serialized <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html" title="class in org.apache.hadoop.hbase.filter"><code>FirstKeyValueMatchingQualifiersFilter</code></a> instance</dd>
 <dt><span class="strong">Returns:</span></dt><dd>An instance of <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html" title="class in org.apache.hadoop.hbase.filter"><code>FirstKeyValueMatchingQualifiersFilter</code></a> made from <code>bytes</code></dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -380,7 +400,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/filter/FirstKeyOnlyFilte
 <ul class="blockListLast">
 <li class="blockList">
 <h4>areSerializedFieldsEqual</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.121">areSerializedFieldsEqual</a>(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;o)</pre>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html#line.123">areSerializedFieldsEqual</a>(<a href="../../../../../org/apache/hadoop/hbase/filter/Filter.html" title="class in org.apache.hadoop.hbase.filter">Filter</a>&nbsp;o)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/filter/FilterBase.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.Filter)">FilterBase</a></code></strong></div>
 <div class="block">Default implementation so that writers of custom filters aren't forced to implement.</div>
 <dl>

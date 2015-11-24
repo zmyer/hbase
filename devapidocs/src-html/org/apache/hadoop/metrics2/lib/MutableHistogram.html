@@ -134,13 +134,15 @@
 <span class="sourceLineNo">126</span>      metricsRecordBuilder.addGauge(Interns.info(name + MEDIAN_METRIC_NAME, desc), s.getMedian());<a name="line.126"></a>
 <span class="sourceLineNo">127</span>      metricsRecordBuilder.addGauge(Interns.info(name + SEVENTY_FIFTH_PERCENTILE_METRIC_NAME, desc),<a name="line.127"></a>
 <span class="sourceLineNo">128</span>          s.get75thPercentile());<a name="line.128"></a>
-<span class="sourceLineNo">129</span>      metricsRecordBuilder.addGauge(Interns.info(name + NINETY_FIFTH_PERCENTILE_METRIC_NAME, desc),<a name="line.129"></a>
-<span class="sourceLineNo">130</span>          s.get95thPercentile());<a name="line.130"></a>
-<span class="sourceLineNo">131</span>      metricsRecordBuilder.addGauge(Interns.info(name + NINETY_NINETH_PERCENTILE_METRIC_NAME, desc),<a name="line.131"></a>
-<span class="sourceLineNo">132</span>          s.get99thPercentile());<a name="line.132"></a>
-<span class="sourceLineNo">133</span>    }<a name="line.133"></a>
-<span class="sourceLineNo">134</span>  }<a name="line.134"></a>
-<span class="sourceLineNo">135</span>}<a name="line.135"></a>
+<span class="sourceLineNo">129</span>      metricsRecordBuilder.addGauge(Interns.info(name + NINETIETH_PERCENTILE_METRIC_NAME, desc),<a name="line.129"></a>
+<span class="sourceLineNo">130</span>          s.getValue(0.90));<a name="line.130"></a>
+<span class="sourceLineNo">131</span>      metricsRecordBuilder.addGauge(Interns.info(name + NINETY_FIFTH_PERCENTILE_METRIC_NAME, desc),<a name="line.131"></a>
+<span class="sourceLineNo">132</span>          s.get95thPercentile());<a name="line.132"></a>
+<span class="sourceLineNo">133</span>      metricsRecordBuilder.addGauge(Interns.info(name + NINETY_NINETH_PERCENTILE_METRIC_NAME, desc),<a name="line.133"></a>
+<span class="sourceLineNo">134</span>          s.get99thPercentile());<a name="line.134"></a>
+<span class="sourceLineNo">135</span>    }<a name="line.135"></a>
+<span class="sourceLineNo">136</span>  }<a name="line.136"></a>
+<span class="sourceLineNo">137</span>}<a name="line.137"></a>
 
 
 

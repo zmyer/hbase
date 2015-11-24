@@ -218,126 +218,130 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#leaseRecovery">leaseRecovery</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#loading">loading</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantLock</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#lock">lock</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private org.apache.hadoop.fs.Path</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#logDir">logDir</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html?is-external=true" title="class or interface in java.util">LinkedList</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#logs">logs</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#MAX_RETRIES_BEFORE_ROLL_CONF_KEY">MAX_RETRIES_BEFORE_ROLL_CONF_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#MAX_SYNC_FAILURE_ROLL_CONF_KEY">MAX_SYNC_FAILURE_ROLL_CONF_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#maxRetriesBeforeRoll">maxRetriesBeforeRoll</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#maxSyncFailureRoll">maxSyncFailureRoll</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#PERIODIC_ROLL_CONF_KEY">PERIODIC_ROLL_CONF_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#periodicRollMsec">periodicRollMsec</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#ROLL_RETRIES_CONF_KEY">ROLL_RETRIES_CONF_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#ROLL_THRESHOLD_CONF_KEY">ROLL_THRESHOLD_CONF_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#rollRetries">rollRetries</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#rollThreshold">rollThreshold</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html?is-external=true" title="class or interface in java.util.concurrent.locks">Condition</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#slotCond">slotCond</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#slotIndex">slotIndex</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#slots">slots</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/LinkedTransferQueue.html?is-external=true" title="class or interface in java.util.concurrent">LinkedTransferQueue</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#slotsCache">slotsCache</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#storeTracker">storeTracker</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private org.apache.hadoop.fs.FSDataOutputStream</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#stream">stream</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#SYNC_WAIT_MSEC_CONF_KEY">SYNC_WAIT_MSEC_CONF_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html?is-external=true" title="class or interface in java.util.concurrent.locks">Condition</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#syncCond">syncCond</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#syncException">syncException</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#syncThread">syncThread</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#syncWaitMsec">syncWaitMsec</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#totalSynced">totalSynced</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#USE_HSYNC_CONF_KEY">USE_HSYNC_CONF_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#useHsync">useHsync</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#WAIT_BEFORE_ROLL_CONF_KEY">WAIT_BEFORE_ROLL_CONF_KEY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#waitBeforeRoll">waitBeforeRoll</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html?is-external=true" title="class or interface in java.util.concurrent.locks">Condition</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#waitCond">waitCond</a></strong></code>&nbsp;</td>
 </tr>
@@ -849,40 +853,31 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <pre>private final&nbsp;org.apache.hadoop.fs.Path <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.112">logDir</a></pre>
 </li>
 </ul>
-<a name="inSync">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>inSync</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.114">inSync</a></pre>
-</li>
-</ul>
 <a name="syncException">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>syncException</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt; <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.115">syncException</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt; <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.114">syncException</a></pre>
 </li>
 </ul>
-<a name="slotsCache">
+<a name="loading">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>slotsCache</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/LinkedTransferQueue.html?is-external=true" title="class or interface in java.util.concurrent">LinkedTransferQueue</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>&gt; <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.116">slotsCache</a></pre>
+<h4>loading</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.115">loading</a></pre>
 </li>
 </ul>
-<a name="corruptedLogs">
+<a name="inSync">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>corruptedLogs</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&gt; <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.117">corruptedLogs</a></pre>
+<h4>inSync</h4>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicBoolean.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicBoolean</a> <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.116">inSync</a></pre>
 </li>
 </ul>
 <a name="totalSynced">
@@ -891,7 +886,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>totalSynced</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.118">totalSynced</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.117">totalSynced</a></pre>
 </li>
 </ul>
 <a name="lastRollTs">
@@ -900,7 +895,25 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>lastRollTs</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.119">lastRollTs</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.118">lastRollTs</a></pre>
+</li>
+</ul>
+<a name="slotsCache">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>slotsCache</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/LinkedTransferQueue.html?is-external=true" title="class or interface in java.util.concurrent">LinkedTransferQueue</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>&gt; <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.120">slotsCache</a></pre>
+</li>
+</ul>
+<a name="corruptedLogs">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>corruptedLogs</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&gt; <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.121">corruptedLogs</a></pre>
 </li>
 </ul>
 <a name="stream">
@@ -909,7 +922,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>stream</h4>
-<pre>private&nbsp;org.apache.hadoop.fs.FSDataOutputStream <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.120">stream</a></pre>
+<pre>private&nbsp;org.apache.hadoop.fs.FSDataOutputStream <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.122">stream</a></pre>
 </li>
 </ul>
 <a name="flushLogId">
@@ -918,7 +931,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>flushLogId</h4>
-<pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.121">flushLogId</a></pre>
+<pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.123">flushLogId</a></pre>
 </li>
 </ul>
 <a name="slotIndex">
@@ -927,7 +940,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>slotIndex</h4>
-<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.122">slotIndex</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.124">slotIndex</a></pre>
 </li>
 </ul>
 <a name="syncThread">
@@ -936,7 +949,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>syncThread</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a> <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.123">syncThread</a></pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a> <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.125">syncThread</a></pre>
 </li>
 </ul>
 <a name="slots">
@@ -945,7 +958,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>slots</h4>
-<pre>private&nbsp;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>[] <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.124">slots</a></pre>
+<pre>private&nbsp;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>[] <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.126">slots</a></pre>
 </li>
 </ul>
 <a name="maxRetriesBeforeRoll">
@@ -954,7 +967,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>maxRetriesBeforeRoll</h4>
-<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.126">maxRetriesBeforeRoll</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.128">maxRetriesBeforeRoll</a></pre>
 </li>
 </ul>
 <a name="maxSyncFailureRoll">
@@ -963,7 +976,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>maxSyncFailureRoll</h4>
-<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.127">maxSyncFailureRoll</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.129">maxSyncFailureRoll</a></pre>
 </li>
 </ul>
 <a name="waitBeforeRoll">
@@ -972,7 +985,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>waitBeforeRoll</h4>
-<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.128">waitBeforeRoll</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.130">waitBeforeRoll</a></pre>
 </li>
 </ul>
 <a name="rollRetries">
@@ -981,7 +994,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>rollRetries</h4>
-<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.129">rollRetries</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.131">rollRetries</a></pre>
 </li>
 </ul>
 <a name="periodicRollMsec">
@@ -990,7 +1003,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>periodicRollMsec</h4>
-<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.130">periodicRollMsec</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.132">periodicRollMsec</a></pre>
 </li>
 </ul>
 <a name="rollThreshold">
@@ -999,7 +1012,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>rollThreshold</h4>
-<pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.131">rollThreshold</a></pre>
+<pre>private&nbsp;long <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.133">rollThreshold</a></pre>
 </li>
 </ul>
 <a name="useHsync">
@@ -1008,7 +1021,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>useHsync</h4>
-<pre>private&nbsp;boolean <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.132">useHsync</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.134">useHsync</a></pre>
 </li>
 </ul>
 <a name="syncWaitMsec">
@@ -1017,7 +1030,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockListLast">
 <li class="blockList">
 <h4>syncWaitMsec</h4>
-<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.133">syncWaitMsec</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.135">syncWaitMsec</a></pre>
 </li>
 </ul>
 </li>
@@ -1034,7 +1047,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockListLast">
 <li class="blockList">
 <h4>WALProcedureStore</h4>
-<pre>public&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.135">WALProcedureStore</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+<pre>public&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.137">WALProcedureStore</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                  org.apache.hadoop.fs.FileSystem&nbsp;fs,
                  org.apache.hadoop.fs.Path&nbsp;logDir,
                  <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.LeaseRecovery.html" title="interface in org.apache.hadoop.hbase.procedure2.store.wal">WALProcedureStore.LeaseRecovery</a>&nbsp;leaseRecovery)</pre>
@@ -1054,7 +1067,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>start</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.144">start</a>(int&nbsp;numSlots)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.146">start</a>(int&nbsp;numSlots)
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.html#start(int)">ProcedureStore</a></code></strong></div>
 <div class="block">Start/Open the procedure store</div>
@@ -1068,7 +1081,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>stop</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.185">stop</a>(boolean&nbsp;abort)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.188">stop</a>(boolean&nbsp;abort)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.html#stop(boolean)">ProcedureStore</a></code></strong></div>
 <div class="block">Stop/Close the procedure store</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>abort</code> - true if the stop is an abort</dd></dl>
@@ -1080,7 +1093,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getNumThreads</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.221">getNumThreads</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.224">getNumThreads</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the number of threads/slots passed to start()</dd></dl>
 </li>
 </ul>
@@ -1090,7 +1103,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getStoreTracker</h4>
-<pre>public&nbsp;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker</a>&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.225">getStoreTracker</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStoreTracker.html" title="class in org.apache.hadoop.hbase.procedure2.store">ProcedureStoreTracker</a>&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.228">getStoreTracker</a>()</pre>
 </li>
 </ul>
 <a name="getActiveLogs()">
@@ -1099,7 +1112,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getActiveLogs</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html?is-external=true" title="class or interface in java.util">LinkedList</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&gt;&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.229">getActiveLogs</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html?is-external=true" title="class or interface in java.util">LinkedList</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&gt;&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.232">getActiveLogs</a>()</pre>
 </li>
 </ul>
 <a name="getCorruptedLogs()">
@@ -1108,7 +1121,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getCorruptedLogs</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&gt;&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.233">getCorruptedLogs</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&gt;&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.236">getCorruptedLogs</a>()</pre>
 </li>
 </ul>
 <a name="recoverLease()">
@@ -1117,7 +1130,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>recoverLease</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.238">recoverLease</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.241">recoverLease</a>()
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.html#recoverLease()">ProcedureStore</a></code></strong></div>
 <div class="block">Acquire the lease for the procedure store.</div>
@@ -1131,7 +1144,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>load</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.268">load</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.ProcedureLoader.html" title="interface in org.apache.hadoop.hbase.procedure2.store">ProcedureStore.ProcedureLoader</a>&nbsp;loader)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.271">load</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.ProcedureLoader.html" title="interface in org.apache.hadoop.hbase.procedure2.store">ProcedureStore.ProcedureLoader</a>&nbsp;loader)
           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.html#load(org.apache.hadoop.hbase.procedure2.store.ProcedureStore.ProcedureLoader)">ProcedureStore</a></code></strong></div>
 <div class="block">Load the Procedures in the store.</div>
@@ -1146,7 +1159,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>insert</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.327">insert</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html" title="class in org.apache.hadoop.hbase.procedure2">Procedure</a>&nbsp;proc,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.332">insert</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html" title="class in org.apache.hadoop.hbase.procedure2">Procedure</a>&nbsp;proc,
           <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html" title="class in org.apache.hadoop.hbase.procedure2">Procedure</a>[]&nbsp;subprocs)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.html#insert(org.apache.hadoop.hbase.procedure2.Procedure,%20org.apache.hadoop.hbase.procedure2.Procedure[])">ProcedureStore</a></code></strong></div>
 <div class="block">When a procedure is submitted to the executor insert(proc, null) will be called.
@@ -1164,7 +1177,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.365">update</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html" title="class in org.apache.hadoop.hbase.procedure2">Procedure</a>&nbsp;proc)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.370">update</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/Procedure.html" title="class in org.apache.hadoop.hbase.procedure2">Procedure</a>&nbsp;proc)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.html#update(org.apache.hadoop.hbase.procedure2.Procedure)">ProcedureStore</a></code></strong></div>
 <div class="block">The specified procedure was executed,
  and the new state should be written to the store.</div>
@@ -1177,7 +1190,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>delete</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.403">delete</a>(long&nbsp;procId)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.408">delete</a>(long&nbsp;procId)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/ProcedureStore.html#delete(long)">ProcedureStore</a></code></strong></div>
 <div class="block">The specified procId was removed from the executor,
  due to completion, abort or failure.
@@ -1191,7 +1204,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>acquireSlot</h4>
-<pre>private&nbsp;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.442">acquireSlot</a>()</pre>
+<pre>private&nbsp;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.447">acquireSlot</a>()</pre>
 </li>
 </ul>
 <a name="releaseSlot(org.apache.hadoop.hbase.procedure2.util.ByteSlot)">
@@ -1200,7 +1213,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>releaseSlot</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.447">releaseSlot</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>&nbsp;slot)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.452">releaseSlot</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>&nbsp;slot)</pre>
 </li>
 </ul>
 <a name="pushData(org.apache.hadoop.hbase.procedure2.util.ByteSlot)">
@@ -1209,7 +1222,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>pushData</h4>
-<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.452">pushData</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>&nbsp;slot)</pre>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.457">pushData</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>&nbsp;slot)</pre>
 </li>
 </ul>
 <a name="isSyncAborted()">
@@ -1218,7 +1231,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>isSyncAborted</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.507">isSyncAborted</a>()</pre>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.512">isSyncAborted</a>()</pre>
 </li>
 </ul>
 <a name="periodicRoll()">
@@ -1227,7 +1240,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>periodicRoll</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.511">periodicRoll</a>()
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.516">periodicRoll</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1239,7 +1252,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>syncLoop</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.523">syncLoop</a>()
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.528">syncLoop</a>()
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd></dl>
@@ -1251,7 +1264,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>syncSlots</h4>
-<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.584">syncSlots</a>()
+<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.591">syncSlots</a>()
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd></dl>
@@ -1263,7 +1276,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>syncSlots</h4>
-<pre>protected&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.612">syncSlots</a>(org.apache.hadoop.fs.FSDataOutputStream&nbsp;stream,
+<pre>protected&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.619">syncSlots</a>(org.apache.hadoop.fs.FSDataOutputStream&nbsp;stream,
              <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/util/ByteSlot.html" title="class in org.apache.hadoop.hbase.procedure2.util">ByteSlot</a>[]&nbsp;slots,
              int&nbsp;offset,
              int&nbsp;count)
@@ -1278,7 +1291,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>rollWriterOrDie</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.636">rollWriterOrDie</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.643">rollWriterOrDie</a>()</pre>
 </li>
 </ul>
 <a name="checkAndTryRoll()">
@@ -1287,7 +1300,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>checkAndTryRoll</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.652">checkAndTryRoll</a>()</pre>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.659">checkAndTryRoll</a>()</pre>
 </li>
 </ul>
 <a name="getMillisToNextPeriodicRoll()">
@@ -1296,7 +1309,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getMillisToNextPeriodicRoll</h4>
-<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.665">getMillisToNextPeriodicRoll</a>()</pre>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.672">getMillisToNextPeriodicRoll</a>()</pre>
 </li>
 </ul>
 <a name="getMillisFromLastRoll()">
@@ -1305,7 +1318,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getMillisFromLastRoll</h4>
-<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.672">getMillisFromLastRoll</a>()</pre>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.679">getMillisFromLastRoll</a>()</pre>
 </li>
 </ul>
 <a name="rollWriter()">
@@ -1314,7 +1327,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>rollWriter</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.676">rollWriter</a>()
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.683">rollWriter</a>()
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1326,7 +1339,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>rollWriter</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.695">rollWriter</a>(long&nbsp;logId)
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.702">rollWriter</a>(long&nbsp;logId)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1338,7 +1351,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>closeStream</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.746">closeStream</a>()</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.753">closeStream</a>()</pre>
 </li>
 </ul>
 <a name="setInactiveLogsMaxId(long)">
@@ -1347,7 +1360,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>setInactiveLogsMaxId</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.770">setInactiveLogsMaxId</a>(long&nbsp;logId)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.777">setInactiveLogsMaxId</a>(long&nbsp;logId)</pre>
 </li>
 </ul>
 <a name="removeInactiveLogs()">
@@ -1356,7 +1369,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>removeInactiveLogs</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.780">removeInactiveLogs</a>()</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.787">removeInactiveLogs</a>()</pre>
 </li>
 </ul>
 <a name="removeAllLogs(long)">
@@ -1365,7 +1378,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>removeAllLogs</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.799">removeAllLogs</a>(long&nbsp;lastLogId)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.806">removeAllLogs</a>(long&nbsp;lastLogId)</pre>
 </li>
 </ul>
 <a name="removeLogFile(org.apache.hadoop.hbase.procedure2.store.wal.ProcedureWALFile)">
@@ -1374,7 +1387,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>removeLogFile</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.814">removeLogFile</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&nbsp;log)</pre>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.821">removeLogFile</a>(<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&nbsp;log)</pre>
 </li>
 </ul>
 <a name="getLogDir()">
@@ -1383,7 +1396,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getLogDir</h4>
-<pre>public&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.835">getLogDir</a>()</pre>
+<pre>public&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.842">getLogDir</a>()</pre>
 </li>
 </ul>
 <a name="getFileSystem()">
@@ -1392,7 +1405,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getFileSystem</h4>
-<pre>public&nbsp;org.apache.hadoop.fs.FileSystem&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.839">getFileSystem</a>()</pre>
+<pre>public&nbsp;org.apache.hadoop.fs.FileSystem&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.846">getFileSystem</a>()</pre>
 </li>
 </ul>
 <a name="getLogFilePath(long)">
@@ -1401,7 +1414,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getLogFilePath</h4>
-<pre>protected&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.843">getLogFilePath</a>(long&nbsp;logId)
+<pre>protected&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.850">getLogFilePath</a>(long&nbsp;logId)
                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1413,7 +1426,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getLogIdFromName</h4>
-<pre>private static&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.847">getLogIdFromName</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre>private static&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.854">getLogIdFromName</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 </li>
 </ul>
 <a name="getLogFiles()">
@@ -1422,7 +1435,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getLogFiles</h4>
-<pre>private&nbsp;org.apache.hadoop.fs.FileStatus[]&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.858">getLogFiles</a>()
+<pre>private&nbsp;org.apache.hadoop.fs.FileStatus[]&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.865">getLogFiles</a>()
                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1434,7 +1447,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>getMaxLogId</h4>
-<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.873">getMaxLogId</a>(org.apache.hadoop.fs.FileStatus[]&nbsp;logFiles)</pre>
+<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.880">getMaxLogId</a>(org.apache.hadoop.fs.FileStatus[]&nbsp;logFiles)</pre>
 </li>
 </ul>
 <a name="initOldLogs(org.apache.hadoop.fs.FileStatus[])">
@@ -1443,7 +1456,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>initOldLogs</h4>
-<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.886">initOldLogs</a>(org.apache.hadoop.fs.FileStatus[]&nbsp;logFiles)
+<pre>private&nbsp;long&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.893">initOldLogs</a>(org.apache.hadoop.fs.FileStatus[]&nbsp;logFiles)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>Max-LogID of the specified log file set</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -1456,7 +1469,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockList">
 <li class="blockList">
 <h4>initTrackerFromOldLogs</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.907">initTrackerFromOldLogs</a>()</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.914">initTrackerFromOldLogs</a>()</pre>
 </li>
 </ul>
 <a name="initOldLog(org.apache.hadoop.fs.FileStatus)">
@@ -1465,7 +1478,7 @@ extends <a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/P
 <ul class="blockListLast">
 <li class="blockList">
 <h4>initOldLog</h4>
-<pre>private&nbsp;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.922">initOldLog</a>(org.apache.hadoop.fs.FileStatus&nbsp;logFile)
+<pre>private&nbsp;<a href="../../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALFile.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALFile</a>&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.html#line.929">initOldLog</a>(org.apache.hadoop.fs.FileStatus&nbsp;logFile)
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>

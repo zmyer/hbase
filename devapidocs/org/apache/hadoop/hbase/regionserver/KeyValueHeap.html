@@ -642,7 +642,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <ul class="blockList">
 <li class="blockList">
 <h4>pollRealKV</h4>
-<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.349">pollRealKV</a>()
+<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.351">pollRealKV</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Fetches the top sub-scanner from the priority queue, ensuring that a real
  seek has been done on it. Works by fetching the top sub-scanner, and if it
@@ -663,7 +663,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <ul class="blockList">
 <li class="blockList">
 <h4>getHeap</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html?is-external=true" title="class or interface in java.util">PriorityQueue</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.403">getHeap</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html?is-external=true" title="class or interface in java.util">PriorityQueue</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.405">getHeap</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the current Heap</dd></dl>
 </li>
 </ul>
@@ -673,7 +673,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <ul class="blockList">
 <li class="blockList">
 <h4>getSequenceID</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.408">getSequenceID</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.410">getSequenceID</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#getSequenceID()">KeyValueScanner</a></code></strong></div>
 <div class="block">Get the sequence id associated with this KeyValueScanner. This is required
  for comparing multiple files to find out which one has the latest data.
@@ -691,7 +691,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <ul class="blockList">
 <li class="blockList">
 <h4>getCurrentForTesting</h4>
-<pre><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.412">getCurrentForTesting</a>()</pre>
+<pre><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.414">getCurrentForTesting</a>()</pre>
 </li>
 </ul>
 <a name="getNextIndexedKey()">
@@ -700,7 +700,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <ul class="blockList">
 <li class="blockList">
 <h4>getNextIndexedKey</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.417">getNextIndexedKey</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.419">getNextIndexedKey</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#getNextIndexedKey()">getNextIndexedKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a></code></dd>
@@ -716,7 +716,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValue
 <ul class="blockListLast">
 <li class="blockList">
 <h4>shipped</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.423">shipped</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#line.425">shipped</a>()
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Shipper.html#shipped()">Shipper</a></code></strong></div>
 <div class="block">Called after a batch of rows scanned and set to be returned to client. Any in between cleanup

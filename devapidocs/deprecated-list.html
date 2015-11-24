@@ -110,6 +110,11 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colOne"><a href="org/apache/hadoop/hbase/filter/FirstKeyValueMatchingQualifiersFilter.html" title="class in org.apache.hadoop.hbase.filter">org.apache.hadoop.hbase.filter.FirstKeyValueMatchingQualifiersFilter</a>
+<div class="block"><i>Deprecated in 2.0. See HBASE-13347</i></div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/security/access/HbaseObjectWritableFor96Migration.html" title="class in org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access.HbaseObjectWritableFor96Migration</a>
 <div class="block"><i>This class is needed migrating TablePermissions written with
  Writables.  It is needed to read old permissions written pre-0.96.  This
@@ -117,45 +122,45 @@
  will have been migrated and written with protobufs.</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/mapreduce/HLogInputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce.HLogInputFormat</a>
 <div class="block"><i>use <a href="org/apache/hadoop/hbase/mapreduce/WALInputFormat.html" title="class in org.apache.hadoop.hbase.mapreduce"><code>WALInputFormat</code></a>.  Remove in hadoop 3.0</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/regionserver/wal/HLogKey.html" title="class in org.apache.hadoop.hbase.regionserver.wal">org.apache.hadoop.hbase.regionserver.wal.HLogKey</a>
 <div class="block"><i>use WALKey.  as of 2.0.  Remove in 3.0</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/regionserver/wal/HLogPrettyPrinter.html" title="class in org.apache.hadoop.hbase.regionserver.wal">org.apache.hadoop.hbase.regionserver.wal.HLogPrettyPrinter</a>
 <div class="block"><i>use the "hbase wal" command</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/KeyValue.KVComparator.html" title="class in org.apache.hadoop.hbase">org.apache.hadoop.hbase.KeyValue.KVComparator</a>
 <div class="block"><i>: Use <a href="org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase"><code>CellComparator</code></a>.</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/KeyValue.MetaComparator.html" title="class in org.apache.hadoop.hbase">org.apache.hadoop.hbase.KeyValue.MetaComparator</a>
 <div class="block"><i>: <a href="org/apache/hadoop/hbase/CellComparator.html#META_COMPARATOR"><code>CellComparator.META_COMPARATOR</code></a> to be used</i></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/KeyValue.RawBytesComparator.html" title="class in org.apache.hadoop.hbase">org.apache.hadoop.hbase.KeyValue.RawBytesComparator</a>
 <div class="block"><i>Not to be used for any comparsions</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/regionserver/wal/KeyValueCompression.html" title="class in org.apache.hadoop.hbase.regionserver.wal">org.apache.hadoop.hbase.regionserver.wal.KeyValueCompression</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/zookeeper/ZKLeaderManager.html" title="class in org.apache.hadoop.hbase.zookeeper">org.apache.hadoop.hbase.zookeeper.ZKLeaderManager</a>
 <div class="block"><i>Not used</i></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/apache/hadoop/hbase/zookeeper/ZKUtil.NodeAndData.html" title="class in org.apache.hadoop.hbase.zookeeper">org.apache.hadoop.hbase.zookeeper.ZKUtil.NodeAndData</a>
 <div class="block"><i>Unused</i></div>
 </td>
