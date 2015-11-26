@@ -842,17 +842,25 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">DefaultMemStore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#shouldSeek(org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.Store,%20long)">shouldSeek</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                    <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
+                    long&nbsp;oldestUnexpiredTS)</code>
+<div class="block">Check if this memstore may contain the required keys</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">NonLazyKeyValueScanner.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/NonLazyKeyValueScanner.html#shouldUseScanner(org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.Store,%20long)">shouldUseScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                                 long&nbsp;oldestUnexpiredTS)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">DefaultMemStore.MemStoreScanner.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.MemStoreScanner.html#shouldUseScanner(org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.Store,%20long)">shouldUseScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                                 long&nbsp;oldestUnexpiredTS)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">KeyValueScanner.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#shouldUseScanner(org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.Store,%20long)">shouldUseScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
@@ -861,7 +869,7 @@
  want to use based on criteria such as Bloom filters and timestamp ranges.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">StoreFileScanner.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileScanner.html#shouldUseScanner(org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.Store,%20long)">shouldUseScanner</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
