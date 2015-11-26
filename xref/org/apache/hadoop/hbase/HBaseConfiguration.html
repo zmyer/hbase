@@ -131,108 +131,129 @@
 <a class="jxr_linenumber" name="121" href="#121">121</a>   }
 <a class="jxr_linenumber" name="122" href="#122">122</a> 
 <a class="jxr_linenumber" name="123" href="#123">123</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="124" href="#124">124</a> <em class="jxr_javadoccomment">   * @return whether to show HBase Configuration in servlet</em>
-<a class="jxr_linenumber" name="125" href="#125">125</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="126" href="#126">126</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> isShowConfInServlet() {
-<a class="jxr_linenumber" name="127" href="#127">127</a>     <strong class="jxr_keyword">boolean</strong> isShowConf = false;
-<a class="jxr_linenumber" name="128" href="#128">128</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="129" href="#129">129</a>       <strong class="jxr_keyword">if</strong> (Class.forName(<span class="jxr_string">"org.apache.hadoop.conf.ConfServlet"</span>) != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="130" href="#130">130</a>         isShowConf = <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="131" href="#131">131</a>       }
-<a class="jxr_linenumber" name="132" href="#132">132</a>     } <strong class="jxr_keyword">catch</strong> (LinkageError e) {
-<a class="jxr_linenumber" name="133" href="#133">133</a>        <em class="jxr_comment">// should we handle it more aggressively in addition to log the error?</em>
-<a class="jxr_linenumber" name="134" href="#134">134</a>        LOG.warn(<span class="jxr_string">"Error thrown: "</span>, e);
-<a class="jxr_linenumber" name="135" href="#135">135</a>     } <strong class="jxr_keyword">catch</strong> (ClassNotFoundException ce) {
-<a class="jxr_linenumber" name="136" href="#136">136</a>       LOG.debug(<span class="jxr_string">"ClassNotFound: ConfServlet"</span>);
-<a class="jxr_linenumber" name="137" href="#137">137</a>       <em class="jxr_comment">// ignore</em>
-<a class="jxr_linenumber" name="138" href="#138">138</a>     }
-<a class="jxr_linenumber" name="139" href="#139">139</a>     <strong class="jxr_keyword">return</strong> isShowConf;
-<a class="jxr_linenumber" name="140" href="#140">140</a>   }
-<a class="jxr_linenumber" name="141" href="#141">141</a> 
-<a class="jxr_linenumber" name="142" href="#142">142</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="143" href="#143">143</a> <em class="jxr_javadoccomment">   * Get the value of the &lt;code&gt;name&lt;/code&gt; property as an &lt;code&gt;int&lt;/code&gt;, possibly</em>
-<a class="jxr_linenumber" name="144" href="#144">144</a> <em class="jxr_javadoccomment">   * referring to the deprecated name of the configuration property.</em>
-<a class="jxr_linenumber" name="145" href="#145">145</a> <em class="jxr_javadoccomment">   * If no such property exists, the provided default value is returned,</em>
-<a class="jxr_linenumber" name="146" href="#146">146</a> <em class="jxr_javadoccomment">   * or if the specified value is not a valid &lt;code&gt;int&lt;/code&gt;,</em>
-<a class="jxr_linenumber" name="147" href="#147">147</a> <em class="jxr_javadoccomment">   * then an error is thrown.</em>
-<a class="jxr_linenumber" name="148" href="#148">148</a> <em class="jxr_javadoccomment">   *</em>
-<a class="jxr_linenumber" name="149" href="#149">149</a> <em class="jxr_javadoccomment">   * @param name property name.</em>
-<a class="jxr_linenumber" name="150" href="#150">150</a> <em class="jxr_javadoccomment">   * @param deprecatedName a deprecatedName for the property to use</em>
-<a class="jxr_linenumber" name="151" href="#151">151</a> <em class="jxr_javadoccomment">   * if non-deprecated name is not used</em>
-<a class="jxr_linenumber" name="152" href="#152">152</a> <em class="jxr_javadoccomment">   * @param defaultValue default value.</em>
-<a class="jxr_linenumber" name="153" href="#153">153</a> <em class="jxr_javadoccomment">   * @throws NumberFormatException when the value is invalid</em>
-<a class="jxr_linenumber" name="154" href="#154">154</a> <em class="jxr_javadoccomment">   * @return property value as an &lt;code&gt;int&lt;/code&gt;,</em>
-<a class="jxr_linenumber" name="155" href="#155">155</a> <em class="jxr_javadoccomment">   *         or &lt;code&gt;defaultValue&lt;/code&gt;.</em>
-<a class="jxr_linenumber" name="156" href="#156">156</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="157" href="#157">157</a>   <em class="jxr_comment">// TODO: developer note: This duplicates the functionality of deprecated</em>
-<a class="jxr_linenumber" name="158" href="#158">158</a>   <em class="jxr_comment">// property support in Configuration in Hadoop 2. But since Hadoop-1 does not</em>
-<a class="jxr_linenumber" name="159" href="#159">159</a>   <em class="jxr_comment">// contain these changes, we will do our own as usual. Replace these when H2 is default.</em>
-<a class="jxr_linenumber" name="160" href="#160">160</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> getInt(Configuration conf, String name,
-<a class="jxr_linenumber" name="161" href="#161">161</a>       String deprecatedName, <strong class="jxr_keyword">int</strong> defaultValue) {
-<a class="jxr_linenumber" name="162" href="#162">162</a>     <strong class="jxr_keyword">if</strong> (conf.get(deprecatedName) != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="163" href="#163">163</a>       LOG.warn(String.format(<span class="jxr_string">"Config option \&quot;%s\&quot; is deprecated. Instead, use \&quot;%s\&quot;"</span>
-<a class="jxr_linenumber" name="164" href="#164">164</a>         , deprecatedName, name));
-<a class="jxr_linenumber" name="165" href="#165">165</a>       <strong class="jxr_keyword">return</strong> conf.getInt(deprecatedName, defaultValue);
-<a class="jxr_linenumber" name="166" href="#166">166</a>     } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="167" href="#167">167</a>       <strong class="jxr_keyword">return</strong> conf.getInt(name, defaultValue);
-<a class="jxr_linenumber" name="168" href="#168">168</a>     }
-<a class="jxr_linenumber" name="169" href="#169">169</a>   }
-<a class="jxr_linenumber" name="170" href="#170">170</a> 
-<a class="jxr_linenumber" name="171" href="#171">171</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="172" href="#172">172</a> <em class="jxr_javadoccomment">   * Get the password from the Configuration instance using the</em>
-<a class="jxr_linenumber" name="173" href="#173">173</a> <em class="jxr_javadoccomment">   * getPassword method if it exists. If not, then fall back to the</em>
-<a class="jxr_linenumber" name="174" href="#174">174</a> <em class="jxr_javadoccomment">   * general get method for configuration elements.</em>
-<a class="jxr_linenumber" name="175" href="#175">175</a> <em class="jxr_javadoccomment">   *</em>
-<a class="jxr_linenumber" name="176" href="#176">176</a> <em class="jxr_javadoccomment">   * @param conf    configuration instance for accessing the passwords</em>
-<a class="jxr_linenumber" name="177" href="#177">177</a> <em class="jxr_javadoccomment">   * @param alias   the name of the password element</em>
-<a class="jxr_linenumber" name="178" href="#178">178</a> <em class="jxr_javadoccomment">   * @param defPass the default password</em>
-<a class="jxr_linenumber" name="179" href="#179">179</a> <em class="jxr_javadoccomment">   * @return String password or default password</em>
-<a class="jxr_linenumber" name="180" href="#180">180</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
-<a class="jxr_linenumber" name="181" href="#181">181</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="182" href="#182">182</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getPassword(Configuration conf, String alias,
-<a class="jxr_linenumber" name="183" href="#183">183</a>       String defPass) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="184" href="#184">184</a>     String passwd = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="185" href="#185">185</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="186" href="#186">186</a>       Method m = Configuration.<strong class="jxr_keyword">class</strong>.getMethod(<span class="jxr_string">"getPassword"</span>, String.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="187" href="#187">187</a>       <strong class="jxr_keyword">char</strong>[] p = (<strong class="jxr_keyword">char</strong>[]) m.invoke(conf, alias);
-<a class="jxr_linenumber" name="188" href="#188">188</a>       <strong class="jxr_keyword">if</strong> (p != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="189" href="#189">189</a>         LOG.debug(String.format(<span class="jxr_string">"Config option \&quot;%s\&quot; was found through"</span> +
-<a class="jxr_linenumber" name="190" href="#190">190</a>             <span class="jxr_string">" the Configuration getPassword method."</span>, alias));
-<a class="jxr_linenumber" name="191" href="#191">191</a>         passwd = <strong class="jxr_keyword">new</strong> String(p);
-<a class="jxr_linenumber" name="192" href="#192">192</a>       } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="193" href="#193">193</a>         LOG.debug(String.format(
-<a class="jxr_linenumber" name="194" href="#194">194</a>             <span class="jxr_string">"Config option \&quot;%s\&quot; was not found. Using provided default value"</span>,
-<a class="jxr_linenumber" name="195" href="#195">195</a>             alias));
-<a class="jxr_linenumber" name="196" href="#196">196</a>         passwd = defPass;
-<a class="jxr_linenumber" name="197" href="#197">197</a>       }
-<a class="jxr_linenumber" name="198" href="#198">198</a>     } <strong class="jxr_keyword">catch</strong> (NoSuchMethodException e) {
-<a class="jxr_linenumber" name="199" href="#199">199</a>       <em class="jxr_comment">// this is a version of Hadoop where the credential</em>
-<a class="jxr_linenumber" name="200" href="#200">200</a>       <em class="jxr_comment">//provider API doesn't exist yet</em>
-<a class="jxr_linenumber" name="201" href="#201">201</a>       LOG.debug(String.format(
-<a class="jxr_linenumber" name="202" href="#202">202</a>           <span class="jxr_string">"Credential.getPassword method is not available."</span> +
-<a class="jxr_linenumber" name="203" href="#203">203</a>               <span class="jxr_string">" Falling back to configuration."</span>));
-<a class="jxr_linenumber" name="204" href="#204">204</a>       passwd = conf.get(alias, defPass);
-<a class="jxr_linenumber" name="205" href="#205">205</a>     } <strong class="jxr_keyword">catch</strong> (SecurityException e) {
-<a class="jxr_linenumber" name="206" href="#206">206</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(e.getMessage(), e);
-<a class="jxr_linenumber" name="207" href="#207">207</a>     } <strong class="jxr_keyword">catch</strong> (IllegalAccessException e) {
-<a class="jxr_linenumber" name="208" href="#208">208</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(e.getMessage(), e);
-<a class="jxr_linenumber" name="209" href="#209">209</a>     } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException e) {
-<a class="jxr_linenumber" name="210" href="#210">210</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(e.getMessage(), e);
-<a class="jxr_linenumber" name="211" href="#211">211</a>     } <strong class="jxr_keyword">catch</strong> (InvocationTargetException e) {
-<a class="jxr_linenumber" name="212" href="#212">212</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(e.getMessage(), e);
-<a class="jxr_linenumber" name="213" href="#213">213</a>     }
-<a class="jxr_linenumber" name="214" href="#214">214</a>     <strong class="jxr_keyword">return</strong> passwd;
-<a class="jxr_linenumber" name="215" href="#215">215</a>   }
-<a class="jxr_linenumber" name="216" href="#216">216</a> 
-<a class="jxr_linenumber" name="217" href="#217">217</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="218" href="#218">218</a> <em class="jxr_javadoccomment">   * For debugging.  Dump configurations to system output as xml format.</em>
-<a class="jxr_linenumber" name="219" href="#219">219</a> <em class="jxr_javadoccomment">   * Master and RS configurations can also be dumped using</em>
-<a class="jxr_linenumber" name="220" href="#220">220</a> <em class="jxr_javadoccomment">   * http services. e.g. "curl <a href="http://master:16010/dump" target="alexandria_uri">http://master:16010/dump</a>"</em>
-<a class="jxr_linenumber" name="221" href="#221">221</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="222" href="#222">222</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="223" href="#223">223</a>     HBaseConfiguration.create().writeXml(System.out);
-<a class="jxr_linenumber" name="224" href="#224">224</a>   }
-<a class="jxr_linenumber" name="225" href="#225">225</a> }
+<a class="jxr_linenumber" name="124" href="#124">124</a> <em class="jxr_javadoccomment">   * Returns a subset of the configuration properties, matching the given key prefix.</em>
+<a class="jxr_linenumber" name="125" href="#125">125</a> <em class="jxr_javadoccomment">   * The prefix is stripped from the return keys, ie. when calling with a prefix of "myprefix",</em>
+<a class="jxr_linenumber" name="126" href="#126">126</a> <em class="jxr_javadoccomment">   * the entry "myprefix.key1 = value1" would be returned as "key1 = value1".  If an entry's</em>
+<a class="jxr_linenumber" name="127" href="#127">127</a> <em class="jxr_javadoccomment">   * key matches the prefix exactly ("myprefix = value2"), it will &lt;strong&gt;not&lt;/strong&gt; be</em>
+<a class="jxr_linenumber" name="128" href="#128">128</a> <em class="jxr_javadoccomment">   * included in the results, since it would show up as an entry with an empty key.</em>
+<a class="jxr_linenumber" name="129" href="#129">129</a> <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="130" href="#130">130</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Configuration subset(Configuration srcConf, String prefix) {
+<a class="jxr_linenumber" name="131" href="#131">131</a>     Configuration newConf = <strong class="jxr_keyword">new</strong> Configuration(false);
+<a class="jxr_linenumber" name="132" href="#132">132</a>     <strong class="jxr_keyword">for</strong> (Entry&lt;String, String&gt; entry : srcConf) {
+<a class="jxr_linenumber" name="133" href="#133">133</a>       <strong class="jxr_keyword">if</strong> (entry.getKey().startsWith(prefix)) {
+<a class="jxr_linenumber" name="134" href="#134">134</a>         String newKey = entry.getKey().substring(prefix.length());
+<a class="jxr_linenumber" name="135" href="#135">135</a>         <em class="jxr_comment">// avoid entries that would produce an empty key</em>
+<a class="jxr_linenumber" name="136" href="#136">136</a>         <strong class="jxr_keyword">if</strong> (!newKey.isEmpty()) {
+<a class="jxr_linenumber" name="137" href="#137">137</a>           newConf.set(newKey, entry.getValue());
+<a class="jxr_linenumber" name="138" href="#138">138</a>         }
+<a class="jxr_linenumber" name="139" href="#139">139</a>       }
+<a class="jxr_linenumber" name="140" href="#140">140</a>     }
+<a class="jxr_linenumber" name="141" href="#141">141</a>     <strong class="jxr_keyword">return</strong> newConf;
+<a class="jxr_linenumber" name="142" href="#142">142</a>   }
+<a class="jxr_linenumber" name="143" href="#143">143</a> 
+<a class="jxr_linenumber" name="144" href="#144">144</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="145" href="#145">145</a> <em class="jxr_javadoccomment">   * @return whether to show HBase Configuration in servlet</em>
+<a class="jxr_linenumber" name="146" href="#146">146</a> <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="147" href="#147">147</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> isShowConfInServlet() {
+<a class="jxr_linenumber" name="148" href="#148">148</a>     <strong class="jxr_keyword">boolean</strong> isShowConf = false;
+<a class="jxr_linenumber" name="149" href="#149">149</a>     <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="150" href="#150">150</a>       <strong class="jxr_keyword">if</strong> (Class.forName(<span class="jxr_string">"org.apache.hadoop.conf.ConfServlet"</span>) != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="151" href="#151">151</a>         isShowConf = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="152" href="#152">152</a>       }
+<a class="jxr_linenumber" name="153" href="#153">153</a>     } <strong class="jxr_keyword">catch</strong> (LinkageError e) {
+<a class="jxr_linenumber" name="154" href="#154">154</a>        <em class="jxr_comment">// should we handle it more aggressively in addition to log the error?</em>
+<a class="jxr_linenumber" name="155" href="#155">155</a>        LOG.warn(<span class="jxr_string">"Error thrown: "</span>, e);
+<a class="jxr_linenumber" name="156" href="#156">156</a>     } <strong class="jxr_keyword">catch</strong> (ClassNotFoundException ce) {
+<a class="jxr_linenumber" name="157" href="#157">157</a>       LOG.debug(<span class="jxr_string">"ClassNotFound: ConfServlet"</span>);
+<a class="jxr_linenumber" name="158" href="#158">158</a>       <em class="jxr_comment">// ignore</em>
+<a class="jxr_linenumber" name="159" href="#159">159</a>     }
+<a class="jxr_linenumber" name="160" href="#160">160</a>     <strong class="jxr_keyword">return</strong> isShowConf;
+<a class="jxr_linenumber" name="161" href="#161">161</a>   }
+<a class="jxr_linenumber" name="162" href="#162">162</a> 
+<a class="jxr_linenumber" name="163" href="#163">163</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="164" href="#164">164</a> <em class="jxr_javadoccomment">   * Get the value of the &lt;code&gt;name&lt;/code&gt; property as an &lt;code&gt;int&lt;/code&gt;, possibly</em>
+<a class="jxr_linenumber" name="165" href="#165">165</a> <em class="jxr_javadoccomment">   * referring to the deprecated name of the configuration property.</em>
+<a class="jxr_linenumber" name="166" href="#166">166</a> <em class="jxr_javadoccomment">   * If no such property exists, the provided default value is returned,</em>
+<a class="jxr_linenumber" name="167" href="#167">167</a> <em class="jxr_javadoccomment">   * or if the specified value is not a valid &lt;code&gt;int&lt;/code&gt;,</em>
+<a class="jxr_linenumber" name="168" href="#168">168</a> <em class="jxr_javadoccomment">   * then an error is thrown.</em>
+<a class="jxr_linenumber" name="169" href="#169">169</a> <em class="jxr_javadoccomment">   *</em>
+<a class="jxr_linenumber" name="170" href="#170">170</a> <em class="jxr_javadoccomment">   * @param name property name.</em>
+<a class="jxr_linenumber" name="171" href="#171">171</a> <em class="jxr_javadoccomment">   * @param deprecatedName a deprecatedName for the property to use</em>
+<a class="jxr_linenumber" name="172" href="#172">172</a> <em class="jxr_javadoccomment">   * if non-deprecated name is not used</em>
+<a class="jxr_linenumber" name="173" href="#173">173</a> <em class="jxr_javadoccomment">   * @param defaultValue default value.</em>
+<a class="jxr_linenumber" name="174" href="#174">174</a> <em class="jxr_javadoccomment">   * @throws NumberFormatException when the value is invalid</em>
+<a class="jxr_linenumber" name="175" href="#175">175</a> <em class="jxr_javadoccomment">   * @return property value as an &lt;code&gt;int&lt;/code&gt;,</em>
+<a class="jxr_linenumber" name="176" href="#176">176</a> <em class="jxr_javadoccomment">   *         or &lt;code&gt;defaultValue&lt;/code&gt;.</em>
+<a class="jxr_linenumber" name="177" href="#177">177</a> <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="178" href="#178">178</a>   <em class="jxr_comment">// TODO: developer note: This duplicates the functionality of deprecated</em>
+<a class="jxr_linenumber" name="179" href="#179">179</a>   <em class="jxr_comment">// property support in Configuration in Hadoop 2. But since Hadoop-1 does not</em>
+<a class="jxr_linenumber" name="180" href="#180">180</a>   <em class="jxr_comment">// contain these changes, we will do our own as usual. Replace these when H2 is default.</em>
+<a class="jxr_linenumber" name="181" href="#181">181</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> getInt(Configuration conf, String name,
+<a class="jxr_linenumber" name="182" href="#182">182</a>       String deprecatedName, <strong class="jxr_keyword">int</strong> defaultValue) {
+<a class="jxr_linenumber" name="183" href="#183">183</a>     <strong class="jxr_keyword">if</strong> (conf.get(deprecatedName) != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="184" href="#184">184</a>       LOG.warn(String.format(<span class="jxr_string">"Config option \&quot;%s\&quot; is deprecated. Instead, use \&quot;%s\&quot;"</span>
+<a class="jxr_linenumber" name="185" href="#185">185</a>         , deprecatedName, name));
+<a class="jxr_linenumber" name="186" href="#186">186</a>       <strong class="jxr_keyword">return</strong> conf.getInt(deprecatedName, defaultValue);
+<a class="jxr_linenumber" name="187" href="#187">187</a>     } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="188" href="#188">188</a>       <strong class="jxr_keyword">return</strong> conf.getInt(name, defaultValue);
+<a class="jxr_linenumber" name="189" href="#189">189</a>     }
+<a class="jxr_linenumber" name="190" href="#190">190</a>   }
+<a class="jxr_linenumber" name="191" href="#191">191</a> 
+<a class="jxr_linenumber" name="192" href="#192">192</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="193" href="#193">193</a> <em class="jxr_javadoccomment">   * Get the password from the Configuration instance using the</em>
+<a class="jxr_linenumber" name="194" href="#194">194</a> <em class="jxr_javadoccomment">   * getPassword method if it exists. If not, then fall back to the</em>
+<a class="jxr_linenumber" name="195" href="#195">195</a> <em class="jxr_javadoccomment">   * general get method for configuration elements.</em>
+<a class="jxr_linenumber" name="196" href="#196">196</a> <em class="jxr_javadoccomment">   *</em>
+<a class="jxr_linenumber" name="197" href="#197">197</a> <em class="jxr_javadoccomment">   * @param conf    configuration instance for accessing the passwords</em>
+<a class="jxr_linenumber" name="198" href="#198">198</a> <em class="jxr_javadoccomment">   * @param alias   the name of the password element</em>
+<a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_javadoccomment">   * @param defPass the default password</em>
+<a class="jxr_linenumber" name="200" href="#200">200</a> <em class="jxr_javadoccomment">   * @return String password or default password</em>
+<a class="jxr_linenumber" name="201" href="#201">201</a> <em class="jxr_javadoccomment">   * @throws IOException</em>
+<a class="jxr_linenumber" name="202" href="#202">202</a> <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="203" href="#203">203</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getPassword(Configuration conf, String alias,
+<a class="jxr_linenumber" name="204" href="#204">204</a>       String defPass) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="205" href="#205">205</a>     String passwd = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="206" href="#206">206</a>     <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="207" href="#207">207</a>       Method m = Configuration.<strong class="jxr_keyword">class</strong>.getMethod(<span class="jxr_string">"getPassword"</span>, String.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="208" href="#208">208</a>       <strong class="jxr_keyword">char</strong>[] p = (<strong class="jxr_keyword">char</strong>[]) m.invoke(conf, alias);
+<a class="jxr_linenumber" name="209" href="#209">209</a>       <strong class="jxr_keyword">if</strong> (p != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="210" href="#210">210</a>         LOG.debug(String.format(<span class="jxr_string">"Config option \&quot;%s\&quot; was found through"</span> +
+<a class="jxr_linenumber" name="211" href="#211">211</a>             <span class="jxr_string">" the Configuration getPassword method."</span>, alias));
+<a class="jxr_linenumber" name="212" href="#212">212</a>         passwd = <strong class="jxr_keyword">new</strong> String(p);
+<a class="jxr_linenumber" name="213" href="#213">213</a>       } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="214" href="#214">214</a>         LOG.debug(String.format(
+<a class="jxr_linenumber" name="215" href="#215">215</a>             <span class="jxr_string">"Config option \&quot;%s\&quot; was not found. Using provided default value"</span>,
+<a class="jxr_linenumber" name="216" href="#216">216</a>             alias));
+<a class="jxr_linenumber" name="217" href="#217">217</a>         passwd = defPass;
+<a class="jxr_linenumber" name="218" href="#218">218</a>       }
+<a class="jxr_linenumber" name="219" href="#219">219</a>     } <strong class="jxr_keyword">catch</strong> (NoSuchMethodException e) {
+<a class="jxr_linenumber" name="220" href="#220">220</a>       <em class="jxr_comment">// this is a version of Hadoop where the credential</em>
+<a class="jxr_linenumber" name="221" href="#221">221</a>       <em class="jxr_comment">//provider API doesn't exist yet</em>
+<a class="jxr_linenumber" name="222" href="#222">222</a>       LOG.debug(String.format(
+<a class="jxr_linenumber" name="223" href="#223">223</a>           <span class="jxr_string">"Credential.getPassword method is not available."</span> +
+<a class="jxr_linenumber" name="224" href="#224">224</a>               <span class="jxr_string">" Falling back to configuration."</span>));
+<a class="jxr_linenumber" name="225" href="#225">225</a>       passwd = conf.get(alias, defPass);
+<a class="jxr_linenumber" name="226" href="#226">226</a>     } <strong class="jxr_keyword">catch</strong> (SecurityException e) {
+<a class="jxr_linenumber" name="227" href="#227">227</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(e.getMessage(), e);
+<a class="jxr_linenumber" name="228" href="#228">228</a>     } <strong class="jxr_keyword">catch</strong> (IllegalAccessException e) {
+<a class="jxr_linenumber" name="229" href="#229">229</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(e.getMessage(), e);
+<a class="jxr_linenumber" name="230" href="#230">230</a>     } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException e) {
+<a class="jxr_linenumber" name="231" href="#231">231</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(e.getMessage(), e);
+<a class="jxr_linenumber" name="232" href="#232">232</a>     } <strong class="jxr_keyword">catch</strong> (InvocationTargetException e) {
+<a class="jxr_linenumber" name="233" href="#233">233</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IOException(e.getMessage(), e);
+<a class="jxr_linenumber" name="234" href="#234">234</a>     }
+<a class="jxr_linenumber" name="235" href="#235">235</a>     <strong class="jxr_keyword">return</strong> passwd;
+<a class="jxr_linenumber" name="236" href="#236">236</a>   }
+<a class="jxr_linenumber" name="237" href="#237">237</a> 
+<a class="jxr_linenumber" name="238" href="#238">238</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="239" href="#239">239</a> <em class="jxr_javadoccomment">   * For debugging.  Dump configurations to system output as xml format.</em>
+<a class="jxr_linenumber" name="240" href="#240">240</a> <em class="jxr_javadoccomment">   * Master and RS configurations can also be dumped using</em>
+<a class="jxr_linenumber" name="241" href="#241">241</a> <em class="jxr_javadoccomment">   * http services. e.g. "curl <a href="http://master:16010/dump" target="alexandria_uri">http://master:16010/dump</a>"</em>
+<a class="jxr_linenumber" name="242" href="#242">242</a> <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="243" href="#243">243</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="244" href="#244">244</a>     HBaseConfiguration.create().writeXml(System.out);
+<a class="jxr_linenumber" name="245" href="#245">245</a>   }
+<a class="jxr_linenumber" name="246" href="#246">246</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

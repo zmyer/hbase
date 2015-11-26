@@ -211,21 +211,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#putBuffer(java.nio.ByteBuffer)">putBuffer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bb)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static long</code></td>
+<td class="colFirst"><code>(package private) static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#subtractOneBufferFromState(long,%20int)">subtractOneBufferFromState</a></strong>(long&nbsp;state,
                                                     int&nbsp;capacity)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static int</code></td>
+<td class="colFirst"><code>(package private) static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#toCountOfBuffers(long)">toCountOfBuffers</a></strong>(long&nbsp;state)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static long</code></td>
+<td class="colFirst"><code>(package private) static long</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#toState(int,%20int)">toState</a></strong>(int&nbsp;countOfBuffers,
               int&nbsp;totalCapacity)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static int</code></td>
+<td class="colFirst"><code>(package private) static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#toTotalCapacity(long)">toTotalCapacity</a></strong>(long&nbsp;state)</code>&nbsp;</td>
 </tr>
 </table>
@@ -310,7 +310,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>allocationsRef</h4>
-<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.96">allocationsRef</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.100">allocationsRef</a></pre>
 </li>
 </ul>
 </li>
@@ -327,7 +327,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>BoundedByteBufferPool</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.103">BoundedByteBufferPool</a>(int&nbsp;maxByteBufferSizeToCache,
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.107">BoundedByteBufferPool</a>(int&nbsp;maxByteBufferSizeToCache,
                      int&nbsp;initialByteBufferSize,
                      int&nbsp;maxToCache)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>maxByteBufferSizeToCache</code> - </dd><dd><code>initialByteBufferSize</code> - </dd><dd><code>maxToCache</code> - </dd></dl>
@@ -365,7 +365,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>toCountOfBuffers</h4>
-<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.79">toCountOfBuffers</a>(long&nbsp;state)</pre>
+<pre>static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.80">toCountOfBuffers</a>(long&nbsp;state)</pre>
 </li>
 </ul>
 <a name="toTotalCapacity(long)">
@@ -374,7 +374,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>toTotalCapacity</h4>
-<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.83">toTotalCapacity</a>(long&nbsp;state)</pre>
+<pre>static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.85">toTotalCapacity</a>(long&nbsp;state)</pre>
 </li>
 </ul>
 <a name="toState(int, int)">
@@ -383,7 +383,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>toState</h4>
-<pre>private static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.87">toState</a>(int&nbsp;countOfBuffers,
+<pre>static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.90">toState</a>(int&nbsp;countOfBuffers,
            int&nbsp;totalCapacity)</pre>
 </li>
 </ul>
@@ -393,7 +393,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>subtractOneBufferFromState</h4>
-<pre>private static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.91">subtractOneBufferFromState</a>(long&nbsp;state,
+<pre>static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.95">subtractOneBufferFromState</a>(long&nbsp;state,
                               int&nbsp;capacity)</pre>
 </li>
 </ul>
@@ -403,7 +403,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getBuffer</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.110">getBuffer</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.114">getBuffer</a>()</pre>
 </li>
 </ul>
 <a name="putBuffer(java.nio.ByteBuffer)">
@@ -412,7 +412,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>putBuffer</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.142">putBuffer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bb)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/io/BoundedByteBufferPool.html#line.146">putBuffer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;bb)</pre>
 </li>
 </ul>
 </li>

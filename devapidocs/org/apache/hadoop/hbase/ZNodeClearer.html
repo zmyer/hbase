@@ -95,7 +95,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.47">ZNodeClearer</a>
+<pre>public class <a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.50">ZNodeClearer</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block"><p>Contains a set of methods for the collaboration between the start/stop scripts and the
  servers. It allows to delete immediately the znode when the master or the regions server crashes.
@@ -184,9 +184,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ZNodeClearer.html#parseMasterServerName(java.lang.String)">parseMasterServerName</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;rsZnodePath)</code>
+<div class="block">See HBASE-14861.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ZNodeClearer.html#readMyEphemeralNodeOnDisk()">readMyEphemeralNodeOnDisk</a></strong>()</code>
 <div class="block">read the content of znode file, expects a single line.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/ZNodeClearer.html#tablesOnMaster(org.apache.hadoop.conf.Configuration)">tablesOnMaster</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
@@ -222,7 +232,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.48">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.51">LOG</a></pre>
 </li>
 </ul>
 </li>
@@ -239,7 +249,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ZNodeClearer</h4>
-<pre>private&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.50">ZNodeClearer</a>()</pre>
+<pre>private&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.53">ZNodeClearer</a>()</pre>
 </li>
 </ul>
 </li>
@@ -256,7 +266,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>writeMyEphemeralNodeOnDisk</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.55">writeMyEphemeralNodeOnDisk</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileContent)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.58">writeMyEphemeralNodeOnDisk</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileContent)</pre>
 <div class="block">Logs the errors without failing on exception.</div>
 </li>
 </ul>
@@ -266,7 +276,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>readMyEphemeralNodeOnDisk</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.91">readMyEphemeralNodeOnDisk</a>()
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.94">readMyEphemeralNodeOnDisk</a>()
                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">read the content of znode file, expects a single line.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -279,7 +289,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getMyEphemeralNodeFileName</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.110">getMyEphemeralNodeFileName</a>()</pre>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.113">getMyEphemeralNodeFileName</a>()</pre>
 <div class="block">Get the name of the file used to store the znode contents</div>
 </li>
 </ul>
@@ -289,8 +299,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteMyEphemeralNodeOnDisk</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.117">deleteMyEphemeralNodeOnDisk</a>()</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.120">deleteMyEphemeralNodeOnDisk</a>()</pre>
 <div class="block">delete the znode file</div>
+</li>
+</ul>
+<a name="parseMasterServerName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>parseMasterServerName</h4>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.135">parseMasterServerName</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;rsZnodePath)</pre>
+<div class="block">See HBASE-14861. We are extracting master ServerName from rsZnodePath
+ example: "/hbase/rs/server.example.com,16020,1448266496481"</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>rsZnodePath</code> - from HBASE_ZNODE_FILE</dd>
+<dt><span class="strong">Returns:</span></dt><dd>String representation of ServerName or null if fails</dd></dl>
+</li>
+</ul>
+<a name="tablesOnMaster(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tablesOnMaster</h4>
+<pre>private static&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.150">tablesOnMaster</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if cluster is configured with master-rs collocation</dd></dl>
 </li>
 </ul>
 <a name="clear(org.apache.hadoop.conf.Configuration)">
@@ -299,9 +332,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>clear</h4>
-<pre>public static&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.130">clear</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public static&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/ZNodeClearer.html#line.165">clear</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <div class="block">Delete the master znode if its content (ServerName string) is the same
-  as the one in the znode file. (env: HBASE_ZNODE_FILE).</div>
+  as the one in the znode file. (env: HBASE_ZNODE_FILE). I case of master-rs
+  colloaction we extract ServerName string from rsZnode path.(HBASE-14861)</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true on successful deletion, false otherwise.</dd></dl>
 </li>
 </ul>
