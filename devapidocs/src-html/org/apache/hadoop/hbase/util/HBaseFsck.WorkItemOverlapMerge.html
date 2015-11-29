@@ -615,8 +615,8 @@
 <span class="sourceLineNo">607</span>   * region servers and the masters.  It makes each region's state in HDFS, in<a name="line.607"></a>
 <span class="sourceLineNo">608</span>   * hbase:meta, and deployments consistent.<a name="line.608"></a>
 <span class="sourceLineNo">609</span>   *<a name="line.609"></a>
-<span class="sourceLineNo">610</span>   * @return If &amp;gt; 0 , number of errors detected, if &amp;lt; 0 there was an unrecoverable<a name="line.610"></a>
-<span class="sourceLineNo">611</span>   * error.  If 0, we have a clean hbase.<a name="line.611"></a>
+<span class="sourceLineNo">610</span>   * @return If &gt; 0 , number of errors detected, if &amp;lt; 0 there was an unrecoverable<a name="line.610"></a>
+<span class="sourceLineNo">611</span>   *     error.  If 0, we have a clean hbase.<a name="line.611"></a>
 <span class="sourceLineNo">612</span>   */<a name="line.612"></a>
 <span class="sourceLineNo">613</span>  public int onlineConsistencyRepair() throws IOException, KeeperException,<a name="line.613"></a>
 <span class="sourceLineNo">614</span>    InterruptedException {<a name="line.614"></a>
@@ -1524,10 +1524,10 @@
 <span class="sourceLineNo">1516</span>  /**<a name="line.1516"></a>
 <span class="sourceLineNo">1517</span>   * Sideline a region dir (instead of deleting it)<a name="line.1517"></a>
 <span class="sourceLineNo">1518</span>   *<a name="line.1518"></a>
-<span class="sourceLineNo">1519</span>   * @param parentDir if specified, the region will be sidelined to<a name="line.1519"></a>
-<span class="sourceLineNo">1520</span>   * folder like .../parentDir/&lt;table name&gt;/&lt;region name&gt;. The purpose<a name="line.1520"></a>
-<span class="sourceLineNo">1521</span>   * is to group together similar regions sidelined, for example, those<a name="line.1521"></a>
-<span class="sourceLineNo">1522</span>   * regions should be bulk loaded back later on. If null, it is ignored.<a name="line.1522"></a>
+<span class="sourceLineNo">1519</span>   * @param parentDir if specified, the region will be sidelined to folder like<a name="line.1519"></a>
+<span class="sourceLineNo">1520</span>   *     {@literal .../parentDir/&lt;table name&gt;/&lt;region name&gt;}. The purpose is to group together<a name="line.1520"></a>
+<span class="sourceLineNo">1521</span>   *     similar regions sidelined, for example, those regions should be bulk loaded back later<a name="line.1521"></a>
+<span class="sourceLineNo">1522</span>   *     on. If NULL, it is ignored.<a name="line.1522"></a>
 <span class="sourceLineNo">1523</span>   */<a name="line.1523"></a>
 <span class="sourceLineNo">1524</span>  Path sidelineRegionDir(FileSystem fs,<a name="line.1524"></a>
 <span class="sourceLineNo">1525</span>      String parentDir, HbckInfo hi) throws IOException {<a name="line.1525"></a>

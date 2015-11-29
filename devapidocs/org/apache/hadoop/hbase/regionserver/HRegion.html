@@ -2788,7 +2788,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/io/HeapSize.html" tit
 <ul class="blockList">
 <li class="blockList">
 <h4>FIXED_OVERHEAD</h4>
-<pre>public static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7466">FIXED_OVERHEAD</a></pre>
+<pre>public static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7459">FIXED_OVERHEAD</a></pre>
 </li>
 </ul>
 <a name="DEEP_OVERHEAD">
@@ -2797,7 +2797,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/io/HeapSize.html" tit
 <ul class="blockList">
 <li class="blockList">
 <h4>DEEP_OVERHEAD</h4>
-<pre>public static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7483">DEEP_OVERHEAD</a></pre>
+<pre>public static final&nbsp;long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7476">DEEP_OVERHEAD</a></pre>
 </li>
 </ul>
 <a name="MOCKED_LIST">
@@ -2806,7 +2806,7 @@ implements <a href="../../../../../org/apache/hadoop/hbase/io/HeapSize.html" tit
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MOCKED_LIST</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7933">MOCKED_LIST</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7926">MOCKED_LIST</a></pre>
 <div class="block">A mocked list implementation - discards all updates.</div>
 </li>
 </ul>
@@ -4992,7 +4992,7 @@ public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/r
 <pre>private static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.5239">hasMultipleColumnFamilies</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&nbsp;familyPaths)</pre>
 <div class="block">Determines whether multiple column families are present
  Precondition: familyPaths is not null</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>familyPaths</code> - List of Pair<byte[] column family, String hfilePath></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>familyPaths</code> - List of (column family, hfilePath)</dd></dl>
 </li>
 </ul>
 <a name="bulkLoadHFiles(java.util.Collection, boolean, org.apache.hadoop.hbase.regionserver.Region.BulkLoadListener)">
@@ -5716,10 +5716,9 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>carryForwardTags</h4>
-<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.6957">carryForwardTags</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.6955">carryForwardTags</a>(<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;tags)</pre>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cell</code> - </dd><dd><code>tags</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd>The passed-in List<Tag> but with the tags from <code>cell</code> added.</dd></dl>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The passed-in <code>tags</code> but with the tags from <code>cell</code> added.</dd></dl>
 </li>
 </ul>
 <a name="doGet(org.apache.hadoop.hbase.regionserver.Store, byte[], java.util.Map.Entry, org.apache.hadoop.hbase.io.TimeRange)">
@@ -5728,14 +5727,13 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>doGet</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.6975">doGet</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.6968">doGet</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                byte[]&nbsp;row,
                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&gt;&nbsp;family,
                <a href="../../../../../org/apache/hadoop/hbase/io/TimeRange.html" title="class in org.apache.hadoop.hbase.io">TimeRange</a>&nbsp;tr)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Run a Get against passed in <code>store</code> on passed <code>row</code>, etc.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>store</code> - </dd><dd><code>row</code> - </dd><dd><code>family</code> - </dd><dd><code>tr</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd>Get result.</dd>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Get result.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -5746,7 +5744,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>append</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.6992">append</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a>&nbsp;append)
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.6985">append</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a>&nbsp;append)
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -5758,7 +5756,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>append</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7001">append</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a>&nbsp;mutate,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.6994">append</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a>&nbsp;mutate,
             long&nbsp;nonceGroup,
             long&nbsp;nonce)
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -5778,7 +5776,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>increment</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7229">increment</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a>&nbsp;increment)
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7222">increment</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a>&nbsp;increment)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -5790,7 +5788,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>increment</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7242">increment</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a>&nbsp;mutation,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7235">increment</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a>&nbsp;mutation,
                long&nbsp;nonceGroup,
                long&nbsp;nonce)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -5810,7 +5808,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>checkFamily</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7457">checkFamily</a>(byte[]&nbsp;family)
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7450">checkFamily</a>(byte[]&nbsp;family)
            throws <a href="../../../../../org/apache/hadoop/hbase/regionserver/NoSuchColumnFamilyException.html" title="class in org.apache.hadoop.hbase.regionserver">NoSuchColumnFamilyException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/NoSuchColumnFamilyException.html" title="class in org.apache.hadoop.hbase.regionserver">NoSuchColumnFamilyException</a></code></dd></dl>
@@ -5822,7 +5820,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>heapSize</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7497">heapSize</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7490">heapSize</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/io/HeapSize.html#heapSize()">heapSize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a></code></dd>
@@ -5836,7 +5834,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>printUsageAndExit</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7510">printUsageAndExit</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7503">printUsageAndExit</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
 </li>
 </ul>
 <a name="registerService(com.google.protobuf.Service)">
@@ -5845,7 +5843,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>registerService</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7521">registerService</a>(com.google.protobuf.Service&nbsp;instance)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7514">registerService</a>(com.google.protobuf.Service&nbsp;instance)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#registerService(com.google.protobuf.Service)">Region</a></code></strong></div>
 <div class="block">Registers a new protocol buffer <code>Service</code> subclass as a coprocessor endpoint to
  be available for handling
@@ -5872,7 +5870,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>execService</h4>
-<pre>public&nbsp;com.google.protobuf.Message&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7543">execService</a>(com.google.protobuf.RpcController&nbsp;controller,
+<pre>public&nbsp;com.google.protobuf.Message&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7536">execService</a>(com.google.protobuf.RpcController&nbsp;controller,
                                       org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall&nbsp;call)
                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#execService(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall)">Region</a></code></strong></div>
@@ -5897,7 +5895,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>processTable</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7598">processTable</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7591">processTable</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                 org.apache.hadoop.fs.Path&nbsp;p,
                 <a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a>&nbsp;walFactory,
                 org.apache.hadoop.conf.Configuration&nbsp;c,
@@ -5913,7 +5911,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>shouldForceSplit</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7640">shouldForceSplit</a>()</pre>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7633">shouldForceSplit</a>()</pre>
 </li>
 </ul>
 <a name="getExplicitSplitPoint()">
@@ -5922,7 +5920,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>getExplicitSplitPoint</h4>
-<pre>byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7644">getExplicitSplitPoint</a>()</pre>
+<pre>byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7637">getExplicitSplitPoint</a>()</pre>
 </li>
 </ul>
 <a name="forceSplit(byte[])">
@@ -5931,7 +5929,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>forceSplit</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7648">forceSplit</a>(byte[]&nbsp;sp)</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7641">forceSplit</a>(byte[]&nbsp;sp)</pre>
 </li>
 </ul>
 <a name="clearSplit()">
@@ -5940,7 +5938,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>clearSplit</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7657">clearSplit</a>()</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7650">clearSplit</a>()</pre>
 </li>
 </ul>
 <a name="prepareToSplit()">
@@ -5949,7 +5947,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>prepareToSplit</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7665">prepareToSplit</a>()</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7658">prepareToSplit</a>()</pre>
 <div class="block">Give the region a chance to prepare before it is split.</div>
 </li>
 </ul>
@@ -5959,7 +5957,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>checkSplit</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7675">checkSplit</a>()</pre>
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7668">checkSplit</a>()</pre>
 <div class="block">Return the splitpoint. null indicates the region isn't splittable
  If the splitpoint isn't explicitly specified, it will go over the stores
  to find the best splitpoint. Currently the criteria of best splitpoint
@@ -5972,7 +5970,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>getCompactPriority</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7711">getCompactPriority</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7704">getCompactPriority</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The priority that this region should have in the compaction queue</dd></dl>
 </li>
 </ul>
@@ -5982,7 +5980,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>getCoprocessorHost</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7722">getCoprocessorHost</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7715">getCoprocessorHost</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#getCoprocessorHost()">getCoprocessorHost</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a></code></dd>
@@ -5995,7 +5993,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>setCoprocessorHost</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7727">setCoprocessorHost</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost</a>&nbsp;coprocessorHost)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7720">setCoprocessorHost</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost</a>&nbsp;coprocessorHost)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>coprocessorHost</code> - the new coprocessor host</dd></dl>
 </li>
 </ul>
@@ -6005,7 +6003,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>startRegionOperation</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7732">startRegionOperation</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7725">startRegionOperation</a>()
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#startRegionOperation()">Region</a></code></strong></div>
 <div class="block">This method needs to be called before any public call that reads or
@@ -6026,7 +6024,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>startRegionOperation</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7737">startRegionOperation</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.Operation.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.Operation</a>&nbsp;op)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7730">startRegionOperation</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.Operation.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.Operation</a>&nbsp;op)
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#startRegionOperation(org.apache.hadoop.hbase.regionserver.Region.Operation)">Region</a></code></strong></div>
 <div class="block">This method needs to be called before any public call that reads or
@@ -6048,7 +6046,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>closeRegionOperation</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7785">closeRegionOperation</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7778">closeRegionOperation</a>()
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#closeRegionOperation()">Region</a></code></strong></div>
 <div class="block">Closes the region operation lock.</div>
@@ -6065,7 +6063,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>closeRegionOperation</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7794">closeRegionOperation</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.Operation.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.Operation</a>&nbsp;operation)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7787">closeRegionOperation</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.Operation.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.Operation</a>&nbsp;operation)
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Closes the lock. This needs to be called in the finally block corresponding
  to the try block of <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#startRegionOperation(org.apache.hadoop.hbase.regionserver.Region.Operation)"><code>Region.startRegionOperation(Operation)</code></a></div>
@@ -6079,7 +6077,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>startBulkRegionOperation</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7810">startBulkRegionOperation</a>(boolean&nbsp;writeLockNeeded)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7803">startBulkRegionOperation</a>(boolean&nbsp;writeLockNeeded)
                                throws <a href="../../../../../org/apache/hadoop/hbase/NotServingRegionException.html" title="class in org.apache.hadoop.hbase">NotServingRegionException</a>,
                                       <a href="../../../../../org/apache/hadoop/hbase/RegionTooBusyException.html" title="class in org.apache.hadoop.hbase">RegionTooBusyException</a>,
                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InterruptedIOException.html?is-external=true" title="class or interface in java.io">InterruptedIOException</a></pre>
@@ -6099,7 +6097,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>closeBulkRegionOperation</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7828">closeBulkRegionOperation</a>()</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7821">closeBulkRegionOperation</a>()</pre>
 <div class="block">Closes the lock. This needs to be called in the finally block corresponding
  to the try block of #startRegionOperation</div>
 </li>
@@ -6110,7 +6108,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>recordMutationWithoutWal</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7837">recordMutationWithoutWal</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&gt;&nbsp;familyMap)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7830">recordMutationWithoutWal</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&gt;&nbsp;familyMap)</pre>
 <div class="block">Update counters for number of puts without wal and the size of possible data loss.
  These information are exposed by the region server metrics.</div>
 </li>
@@ -6121,7 +6119,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>lock</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7858">lock</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a>&nbsp;lock)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7851">lock</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a>&nbsp;lock)
            throws <a href="../../../../../org/apache/hadoop/hbase/RegionTooBusyException.html" title="class in org.apache.hadoop.hbase">RegionTooBusyException</a>,
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InterruptedIOException.html?is-external=true" title="class or interface in java.io">InterruptedIOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -6135,7 +6133,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>lock</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7868">lock</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a>&nbsp;lock,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7861">lock</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a>&nbsp;lock,
         int&nbsp;multiplier)
            throws <a href="../../../../../org/apache/hadoop/hbase/RegionTooBusyException.html" title="class in org.apache.hadoop.hbase">RegionTooBusyException</a>,
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InterruptedIOException.html?is-external=true" title="class or interface in java.io">InterruptedIOException</a></pre>
@@ -6153,7 +6151,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>syncOrDefer</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7895">syncOrDefer</a>(long&nbsp;txid,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7888">syncOrDefer</a>(long&nbsp;txid,
                <a href="../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Calls sync with the given transaction ID if the region's table is not
@@ -6169,7 +6167,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>shouldSyncWAL</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7926">shouldSyncWAL</a>()</pre>
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7919">shouldSyncWAL</a>()</pre>
 <div class="block">Check whether we should sync the wal from the table's durability settings</div>
 </li>
 </ul>
@@ -6179,7 +6177,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>main</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7965">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7958">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Facility for dumping and compacting catalog tables.
  Only does catalog tables since these are only tables we for sure know
@@ -6197,7 +6195,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>getOpenSeqNum</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7996">getOpenSeqNum</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7989">getOpenSeqNum</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#getOpenSeqNum()">getOpenSeqNum</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a></code></dd>
@@ -6210,7 +6208,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>getMaxStoreSeqId</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8001">getMaxStoreSeqId</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7994">getMaxStoreSeqId</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#getMaxStoreSeqId()">getMaxStoreSeqId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a></code></dd>
@@ -6224,7 +6222,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>getOldestSeqIdOfStore</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8006">getOldestSeqIdOfStore</a>(byte[]&nbsp;familyName)</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.7999">getOldestSeqIdOfStore</a>(byte[]&nbsp;familyName)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#getOldestSeqIdOfStore(byte[])">getOldestSeqIdOfStore</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a></code></dd>
@@ -6239,7 +6237,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>getCompactionState</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.protobuf.generated.AdminProtos.GetRegionInfoResponse.CompactionState&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8011">getCompactionState</a>()</pre>
+<pre>public&nbsp;org.apache.hadoop.hbase.protobuf.generated.AdminProtos.GetRegionInfoResponse.CompactionState&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8004">getCompactionState</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#getCompactionState()">getCompactionState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a></code></dd>
@@ -6252,7 +6250,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>reportCompactionRequestStart</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8017">reportCompactionRequestStart</a>(boolean&nbsp;isMajor)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8010">reportCompactionRequestStart</a>(boolean&nbsp;isMajor)</pre>
 </li>
 </ul>
 <a name="reportCompactionRequestEnd(boolean, int, long)">
@@ -6261,7 +6259,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>reportCompactionRequestEnd</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8021">reportCompactionRequestEnd</a>(boolean&nbsp;isMajor,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8014">reportCompactionRequestEnd</a>(boolean&nbsp;isMajor,
                               int&nbsp;numFiles,
                               long&nbsp;filesSizeCompacted)</pre>
 </li>
@@ -6272,7 +6270,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>getSequenceId</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8037">getSequenceId</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8030">getSequenceId</a>()</pre>
 <div class="block">Do not change this sequence id.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>sequenceId</dd></dl>
 </li>
@@ -6283,7 +6281,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>appendEmptyEdit</h4>
-<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8049">appendEmptyEdit</a>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8042">appendEmptyEdit</a>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Append a faked WALEdit in order to get a long sequence number and wal syncer will just ignore
  the WALEdit append later.</div>
@@ -6299,7 +6297,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>onConfigurationChange</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8071">onConfigurationChange</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8064">onConfigurationChange</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <div class="block">This method would be called by the <a href="../../../../../org/apache/hadoop/hbase/conf/ConfigurationManager.html" title="class in org.apache.hadoop.hbase.conf"><code>ConfigurationManager</code></a>
  object when the <code>Configuration</code> object is reloaded from disk.</div>
 <dl>
@@ -6314,7 +6312,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>registerChildren</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8079">registerChildren</a>(<a href="../../../../../org/apache/hadoop/hbase/conf/ConfigurationManager.html" title="class in org.apache.hadoop.hbase.conf">ConfigurationManager</a>&nbsp;manager)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8072">registerChildren</a>(<a href="../../../../../org/apache/hadoop/hbase/conf/ConfigurationManager.html" title="class in org.apache.hadoop.hbase.conf">ConfigurationManager</a>&nbsp;manager)</pre>
 <div class="block">Needs to be called to register the children to the manager.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -6328,7 +6326,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockList">
 <li class="blockList">
 <h4>deregisterChildren</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8090">deregisterChildren</a>(<a href="../../../../../org/apache/hadoop/hbase/conf/ConfigurationManager.html" title="class in org.apache.hadoop.hbase.conf">ConfigurationManager</a>&nbsp;manager)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8083">deregisterChildren</a>(<a href="../../../../../org/apache/hadoop/hbase/conf/ConfigurationManager.html" title="class in org.apache.hadoop.hbase.conf">ConfigurationManager</a>&nbsp;manager)</pre>
 <div class="block">Needs to be called to deregister the children from the manager.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -6342,7 +6340,7 @@ public static&nbsp;org.apache.hadoop.fs.Path&nbsp;<a href="../../../../../src-ht
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getCellCompartor</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8097">getCellCompartor</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.html#line.8090">getCellCompartor</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#getCellCompartor()">Region</a></code></strong></div>
 <div class="block">The comparator to be used with the region</div>
 <dl>

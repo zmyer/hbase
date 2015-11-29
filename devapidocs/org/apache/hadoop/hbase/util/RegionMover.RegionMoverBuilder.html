@@ -169,10 +169,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#RegionMover.RegionMoverBuilder(java.lang.String)">RegionMover.RegionMoverBuilder</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname)</code>
-<div class="block">Hostname to unload regions from or load regions to Valid format: <hostname> or
- <hostname:port></div>
-</td>
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#RegionMover.RegionMoverBuilder(java.lang.String)">RegionMover.RegionMoverBuilder</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -205,9 +202,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#excludeFile(java.lang.String)">excludeFile</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;excludefile)</code>
-<div class="block">Path of file containing hostnames to be excluded during region movement Exclude file should
- have <host:port> per line.Port is mandatory here as we can have many RS running on a single
- host</div>
+<div class="block">Path of file containing hostnames to be excluded during region movement.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -342,10 +337,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>RegionMover.RegionMoverBuilder</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.126">RegionMover.RegionMoverBuilder</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname)</pre>
-<div class="block">Hostname to unload regions from or load regions to Valid format: <hostname> or
- <hostname:port></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>hostname</code> - </dd></dl>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.125">RegionMover.RegionMoverBuilder</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>hostname</code> - Hostname to unload regions from or load regions to. Can be either hostname
+     or hostname:port.</dd></dl>
 </li>
 </ul>
 </li>
@@ -362,7 +356,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setDefaultfilename</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.135">setDefaultfilename</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.134">setDefaultfilename</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname)</pre>
 </li>
 </ul>
 <a name="filename(java.lang.String)">
@@ -371,7 +365,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>filename</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.146">filename</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.145">filename</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</pre>
 <div class="block">Path of file where regions will be written to during unloading/read from during loading</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>filename</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>RegionMoverBuilder object</dd></dl>
@@ -383,10 +377,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>maxthreads</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.156">maxthreads</a>(int&nbsp;threads)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.153">maxthreads</a>(int&nbsp;threads)</pre>
 <div class="block">Set the max number of threads that will be used to move regions</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>threads</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd>RegionMoverBuilder object</dd></dl>
 </li>
 </ul>
 <a name="excludeFile(java.lang.String)">
@@ -395,12 +387,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>excludeFile</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.168">excludeFile</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;excludefile)</pre>
-<div class="block">Path of file containing hostnames to be excluded during region movement Exclude file should
- have <host:port> per line.Port is mandatory here as we can have many RS running on a single
- host</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>excludefile</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd>RegionMoverBuilder object</dd></dl>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.163">excludeFile</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;excludefile)</pre>
+<div class="block">Path of file containing hostnames to be excluded during region movement. Exclude file should
+ have 'host:port' per line. Port is mandatory here as we can have many RS running on a single
+ host.</div>
 </li>
 </ul>
 <a name="ack(boolean)">
@@ -409,7 +399,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>ack</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.184">ack</a>(boolean&nbsp;ack)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.179">ack</a>(boolean&nbsp;ack)</pre>
 <div class="block">Set ack/noAck mode.
  <p>
  In ack mode regions are acknowledged before and after moving and the move is retried
@@ -427,7 +417,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>timeout</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.196">timeout</a>(int&nbsp;timeout)</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.191">timeout</a>(int&nbsp;timeout)</pre>
 <div class="block">Set the timeout for Load/Unload operation in seconds.This is a global timeout,threadpool for
  movers also have a separate time which is hbase.move.wait.max * number of regions to
  load/unload</div>
@@ -441,7 +431,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>build</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.html" title="class in org.apache.hadoop.hbase.util">RegionMover</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.206">build</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.html" title="class in org.apache.hadoop.hbase.util">RegionMover</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#line.201">build</a>()</pre>
 <div class="block">This method builds the appropriate RegionMover object which can then be used to load/unload
  using load and unload methods</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>RegionMover object</dd></dl>

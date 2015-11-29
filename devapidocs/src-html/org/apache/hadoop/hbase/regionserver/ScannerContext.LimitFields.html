@@ -90,14 +90,14 @@
 <span class="sourceLineNo">082</span>   * some limits and then repeatedly invoke {@link InternalScanner#next(List)} or<a name="line.82"></a>
 <span class="sourceLineNo">083</span>   * {@link RegionScanner#next(List)} where each invocation respects these limits separately.<a name="line.83"></a>
 <span class="sourceLineNo">084</span>   * &lt;p&gt;<a name="line.84"></a>
-<span class="sourceLineNo">085</span>   * For example: &lt;code&gt;&lt;pre&gt;<a name="line.85"></a>
+<span class="sourceLineNo">085</span>   * For example: &lt;pre&gt; {@code<a name="line.85"></a>
 <span class="sourceLineNo">086</span>   * ScannerContext context = new ScannerContext.newBuilder().setBatchLimit(5).build();<a name="line.86"></a>
 <span class="sourceLineNo">087</span>   * RegionScanner scanner = ...<a name="line.87"></a>
 <span class="sourceLineNo">088</span>   * List&lt;Cell&gt; results = new ArrayList&lt;Cell&gt;();<a name="line.88"></a>
 <span class="sourceLineNo">089</span>   * while(scanner.next(results, context)) {<a name="line.89"></a>
 <span class="sourceLineNo">090</span>   *   // Do something with a batch of 5 cells<a name="line.90"></a>
 <span class="sourceLineNo">091</span>   * }<a name="line.91"></a>
-<span class="sourceLineNo">092</span>   * &lt;/pre&gt;&lt;/code&gt; However, in the case of RPCs, the server wants to be able to define a set of<a name="line.92"></a>
+<span class="sourceLineNo">092</span>   * }&lt;/pre&gt; However, in the case of RPCs, the server wants to be able to define a set of<a name="line.92"></a>
 <span class="sourceLineNo">093</span>   * limits for a particular RPC request and have those limits respected across multiple<a name="line.93"></a>
 <span class="sourceLineNo">094</span>   * invocations. This means that the progress made towards the limits in earlier calls will be<a name="line.94"></a>
 <span class="sourceLineNo">095</span>   * saved and considered in future invocations<a name="line.95"></a>

@@ -172,8 +172,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileInfo.html#REF_NAME_PATTERN">REF_NAME_PATTERN</a></strong></code>
-<div class="block">Regex that will work for straight reference names (<hfile>.<parentEncRegion>)
- and hfilelink reference names (=<region>-<hfile>.<parentEncRegion>)
+<div class="block">Regex that will work for straight reference names (<code>&lt;hfile&gt;.&lt;parentEncRegion&gt;</code>)
+ and hfilelink reference names (<code>&lt;table&gt;=&lt;region&gt;-&lt;hfile&gt;.&lt;parentEncRegion&gt;</code>)
  If reference, then the regex has more than just one group.</div>
 </td>
 </tr>
@@ -446,8 +446,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>REF_NAME_PATTERN</h4>
 <pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html?is-external=true" title="class or interface in java.util.regex">Pattern</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StoreFileInfo.html#line.77">REF_NAME_PATTERN</a></pre>
-<div class="block">Regex that will work for straight reference names (<hfile>.<parentEncRegion>)
- and hfilelink reference names (<table>=<region>-<hfile>.<parentEncRegion>)
+<div class="block">Regex that will work for straight reference names (<code>&lt;hfile&gt;.&lt;parentEncRegion&gt;</code>)
+ and hfilelink reference names (<code>&lt;table&gt;=&lt;region&gt;-&lt;hfile&gt;.&lt;parentEncRegion&gt;</code>)
  If reference, then the regex has more than just one group.
  Group 1, hfile/hfilelink pattern, is this file's id.
  Group 2 '(.+)' is the reference's parent region name.</div>

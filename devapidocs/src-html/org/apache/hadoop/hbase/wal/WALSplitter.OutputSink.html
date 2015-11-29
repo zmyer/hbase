@@ -1651,7 +1651,7 @@
 <span class="sourceLineNo">1643</span>        .synchronizedMap(new TreeMap&lt;TableName, HConnection&gt;());<a name="line.1643"></a>
 <span class="sourceLineNo">1644</span>    /**<a name="line.1644"></a>
 <span class="sourceLineNo">1645</span>     * Map key -&gt; value layout<a name="line.1645"></a>
-<span class="sourceLineNo">1646</span>     * &lt;servername&gt;:&lt;table name&gt; -&gt; Queue&lt;Row&gt;<a name="line.1646"></a>
+<span class="sourceLineNo">1646</span>     * {@literal &lt;servername&gt;:&lt;table name&gt; -&gt; Queue&lt;Row&gt;}<a name="line.1646"></a>
 <span class="sourceLineNo">1647</span>     */<a name="line.1647"></a>
 <span class="sourceLineNo">1648</span>    private Map&lt;String, List&lt;Pair&lt;HRegionLocation, Entry&gt;&gt;&gt; serverToBufferQueueMap =<a name="line.1648"></a>
 <span class="sourceLineNo">1649</span>        new ConcurrentHashMap&lt;String, List&lt;Pair&lt;HRegionLocation, Entry&gt;&gt;&gt;();<a name="line.1649"></a>
@@ -2181,7 +2181,7 @@
 <span class="sourceLineNo">2173</span>    }<a name="line.2173"></a>
 <span class="sourceLineNo">2174</span>    private TableName getTableFromLocationStr(String loc) {<a name="line.2174"></a>
 <span class="sourceLineNo">2175</span>      /**<a name="line.2175"></a>
-<span class="sourceLineNo">2176</span>       * location key is in format &lt;server name:port&gt;#&lt;table name&gt;<a name="line.2176"></a>
+<span class="sourceLineNo">2176</span>       * location key is in format {@literal &lt;server name:port&gt;#&lt;table name&gt;}<a name="line.2176"></a>
 <span class="sourceLineNo">2177</span>       */<a name="line.2177"></a>
 <span class="sourceLineNo">2178</span>      String[] splits = loc.split(KEY_DELIMITER);<a name="line.2178"></a>
 <span class="sourceLineNo">2179</span>      if (splits.length != 2) {<a name="line.2179"></a>

@@ -891,12 +891,12 @@
 <span class="sourceLineNo">883</span>      Pattern.compile("^coprocessor\\$([0-9]+)$", Pattern.CASE_INSENSITIVE);<a name="line.883"></a>
 <span class="sourceLineNo">884</span><a name="line.884"></a>
 <span class="sourceLineNo">885</span>  /**<a name="line.885"></a>
-<span class="sourceLineNo">886</span>   * Pattern that matches a coprocessor specification. Form is:<a name="line.886"></a>
-<span class="sourceLineNo">887</span>   * &lt;code&gt;<a name="line.887"></a>
-<span class="sourceLineNo">888</span>   *&amp;lt;coprocessor jar file location&gt; '|' &amp;lt&lt;class name&gt; ['|' &amp;lt;priority&gt; ['|' &amp;lt;arguments&gt;]]<a name="line.888"></a>
-<span class="sourceLineNo">889</span>   * &lt;/code&gt;<a name="line.889"></a>
-<span class="sourceLineNo">890</span>   * ...where arguments are &lt;code&gt;&amp;lt;KEY&gt; '=' &amp;lt;VALUE&gt; [,...]&lt;/code&gt;<a name="line.890"></a>
-<span class="sourceLineNo">891</span>   * &lt;p&gt;For example: &lt;code&gt;hdfs:///foo.jar|com.foo.FooRegionObserver|1001|arg1=1,arg2=2&lt;/code&gt;<a name="line.891"></a>
+<span class="sourceLineNo">886</span>   * &lt;pre&gt;<a name="line.886"></a>
+<span class="sourceLineNo">887</span>   * Pattern that matches a coprocessor specification. Form is:<a name="line.887"></a>
+<span class="sourceLineNo">888</span>   * {@code &lt;coprocessor jar file location&gt; '|' &lt;class name&gt; ['|' &lt;priority&gt; ['|' &lt;arguments&gt;]]}<a name="line.888"></a>
+<span class="sourceLineNo">889</span>   * where arguments are {@code &lt;KEY&gt; '=' &lt;VALUE&gt; [,...]}<a name="line.889"></a>
+<span class="sourceLineNo">890</span>   * For example: {@code hdfs:///foo.jar|com.foo.FooRegionObserver|1001|arg1=1,arg2=2}<a name="line.890"></a>
+<span class="sourceLineNo">891</span>   * &lt;/pre&gt;<a name="line.891"></a>
 <span class="sourceLineNo">892</span>   */<a name="line.892"></a>
 <span class="sourceLineNo">893</span>  public static final Pattern CP_HTD_ATTR_VALUE_PATTERN =<a name="line.893"></a>
 <span class="sourceLineNo">894</span>      Pattern.compile("(^[^\\|]*)\\|([^\\|]+)\\|[\\s]*([\\d]*)[\\s]*(\\|.*)?$");<a name="line.894"></a>

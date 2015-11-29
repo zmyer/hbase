@@ -1653,7 +1653,7 @@
 <a class="jxr_linenumber" name="1643" href="#1643">1643</a>         .synchronizedMap(<strong class="jxr_keyword">new</strong> TreeMap&lt;TableName, HConnection&gt;());
 <a class="jxr_linenumber" name="1644" href="#1644">1644</a>     <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="1645" href="#1645">1645</a> <em class="jxr_javadoccomment">     * Map key -&gt; value layout</em>
-<a class="jxr_linenumber" name="1646" href="#1646">1646</a> <em class="jxr_javadoccomment">     * &lt;servername&gt;:&lt;table name&gt; -&gt; Queue&lt;Row&gt;</em>
+<a class="jxr_linenumber" name="1646" href="#1646">1646</a> <em class="jxr_javadoccomment">     * {@literal &lt;servername&gt;:&lt;table name&gt; -&gt; Queue&lt;Row&gt;}</em>
 <a class="jxr_linenumber" name="1647" href="#1647">1647</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="1648" href="#1648">1648</a>     <strong class="jxr_keyword">private</strong> Map&lt;String, List&lt;Pair&lt;HRegionLocation, Entry&gt;&gt;&gt; serverToBufferQueueMap =
 <a class="jxr_linenumber" name="1649" href="#1649">1649</a>         <strong class="jxr_keyword">new</strong> ConcurrentHashMap&lt;String, List&lt;Pair&lt;HRegionLocation, Entry&gt;&gt;&gt;();
@@ -2183,7 +2183,7 @@
 <a class="jxr_linenumber" name="2173" href="#2173">2173</a>     }
 <a class="jxr_linenumber" name="2174" href="#2174">2174</a>     <strong class="jxr_keyword">private</strong> <a href="../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> getTableFromLocationStr(String loc) {
 <a class="jxr_linenumber" name="2175" href="#2175">2175</a>       <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="2176" href="#2176">2176</a> <em class="jxr_javadoccomment">       * location key is in format &lt;server name:port&gt;#&lt;table name&gt;</em>
+<a class="jxr_linenumber" name="2176" href="#2176">2176</a> <em class="jxr_javadoccomment">       * location key is in format {@literal &lt;server name:port&gt;#&lt;table name&gt;}</em>
 <a class="jxr_linenumber" name="2177" href="#2177">2177</a> <em class="jxr_javadoccomment">       */</em>
 <a class="jxr_linenumber" name="2178" href="#2178">2178</a>       String[] splits = loc.split(KEY_DELIMITER);
 <a class="jxr_linenumber" name="2179" href="#2179">2179</a>       <strong class="jxr_keyword">if</strong> (splits.length != 2) {

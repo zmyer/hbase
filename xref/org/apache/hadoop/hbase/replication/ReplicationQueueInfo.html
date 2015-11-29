@@ -73,7 +73,7 @@
 <a class="jxr_linenumber" name="63" href="#63">63</a>    <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="64" href="#64">64</a>  <em class="jxr_javadoccomment">   * Parse dead server names from znode string servername can contain "-" such as</em>
 <a class="jxr_linenumber" name="65" href="#65">65</a>  <em class="jxr_javadoccomment">   * "ip-10-46-221-101.ec2.internal", so we need skip some "-" during parsing for the following</em>
-<a class="jxr_linenumber" name="66" href="#66">66</a>  <em class="jxr_javadoccomment">   * cases: 2-ip-10-46-221-101.ec2.internal,52170,1364333181125-&lt;server name&gt;-...</em>
+<a class="jxr_linenumber" name="66" href="#66">66</a>  <em class="jxr_javadoccomment">   * cases: 2-ip-10-46-221-101.ec2.internal,52170,1364333181125-&amp;lt;server name&gt;-...</em>
 <a class="jxr_linenumber" name="67" href="#67">67</a>  <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="68" href="#68">68</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong>
 <a class="jxr_linenumber" name="69" href="#69">69</a>        extractDeadServersFromZNodeString(String deadServerListStr, List&lt;String&gt; result) {

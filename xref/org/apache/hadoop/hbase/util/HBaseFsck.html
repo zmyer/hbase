@@ -617,8 +617,8 @@
 <a class="jxr_linenumber" name="607" href="#607">607</a> <em class="jxr_javadoccomment">   * region servers and the masters.  It makes each region's state in HDFS, in</em>
 <a class="jxr_linenumber" name="608" href="#608">608</a> <em class="jxr_javadoccomment">   * hbase:meta, and deployments consistent.</em>
 <a class="jxr_linenumber" name="609" href="#609">609</a> <em class="jxr_javadoccomment">   *</em>
-<a class="jxr_linenumber" name="610" href="#610">610</a> <em class="jxr_javadoccomment">   * @return If &amp;gt; 0 , number of errors detected, if &amp;lt; 0 there was an unrecoverable</em>
-<a class="jxr_linenumber" name="611" href="#611">611</a> <em class="jxr_javadoccomment">   * error.  If 0, we have a clean hbase.</em>
+<a class="jxr_linenumber" name="610" href="#610">610</a> <em class="jxr_javadoccomment">   * @return If &gt; 0 , number of errors detected, if &amp;lt; 0 there was an unrecoverable</em>
+<a class="jxr_linenumber" name="611" href="#611">611</a> <em class="jxr_javadoccomment">   *     error.  If 0, we have a clean hbase.</em>
 <a class="jxr_linenumber" name="612" href="#612">612</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="613" href="#613">613</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> onlineConsistencyRepair() <strong class="jxr_keyword">throws</strong> IOException, KeeperException,
 <a class="jxr_linenumber" name="614" href="#614">614</a>     InterruptedException {
@@ -1526,10 +1526,10 @@
 <a class="jxr_linenumber" name="1516" href="#1516">1516</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="1517" href="#1517">1517</a> <em class="jxr_javadoccomment">   * Sideline a region dir (instead of deleting it)</em>
 <a class="jxr_linenumber" name="1518" href="#1518">1518</a> <em class="jxr_javadoccomment">   *</em>
-<a class="jxr_linenumber" name="1519" href="#1519">1519</a> <em class="jxr_javadoccomment">   * @param parentDir if specified, the region will be sidelined to</em>
-<a class="jxr_linenumber" name="1520" href="#1520">1520</a> <em class="jxr_javadoccomment">   * folder like .../parentDir/&lt;table name&gt;/&lt;region name&gt;. The purpose</em>
-<a class="jxr_linenumber" name="1521" href="#1521">1521</a> <em class="jxr_javadoccomment">   * is to group together similar regions sidelined, for example, those</em>
-<a class="jxr_linenumber" name="1522" href="#1522">1522</a> <em class="jxr_javadoccomment">   * regions should be bulk loaded back later on. If null, it is ignored.</em>
+<a class="jxr_linenumber" name="1519" href="#1519">1519</a> <em class="jxr_javadoccomment">   * @param parentDir if specified, the region will be sidelined to folder like</em>
+<a class="jxr_linenumber" name="1520" href="#1520">1520</a> <em class="jxr_javadoccomment">   *     {@literal .../parentDir/&lt;table name&gt;/&lt;region name&gt;}. The purpose is to group together</em>
+<a class="jxr_linenumber" name="1521" href="#1521">1521</a> <em class="jxr_javadoccomment">   *     similar regions sidelined, for example, those regions should be bulk loaded back later</em>
+<a class="jxr_linenumber" name="1522" href="#1522">1522</a> <em class="jxr_javadoccomment">   *     on. If NULL, it is ignored.</em>
 <a class="jxr_linenumber" name="1523" href="#1523">1523</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="1524" href="#1524">1524</a>   Path sidelineRegionDir(FileSystem fs,
 <a class="jxr_linenumber" name="1525" href="#1525">1525</a>       String parentDir, <a href="../../../../../org/apache/hadoop/hbase/util/HBaseFsck.html">HbckInfo</a> hi) <strong class="jxr_keyword">throws</strong> IOException {

@@ -398,7 +398,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>splitStoreFile</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.578">splitStoreFile</a>(org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&nbsp;item,
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.577">splitStoreFile</a>(org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&nbsp;item,
                                                                                          <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
                                                                                          byte[]&nbsp;startKey,
                                                                                          byte[]&nbsp;splitKey)
@@ -413,7 +413,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>groupOrSplit</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.625">groupOrSplit</a>(com.google.common.collect.Multimap&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>,org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&gt;&nbsp;regionGroups,
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.624">groupOrSplit</a>(com.google.common.collect.Multimap&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>,org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&gt;&nbsp;regionGroups,
                                                                                        org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&nbsp;item,
                                                                                        <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
                                                                                        <a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;byte[][],byte[][]&gt;&nbsp;startEndKeys)
@@ -434,7 +434,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>tryAtomicRegionLoad</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.715">tryAtomicRegionLoad</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;conn,
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.714">tryAtomicRegionLoad</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;conn,
                                                                                               <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                                                                               byte[]&nbsp;first,
                                                                                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles.LoadQueueItem&gt;&nbsp;lqis)
@@ -459,7 +459,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>inferBoundaries</h4>
-<pre>public static&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.888">inferBoundaries</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util">TreeMap</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;bdryMap)</pre>
+<pre>public static&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.887">inferBoundaries</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util">TreeMap</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;bdryMap)</pre>
 </li>
 </ul>
 <a name="run(java.lang.String[])">
@@ -468,7 +468,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>run</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.964">run</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.963">run</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -483,7 +483,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>main</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.998">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/LoadIncrementalHFiles.html#line.997">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>

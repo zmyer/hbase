@@ -115,10 +115,10 @@
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.36">MobStoreScanner</a>
+public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.35">MobStoreScanner</a>
 extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreScanner</a></pre>
-<div class="block">Scanner scans both the memstore and the MOB Store. Coalesce KeyValue stream into List<KeyValue>
- for a single row.</div>
+<div class="block">Scanner scans both the memstore and the MOB Store. Coalesce KeyValue stream into
+ <code>List&lt;KeyValue&gt;</code> for a single row.</div>
 </li>
 </ul>
 </div>
@@ -274,7 +274,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreScanne
 <ul class="blockList">
 <li class="blockList">
 <h4>cacheMobBlocks</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.38">cacheMobBlocks</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.37">cacheMobBlocks</a></pre>
 </li>
 </ul>
 <a name="rawMobScan">
@@ -283,7 +283,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreScanne
 <ul class="blockList">
 <li class="blockList">
 <h4>rawMobScan</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.39">rawMobScan</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.38">rawMobScan</a></pre>
 </li>
 </ul>
 <a name="readEmptyValueOnMobCellMiss">
@@ -292,7 +292,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreScanne
 <ul class="blockList">
 <li class="blockList">
 <h4>readEmptyValueOnMobCellMiss</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.40">readEmptyValueOnMobCellMiss</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.39">readEmptyValueOnMobCellMiss</a></pre>
 </li>
 </ul>
 <a name="mobStore">
@@ -301,7 +301,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreScanne
 <ul class="blockListLast">
 <li class="blockList">
 <h4>mobStore</h4>
-<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html" title="class in org.apache.hadoop.hbase.regionserver">HMobStore</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.41">mobStore</a></pre>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html" title="class in org.apache.hadoop.hbase.regionserver">HMobStore</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.40">mobStore</a></pre>
 </li>
 </ul>
 </li>
@@ -318,7 +318,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreScanne
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MobStoreScanner</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.43">MobStoreScanner</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.42">MobStoreScanner</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
                <a href="../../../../../org/apache/hadoop/hbase/regionserver/ScanInfo.html" title="class in org.apache.hadoop.hbase.regionserver">ScanInfo</a>&nbsp;scanInfo,
                <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;byte[]&gt;&nbsp;columns,
@@ -342,7 +342,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreScanne
 <ul class="blockListLast">
 <li class="blockList">
 <h4>next</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.61">next</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;outResult,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MobStoreScanner.html#line.60">next</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;outResult,
            <a href="../../../../../org/apache/hadoop/hbase/regionserver/ScannerContext.html" title="class in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;ctx)
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Firstly reads the cells from the HBase. If the cell are a reference cell (which has the

@@ -525,7 +525,7 @@ implements <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockC
 <tr class="altColor">
 <td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.RAMQueueEntry</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html#getRAMQueueEntries(java.util.concurrent.BlockingQueue,%20java.util.List)">getRAMQueueEntries</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.RAMQueueEntry</a>&gt;&nbsp;q,
-                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.RAMQueueEntry</a>&gt;&nbsp;receptical)</code>
+                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.RAMQueueEntry</a>&gt;&nbsp;receptacle)</code>
 <div class="block">Blocks until elements available in <code>q</code> then tries to grab as many as possible
  before returning.</div>
 </td>
@@ -1295,13 +1295,13 @@ implements <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockC
 <li class="blockList">
 <h4>getRAMQueueEntries</h4>
 <pre>static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.RAMQueueEntry</a>&gt;&nbsp;<a href="../../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html#line.922">getRAMQueueEntries</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.RAMQueueEntry</a>&gt;&nbsp;q,
-                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.RAMQueueEntry</a>&gt;&nbsp;receptical)
+                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.RAMQueueEntry.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache.RAMQueueEntry</a>&gt;&nbsp;receptacle)
                                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Blocks until elements available in <code>q</code> then tries to grab as many as possible
  before returning.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recepticle</code> - Where to stash the elements taken from queue. We clear before we use it
- just in case.</dd><dd><code>q</code> - The queue to take from.</dd>
-<dt><span class="strong">Returns:</span></dt><dd><code>receptical laden with elements taken from the queue or empty if none found.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>receptacle</code> - Where to stash the elements taken from queue. We clear before we use it
+     just in case.</dd><dd><code>q</code> - The queue to take from.</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>receptacle</code> laden with elements taken from the queue or empty if none found.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>

@@ -103,7 +103,7 @@
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">This class encapsulates an object as well as a weak reference to a proxy
  that passes through calls to that object. In art form:
- <code>
+ <pre>
      Proxy  <------------------
        |                       \
        v                        \
@@ -112,7 +112,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  MonitoredTaskImpl            / 
        |                     /
  StatAndWeakRefProxy  ------/
-
+ </pre>
  Since we only return the Proxy to the creator of the MonitorableStatus,
  this means that they can leak that object, and we'll detect it
  since our weak reference will go null. But, we still have the actual

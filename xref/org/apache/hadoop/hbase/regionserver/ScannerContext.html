@@ -92,14 +92,14 @@
 <a class="jxr_linenumber" name="82" href="#82">82</a>  <em class="jxr_javadoccomment">   * some limits and then repeatedly invoke {@link InternalScanner#next(List)} or</em>
 <a class="jxr_linenumber" name="83" href="#83">83</a>  <em class="jxr_javadoccomment">   * {@link RegionScanner#next(List)} where each invocation respects these limits separately.</em>
 <a class="jxr_linenumber" name="84" href="#84">84</a>  <em class="jxr_javadoccomment">   * &lt;p&gt;</em>
-<a class="jxr_linenumber" name="85" href="#85">85</a>  <em class="jxr_javadoccomment">   * For example: &lt;code&gt;&lt;pre&gt;</em>
+<a class="jxr_linenumber" name="85" href="#85">85</a>  <em class="jxr_javadoccomment">   * For example: &lt;pre&gt; {@code</em>
 <a class="jxr_linenumber" name="86" href="#86">86</a>  <em class="jxr_javadoccomment">   * ScannerContext context = new ScannerContext.newBuilder().setBatchLimit(5).build();</em>
 <a class="jxr_linenumber" name="87" href="#87">87</a>  <em class="jxr_javadoccomment">   * RegionScanner scanner = ...</em>
 <a class="jxr_linenumber" name="88" href="#88">88</a>  <em class="jxr_javadoccomment">   * List&lt;Cell&gt; results = new ArrayList&lt;Cell&gt;();</em>
 <a class="jxr_linenumber" name="89" href="#89">89</a>  <em class="jxr_javadoccomment">   * while(scanner.next(results, context)) {</em>
 <a class="jxr_linenumber" name="90" href="#90">90</a>  <em class="jxr_javadoccomment">   *   // Do something with a batch of 5 cells</em>
 <a class="jxr_linenumber" name="91" href="#91">91</a>  <em class="jxr_javadoccomment">   * }</em>
-<a class="jxr_linenumber" name="92" href="#92">92</a>  <em class="jxr_javadoccomment">   * &lt;/pre&gt;&lt;/code&gt; However, in the case of RPCs, the server wants to be able to define a set of</em>
+<a class="jxr_linenumber" name="92" href="#92">92</a>  <em class="jxr_javadoccomment">   * }&lt;/pre&gt; However, in the case of RPCs, the server wants to be able to define a set of</em>
 <a class="jxr_linenumber" name="93" href="#93">93</a>  <em class="jxr_javadoccomment">   * limits for a particular RPC request and have those limits respected across multiple</em>
 <a class="jxr_linenumber" name="94" href="#94">94</a>  <em class="jxr_javadoccomment">   * invocations. This means that the progress made towards the limits in earlier calls will be</em>
 <a class="jxr_linenumber" name="95" href="#95">95</a>  <em class="jxr_javadoccomment">   * saved and considered in future invocations</em>

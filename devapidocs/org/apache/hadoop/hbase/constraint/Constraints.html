@@ -482,7 +482,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>constraintComparator</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.614">constraintComparator</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.612">constraintComparator</a></pre>
 </li>
 </ul>
 </li>
@@ -576,12 +576,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getKeyValueForClass</h4>
-<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.164">getKeyValueForClass</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>private static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.162">getKeyValueForClass</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz)</pre>
 <div class="block">Get the kv <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util"><code>Map.Entry</code></a> in the descriptor for the specified class</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>desc</code> - <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase"><code>HTableDescriptor</code></a> to read</dd><dd><code>clazz</code> - to search for</dd>
-<dt><span class="strong">Returns:</span></dt><dd>the <a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util"><code>Pair</code></a> of <key, value> in the table, if that class is
-         present. <tt>null</tt> otherwise.</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>desc</code> - <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase"><code>HTableDescriptor</code></a> to read</dd><dd><code>clazz</code> - To search for</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The <a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util"><code>Pair</code></a> of &lt;key, value&gt; in the table, if that class is
+         present. <code>NULL</code> otherwise.</dd></dl>
 </li>
 </ul>
 <a name="add(org.apache.hadoop.hbase.HTableDescriptor, java.lang.Class...)">
@@ -590,7 +590,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.193">add</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.191">add</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;...&nbsp;constraints)
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Add configuration-less constraints to the table.
@@ -615,7 +615,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.230">add</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.228">add</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
        <a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;,org.apache.hadoop.conf.Configuration&gt;...&nbsp;constraints)
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Add constraints and their associated configurations to the table.
@@ -644,7 +644,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.260">add</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.258">add</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;constraint,
        org.apache.hadoop.conf.Configuration&nbsp;conf)
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -667,7 +667,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>addConstraint</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.279">addConstraint</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.277">addConstraint</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz,
                  org.apache.hadoop.conf.Configuration&nbsp;conf,
                  long&nbsp;priority)
@@ -689,7 +689,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>configure</h4>
-<pre>private static&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.298">configure</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+<pre>private static&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.296">configure</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                              boolean&nbsp;enabled,
                                              long&nbsp;priority)</pre>
 <div class="block">Setup the configuration for a constraint as to whether it is enabled and
@@ -704,7 +704,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>serializeConstraintClass</h4>
-<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.324">serializeConstraintClass</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz)</pre>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.322">serializeConstraintClass</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz)</pre>
 <div class="block">Just write the class to a String representation of the class as a key for
  the <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase"><code>HTableDescriptor</code></a></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>clazz</code> - Constraint class to convert to a <a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase"><code>HTableDescriptor</code></a> key</dd>
@@ -717,7 +717,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>writeConstraint</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.334">writeConstraint</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.332">writeConstraint</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                    org.apache.hadoop.conf.Configuration&nbsp;conf)
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -733,7 +733,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>serializeConfiguration</h4>
-<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.348">serializeConfiguration</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.346">serializeConfiguration</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Write the configuration to a String</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - to write</dd>
@@ -748,7 +748,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>readConfiguration</h4>
-<pre>private static&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.366">readConfiguration</a>(byte[]&nbsp;bytes)
+<pre>private static&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.364">readConfiguration</a>(byte[]&nbsp;bytes)
                                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read the <code>Configuration</code> stored in the byte stream.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>bytes</code> - to read from</dd>
@@ -763,7 +763,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>readConfiguration</h4>
-<pre>private static&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.383">readConfiguration</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bytes)
+<pre>private static&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.381">readConfiguration</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bytes)
                                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read in the configuration from the String encoded configuration</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>bytes</code> - to read from</dd>
@@ -778,7 +778,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getNextPriority</h4>
-<pre>private static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.388">getNextPriority</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc)</pre>
+<pre>private static&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.386">getNextPriority</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc)</pre>
 </li>
 </ul>
 <a name="updateLatestPriority(org.apache.hadoop.hbase.HTableDescriptor, long)">
@@ -787,7 +787,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updateLatestPriority</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.402">updateLatestPriority</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.400">updateLatestPriority</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                         long&nbsp;priority)</pre>
 </li>
 </ul>
@@ -797,7 +797,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setConfiguration</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.422">setConfiguration</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.420">setConfiguration</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz,
                     org.apache.hadoop.conf.Configuration&nbsp;configuration)
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
@@ -816,7 +816,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>remove</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.456">remove</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.454">remove</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz)</pre>
 <div class="block">Remove the constraint (and associated information) for the table
  descriptor.</div>
@@ -829,7 +829,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>enableConstraint</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.474">enableConstraint</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.472">enableConstraint</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz)
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Enable the given <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint"><code>Constraint</code></a>. Retains all the information (e.g.
@@ -846,7 +846,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>disableConstraint</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.491">disableConstraint</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.489">disableConstraint</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz)
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Disable the given <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint"><code>Constraint</code></a>. Retains all the information (e.g.
@@ -863,7 +863,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>changeConstraintEnabled</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.500">changeConstraintEnabled</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.498">changeConstraintEnabled</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz,
                            boolean&nbsp;enabled)
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -879,7 +879,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>enabled</h4>
-<pre>public static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.531">enabled</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>public static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.529">enabled</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;clazz)
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Check to see if the given constraint is enabled.</div>
@@ -896,7 +896,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getConstraints</h4>
-<pre>static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.560">getConstraints</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
+<pre>static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../org/apache/hadoop/hbase/constraint/Constraint.html" title="interface in org.apache.hadoop.hbase.constraint">Constraint</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/constraint/Constraints.html#line.558">getConstraints</a>(<a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;desc,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassLoader.html?is-external=true" title="class or interface in java.lang">ClassLoader</a>&nbsp;classloader)
                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Get the constraints stored in the table descriptor</div>

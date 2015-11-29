@@ -999,16 +999,15 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>checkForReservedVisibilityTagPresence</h4>
-<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>,<a href="../../../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.461">checkForReservedVisibilityTagPresence</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>,<a href="../../../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.459">checkForReservedVisibilityTagPresence</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
                                                       <a href="../../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>,<a href="../../../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;pair)
                                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Checks whether cell contains any tag with type as VISIBILITY_TAG_TYPE. This
  tag type is reserved and should not be explicitly set by user.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cell</code> - - the cell under consideration</dd><dd><code>pair</code> - - an optional pair of type <Boolean, Tag> which would be reused
-               if already set and new one will be created if null is passed</dd>
-<dt><span class="strong">Returns:</span></dt><dd>a pair<Boolean, Tag> - if the boolean is false then it indicates
-         that the cell has a RESERVERD_VIS_TAG and with boolean as true, not
-         null tag indicates that a string modified tag was found.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cell</code> - The cell under consideration</dd><dd><code>pair</code> - An optional pair of type <code>&lt;Boolean, Tag&gt;</code> which would be reused if already
+     set and new one will be created if NULL is passed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>If the boolean is false then it indicates that the cell has a RESERVERD_VIS_TAG and
+     with boolean as true, not null tag indicates that a string modified tag was found.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -1019,7 +1018,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>checkForReservedVisibilityTagPresence</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.516">checkForReservedVisibilityTagPresence</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.514">checkForReservedVisibilityTagPresence</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)
                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Checks whether cell contains any tag with type as VISIBILITY_TAG_TYPE. This
  tag type is reserved and should not be explicitly set by user. There are
@@ -1038,7 +1037,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>removeReplicationVisibilityTag</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.537">removeReplicationVisibilityTag</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;tags)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.535">removeReplicationVisibilityTag</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a>&gt;&nbsp;tags)
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1050,7 +1049,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>preScannerOpen</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.549">preScannerOpen</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.547">preScannerOpen</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
                            <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                            <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;s)
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -1079,7 +1078,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>postInstantiateDeleteTracker</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/DeleteTracker.html" title="interface in org.apache.hadoop.hbase.regionserver">DeleteTracker</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.589">postInstantiateDeleteTracker</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/DeleteTracker.html" title="interface in org.apache.hadoop.hbase.regionserver">DeleteTracker</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.587">postInstantiateDeleteTracker</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                          <a href="../../../../../../org/apache/hadoop/hbase/regionserver/DeleteTracker.html" title="interface in org.apache.hadoop.hbase.regionserver">DeleteTracker</a>&nbsp;delTracker)
                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#postInstantiateDeleteTracker(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.DeleteTracker)">RegionObserver</a></code></strong></div>
@@ -1103,7 +1102,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>postScannerOpen</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.610">postScannerOpen</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.608">postScannerOpen</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                             <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                             <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>&nbsp;s)
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -1129,7 +1128,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>preScannerNext</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.620">preScannerNext</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.618">preScannerNext</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                      <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s,
                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&gt;&nbsp;result,
                      int&nbsp;limit,
@@ -1161,7 +1160,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>preScannerClose</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.628">preScannerClose</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.626">preScannerClose</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                    <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#preScannerClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner)">RegionObserver</a></code></strong></div>
@@ -1187,7 +1186,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>postScannerClose</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.634">postScannerClose</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.632">postScannerClose</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                     <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#postScannerClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner)">RegionObserver</a></code></strong></div>
@@ -1211,7 +1210,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>requireScannerOwner</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.644">requireScannerOwner</a>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.642">requireScannerOwner</a>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s)
                           throws <a href="../../../../../../org/apache/hadoop/hbase/security/AccessDeniedException.html" title="class in org.apache.hadoop.hbase.security">AccessDeniedException</a></pre>
 <div class="block">Verify, when servicing an RPC, that the caller is the scanner owner. If so, we assume that
  access control is correctly enforced based on the checks performed in preScannerOpen()</div>
@@ -1225,7 +1224,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>preGetOp</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.655">preGetOp</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.653">preGetOp</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
             <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;results)
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -1254,7 +1253,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>isSystemOrSuperUser</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.692">isSystemOrSuperUser</a>()
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.690">isSystemOrSuperUser</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1266,7 +1265,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>preAppend</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.697">preAppend</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.695">preAppend</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
                <a href="../../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a>&nbsp;append)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#preAppend(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Append)">RegionObserver</a></code></strong></div>
@@ -1293,7 +1292,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>preIncrement</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.712">preIncrement</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.710">preIncrement</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
                   <a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a>&nbsp;increment)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#preIncrement(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Increment)">RegionObserver</a></code></strong></div>
@@ -1320,7 +1319,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>postMutationBeforeWAL</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.727">postMutationBeforeWAL</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.725">postMutationBeforeWAL</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                          <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.MutationType.html" title="enum in org.apache.hadoop.hbase.coprocessor">RegionObserver.MutationType</a>&nbsp;opType,
                          <a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;mutation,
                          <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;oldCell,
@@ -1348,7 +1347,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>getService</h4>
-<pre>public&nbsp;com.google.protobuf.Service&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.763">getService</a>()</pre>
+<pre>public&nbsp;com.google.protobuf.Service&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.761">getService</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorService.html#getService()">getService</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorService.html" title="interface in org.apache.hadoop.hbase.coprocessor">CoprocessorService</a></code></dd>
@@ -1361,7 +1360,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>postScannerFilterRow</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.768">postScannerFilterRow</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.766">postScannerFilterRow</a>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
                            <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;s,
                            <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;curRowCell,
                            boolean&nbsp;hasMore)
@@ -1395,7 +1394,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>addLabels</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.776">addLabels</a>(com.google.protobuf.RpcController&nbsp;controller,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.774">addLabels</a>(com.google.protobuf.RpcController&nbsp;controller,
              org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsRequest&nbsp;request,
              com.google.protobuf.RpcCallback&lt;org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsResponse&gt;&nbsp;done)</pre>
 <div class="block">VisibilityEndpoint service related methods</div>
@@ -1411,7 +1410,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>setExceptionResults</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.826">setExceptionResults</a>(int&nbsp;size,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.824">setExceptionResults</a>(int&nbsp;size,
                        <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&nbsp;e,
                        org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsResponse.Builder&nbsp;response)</pre>
 </li>
@@ -1422,7 +1421,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>setAuths</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.837">setAuths</a>(com.google.protobuf.RpcController&nbsp;controller,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.835">setAuths</a>(com.google.protobuf.RpcController&nbsp;controller,
             org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.SetAuthsRequest&nbsp;request,
             com.google.protobuf.RpcCallback&lt;org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsResponse&gt;&nbsp;done)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code>org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsService.Interface</code></strong></div>
@@ -1439,7 +1438,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>logResult</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.881">logResult</a>(boolean&nbsp;isAllowed,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.879">logResult</a>(boolean&nbsp;isAllowed,
              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;request,
              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;reason,
              byte[]&nbsp;user,
@@ -1453,7 +1452,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>getAuths</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.911">getAuths</a>(com.google.protobuf.RpcController&nbsp;controller,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.909">getAuths</a>(com.google.protobuf.RpcController&nbsp;controller,
             org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.GetAuthsRequest&nbsp;request,
             com.google.protobuf.RpcCallback&lt;org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.GetAuthsResponse&gt;&nbsp;done)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code>org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsService.Interface</code></strong></div>
@@ -1470,7 +1469,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>clearAuths</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.953">clearAuths</a>(com.google.protobuf.RpcController&nbsp;controller,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.951">clearAuths</a>(com.google.protobuf.RpcController&nbsp;controller,
               org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.SetAuthsRequest&nbsp;request,
               com.google.protobuf.RpcCallback&lt;org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsResponse&gt;&nbsp;done)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code>org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsService.Interface</code></strong></div>
@@ -1487,7 +1486,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockList">
 <li class="blockList">
 <h4>listLabels</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.1006">listLabels</a>(com.google.protobuf.RpcController&nbsp;controller,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.1004">listLabels</a>(com.google.protobuf.RpcController&nbsp;controller,
               org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.ListLabelsRequest&nbsp;request,
               com.google.protobuf.RpcCallback&lt;org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.ListLabelsResponse&gt;&nbsp;done)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code>org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsService.Interface</code></strong></div>
@@ -1504,7 +1503,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.Vis
 <ul class="blockListLast">
 <li class="blockList">
 <h4>checkCallingUserAuth</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.1040">checkCallingUserAuth</a>()
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/security/visibility/VisibilityController.html#line.1038">checkCallingUserAuth</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>

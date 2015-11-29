@@ -880,10 +880,10 @@ implements <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSc
 <pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.5955">filterRow</a>()
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">This function is to maintain backward compatibility for 0.94 filters. HBASE-6429 combines
- both filterRow & filterRow(List<KeyValue> kvs) functions. While 0.94 code or older, it may
- not implement hasFilterRow as HBase-6429 expects because 0.94 hasFilterRow() only returns
- true when filterRow(List<KeyValue> kvs) is overridden not the filterRow(). Therefore, the
- filterRow() will be skipped.</div>
+ both filterRow & filterRow(<code>List&lt;KeyValue&gt; kvs</code>) functions. While 0.94 code or older,
+ it may not implement hasFilterRow as HBase-6429 expects because 0.94 hasFilterRow() only
+ returns true when filterRow(<code>List&lt;KeyValue&gt; kvs</code>) is overridden not the filterRow().
+ Therefore, the filterRow() will be skipped.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>

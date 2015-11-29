@@ -816,7 +816,7 @@
 <a class="jxr_linenumber" name="806" href="#806">806</a> <em class="jxr_javadoccomment">     * Process all that are passed in even if failure being sure to remove from ramCache else we'll</em>
 <a class="jxr_linenumber" name="807" href="#807">807</a> <em class="jxr_javadoccomment">     * never undo the references and we'll OOME.</em>
 <a class="jxr_linenumber" name="808" href="#808">808</a> <em class="jxr_javadoccomment">     * @param entries Presumes list passed in here will be processed by this invocation only. No</em>
-<a class="jxr_linenumber" name="809" href="#809">809</a> <em class="jxr_javadoccomment">     * interference expected.</em>
+<a class="jxr_linenumber" name="809" href="#809">809</a> <em class="jxr_javadoccomment">     *   interference expected.</em>
 <a class="jxr_linenumber" name="810" href="#810">810</a> <em class="jxr_javadoccomment">     * @throws InterruptedException</em>
 <a class="jxr_linenumber" name="811" href="#811">811</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="812" href="#812">812</a>     @VisibleForTesting
@@ -921,23 +921,23 @@
 <a class="jxr_linenumber" name="911" href="#911">911</a>   }
 <a class="jxr_linenumber" name="912" href="#912">912</a> 
 <a class="jxr_linenumber" name="913" href="#913">913</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="914" href="#914">914</a> <em class="jxr_javadoccomment">   * Blocks until elements available in &lt;code&gt;q&lt;/code&gt; then tries to grab as many as possible</em>
+<a class="jxr_linenumber" name="914" href="#914">914</a> <em class="jxr_javadoccomment">   * Blocks until elements available in {@code q} then tries to grab as many as possible</em>
 <a class="jxr_linenumber" name="915" href="#915">915</a> <em class="jxr_javadoccomment">   * before returning.</em>
-<a class="jxr_linenumber" name="916" href="#916">916</a> <em class="jxr_javadoccomment">   * @param recepticle Where to stash the elements taken from queue. We clear before we use it</em>
-<a class="jxr_linenumber" name="917" href="#917">917</a> <em class="jxr_javadoccomment">   * just in case.</em>
+<a class="jxr_linenumber" name="916" href="#916">916</a> <em class="jxr_javadoccomment">   * @param receptacle Where to stash the elements taken from queue. We clear before we use it</em>
+<a class="jxr_linenumber" name="917" href="#917">917</a> <em class="jxr_javadoccomment">   *     just in case.</em>
 <a class="jxr_linenumber" name="918" href="#918">918</a> <em class="jxr_javadoccomment">   * @param q The queue to take from.</em>
-<a class="jxr_linenumber" name="919" href="#919">919</a> <em class="jxr_javadoccomment">   * @return &lt;code&gt;receptical laden with elements taken from the queue or empty if none found.</em>
+<a class="jxr_linenumber" name="919" href="#919">919</a> <em class="jxr_javadoccomment">   * @return {@code receptacle} laden with elements taken from the queue or empty if none found.</em>
 <a class="jxr_linenumber" name="920" href="#920">920</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="921" href="#921">921</a>   @VisibleForTesting
 <a class="jxr_linenumber" name="922" href="#922">922</a>   <strong class="jxr_keyword">static</strong> List&lt;RAMQueueEntry&gt; getRAMQueueEntries(<strong class="jxr_keyword">final</strong> BlockingQueue&lt;RAMQueueEntry&gt; q,
-<a class="jxr_linenumber" name="923" href="#923">923</a>       <strong class="jxr_keyword">final</strong> List&lt;RAMQueueEntry&gt; receptical)
+<a class="jxr_linenumber" name="923" href="#923">923</a>       <strong class="jxr_keyword">final</strong> List&lt;RAMQueueEntry&gt; receptacle)
 <a class="jxr_linenumber" name="924" href="#924">924</a>   <strong class="jxr_keyword">throws</strong> InterruptedException {
 <a class="jxr_linenumber" name="925" href="#925">925</a>     <em class="jxr_comment">// Clear sets all entries to null and sets size to 0. We retain allocations. Presume it</em>
 <a class="jxr_linenumber" name="926" href="#926">926</a>     <em class="jxr_comment">// ok even if list grew to accommodate thousands.</em>
-<a class="jxr_linenumber" name="927" href="#927">927</a>     receptical.clear();
-<a class="jxr_linenumber" name="928" href="#928">928</a>     receptical.add(q.take());
-<a class="jxr_linenumber" name="929" href="#929">929</a>     q.drainTo(receptical);
-<a class="jxr_linenumber" name="930" href="#930">930</a>     <strong class="jxr_keyword">return</strong> receptical;
+<a class="jxr_linenumber" name="927" href="#927">927</a>     receptacle.clear();
+<a class="jxr_linenumber" name="928" href="#928">928</a>     receptacle.add(q.take());
+<a class="jxr_linenumber" name="929" href="#929">929</a>     q.drainTo(receptacle);
+<a class="jxr_linenumber" name="930" href="#930">930</a>     <strong class="jxr_keyword">return</strong> receptacle;
 <a class="jxr_linenumber" name="931" href="#931">931</a>   }
 <a class="jxr_linenumber" name="932" href="#932">932</a> 
 <a class="jxr_linenumber" name="933" href="#933">933</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> persistToFile() <strong class="jxr_keyword">throws</strong> IOException {

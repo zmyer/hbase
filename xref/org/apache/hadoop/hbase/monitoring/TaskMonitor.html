@@ -167,7 +167,7 @@
 <a class="jxr_linenumber" name="157" href="#157">157</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="158" href="#158">158</a> <em class="jxr_javadoccomment">   * This class encapsulates an object as well as a weak reference to a proxy</em>
 <a class="jxr_linenumber" name="159" href="#159">159</a> <em class="jxr_javadoccomment">   * that passes through calls to that object. In art form:</em>
-<a class="jxr_linenumber" name="160" href="#160">160</a> <em class="jxr_javadoccomment">   * &lt;code&gt;</em>
+<a class="jxr_linenumber" name="160" href="#160">160</a> <em class="jxr_javadoccomment">   * &lt;pre&gt;</em>
 <a class="jxr_linenumber" name="161" href="#161">161</a> <em class="jxr_javadoccomment">   *     Proxy  &lt;------------------</em>
 <a class="jxr_linenumber" name="162" href="#162">162</a> <em class="jxr_javadoccomment">   *       |                       \</em>
 <a class="jxr_linenumber" name="163" href="#163">163</a> <em class="jxr_javadoccomment">   *       v                        \</em>
@@ -176,7 +176,7 @@
 <a class="jxr_linenumber" name="166" href="#166">166</a> <em class="jxr_javadoccomment">   * MonitoredTaskImpl            / </em>
 <a class="jxr_linenumber" name="167" href="#167">167</a> <em class="jxr_javadoccomment">   *       |                     /</em>
 <a class="jxr_linenumber" name="168" href="#168">168</a> <em class="jxr_javadoccomment">   * StatAndWeakRefProxy  ------/</em>
-<a class="jxr_linenumber" name="169" href="#169">169</a> <em class="jxr_javadoccomment">   *</em>
+<a class="jxr_linenumber" name="169" href="#169">169</a> <em class="jxr_javadoccomment">   * &lt;/pre&gt;</em>
 <a class="jxr_linenumber" name="170" href="#170">170</a> <em class="jxr_javadoccomment">   * Since we only return the Proxy to the creator of the MonitorableStatus,</em>
 <a class="jxr_linenumber" name="171" href="#171">171</a> <em class="jxr_javadoccomment">   * this means that they can leak that object, and we'll detect it</em>
 <a class="jxr_linenumber" name="172" href="#172">172</a> <em class="jxr_javadoccomment">   * since our weak reference will go null. But, we still have the actual</em>
