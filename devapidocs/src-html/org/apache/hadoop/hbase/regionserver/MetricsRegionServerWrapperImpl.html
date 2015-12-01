@@ -577,173 +577,178 @@
 <span class="sourceLineNo">569</span><a name="line.569"></a>
 <span class="sourceLineNo">570</span>    @Override<a name="line.570"></a>
 <span class="sourceLineNo">571</span>    synchronized public void run() {<a name="line.571"></a>
-<span class="sourceLineNo">572</span>      initBlockCache();<a name="line.572"></a>
-<span class="sourceLineNo">573</span>      initMobFileCache();<a name="line.573"></a>
-<span class="sourceLineNo">574</span>      cacheStats = blockCache.getStats();<a name="line.574"></a>
-<span class="sourceLineNo">575</span><a name="line.575"></a>
-<span class="sourceLineNo">576</span>      HDFSBlocksDistribution hdfsBlocksDistribution =<a name="line.576"></a>
-<span class="sourceLineNo">577</span>          new HDFSBlocksDistribution();<a name="line.577"></a>
-<span class="sourceLineNo">578</span>      HDFSBlocksDistribution hdfsBlocksDistributionSecondaryRegions =<a name="line.578"></a>
-<span class="sourceLineNo">579</span>          new HDFSBlocksDistribution();<a name="line.579"></a>
-<span class="sourceLineNo">580</span><a name="line.580"></a>
-<span class="sourceLineNo">581</span>      long tempNumStores = 0, tempNumStoreFiles = 0, tempMemstoreSize = 0, tempStoreFileSize = 0;<a name="line.581"></a>
-<span class="sourceLineNo">582</span>      long tempReadRequestsCount = 0, tempWriteRequestsCount = 0;<a name="line.582"></a>
-<span class="sourceLineNo">583</span>      long tempCheckAndMutateChecksFailed = 0;<a name="line.583"></a>
-<span class="sourceLineNo">584</span>      long tempCheckAndMutateChecksPassed = 0;<a name="line.584"></a>
-<span class="sourceLineNo">585</span>      long tempStorefileIndexSize = 0;<a name="line.585"></a>
-<span class="sourceLineNo">586</span>      long tempTotalStaticIndexSize = 0;<a name="line.586"></a>
-<span class="sourceLineNo">587</span>      long tempTotalStaticBloomSize = 0;<a name="line.587"></a>
-<span class="sourceLineNo">588</span>      long tempNumMutationsWithoutWAL = 0;<a name="line.588"></a>
-<span class="sourceLineNo">589</span>      long tempDataInMemoryWithoutWAL = 0;<a name="line.589"></a>
-<span class="sourceLineNo">590</span>      double tempPercentFileLocal = 0;<a name="line.590"></a>
-<span class="sourceLineNo">591</span>      double tempPercentFileLocalSecondaryRegions = 0;<a name="line.591"></a>
-<span class="sourceLineNo">592</span>      long tempFlushedCellsCount = 0;<a name="line.592"></a>
-<span class="sourceLineNo">593</span>      long tempCompactedCellsCount = 0;<a name="line.593"></a>
-<span class="sourceLineNo">594</span>      long tempMajorCompactedCellsCount = 0;<a name="line.594"></a>
-<span class="sourceLineNo">595</span>      long tempFlushedCellsSize = 0;<a name="line.595"></a>
-<span class="sourceLineNo">596</span>      long tempCompactedCellsSize = 0;<a name="line.596"></a>
-<span class="sourceLineNo">597</span>      long tempMajorCompactedCellsSize = 0;<a name="line.597"></a>
-<span class="sourceLineNo">598</span>      long tempCellsCountCompactedToMob = 0;<a name="line.598"></a>
-<span class="sourceLineNo">599</span>      long tempCellsCountCompactedFromMob = 0;<a name="line.599"></a>
-<span class="sourceLineNo">600</span>      long tempCellsSizeCompactedToMob = 0;<a name="line.600"></a>
-<span class="sourceLineNo">601</span>      long tempCellsSizeCompactedFromMob = 0;<a name="line.601"></a>
-<span class="sourceLineNo">602</span>      long tempMobFlushCount = 0;<a name="line.602"></a>
-<span class="sourceLineNo">603</span>      long tempMobFlushedCellsCount = 0;<a name="line.603"></a>
-<span class="sourceLineNo">604</span>      long tempMobFlushedCellsSize = 0;<a name="line.604"></a>
-<span class="sourceLineNo">605</span>      long tempMobScanCellsCount = 0;<a name="line.605"></a>
-<span class="sourceLineNo">606</span>      long tempMobScanCellsSize = 0;<a name="line.606"></a>
-<span class="sourceLineNo">607</span>      long tempBlockedRequestsCount = 0;<a name="line.607"></a>
-<span class="sourceLineNo">608</span><a name="line.608"></a>
-<span class="sourceLineNo">609</span>      for (Region r : regionServer.getOnlineRegionsLocalContext()) {<a name="line.609"></a>
-<span class="sourceLineNo">610</span>        tempNumMutationsWithoutWAL += r.getNumMutationsWithoutWAL();<a name="line.610"></a>
-<span class="sourceLineNo">611</span>        tempDataInMemoryWithoutWAL += r.getDataInMemoryWithoutWAL();<a name="line.611"></a>
-<span class="sourceLineNo">612</span>        tempReadRequestsCount += r.getReadRequestsCount();<a name="line.612"></a>
-<span class="sourceLineNo">613</span>        tempWriteRequestsCount += r.getWriteRequestsCount();<a name="line.613"></a>
-<span class="sourceLineNo">614</span>        tempCheckAndMutateChecksFailed += r.getCheckAndMutateChecksFailed();<a name="line.614"></a>
-<span class="sourceLineNo">615</span>        tempCheckAndMutateChecksPassed += r.getCheckAndMutateChecksPassed();<a name="line.615"></a>
-<span class="sourceLineNo">616</span>        tempBlockedRequestsCount += r.getBlockedRequestsCount();<a name="line.616"></a>
-<span class="sourceLineNo">617</span>        List&lt;Store&gt; storeList = r.getStores();<a name="line.617"></a>
-<span class="sourceLineNo">618</span>        tempNumStores += storeList.size();<a name="line.618"></a>
-<span class="sourceLineNo">619</span>        for (Store store : storeList) {<a name="line.619"></a>
-<span class="sourceLineNo">620</span>          tempNumStoreFiles += store.getStorefilesCount();<a name="line.620"></a>
-<span class="sourceLineNo">621</span>          tempMemstoreSize += store.getMemStoreSize();<a name="line.621"></a>
-<span class="sourceLineNo">622</span>          tempStoreFileSize += store.getStorefilesSize();<a name="line.622"></a>
-<span class="sourceLineNo">623</span>          tempStorefileIndexSize += store.getStorefilesIndexSize();<a name="line.623"></a>
-<span class="sourceLineNo">624</span>          tempTotalStaticBloomSize += store.getTotalStaticBloomSize();<a name="line.624"></a>
-<span class="sourceLineNo">625</span>          tempTotalStaticIndexSize += store.getTotalStaticIndexSize();<a name="line.625"></a>
-<span class="sourceLineNo">626</span>          tempFlushedCellsCount += store.getFlushedCellsCount();<a name="line.626"></a>
-<span class="sourceLineNo">627</span>          tempCompactedCellsCount += store.getCompactedCellsCount();<a name="line.627"></a>
-<span class="sourceLineNo">628</span>          tempMajorCompactedCellsCount += store.getMajorCompactedCellsCount();<a name="line.628"></a>
-<span class="sourceLineNo">629</span>          tempFlushedCellsSize += store.getFlushedCellsSize();<a name="line.629"></a>
-<span class="sourceLineNo">630</span>          tempCompactedCellsSize += store.getCompactedCellsSize();<a name="line.630"></a>
-<span class="sourceLineNo">631</span>          tempMajorCompactedCellsSize += store.getMajorCompactedCellsSize();<a name="line.631"></a>
-<span class="sourceLineNo">632</span>          if (store instanceof HMobStore) {<a name="line.632"></a>
-<span class="sourceLineNo">633</span>            HMobStore mobStore = (HMobStore) store;<a name="line.633"></a>
-<span class="sourceLineNo">634</span>            tempCellsCountCompactedToMob += mobStore.getCellsCountCompactedToMob();<a name="line.634"></a>
-<span class="sourceLineNo">635</span>            tempCellsCountCompactedFromMob += mobStore.getCellsCountCompactedFromMob();<a name="line.635"></a>
-<span class="sourceLineNo">636</span>            tempCellsSizeCompactedToMob += mobStore.getCellsSizeCompactedToMob();<a name="line.636"></a>
-<span class="sourceLineNo">637</span>            tempCellsSizeCompactedFromMob += mobStore.getCellsSizeCompactedFromMob();<a name="line.637"></a>
-<span class="sourceLineNo">638</span>            tempMobFlushCount += mobStore.getMobFlushCount();<a name="line.638"></a>
-<span class="sourceLineNo">639</span>            tempMobFlushedCellsCount += mobStore.getMobFlushedCellsCount();<a name="line.639"></a>
-<span class="sourceLineNo">640</span>            tempMobFlushedCellsSize += mobStore.getMobFlushedCellsSize();<a name="line.640"></a>
-<span class="sourceLineNo">641</span>            tempMobScanCellsCount += mobStore.getMobScanCellsCount();<a name="line.641"></a>
-<span class="sourceLineNo">642</span>            tempMobScanCellsSize += mobStore.getMobScanCellsSize();<a name="line.642"></a>
-<span class="sourceLineNo">643</span>          }<a name="line.643"></a>
-<span class="sourceLineNo">644</span>        }<a name="line.644"></a>
-<span class="sourceLineNo">645</span><a name="line.645"></a>
-<span class="sourceLineNo">646</span>        HDFSBlocksDistribution distro = r.getHDFSBlocksDistribution();<a name="line.646"></a>
-<span class="sourceLineNo">647</span>        hdfsBlocksDistribution.add(distro);<a name="line.647"></a>
-<span class="sourceLineNo">648</span>        if (r.getRegionInfo().getReplicaId() != HRegionInfo.DEFAULT_REPLICA_ID) {<a name="line.648"></a>
-<span class="sourceLineNo">649</span>          hdfsBlocksDistributionSecondaryRegions.add(distro);<a name="line.649"></a>
-<span class="sourceLineNo">650</span>        }<a name="line.650"></a>
-<span class="sourceLineNo">651</span>      }<a name="line.651"></a>
-<span class="sourceLineNo">652</span>      float localityIndex = hdfsBlocksDistribution.getBlockLocalityIndex(<a name="line.652"></a>
-<span class="sourceLineNo">653</span>          regionServer.getServerName().getHostname());<a name="line.653"></a>
-<span class="sourceLineNo">654</span>      tempPercentFileLocal = Double.isNaN(tempBlockedRequestsCount) ? 0 : (localityIndex * 100);<a name="line.654"></a>
-<span class="sourceLineNo">655</span><a name="line.655"></a>
-<span class="sourceLineNo">656</span>      float localityIndexSecondaryRegions = hdfsBlocksDistributionSecondaryRegions<a name="line.656"></a>
-<span class="sourceLineNo">657</span>          .getBlockLocalityIndex(regionServer.getServerName().getHostname());<a name="line.657"></a>
-<span class="sourceLineNo">658</span>      tempPercentFileLocalSecondaryRegions =<a name="line.658"></a>
-<span class="sourceLineNo">659</span>          Double.isNaN(localityIndexSecondaryRegions) ? 0 : (localityIndexSecondaryRegions * 100);<a name="line.659"></a>
-<span class="sourceLineNo">660</span><a name="line.660"></a>
-<span class="sourceLineNo">661</span>      // Compute the number of requests per second<a name="line.661"></a>
-<span class="sourceLineNo">662</span>      long currentTime = EnvironmentEdgeManager.currentTime();<a name="line.662"></a>
-<span class="sourceLineNo">663</span><a name="line.663"></a>
-<span class="sourceLineNo">664</span>      // assume that it took PERIOD seconds to start the executor.<a name="line.664"></a>
-<span class="sourceLineNo">665</span>      // this is a guess but it's a pretty good one.<a name="line.665"></a>
-<span class="sourceLineNo">666</span>      if (lastRan == 0) {<a name="line.666"></a>
-<span class="sourceLineNo">667</span>        lastRan = currentTime - period;<a name="line.667"></a>
-<span class="sourceLineNo">668</span>      }<a name="line.668"></a>
-<span class="sourceLineNo">669</span>      // If we've time traveled keep the last requests per second.<a name="line.669"></a>
-<span class="sourceLineNo">670</span>      if ((currentTime - lastRan) &gt; 0) {<a name="line.670"></a>
-<span class="sourceLineNo">671</span>        long currentRequestCount = getTotalRequestCount();<a name="line.671"></a>
-<span class="sourceLineNo">672</span>        requestsPerSecond = (currentRequestCount - lastRequestCount) /<a name="line.672"></a>
-<span class="sourceLineNo">673</span>            ((currentTime - lastRan) / 1000.0);<a name="line.673"></a>
-<span class="sourceLineNo">674</span>        lastRequestCount = currentRequestCount;<a name="line.674"></a>
-<span class="sourceLineNo">675</span>      }<a name="line.675"></a>
-<span class="sourceLineNo">676</span>      lastRan = currentTime;<a name="line.676"></a>
-<span class="sourceLineNo">677</span><a name="line.677"></a>
-<span class="sourceLineNo">678</span>      WALProvider provider = regionServer.walFactory.getWALProvider();<a name="line.678"></a>
-<span class="sourceLineNo">679</span>      WALProvider metaProvider = regionServer.walFactory.getMetaWALProvider();<a name="line.679"></a>
-<span class="sourceLineNo">680</span>      numWALFiles = (provider == null ? 0 : provider.getNumLogFiles()) +<a name="line.680"></a>
-<span class="sourceLineNo">681</span>          (metaProvider == null ? 0 : metaProvider.getNumLogFiles());<a name="line.681"></a>
-<span class="sourceLineNo">682</span>      walFileSize = (provider == null ? 0 : provider.getLogFileSize()) +<a name="line.682"></a>
-<span class="sourceLineNo">683</span>          (provider == null ? 0 : provider.getLogFileSize());<a name="line.683"></a>
-<span class="sourceLineNo">684</span>      // Copy over computed values so that no thread sees half computed values.<a name="line.684"></a>
-<span class="sourceLineNo">685</span>      numStores = tempNumStores;<a name="line.685"></a>
-<span class="sourceLineNo">686</span>      numStoreFiles = tempNumStoreFiles;<a name="line.686"></a>
-<span class="sourceLineNo">687</span>      memstoreSize = tempMemstoreSize;<a name="line.687"></a>
-<span class="sourceLineNo">688</span>      storeFileSize = tempStoreFileSize;<a name="line.688"></a>
-<span class="sourceLineNo">689</span>      readRequestsCount = tempReadRequestsCount;<a name="line.689"></a>
-<span class="sourceLineNo">690</span>      writeRequestsCount = tempWriteRequestsCount;<a name="line.690"></a>
-<span class="sourceLineNo">691</span>      checkAndMutateChecksFailed = tempCheckAndMutateChecksFailed;<a name="line.691"></a>
-<span class="sourceLineNo">692</span>      checkAndMutateChecksPassed = tempCheckAndMutateChecksPassed;<a name="line.692"></a>
-<span class="sourceLineNo">693</span>      storefileIndexSize = tempStorefileIndexSize;<a name="line.693"></a>
-<span class="sourceLineNo">694</span>      totalStaticIndexSize = tempTotalStaticIndexSize;<a name="line.694"></a>
-<span class="sourceLineNo">695</span>      totalStaticBloomSize = tempTotalStaticBloomSize;<a name="line.695"></a>
-<span class="sourceLineNo">696</span>      numMutationsWithoutWAL = tempNumMutationsWithoutWAL;<a name="line.696"></a>
-<span class="sourceLineNo">697</span>      dataInMemoryWithoutWAL = tempDataInMemoryWithoutWAL;<a name="line.697"></a>
-<span class="sourceLineNo">698</span>      percentFileLocal = tempPercentFileLocal;<a name="line.698"></a>
-<span class="sourceLineNo">699</span>      percentFileLocalSecondaryRegions = tempPercentFileLocalSecondaryRegions;<a name="line.699"></a>
-<span class="sourceLineNo">700</span>      flushedCellsCount = tempFlushedCellsCount;<a name="line.700"></a>
-<span class="sourceLineNo">701</span>      compactedCellsCount = tempCompactedCellsCount;<a name="line.701"></a>
-<span class="sourceLineNo">702</span>      majorCompactedCellsCount = tempMajorCompactedCellsCount;<a name="line.702"></a>
-<span class="sourceLineNo">703</span>      flushedCellsSize = tempFlushedCellsSize;<a name="line.703"></a>
-<span class="sourceLineNo">704</span>      compactedCellsSize = tempCompactedCellsSize;<a name="line.704"></a>
-<span class="sourceLineNo">705</span>      majorCompactedCellsSize = tempMajorCompactedCellsSize;<a name="line.705"></a>
-<span class="sourceLineNo">706</span>      cellsCountCompactedToMob = tempCellsCountCompactedToMob;<a name="line.706"></a>
-<span class="sourceLineNo">707</span>      cellsCountCompactedFromMob = tempCellsCountCompactedFromMob;<a name="line.707"></a>
-<span class="sourceLineNo">708</span>      cellsSizeCompactedToMob = tempCellsSizeCompactedToMob;<a name="line.708"></a>
-<span class="sourceLineNo">709</span>      cellsSizeCompactedFromMob = tempCellsSizeCompactedFromMob;<a name="line.709"></a>
-<span class="sourceLineNo">710</span>      mobFlushCount = tempMobFlushCount;<a name="line.710"></a>
-<span class="sourceLineNo">711</span>      mobFlushedCellsCount = tempMobFlushedCellsCount;<a name="line.711"></a>
-<span class="sourceLineNo">712</span>      mobFlushedCellsSize = tempMobFlushedCellsSize;<a name="line.712"></a>
-<span class="sourceLineNo">713</span>      mobScanCellsCount = tempMobScanCellsCount;<a name="line.713"></a>
-<span class="sourceLineNo">714</span>      mobScanCellsSize = tempMobScanCellsSize;<a name="line.714"></a>
-<span class="sourceLineNo">715</span>      mobFileCacheAccessCount = mobFileCache.getAccessCount();<a name="line.715"></a>
-<span class="sourceLineNo">716</span>      mobFileCacheMissCount = mobFileCache.getMissCount();<a name="line.716"></a>
-<span class="sourceLineNo">717</span>      mobFileCacheHitRatio = Double.isNaN(mobFileCache.getHitRatio())?0:mobFileCache.getHitRatio();<a name="line.717"></a>
-<span class="sourceLineNo">718</span>      mobFileCacheEvictedCount = mobFileCache.getEvictedFileCount();<a name="line.718"></a>
-<span class="sourceLineNo">719</span>      mobFileCacheCount = mobFileCache.getCacheSize();<a name="line.719"></a>
-<span class="sourceLineNo">720</span>      blockedRequestsCount = tempBlockedRequestsCount;<a name="line.720"></a>
-<span class="sourceLineNo">721</span>    }<a name="line.721"></a>
-<span class="sourceLineNo">722</span>  }<a name="line.722"></a>
-<span class="sourceLineNo">723</span><a name="line.723"></a>
-<span class="sourceLineNo">724</span>  @Override<a name="line.724"></a>
-<span class="sourceLineNo">725</span>  public long getHedgedReadOps() {<a name="line.725"></a>
-<span class="sourceLineNo">726</span>    return this.dfsHedgedReadMetrics == null? 0: this.dfsHedgedReadMetrics.getHedgedReadOps();<a name="line.726"></a>
+<span class="sourceLineNo">572</span>      try {<a name="line.572"></a>
+<span class="sourceLineNo">573</span>        initBlockCache();<a name="line.573"></a>
+<span class="sourceLineNo">574</span>        initMobFileCache();<a name="line.574"></a>
+<span class="sourceLineNo">575</span>        cacheStats = blockCache.getStats();<a name="line.575"></a>
+<span class="sourceLineNo">576</span><a name="line.576"></a>
+<span class="sourceLineNo">577</span>        HDFSBlocksDistribution hdfsBlocksDistribution =<a name="line.577"></a>
+<span class="sourceLineNo">578</span>            new HDFSBlocksDistribution();<a name="line.578"></a>
+<span class="sourceLineNo">579</span>        HDFSBlocksDistribution hdfsBlocksDistributionSecondaryRegions =<a name="line.579"></a>
+<span class="sourceLineNo">580</span>            new HDFSBlocksDistribution();<a name="line.580"></a>
+<span class="sourceLineNo">581</span><a name="line.581"></a>
+<span class="sourceLineNo">582</span>        long tempNumStores = 0, tempNumStoreFiles = 0, tempMemstoreSize = 0, tempStoreFileSize = 0;<a name="line.582"></a>
+<span class="sourceLineNo">583</span>        long tempReadRequestsCount = 0, tempWriteRequestsCount = 0;<a name="line.583"></a>
+<span class="sourceLineNo">584</span>        long tempCheckAndMutateChecksFailed = 0;<a name="line.584"></a>
+<span class="sourceLineNo">585</span>        long tempCheckAndMutateChecksPassed = 0;<a name="line.585"></a>
+<span class="sourceLineNo">586</span>        long tempStorefileIndexSize = 0;<a name="line.586"></a>
+<span class="sourceLineNo">587</span>        long tempTotalStaticIndexSize = 0;<a name="line.587"></a>
+<span class="sourceLineNo">588</span>        long tempTotalStaticBloomSize = 0;<a name="line.588"></a>
+<span class="sourceLineNo">589</span>        long tempNumMutationsWithoutWAL = 0;<a name="line.589"></a>
+<span class="sourceLineNo">590</span>        long tempDataInMemoryWithoutWAL = 0;<a name="line.590"></a>
+<span class="sourceLineNo">591</span>        double tempPercentFileLocal = 0;<a name="line.591"></a>
+<span class="sourceLineNo">592</span>        double tempPercentFileLocalSecondaryRegions = 0;<a name="line.592"></a>
+<span class="sourceLineNo">593</span>        long tempFlushedCellsCount = 0;<a name="line.593"></a>
+<span class="sourceLineNo">594</span>        long tempCompactedCellsCount = 0;<a name="line.594"></a>
+<span class="sourceLineNo">595</span>        long tempMajorCompactedCellsCount = 0;<a name="line.595"></a>
+<span class="sourceLineNo">596</span>        long tempFlushedCellsSize = 0;<a name="line.596"></a>
+<span class="sourceLineNo">597</span>        long tempCompactedCellsSize = 0;<a name="line.597"></a>
+<span class="sourceLineNo">598</span>        long tempMajorCompactedCellsSize = 0;<a name="line.598"></a>
+<span class="sourceLineNo">599</span>        long tempCellsCountCompactedToMob = 0;<a name="line.599"></a>
+<span class="sourceLineNo">600</span>        long tempCellsCountCompactedFromMob = 0;<a name="line.600"></a>
+<span class="sourceLineNo">601</span>        long tempCellsSizeCompactedToMob = 0;<a name="line.601"></a>
+<span class="sourceLineNo">602</span>        long tempCellsSizeCompactedFromMob = 0;<a name="line.602"></a>
+<span class="sourceLineNo">603</span>        long tempMobFlushCount = 0;<a name="line.603"></a>
+<span class="sourceLineNo">604</span>        long tempMobFlushedCellsCount = 0;<a name="line.604"></a>
+<span class="sourceLineNo">605</span>        long tempMobFlushedCellsSize = 0;<a name="line.605"></a>
+<span class="sourceLineNo">606</span>        long tempMobScanCellsCount = 0;<a name="line.606"></a>
+<span class="sourceLineNo">607</span>        long tempMobScanCellsSize = 0;<a name="line.607"></a>
+<span class="sourceLineNo">608</span>        long tempBlockedRequestsCount = 0;<a name="line.608"></a>
+<span class="sourceLineNo">609</span><a name="line.609"></a>
+<span class="sourceLineNo">610</span>        for (Region r : regionServer.getOnlineRegionsLocalContext()) {<a name="line.610"></a>
+<span class="sourceLineNo">611</span>          tempNumMutationsWithoutWAL += r.getNumMutationsWithoutWAL();<a name="line.611"></a>
+<span class="sourceLineNo">612</span>          tempDataInMemoryWithoutWAL += r.getDataInMemoryWithoutWAL();<a name="line.612"></a>
+<span class="sourceLineNo">613</span>          tempReadRequestsCount += r.getReadRequestsCount();<a name="line.613"></a>
+<span class="sourceLineNo">614</span>          tempWriteRequestsCount += r.getWriteRequestsCount();<a name="line.614"></a>
+<span class="sourceLineNo">615</span>          tempCheckAndMutateChecksFailed += r.getCheckAndMutateChecksFailed();<a name="line.615"></a>
+<span class="sourceLineNo">616</span>          tempCheckAndMutateChecksPassed += r.getCheckAndMutateChecksPassed();<a name="line.616"></a>
+<span class="sourceLineNo">617</span>          tempBlockedRequestsCount += r.getBlockedRequestsCount();<a name="line.617"></a>
+<span class="sourceLineNo">618</span>          List&lt;Store&gt; storeList = r.getStores();<a name="line.618"></a>
+<span class="sourceLineNo">619</span>          tempNumStores += storeList.size();<a name="line.619"></a>
+<span class="sourceLineNo">620</span>          for (Store store : storeList) {<a name="line.620"></a>
+<span class="sourceLineNo">621</span>            tempNumStoreFiles += store.getStorefilesCount();<a name="line.621"></a>
+<span class="sourceLineNo">622</span>            tempMemstoreSize += store.getMemStoreSize();<a name="line.622"></a>
+<span class="sourceLineNo">623</span>            tempStoreFileSize += store.getStorefilesSize();<a name="line.623"></a>
+<span class="sourceLineNo">624</span>            tempStorefileIndexSize += store.getStorefilesIndexSize();<a name="line.624"></a>
+<span class="sourceLineNo">625</span>            tempTotalStaticBloomSize += store.getTotalStaticBloomSize();<a name="line.625"></a>
+<span class="sourceLineNo">626</span>            tempTotalStaticIndexSize += store.getTotalStaticIndexSize();<a name="line.626"></a>
+<span class="sourceLineNo">627</span>            tempFlushedCellsCount += store.getFlushedCellsCount();<a name="line.627"></a>
+<span class="sourceLineNo">628</span>            tempCompactedCellsCount += store.getCompactedCellsCount();<a name="line.628"></a>
+<span class="sourceLineNo">629</span>            tempMajorCompactedCellsCount += store.getMajorCompactedCellsCount();<a name="line.629"></a>
+<span class="sourceLineNo">630</span>            tempFlushedCellsSize += store.getFlushedCellsSize();<a name="line.630"></a>
+<span class="sourceLineNo">631</span>            tempCompactedCellsSize += store.getCompactedCellsSize();<a name="line.631"></a>
+<span class="sourceLineNo">632</span>            tempMajorCompactedCellsSize += store.getMajorCompactedCellsSize();<a name="line.632"></a>
+<span class="sourceLineNo">633</span>            if (store instanceof HMobStore) {<a name="line.633"></a>
+<span class="sourceLineNo">634</span>              HMobStore mobStore = (HMobStore) store;<a name="line.634"></a>
+<span class="sourceLineNo">635</span>              tempCellsCountCompactedToMob += mobStore.getCellsCountCompactedToMob();<a name="line.635"></a>
+<span class="sourceLineNo">636</span>              tempCellsCountCompactedFromMob += mobStore.getCellsCountCompactedFromMob();<a name="line.636"></a>
+<span class="sourceLineNo">637</span>              tempCellsSizeCompactedToMob += mobStore.getCellsSizeCompactedToMob();<a name="line.637"></a>
+<span class="sourceLineNo">638</span>              tempCellsSizeCompactedFromMob += mobStore.getCellsSizeCompactedFromMob();<a name="line.638"></a>
+<span class="sourceLineNo">639</span>              tempMobFlushCount += mobStore.getMobFlushCount();<a name="line.639"></a>
+<span class="sourceLineNo">640</span>              tempMobFlushedCellsCount += mobStore.getMobFlushedCellsCount();<a name="line.640"></a>
+<span class="sourceLineNo">641</span>              tempMobFlushedCellsSize += mobStore.getMobFlushedCellsSize();<a name="line.641"></a>
+<span class="sourceLineNo">642</span>              tempMobScanCellsCount += mobStore.getMobScanCellsCount();<a name="line.642"></a>
+<span class="sourceLineNo">643</span>              tempMobScanCellsSize += mobStore.getMobScanCellsSize();<a name="line.643"></a>
+<span class="sourceLineNo">644</span>            }<a name="line.644"></a>
+<span class="sourceLineNo">645</span>          }<a name="line.645"></a>
+<span class="sourceLineNo">646</span><a name="line.646"></a>
+<span class="sourceLineNo">647</span>          HDFSBlocksDistribution distro = r.getHDFSBlocksDistribution();<a name="line.647"></a>
+<span class="sourceLineNo">648</span>          hdfsBlocksDistribution.add(distro);<a name="line.648"></a>
+<span class="sourceLineNo">649</span>          if (r.getRegionInfo().getReplicaId() != HRegionInfo.DEFAULT_REPLICA_ID) {<a name="line.649"></a>
+<span class="sourceLineNo">650</span>            hdfsBlocksDistributionSecondaryRegions.add(distro);<a name="line.650"></a>
+<span class="sourceLineNo">651</span>          }<a name="line.651"></a>
+<span class="sourceLineNo">652</span>        }<a name="line.652"></a>
+<span class="sourceLineNo">653</span>        float localityIndex = hdfsBlocksDistribution.getBlockLocalityIndex(<a name="line.653"></a>
+<span class="sourceLineNo">654</span>            regionServer.getServerName().getHostname());<a name="line.654"></a>
+<span class="sourceLineNo">655</span>        tempPercentFileLocal = Double.isNaN(tempBlockedRequestsCount) ? 0 : (localityIndex * 100);<a name="line.655"></a>
+<span class="sourceLineNo">656</span><a name="line.656"></a>
+<span class="sourceLineNo">657</span>        float localityIndexSecondaryRegions = hdfsBlocksDistributionSecondaryRegions<a name="line.657"></a>
+<span class="sourceLineNo">658</span>            .getBlockLocalityIndex(regionServer.getServerName().getHostname());<a name="line.658"></a>
+<span class="sourceLineNo">659</span>        tempPercentFileLocalSecondaryRegions = Double.<a name="line.659"></a>
+<span class="sourceLineNo">660</span>            isNaN(localityIndexSecondaryRegions) ? 0 : (localityIndexSecondaryRegions * 100);<a name="line.660"></a>
+<span class="sourceLineNo">661</span><a name="line.661"></a>
+<span class="sourceLineNo">662</span>        // Compute the number of requests per second<a name="line.662"></a>
+<span class="sourceLineNo">663</span>        long currentTime = EnvironmentEdgeManager.currentTime();<a name="line.663"></a>
+<span class="sourceLineNo">664</span><a name="line.664"></a>
+<span class="sourceLineNo">665</span>        // assume that it took PERIOD seconds to start the executor.<a name="line.665"></a>
+<span class="sourceLineNo">666</span>        // this is a guess but it's a pretty good one.<a name="line.666"></a>
+<span class="sourceLineNo">667</span>        if (lastRan == 0) {<a name="line.667"></a>
+<span class="sourceLineNo">668</span>          lastRan = currentTime - period;<a name="line.668"></a>
+<span class="sourceLineNo">669</span>        }<a name="line.669"></a>
+<span class="sourceLineNo">670</span>        // If we've time traveled keep the last requests per second.<a name="line.670"></a>
+<span class="sourceLineNo">671</span>        if ((currentTime - lastRan) &gt; 0) {<a name="line.671"></a>
+<span class="sourceLineNo">672</span>          long currentRequestCount = getTotalRequestCount();<a name="line.672"></a>
+<span class="sourceLineNo">673</span>          requestsPerSecond = (currentRequestCount - lastRequestCount) /<a name="line.673"></a>
+<span class="sourceLineNo">674</span>              ((currentTime - lastRan) / 1000.0);<a name="line.674"></a>
+<span class="sourceLineNo">675</span>          lastRequestCount = currentRequestCount;<a name="line.675"></a>
+<span class="sourceLineNo">676</span>        }<a name="line.676"></a>
+<span class="sourceLineNo">677</span>        lastRan = currentTime;<a name="line.677"></a>
+<span class="sourceLineNo">678</span><a name="line.678"></a>
+<span class="sourceLineNo">679</span>        WALProvider provider = regionServer.walFactory.getWALProvider();<a name="line.679"></a>
+<span class="sourceLineNo">680</span>        WALProvider metaProvider = regionServer.walFactory.getMetaWALProvider();<a name="line.680"></a>
+<span class="sourceLineNo">681</span>        numWALFiles = (provider == null ? 0 : provider.getNumLogFiles()) +<a name="line.681"></a>
+<span class="sourceLineNo">682</span>            (metaProvider == null ? 0 : metaProvider.getNumLogFiles());<a name="line.682"></a>
+<span class="sourceLineNo">683</span>        walFileSize = (provider == null ? 0 : provider.getLogFileSize()) +<a name="line.683"></a>
+<span class="sourceLineNo">684</span>            (provider == null ? 0 : provider.getLogFileSize());<a name="line.684"></a>
+<span class="sourceLineNo">685</span>        // Copy over computed values so that no thread sees half computed values.<a name="line.685"></a>
+<span class="sourceLineNo">686</span>        numStores = tempNumStores;<a name="line.686"></a>
+<span class="sourceLineNo">687</span>        numStoreFiles = tempNumStoreFiles;<a name="line.687"></a>
+<span class="sourceLineNo">688</span>        memstoreSize = tempMemstoreSize;<a name="line.688"></a>
+<span class="sourceLineNo">689</span>        storeFileSize = tempStoreFileSize;<a name="line.689"></a>
+<span class="sourceLineNo">690</span>        readRequestsCount = tempReadRequestsCount;<a name="line.690"></a>
+<span class="sourceLineNo">691</span>        writeRequestsCount = tempWriteRequestsCount;<a name="line.691"></a>
+<span class="sourceLineNo">692</span>        checkAndMutateChecksFailed = tempCheckAndMutateChecksFailed;<a name="line.692"></a>
+<span class="sourceLineNo">693</span>        checkAndMutateChecksPassed = tempCheckAndMutateChecksPassed;<a name="line.693"></a>
+<span class="sourceLineNo">694</span>        storefileIndexSize = tempStorefileIndexSize;<a name="line.694"></a>
+<span class="sourceLineNo">695</span>        totalStaticIndexSize = tempTotalStaticIndexSize;<a name="line.695"></a>
+<span class="sourceLineNo">696</span>        totalStaticBloomSize = tempTotalStaticBloomSize;<a name="line.696"></a>
+<span class="sourceLineNo">697</span>        numMutationsWithoutWAL = tempNumMutationsWithoutWAL;<a name="line.697"></a>
+<span class="sourceLineNo">698</span>        dataInMemoryWithoutWAL = tempDataInMemoryWithoutWAL;<a name="line.698"></a>
+<span class="sourceLineNo">699</span>        percentFileLocal = tempPercentFileLocal;<a name="line.699"></a>
+<span class="sourceLineNo">700</span>        percentFileLocalSecondaryRegions = tempPercentFileLocalSecondaryRegions;<a name="line.700"></a>
+<span class="sourceLineNo">701</span>        flushedCellsCount = tempFlushedCellsCount;<a name="line.701"></a>
+<span class="sourceLineNo">702</span>        compactedCellsCount = tempCompactedCellsCount;<a name="line.702"></a>
+<span class="sourceLineNo">703</span>        majorCompactedCellsCount = tempMajorCompactedCellsCount;<a name="line.703"></a>
+<span class="sourceLineNo">704</span>        flushedCellsSize = tempFlushedCellsSize;<a name="line.704"></a>
+<span class="sourceLineNo">705</span>        compactedCellsSize = tempCompactedCellsSize;<a name="line.705"></a>
+<span class="sourceLineNo">706</span>        majorCompactedCellsSize = tempMajorCompactedCellsSize;<a name="line.706"></a>
+<span class="sourceLineNo">707</span>        cellsCountCompactedToMob = tempCellsCountCompactedToMob;<a name="line.707"></a>
+<span class="sourceLineNo">708</span>        cellsCountCompactedFromMob = tempCellsCountCompactedFromMob;<a name="line.708"></a>
+<span class="sourceLineNo">709</span>        cellsSizeCompactedToMob = tempCellsSizeCompactedToMob;<a name="line.709"></a>
+<span class="sourceLineNo">710</span>        cellsSizeCompactedFromMob = tempCellsSizeCompactedFromMob;<a name="line.710"></a>
+<span class="sourceLineNo">711</span>        mobFlushCount = tempMobFlushCount;<a name="line.711"></a>
+<span class="sourceLineNo">712</span>        mobFlushedCellsCount = tempMobFlushedCellsCount;<a name="line.712"></a>
+<span class="sourceLineNo">713</span>        mobFlushedCellsSize = tempMobFlushedCellsSize;<a name="line.713"></a>
+<span class="sourceLineNo">714</span>        mobScanCellsCount = tempMobScanCellsCount;<a name="line.714"></a>
+<span class="sourceLineNo">715</span>        mobScanCellsSize = tempMobScanCellsSize;<a name="line.715"></a>
+<span class="sourceLineNo">716</span>        mobFileCacheAccessCount = mobFileCache.getAccessCount();<a name="line.716"></a>
+<span class="sourceLineNo">717</span>        mobFileCacheMissCount = mobFileCache.getMissCount();<a name="line.717"></a>
+<span class="sourceLineNo">718</span>        mobFileCacheHitRatio = Double.<a name="line.718"></a>
+<span class="sourceLineNo">719</span>            isNaN(mobFileCache.getHitRatio())?0:mobFileCache.getHitRatio();<a name="line.719"></a>
+<span class="sourceLineNo">720</span>        mobFileCacheEvictedCount = mobFileCache.getEvictedFileCount();<a name="line.720"></a>
+<span class="sourceLineNo">721</span>        mobFileCacheCount = mobFileCache.getCacheSize();<a name="line.721"></a>
+<span class="sourceLineNo">722</span>        blockedRequestsCount = tempBlockedRequestsCount;<a name="line.722"></a>
+<span class="sourceLineNo">723</span>      } catch (Throwable e) {<a name="line.723"></a>
+<span class="sourceLineNo">724</span>        LOG.warn("Caught exception! Will suppress and retry.", e);<a name="line.724"></a>
+<span class="sourceLineNo">725</span>      }<a name="line.725"></a>
+<span class="sourceLineNo">726</span>    }<a name="line.726"></a>
 <span class="sourceLineNo">727</span>  }<a name="line.727"></a>
 <span class="sourceLineNo">728</span><a name="line.728"></a>
 <span class="sourceLineNo">729</span>  @Override<a name="line.729"></a>
-<span class="sourceLineNo">730</span>  public long getHedgedReadWins() {<a name="line.730"></a>
-<span class="sourceLineNo">731</span>    return this.dfsHedgedReadMetrics == null? 0: this.dfsHedgedReadMetrics.getHedgedReadWins();<a name="line.731"></a>
+<span class="sourceLineNo">730</span>  public long getHedgedReadOps() {<a name="line.730"></a>
+<span class="sourceLineNo">731</span>    return this.dfsHedgedReadMetrics == null? 0: this.dfsHedgedReadMetrics.getHedgedReadOps();<a name="line.731"></a>
 <span class="sourceLineNo">732</span>  }<a name="line.732"></a>
 <span class="sourceLineNo">733</span><a name="line.733"></a>
 <span class="sourceLineNo">734</span>  @Override<a name="line.734"></a>
-<span class="sourceLineNo">735</span>  public long getBlockedRequestsCount() {<a name="line.735"></a>
-<span class="sourceLineNo">736</span>    return blockedRequestsCount;<a name="line.736"></a>
+<span class="sourceLineNo">735</span>  public long getHedgedReadWins() {<a name="line.735"></a>
+<span class="sourceLineNo">736</span>    return this.dfsHedgedReadMetrics == null? 0: this.dfsHedgedReadMetrics.getHedgedReadWins();<a name="line.736"></a>
 <span class="sourceLineNo">737</span>  }<a name="line.737"></a>
-<span class="sourceLineNo">738</span>}<a name="line.738"></a>
+<span class="sourceLineNo">738</span><a name="line.738"></a>
+<span class="sourceLineNo">739</span>  @Override<a name="line.739"></a>
+<span class="sourceLineNo">740</span>  public long getBlockedRequestsCount() {<a name="line.740"></a>
+<span class="sourceLineNo">741</span>    return blockedRequestsCount;<a name="line.741"></a>
+<span class="sourceLineNo">742</span>  }<a name="line.742"></a>
+<span class="sourceLineNo">743</span>}<a name="line.743"></a>
 
 
 

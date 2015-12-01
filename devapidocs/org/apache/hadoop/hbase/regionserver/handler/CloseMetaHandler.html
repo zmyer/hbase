@@ -61,15 +61,15 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.executor.EventHandler">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.handler.CloseRegionHandler">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.handler.CloseRegionHandler">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_top">
@@ -110,7 +110,7 @@
 <hr>
 <br>
 <pre><a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/CloseMetaHandler.html#line.31">CloseMetaHandler</a>
+public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/CloseMetaHandler.html#line.34">CloseMetaHandler</a>
 extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">CloseRegionHandler</a></pre>
 <div class="block">Handles closing of the meta region on a region server.</div>
 </li>
@@ -125,6 +125,13 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.handler.CloseRegionHandler">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.handler.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">CloseRegionHandler</a></h3>
+<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.html#region">region</a>, <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.html#regionInfo">regionInfo</a>, <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.html#rsServices">rsServices</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.executor.EventHandler">
 <!--   -->
@@ -160,6 +167,17 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/
 <!--   -->
 </a>
 <h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseMetaHandler.html#releaseWALIfNeeded()">releaseWALIfNeeded</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.handler.CloseRegionHandler">
 <!--   -->
@@ -201,10 +219,33 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/
 <ul class="blockListLast">
 <li class="blockList">
 <h4>CloseMetaHandler</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/CloseMetaHandler.html#line.34">CloseMetaHandler</a>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/CloseMetaHandler.html#line.37">CloseMetaHandler</a>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;rsServices,
                 <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
                 boolean&nbsp;abort)</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="releaseWALIfNeeded()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>releaseWALIfNeeded</h4>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/handler/CloseMetaHandler.html#line.45">releaseWALIfNeeded</a>()
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.html#releaseWALIfNeeded()">releaseWALIfNeeded</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">CloseRegionHandler</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>
@@ -259,15 +300,15 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/handler/
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.executor.EventHandler">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.handler.CloseRegionHandler">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.handler.CloseRegionHandler">Method</a></li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_bottom">

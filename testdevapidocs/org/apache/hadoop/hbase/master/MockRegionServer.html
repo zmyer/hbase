@@ -452,46 +452,51 @@ implements org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.B
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#registerService(com.google.protobuf.Service)">registerService</a></strong>(com.google.protobuf.Service&nbsp;service)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#releaseWAL(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WAL)">releaseWAL</a></strong>(org.apache.hadoop.hbase.HRegionInfo&nbsp;regionInfo,
+                    org.apache.hadoop.hbase.wal.WAL&nbsp;wal)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#removeFromOnlineRegions(org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.ServerName)">removeFromOnlineRegions</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;r,
                                               org.apache.hadoop.hbase.ServerName&nbsp;destination)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryResponse</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#replay(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryRequest)">replay</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
             org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryRequest&nbsp;request)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryResponse</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#replicateWALEntry(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryRequest)">replicateWALEntry</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
                                   org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryRequest&nbsp;request)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#reportRegionStateTransition(org.apache.hadoop.hbase.regionserver.RegionServerServices.RegionStateTransitionContext)">reportRegionStateTransition</a></strong>(org.apache.hadoop.hbase.regionserver.RegionServerServices.RegionStateTransitionContext&nbsp;context)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#reportRegionStateTransition(org.apache.hadoop.hbase.protobuf.generated.RegionServerStatusProtos.RegionStateTransition.TransitionCode,%20org.apache.hadoop.hbase.HRegionInfo...)">reportRegionStateTransition</a></strong>(org.apache.hadoop.hbase.protobuf.generated.RegionServerStatusProtos.RegionStateTransition.TransitionCode&nbsp;code,
                                                       org.apache.hadoop.hbase.HRegionInfo...&nbsp;hris)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#reportRegionStateTransition(org.apache.hadoop.hbase.protobuf.generated.RegionServerStatusProtos.RegionStateTransition.TransitionCode,%20long,%20org.apache.hadoop.hbase.HRegionInfo...)">reportRegionStateTransition</a></strong>(org.apache.hadoop.hbase.protobuf.generated.RegionServerStatusProtos.RegionStateTransition.TransitionCode&nbsp;code,
                                                       long&nbsp;openSeqNum,
                                                       org.apache.hadoop.hbase.HRegionInfo...&nbsp;hris)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.AdminProtos.RollWALWriterResponse</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#rollWALWriter(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.RollWALWriterRequest)">rollWALWriter</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
                           org.apache.hadoop.hbase.protobuf.generated.AdminProtos.RollWALWriterRequest&nbsp;request)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#scan(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest)">scan</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
         org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest&nbsp;request)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#setGetResult(byte[],%20byte[],%20org.apache.hadoop.hbase.client.Result)">setGetResult</a></strong>(byte[]&nbsp;regionName,
                         byte[]&nbsp;row,
@@ -499,43 +504,43 @@ implements org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.B
 <div class="block">Use this method filling the backing data source used by <code>#get(byte[], Get)</code></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#setNextResults(byte[],%20org.apache.hadoop.hbase.client.Result[])">setNextResults</a></strong>(byte[]&nbsp;regionName,
                             org.apache.hadoop.hbase.client.Result[]&nbsp;rs)</code>
 <div class="block">Use this method to set what a scanner will reply as we next through</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.AdminProtos.SplitRegionResponse</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#splitRegion(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.SplitRegionRequest)">splitRegion</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
                       org.apache.hadoop.hbase.protobuf.generated.AdminProtos.SplitRegionRequest&nbsp;request)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#stop(java.lang.String)">stop</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;why)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.AdminProtos.StopServerResponse</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#stopServer(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.StopServerRequest)">stopServer</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
                     org.apache.hadoop.hbase.protobuf.generated.AdminProtos.StopServerRequest&nbsp;request)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateConfigurationResponse</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#updateConfiguration(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateConfigurationRequest)">updateConfiguration</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
                                       org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateConfigurationRequest&nbsp;request)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateFavoredNodesResponse</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#updateFavoredNodes(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateFavoredNodesRequest)">updateFavoredNodes</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
                                     org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateFavoredNodesRequest&nbsp;request)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#updateRegionFavoredNodesMapping(java.lang.String,%20java.util.List)">updateRegionFavoredNodesMapping</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedRegionName,
                                                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.ServerName&gt;&nbsp;favoredNodes)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WarmupRegionResponse</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MockRegionServer.html#warmupRegion(com.google.protobuf.RpcController,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WarmupRegionRequest)">warmupRegion</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
                         org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WarmupRegionRequest&nbsp;request)</code>&nbsp;</td>
@@ -1650,7 +1655,7 @@ implements org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.B
 <a name="getCompactionPressure()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getCompactionPressure</h4>
 <pre>public&nbsp;double&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MockRegionServer.html#line.651">getCompactionPressure</a>()</pre>
@@ -1658,6 +1663,22 @@ implements org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.B
 <dt><strong>Specified by:</strong></dt>
 <dd><code>getCompactionPressure</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionServerServices</code></dd>
 </dl>
+</li>
+</ul>
+<a name="releaseWAL(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.wal.WAL)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>releaseWAL</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/master/MockRegionServer.html#line.656">releaseWAL</a>(org.apache.hadoop.hbase.HRegionInfo&nbsp;regionInfo,
+              org.apache.hadoop.hbase.wal.WAL&nbsp;wal)
+                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>releaseWAL</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionServerServices</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>

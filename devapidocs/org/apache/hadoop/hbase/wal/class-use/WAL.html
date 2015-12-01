@@ -336,6 +336,23 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RegionServerServices.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html#releaseWAL(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WAL)">releaseWAL</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
+                    <a href="../../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</code>
+<div class="block">Releases the dependency of this region to the WAL previously obtained from
+ <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html#getWAL(org.apache.hadoop.hbase.HRegionInfo)"><code>RegionServerServices.getWAL(HRegionInfo)</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">HRegionServer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionServer.html#releaseWAL(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WAL)">releaseWAL</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
+                    <a href="../../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">LogRoller.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#removeWAL(org.apache.hadoop.hbase.wal.WAL)">removeWAL</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#warmupHRegion(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.wal.WAL,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.RegionServerServices,%20org.apache.hadoop.hbase.util.CancelableProgressable)">warmupHRegion</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
                           <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
@@ -344,7 +361,7 @@
                           <a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;rsServices,
                           <a href="../../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a>&nbsp;reporter)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private boolean</code></td>
 <td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#writeFlushRequestMarkerToWAL(org.apache.hadoop.hbase.wal.WAL,%20boolean)">writeFlushRequestMarkerToWAL</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal,
                                                         boolean&nbsp;writeFlushWalMarker)</code>
@@ -352,11 +369,11 @@
  reasons.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#writeRegionCloseMarker(org.apache.hadoop.hbase.wal.WAL)">writeRegionCloseMarker</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#writeRegionOpenMarker(org.apache.hadoop.hbase.wal.WAL,%20long)">writeRegionOpenMarker</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal,
                                           long&nbsp;openSeqId)</code>&nbsp;</td>

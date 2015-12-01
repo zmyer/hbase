@@ -1679,7 +1679,7 @@
 <a class="jxr_linenumber" name="1669" href="#1669">1669</a>         <strong class="jxr_keyword">return</strong> response;
 <a class="jxr_linenumber" name="1670" href="#1670">1670</a>       }
 <a class="jxr_linenumber" name="1671" href="#1671">1671</a> 
-<a class="jxr_linenumber" name="1672" href="#1672">1672</a>       HRegion.warmupHRegion(region, htd, regionServer.getWAL(region),
+<a class="jxr_linenumber" name="1672" href="#1672">1672</a>       HRegion.warmupHRegion(region, htd, <strong class="jxr_keyword">null</strong>,
 <a class="jxr_linenumber" name="1673" href="#1673">1673</a>           regionServer.getConfiguration(), regionServer, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="1674" href="#1674">1674</a> 
 <a class="jxr_linenumber" name="1675" href="#1675">1675</a>     } <strong class="jxr_keyword">catch</strong> (IOException ie) {

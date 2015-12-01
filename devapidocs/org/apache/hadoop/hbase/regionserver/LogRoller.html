@@ -211,17 +211,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#requestRollAll()">requestRollAll</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#removeWAL(org.apache.hadoop.hbase.wal.WAL)">removeWAL</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#run()">run</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#requestRollAll()">requestRollAll</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#run()">run</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#scheduleFlush(byte[])">scheduleFlush</a></strong>(byte[]&nbsp;encodedRegionName)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html#walRollFinished()">walRollFinished</a></strong>()</code>
 <div class="block">For testing only</div>
@@ -351,7 +355,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <ul class="blockListLast">
 <li class="blockList">
 <h4>LogRoller</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.92">LogRoller</a>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.96">LogRoller</a>(<a href="../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
          <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a>&nbsp;services)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>server</code> - </dd></dl>
 </li>
@@ -373,13 +377,22 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.65">addWAL</a>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</pre>
 </li>
 </ul>
+<a name="removeWAL(org.apache.hadoop.hbase.wal.WAL)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeWAL</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.81">removeWAL</a>(<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a>&nbsp;wal)</pre>
+</li>
+</ul>
 <a name="requestRollAll()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>requestRollAll</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.81">requestRollAll</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.85">requestRollAll</a>()</pre>
 </li>
 </ul>
 <a name="interrupt()">
@@ -388,7 +401,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <ul class="blockList">
 <li class="blockList">
 <h4>interrupt</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.103">interrupt</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.107">interrupt</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html#interrupt()">interrupt</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" title="class in org.apache.hadoop.hbase.util">HasThread</a></code></dd>
@@ -401,7 +414,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <ul class="blockList">
 <li class="blockList">
 <h4>run</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.112">run</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.116">run</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true#run()" title="class or interface in java.lang">run</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a></code></dd>
@@ -416,7 +429,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleFlush</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.176">scheduleFlush</a>(byte[]&nbsp;encodedRegionName)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.180">scheduleFlush</a>(byte[]&nbsp;encodedRegionName)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>encodedRegionName</code> - Encoded name of region to flush.</dd></dl>
 </li>
 </ul>
@@ -426,7 +439,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/HasThread.html" tit
 <ul class="blockListLast">
 <li class="blockList">
 <h4>walRollFinished</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.200">walRollFinished</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/LogRoller.html#line.204">walRollFinished</a>()</pre>
 <div class="block">For testing only</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if all WAL roll finished</dd></dl>
 </li>
