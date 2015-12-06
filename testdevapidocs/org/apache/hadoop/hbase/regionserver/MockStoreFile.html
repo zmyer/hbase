@@ -234,26 +234,30 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isMajorCompaction()">isMajorCompaction</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isCompactedAway()">isCompactedAway</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isReference()">isReference</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isMajorCompaction()">isMajorCompaction</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>(package private) void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setEntries(long)">setEntries</a></strong>(long&nbsp;entryCount)</code>&nbsp;</td>
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isReference()">isReference</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>(package private) void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setLength(long)">setLength</a></strong>(long&nbsp;newLen)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setEntries(long)">setEntries</a></strong>(long&nbsp;entryCount)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setLength(long)">setLength</a></strong>(long&nbsp;newLen)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setMetadataValue(byte[],%20byte[])">setMetadataValue</a></strong>(byte[]&nbsp;key,
                                 byte[]&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setTimeRangeTracker(org.apache.hadoop.hbase.regionserver.TimeRangeTracker)">setTimeRangeTracker</a></strong>(org.apache.hadoop.hbase.regionserver.TimeRangeTracker&nbsp;timeRangeTracker)</code>&nbsp;</td>
 </tr>
@@ -263,7 +267,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile</h3>
-<code><clinit>, closeReader, createReader, createReader, deleteReader, excludeFromMinorCompaction, getBulkLoadTimestamp, getCacheConf, getComparator, getFileInfo, getFirstKey, getHDFSBlockDistribution, getLastKey, getMaxMemstoreTS, getMaxMemstoreTSInList, getMaxSequenceIdInList, getMinimumTimestamp, getModificationTimeStamp, getPath, getQualifiedPath, getUniqueFile, setMaxMemstoreTS, toString, toStringDetailed</code></li>
+<code><clinit>, closeReader, createReader, createReader, deleteReader, excludeFromMinorCompaction, getBulkLoadTimestamp, getCacheConf, getComparator, getFileInfo, getFirstKey, getHDFSBlockDistribution, getLastKey, getMaxMemstoreTS, getMaxMemstoreTSInList, getMaxSequenceIdInList, getMinimumTimestamp, getModificationTimeStamp, getPath, getQualifiedPath, getRefCount, getUniqueFile, markCompactedAway, setMaxMemstoreTS, toString, toStringDetailed</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -467,13 +471,26 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 </dl>
 </li>
 </ul>
+<a name="isCompactedAway()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isCompactedAway</h4>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.82">isCompactedAway</a>()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>isCompactedAway</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+</dl>
+</li>
+</ul>
 <a name="getMetadataValue(byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getMetadataValue</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.82">getMetadataValue</a>(byte[]&nbsp;key)</pre>
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.87">getMetadataValue</a>(byte[]&nbsp;key)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code>getMetadataValue</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
@@ -486,7 +503,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setMetadataValue</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.86">setMetadataValue</a>(byte[]&nbsp;key,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.91">setMetadataValue</a>(byte[]&nbsp;key,
                     byte[]&nbsp;value)</pre>
 </li>
 </ul>
@@ -496,7 +513,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setTimeRangeTracker</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.90">setTimeRangeTracker</a>(org.apache.hadoop.hbase.regionserver.TimeRangeTracker&nbsp;timeRangeTracker)</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.95">setTimeRangeTracker</a>(org.apache.hadoop.hbase.regionserver.TimeRangeTracker&nbsp;timeRangeTracker)</pre>
 </li>
 </ul>
 <a name="setEntries(long)">
@@ -505,7 +522,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setEntries</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.94">setEntries</a>(long&nbsp;entryCount)</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.99">setEntries</a>(long&nbsp;entryCount)</pre>
 </li>
 </ul>
 <a name="getReader()">
@@ -514,7 +531,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getReader</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile.Reader&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.99">getReader</a>()</pre>
+<pre>public&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile.Reader&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.104">getReader</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code>getReader</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>

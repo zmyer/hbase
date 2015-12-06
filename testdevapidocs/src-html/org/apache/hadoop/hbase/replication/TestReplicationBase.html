@@ -143,7 +143,7 @@
 <span class="sourceLineNo">135</span><a name="line.135"></a>
 <span class="sourceLineNo">136</span>    HTableDescriptor table = new HTableDescriptor(tableName);<a name="line.136"></a>
 <span class="sourceLineNo">137</span>    HColumnDescriptor fam = new HColumnDescriptor(famName);<a name="line.137"></a>
-<span class="sourceLineNo">138</span>    fam.setMaxVersions(3);<a name="line.138"></a>
+<span class="sourceLineNo">138</span>    fam.setMaxVersions(100);<a name="line.138"></a>
 <span class="sourceLineNo">139</span>    fam.setScope(HConstants.REPLICATION_SCOPE_GLOBAL);<a name="line.139"></a>
 <span class="sourceLineNo">140</span>    table.addFamily(fam);<a name="line.140"></a>
 <span class="sourceLineNo">141</span>    fam = new HColumnDescriptor(noRepfamName);<a name="line.141"></a>

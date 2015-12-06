@@ -122,24 +122,28 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private com.google.common.collect.ImmutableList&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.State.html#allCompactedFilesCached">allCompactedFilesCached</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableList&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.State.html#allFilesCached">allFilesCached</a></strong></code>
 <div class="block">Cached list of all files in the structure, to return from some calls</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>com.google.common.collect.ImmutableList&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.State.html#level0Files">level0Files</a></strong></code>
 <div class="block">Level 0.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[][]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.State.html#stripeEndRows">stripeEndRows</a></strong></code>
 <div class="block">The end rows of each stripe.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;com.google.common.collect.ImmutableList&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.State.html#stripeFiles">stripeFiles</a></strong></code>
 <div class="block">Files by stripe.</div>
@@ -231,11 +235,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="allFilesCached">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>allFilesCached</h4>
 <pre>public&nbsp;com.google.common.collect.ImmutableList&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.State.html#line.108">allFilesCached</a></pre>
 <div class="block">Cached list of all files in the structure, to return from some calls</div>
+</li>
+</ul>
+<a name="allCompactedFilesCached">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>allCompactedFilesCached</h4>
+<pre>private&nbsp;com.google.common.collect.ImmutableList&lt;<a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.State.html#line.109">allCompactedFilesCached</a></pre>
 </li>
 </ul>
 </li>

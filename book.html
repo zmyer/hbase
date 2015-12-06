@@ -7756,7 +7756,7 @@ modeling on HBase.</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Configuration</span> config = HBaseConfiguration.create();
 Admin admin = <span class="keyword">new</span> Admin(conf);
-TableName table = TableName.valueOf(<span class="string"><span class="delimiter">&quot;</span><span class="content">myTable</span><span class="delimiter">&quot;</span></span>);
+<span class="predefined-type">String</span> table = <span class="string"><span class="delimiter">&quot;</span><span class="content">myTable</span><span class="delimiter">&quot;</span></span>;
 
 admin.disableTable(table);
 
@@ -17403,7 +17403,7 @@ the data, and deletes the table.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="jython">import java.lang
-from org.apache.hadoop.hbase import HBaseConfiguration, HTableDescriptor, HColumnDescriptor, HConstants, TableName
+from org.apache.hadoop.hbase import HBaseConfiguration, HTableDescriptor, HColumnDescriptor, HConstants
 from org.apache.hadoop.hbase.client import HBaseAdmin, HTable, Get
 from org.apache.hadoop.hbase.io import Cell, RowResult
 
@@ -17415,7 +17415,7 @@ conf = HBaseConfiguration()
 # Create a table named 'test' that has two column families,
 # one named 'content, and the other 'anchor'.  The colons
 # are required for column family names.
-tablename = TableName.valueOf(&quot;test&quot;)
+tablename = &quot;test&quot;
 
 desc = HTableDescriptor(tablename)
 desc.addFamily(HColumnDescriptor(&quot;content:&quot;))
@@ -19030,7 +19030,7 @@ admin.enableTable(tableName);</code></pre>
 onwards.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">TableName tableName = TableName.valueOf(<span class="string"><span class="delimiter">&quot;</span><span class="content">users</span><span class="delimiter">&quot;</span></span>);
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">String</span> tableName = <span class="string"><span class="delimiter">&quot;</span><span class="content">users</span><span class="delimiter">&quot;</span></span>;
 <span class="predefined-type">String</span> path = <span class="string"><span class="delimiter">&quot;</span><span class="content">hdfs://&lt;namenode&gt;:&lt;port&gt;/user/&lt;hadoop-user&gt;/coprocessor.jar</span><span class="delimiter">&quot;</span></span>;
 <span class="predefined-type">Configuration</span> conf = HBaseConfiguration.create();
 HBaseAdmin admin = <span class="keyword">new</span> HBaseAdmin(conf);
@@ -25762,7 +25762,7 @@ hbase shell&gt; drop 'tableName'</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="type">void</span> rename(Admin admin, <span class="predefined-type">String</span> oldTableName, TableName newTableName) {
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">void</span> rename(Admin admin, <span class="predefined-type">String</span> oldTableName, <span class="predefined-type">String</span> newTableName) {
   <span class="predefined-type">String</span> snapshotName = randomName();
   admin.disableTable(oldTableName);
   admin.snapshot(snapshotName, oldTableName);
@@ -32882,7 +32882,7 @@ The server will return cellblocks compressed using this same compressor as long 
 <div id="footer">
 <div id="footer-text">
 Version 2.0.0-SNAPSHOT<br>
-Last updated 2015-12-01 14:56:23 UTC
+Last updated 2015-12-06 14:47:56 UTC
 </div>
 </div>
 </body>

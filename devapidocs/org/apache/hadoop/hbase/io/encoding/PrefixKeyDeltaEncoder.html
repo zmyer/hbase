@@ -300,7 +300,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedD
 <ul class="blockList">
 <li class="blockList">
 <h4>internalDecodeKeyValues</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.125">internalDecodeKeyValues</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html?is-external=true" title="class or interface in java.io">DataInputStream</a>&nbsp;source,
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.124">internalDecodeKeyValues</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html?is-external=true" title="class or interface in java.io">DataInputStream</a>&nbsp;source,
                                  int&nbsp;allocateHeaderLength,
                                  int&nbsp;skipLastBytes,
                                  <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockDefaultDecodingContext.html" title="class in org.apache.hadoop.hbase.io.encoding">HFileBlockDefaultDecodingContext</a>&nbsp;decodingCtx)
@@ -318,7 +318,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedD
 <ul class="blockList">
 <li class="blockList">
 <h4>decodeKeyValue</h4>
-<pre>private&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.146">decodeKeyValue</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html?is-external=true" title="class or interface in java.io">DataInputStream</a>&nbsp;source,
+<pre>private&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.145">decodeKeyValue</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html?is-external=true" title="class or interface in java.io">DataInputStream</a>&nbsp;source,
                  <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buffer,
                  int&nbsp;prevKeyOffset)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
@@ -334,7 +334,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedD
 <ul class="blockList">
 <li class="blockList">
 <h4>getFirstKeyCellInBlock</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.176">getFirstKeyCellInBlock</a>(<a href="../../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a>&nbsp;block)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.175">getFirstKeyCellInBlock</a>(<a href="../../../../../../org/apache/hadoop/hbase/nio/ByteBuff.html" title="class in org.apache.hadoop.hbase.nio">ByteBuff</a>&nbsp;block)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.html#getFirstKeyCellInBlock(org.apache.hadoop.hbase.nio.ByteBuff)">DataBlockEncoder</a></code></strong></div>
 <div class="block">Return first key in block as a cell. Useful for indexing. Typically does not make
  a deep copy but returns a buffer wrapping a segment of the actual block's
@@ -350,7 +350,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedD
 <ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.193">toString</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.192">toString</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
@@ -363,7 +363,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedD
 <ul class="blockListLast">
 <li class="blockList">
 <h4>createSeeker</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.EncodedSeeker.html" title="interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoder.EncodedSeeker</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.198">createSeeker</a>(<a href="../../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator,
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.EncodedSeeker.html" title="interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoder.EncodedSeeker</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/PrefixKeyDeltaEncoder.html#line.197">createSeeker</a>(<a href="../../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator,
                                           <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockDecodingContext.html" title="interface in org.apache.hadoop.hbase.io.encoding">HFileBlockDecodingContext</a>&nbsp;decodingCtx)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.html#createSeeker(org.apache.hadoop.hbase.CellComparator,%20org.apache.hadoop.hbase.io.encoding.HFileBlockDecodingContext)">DataBlockEncoder</a></code></strong></div>
 <div class="block">Create a HFileBlock seeker which find KeyValues within a block.</div>

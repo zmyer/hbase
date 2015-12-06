@@ -218,38 +218,42 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/M
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#getSlowAppendCount()">getSlowAppendCount</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#incrementAppendCount()">incrementAppendCount</a></strong>()</code>
 <div class="block">Increment the count of wal appends</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#incrementAppendSize(long)">incrementAppendSize</a></strong>(long&nbsp;size)</code>
 <div class="block">Add the append size.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#incrementAppendTime(long)">incrementAppendTime</a></strong>(long&nbsp;time)</code>
 <div class="block">Add the time it took to append.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#incrementLogRollRequested()">incrementLogRollRequested</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#incrementLowReplicationLogRoll()">incrementLowReplicationLogRoll</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#incrementSlowAppendCount()">incrementSlowAppendCount</a></strong>()</code>
 <div class="block">Increment the number of appends that were slow</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#incrementSyncTime(long)">incrementSyncTime</a></strong>(long&nbsp;time)</code>
 <div class="block">Add the time it took to sync the wal.</div>
@@ -482,13 +486,26 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/M
 <a name="incrementLowReplicationLogRoll()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>incrementLowReplicationLogRoll</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#line.98">incrementLowReplicationLogRoll</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSource.html#incrementLowReplicationLogRoll()">incrementLowReplicationLogRoll</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSource.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">MetricsWALSource</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getSlowAppendCount()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getSlowAppendCount</h4>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html#line.103">getSlowAppendCount</a>()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSource.html#getSlowAppendCount()">getSlowAppendCount</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSource.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">MetricsWALSource</a></code></dd>
 </dl>
 </li>
 </ul>

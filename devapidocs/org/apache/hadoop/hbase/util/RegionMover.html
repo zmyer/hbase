@@ -153,9 +153,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html" title="class in org.apache.hadoop.hbase.util">RegionMover.RegionMoverBuilder</a></strong></code>
-<div class="block">Builder for Region mover.Use the <a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#build()"><code>RegionMover.RegionMoverBuilder.build()</code></a> method to create <code>#RegionMover(String)</code>
- object Has <a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#filename(java.lang.String)"><code>RegionMover.RegionMoverBuilder.filename(String)</code></a>, <a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#excludeFile(java.lang.String)"><code>RegionMover.RegionMoverBuilder.excludeFile(String)</code></a>, <a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#maxthreads(int)"><code>RegionMover.RegionMoverBuilder.maxthreads(int)</code></a>,
- <a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#ack(boolean)"><code>RegionMover.RegionMoverBuilder.ack(boolean)</code></a>, <a href="../../../../../org/apache/hadoop/hbase/util/RegionMover.RegionMoverBuilder.html#timeout(int)"><code>RegionMover.RegionMoverBuilder.timeout(int)</code></a> methods to set the corresponding options</div>
+<div class="block">Builder for Region mover.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -786,11 +784,11 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <h4>stripMaster</h4>
 <pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.743">stripMaster</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;regionServers,
                <a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)
-                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Exclude master from list of RSs to move regions to</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>regionServers</code> - </dd><dd><code>admin</code> - </dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="readExcludes(java.lang.String)">
@@ -799,7 +797,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>readExcludes</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.751">readExcludes</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;excludeFile)
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.756">readExcludes</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;excludeFile)
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>List of servers from the exclude file in format 'hostname:port'.</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -812,7 +810,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>stripServer</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.787">stripServer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;regionServers,
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.792">stripServer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;regionServers,
                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
                  int&nbsp;port)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
@@ -830,7 +828,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getServers</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.814">getServers</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.819">getServers</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Get Arraylist of Servers in the cluster</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>admin</code> - </dd>
@@ -845,7 +843,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteFile</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.824">deleteFile</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.829">deleteFile</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</pre>
 </li>
 </ul>
 <a name="isSuccessfulScan(org.apache.hadoop.hbase.client.Admin, org.apache.hadoop.hbase.HRegionInfo)">
@@ -854,7 +852,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>isSuccessfulScan</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.837">isSuccessfulScan</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.842">isSuccessfulScan</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                     <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region)
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Tries to scan a row from passed region</div>
@@ -869,7 +867,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>isSameServer</h4>
-<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.868">isSameServer</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+<pre>private&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.873">isSameServer</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                    <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region,
                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serverName)
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -886,7 +884,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getServerNameForRegion</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.885">getServerNameForRegion</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.890">getServerNameForRegion</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                             <a href="../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region)
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Get servername that is up in hbase:meta hosting the given region. this is hostname + port +
@@ -903,7 +901,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>addOptions</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.932">addOptions</a>()</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.937">addOptions</a>()</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#addOptions()">AbstractHBaseTool</a></code></strong></div>
 <div class="block">Override this to add command-line options using <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#addOptWithArg(java.lang.String,%20java.lang.String)"><code>AbstractHBaseTool.addOptWithArg(java.lang.String, java.lang.String)</code></a>
  and similar methods.</div>
@@ -919,7 +917,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>processOptions</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.951">processOptions</a>(org.apache.commons.cli.CommandLine&nbsp;cmd)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.958">processOptions</a>(org.apache.commons.cli.CommandLine&nbsp;cmd)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#processOptions(org.apache.commons.cli.CommandLine)">AbstractHBaseTool</a></code></strong></div>
 <div class="block">This method is called to process the options after they have been parsed.</div>
 <dl>
@@ -934,7 +932,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockList">
 <li class="blockList">
 <h4>doWork</h4>
-<pre>protected&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.973">doWork</a>()
+<pre>protected&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.980">doWork</a>()
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.html#doWork()">AbstractHBaseTool</a></code></strong></div>
 <div class="block">The "main function" of the tool</div>
@@ -951,7 +949,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/AbstractHBaseTool.h
 <ul class="blockListLast">
 <li class="blockList">
 <h4>main</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.986">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/RegionMover.html#line.994">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</pre>
 </li>
 </ul>
 </li>

@@ -141,9 +141,24 @@ implements org.apache.hadoop.util.Tool</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftServer.html#log">log</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftServer.html#READ_TIMEOUT_OPTION">READ_TIMEOUT_OPTION</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>(package private) static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftServer.html#THRIFT_QOP_KEY">THRIFT_QOP_KEY</a></strong></code>
 <div class="block">Thrift quality of protection configuration key.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftServer.html#THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT">THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftServer.html#THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY">THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY</a></strong></code>
+<div class="block">Amount of time in milliseconds before a server thread will timeout
+ waiting for client to send data on a connected socket.</div>
 </td>
 </tr>
 </table>
@@ -214,12 +229,13 @@ implements org.apache.hadoop.util.Tool</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private static org.apache.thrift.server.TServer</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftServer.html#getTThreadPoolServer(org.apache.thrift.protocol.TProtocolFactory,%20org.apache.thrift.TProcessor,%20org.apache.thrift.transport.TTransportFactory,%20int,%20java.net.InetSocketAddress,%20int)">getTThreadPoolServer</a></strong>(org.apache.thrift.protocol.TProtocolFactory&nbsp;protocolFactory,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/thrift2/ThriftServer.html#getTThreadPoolServer(org.apache.thrift.protocol.TProtocolFactory,%20org.apache.thrift.TProcessor,%20org.apache.thrift.transport.TTransportFactory,%20int,%20java.net.InetSocketAddress,%20int,%20int)">getTThreadPoolServer</a></strong>(org.apache.thrift.protocol.TProtocolFactory&nbsp;protocolFactory,
                                         org.apache.thrift.TProcessor&nbsp;processor,
                                         org.apache.thrift.transport.TTransportFactory&nbsp;transportFactory,
                                         int&nbsp;workerThreads,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</a>&nbsp;inetSocketAddress,
-                                        int&nbsp;backlog)</code>&nbsp;</td>
+                                        int&nbsp;backlog,
+                                        int&nbsp;clientTimeout)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private static org.apache.thrift.transport.TTransportFactory</code></td>
@@ -330,11 +346,44 @@ implements org.apache.hadoop.util.Tool</pre>
 <a name="DEFAULT_LISTEN_PORT">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_LISTEN_PORT</h4>
 <pre>public static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.113">DEFAULT_LISTEN_PORT</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift2.ThriftServer.DEFAULT_LISTEN_PORT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="READ_TIMEOUT_OPTION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>READ_TIMEOUT_OPTION</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.115">READ_TIMEOUT_OPTION</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift2.ThriftServer.READ_TIMEOUT_OPTION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.122">THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY</a></pre>
+<div class="block">Amount of time in milliseconds before a server thread will timeout
+ waiting for client to send data on a connected socket. Currently,
+ applies only to TBoundedThreadPoolServer</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift2.ThriftServer.THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT</h4>
+<pre>public static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.124">THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.thrift2.ThriftServer.THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -351,7 +400,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ThriftServer</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.116">ThriftServer</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.126">ThriftServer</a>()</pre>
 </li>
 </ul>
 </li>
@@ -368,7 +417,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>printUsage</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.119">printUsage</a>()</pre>
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.129">printUsage</a>()</pre>
 </li>
 </ul>
 <a name="getOptions()">
@@ -377,7 +426,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getOptions</h4>
-<pre>private static&nbsp;org.apache.commons.cli.Options&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.128">getOptions</a>()</pre>
+<pre>private static&nbsp;org.apache.commons.cli.Options&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.138">getOptions</a>()</pre>
 </li>
 </ul>
 <a name="parseArguments(org.apache.hadoop.conf.Configuration, org.apache.commons.cli.Options, java.lang.String[])">
@@ -386,7 +435,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>parseArguments</h4>
-<pre>private static&nbsp;org.apache.commons.cli.CommandLine&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.148">parseArguments</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+<pre>private static&nbsp;org.apache.commons.cli.CommandLine&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.161">parseArguments</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                                 org.apache.commons.cli.Options&nbsp;options,
                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
                                                           throws org.apache.commons.cli.ParseException,
@@ -402,7 +451,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTProtocolFactory</h4>
-<pre>private static&nbsp;org.apache.thrift.protocol.TProtocolFactory&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.154">getTProtocolFactory</a>(boolean&nbsp;isCompact)</pre>
+<pre>private static&nbsp;org.apache.thrift.protocol.TProtocolFactory&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.167">getTProtocolFactory</a>(boolean&nbsp;isCompact)</pre>
 </li>
 </ul>
 <a name="getTTransportFactory(org.apache.hadoop.hbase.security.SaslUtil.QualityOfProtection, java.lang.String, java.lang.String, boolean, int)">
@@ -411,7 +460,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTTransportFactory</h4>
-<pre>private static&nbsp;org.apache.thrift.transport.TTransportFactory&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.164">getTTransportFactory</a>(<a href="../../../../../org/apache/hadoop/hbase/security/SaslUtil.QualityOfProtection.html" title="enum in org.apache.hadoop.hbase.security">SaslUtil.QualityOfProtection</a>&nbsp;qop,
+<pre>private static&nbsp;org.apache.thrift.transport.TTransportFactory&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.177">getTTransportFactory</a>(<a href="../../../../../org/apache/hadoop/hbase/security/SaslUtil.QualityOfProtection.html" title="enum in org.apache.hadoop.hbase.security">SaslUtil.QualityOfProtection</a>&nbsp;qop,
                                                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                                                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;host,
                                                                  boolean&nbsp;framed,
@@ -424,7 +473,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>bindToPort</h4>
-<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.215">bindToPort</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bindValue,
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.228">bindToPort</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bindValue,
                            int&nbsp;listenPort)
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/net/UnknownHostException.html?is-external=true" title="class or interface in java.net">UnknownHostException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -437,7 +486,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTNonBlockingServer</h4>
-<pre>private static&nbsp;org.apache.thrift.server.TServer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.228">getTNonBlockingServer</a>(org.apache.thrift.protocol.TProtocolFactory&nbsp;protocolFactory,
+<pre>private static&nbsp;org.apache.thrift.server.TServer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.241">getTNonBlockingServer</a>(org.apache.thrift.protocol.TProtocolFactory&nbsp;protocolFactory,
                                                      org.apache.thrift.TProcessor&nbsp;processor,
                                                      org.apache.thrift.transport.TTransportFactory&nbsp;transportFactory,
                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</a>&nbsp;inetSocketAddress)
@@ -452,7 +501,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTHsHaServer</h4>
-<pre>private static&nbsp;org.apache.thrift.server.TServer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.239">getTHsHaServer</a>(org.apache.thrift.protocol.TProtocolFactory&nbsp;protocolFactory,
+<pre>private static&nbsp;org.apache.thrift.server.TServer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.252">getTHsHaServer</a>(org.apache.thrift.protocol.TProtocolFactory&nbsp;protocolFactory,
                                               org.apache.thrift.TProcessor&nbsp;processor,
                                               org.apache.thrift.transport.TTransportFactory&nbsp;transportFactory,
                                               int&nbsp;workerThreads,
@@ -469,22 +518,23 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>createExecutor</h4>
-<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.260">createExecutor</a>(int&nbsp;workerThreads,
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.273">createExecutor</a>(int&nbsp;workerThreads,
                              <a href="../../../../../org/apache/hadoop/hbase/thrift/ThriftMetrics.html" title="class in org.apache.hadoop.hbase.thrift">ThriftMetrics</a>&nbsp;metrics)</pre>
 </li>
 </ul>
-<a name="getTThreadPoolServer(org.apache.thrift.protocol.TProtocolFactory, org.apache.thrift.TProcessor, org.apache.thrift.transport.TTransportFactory, int, java.net.InetSocketAddress, int)">
+<a name="getTThreadPoolServer(org.apache.thrift.protocol.TProtocolFactory, org.apache.thrift.TProcessor, org.apache.thrift.transport.TTransportFactory, int, java.net.InetSocketAddress, int, int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTThreadPoolServer</h4>
-<pre>private static&nbsp;org.apache.thrift.server.TServer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.273">getTThreadPoolServer</a>(org.apache.thrift.protocol.TProtocolFactory&nbsp;protocolFactory,
+<pre>private static&nbsp;org.apache.thrift.server.TServer&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.286">getTThreadPoolServer</a>(org.apache.thrift.protocol.TProtocolFactory&nbsp;protocolFactory,
                                                     org.apache.thrift.TProcessor&nbsp;processor,
                                                     org.apache.thrift.transport.TTransportFactory&nbsp;transportFactory,
                                                     int&nbsp;workerThreads,
                                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</a>&nbsp;inetSocketAddress,
-                                                    int&nbsp;backlog)
+                                                    int&nbsp;backlog,
+                                                    int&nbsp;clientTimeout)
                                                               throws org.apache.thrift.transport.TTransportException</pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code>org.apache.thrift.transport.TTransportException</code></dd></dl>
@@ -496,7 +546,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>registerFilters</h4>
-<pre>protected static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.299">registerFilters</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>protected static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.314">registerFilters</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <div class="block">Adds the option to pre-load filters at startup.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - The current configuration instance.</dd></dl>
 </li>
@@ -507,7 +557,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>main</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.316">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.331">main</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Start up the Thrift2 server.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -520,7 +570,7 @@ implements org.apache.hadoop.util.Tool</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>run</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.324">run</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/thrift2/ThriftServer.html#line.339">run</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)
         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>

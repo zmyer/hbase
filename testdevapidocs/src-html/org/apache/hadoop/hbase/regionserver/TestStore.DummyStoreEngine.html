@@ -1038,79 +1038,92 @@
 <span class="sourceLineNo">1030</span>    store.getRegionFileSystem().removeStoreFiles(store.getColumnFamilyName(), Lists.newArrayList(sf));<a name="line.1030"></a>
 <span class="sourceLineNo">1031</span>  }<a name="line.1031"></a>
 <span class="sourceLineNo">1032</span><a name="line.1032"></a>
-<span class="sourceLineNo">1033</span>  @Test<a name="line.1033"></a>
-<span class="sourceLineNo">1034</span>  public void testRefreshStoreFiles() throws Exception {<a name="line.1034"></a>
-<span class="sourceLineNo">1035</span>    init(name.getMethodName());<a name="line.1035"></a>
-<span class="sourceLineNo">1036</span><a name="line.1036"></a>
-<span class="sourceLineNo">1037</span>    assertEquals(0, this.store.getStorefilesCount());<a name="line.1037"></a>
-<span class="sourceLineNo">1038</span><a name="line.1038"></a>
-<span class="sourceLineNo">1039</span>    // add some data, flush<a name="line.1039"></a>
-<span class="sourceLineNo">1040</span>    this.store.add(new KeyValue(row, family, qf1, 1, (byte[])null));<a name="line.1040"></a>
-<span class="sourceLineNo">1041</span>    flush(1);<a name="line.1041"></a>
-<span class="sourceLineNo">1042</span>    assertEquals(1, this.store.getStorefilesCount());<a name="line.1042"></a>
-<span class="sourceLineNo">1043</span><a name="line.1043"></a>
-<span class="sourceLineNo">1044</span>    // add one more file<a name="line.1044"></a>
-<span class="sourceLineNo">1045</span>    addStoreFile();<a name="line.1045"></a>
-<span class="sourceLineNo">1046</span><a name="line.1046"></a>
-<span class="sourceLineNo">1047</span>    assertEquals(1, this.store.getStorefilesCount());<a name="line.1047"></a>
-<span class="sourceLineNo">1048</span>    store.refreshStoreFiles();<a name="line.1048"></a>
-<span class="sourceLineNo">1049</span>    assertEquals(2, this.store.getStorefilesCount());<a name="line.1049"></a>
+<span class="sourceLineNo">1033</span>  private void closeCompactedFile(int index) throws IOException {<a name="line.1033"></a>
+<span class="sourceLineNo">1034</span>    Collection&lt;StoreFile&gt; files =<a name="line.1034"></a>
+<span class="sourceLineNo">1035</span>        this.store.getStoreEngine().getStoreFileManager().getCompactedfiles();<a name="line.1035"></a>
+<span class="sourceLineNo">1036</span>    StoreFile sf = null;<a name="line.1036"></a>
+<span class="sourceLineNo">1037</span>    Iterator&lt;StoreFile&gt; it = files.iterator();<a name="line.1037"></a>
+<span class="sourceLineNo">1038</span>    for (int i = 0; i &lt;= index; i++) {<a name="line.1038"></a>
+<span class="sourceLineNo">1039</span>      sf = it.next();<a name="line.1039"></a>
+<span class="sourceLineNo">1040</span>    }<a name="line.1040"></a>
+<span class="sourceLineNo">1041</span>    sf.closeReader(true);<a name="line.1041"></a>
+<span class="sourceLineNo">1042</span>    store.getStoreEngine().getStoreFileManager().removeCompactedFiles(Lists.newArrayList(sf));<a name="line.1042"></a>
+<span class="sourceLineNo">1043</span>  }<a name="line.1043"></a>
+<span class="sourceLineNo">1044</span><a name="line.1044"></a>
+<span class="sourceLineNo">1045</span>  @Test<a name="line.1045"></a>
+<span class="sourceLineNo">1046</span>  public void testRefreshStoreFiles() throws Exception {<a name="line.1046"></a>
+<span class="sourceLineNo">1047</span>    init(name.getMethodName());<a name="line.1047"></a>
+<span class="sourceLineNo">1048</span><a name="line.1048"></a>
+<span class="sourceLineNo">1049</span>    assertEquals(0, this.store.getStorefilesCount());<a name="line.1049"></a>
 <span class="sourceLineNo">1050</span><a name="line.1050"></a>
-<span class="sourceLineNo">1051</span>    // add three more files<a name="line.1051"></a>
-<span class="sourceLineNo">1052</span>    addStoreFile();<a name="line.1052"></a>
-<span class="sourceLineNo">1053</span>    addStoreFile();<a name="line.1053"></a>
-<span class="sourceLineNo">1054</span>    addStoreFile();<a name="line.1054"></a>
+<span class="sourceLineNo">1051</span>    // add some data, flush<a name="line.1051"></a>
+<span class="sourceLineNo">1052</span>    this.store.add(new KeyValue(row, family, qf1, 1, (byte[])null));<a name="line.1052"></a>
+<span class="sourceLineNo">1053</span>    flush(1);<a name="line.1053"></a>
+<span class="sourceLineNo">1054</span>    assertEquals(1, this.store.getStorefilesCount());<a name="line.1054"></a>
 <span class="sourceLineNo">1055</span><a name="line.1055"></a>
-<span class="sourceLineNo">1056</span>    assertEquals(2, this.store.getStorefilesCount());<a name="line.1056"></a>
-<span class="sourceLineNo">1057</span>    store.refreshStoreFiles();<a name="line.1057"></a>
-<span class="sourceLineNo">1058</span>    assertEquals(5, this.store.getStorefilesCount());<a name="line.1058"></a>
-<span class="sourceLineNo">1059</span><a name="line.1059"></a>
-<span class="sourceLineNo">1060</span>    archiveStoreFile(0);<a name="line.1060"></a>
-<span class="sourceLineNo">1061</span><a name="line.1061"></a>
-<span class="sourceLineNo">1062</span>    assertEquals(5, this.store.getStorefilesCount());<a name="line.1062"></a>
-<span class="sourceLineNo">1063</span>    store.refreshStoreFiles();<a name="line.1063"></a>
-<span class="sourceLineNo">1064</span>    assertEquals(4, this.store.getStorefilesCount());<a name="line.1064"></a>
-<span class="sourceLineNo">1065</span><a name="line.1065"></a>
-<span class="sourceLineNo">1066</span>    archiveStoreFile(0);<a name="line.1066"></a>
-<span class="sourceLineNo">1067</span>    archiveStoreFile(1);<a name="line.1067"></a>
-<span class="sourceLineNo">1068</span>    archiveStoreFile(2);<a name="line.1068"></a>
-<span class="sourceLineNo">1069</span><a name="line.1069"></a>
-<span class="sourceLineNo">1070</span>    assertEquals(4, this.store.getStorefilesCount());<a name="line.1070"></a>
-<span class="sourceLineNo">1071</span>    store.refreshStoreFiles();<a name="line.1071"></a>
-<span class="sourceLineNo">1072</span>    assertEquals(1, this.store.getStorefilesCount());<a name="line.1072"></a>
-<span class="sourceLineNo">1073</span><a name="line.1073"></a>
-<span class="sourceLineNo">1074</span>    archiveStoreFile(0);<a name="line.1074"></a>
-<span class="sourceLineNo">1075</span>    store.refreshStoreFiles();<a name="line.1075"></a>
-<span class="sourceLineNo">1076</span>    assertEquals(0, this.store.getStorefilesCount());<a name="line.1076"></a>
-<span class="sourceLineNo">1077</span>  }<a name="line.1077"></a>
+<span class="sourceLineNo">1056</span>    // add one more file<a name="line.1056"></a>
+<span class="sourceLineNo">1057</span>    addStoreFile();<a name="line.1057"></a>
+<span class="sourceLineNo">1058</span><a name="line.1058"></a>
+<span class="sourceLineNo">1059</span>    assertEquals(1, this.store.getStorefilesCount());<a name="line.1059"></a>
+<span class="sourceLineNo">1060</span>    store.refreshStoreFiles();<a name="line.1060"></a>
+<span class="sourceLineNo">1061</span>    assertEquals(2, this.store.getStorefilesCount());<a name="line.1061"></a>
+<span class="sourceLineNo">1062</span><a name="line.1062"></a>
+<span class="sourceLineNo">1063</span>    // add three more files<a name="line.1063"></a>
+<span class="sourceLineNo">1064</span>    addStoreFile();<a name="line.1064"></a>
+<span class="sourceLineNo">1065</span>    addStoreFile();<a name="line.1065"></a>
+<span class="sourceLineNo">1066</span>    addStoreFile();<a name="line.1066"></a>
+<span class="sourceLineNo">1067</span><a name="line.1067"></a>
+<span class="sourceLineNo">1068</span>    assertEquals(2, this.store.getStorefilesCount());<a name="line.1068"></a>
+<span class="sourceLineNo">1069</span>    store.refreshStoreFiles();<a name="line.1069"></a>
+<span class="sourceLineNo">1070</span>    assertEquals(5, this.store.getStorefilesCount());<a name="line.1070"></a>
+<span class="sourceLineNo">1071</span><a name="line.1071"></a>
+<span class="sourceLineNo">1072</span>    closeCompactedFile(0);<a name="line.1072"></a>
+<span class="sourceLineNo">1073</span>    archiveStoreFile(0);<a name="line.1073"></a>
+<span class="sourceLineNo">1074</span><a name="line.1074"></a>
+<span class="sourceLineNo">1075</span>    assertEquals(5, this.store.getStorefilesCount());<a name="line.1075"></a>
+<span class="sourceLineNo">1076</span>    store.refreshStoreFiles();<a name="line.1076"></a>
+<span class="sourceLineNo">1077</span>    assertEquals(4, this.store.getStorefilesCount());<a name="line.1077"></a>
 <span class="sourceLineNo">1078</span><a name="line.1078"></a>
-<span class="sourceLineNo">1079</span>  @SuppressWarnings("unchecked")<a name="line.1079"></a>
-<span class="sourceLineNo">1080</span>  @Test<a name="line.1080"></a>
-<span class="sourceLineNo">1081</span>  public void testRefreshStoreFilesNotChanged() throws IOException {<a name="line.1081"></a>
-<span class="sourceLineNo">1082</span>    init(name.getMethodName());<a name="line.1082"></a>
-<span class="sourceLineNo">1083</span><a name="line.1083"></a>
-<span class="sourceLineNo">1084</span>    assertEquals(0, this.store.getStorefilesCount());<a name="line.1084"></a>
-<span class="sourceLineNo">1085</span><a name="line.1085"></a>
-<span class="sourceLineNo">1086</span>    // add some data, flush<a name="line.1086"></a>
-<span class="sourceLineNo">1087</span>    this.store.add(new KeyValue(row, family, qf1, 1, (byte[])null));<a name="line.1087"></a>
-<span class="sourceLineNo">1088</span>    flush(1);<a name="line.1088"></a>
-<span class="sourceLineNo">1089</span>    // add one more file<a name="line.1089"></a>
-<span class="sourceLineNo">1090</span>    addStoreFile();<a name="line.1090"></a>
+<span class="sourceLineNo">1079</span>    archiveStoreFile(0);<a name="line.1079"></a>
+<span class="sourceLineNo">1080</span>    archiveStoreFile(1);<a name="line.1080"></a>
+<span class="sourceLineNo">1081</span>    archiveStoreFile(2);<a name="line.1081"></a>
+<span class="sourceLineNo">1082</span><a name="line.1082"></a>
+<span class="sourceLineNo">1083</span>    assertEquals(4, this.store.getStorefilesCount());<a name="line.1083"></a>
+<span class="sourceLineNo">1084</span>    store.refreshStoreFiles();<a name="line.1084"></a>
+<span class="sourceLineNo">1085</span>    assertEquals(1, this.store.getStorefilesCount());<a name="line.1085"></a>
+<span class="sourceLineNo">1086</span><a name="line.1086"></a>
+<span class="sourceLineNo">1087</span>    archiveStoreFile(0);<a name="line.1087"></a>
+<span class="sourceLineNo">1088</span>    store.refreshStoreFiles();<a name="line.1088"></a>
+<span class="sourceLineNo">1089</span>    assertEquals(0, this.store.getStorefilesCount());<a name="line.1089"></a>
+<span class="sourceLineNo">1090</span>  }<a name="line.1090"></a>
 <span class="sourceLineNo">1091</span><a name="line.1091"></a>
-<span class="sourceLineNo">1092</span>    HStore spiedStore = spy(store);<a name="line.1092"></a>
-<span class="sourceLineNo">1093</span><a name="line.1093"></a>
-<span class="sourceLineNo">1094</span>    // call first time after files changed<a name="line.1094"></a>
-<span class="sourceLineNo">1095</span>    spiedStore.refreshStoreFiles();<a name="line.1095"></a>
-<span class="sourceLineNo">1096</span>    assertEquals(2, this.store.getStorefilesCount());<a name="line.1096"></a>
-<span class="sourceLineNo">1097</span>    verify(spiedStore, times(1)).replaceStoreFiles(any(Collection.class), any(Collection.class));<a name="line.1097"></a>
+<span class="sourceLineNo">1092</span>  @SuppressWarnings("unchecked")<a name="line.1092"></a>
+<span class="sourceLineNo">1093</span>  @Test<a name="line.1093"></a>
+<span class="sourceLineNo">1094</span>  public void testRefreshStoreFilesNotChanged() throws IOException {<a name="line.1094"></a>
+<span class="sourceLineNo">1095</span>    init(name.getMethodName());<a name="line.1095"></a>
+<span class="sourceLineNo">1096</span><a name="line.1096"></a>
+<span class="sourceLineNo">1097</span>    assertEquals(0, this.store.getStorefilesCount());<a name="line.1097"></a>
 <span class="sourceLineNo">1098</span><a name="line.1098"></a>
-<span class="sourceLineNo">1099</span>    // call second time<a name="line.1099"></a>
-<span class="sourceLineNo">1100</span>    spiedStore.refreshStoreFiles();<a name="line.1100"></a>
-<span class="sourceLineNo">1101</span><a name="line.1101"></a>
-<span class="sourceLineNo">1102</span>    //ensure that replaceStoreFiles is not called if files are not refreshed<a name="line.1102"></a>
-<span class="sourceLineNo">1103</span>    verify(spiedStore, times(0)).replaceStoreFiles(null, null);<a name="line.1103"></a>
-<span class="sourceLineNo">1104</span>  }<a name="line.1104"></a>
-<span class="sourceLineNo">1105</span>}<a name="line.1105"></a>
+<span class="sourceLineNo">1099</span>    // add some data, flush<a name="line.1099"></a>
+<span class="sourceLineNo">1100</span>    this.store.add(new KeyValue(row, family, qf1, 1, (byte[])null));<a name="line.1100"></a>
+<span class="sourceLineNo">1101</span>    flush(1);<a name="line.1101"></a>
+<span class="sourceLineNo">1102</span>    // add one more file<a name="line.1102"></a>
+<span class="sourceLineNo">1103</span>    addStoreFile();<a name="line.1103"></a>
+<span class="sourceLineNo">1104</span><a name="line.1104"></a>
+<span class="sourceLineNo">1105</span>    HStore spiedStore = spy(store);<a name="line.1105"></a>
+<span class="sourceLineNo">1106</span><a name="line.1106"></a>
+<span class="sourceLineNo">1107</span>    // call first time after files changed<a name="line.1107"></a>
+<span class="sourceLineNo">1108</span>    spiedStore.refreshStoreFiles();<a name="line.1108"></a>
+<span class="sourceLineNo">1109</span>    assertEquals(2, this.store.getStorefilesCount());<a name="line.1109"></a>
+<span class="sourceLineNo">1110</span>    verify(spiedStore, times(1)).replaceStoreFiles(any(Collection.class), any(Collection.class));<a name="line.1110"></a>
+<span class="sourceLineNo">1111</span><a name="line.1111"></a>
+<span class="sourceLineNo">1112</span>    // call second time<a name="line.1112"></a>
+<span class="sourceLineNo">1113</span>    spiedStore.refreshStoreFiles();<a name="line.1113"></a>
+<span class="sourceLineNo">1114</span><a name="line.1114"></a>
+<span class="sourceLineNo">1115</span>    //ensure that replaceStoreFiles is not called if files are not refreshed<a name="line.1115"></a>
+<span class="sourceLineNo">1116</span>    verify(spiedStore, times(0)).replaceStoreFiles(null, null);<a name="line.1116"></a>
+<span class="sourceLineNo">1117</span>  }<a name="line.1117"></a>
+<span class="sourceLineNo">1118</span>}<a name="line.1118"></a>
 
 
 

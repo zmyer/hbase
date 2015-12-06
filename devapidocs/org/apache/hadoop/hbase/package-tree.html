@@ -73,6 +73,19 @@
 <ul>
 <li type="circle">java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang"><span class="strong">Object</span></a>
 <ul>
+<li type="circle">java.util.concurrent.<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/AbstractExecutorService.html?is-external=true" title="class or interface in java.util.concurrent"><span class="strong">AbstractExecutorService</span></a> (implements java.util.concurrent.<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>)
+<ul>
+<li type="circle">java.util.concurrent.<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html?is-external=true" title="class or interface in java.util.concurrent"><span class="strong">ThreadPoolExecutor</span></a>
+<ul>
+<li type="circle">java.util.concurrent.<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ScheduledThreadPoolExecutor.html?is-external=true" title="class or interface in java.util.concurrent"><span class="strong">ScheduledThreadPoolExecutor</span></a> (implements java.util.concurrent.<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ScheduledExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ScheduledExecutorService</a>)
+<ul>
+<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/JitterScheduledThreadPoolExecutorImpl.html" title="class in org.apache.hadoop.hbase"><span class="strong">JitterScheduledThreadPoolExecutorImpl</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/AuthUtil.html" title="class in org.apache.hadoop.hbase"><span class="strong">AuthUtil</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/BaseConfigurable.html" title="class in org.apache.hadoop.hbase"><span class="strong">BaseConfigurable</span></a> (implements org.apache.hadoop.conf.Configurable)</li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" title="class in org.apache.hadoop.hbase"><span class="strong">ByteBufferedCell</span></a> (implements org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>)
@@ -153,6 +166,7 @@
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase"><span class="strong">HRegionInfo</span></a> (implements java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;T&gt;)</li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase"><span class="strong">HRegionLocation</span></a> (implements java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;T&gt;)</li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase"><span class="strong">HTableDescriptor</span></a> (implements java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;T&gt;)</li>
+<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/JitterScheduledThreadPoolExecutorImpl.JitteredRunnableScheduledFuture.html" title="class in org.apache.hadoop.hbase"><span class="strong">JitterScheduledThreadPoolExecutorImpl.JitteredRunnableScheduledFuture</span></a>&lt;V&gt; (implements java.util.concurrent.<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/RunnableScheduledFuture.html?is-external=true" title="class or interface in java.util.concurrent">RunnableScheduledFuture</a>&lt;V&gt;)</li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/JMXListener.html" title="class in org.apache.hadoop.hbase"><span class="strong">JMXListener</span></a> (implements org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>)</li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase"><span class="strong">KeyValue</span></a> (implements org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>, java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a>, org.apache.hadoop.hbase.io.<a href="../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a>, org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/SettableSequenceId.html" title="interface in org.apache.hadoop.hbase">SettableSequenceId</a>, org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/SettableTimestamp.html" title="interface in org.apache.hadoop.hbase">SettableTimestamp</a>, org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/Streamable.html" title="interface in org.apache.hadoop.hbase">Streamable</a>)
 <ul>
@@ -326,8 +340,8 @@
 </ul>
 <h2 title="Annotation Type Hierarchy">Annotation Type Hierarchy</h2>
 <ul>
-<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/MetaMutationAnnotation.html" title="annotation in org.apache.hadoop.hbase"><span class="strong">MetaMutationAnnotation</span></a> (implements java.lang.annotation.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>)</li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/VersionAnnotation.html" title="annotation in org.apache.hadoop.hbase"><span class="strong">VersionAnnotation</span></a> (implements java.lang.annotation.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>)</li>
+<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/MetaMutationAnnotation.html" title="annotation in org.apache.hadoop.hbase"><span class="strong">MetaMutationAnnotation</span></a> (implements java.lang.annotation.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>)</li>
 </ul>
 <h2 title="Enum Hierarchy">Enum Hierarchy</h2>
 <ul>
@@ -336,10 +350,10 @@
 <li type="circle">java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html?is-external=true" title="class or interface in java.lang"><span class="strong">Enum</span></a>&lt;E&gt; (implements java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;T&gt;, java.io.<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)
 <ul>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/CompatibilitySingletonFactory.SingletonStorage.html" title="enum in org.apache.hadoop.hbase"><span class="strong">CompatibilitySingletonFactory.SingletonStorage</span></a></li>
-<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/HealthChecker.HealthCheckerExitStatus.html" title="enum in org.apache.hadoop.hbase"><span class="strong">HealthChecker.HealthCheckerExitStatus</span></a></li>
-<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/KeepDeletedCells.html" title="enum in org.apache.hadoop.hbase"><span class="strong">KeepDeletedCells</span></a></li>
-<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/Coprocessor.State.html" title="enum in org.apache.hadoop.hbase"><span class="strong">Coprocessor.State</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/HConstants.OperationStatusCode.html" title="enum in org.apache.hadoop.hbase"><span class="strong">HConstants.OperationStatusCode</span></a></li>
+<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/Coprocessor.State.html" title="enum in org.apache.hadoop.hbase"><span class="strong">Coprocessor.State</span></a></li>
+<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/KeepDeletedCells.html" title="enum in org.apache.hadoop.hbase"><span class="strong">KeepDeletedCells</span></a></li>
+<li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/HealthChecker.HealthCheckerExitStatus.html" title="enum in org.apache.hadoop.hbase"><span class="strong">HealthChecker.HealthCheckerExitStatus</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/KeyValue.Type.html" title="enum in org.apache.hadoop.hbase"><span class="strong">KeyValue.Type</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/MetaTableAccessor.QueryType.html" title="enum in org.apache.hadoop.hbase"><span class="strong">MetaTableAccessor.QueryType</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.<a href="../../../../org/apache/hadoop/hbase/HConstants.Modify.html" title="enum in org.apache.hadoop.hbase"><span class="strong">HConstants.Modify</span></a></li>

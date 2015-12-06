@@ -145,7 +145,7 @@
 <a class="jxr_linenumber" name="135" href="#135">135</a> 
 <a class="jxr_linenumber" name="136" href="#136">136</a>     HTableDescriptor table = <strong class="jxr_keyword">new</strong> HTableDescriptor(tableName);
 <a class="jxr_linenumber" name="137" href="#137">137</a>     HColumnDescriptor fam = <strong class="jxr_keyword">new</strong> HColumnDescriptor(famName);
-<a class="jxr_linenumber" name="138" href="#138">138</a>     fam.setMaxVersions(3);
+<a class="jxr_linenumber" name="138" href="#138">138</a>     fam.setMaxVersions(100);
 <a class="jxr_linenumber" name="139" href="#139">139</a>     fam.setScope(HConstants.REPLICATION_SCOPE_GLOBAL);
 <a class="jxr_linenumber" name="140" href="#140">140</a>     table.addFamily(fam);
 <a class="jxr_linenumber" name="141" href="#141">141</a>     fam = <strong class="jxr_keyword">new</strong> HColumnDescriptor(noRepfamName);

@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/util/test/LoadTestKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test"><span class="strong">Prev Class</span></a></li>
-<li>Next Class</li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.ExtendedOffheapKeyValue.html" title="class in org.apache.hadoop.hbase.util.test"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" target="_top">Frames</a></li>
@@ -60,7 +60,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -96,7 +96,7 @@
 <hr>
 <br>
 <pre><a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.44">RedundantKVGenerator</a>
+public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.46">RedundantKVGenerator</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Generate list of key values which are very useful to test data block encoding
  and compression.</div>
@@ -106,6 +106,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.ExtendedOffheapKeyValue.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator.ExtendedOffheapKeyValue</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="field_summary">
@@ -322,89 +341,96 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#generateRows()">generateRows</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#generateTestExtendedOffheapKeyValues(int,%20boolean)">generateTestExtendedOffheapKeyValues</a></strong>(int&nbsp;howMany,
+                                                                        boolean&nbsp;useTags)</code>
+<div class="block">Generate test data useful to test encoders.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#generateTestKeyValues(int)">generateTestKeyValues</a></strong>(int&nbsp;howMany)</code>
 <div class="block">Generate test data useful to test encoders.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#generateTestKeyValues(int,%20boolean)">generateTestKeyValues</a></strong>(int&nbsp;howMany,
                                           boolean&nbsp;useTags)</code>
 <div class="block">Generate test data useful to test encoders.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setAveragePrefixLength(int)">setAveragePrefixLength</a></strong>(int&nbsp;averagePrefixLength)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setAverageQualifierLength(int)">setAverageQualifierLength</a></strong>(int&nbsp;averageQualifierLength)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setAverageSuffixLength(int)">setAverageSuffixLength</a></strong>(int&nbsp;averageSuffixLength)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setBaseTimestampDivide(int)">setBaseTimestampDivide</a></strong>(int&nbsp;baseTimestampDivide)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setChanceForSameQualifier(float)">setChanceForSameQualifier</a></strong>(float&nbsp;chanceForSameQualifier)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setChanceForSimilarQualifier(float)">setChanceForSimilarQualifier</a></strong>(float&nbsp;chanceForSimiliarQualifier)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setChanceForZeroValue(float)">setChanceForZeroValue</a></strong>(float&nbsp;chanceForZeroValue)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setColumnFamilyLength(int)">setColumnFamilyLength</a></strong>(int&nbsp;columnFamilyLength)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setCommonPrefix(byte[])">setCommonPrefix</a></strong>(byte[]&nbsp;prefix)</code>
 <div class="block">get/set</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setFamily(byte[])">setFamily</a></strong>(byte[]&nbsp;family)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setNumberOfRowPrefixes(int)">setNumberOfRowPrefixes</a></strong>(int&nbsp;numberOfRowPrefixes)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setNumberOfRows(int)">setNumberOfRows</a></strong>(int&nbsp;numberOfRows)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setPrefixLengthVariance(int)">setPrefixLengthVariance</a></strong>(int&nbsp;prefixLengthVariance)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setQualifierLengthVariance(int)">setQualifierLengthVariance</a></strong>(int&nbsp;qualifierLengthVariance)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setRandomizer(java.util.Random)">setRandomizer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;randomizer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setSuffixLengthVariance(int)">setSuffixLengthVariance</a></strong>(int&nbsp;suffixLengthVariance)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setTimestampDiffSize(int)">setTimestampDiffSize</a></strong>(int&nbsp;timestampDiffSize)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#setValueLength(int)">setValueLength</a></strong>(int&nbsp;valueLength)</code>&nbsp;</td>
 </tr>
@@ -436,7 +462,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_COMMON_PREFIX</h4>
-<pre>static&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.46">DEFAULT_COMMON_PREFIX</a></pre>
+<pre>static&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.48">DEFAULT_COMMON_PREFIX</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_NUMBER_OF_ROW_PREFIXES">
@@ -445,7 +471,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_NUMBER_OF_ROW_PREFIXES</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.47">DEFAULT_NUMBER_OF_ROW_PREFIXES</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.49">DEFAULT_NUMBER_OF_ROW_PREFIXES</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_AVERAGE_PREFIX_LENGTH">
@@ -454,7 +480,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_AVERAGE_PREFIX_LENGTH</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.48">DEFAULT_AVERAGE_PREFIX_LENGTH</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.50">DEFAULT_AVERAGE_PREFIX_LENGTH</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_PREFIX_LENGTH_VARIANCE">
@@ -463,7 +489,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_PREFIX_LENGTH_VARIANCE</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.49">DEFAULT_PREFIX_LENGTH_VARIANCE</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.51">DEFAULT_PREFIX_LENGTH_VARIANCE</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_AVERAGE_SUFFIX_LENGTH">
@@ -472,7 +498,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_AVERAGE_SUFFIX_LENGTH</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.50">DEFAULT_AVERAGE_SUFFIX_LENGTH</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.52">DEFAULT_AVERAGE_SUFFIX_LENGTH</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_SUFFIX_LENGTH_VARIANCE">
@@ -481,7 +507,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_SUFFIX_LENGTH_VARIANCE</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.51">DEFAULT_SUFFIX_LENGTH_VARIANCE</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.53">DEFAULT_SUFFIX_LENGTH_VARIANCE</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_NUMBER_OF_ROW">
@@ -490,7 +516,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_NUMBER_OF_ROW</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.52">DEFAULT_NUMBER_OF_ROW</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.54">DEFAULT_NUMBER_OF_ROW</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_CHANCE_FOR_SAME_QUALIFIER">
@@ -499,7 +525,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_CHANCE_FOR_SAME_QUALIFIER</h4>
-<pre>static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.55">DEFAULT_CHANCE_FOR_SAME_QUALIFIER</a></pre>
+<pre>static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.57">DEFAULT_CHANCE_FOR_SAME_QUALIFIER</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_CHANCE_FOR_SIMILIAR_QUALIFIER">
@@ -508,7 +534,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_CHANCE_FOR_SIMILIAR_QUALIFIER</h4>
-<pre>static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.56">DEFAULT_CHANCE_FOR_SIMILIAR_QUALIFIER</a></pre>
+<pre>static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.58">DEFAULT_CHANCE_FOR_SIMILIAR_QUALIFIER</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_AVERAGE_QUALIFIER_LENGTH">
@@ -517,7 +543,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_AVERAGE_QUALIFIER_LENGTH</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.57">DEFAULT_AVERAGE_QUALIFIER_LENGTH</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.59">DEFAULT_AVERAGE_QUALIFIER_LENGTH</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_QUALIFIER_LENGTH_VARIANCE">
@@ -526,7 +552,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_QUALIFIER_LENGTH_VARIANCE</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.58">DEFAULT_QUALIFIER_LENGTH_VARIANCE</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.60">DEFAULT_QUALIFIER_LENGTH_VARIANCE</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_COLUMN_FAMILY_LENGTH">
@@ -535,7 +561,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_COLUMN_FAMILY_LENGTH</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.60">DEFAULT_COLUMN_FAMILY_LENGTH</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.62">DEFAULT_COLUMN_FAMILY_LENGTH</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_VALUE_LENGTH">
@@ -544,7 +570,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_VALUE_LENGTH</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.61">DEFAULT_VALUE_LENGTH</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.63">DEFAULT_VALUE_LENGTH</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_CHANCE_FOR_ZERO_VALUE">
@@ -553,7 +579,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_CHANCE_FOR_ZERO_VALUE</h4>
-<pre>static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.62">DEFAULT_CHANCE_FOR_ZERO_VALUE</a></pre>
+<pre>static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.64">DEFAULT_CHANCE_FOR_ZERO_VALUE</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_BASE_TIMESTAMP_DIVIDE">
@@ -562,7 +588,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_BASE_TIMESTAMP_DIVIDE</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.64">DEFAULT_BASE_TIMESTAMP_DIVIDE</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.66">DEFAULT_BASE_TIMESTAMP_DIVIDE</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_TIMESTAMP_DIFF_SIZE">
@@ -571,7 +597,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_TIMESTAMP_DIFF_SIZE</h4>
-<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.65">DEFAULT_TIMESTAMP_DIFF_SIZE</a></pre>
+<pre>static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.67">DEFAULT_TIMESTAMP_DIFF_SIZE</a></pre>
 </li>
 </ul>
 <a name="randomizer">
@@ -580,7 +606,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>randomizer</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.142">randomizer</a></pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.144">randomizer</a></pre>
 <div class="block">Used to generate dataset</div>
 </li>
 </ul>
@@ -590,7 +616,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>commonPrefix</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.145">commonPrefix</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.147">commonPrefix</a></pre>
 </li>
 </ul>
 <a name="numberOfRowPrefixes">
@@ -599,7 +625,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>numberOfRowPrefixes</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.146">numberOfRowPrefixes</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.148">numberOfRowPrefixes</a></pre>
 </li>
 </ul>
 <a name="averagePrefixLength">
@@ -608,7 +634,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>averagePrefixLength</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.147">averagePrefixLength</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.149">averagePrefixLength</a></pre>
 </li>
 </ul>
 <a name="prefixLengthVariance">
@@ -617,7 +643,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>prefixLengthVariance</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.148">prefixLengthVariance</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.150">prefixLengthVariance</a></pre>
 </li>
 </ul>
 <a name="averageSuffixLength">
@@ -626,7 +652,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>averageSuffixLength</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.149">averageSuffixLength</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.151">averageSuffixLength</a></pre>
 </li>
 </ul>
 <a name="suffixLengthVariance">
@@ -635,7 +661,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>suffixLengthVariance</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.150">suffixLengthVariance</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.152">suffixLengthVariance</a></pre>
 </li>
 </ul>
 <a name="numberOfRows">
@@ -644,7 +670,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>numberOfRows</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.151">numberOfRows</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.153">numberOfRows</a></pre>
 </li>
 </ul>
 <a name="family">
@@ -653,7 +679,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>family</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.154">family</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.156">family</a></pre>
 </li>
 </ul>
 <a name="chanceForSameQualifier">
@@ -662,7 +688,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>chanceForSameQualifier</h4>
-<pre>private&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.157">chanceForSameQualifier</a></pre>
+<pre>private&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.159">chanceForSameQualifier</a></pre>
 </li>
 </ul>
 <a name="chanceForSimilarQualifier">
@@ -671,7 +697,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>chanceForSimilarQualifier</h4>
-<pre>private&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.158">chanceForSimilarQualifier</a></pre>
+<pre>private&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.160">chanceForSimilarQualifier</a></pre>
 </li>
 </ul>
 <a name="averageQualifierLength">
@@ -680,7 +706,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>averageQualifierLength</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.159">averageQualifierLength</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.161">averageQualifierLength</a></pre>
 </li>
 </ul>
 <a name="qualifierLengthVariance">
@@ -689,7 +715,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>qualifierLengthVariance</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.160">qualifierLengthVariance</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.162">qualifierLengthVariance</a></pre>
 </li>
 </ul>
 <a name="columnFamilyLength">
@@ -698,7 +724,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>columnFamilyLength</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.162">columnFamilyLength</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.164">columnFamilyLength</a></pre>
 </li>
 </ul>
 <a name="valueLength">
@@ -707,7 +733,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>valueLength</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.163">valueLength</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.165">valueLength</a></pre>
 </li>
 </ul>
 <a name="chanceForZeroValue">
@@ -716,7 +742,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>chanceForZeroValue</h4>
-<pre>private&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.164">chanceForZeroValue</a></pre>
+<pre>private&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.166">chanceForZeroValue</a></pre>
 </li>
 </ul>
 <a name="baseTimestampDivide">
@@ -725,7 +751,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>baseTimestampDivide</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.166">baseTimestampDivide</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.168">baseTimestampDivide</a></pre>
 </li>
 </ul>
 <a name="timestampDiffSize">
@@ -734,7 +760,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>timestampDiffSize</h4>
-<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.167">timestampDiffSize</a></pre>
+<pre>private&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.169">timestampDiffSize</a></pre>
 </li>
 </ul>
 </li>
@@ -751,7 +777,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>RedundantKVGenerator</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.70">RedundantKVGenerator</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.72">RedundantKVGenerator</a>()</pre>
 <div class="block">Default constructor, assumes all parameters from class constants.</div>
 </li>
 </ul>
@@ -761,7 +787,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>RedundantKVGenerator</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.98">RedundantKVGenerator</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;randomizer,
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.100">RedundantKVGenerator</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;randomizer,
                     int&nbsp;numberOfRowPrefixes,
                     int&nbsp;averagePrefixLength,
                     int&nbsp;prefixLengthVariance,
@@ -795,7 +821,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>generateRows</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.169">generateRows</a>()</pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.171">generateRows</a>()</pre>
 </li>
 </ul>
 <a name="generateTestKeyValues(int)">
@@ -804,7 +830,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>generateTestKeyValues</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.204">generateTestKeyValues</a>(int&nbsp;howMany)</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.206">generateTestKeyValues</a>(int&nbsp;howMany)</pre>
 <div class="block">Generate test data useful to test encoders.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>howMany</code> - How many Key values should be generated.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>sorted list of key values</dd></dl>
@@ -816,8 +842,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>generateTestKeyValues</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.212">generateTestKeyValues</a>(int&nbsp;howMany,
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.214">generateTestKeyValues</a>(int&nbsp;howMany,
                                    boolean&nbsp;useTags)</pre>
+<div class="block">Generate test data useful to test encoders.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>howMany</code> - How many Key values should be generated.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>sorted list of key values</dd></dl>
+</li>
+</ul>
+<a name="generateTestExtendedOffheapKeyValues(int, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>generateTestExtendedOffheapKeyValues</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.300">generateTestExtendedOffheapKeyValues</a>(int&nbsp;howMany,
+                                              boolean&nbsp;useTags)</pre>
 <div class="block">Generate test data useful to test encoders.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>howMany</code> - How many Key values should be generated.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>sorted list of key values</dd></dl>
@@ -829,7 +868,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>convertKvToByteBuffer</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.298">convertKvToByteBuffer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;&nbsp;keyValues,
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.453">convertKvToByteBuffer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a>&gt;&nbsp;keyValues,
                                boolean&nbsp;includesMemstoreTS)</pre>
 <div class="block">Convert list of KeyValues to byte buffer.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>keyValues</code> - list of KeyValues to be converted.</dd>
@@ -842,7 +881,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setCommonPrefix</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.321">setCommonPrefix</a>(byte[]&nbsp;prefix)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.476">setCommonPrefix</a>(byte[]&nbsp;prefix)</pre>
 <div class="block">get/set</div>
 </li>
 </ul>
@@ -852,7 +891,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setRandomizer</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.326">setRandomizer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;randomizer)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.481">setRandomizer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;randomizer)</pre>
 </li>
 </ul>
 <a name="setNumberOfRowPrefixes(int)">
@@ -861,7 +900,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setNumberOfRowPrefixes</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.331">setNumberOfRowPrefixes</a>(int&nbsp;numberOfRowPrefixes)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.486">setNumberOfRowPrefixes</a>(int&nbsp;numberOfRowPrefixes)</pre>
 </li>
 </ul>
 <a name="setAveragePrefixLength(int)">
@@ -870,7 +909,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setAveragePrefixLength</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.336">setAveragePrefixLength</a>(int&nbsp;averagePrefixLength)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.491">setAveragePrefixLength</a>(int&nbsp;averagePrefixLength)</pre>
 </li>
 </ul>
 <a name="setPrefixLengthVariance(int)">
@@ -879,7 +918,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setPrefixLengthVariance</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.341">setPrefixLengthVariance</a>(int&nbsp;prefixLengthVariance)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.496">setPrefixLengthVariance</a>(int&nbsp;prefixLengthVariance)</pre>
 </li>
 </ul>
 <a name="setAverageSuffixLength(int)">
@@ -888,7 +927,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setAverageSuffixLength</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.346">setAverageSuffixLength</a>(int&nbsp;averageSuffixLength)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.501">setAverageSuffixLength</a>(int&nbsp;averageSuffixLength)</pre>
 </li>
 </ul>
 <a name="setSuffixLengthVariance(int)">
@@ -897,7 +936,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setSuffixLengthVariance</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.351">setSuffixLengthVariance</a>(int&nbsp;suffixLengthVariance)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.506">setSuffixLengthVariance</a>(int&nbsp;suffixLengthVariance)</pre>
 </li>
 </ul>
 <a name="setNumberOfRows(int)">
@@ -906,7 +945,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setNumberOfRows</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.356">setNumberOfRows</a>(int&nbsp;numberOfRows)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.511">setNumberOfRows</a>(int&nbsp;numberOfRows)</pre>
 </li>
 </ul>
 <a name="setChanceForSameQualifier(float)">
@@ -915,7 +954,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setChanceForSameQualifier</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.361">setChanceForSameQualifier</a>(float&nbsp;chanceForSameQualifier)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.516">setChanceForSameQualifier</a>(float&nbsp;chanceForSameQualifier)</pre>
 </li>
 </ul>
 <a name="setChanceForSimilarQualifier(float)">
@@ -924,7 +963,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setChanceForSimilarQualifier</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.366">setChanceForSimilarQualifier</a>(float&nbsp;chanceForSimiliarQualifier)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.521">setChanceForSimilarQualifier</a>(float&nbsp;chanceForSimiliarQualifier)</pre>
 </li>
 </ul>
 <a name="setAverageQualifierLength(int)">
@@ -933,7 +972,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setAverageQualifierLength</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.371">setAverageQualifierLength</a>(int&nbsp;averageQualifierLength)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.526">setAverageQualifierLength</a>(int&nbsp;averageQualifierLength)</pre>
 </li>
 </ul>
 <a name="setQualifierLengthVariance(int)">
@@ -942,7 +981,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setQualifierLengthVariance</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.376">setQualifierLengthVariance</a>(int&nbsp;qualifierLengthVariance)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.531">setQualifierLengthVariance</a>(int&nbsp;qualifierLengthVariance)</pre>
 </li>
 </ul>
 <a name="setColumnFamilyLength(int)">
@@ -951,7 +990,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setColumnFamilyLength</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.381">setColumnFamilyLength</a>(int&nbsp;columnFamilyLength)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.536">setColumnFamilyLength</a>(int&nbsp;columnFamilyLength)</pre>
 </li>
 </ul>
 <a name="setFamily(byte[])">
@@ -960,7 +999,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setFamily</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.386">setFamily</a>(byte[]&nbsp;family)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.541">setFamily</a>(byte[]&nbsp;family)</pre>
 </li>
 </ul>
 <a name="setValueLength(int)">
@@ -969,7 +1008,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setValueLength</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.392">setValueLength</a>(int&nbsp;valueLength)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.547">setValueLength</a>(int&nbsp;valueLength)</pre>
 </li>
 </ul>
 <a name="setChanceForZeroValue(float)">
@@ -978,7 +1017,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setChanceForZeroValue</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.397">setChanceForZeroValue</a>(float&nbsp;chanceForZeroValue)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.552">setChanceForZeroValue</a>(float&nbsp;chanceForZeroValue)</pre>
 </li>
 </ul>
 <a name="setBaseTimestampDivide(int)">
@@ -987,7 +1026,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setBaseTimestampDivide</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.402">setBaseTimestampDivide</a>(int&nbsp;baseTimestampDivide)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.557">setBaseTimestampDivide</a>(int&nbsp;baseTimestampDivide)</pre>
 </li>
 </ul>
 <a name="setTimestampDiffSize(int)">
@@ -996,7 +1035,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setTimestampDiffSize</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.407">setTimestampDiffSize</a>(int&nbsp;timestampDiffSize)</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test">RedundantKVGenerator</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html#line.562">setTimestampDiffSize</a>(int&nbsp;timestampDiffSize)</pre>
 </li>
 </ul>
 </li>
@@ -1026,7 +1065,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/util/test/LoadTestKVGenerator.html" title="class in org.apache.hadoop.hbase.util.test"><span class="strong">Prev Class</span></a></li>
-<li>Next Class</li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/util/test/RedundantKVGenerator.ExtendedOffheapKeyValue.html" title="class in org.apache.hadoop.hbase.util.test"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/util/test/RedundantKVGenerator.html" target="_top">Frames</a></li>
@@ -1050,7 +1089,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

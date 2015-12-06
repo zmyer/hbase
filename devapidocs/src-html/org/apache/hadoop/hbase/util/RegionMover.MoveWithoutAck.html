@@ -112,8 +112,8 @@
 <span class="sourceLineNo">104</span>  }<a name="line.104"></a>
 <span class="sourceLineNo">105</span><a name="line.105"></a>
 <span class="sourceLineNo">106</span>  /**<a name="line.106"></a>
-<span class="sourceLineNo">107</span>   * Builder for Region mover.Use the {@link #build()} method to create {@link #RegionMover(String)}<a name="line.107"></a>
-<span class="sourceLineNo">108</span>   * object Has {@link #filename(String)}, {@link #excludeFile(String)}, {@link #maxthreads(int)},<a name="line.108"></a>
+<span class="sourceLineNo">107</span>   * Builder for Region mover. Use the {@link #build()} method to create RegionMover object. Has<a name="line.107"></a>
+<span class="sourceLineNo">108</span>   * {@link #filename(String)}, {@link #excludeFile(String)}, {@link #maxthreads(int)},<a name="line.108"></a>
 <span class="sourceLineNo">109</span>   * {@link #ack(boolean)}, {@link #timeout(int)} methods to set the corresponding options<a name="line.109"></a>
 <span class="sourceLineNo">110</span>   */<a name="line.110"></a>
 <span class="sourceLineNo">111</span>  public static class RegionMoverBuilder {<a name="line.111"></a>
@@ -387,7 +387,7 @@
 <span class="sourceLineNo">379</span>      } catch (IOException e) {<a name="line.379"></a>
 <span class="sourceLineNo">380</span>        LOG.warn("Could not get list of region servers", e);<a name="line.380"></a>
 <span class="sourceLineNo">381</span>      } catch (Exception e) {<a name="line.381"></a>
-<span class="sourceLineNo">382</span>        LOG.info("hostname=" + hostname + " is not up yet, waiting", e);<a name="line.382"></a>
+<span class="sourceLineNo">382</span>        LOG.info("hostname=" + hostname + " is not up yet, waiting");<a name="line.382"></a>
 <span class="sourceLineNo">383</span>      }<a name="line.383"></a>
 <span class="sourceLineNo">384</span>      try {<a name="line.384"></a>
 <span class="sourceLineNo">385</span>        Thread.sleep(500);<a name="line.385"></a>
@@ -400,7 +400,7 @@
 <span class="sourceLineNo">392</span>      LOG.error("Host:" + hostname + " is not up.Giving up.");<a name="line.392"></a>
 <span class="sourceLineNo">393</span>      throw new Exception("Host to load regions not online");<a name="line.393"></a>
 <span class="sourceLineNo">394</span>    }<a name="line.394"></a>
-<span class="sourceLineNo">395</span>    LOG.info("Moving" + regionsToMove.size() + " regions to " + server + " using "<a name="line.395"></a>
+<span class="sourceLineNo">395</span>    LOG.info("Moving " + regionsToMove.size() + " regions to " + server + " using "<a name="line.395"></a>
 <span class="sourceLineNo">396</span>        + this.maxthreads + " threads.Ack mode:" + this.ack);<a name="line.396"></a>
 <span class="sourceLineNo">397</span>    ExecutorService moveRegionsPool = Executors.newFixedThreadPool(this.maxthreads);<a name="line.397"></a>
 <span class="sourceLineNo">398</span>    List&lt;Future&lt;Boolean&gt;&gt; taskList = new ArrayList&lt;Future&lt;Boolean&gt;&gt;();<a name="line.398"></a>
@@ -567,7 +567,7 @@
 <span class="sourceLineNo">559</span>      boolean sameServer = true;<a name="line.559"></a>
 <span class="sourceLineNo">560</span>      // Assert we can scan the region in its current location<a name="line.560"></a>
 <span class="sourceLineNo">561</span>      isSuccessfulScan(admin, region);<a name="line.561"></a>
-<span class="sourceLineNo">562</span>      LOG.info("Moving region:" + region.getEncodedName() + "from " + sourceServer + " to "<a name="line.562"></a>
+<span class="sourceLineNo">562</span>      LOG.info("Moving region:" + region.getEncodedName() + " from " + sourceServer + " to "<a name="line.562"></a>
 <span class="sourceLineNo">563</span>          + targetServer);<a name="line.563"></a>
 <span class="sourceLineNo">564</span>      while (count &lt; retries &amp;&amp; sameServer) {<a name="line.564"></a>
 <span class="sourceLineNo">565</span>        if (count &gt; 0) {<a name="line.565"></a>
@@ -624,7 +624,7 @@
 <span class="sourceLineNo">616</span>    @Override<a name="line.616"></a>
 <span class="sourceLineNo">617</span>    public Boolean call() {<a name="line.617"></a>
 <span class="sourceLineNo">618</span>      try {<a name="line.618"></a>
-<span class="sourceLineNo">619</span>        LOG.info("Moving region:" + region.getEncodedName() + "from " + sourceServer + " to "<a name="line.619"></a>
+<span class="sourceLineNo">619</span>        LOG.info("Moving region:" + region.getEncodedName() + " from " + sourceServer + " to "<a name="line.619"></a>
 <span class="sourceLineNo">620</span>            + targetServer);<a name="line.620"></a>
 <span class="sourceLineNo">621</span>        admin.move(region.getEncodedNameAsBytes(), Bytes.toBytes(targetServer));<a name="line.621"></a>
 <span class="sourceLineNo">622</span>        LOG.info("Moved " + region.getEncodedName() + " from " + sourceServer + " to "<a name="line.622"></a>
@@ -741,260 +741,268 @@
 <span class="sourceLineNo">733</span>      LOG.info("Excluded Servers are" + excludes.toString());<a name="line.733"></a>
 <span class="sourceLineNo">734</span>    }<a name="line.734"></a>
 <span class="sourceLineNo">735</span>  }<a name="line.735"></a>
-<span class="sourceLineNo">736</span>  <a name="line.736"></a>
+<span class="sourceLineNo">736</span><a name="line.736"></a>
 <span class="sourceLineNo">737</span>  /**<a name="line.737"></a>
 <span class="sourceLineNo">738</span>   * Exclude master from list of RSs to move regions to<a name="line.738"></a>
 <span class="sourceLineNo">739</span>   * @param regionServers<a name="line.739"></a>
 <span class="sourceLineNo">740</span>   * @param admin<a name="line.740"></a>
-<span class="sourceLineNo">741</span>   * @throws Exception<a name="line.741"></a>
+<span class="sourceLineNo">741</span>   * @throws IOException<a name="line.741"></a>
 <span class="sourceLineNo">742</span>   */<a name="line.742"></a>
-<span class="sourceLineNo">743</span>  private void stripMaster(ArrayList&lt;String&gt; regionServers, Admin admin) throws Exception {<a name="line.743"></a>
-<span class="sourceLineNo">744</span>      stripServer(regionServers, admin.getClusterStatus().getMaster().getHostname(),<a name="line.744"></a>
-<span class="sourceLineNo">745</span>        admin.getClusterStatus().getMaster().getPort());<a name="line.745"></a>
-<span class="sourceLineNo">746</span>  }<a name="line.746"></a>
-<span class="sourceLineNo">747</span><a name="line.747"></a>
-<span class="sourceLineNo">748</span>  /**<a name="line.748"></a>
-<span class="sourceLineNo">749</span>   * @return List of servers from the exclude file in format 'hostname:port'.<a name="line.749"></a>
-<span class="sourceLineNo">750</span>   */<a name="line.750"></a>
-<span class="sourceLineNo">751</span>  private ArrayList&lt;String&gt; readExcludes(String excludeFile) throws IOException {<a name="line.751"></a>
-<span class="sourceLineNo">752</span>    ArrayList&lt;String&gt; excludeServers = new ArrayList&lt;String&gt;();<a name="line.752"></a>
-<span class="sourceLineNo">753</span>    if (excludeFile == null) {<a name="line.753"></a>
-<span class="sourceLineNo">754</span>      return excludeServers;<a name="line.754"></a>
-<span class="sourceLineNo">755</span>    } else {<a name="line.755"></a>
-<span class="sourceLineNo">756</span>      File f = new File(excludeFile);<a name="line.756"></a>
-<span class="sourceLineNo">757</span>      String line;<a name="line.757"></a>
-<span class="sourceLineNo">758</span>      BufferedReader br = null;<a name="line.758"></a>
-<span class="sourceLineNo">759</span>      try {<a name="line.759"></a>
-<span class="sourceLineNo">760</span>        br = new BufferedReader(new FileReader(f));<a name="line.760"></a>
-<span class="sourceLineNo">761</span>        while ((line = br.readLine()) != null) {<a name="line.761"></a>
-<span class="sourceLineNo">762</span>          line.trim();<a name="line.762"></a>
-<span class="sourceLineNo">763</span>          if (!line.equals("")) {<a name="line.763"></a>
-<span class="sourceLineNo">764</span>            excludeServers.add(line);<a name="line.764"></a>
-<span class="sourceLineNo">765</span>          }<a name="line.765"></a>
-<span class="sourceLineNo">766</span>        }<a name="line.766"></a>
-<span class="sourceLineNo">767</span>      } catch (IOException e) {<a name="line.767"></a>
-<span class="sourceLineNo">768</span>        LOG.warn("Exception while reading excludes file,continuing anyways", e);<a name="line.768"></a>
-<span class="sourceLineNo">769</span>      } finally {<a name="line.769"></a>
-<span class="sourceLineNo">770</span>        if (br != null) {<a name="line.770"></a>
-<span class="sourceLineNo">771</span>          br.close();<a name="line.771"></a>
-<span class="sourceLineNo">772</span>        }<a name="line.772"></a>
-<span class="sourceLineNo">773</span>      }<a name="line.773"></a>
-<span class="sourceLineNo">774</span>      return excludeServers;<a name="line.774"></a>
-<span class="sourceLineNo">775</span>    }<a name="line.775"></a>
-<span class="sourceLineNo">776</span>  }<a name="line.776"></a>
-<span class="sourceLineNo">777</span><a name="line.777"></a>
-<span class="sourceLineNo">778</span>  /**<a name="line.778"></a>
-<span class="sourceLineNo">779</span>   * Remove the servername whose hostname and port portion matches from the passed array of servers.<a name="line.779"></a>
-<span class="sourceLineNo">780</span>   * Returns as side-effect the servername removed.<a name="line.780"></a>
-<span class="sourceLineNo">781</span>   * @param regionServers<a name="line.781"></a>
-<span class="sourceLineNo">782</span>   * @param hostname<a name="line.782"></a>
-<span class="sourceLineNo">783</span>   * @param port<a name="line.783"></a>
-<span class="sourceLineNo">784</span>   * @return server removed from list of Region Servers<a name="line.784"></a>
-<span class="sourceLineNo">785</span>   * @throws Exception<a name="line.785"></a>
-<span class="sourceLineNo">786</span>   */<a name="line.786"></a>
-<span class="sourceLineNo">787</span>  private String stripServer(ArrayList&lt;String&gt; regionServers, String hostname, int port)<a name="line.787"></a>
-<span class="sourceLineNo">788</span>      throws Exception {<a name="line.788"></a>
-<span class="sourceLineNo">789</span>    String server = null;<a name="line.789"></a>
-<span class="sourceLineNo">790</span>    String portString = Integer.toString(port);<a name="line.790"></a>
-<span class="sourceLineNo">791</span>    Iterator&lt;String&gt; i = regionServers.iterator();<a name="line.791"></a>
-<span class="sourceLineNo">792</span>    int noOfRs = regionServers.size();<a name="line.792"></a>
-<span class="sourceLineNo">793</span>    while (i.hasNext()) {<a name="line.793"></a>
-<span class="sourceLineNo">794</span>      server = i.next();<a name="line.794"></a>
-<span class="sourceLineNo">795</span>      String[] splitServer = server.split(ServerName.SERVERNAME_SEPARATOR);<a name="line.795"></a>
-<span class="sourceLineNo">796</span>      if (splitServer[0].equals(hostname) &amp;&amp; splitServer[1].equals(portString)) {<a name="line.796"></a>
-<span class="sourceLineNo">797</span>        i.remove();<a name="line.797"></a>
-<span class="sourceLineNo">798</span>        return server;<a name="line.798"></a>
-<span class="sourceLineNo">799</span>      }<a name="line.799"></a>
-<span class="sourceLineNo">800</span>    }<a name="line.800"></a>
-<span class="sourceLineNo">801</span>    if (regionServers.size() &gt;= noOfRs) {<a name="line.801"></a>
-<span class="sourceLineNo">802</span>      throw new Exception("Server " + hostname + ":" + Integer.toString(port)<a name="line.802"></a>
-<span class="sourceLineNo">803</span>          + " is not in list of online servers(Offline/Incorrect)");<a name="line.803"></a>
-<span class="sourceLineNo">804</span>    }<a name="line.804"></a>
-<span class="sourceLineNo">805</span>    return server;<a name="line.805"></a>
-<span class="sourceLineNo">806</span>  }<a name="line.806"></a>
-<span class="sourceLineNo">807</span><a name="line.807"></a>
-<span class="sourceLineNo">808</span>  /**<a name="line.808"></a>
-<span class="sourceLineNo">809</span>   * Get Arraylist of Servers in the cluster<a name="line.809"></a>
-<span class="sourceLineNo">810</span>   * @param admin<a name="line.810"></a>
-<span class="sourceLineNo">811</span>   * @return ArrayList of online region servers<a name="line.811"></a>
-<span class="sourceLineNo">812</span>   * @throws IOException<a name="line.812"></a>
-<span class="sourceLineNo">813</span>   */<a name="line.813"></a>
-<span class="sourceLineNo">814</span>  private ArrayList&lt;String&gt; getServers(Admin admin) throws IOException {<a name="line.814"></a>
-<span class="sourceLineNo">815</span>    ArrayList&lt;ServerName&gt; serverInfo =<a name="line.815"></a>
-<span class="sourceLineNo">816</span>        new ArrayList&lt;ServerName&gt;(admin.getClusterStatus().getServers());<a name="line.816"></a>
-<span class="sourceLineNo">817</span>    ArrayList&lt;String&gt; regionServers = new ArrayList&lt;String&gt;();<a name="line.817"></a>
-<span class="sourceLineNo">818</span>    for (ServerName server : serverInfo) {<a name="line.818"></a>
-<span class="sourceLineNo">819</span>      regionServers.add(server.getServerName());<a name="line.819"></a>
-<span class="sourceLineNo">820</span>    }<a name="line.820"></a>
-<span class="sourceLineNo">821</span>    return regionServers;<a name="line.821"></a>
-<span class="sourceLineNo">822</span>  }<a name="line.822"></a>
-<span class="sourceLineNo">823</span><a name="line.823"></a>
-<span class="sourceLineNo">824</span>  private void deleteFile(String filename) {<a name="line.824"></a>
-<span class="sourceLineNo">825</span>    File f = new File(filename);<a name="line.825"></a>
-<span class="sourceLineNo">826</span>    if (f.exists()) {<a name="line.826"></a>
-<span class="sourceLineNo">827</span>      f.delete();<a name="line.827"></a>
-<span class="sourceLineNo">828</span>    }<a name="line.828"></a>
-<span class="sourceLineNo">829</span>  }<a name="line.829"></a>
-<span class="sourceLineNo">830</span><a name="line.830"></a>
-<span class="sourceLineNo">831</span>  /**<a name="line.831"></a>
-<span class="sourceLineNo">832</span>   * Tries to scan a row from passed region<a name="line.832"></a>
-<span class="sourceLineNo">833</span>   * @param admin<a name="line.833"></a>
-<span class="sourceLineNo">834</span>   * @param region<a name="line.834"></a>
-<span class="sourceLineNo">835</span>   * @throws IOException<a name="line.835"></a>
-<span class="sourceLineNo">836</span>   */<a name="line.836"></a>
-<span class="sourceLineNo">837</span>  private void isSuccessfulScan(Admin admin, HRegionInfo region) throws IOException {<a name="line.837"></a>
-<span class="sourceLineNo">838</span>    Scan scan = new Scan(region.getStartKey());<a name="line.838"></a>
-<span class="sourceLineNo">839</span>    scan.setBatch(1);<a name="line.839"></a>
-<span class="sourceLineNo">840</span>    scan.setCaching(1);<a name="line.840"></a>
-<span class="sourceLineNo">841</span>    scan.setFilter(new FirstKeyOnlyFilter());<a name="line.841"></a>
-<span class="sourceLineNo">842</span>    try {<a name="line.842"></a>
-<span class="sourceLineNo">843</span>      Table table = admin.getConnection().getTable(region.getTable());<a name="line.843"></a>
-<span class="sourceLineNo">844</span>      try {<a name="line.844"></a>
-<span class="sourceLineNo">845</span>        ResultScanner scanner = table.getScanner(scan);<a name="line.845"></a>
-<span class="sourceLineNo">846</span>        try {<a name="line.846"></a>
-<span class="sourceLineNo">847</span>          scanner.next();<a name="line.847"></a>
-<span class="sourceLineNo">848</span>        } finally {<a name="line.848"></a>
-<span class="sourceLineNo">849</span>          scanner.close();<a name="line.849"></a>
-<span class="sourceLineNo">850</span>        }<a name="line.850"></a>
-<span class="sourceLineNo">851</span>      } finally {<a name="line.851"></a>
-<span class="sourceLineNo">852</span>        table.close();<a name="line.852"></a>
-<span class="sourceLineNo">853</span>      }<a name="line.853"></a>
-<span class="sourceLineNo">854</span>    } catch (IOException e) {<a name="line.854"></a>
-<span class="sourceLineNo">855</span>      LOG.error("Could not scan region:" + region.getEncodedName(), e);<a name="line.855"></a>
-<span class="sourceLineNo">856</span>      throw e;<a name="line.856"></a>
-<span class="sourceLineNo">857</span>    }<a name="line.857"></a>
-<span class="sourceLineNo">858</span>  }<a name="line.858"></a>
-<span class="sourceLineNo">859</span><a name="line.859"></a>
-<span class="sourceLineNo">860</span>  /**<a name="line.860"></a>
-<span class="sourceLineNo">861</span>   * Returns true if passed region is still on serverName when we look at hbase:meta.<a name="line.861"></a>
-<span class="sourceLineNo">862</span>   * @param admin<a name="line.862"></a>
-<span class="sourceLineNo">863</span>   * @param region<a name="line.863"></a>
-<span class="sourceLineNo">864</span>   * @param serverName<a name="line.864"></a>
-<span class="sourceLineNo">865</span>   * @return true if region is hosted on serverName otherwise false<a name="line.865"></a>
-<span class="sourceLineNo">866</span>   * @throws IOException<a name="line.866"></a>
-<span class="sourceLineNo">867</span>   */<a name="line.867"></a>
-<span class="sourceLineNo">868</span>  private boolean isSameServer(Admin admin, HRegionInfo region, String serverName)<a name="line.868"></a>
-<span class="sourceLineNo">869</span>      throws IOException {<a name="line.869"></a>
-<span class="sourceLineNo">870</span>    String serverForRegion = getServerNameForRegion(admin, region);<a name="line.870"></a>
-<span class="sourceLineNo">871</span>    if (serverForRegion != null &amp;&amp; serverForRegion.equals(serverName)) {<a name="line.871"></a>
-<span class="sourceLineNo">872</span>      return true;<a name="line.872"></a>
-<span class="sourceLineNo">873</span>    }<a name="line.873"></a>
-<span class="sourceLineNo">874</span>    return false;<a name="line.874"></a>
-<span class="sourceLineNo">875</span>  }<a name="line.875"></a>
-<span class="sourceLineNo">876</span><a name="line.876"></a>
-<span class="sourceLineNo">877</span>  /**<a name="line.877"></a>
-<span class="sourceLineNo">878</span>   * Get servername that is up in hbase:meta hosting the given region. this is hostname + port +<a name="line.878"></a>
-<span class="sourceLineNo">879</span>   * startcode comma-delimited. Can return null<a name="line.879"></a>
-<span class="sourceLineNo">880</span>   * @param admin<a name="line.880"></a>
-<span class="sourceLineNo">881</span>   * @param region<a name="line.881"></a>
-<span class="sourceLineNo">882</span>   * @return regionServer hosting the given region<a name="line.882"></a>
-<span class="sourceLineNo">883</span>   * @throws IOException<a name="line.883"></a>
-<span class="sourceLineNo">884</span>   */<a name="line.884"></a>
-<span class="sourceLineNo">885</span>  private String getServerNameForRegion(Admin admin, HRegionInfo region) throws IOException {<a name="line.885"></a>
-<span class="sourceLineNo">886</span>    String server = null;<a name="line.886"></a>
-<span class="sourceLineNo">887</span>    if (!admin.isTableEnabled(region.getTable())) {<a name="line.887"></a>
-<span class="sourceLineNo">888</span>      return null;<a name="line.888"></a>
-<span class="sourceLineNo">889</span>    }<a name="line.889"></a>
-<span class="sourceLineNo">890</span>    if (region.isMetaRegion()) {<a name="line.890"></a>
-<span class="sourceLineNo">891</span>      ZooKeeperWatcher zkw = new ZooKeeperWatcher(admin.getConfiguration(), "region_mover", null);<a name="line.891"></a>
-<span class="sourceLineNo">892</span>      MetaTableLocator locator = new MetaTableLocator();<a name="line.892"></a>
-<span class="sourceLineNo">893</span>      int maxWaitInSeconds =<a name="line.893"></a>
-<span class="sourceLineNo">894</span>          admin.getConfiguration().getInt(MOVE_WAIT_MAX_KEY, DEFAULT_MOVE_WAIT_MAX);<a name="line.894"></a>
-<span class="sourceLineNo">895</span>      try {<a name="line.895"></a>
-<span class="sourceLineNo">896</span>        server = locator.waitMetaRegionLocation(zkw, maxWaitInSeconds * 1000).toString() + ",";<a name="line.896"></a>
-<span class="sourceLineNo">897</span>      } catch (InterruptedException e) {<a name="line.897"></a>
-<span class="sourceLineNo">898</span>        LOG.error("Interrupted while waiting for location of Meta", e);<a name="line.898"></a>
-<span class="sourceLineNo">899</span>      } finally {<a name="line.899"></a>
-<span class="sourceLineNo">900</span>        if (zkw != null) {<a name="line.900"></a>
-<span class="sourceLineNo">901</span>          zkw.close();<a name="line.901"></a>
-<span class="sourceLineNo">902</span>        }<a name="line.902"></a>
-<span class="sourceLineNo">903</span>      }<a name="line.903"></a>
-<span class="sourceLineNo">904</span>    } else {<a name="line.904"></a>
-<span class="sourceLineNo">905</span>      Table table = admin.getConnection().getTable(TableName.META_TABLE_NAME);<a name="line.905"></a>
-<span class="sourceLineNo">906</span>      try {<a name="line.906"></a>
-<span class="sourceLineNo">907</span>        Get get = new Get(region.getRegionName());<a name="line.907"></a>
-<span class="sourceLineNo">908</span>        get.addColumn(HConstants.CATALOG_FAMILY, HConstants.SERVER_QUALIFIER);<a name="line.908"></a>
-<span class="sourceLineNo">909</span>        get.addColumn(HConstants.CATALOG_FAMILY, HConstants.STARTCODE_QUALIFIER);<a name="line.909"></a>
-<span class="sourceLineNo">910</span>        Result result = table.get(get);<a name="line.910"></a>
-<span class="sourceLineNo">911</span>        if (result != null) {<a name="line.911"></a>
-<span class="sourceLineNo">912</span>          byte[] servername =<a name="line.912"></a>
-<span class="sourceLineNo">913</span>              result.getValue(HConstants.CATALOG_FAMILY, HConstants.SERVER_QUALIFIER);<a name="line.913"></a>
-<span class="sourceLineNo">914</span>          byte[] startcode =<a name="line.914"></a>
-<span class="sourceLineNo">915</span>              result.getValue(HConstants.CATALOG_FAMILY, HConstants.STARTCODE_QUALIFIER);<a name="line.915"></a>
-<span class="sourceLineNo">916</span>          if (servername != null) {<a name="line.916"></a>
-<span class="sourceLineNo">917</span>            server =<a name="line.917"></a>
-<span class="sourceLineNo">918</span>                Bytes.toString(servername).replaceFirst(":", ",") + "," + Bytes.toLong(startcode);<a name="line.918"></a>
-<span class="sourceLineNo">919</span>          }<a name="line.919"></a>
-<span class="sourceLineNo">920</span>        }<a name="line.920"></a>
-<span class="sourceLineNo">921</span>      } catch (IOException e) {<a name="line.921"></a>
-<span class="sourceLineNo">922</span>        LOG.error("Could not get Server Name for region:" + region.getEncodedName(), e);<a name="line.922"></a>
-<span class="sourceLineNo">923</span>        throw e;<a name="line.923"></a>
-<span class="sourceLineNo">924</span>      } finally {<a name="line.924"></a>
-<span class="sourceLineNo">925</span>        table.close();<a name="line.925"></a>
-<span class="sourceLineNo">926</span>      }<a name="line.926"></a>
-<span class="sourceLineNo">927</span>    }<a name="line.927"></a>
-<span class="sourceLineNo">928</span>    return server;<a name="line.928"></a>
-<span class="sourceLineNo">929</span>  }<a name="line.929"></a>
-<span class="sourceLineNo">930</span><a name="line.930"></a>
-<span class="sourceLineNo">931</span>  @Override<a name="line.931"></a>
-<span class="sourceLineNo">932</span>  protected void addOptions() {<a name="line.932"></a>
-<span class="sourceLineNo">933</span>    this.addRequiredOptWithArg("r", "regionserverhost", "region server &lt;hostname&gt;|&lt;hostname:port&gt;");<a name="line.933"></a>
-<span class="sourceLineNo">934</span>    this.addRequiredOptWithArg("l", "Expected: load/unload");<a name="line.934"></a>
-<span class="sourceLineNo">935</span>    this.addOptWithArg("m", "maxthreads",<a name="line.935"></a>
-<span class="sourceLineNo">936</span>      "Define the maximum number of threads to use to unload and reload the regions");<a name="line.936"></a>
-<span class="sourceLineNo">937</span>    this.addOptWithArg("x", "excludefile",<a name="line.937"></a>
-<span class="sourceLineNo">938</span>      "File with &lt;hostname:port&gt; per line to exclude as unload targets; default excludes only "<a name="line.938"></a>
-<span class="sourceLineNo">939</span>          + "target host; useful for rack decommisioning.");<a name="line.939"></a>
-<span class="sourceLineNo">940</span>    this.addOptWithArg("f", "filename",<a name="line.940"></a>
-<span class="sourceLineNo">941</span>      "File to save regions list into unloading, or read from loading; "<a name="line.941"></a>
-<span class="sourceLineNo">942</span>          + "default /tmp/&lt;usernamehostname:port&gt;");<a name="line.942"></a>
-<span class="sourceLineNo">943</span>    this.addOptNoArg("n", "noAck",<a name="line.943"></a>
-<span class="sourceLineNo">944</span>      "Enable Ack mode(default: true) which checks if region is online on target RegionServer -- "<a name="line.944"></a>
-<span class="sourceLineNo">945</span>          + "Upon disabling,in case a region is stuck, it'll move on anyways");<a name="line.945"></a>
-<span class="sourceLineNo">946</span>    this.addOptWithArg("t", "timeout", "timeout in seconds after which the tool will exit "<a name="line.946"></a>
-<span class="sourceLineNo">947</span>        + "irrespective of whether it finished or not;default Integer.MAX_VALUE");<a name="line.947"></a>
-<span class="sourceLineNo">948</span>  }<a name="line.948"></a>
-<span class="sourceLineNo">949</span><a name="line.949"></a>
-<span class="sourceLineNo">950</span>  @Override<a name="line.950"></a>
-<span class="sourceLineNo">951</span>  protected void processOptions(CommandLine cmd) {<a name="line.951"></a>
-<span class="sourceLineNo">952</span>    String hostname = cmd.getOptionValue("r");<a name="line.952"></a>
-<span class="sourceLineNo">953</span>    rmbuilder = new RegionMoverBuilder(hostname);<a name="line.953"></a>
-<span class="sourceLineNo">954</span>    if (cmd.hasOption('m')) {<a name="line.954"></a>
-<span class="sourceLineNo">955</span>      rmbuilder.maxthreads(Integer.parseInt(cmd.getOptionValue('m')));<a name="line.955"></a>
-<span class="sourceLineNo">956</span>    }<a name="line.956"></a>
-<span class="sourceLineNo">957</span>    if (cmd.hasOption('n')) {<a name="line.957"></a>
-<span class="sourceLineNo">958</span>      rmbuilder.ack(false);<a name="line.958"></a>
-<span class="sourceLineNo">959</span>    }<a name="line.959"></a>
-<span class="sourceLineNo">960</span>    if (cmd.hasOption('f')) {<a name="line.960"></a>
-<span class="sourceLineNo">961</span>      rmbuilder.filename(cmd.getOptionValue('f'));<a name="line.961"></a>
-<span class="sourceLineNo">962</span>    }<a name="line.962"></a>
-<span class="sourceLineNo">963</span>    if (cmd.hasOption('x')) {<a name="line.963"></a>
-<span class="sourceLineNo">964</span>      rmbuilder.excludeFile(cmd.getOptionValue('x'));<a name="line.964"></a>
-<span class="sourceLineNo">965</span>    }<a name="line.965"></a>
-<span class="sourceLineNo">966</span>    if (cmd.hasOption('t')) {<a name="line.966"></a>
-<span class="sourceLineNo">967</span>      rmbuilder.timeout(Integer.parseInt(cmd.getOptionValue('t')));<a name="line.967"></a>
-<span class="sourceLineNo">968</span>    }<a name="line.968"></a>
-<span class="sourceLineNo">969</span>    this.loadUnload = cmd.getOptionValue("l").toLowerCase();<a name="line.969"></a>
-<span class="sourceLineNo">970</span>  }<a name="line.970"></a>
-<span class="sourceLineNo">971</span><a name="line.971"></a>
-<span class="sourceLineNo">972</span>  @Override<a name="line.972"></a>
-<span class="sourceLineNo">973</span>  protected int doWork() throws Exception {<a name="line.973"></a>
-<span class="sourceLineNo">974</span>    RegionMover rm = rmbuilder.build();<a name="line.974"></a>
-<span class="sourceLineNo">975</span>    if (loadUnload.equalsIgnoreCase("load")) {<a name="line.975"></a>
-<span class="sourceLineNo">976</span>      rm.load();<a name="line.976"></a>
-<span class="sourceLineNo">977</span>    } else if (loadUnload.equalsIgnoreCase("unload")) {<a name="line.977"></a>
-<span class="sourceLineNo">978</span>      rm.unload();<a name="line.978"></a>
-<span class="sourceLineNo">979</span>    } else {<a name="line.979"></a>
-<span class="sourceLineNo">980</span>      printUsage();<a name="line.980"></a>
-<span class="sourceLineNo">981</span>      System.exit(1);<a name="line.981"></a>
-<span class="sourceLineNo">982</span>    }<a name="line.982"></a>
-<span class="sourceLineNo">983</span>    return 0;<a name="line.983"></a>
-<span class="sourceLineNo">984</span>  }<a name="line.984"></a>
-<span class="sourceLineNo">985</span><a name="line.985"></a>
-<span class="sourceLineNo">986</span>  public static void main(String[] args) {<a name="line.986"></a>
-<span class="sourceLineNo">987</span>    new RegionMover().doStaticMain(args);<a name="line.987"></a>
-<span class="sourceLineNo">988</span>  }<a name="line.988"></a>
-<span class="sourceLineNo">989</span>}<a name="line.989"></a>
+<span class="sourceLineNo">743</span>  private void stripMaster(ArrayList&lt;String&gt; regionServers, Admin admin) throws IOException {<a name="line.743"></a>
+<span class="sourceLineNo">744</span>    String masterHostname = admin.getClusterStatus().getMaster().getHostname();<a name="line.744"></a>
+<span class="sourceLineNo">745</span>    int masterPort = admin.getClusterStatus().getMaster().getPort();<a name="line.745"></a>
+<span class="sourceLineNo">746</span>    try {<a name="line.746"></a>
+<span class="sourceLineNo">747</span>      stripServer(regionServers, masterHostname, masterPort);<a name="line.747"></a>
+<span class="sourceLineNo">748</span>    } catch (Exception e) {<a name="line.748"></a>
+<span class="sourceLineNo">749</span>      LOG.warn("Could not remove master from list of RS", e);<a name="line.749"></a>
+<span class="sourceLineNo">750</span>    }<a name="line.750"></a>
+<span class="sourceLineNo">751</span>  }<a name="line.751"></a>
+<span class="sourceLineNo">752</span><a name="line.752"></a>
+<span class="sourceLineNo">753</span>  /**<a name="line.753"></a>
+<span class="sourceLineNo">754</span>   * @return List of servers from the exclude file in format 'hostname:port'.<a name="line.754"></a>
+<span class="sourceLineNo">755</span>   */<a name="line.755"></a>
+<span class="sourceLineNo">756</span>  private ArrayList&lt;String&gt; readExcludes(String excludeFile) throws IOException {<a name="line.756"></a>
+<span class="sourceLineNo">757</span>    ArrayList&lt;String&gt; excludeServers = new ArrayList&lt;String&gt;();<a name="line.757"></a>
+<span class="sourceLineNo">758</span>    if (excludeFile == null) {<a name="line.758"></a>
+<span class="sourceLineNo">759</span>      return excludeServers;<a name="line.759"></a>
+<span class="sourceLineNo">760</span>    } else {<a name="line.760"></a>
+<span class="sourceLineNo">761</span>      File f = new File(excludeFile);<a name="line.761"></a>
+<span class="sourceLineNo">762</span>      String line;<a name="line.762"></a>
+<span class="sourceLineNo">763</span>      BufferedReader br = null;<a name="line.763"></a>
+<span class="sourceLineNo">764</span>      try {<a name="line.764"></a>
+<span class="sourceLineNo">765</span>        br = new BufferedReader(new FileReader(f));<a name="line.765"></a>
+<span class="sourceLineNo">766</span>        while ((line = br.readLine()) != null) {<a name="line.766"></a>
+<span class="sourceLineNo">767</span>          line.trim();<a name="line.767"></a>
+<span class="sourceLineNo">768</span>          if (!line.equals("")) {<a name="line.768"></a>
+<span class="sourceLineNo">769</span>            excludeServers.add(line);<a name="line.769"></a>
+<span class="sourceLineNo">770</span>          }<a name="line.770"></a>
+<span class="sourceLineNo">771</span>        }<a name="line.771"></a>
+<span class="sourceLineNo">772</span>      } catch (IOException e) {<a name="line.772"></a>
+<span class="sourceLineNo">773</span>        LOG.warn("Exception while reading excludes file,continuing anyways", e);<a name="line.773"></a>
+<span class="sourceLineNo">774</span>      } finally {<a name="line.774"></a>
+<span class="sourceLineNo">775</span>        if (br != null) {<a name="line.775"></a>
+<span class="sourceLineNo">776</span>          br.close();<a name="line.776"></a>
+<span class="sourceLineNo">777</span>        }<a name="line.777"></a>
+<span class="sourceLineNo">778</span>      }<a name="line.778"></a>
+<span class="sourceLineNo">779</span>      return excludeServers;<a name="line.779"></a>
+<span class="sourceLineNo">780</span>    }<a name="line.780"></a>
+<span class="sourceLineNo">781</span>  }<a name="line.781"></a>
+<span class="sourceLineNo">782</span><a name="line.782"></a>
+<span class="sourceLineNo">783</span>  /**<a name="line.783"></a>
+<span class="sourceLineNo">784</span>   * Remove the servername whose hostname and port portion matches from the passed array of servers.<a name="line.784"></a>
+<span class="sourceLineNo">785</span>   * Returns as side-effect the servername removed.<a name="line.785"></a>
+<span class="sourceLineNo">786</span>   * @param regionServers<a name="line.786"></a>
+<span class="sourceLineNo">787</span>   * @param hostname<a name="line.787"></a>
+<span class="sourceLineNo">788</span>   * @param port<a name="line.788"></a>
+<span class="sourceLineNo">789</span>   * @return server removed from list of Region Servers<a name="line.789"></a>
+<span class="sourceLineNo">790</span>   * @throws Exception<a name="line.790"></a>
+<span class="sourceLineNo">791</span>   */<a name="line.791"></a>
+<span class="sourceLineNo">792</span>  private String stripServer(ArrayList&lt;String&gt; regionServers, String hostname, int port)<a name="line.792"></a>
+<span class="sourceLineNo">793</span>      throws Exception {<a name="line.793"></a>
+<span class="sourceLineNo">794</span>    String server = null;<a name="line.794"></a>
+<span class="sourceLineNo">795</span>    String portString = Integer.toString(port);<a name="line.795"></a>
+<span class="sourceLineNo">796</span>    Iterator&lt;String&gt; i = regionServers.iterator();<a name="line.796"></a>
+<span class="sourceLineNo">797</span>    int noOfRs = regionServers.size();<a name="line.797"></a>
+<span class="sourceLineNo">798</span>    while (i.hasNext()) {<a name="line.798"></a>
+<span class="sourceLineNo">799</span>      server = i.next();<a name="line.799"></a>
+<span class="sourceLineNo">800</span>      String[] splitServer = server.split(ServerName.SERVERNAME_SEPARATOR);<a name="line.800"></a>
+<span class="sourceLineNo">801</span>      if (splitServer[0].equals(hostname) &amp;&amp; splitServer[1].equals(portString)) {<a name="line.801"></a>
+<span class="sourceLineNo">802</span>        i.remove();<a name="line.802"></a>
+<span class="sourceLineNo">803</span>        return server;<a name="line.803"></a>
+<span class="sourceLineNo">804</span>      }<a name="line.804"></a>
+<span class="sourceLineNo">805</span>    }<a name="line.805"></a>
+<span class="sourceLineNo">806</span>    if (regionServers.size() &gt;= noOfRs) {<a name="line.806"></a>
+<span class="sourceLineNo">807</span>      throw new Exception("Server " + hostname + ":" + Integer.toString(port)<a name="line.807"></a>
+<span class="sourceLineNo">808</span>          + " is not in list of online servers(Offline/Incorrect)");<a name="line.808"></a>
+<span class="sourceLineNo">809</span>    }<a name="line.809"></a>
+<span class="sourceLineNo">810</span>    return server;<a name="line.810"></a>
+<span class="sourceLineNo">811</span>  }<a name="line.811"></a>
+<span class="sourceLineNo">812</span><a name="line.812"></a>
+<span class="sourceLineNo">813</span>  /**<a name="line.813"></a>
+<span class="sourceLineNo">814</span>   * Get Arraylist of Servers in the cluster<a name="line.814"></a>
+<span class="sourceLineNo">815</span>   * @param admin<a name="line.815"></a>
+<span class="sourceLineNo">816</span>   * @return ArrayList of online region servers<a name="line.816"></a>
+<span class="sourceLineNo">817</span>   * @throws IOException<a name="line.817"></a>
+<span class="sourceLineNo">818</span>   */<a name="line.818"></a>
+<span class="sourceLineNo">819</span>  private ArrayList&lt;String&gt; getServers(Admin admin) throws IOException {<a name="line.819"></a>
+<span class="sourceLineNo">820</span>    ArrayList&lt;ServerName&gt; serverInfo =<a name="line.820"></a>
+<span class="sourceLineNo">821</span>        new ArrayList&lt;ServerName&gt;(admin.getClusterStatus().getServers());<a name="line.821"></a>
+<span class="sourceLineNo">822</span>    ArrayList&lt;String&gt; regionServers = new ArrayList&lt;String&gt;();<a name="line.822"></a>
+<span class="sourceLineNo">823</span>    for (ServerName server : serverInfo) {<a name="line.823"></a>
+<span class="sourceLineNo">824</span>      regionServers.add(server.getServerName());<a name="line.824"></a>
+<span class="sourceLineNo">825</span>    }<a name="line.825"></a>
+<span class="sourceLineNo">826</span>    return regionServers;<a name="line.826"></a>
+<span class="sourceLineNo">827</span>  }<a name="line.827"></a>
+<span class="sourceLineNo">828</span><a name="line.828"></a>
+<span class="sourceLineNo">829</span>  private void deleteFile(String filename) {<a name="line.829"></a>
+<span class="sourceLineNo">830</span>    File f = new File(filename);<a name="line.830"></a>
+<span class="sourceLineNo">831</span>    if (f.exists()) {<a name="line.831"></a>
+<span class="sourceLineNo">832</span>      f.delete();<a name="line.832"></a>
+<span class="sourceLineNo">833</span>    }<a name="line.833"></a>
+<span class="sourceLineNo">834</span>  }<a name="line.834"></a>
+<span class="sourceLineNo">835</span><a name="line.835"></a>
+<span class="sourceLineNo">836</span>  /**<a name="line.836"></a>
+<span class="sourceLineNo">837</span>   * Tries to scan a row from passed region<a name="line.837"></a>
+<span class="sourceLineNo">838</span>   * @param admin<a name="line.838"></a>
+<span class="sourceLineNo">839</span>   * @param region<a name="line.839"></a>
+<span class="sourceLineNo">840</span>   * @throws IOException<a name="line.840"></a>
+<span class="sourceLineNo">841</span>   */<a name="line.841"></a>
+<span class="sourceLineNo">842</span>  private void isSuccessfulScan(Admin admin, HRegionInfo region) throws IOException {<a name="line.842"></a>
+<span class="sourceLineNo">843</span>    Scan scan = new Scan(region.getStartKey());<a name="line.843"></a>
+<span class="sourceLineNo">844</span>    scan.setBatch(1);<a name="line.844"></a>
+<span class="sourceLineNo">845</span>    scan.setCaching(1);<a name="line.845"></a>
+<span class="sourceLineNo">846</span>    scan.setFilter(new FirstKeyOnlyFilter());<a name="line.846"></a>
+<span class="sourceLineNo">847</span>    try {<a name="line.847"></a>
+<span class="sourceLineNo">848</span>      Table table = admin.getConnection().getTable(region.getTable());<a name="line.848"></a>
+<span class="sourceLineNo">849</span>      try {<a name="line.849"></a>
+<span class="sourceLineNo">850</span>        ResultScanner scanner = table.getScanner(scan);<a name="line.850"></a>
+<span class="sourceLineNo">851</span>        try {<a name="line.851"></a>
+<span class="sourceLineNo">852</span>          scanner.next();<a name="line.852"></a>
+<span class="sourceLineNo">853</span>        } finally {<a name="line.853"></a>
+<span class="sourceLineNo">854</span>          scanner.close();<a name="line.854"></a>
+<span class="sourceLineNo">855</span>        }<a name="line.855"></a>
+<span class="sourceLineNo">856</span>      } finally {<a name="line.856"></a>
+<span class="sourceLineNo">857</span>        table.close();<a name="line.857"></a>
+<span class="sourceLineNo">858</span>      }<a name="line.858"></a>
+<span class="sourceLineNo">859</span>    } catch (IOException e) {<a name="line.859"></a>
+<span class="sourceLineNo">860</span>      LOG.error("Could not scan region:" + region.getEncodedName(), e);<a name="line.860"></a>
+<span class="sourceLineNo">861</span>      throw e;<a name="line.861"></a>
+<span class="sourceLineNo">862</span>    }<a name="line.862"></a>
+<span class="sourceLineNo">863</span>  }<a name="line.863"></a>
+<span class="sourceLineNo">864</span><a name="line.864"></a>
+<span class="sourceLineNo">865</span>  /**<a name="line.865"></a>
+<span class="sourceLineNo">866</span>   * Returns true if passed region is still on serverName when we look at hbase:meta.<a name="line.866"></a>
+<span class="sourceLineNo">867</span>   * @param admin<a name="line.867"></a>
+<span class="sourceLineNo">868</span>   * @param region<a name="line.868"></a>
+<span class="sourceLineNo">869</span>   * @param serverName<a name="line.869"></a>
+<span class="sourceLineNo">870</span>   * @return true if region is hosted on serverName otherwise false<a name="line.870"></a>
+<span class="sourceLineNo">871</span>   * @throws IOException<a name="line.871"></a>
+<span class="sourceLineNo">872</span>   */<a name="line.872"></a>
+<span class="sourceLineNo">873</span>  private boolean isSameServer(Admin admin, HRegionInfo region, String serverName)<a name="line.873"></a>
+<span class="sourceLineNo">874</span>      throws IOException {<a name="line.874"></a>
+<span class="sourceLineNo">875</span>    String serverForRegion = getServerNameForRegion(admin, region);<a name="line.875"></a>
+<span class="sourceLineNo">876</span>    if (serverForRegion != null &amp;&amp; serverForRegion.equals(serverName)) {<a name="line.876"></a>
+<span class="sourceLineNo">877</span>      return true;<a name="line.877"></a>
+<span class="sourceLineNo">878</span>    }<a name="line.878"></a>
+<span class="sourceLineNo">879</span>    return false;<a name="line.879"></a>
+<span class="sourceLineNo">880</span>  }<a name="line.880"></a>
+<span class="sourceLineNo">881</span><a name="line.881"></a>
+<span class="sourceLineNo">882</span>  /**<a name="line.882"></a>
+<span class="sourceLineNo">883</span>   * Get servername that is up in hbase:meta hosting the given region. this is hostname + port +<a name="line.883"></a>
+<span class="sourceLineNo">884</span>   * startcode comma-delimited. Can return null<a name="line.884"></a>
+<span class="sourceLineNo">885</span>   * @param admin<a name="line.885"></a>
+<span class="sourceLineNo">886</span>   * @param region<a name="line.886"></a>
+<span class="sourceLineNo">887</span>   * @return regionServer hosting the given region<a name="line.887"></a>
+<span class="sourceLineNo">888</span>   * @throws IOException<a name="line.888"></a>
+<span class="sourceLineNo">889</span>   */<a name="line.889"></a>
+<span class="sourceLineNo">890</span>  private String getServerNameForRegion(Admin admin, HRegionInfo region) throws IOException {<a name="line.890"></a>
+<span class="sourceLineNo">891</span>    String server = null;<a name="line.891"></a>
+<span class="sourceLineNo">892</span>    if (!admin.isTableEnabled(region.getTable())) {<a name="line.892"></a>
+<span class="sourceLineNo">893</span>      return null;<a name="line.893"></a>
+<span class="sourceLineNo">894</span>    }<a name="line.894"></a>
+<span class="sourceLineNo">895</span>    if (region.isMetaRegion()) {<a name="line.895"></a>
+<span class="sourceLineNo">896</span>      ZooKeeperWatcher zkw = new ZooKeeperWatcher(admin.getConfiguration(), "region_mover", null);<a name="line.896"></a>
+<span class="sourceLineNo">897</span>      MetaTableLocator locator = new MetaTableLocator();<a name="line.897"></a>
+<span class="sourceLineNo">898</span>      int maxWaitInSeconds =<a name="line.898"></a>
+<span class="sourceLineNo">899</span>          admin.getConfiguration().getInt(MOVE_WAIT_MAX_KEY, DEFAULT_MOVE_WAIT_MAX);<a name="line.899"></a>
+<span class="sourceLineNo">900</span>      try {<a name="line.900"></a>
+<span class="sourceLineNo">901</span>        server = locator.waitMetaRegionLocation(zkw, maxWaitInSeconds * 1000).toString() + ",";<a name="line.901"></a>
+<span class="sourceLineNo">902</span>      } catch (InterruptedException e) {<a name="line.902"></a>
+<span class="sourceLineNo">903</span>        LOG.error("Interrupted while waiting for location of Meta", e);<a name="line.903"></a>
+<span class="sourceLineNo">904</span>      } finally {<a name="line.904"></a>
+<span class="sourceLineNo">905</span>        if (zkw != null) {<a name="line.905"></a>
+<span class="sourceLineNo">906</span>          zkw.close();<a name="line.906"></a>
+<span class="sourceLineNo">907</span>        }<a name="line.907"></a>
+<span class="sourceLineNo">908</span>      }<a name="line.908"></a>
+<span class="sourceLineNo">909</span>    } else {<a name="line.909"></a>
+<span class="sourceLineNo">910</span>      Table table = admin.getConnection().getTable(TableName.META_TABLE_NAME);<a name="line.910"></a>
+<span class="sourceLineNo">911</span>      try {<a name="line.911"></a>
+<span class="sourceLineNo">912</span>        Get get = new Get(region.getRegionName());<a name="line.912"></a>
+<span class="sourceLineNo">913</span>        get.addColumn(HConstants.CATALOG_FAMILY, HConstants.SERVER_QUALIFIER);<a name="line.913"></a>
+<span class="sourceLineNo">914</span>        get.addColumn(HConstants.CATALOG_FAMILY, HConstants.STARTCODE_QUALIFIER);<a name="line.914"></a>
+<span class="sourceLineNo">915</span>        Result result = table.get(get);<a name="line.915"></a>
+<span class="sourceLineNo">916</span>        if (result != null) {<a name="line.916"></a>
+<span class="sourceLineNo">917</span>          byte[] servername =<a name="line.917"></a>
+<span class="sourceLineNo">918</span>              result.getValue(HConstants.CATALOG_FAMILY, HConstants.SERVER_QUALIFIER);<a name="line.918"></a>
+<span class="sourceLineNo">919</span>          byte[] startcode =<a name="line.919"></a>
+<span class="sourceLineNo">920</span>              result.getValue(HConstants.CATALOG_FAMILY, HConstants.STARTCODE_QUALIFIER);<a name="line.920"></a>
+<span class="sourceLineNo">921</span>          if (servername != null) {<a name="line.921"></a>
+<span class="sourceLineNo">922</span>            server =<a name="line.922"></a>
+<span class="sourceLineNo">923</span>                Bytes.toString(servername).replaceFirst(":", ",") + "," + Bytes.toLong(startcode);<a name="line.923"></a>
+<span class="sourceLineNo">924</span>          }<a name="line.924"></a>
+<span class="sourceLineNo">925</span>        }<a name="line.925"></a>
+<span class="sourceLineNo">926</span>      } catch (IOException e) {<a name="line.926"></a>
+<span class="sourceLineNo">927</span>        LOG.error("Could not get Server Name for region:" + region.getEncodedName(), e);<a name="line.927"></a>
+<span class="sourceLineNo">928</span>        throw e;<a name="line.928"></a>
+<span class="sourceLineNo">929</span>      } finally {<a name="line.929"></a>
+<span class="sourceLineNo">930</span>        table.close();<a name="line.930"></a>
+<span class="sourceLineNo">931</span>      }<a name="line.931"></a>
+<span class="sourceLineNo">932</span>    }<a name="line.932"></a>
+<span class="sourceLineNo">933</span>    return server;<a name="line.933"></a>
+<span class="sourceLineNo">934</span>  }<a name="line.934"></a>
+<span class="sourceLineNo">935</span><a name="line.935"></a>
+<span class="sourceLineNo">936</span>  @Override<a name="line.936"></a>
+<span class="sourceLineNo">937</span>  protected void addOptions() {<a name="line.937"></a>
+<span class="sourceLineNo">938</span>    this.addRequiredOptWithArg("r", "regionserverhost", "region server &lt;hostname&gt;|&lt;hostname:port&gt;");<a name="line.938"></a>
+<span class="sourceLineNo">939</span>    this.addRequiredOptWithArg("o", "operation", "Expected: load/unload");<a name="line.939"></a>
+<span class="sourceLineNo">940</span>    this.addOptWithArg("m", "maxthreads",<a name="line.940"></a>
+<span class="sourceLineNo">941</span>      "Define the maximum number of threads to use to unload and reload the regions");<a name="line.941"></a>
+<span class="sourceLineNo">942</span>    this.addOptWithArg("x", "excludefile",<a name="line.942"></a>
+<span class="sourceLineNo">943</span>      "File with &lt;hostname:port&gt; per line to exclude as unload targets; default excludes only "<a name="line.943"></a>
+<span class="sourceLineNo">944</span>          + "target host; useful for rack decommisioning.");<a name="line.944"></a>
+<span class="sourceLineNo">945</span>    this.addOptWithArg("f", "filename",<a name="line.945"></a>
+<span class="sourceLineNo">946</span>      "File to save regions list into unloading, or read from loading; "<a name="line.946"></a>
+<span class="sourceLineNo">947</span>          + "default /tmp/&lt;usernamehostname:port&gt;");<a name="line.947"></a>
+<span class="sourceLineNo">948</span>    this.addOptNoArg("n", "noack",<a name="line.948"></a>
+<span class="sourceLineNo">949</span>      "Turn on No-Ack mode(default: false) which won't check if region is online on target "<a name="line.949"></a>
+<span class="sourceLineNo">950</span>          + "RegionServer, hence best effort. This is more performant in unloading and loading "<a name="line.950"></a>
+<span class="sourceLineNo">951</span>          + "but might lead to region being unavailable for some time till master reassigns it "<a name="line.951"></a>
+<span class="sourceLineNo">952</span>          + "in case the move failed");<a name="line.952"></a>
+<span class="sourceLineNo">953</span>    this.addOptWithArg("t", "timeout", "timeout in seconds after which the tool will exit "<a name="line.953"></a>
+<span class="sourceLineNo">954</span>        + "irrespective of whether it finished or not;default Integer.MAX_VALUE");<a name="line.954"></a>
+<span class="sourceLineNo">955</span>  }<a name="line.955"></a>
+<span class="sourceLineNo">956</span><a name="line.956"></a>
+<span class="sourceLineNo">957</span>  @Override<a name="line.957"></a>
+<span class="sourceLineNo">958</span>  protected void processOptions(CommandLine cmd) {<a name="line.958"></a>
+<span class="sourceLineNo">959</span>    String hostname = cmd.getOptionValue("r");<a name="line.959"></a>
+<span class="sourceLineNo">960</span>    rmbuilder = new RegionMoverBuilder(hostname);<a name="line.960"></a>
+<span class="sourceLineNo">961</span>    if (cmd.hasOption('m')) {<a name="line.961"></a>
+<span class="sourceLineNo">962</span>      rmbuilder.maxthreads(Integer.parseInt(cmd.getOptionValue('m')));<a name="line.962"></a>
+<span class="sourceLineNo">963</span>    }<a name="line.963"></a>
+<span class="sourceLineNo">964</span>    if (cmd.hasOption('n')) {<a name="line.964"></a>
+<span class="sourceLineNo">965</span>      rmbuilder.ack(false);<a name="line.965"></a>
+<span class="sourceLineNo">966</span>    }<a name="line.966"></a>
+<span class="sourceLineNo">967</span>    if (cmd.hasOption('f')) {<a name="line.967"></a>
+<span class="sourceLineNo">968</span>      rmbuilder.filename(cmd.getOptionValue('f'));<a name="line.968"></a>
+<span class="sourceLineNo">969</span>    }<a name="line.969"></a>
+<span class="sourceLineNo">970</span>    if (cmd.hasOption('x')) {<a name="line.970"></a>
+<span class="sourceLineNo">971</span>      rmbuilder.excludeFile(cmd.getOptionValue('x'));<a name="line.971"></a>
+<span class="sourceLineNo">972</span>    }<a name="line.972"></a>
+<span class="sourceLineNo">973</span>    if (cmd.hasOption('t')) {<a name="line.973"></a>
+<span class="sourceLineNo">974</span>      rmbuilder.timeout(Integer.parseInt(cmd.getOptionValue('t')));<a name="line.974"></a>
+<span class="sourceLineNo">975</span>    }<a name="line.975"></a>
+<span class="sourceLineNo">976</span>    this.loadUnload = cmd.getOptionValue("o").toLowerCase();<a name="line.976"></a>
+<span class="sourceLineNo">977</span>  }<a name="line.977"></a>
+<span class="sourceLineNo">978</span><a name="line.978"></a>
+<span class="sourceLineNo">979</span>  @Override<a name="line.979"></a>
+<span class="sourceLineNo">980</span>  protected int doWork() throws Exception {<a name="line.980"></a>
+<span class="sourceLineNo">981</span>    boolean success;<a name="line.981"></a>
+<span class="sourceLineNo">982</span>    RegionMover rm = rmbuilder.build();<a name="line.982"></a>
+<span class="sourceLineNo">983</span>    if (loadUnload.equalsIgnoreCase("load")) {<a name="line.983"></a>
+<span class="sourceLineNo">984</span>      success = rm.load();<a name="line.984"></a>
+<span class="sourceLineNo">985</span>    } else if (loadUnload.equalsIgnoreCase("unload")) {<a name="line.985"></a>
+<span class="sourceLineNo">986</span>      success = rm.unload();<a name="line.986"></a>
+<span class="sourceLineNo">987</span>    } else {<a name="line.987"></a>
+<span class="sourceLineNo">988</span>      printUsage();<a name="line.988"></a>
+<span class="sourceLineNo">989</span>      success = false;<a name="line.989"></a>
+<span class="sourceLineNo">990</span>    }<a name="line.990"></a>
+<span class="sourceLineNo">991</span>    return (success ? 0 : 1);<a name="line.991"></a>
+<span class="sourceLineNo">992</span>  }<a name="line.992"></a>
+<span class="sourceLineNo">993</span><a name="line.993"></a>
+<span class="sourceLineNo">994</span>  public static void main(String[] args) {<a name="line.994"></a>
+<span class="sourceLineNo">995</span>    new RegionMover().doStaticMain(args);<a name="line.995"></a>
+<span class="sourceLineNo">996</span>  }<a name="line.996"></a>
+<span class="sourceLineNo">997</span>}<a name="line.997"></a>
 
 
 

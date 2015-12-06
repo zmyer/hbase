@@ -244,7 +244,7 @@
 <a class="jxr_linenumber" name="234" href="#234">234</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="235" href="#235">235</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> processFile(<strong class="jxr_keyword">final</strong> Configuration conf, <strong class="jxr_keyword">final</strong> Path p)
 <a class="jxr_linenumber" name="236" href="#236">236</a>       <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="237" href="#237">237</a>     FileSystem fs = FileSystem.get(conf);
+<a class="jxr_linenumber" name="237" href="#237">237</a>     FileSystem fs = p.getFileSystem(conf);
 <a class="jxr_linenumber" name="238" href="#238">238</a>     <strong class="jxr_keyword">if</strong> (!fs.exists(p)) {
 <a class="jxr_linenumber" name="239" href="#239">239</a>       <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> FileNotFoundException(p.toString());
 <a class="jxr_linenumber" name="240" href="#240">240</a>     }

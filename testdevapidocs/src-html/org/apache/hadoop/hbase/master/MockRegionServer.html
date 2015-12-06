@@ -74,20 +74,20 @@
 <span class="sourceLineNo">066</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.MergeRegionsResponse;<a name="line.66"></a>
 <span class="sourceLineNo">067</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.OpenRegionRequest;<a name="line.67"></a>
 <span class="sourceLineNo">068</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.OpenRegionResponse;<a name="line.68"></a>
-<span class="sourceLineNo">069</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryRequest;<a name="line.69"></a>
-<span class="sourceLineNo">070</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryResponse;<a name="line.70"></a>
-<span class="sourceLineNo">071</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.RollWALWriterRequest;<a name="line.71"></a>
-<span class="sourceLineNo">072</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.RollWALWriterResponse;<a name="line.72"></a>
-<span class="sourceLineNo">073</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.SplitRegionRequest;<a name="line.73"></a>
-<span class="sourceLineNo">074</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.SplitRegionResponse;<a name="line.74"></a>
-<span class="sourceLineNo">075</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.StopServerRequest;<a name="line.75"></a>
-<span class="sourceLineNo">076</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.StopServerResponse;<a name="line.76"></a>
-<span class="sourceLineNo">077</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateConfigurationRequest;<a name="line.77"></a>
-<span class="sourceLineNo">078</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateConfigurationResponse;<a name="line.78"></a>
-<span class="sourceLineNo">079</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateFavoredNodesRequest;<a name="line.79"></a>
-<span class="sourceLineNo">080</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateFavoredNodesResponse;<a name="line.80"></a>
-<span class="sourceLineNo">081</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WarmupRegionRequest;<a name="line.81"></a>
-<span class="sourceLineNo">082</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WarmupRegionResponse;<a name="line.82"></a>
+<span class="sourceLineNo">069</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WarmupRegionRequest;<a name="line.69"></a>
+<span class="sourceLineNo">070</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.WarmupRegionResponse;<a name="line.70"></a>
+<span class="sourceLineNo">071</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryRequest;<a name="line.71"></a>
+<span class="sourceLineNo">072</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.ReplicateWALEntryResponse;<a name="line.72"></a>
+<span class="sourceLineNo">073</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.RollWALWriterRequest;<a name="line.73"></a>
+<span class="sourceLineNo">074</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.RollWALWriterResponse;<a name="line.74"></a>
+<span class="sourceLineNo">075</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.SplitRegionRequest;<a name="line.75"></a>
+<span class="sourceLineNo">076</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.SplitRegionResponse;<a name="line.76"></a>
+<span class="sourceLineNo">077</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.StopServerRequest;<a name="line.77"></a>
+<span class="sourceLineNo">078</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.StopServerResponse;<a name="line.78"></a>
+<span class="sourceLineNo">079</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateConfigurationRequest;<a name="line.79"></a>
+<span class="sourceLineNo">080</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateConfigurationResponse;<a name="line.80"></a>
+<span class="sourceLineNo">081</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateFavoredNodesRequest;<a name="line.81"></a>
+<span class="sourceLineNo">082</span>import org.apache.hadoop.hbase.protobuf.generated.AdminProtos.UpdateFavoredNodesResponse;<a name="line.82"></a>
 <span class="sourceLineNo">083</span>import org.apache.hadoop.hbase.protobuf.generated.ClientProtos;<a name="line.83"></a>
 <span class="sourceLineNo">084</span>import org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest;<a name="line.84"></a>
 <span class="sourceLineNo">085</span>import org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileResponse;<a name="line.85"></a>
@@ -659,11 +659,7 @@
 <span class="sourceLineNo">651</span>  public double getCompactionPressure() {<a name="line.651"></a>
 <span class="sourceLineNo">652</span>    return 0;<a name="line.652"></a>
 <span class="sourceLineNo">653</span>  }<a name="line.653"></a>
-<span class="sourceLineNo">654</span><a name="line.654"></a>
-<span class="sourceLineNo">655</span>  @Override<a name="line.655"></a>
-<span class="sourceLineNo">656</span>  public void releaseWAL(HRegionInfo regionInfo, WAL wal) throws IOException {<a name="line.656"></a>
-<span class="sourceLineNo">657</span>  }<a name="line.657"></a>
-<span class="sourceLineNo">658</span>}<a name="line.658"></a>
+<span class="sourceLineNo">654</span>}<a name="line.654"></a>
 
 
 

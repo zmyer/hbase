@@ -13436,14 +13436,14 @@
 <!--   -->
 </a><code>static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/apache/hadoop/hbase/regionserver/HRegionServer.PeriodicMemstoreFlusher.html#MIN_DELAY_TIME">MIN_DELAY_TIME</a></code></td>
-<td class="colLast"><code>3000</code></td>
+<td class="colLast"><code>0</code></td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.regionserver.HRegionServer.PeriodicMemstoreFlusher.RANGE_OF_DELAY">
 <!--   -->
 </a><code>static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/apache/hadoop/hbase/regionserver/HRegionServer.PeriodicMemstoreFlusher.html#RANGE_OF_DELAY">RANGE_OF_DELAY</a></code></td>
-<td class="colLast"><code>20000</code></td>
+<td class="colLast"><code>300000</code></td>
 </tr>
 </tbody>
 </table>
@@ -18670,6 +18670,13 @@
 <td><code><a href="org/apache/hadoop/hbase/thrift/ThriftServer.html#PORT_OPTION">PORT_OPTION</a></code></td>
 <td class="colLast"><code>"port"</code></td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.thrift.ThriftServer.READ_TIMEOUT_OPTION">
+<!--   -->
+</a><code>private&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/apache/hadoop/hbase/thrift/ThriftServer.html#READ_TIMEOUT_OPTION">READ_TIMEOUT_OPTION</a></code></td>
+<td class="colLast"><code>"readTimeout"</code></td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -18779,6 +18786,20 @@
 </a><code>static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td><code><a href="org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#THRIFT_QOP_KEY">THRIFT_QOP_KEY</a></code></td>
 <td class="colLast"><code>"hbase.thrift.security.qop"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.thrift.ThriftServerRunner.THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT">THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT</a></code></td>
+<td class="colLast"><code>60000</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.thrift.ThriftServerRunner.THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/apache/hadoop/hbase/thrift/ThriftServerRunner.html#THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY">THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY</a></code></td>
+<td class="colLast"><code>"hbase.thrift.server.socket.read.timeout"</code></td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.thrift.ThriftServerRunner.THRIFT_SSL_ENABLED">
@@ -18903,11 +18924,32 @@
 <td class="colLast"><code>9090</code></td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.thrift2.ThriftServer.READ_TIMEOUT_OPTION">
+<!--   -->
+</a><code>private&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/apache/hadoop/hbase/thrift2/ThriftServer.html#READ_TIMEOUT_OPTION">READ_TIMEOUT_OPTION</a></code></td>
+<td class="colLast"><code>"readTimeout"</code></td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a name="org.apache.hadoop.hbase.thrift2.ThriftServer.THRIFT_QOP_KEY">
 <!--   -->
 </a><code>static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td><code><a href="org/apache/hadoop/hbase/thrift2/ThriftServer.html#THRIFT_QOP_KEY">THRIFT_QOP_KEY</a></code></td>
 <td class="colLast"><code>"hbase.thrift.security.qop"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.thrift2.ThriftServer.THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/apache/hadoop/hbase/thrift2/ThriftServer.html#THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT">THRIFT_SERVER_SOCKET_READ_TIMEOUT_DEFAULT</a></code></td>
+<td class="colLast"><code>60000</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.apache.hadoop.hbase.thrift2.ThriftServer.THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/apache/hadoop/hbase/thrift2/ThriftServer.html#THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY">THRIFT_SERVER_SOCKET_READ_TIMEOUT_KEY</a></code></td>
+<td class="colLast"><code>"hbase.thrift.server.socket.read.timeout"</code></td>
 </tr>
 </tbody>
 </table>

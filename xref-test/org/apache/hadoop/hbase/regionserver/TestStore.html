@@ -1040,79 +1040,92 @@
 <a class="jxr_linenumber" name="1030" href="#1030">1030</a>     store.getRegionFileSystem().removeStoreFiles(store.getColumnFamilyName(), Lists.newArrayList(sf));
 <a class="jxr_linenumber" name="1031" href="#1031">1031</a>   }
 <a class="jxr_linenumber" name="1032" href="#1032">1032</a> 
-<a class="jxr_linenumber" name="1033" href="#1033">1033</a>   @Test
-<a class="jxr_linenumber" name="1034" href="#1034">1034</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRefreshStoreFiles() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="1035" href="#1035">1035</a>     init(name.getMethodName());
-<a class="jxr_linenumber" name="1036" href="#1036">1036</a> 
-<a class="jxr_linenumber" name="1037" href="#1037">1037</a>     assertEquals(0, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1038" href="#1038">1038</a> 
-<a class="jxr_linenumber" name="1039" href="#1039">1039</a>     <em class="jxr_comment">// add some data, flush</em>
-<a class="jxr_linenumber" name="1040" href="#1040">1040</a>     <strong class="jxr_keyword">this</strong>.store.add(<strong class="jxr_keyword">new</strong> KeyValue(row, family, qf1, 1, (byte[])<strong class="jxr_keyword">null</strong>));
-<a class="jxr_linenumber" name="1041" href="#1041">1041</a>     flush(1);
-<a class="jxr_linenumber" name="1042" href="#1042">1042</a>     assertEquals(1, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1043" href="#1043">1043</a> 
-<a class="jxr_linenumber" name="1044" href="#1044">1044</a>     <em class="jxr_comment">// add one more file</em>
-<a class="jxr_linenumber" name="1045" href="#1045">1045</a>     addStoreFile();
-<a class="jxr_linenumber" name="1046" href="#1046">1046</a> 
-<a class="jxr_linenumber" name="1047" href="#1047">1047</a>     assertEquals(1, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1048" href="#1048">1048</a>     store.refreshStoreFiles();
-<a class="jxr_linenumber" name="1049" href="#1049">1049</a>     assertEquals(2, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1033" href="#1033">1033</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> closeCompactedFile(<strong class="jxr_keyword">int</strong> index) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="1034" href="#1034">1034</a>     Collection&lt;StoreFile&gt; files =
+<a class="jxr_linenumber" name="1035" href="#1035">1035</a>         <strong class="jxr_keyword">this</strong>.store.getStoreEngine().getStoreFileManager().getCompactedfiles();
+<a class="jxr_linenumber" name="1036" href="#1036">1036</a>     StoreFile sf = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="1037" href="#1037">1037</a>     Iterator&lt;StoreFile&gt; it = files.iterator();
+<a class="jxr_linenumber" name="1038" href="#1038">1038</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt;= index; i++) {
+<a class="jxr_linenumber" name="1039" href="#1039">1039</a>       sf = it.next();
+<a class="jxr_linenumber" name="1040" href="#1040">1040</a>     }
+<a class="jxr_linenumber" name="1041" href="#1041">1041</a>     sf.closeReader(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="1042" href="#1042">1042</a>     store.getStoreEngine().getStoreFileManager().removeCompactedFiles(Lists.newArrayList(sf));
+<a class="jxr_linenumber" name="1043" href="#1043">1043</a>   }
+<a class="jxr_linenumber" name="1044" href="#1044">1044</a> 
+<a class="jxr_linenumber" name="1045" href="#1045">1045</a>   @Test
+<a class="jxr_linenumber" name="1046" href="#1046">1046</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRefreshStoreFiles() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="1047" href="#1047">1047</a>     init(name.getMethodName());
+<a class="jxr_linenumber" name="1048" href="#1048">1048</a> 
+<a class="jxr_linenumber" name="1049" href="#1049">1049</a>     assertEquals(0, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
 <a class="jxr_linenumber" name="1050" href="#1050">1050</a> 
-<a class="jxr_linenumber" name="1051" href="#1051">1051</a>     <em class="jxr_comment">// add three more files</em>
-<a class="jxr_linenumber" name="1052" href="#1052">1052</a>     addStoreFile();
-<a class="jxr_linenumber" name="1053" href="#1053">1053</a>     addStoreFile();
-<a class="jxr_linenumber" name="1054" href="#1054">1054</a>     addStoreFile();
+<a class="jxr_linenumber" name="1051" href="#1051">1051</a>     <em class="jxr_comment">// add some data, flush</em>
+<a class="jxr_linenumber" name="1052" href="#1052">1052</a>     <strong class="jxr_keyword">this</strong>.store.add(<strong class="jxr_keyword">new</strong> KeyValue(row, family, qf1, 1, (byte[])<strong class="jxr_keyword">null</strong>));
+<a class="jxr_linenumber" name="1053" href="#1053">1053</a>     flush(1);
+<a class="jxr_linenumber" name="1054" href="#1054">1054</a>     assertEquals(1, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
 <a class="jxr_linenumber" name="1055" href="#1055">1055</a> 
-<a class="jxr_linenumber" name="1056" href="#1056">1056</a>     assertEquals(2, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1057" href="#1057">1057</a>     store.refreshStoreFiles();
-<a class="jxr_linenumber" name="1058" href="#1058">1058</a>     assertEquals(5, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1059" href="#1059">1059</a> 
-<a class="jxr_linenumber" name="1060" href="#1060">1060</a>     archiveStoreFile(0);
-<a class="jxr_linenumber" name="1061" href="#1061">1061</a> 
-<a class="jxr_linenumber" name="1062" href="#1062">1062</a>     assertEquals(5, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1063" href="#1063">1063</a>     store.refreshStoreFiles();
-<a class="jxr_linenumber" name="1064" href="#1064">1064</a>     assertEquals(4, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1065" href="#1065">1065</a> 
-<a class="jxr_linenumber" name="1066" href="#1066">1066</a>     archiveStoreFile(0);
-<a class="jxr_linenumber" name="1067" href="#1067">1067</a>     archiveStoreFile(1);
-<a class="jxr_linenumber" name="1068" href="#1068">1068</a>     archiveStoreFile(2);
-<a class="jxr_linenumber" name="1069" href="#1069">1069</a> 
-<a class="jxr_linenumber" name="1070" href="#1070">1070</a>     assertEquals(4, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1071" href="#1071">1071</a>     store.refreshStoreFiles();
-<a class="jxr_linenumber" name="1072" href="#1072">1072</a>     assertEquals(1, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1073" href="#1073">1073</a> 
-<a class="jxr_linenumber" name="1074" href="#1074">1074</a>     archiveStoreFile(0);
-<a class="jxr_linenumber" name="1075" href="#1075">1075</a>     store.refreshStoreFiles();
-<a class="jxr_linenumber" name="1076" href="#1076">1076</a>     assertEquals(0, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1077" href="#1077">1077</a>   }
+<a class="jxr_linenumber" name="1056" href="#1056">1056</a>     <em class="jxr_comment">// add one more file</em>
+<a class="jxr_linenumber" name="1057" href="#1057">1057</a>     addStoreFile();
+<a class="jxr_linenumber" name="1058" href="#1058">1058</a> 
+<a class="jxr_linenumber" name="1059" href="#1059">1059</a>     assertEquals(1, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1060" href="#1060">1060</a>     store.refreshStoreFiles();
+<a class="jxr_linenumber" name="1061" href="#1061">1061</a>     assertEquals(2, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1062" href="#1062">1062</a> 
+<a class="jxr_linenumber" name="1063" href="#1063">1063</a>     <em class="jxr_comment">// add three more files</em>
+<a class="jxr_linenumber" name="1064" href="#1064">1064</a>     addStoreFile();
+<a class="jxr_linenumber" name="1065" href="#1065">1065</a>     addStoreFile();
+<a class="jxr_linenumber" name="1066" href="#1066">1066</a>     addStoreFile();
+<a class="jxr_linenumber" name="1067" href="#1067">1067</a> 
+<a class="jxr_linenumber" name="1068" href="#1068">1068</a>     assertEquals(2, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1069" href="#1069">1069</a>     store.refreshStoreFiles();
+<a class="jxr_linenumber" name="1070" href="#1070">1070</a>     assertEquals(5, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1071" href="#1071">1071</a> 
+<a class="jxr_linenumber" name="1072" href="#1072">1072</a>     closeCompactedFile(0);
+<a class="jxr_linenumber" name="1073" href="#1073">1073</a>     archiveStoreFile(0);
+<a class="jxr_linenumber" name="1074" href="#1074">1074</a> 
+<a class="jxr_linenumber" name="1075" href="#1075">1075</a>     assertEquals(5, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1076" href="#1076">1076</a>     store.refreshStoreFiles();
+<a class="jxr_linenumber" name="1077" href="#1077">1077</a>     assertEquals(4, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
 <a class="jxr_linenumber" name="1078" href="#1078">1078</a> 
-<a class="jxr_linenumber" name="1079" href="#1079">1079</a>   @SuppressWarnings(<span class="jxr_string">"unchecked"</span>)
-<a class="jxr_linenumber" name="1080" href="#1080">1080</a>   @Test
-<a class="jxr_linenumber" name="1081" href="#1081">1081</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRefreshStoreFilesNotChanged() <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1082" href="#1082">1082</a>     init(name.getMethodName());
-<a class="jxr_linenumber" name="1083" href="#1083">1083</a> 
-<a class="jxr_linenumber" name="1084" href="#1084">1084</a>     assertEquals(0, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1085" href="#1085">1085</a> 
-<a class="jxr_linenumber" name="1086" href="#1086">1086</a>     <em class="jxr_comment">// add some data, flush</em>
-<a class="jxr_linenumber" name="1087" href="#1087">1087</a>     <strong class="jxr_keyword">this</strong>.store.add(<strong class="jxr_keyword">new</strong> KeyValue(row, family, qf1, 1, (byte[])<strong class="jxr_keyword">null</strong>));
-<a class="jxr_linenumber" name="1088" href="#1088">1088</a>     flush(1);
-<a class="jxr_linenumber" name="1089" href="#1089">1089</a>     <em class="jxr_comment">// add one more file</em>
-<a class="jxr_linenumber" name="1090" href="#1090">1090</a>     addStoreFile();
+<a class="jxr_linenumber" name="1079" href="#1079">1079</a>     archiveStoreFile(0);
+<a class="jxr_linenumber" name="1080" href="#1080">1080</a>     archiveStoreFile(1);
+<a class="jxr_linenumber" name="1081" href="#1081">1081</a>     archiveStoreFile(2);
+<a class="jxr_linenumber" name="1082" href="#1082">1082</a> 
+<a class="jxr_linenumber" name="1083" href="#1083">1083</a>     assertEquals(4, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1084" href="#1084">1084</a>     store.refreshStoreFiles();
+<a class="jxr_linenumber" name="1085" href="#1085">1085</a>     assertEquals(1, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1086" href="#1086">1086</a> 
+<a class="jxr_linenumber" name="1087" href="#1087">1087</a>     archiveStoreFile(0);
+<a class="jxr_linenumber" name="1088" href="#1088">1088</a>     store.refreshStoreFiles();
+<a class="jxr_linenumber" name="1089" href="#1089">1089</a>     assertEquals(0, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1090" href="#1090">1090</a>   }
 <a class="jxr_linenumber" name="1091" href="#1091">1091</a> 
-<a class="jxr_linenumber" name="1092" href="#1092">1092</a>     HStore spiedStore = spy(store);
-<a class="jxr_linenumber" name="1093" href="#1093">1093</a> 
-<a class="jxr_linenumber" name="1094" href="#1094">1094</a>     <em class="jxr_comment">// call first time after files changed</em>
-<a class="jxr_linenumber" name="1095" href="#1095">1095</a>     spiedStore.refreshStoreFiles();
-<a class="jxr_linenumber" name="1096" href="#1096">1096</a>     assertEquals(2, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
-<a class="jxr_linenumber" name="1097" href="#1097">1097</a>     verify(spiedStore, times(1)).replaceStoreFiles(any(Collection.<strong class="jxr_keyword">class</strong>), any(Collection.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="1092" href="#1092">1092</a>   @SuppressWarnings(<span class="jxr_string">"unchecked"</span>)
+<a class="jxr_linenumber" name="1093" href="#1093">1093</a>   @Test
+<a class="jxr_linenumber" name="1094" href="#1094">1094</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRefreshStoreFilesNotChanged() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="1095" href="#1095">1095</a>     init(name.getMethodName());
+<a class="jxr_linenumber" name="1096" href="#1096">1096</a> 
+<a class="jxr_linenumber" name="1097" href="#1097">1097</a>     assertEquals(0, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
 <a class="jxr_linenumber" name="1098" href="#1098">1098</a> 
-<a class="jxr_linenumber" name="1099" href="#1099">1099</a>     <em class="jxr_comment">// call second time</em>
-<a class="jxr_linenumber" name="1100" href="#1100">1100</a>     spiedStore.refreshStoreFiles();
-<a class="jxr_linenumber" name="1101" href="#1101">1101</a> 
-<a class="jxr_linenumber" name="1102" href="#1102">1102</a>     <em class="jxr_comment">//ensure that replaceStoreFiles is not called if files are not refreshed</em>
-<a class="jxr_linenumber" name="1103" href="#1103">1103</a>     verify(spiedStore, times(0)).replaceStoreFiles(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="1104" href="#1104">1104</a>   }
-<a class="jxr_linenumber" name="1105" href="#1105">1105</a> }
+<a class="jxr_linenumber" name="1099" href="#1099">1099</a>     <em class="jxr_comment">// add some data, flush</em>
+<a class="jxr_linenumber" name="1100" href="#1100">1100</a>     <strong class="jxr_keyword">this</strong>.store.add(<strong class="jxr_keyword">new</strong> KeyValue(row, family, qf1, 1, (byte[])<strong class="jxr_keyword">null</strong>));
+<a class="jxr_linenumber" name="1101" href="#1101">1101</a>     flush(1);
+<a class="jxr_linenumber" name="1102" href="#1102">1102</a>     <em class="jxr_comment">// add one more file</em>
+<a class="jxr_linenumber" name="1103" href="#1103">1103</a>     addStoreFile();
+<a class="jxr_linenumber" name="1104" href="#1104">1104</a> 
+<a class="jxr_linenumber" name="1105" href="#1105">1105</a>     HStore spiedStore = spy(store);
+<a class="jxr_linenumber" name="1106" href="#1106">1106</a> 
+<a class="jxr_linenumber" name="1107" href="#1107">1107</a>     <em class="jxr_comment">// call first time after files changed</em>
+<a class="jxr_linenumber" name="1108" href="#1108">1108</a>     spiedStore.refreshStoreFiles();
+<a class="jxr_linenumber" name="1109" href="#1109">1109</a>     assertEquals(2, <strong class="jxr_keyword">this</strong>.store.getStorefilesCount());
+<a class="jxr_linenumber" name="1110" href="#1110">1110</a>     verify(spiedStore, times(1)).replaceStoreFiles(any(Collection.<strong class="jxr_keyword">class</strong>), any(Collection.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="1111" href="#1111">1111</a> 
+<a class="jxr_linenumber" name="1112" href="#1112">1112</a>     <em class="jxr_comment">// call second time</em>
+<a class="jxr_linenumber" name="1113" href="#1113">1113</a>     spiedStore.refreshStoreFiles();
+<a class="jxr_linenumber" name="1114" href="#1114">1114</a> 
+<a class="jxr_linenumber" name="1115" href="#1115">1115</a>     <em class="jxr_comment">//ensure that replaceStoreFiles is not called if files are not refreshed</em>
+<a class="jxr_linenumber" name="1116" href="#1116">1116</a>     verify(spiedStore, times(0)).replaceStoreFiles(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="1117" href="#1117">1117</a>   }
+<a class="jxr_linenumber" name="1118" href="#1118">1118</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

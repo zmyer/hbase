@@ -239,7 +239,7 @@
 <a class="jxr_linenumber" name="229" href="#229">229</a>       <em class="jxr_comment">// put column family</em>
 <a class="jxr_linenumber" name="230" href="#230">230</a>       byte familyLength = cell.getFamilyLength();
 <a class="jxr_linenumber" name="231" href="#231">231</a>       out.write(familyLength);
-<a class="jxr_linenumber" name="232" href="#232">232</a>       out.write(cell.getFamilyArray(), cell.getFamilyOffset(), familyLength);
+<a class="jxr_linenumber" name="232" href="#232">232</a>       CellUtil.writeFamily(out, cell, familyLength);
 <a class="jxr_linenumber" name="233" href="#233">233</a>     } <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="234" href="#234">234</a>       <em class="jxr_comment">// Finding common prefix</em>
 <a class="jxr_linenumber" name="235" href="#235">235</a>       <strong class="jxr_keyword">int</strong> preKeyLength = KeyValueUtil.keyLength(prevCell);
@@ -292,7 +292,7 @@
 <a class="jxr_linenumber" name="282" href="#282">282</a>       <em class="jxr_comment">// Previous and current rows are different. Copy the differing part of</em>
 <a class="jxr_linenumber" name="283" href="#283">283</a>       <em class="jxr_comment">// the row, skip the column family, and copy the qualifier.</em>
 <a class="jxr_linenumber" name="284" href="#284">284</a>       CellUtil.writeRowKeyExcludingCommon(cell, rLen, commonPrefix, out);
-<a class="jxr_linenumber" name="285" href="#285">285</a>       out.write(cell.getQualifierArray(), cell.getQualifierOffset(), cell.getQualifierLength());
+<a class="jxr_linenumber" name="285" href="#285">285</a>       CellUtil.writeQualifier(out, cell, cell.getQualifierLength());
 <a class="jxr_linenumber" name="286" href="#286">286</a>     } <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="287" href="#287">287</a>       <em class="jxr_comment">// The common part includes the whole row. As the column family is the</em>
 <a class="jxr_linenumber" name="288" href="#288">288</a>       <em class="jxr_comment">// same across the whole file, it will automatically be included in the</em>
@@ -300,8 +300,8 @@
 <a class="jxr_linenumber" name="290" href="#290">290</a>       <em class="jxr_comment">// What we write here is the non common part of the qualifier</em>
 <a class="jxr_linenumber" name="291" href="#291">291</a>       <strong class="jxr_keyword">int</strong> commonQualPrefix = commonPrefix - (rLen + KeyValue.ROW_LENGTH_SIZE)
 <a class="jxr_linenumber" name="292" href="#292">292</a>           - (cell.getFamilyLength() + KeyValue.FAMILY_LENGTH_SIZE);
-<a class="jxr_linenumber" name="293" href="#293">293</a>       out.write(cell.getQualifierArray(), cell.getQualifierOffset() + commonQualPrefix,
-<a class="jxr_linenumber" name="294" href="#294">294</a>           cell.getQualifierLength() - commonQualPrefix);
+<a class="jxr_linenumber" name="293" href="#293">293</a>       CellUtil.writeQualifierSkippingBytes(out, cell, cell.getQualifierLength(),
+<a class="jxr_linenumber" name="294" href="#294">294</a>         commonQualPrefix);
 <a class="jxr_linenumber" name="295" href="#295">295</a>     }
 <a class="jxr_linenumber" name="296" href="#296">296</a>     <strong class="jxr_keyword">if</strong> ((flag &amp; FLAG_TIMESTAMP_IS_DIFF) == 0) {
 <a class="jxr_linenumber" name="297" href="#297">297</a>       ByteBufferUtils.putLong(out, timestamp, timestampFitsInBytes);
@@ -312,7 +312,7 @@
 <a class="jxr_linenumber" name="302" href="#302">302</a>     <strong class="jxr_keyword">if</strong> ((flag &amp; FLAG_SAME_TYPE) == 0) {
 <a class="jxr_linenumber" name="303" href="#303">303</a>       out.write(cell.getTypeByte());
 <a class="jxr_linenumber" name="304" href="#304">304</a>     }
-<a class="jxr_linenumber" name="305" href="#305">305</a>     out.write(cell.getValueArray(), cell.getValueOffset(), vLength);
+<a class="jxr_linenumber" name="305" href="#305">305</a>     CellUtil.writeValue(out, cell, vLength);
 <a class="jxr_linenumber" name="306" href="#306">306</a>     <strong class="jxr_keyword">return</strong> kLength + vLength + KeyValue.KEYVALUE_INFRASTRUCTURE_SIZE;
 <a class="jxr_linenumber" name="307" href="#307">307</a>   }
 <a class="jxr_linenumber" name="308" href="#308">308</a> 

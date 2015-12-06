@@ -4072,6 +4072,10 @@
 <dd>
 <div class="block">Find length of common prefix in two arrays.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/util/ByteBufferUtils.html#findCommonPrefix(java.nio.ByteBuffer,%20int,%20int,%20java.nio.ByteBuffer,%20int,%20int)">findCommonPrefix(ByteBuffer, int, int, ByteBuffer, int, int)</a></span> - Static method in class org.apache.hadoop.hbase.util.<a href="./org/apache/hadoop/hbase/util/ByteBufferUtils.html" title="class in org.apache.hadoop.hbase.util">ByteBufferUtils</a></dt>
+<dd>
+<div class="block">Find length of common prefix in two arrays.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/util/Bytes.html#findCommonPrefix(byte[],%20byte[],%20int,%20int,%20int,%20int)">findCommonPrefix(byte[], byte[], int, int, int, int)</a></span> - Static method in class org.apache.hadoop.hbase.util.<a href="./org/apache/hadoop/hbase/util/Bytes.html" title="class in org.apache.hadoop.hbase.util">Bytes</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#findCommonPrefixInFlatKey(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell,%20boolean,%20boolean)">findCommonPrefixInFlatKey(Cell, Cell, boolean, boolean)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
@@ -4340,10 +4344,8 @@
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/client/Admin.html#getAlterStatus(byte[])">getAlterStatus(byte[])</a></span> - Method in interface org.apache.hadoop.hbase.client.<a href="./org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></dt>
 <dd>
-<div class="block"><span class="strong">Deprecated.</span>
-<div class="block"><i>Since 2.0.0. Will be removed in 3.0.0. Use <a href="./org/apache/hadoop/hbase/client/Admin.html#getAlterStatus(org.apache.hadoop.hbase.TableName)"><code>Admin.getAlterStatus(TableName)</code></a>
-     instead.</i></div>
-</div>
+<div class="block">Get the status of alter command - indicates how many regions have received the updated schema
+ Asynchronous operation.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/client/Attributes.html#getAttribute(java.lang.String)">getAttribute(String)</a></span> - Method in interface org.apache.hadoop.hbase.client.<a href="./org/apache/hadoop/hbase/client/Attributes.html" title="interface in org.apache.hadoop.hbase.client">Attributes</a></dt>
 <dd>
@@ -8600,6 +8602,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#matchingValue(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell)">matchingValue(Cell, Cell)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#matchingValue(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell,%20int,%20int)">matchingValue(Cell, Cell, int, int)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#matchingValue(org.apache.hadoop.hbase.Cell,%20byte[])">matchingValue(Cell, byte[])</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/client/backoff/ExponentialClientBackoffPolicy.html#MAX_BACKOFF_KEY">MAX_BACKOFF_KEY</a></span> - Static variable in class org.apache.hadoop.hbase.client.backoff.<a href="./org/apache/hadoop/hbase/client/backoff/ExponentialClientBackoffPolicy.html" title="class in org.apache.hadoop.hbase.client.backoff">ExponentialClientBackoffPolicy</a></dt>
@@ -12532,7 +12536,8 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/client/Admin.html#snapshot(byte[],%20org.apache.hadoop.hbase.TableName)">snapshot(byte[], TableName)</a></span> - Method in interface org.apache.hadoop.hbase.client.<a href="./org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></dt>
 <dd>
-<div class="block">Create a timestamp consistent snapshot for the given table.</div>
+<div class="block">public void snapshot(final String snapshotName, Create a timestamp consistent snapshot for the
+ given table.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/client/Admin.html#snapshot(java.lang.String,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription.Type)">snapshot(String, TableName, HBaseProtos.SnapshotDescription.Type)</a></span> - Method in interface org.apache.hadoop.hbase.client.<a href="./org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></dt>
 <dd>
@@ -14381,6 +14386,10 @@ the order they are declared.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/util/ByteBufferUtils.html#writeByteBuffer(java.io.OutputStream,%20java.nio.ByteBuffer,%20int,%20int)">writeByteBuffer(OutputStream, ByteBuffer, int, int)</a></span> - Static method in class org.apache.hadoop.hbase.util.<a href="./org/apache/hadoop/hbase/util/ByteBufferUtils.html" title="class in org.apache.hadoop.hbase.util">ByteBufferUtils</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#writeFamily(java.io.DataOutputStream,%20org.apache.hadoop.hbase.Cell,%20byte)">writeFamily(DataOutputStream, Cell, byte)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
+<dd>
+<div class="block">Writes the family from the given cell to the output stream</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#writeFlatKey(org.apache.hadoop.hbase.Cell,%20java.io.DataOutputStream)">writeFlatKey(Cell, DataOutputStream)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
 <dd>
 <div class="block">Writes the Cell's key part as it would have serialized in a KeyValue.</div>
@@ -14402,13 +14411,33 @@ the order they are declared.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/util/JsonMapper.html#writeObjectAsString(java.lang.Object)">writeObjectAsString(Object)</a></span> - Static method in class org.apache.hadoop.hbase.util.<a href="./org/apache/hadoop/hbase/util/JsonMapper.html" title="class in org.apache.hadoop.hbase.util">JsonMapper</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#writeQualifier(java.io.DataOutputStream,%20org.apache.hadoop.hbase.Cell,%20int)">writeQualifier(DataOutputStream, Cell, int)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
+<dd>
+<div class="block">Writes the qualifier from the given cell to the output stream</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#writeQualifierSkippingBytes(java.io.DataOutputStream,%20org.apache.hadoop.hbase.Cell,%20int,%20int)">writeQualifierSkippingBytes(DataOutputStream, Cell, int, int)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
+<dd>
+<div class="block">Writes the qualifier from the given cell to the output stream excluding the common prefix</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#writeRow(java.io.DataOutputStream,%20org.apache.hadoop.hbase.Cell,%20short)">writeRow(DataOutputStream, Cell, short)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
+<dd>
+<div class="block">Writes the row from the given cell to the output stream</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#writeRowKeyExcludingCommon(org.apache.hadoop.hbase.Cell,%20short,%20int,%20java.io.DataOutputStream)">writeRowKeyExcludingCommon(Cell, short, int, DataOutputStream)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
 <dd>
 <div class="block">Write rowkey excluding the common part.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#writeRowSkippingBytes(java.io.DataOutputStream,%20org.apache.hadoop.hbase.Cell,%20short,%20int)">writeRowSkippingBytes(DataOutputStream, Cell, short, int)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
+<dd>
+<div class="block">Writes the row from the given cell to the output stream excluding the common prefix</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/util/Bytes.html#writeStringFixedSize(java.io.DataOutput,%20java.lang.String,%20int)">writeStringFixedSize(DataOutput, String, int)</a></span> - Static method in class org.apache.hadoop.hbase.util.<a href="./org/apache/hadoop/hbase/util/Bytes.html" title="class in org.apache.hadoop.hbase.util">Bytes</a></dt>
 <dd>
 <div class="block">Writes a string as a fixed-size field, padded with zeros.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#writeTags(java.io.DataOutputStream,%20org.apache.hadoop.hbase.Cell,%20int)">writeTags(DataOutputStream, Cell, int)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
+<dd>
+<div class="block">Writes the tag from the given cell to the output stream</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/io/ByteBufferOutputStream.html#writeTo(java.io.OutputStream)">writeTo(OutputStream)</a></span> - Method in class org.apache.hadoop.hbase.io.<a href="./org/apache/hadoop/hbase/io/ByteBufferOutputStream.html" title="class in org.apache.hadoop.hbase.io">ByteBufferOutputStream</a></dt>
 <dd>
@@ -14417,6 +14446,10 @@ the order they are declared.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/util/VersionInfo.html#writeTo(java.io.PrintWriter)">writeTo(PrintWriter)</a></span> - Static method in class org.apache.hadoop.hbase.util.<a href="./org/apache/hadoop/hbase/util/VersionInfo.html" title="class in org.apache.hadoop.hbase.util">VersionInfo</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/CellUtil.html#writeValue(java.io.DataOutputStream,%20org.apache.hadoop.hbase.Cell,%20int)">writeValue(DataOutputStream, Cell, int)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></dt>
+<dd>
+<div class="block">Writes the value from the given cell to the output stream</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/util/ByteBufferUtils.html#writeVLong(java.nio.ByteBuffer,%20long)">writeVLong(ByteBuffer, long)</a></span> - Static method in class org.apache.hadoop.hbase.util.<a href="./org/apache/hadoop/hbase/util/ByteBufferUtils.html" title="class in org.apache.hadoop.hbase.util">ByteBufferUtils</a></dt>
 <dd>
 <div class="block">Similar to <code>WritableUtils.writeVLong(java.io.DataOutput, long)</code>,

@@ -685,65 +685,71 @@ service.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a></strong></code>
-<div class="block">An HBase Key/Value.</div>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/JitterScheduledThreadPoolExecutorImpl.html" title="class in org.apache.hadoop.hbase">JitterScheduledThreadPoolExecutorImpl</a></strong></code>
+<div class="block">ScheduledThreadPoolExecutor that will add some jitter to the RunnableScheduledFuture.getDelay.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/KeyValueTestUtil.html" title="class in org.apache.hadoop.hbase">KeyValueTestUtil</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/KeyValue.html" title="class in org.apache.hadoop.hbase">KeyValue</a></strong></code>
+<div class="block">An HBase Key/Value.</div>
+</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/KeyValueTestUtil.html" title="class in org.apache.hadoop.hbase">KeyValueTestUtil</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/KeyValueUtil.html" title="class in org.apache.hadoop.hbase">KeyValueUtil</a></strong></code>
 <div class="block">static convenience methods for dealing with KeyValues and collections of KeyValues</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaMutationAnnotation.html" title="annotation in org.apache.hadoop.hbase">MetaMutationAnnotation</a></strong></code>
 <div class="block">The field or the parameter to which this annotation can be applied only when it
  holds mutations for hbase:meta table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.html" title="class in org.apache.hadoop.hbase">MetaTableAccessor</a></strong></code>
 <div class="block">Read/write operations on region and assignment information store in
  <code>hbase:meta</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MetaTableAccessor.QueryType.html" title="enum in org.apache.hadoop.hbase">MetaTableAccessor.QueryType</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/NoTagsKeyValue.html" title="class in org.apache.hadoop.hbase">NoTagsKeyValue</a></strong></code>
 <div class="block">An extension of the KeyValue where the tags length is always 0</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/OffheapKeyValue.html" title="class in org.apache.hadoop.hbase">OffheapKeyValue</a></strong></code>
 <div class="block">This Cell is an implementation of <a href="../../../../../../org/apache/hadoop/hbase/ByteBufferedCell.html" title="class in org.apache.hadoop.hbase"><code>ByteBufferedCell</code></a> where the data resides in off heap
  memory.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/RegionLocations.html" title="class in org.apache.hadoop.hbase">RegionLocations</a></strong></code>
 <div class="block">Container for holding a list of <a href="../../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase"><code>HRegionLocation</code></a>'s that correspond to the
  same range.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ScheduledChore.html" title="class in org.apache.hadoop.hbase">ScheduledChore</a></strong></code>
 <div class="block">ScheduledChore is a task performed on a period in hbase.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ShareableMemory.html" title="interface in org.apache.hadoop.hbase">ShareableMemory</a></strong></code>
 <div class="block">A cell implementing this interface would mean that the memory area backing this cell will refer
@@ -751,78 +757,78 @@ service.</div>
  RegionServer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/SizeCachedKeyValue.html" title="class in org.apache.hadoop.hbase">SizeCachedKeyValue</a></strong></code>
 <div class="block">This class is an extension to KeyValue where rowLen and keyLen are cached.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/SizeCachedNoTagsKeyValue.html" title="class in org.apache.hadoop.hbase">SizeCachedNoTagsKeyValue</a></strong></code>
 <div class="block">This class is an extension to ContentSizeCachedKeyValue where there are no tags in Cell.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/SplitLogCounters.html" title="class in org.apache.hadoop.hbase">SplitLogCounters</a></strong></code>
 <div class="block">Counters kept by the distributed WAL split log process.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/SplitLogTask.html" title="class in org.apache.hadoop.hbase">SplitLogTask</a></strong></code>
 <div class="block">State of a WAL log split during distributed splitting.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/Streamable.html" title="interface in org.apache.hadoop.hbase">Streamable</a></strong></code>
 <div class="block">This marks a Cell as streamable to a given OutputStream.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TableDescriptor.html" title="class in org.apache.hadoop.hbase">TableDescriptor</a></strong></code>
 <div class="block">Class represents table state on HDFS.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TableDescriptors.html" title="interface in org.apache.hadoop.hbase">TableDescriptors</a></strong></code>
 <div class="block">Get, remove and modify table descriptors.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/Tag.html" title="class in org.apache.hadoop.hbase">Tag</a></strong></code>
 <div class="block">Tags are part of cells and helps to add metadata about the KVs.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TagRewriteCell.html" title="class in org.apache.hadoop.hbase">TagRewriteCell</a></strong></code>
 <div class="block">This can be used when a Cell has to change with addition/removal of one or more tags.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TagType.html" title="class in org.apache.hadoop.hbase">TagType</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/VersionAnnotation.html" title="annotation in org.apache.hadoop.hbase">VersionAnnotation</a></strong></code>
 <div class="block">A package attribute that captures the version of hbase that was compiled.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/YouAreDeadException.html" title="class in org.apache.hadoop.hbase">YouAreDeadException</a></strong></code>
 <div class="block">This exception is thrown by the master when a region server reports and is
  already being processed as dead.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ZKNamespaceManager.html" title="class in org.apache.hadoop.hbase">ZKNamespaceManager</a></strong></code>
 <div class="block">Class servers two purposes:
@@ -1591,18 +1597,6 @@ service.</div>
 <th class="colLast" scope="col">Class and Description</th>
 </tr>
 <tbody>
-<tr class="altColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/codec/BaseDecoder.html" title="class in org.apache.hadoop.hbase.codec">BaseDecoder</a></strong></code>
-<div class="block">TODO javadoc</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/codec/BaseEncoder.html" title="class in org.apache.hadoop.hbase.codec">BaseEncoder</a></strong></code>
-<div class="block">TODO javadoc</div>
-</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/codec/CodecException.html" title="class in org.apache.hadoop.hbase.codec">CodecException</a></strong></code>
@@ -5596,77 +5590,85 @@ service.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactedHFilesDischarger.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactedHFilesDischarger</a></strong></code>
+<div class="block">A chore service that periodically cleans up the compacted files when there are no active readers
+ using those compacted files and also helps in clearing the block cache with these compacted
+ file entries</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionConfiguration.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionConfiguration</a></strong></code>
 <div class="block">
  Compaction configuration for a particular instance of HStore.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionContext.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionContext</a></strong></code>
 <div class="block">This class holds all "physical" details necessary to run a compaction,
  and abstracts away the details specific to a particular compaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionPolicy</a></strong></code>
 <div class="block">A compaction policy determines how to select files for compaction,
  how to compact them, and how to generate the compacted files.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionProgress.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionProgress</a></strong></code>
 <div class="block">This class holds information relevant for tracking the progress of a
  compaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">Compactor</a></strong></code>
 <div class="block">A compactor is a compaction algorithm associated a given policy.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CurrentHourProvider.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CurrentHourProvider</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/DefaultCompactor.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">DefaultCompactor</a></strong></code>
 <div class="block">Compact passed set of files.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ExploringCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">ExploringCompactionPolicy</a></strong></code>
 <div class="block">Class to pick which files if any to compact together.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/FIFOCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">FIFOCompactionPolicy</a></strong></code>
 <div class="block">FIFO compaction policy selects only files which have all cells expired.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/OffPeakHours.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">OffPeakHours</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/RatioBasedCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">RatioBasedCompactionPolicy</a></strong></code>
 <div class="block">The default algorithm for selecting files for compaction.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">StripeCompactionPolicy</a></strong></code>
 <div class="block">Stripe store implementation of compaction policy.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/StripeCompactor.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">StripeCompactor</a></strong></code>
 <div class="block">This is the placeholder for stripe compactor.</div>
@@ -5766,114 +5768,108 @@ service.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a></strong></code>
-<div class="block">Context that holds the various dictionaries for compression in WAL.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/Compressor.html" title="class in org.apache.hadoop.hbase.regionserver.wal">Compressor</a></strong></code>
 <div class="block">A set of static functions for running our custom WAL compression/decompression.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/DamagedWALException.html" title="class in org.apache.hadoop.hbase.regionserver.wal">DamagedWALException</a></strong></code>
 <div class="block">Thrown when a failed append or sync on a WAL.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FSHLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal">FSHLog</a></strong></code>
 <div class="block">Implementation of <a href="../../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal"><code>WAL</code></a> to go against <code>FileSystem</code>; i.e.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FSWALEntry.html" title="class in org.apache.hadoop.hbase.regionserver.wal">FSWALEntry</a></strong></code>
 <div class="block">A WAL Entry for <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FSHLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><code>FSHLog</code></a> implementation.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/KeyValueCompression.html" title="class in org.apache.hadoop.hbase.regionserver.wal">KeyValueCompression</a></strong></code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsEditsReplaySourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver.wal">MetricsEditsReplaySourceImpl</a></strong></code>
 <div class="block">Hadoop1 implementation of MetricsMasterSource.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWAL.html" title="class in org.apache.hadoop.hbase.regionserver.wal">MetricsWAL</a></strong></code>
 <div class="block">Class used to push numbers about the WAL into the metrics subsystem.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALEditsReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal">MetricsWALEditsReplay</a></strong></code>
 <div class="block">Class used to push numbers about WAL edits replay into the metrics subsystem.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/MetricsWALSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver.wal">MetricsWALSourceImpl</a></strong></code>
 <div class="block">Class that transitions metrics from MetricsWAL into the metrics subsystem.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ReplayHLogKey.html" title="class in org.apache.hadoop.hbase.regionserver.wal">ReplayHLogKey</a></strong></code>
 <div class="block">An HLogKey specific to WalEdits coming from replay.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/RingBufferTruck.html" title="class in org.apache.hadoop.hbase.regionserver.wal">RingBufferTruck</a></strong></code>
 <div class="block">A 'truck' to carry a payload across the <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FSHLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><code>FSHLog</code></a> ring buffer from Handler to WAL.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SecureWALCellCodec.html" title="class in org.apache.hadoop.hbase.regionserver.wal">SecureWALCellCodec</a></strong></code>
 <div class="block">A WALCellCodec that encrypts the WALedits.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SyncFuture.html" title="class in org.apache.hadoop.hbase.regionserver.wal">SyncFuture</a></strong></code>
 <div class="block">A Future on a filesystem sync call.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a></strong></code>
 <div class="block">Get notification of WAL events.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALCoprocessorHost.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALCoprocessorHost</a></strong></code>
 <div class="block">Implements the coprocessor environment and runtime support for coprocessors
  loaded within a <a href="../../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal"><code>WAL</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEditsReplaySink.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEditsReplaySink</a></strong></code>
 <div class="block">This class is responsible for replaying the edits coming from a failed region server.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALUtil.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALUtil</a></strong></code>
 <div class="block">Helper methods to ease Region Server integration with the write ahead log.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WriterBase.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WriterBase</a></strong></code>
 <div class="block">Context used by our wal dictionary compressor.</div>

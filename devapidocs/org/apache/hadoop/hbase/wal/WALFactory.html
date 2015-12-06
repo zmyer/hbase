@@ -256,17 +256,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#closeMetaWAL(byte[])">closeMetaWAL</a></strong>(byte[]&nbsp;identifier)</code>
-<div class="block">Closes the meta WAL and meta WALProvider</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createReader(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path)">createReader</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                         org.apache.hadoop.fs.Path&nbsp;path)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createReader(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.util.CancelableProgressable)">createReader</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                         org.apache.hadoop.fs.Path&nbsp;path,
@@ -274,14 +268,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Create a reader for the WAL.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createReader(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.util.CancelableProgressable,%20boolean)">createReader</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                         org.apache.hadoop.fs.Path&nbsp;path,
                         <a href="../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a>&nbsp;reporter,
                         boolean&nbsp;allowCustom)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createReader(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.conf.Configuration)">createReader</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                         org.apache.hadoop.fs.Path&nbsp;path,
@@ -289,7 +283,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Create a reader for the given path, accept custom reader classes from conf.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) static <a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createReader(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.util.CancelableProgressable)">createReader</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                         org.apache.hadoop.fs.Path&nbsp;path,
@@ -298,7 +292,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Create a reader for the given path, accept custom reader classes from conf.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createReaderIgnoreCustomClass(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.conf.Configuration)">createReaderIgnoreCustomClass</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                                           org.apache.hadoop.fs.Path&nbsp;path,
@@ -306,14 +300,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Create a reader for the given path, ignore custom reader classes from conf.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createRecoveredEditsWriter(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path)">createRecoveredEditsWriter</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                                     org.apache.hadoop.fs.Path&nbsp;path)</code>
 <div class="block">should be package-private, visible for recovery testing.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) static <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createRecoveredEditsWriter(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.conf.Configuration)">createRecoveredEditsWriter</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                                     org.apache.hadoop.fs.Path&nbsp;path,
@@ -321,14 +315,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">If you already have a WALFactory, you should favor the instance method.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createWALWriter(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path)">createWALWriter</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                               org.apache.hadoop.fs.Path&nbsp;path)</code>
 <div class="block">Create a writer for the WAL.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#createWALWriter(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.conf.Configuration)">createWALWriter</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                               org.apache.hadoop.fs.Path&nbsp;path,
@@ -336,19 +330,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">If you already have a WALFactory, you should favor the instance method.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#getInstance(org.apache.hadoop.conf.Configuration)">getInstance</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;configuration)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#getMetaWAL(byte[])">getMetaWAL</a></strong>(byte[]&nbsp;identifier)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#getMetaWALProvider()">getMetaWALProvider</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#getProvider(java.lang.String,%20java.lang.String,%20java.util.List,%20java.lang.String)">getProvider</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;defaultValue,
@@ -357,16 +351,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">instantiate a provider from a config property.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#getWAL(byte[],%20byte[])">getWAL</a></strong>(byte[]&nbsp;identifier,
             byte[]&nbsp;namespace)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#getWALProvider()">getWALProvider</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html#shutdown()">shutdown</a></strong>()</code>
 <div class="block">Tell the underlying WAL providers to shut down, but do not clean up underlying storage.</div>
@@ -503,7 +497,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>singleton</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.388">singleton</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.373">singleton</a></pre>
 </li>
 </ul>
 <a name="SINGLETON_ID">
@@ -512,7 +506,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>SINGLETON_ID</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.389">SINGLETON_ID</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.374">SINGLETON_ID</a></pre>
 </li>
 </ul>
 </li>
@@ -631,26 +625,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
-<a name="closeMetaWAL(byte[])">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>closeMetaWAL</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.256">closeMetaWAL</a>(byte[]&nbsp;identifier)
-                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Closes the meta WAL and meta WALProvider</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
-</li>
-</ul>
 <a name="createReader(org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createReader</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.268">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.253">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                       org.apache.hadoop.fs.Path&nbsp;path)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -663,7 +644,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createReader</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.279">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.264">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                       org.apache.hadoop.fs.Path&nbsp;path,
                       <a href="../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a>&nbsp;reporter)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -681,7 +662,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createReader</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.284">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.269">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                       org.apache.hadoop.fs.Path&nbsp;path,
                       <a href="../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a>&nbsp;reporter,
                       boolean&nbsp;allowCustom)
@@ -696,7 +677,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createWALWriter</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.370">createWALWriter</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.355">createWALWriter</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                  org.apache.hadoop.fs.Path&nbsp;path)
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Create a writer for the WAL.
@@ -713,7 +694,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createRecoveredEditsWriter</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.379">createRecoveredEditsWriter</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.364">createRecoveredEditsWriter</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                             org.apache.hadoop.fs.Path&nbsp;path)
                                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">should be package-private, visible for recovery testing.</div>
@@ -728,7 +709,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getInstance</h4>
-<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.392">getInstance</a>(org.apache.hadoop.conf.Configuration&nbsp;configuration)</pre>
+<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALFactory.html" title="class in org.apache.hadoop.hbase.wal">WALFactory</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.377">getInstance</a>(org.apache.hadoop.conf.Configuration&nbsp;configuration)</pre>
 </li>
 </ul>
 <a name="createReader(org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path, org.apache.hadoop.conf.Configuration)">
@@ -737,7 +718,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createReader</h4>
-<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.416">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.401">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                       org.apache.hadoop.fs.Path&nbsp;path,
                       org.apache.hadoop.conf.Configuration&nbsp;configuration)
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -754,7 +735,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createReader</h4>
-<pre>static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.426">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.411">createReader</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                       org.apache.hadoop.fs.Path&nbsp;path,
                       org.apache.hadoop.conf.Configuration&nbsp;configuration,
                       <a href="../../../../../org/apache/hadoop/hbase/util/CancelableProgressable.html" title="interface in org.apache.hadoop.hbase.util">CancelableProgressable</a>&nbsp;reporter)
@@ -772,7 +753,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createReaderIgnoreCustomClass</h4>
-<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.437">createReaderIgnoreCustomClass</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.422">createReaderIgnoreCustomClass</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                        org.apache.hadoop.fs.Path&nbsp;path,
                                        org.apache.hadoop.conf.Configuration&nbsp;configuration)
                                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -790,7 +771,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createRecoveredEditsWriter</h4>
-<pre>static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.446">createRecoveredEditsWriter</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.431">createRecoveredEditsWriter</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                             org.apache.hadoop.fs.Path&nbsp;path,
                                             org.apache.hadoop.conf.Configuration&nbsp;configuration)
                                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -806,7 +787,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createWALWriter</h4>
-<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.457">createWALWriter</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.442">createWALWriter</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                  org.apache.hadoop.fs.Path&nbsp;path,
                                  org.apache.hadoop.conf.Configuration&nbsp;configuration)
                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -822,7 +803,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getWALProvider</h4>
-<pre>public final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.463">getWALProvider</a>()</pre>
+<pre>public final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.448">getWALProvider</a>()</pre>
 </li>
 </ul>
 <a name="getMetaWALProvider()">
@@ -831,7 +812,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getMetaWALProvider</h4>
-<pre>public final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.467">getMetaWALProvider</a>()</pre>
+<pre>public final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/WALFactory.html#line.452">getMetaWALProvider</a>()</pre>
 </li>
 </ul>
 </li>
