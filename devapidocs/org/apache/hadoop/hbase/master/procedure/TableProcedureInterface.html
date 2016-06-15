@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.ServerOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.TableOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -87,7 +87,7 @@
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/AddColumnFamilyProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">AddColumnFamilyProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/CreateNamespaceProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">CreateNamespaceProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/CreateTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">CreateTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DeleteColumnFamilyProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">DeleteColumnFamilyProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DeleteNamespaceProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">DeleteNamespaceProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DeleteTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">DeleteTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DisableTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">DisableTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/EnableTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">EnableTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyColumnFamilyProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">ModifyColumnFamilyProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">ModifyNamespaceProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">ModifyTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TruncateTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">TruncateTableProcedure</a></dd>
+<dd><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/AddColumnFamilyProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">AddColumnFamilyProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/CloneSnapshotProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">CloneSnapshotProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/CreateNamespaceProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">CreateNamespaceProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/CreateTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">CreateTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DeleteColumnFamilyProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">DeleteColumnFamilyProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DeleteNamespaceProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">DeleteNamespaceProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DeleteTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">DeleteTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/DisableTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">DisableTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/EnableTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">EnableTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyColumnFamilyProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">ModifyColumnFamilyProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyNamespaceProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">ModifyNamespaceProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ModifyTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">ModifyTableProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/RestoreSnapshotProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">RestoreSnapshotProcedure</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TruncateTableProcedure.html" title="class in org.apache.hadoop.hbase.master.procedure">TruncateTableProcedure</a></dd>
 </dl>
 <hr>
 <br>
@@ -164,7 +164,7 @@ public interface <a href="../../../../../../src-html/org/apache/hadoop/hbase/mas
 <ul class="blockList">
 <li class="blockList">
 <h4>getTableName</h4>
-<pre><a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.html#line.39">getTableName</a>()</pre>
+<pre><a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.html#line.40">getTableName</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the name of the table the procedure is operating on</dd></dl>
 </li>
 </ul>
@@ -174,7 +174,7 @@ public interface <a href="../../../../../../src-html/org/apache/hadoop/hbase/mas
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getTableOperationType</h4>
-<pre><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.TableOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure">TableProcedureInterface.TableOperationType</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.html#line.47">getTableOperationType</a>()</pre>
+<pre><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.TableOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure">TableProcedureInterface.TableOperationType</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.html#line.48">getTableOperationType</a>()</pre>
 <div class="block">Given an operation type we can take decisions about what to do with pending operations.
  e.g. if we get a delete and we have some table operation pending (e.g. add column)
  we can abort those operations.</div>
@@ -207,7 +207,7 @@ public interface <a href="../../../../../../src-html/org/apache/hadoop/hbase/mas
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.html" title="interface in org.apache.hadoop.hbase.master.procedure"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/ServerProcedureInterface.ServerOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/TableProcedureInterface.TableOperationType.html" title="enum in org.apache.hadoop.hbase.master.procedure"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -248,6 +248,6 @@ public interface <a href="../../../../../../src-html/org/apache/hadoop/hbase/mas
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

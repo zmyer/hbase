@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-tree.html">Prev</a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/package-tree.html">Next</a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/package-tree.html">Next</a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/compactions/package-tree.html" target="_top">Frames</a></li>
@@ -73,11 +73,15 @@
 <ul>
 <li type="circle">java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang"><span class="strong">Object</span></a>
 <ul>
-<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><span class="strong">CompactionPolicy</span></a>
 <ul>
-<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.SortedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><span class="strong">SortedCompactionPolicy</span></a>
+<ul>
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.RatioBasedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><span class="strong">RatioBasedCompactionPolicy</span></a>
 <ul>
 <li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">EverythingPolicy</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -98,11 +102,16 @@
 </ul>
 </li>
 <li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestCompactedHFilesDischarger.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestCompactedHFilesDischarger</span></a></li>
-<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestCompactionWithThroughputController.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestCompactionWithThroughputController</span></a></li>
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestCompactor.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestCompactor</span></a></li>
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestCompactor.Scanner.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestCompactor.Scanner</span></a> (implements org.apache.hadoop.hbase.regionserver.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/InternalScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>)</li>
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestCompactor.StoreFileWritersCapture.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestCompactor.StoreFileWritersCapture</span></a> (implements org.apache.hadoop.hbase.regionserver.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/AbstractMultiFileWriter.WriterFactory.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">AbstractMultiFileWriter.WriterFactory</a>, org.mockito.stubbing.Answer&lt;T&gt;)</li>
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestCompactor.StoreFileWritersCapture.Writer.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestCompactor.StoreFileWritersCapture.Writer</span></a></li>
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestDateTieredCompactor.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestDateTieredCompactor</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestFIFOCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestFIFOCompactionPolicy</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestOffPeakHours.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestOffPeakHours</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestStripeCompactionPolicy</span></a></li>
-<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.Scanner.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestStripeCompactionPolicy.Scanner</span></a> (implements org.apache.hadoop.hbase.regionserver.InternalScanner)</li>
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.Scanner.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestStripeCompactionPolicy.Scanner</span></a> (implements org.apache.hadoop.hbase.regionserver.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/InternalScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>)</li>
+<li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactor.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestStripeCompactor</span></a></li>
 <li type="circle">java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang"><span class="strong">Thread</span></a> (implements java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>)
 <ul>
 <li type="circle">org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestCompactedHFilesDischarger.ScanThread.html" title="class in org.apache.hadoop.hbase.regionserver.compactions"><span class="strong">TestCompactedHFilesDischarger.ScanThread</span></a></li>
@@ -132,7 +141,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/package-tree.html">Prev</a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/package-tree.html">Next</a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/package-tree.html">Next</a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/compactions/package-tree.html" target="_top">Frames</a></li>
@@ -157,6 +166,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

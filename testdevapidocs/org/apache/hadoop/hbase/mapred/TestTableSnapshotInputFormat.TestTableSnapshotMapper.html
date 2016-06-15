@@ -100,7 +100,7 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a>, org.apache.hadoop.hbase.mapred.TableMap&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.io.NullWritable&gt;, org.apache.hadoop.mapred.JobConfigurable, org.apache.hadoop.mapred.Mapper&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.client.Result,org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.io.NullWritable&gt;</dd>
+<dd><a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapred/TableMap.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapred">TableMap</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,org.apache.hadoop.io.NullWritable&gt;, org.apache.hadoop.mapred.JobConfigurable, org.apache.hadoop.mapred.Mapper&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,org.apache.hadoop.io.NullWritable&gt;</dd>
 </dl>
 <dl>
 <dt>Enclosing class:</dt>
@@ -110,7 +110,7 @@
 <br>
 <pre>static class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TestTableSnapshotInputFormat.html#line.69">TestTableSnapshotInputFormat.TestTableSnapshotMapper</a>
 extends org.apache.hadoop.mapred.MapReduceBase
-implements org.apache.hadoop.hbase.mapred.TableMap&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.io.NullWritable&gt;</pre>
+implements <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapred/TableMap.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapred">TableMap</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,org.apache.hadoop.io.NullWritable&gt;</pre>
 </li>
 </ul>
 </div>
@@ -148,9 +148,9 @@ implements org.apache.hadoop.hbase.mapred.TableMap&lt;org.apache.hadoop.hbase.io
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TestTableSnapshotInputFormat.TestTableSnapshotMapper.html#map(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.mapred.OutputCollector,%20org.apache.hadoop.mapred.Reporter)">map</a></strong>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
-      org.apache.hadoop.hbase.client.Result&nbsp;value,
-      org.apache.hadoop.mapred.OutputCollector&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.io.NullWritable&gt;&nbsp;collector,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapred/TestTableSnapshotInputFormat.TestTableSnapshotMapper.html#map(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.mapred.OutputCollector,%20org.apache.hadoop.mapred.Reporter)">map</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
+      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;value,
+      org.apache.hadoop.mapred.OutputCollector&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,org.apache.hadoop.io.NullWritable&gt;&nbsp;collector,
       org.apache.hadoop.mapred.Reporter&nbsp;reporter)</code>&nbsp;</td>
 </tr>
 </table>
@@ -219,14 +219,14 @@ implements org.apache.hadoop.hbase.mapred.TableMap&lt;org.apache.hadoop.hbase.io
 <ul class="blockListLast">
 <li class="blockList">
 <h4>map</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TestTableSnapshotInputFormat.TestTableSnapshotMapper.html#line.72">map</a>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
-       org.apache.hadoop.hbase.client.Result&nbsp;value,
-       org.apache.hadoop.mapred.OutputCollector&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.io.NullWritable&gt;&nbsp;collector,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapred/TestTableSnapshotInputFormat.TestTableSnapshotMapper.html#line.72">map</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
+       <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;value,
+       org.apache.hadoop.mapred.OutputCollector&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,org.apache.hadoop.io.NullWritable&gt;&nbsp;collector,
        org.apache.hadoop.mapred.Reporter&nbsp;reporter)
          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>map</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.mapred.Mapper&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.client.Result,org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.io.NullWritable&gt;</code></dd>
+<dd><code>map</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.mapred.Mapper&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,org.apache.hadoop.io.NullWritable&gt;</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -298,6 +298,6 @@ implements org.apache.hadoop.hbase.mapred.TableMap&lt;org.apache.hadoop.hbase.io
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

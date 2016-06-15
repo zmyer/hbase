@@ -170,6 +170,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHea
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html" title="class in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a></h3>
 <code><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#comparator">comparator</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#current">current</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#heap">heap</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#scannersForDelayedClose">scannersForDelayedClose</a></code></li>
 </ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.KeyValueScanner">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a></h3>
+<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html#NO_NEXT_INDEXED_KEY">NO_NEXT_INDEXED_KEY</a></code></li>
+</ul>
 </li>
 </ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -260,7 +267,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHea
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html" title="class in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#close()">close</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#getCurrentForTesting()">getCurrentForTesting</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#getHeap()">getHeap</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#getNextIndexedKey()">getNextIndexedKey</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#getSequenceID()">getSequenceID</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#next(java.util.List)">next</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#next(java.util.List,%20org.apache.hadoop.hbase.regionserver.ScannerContext)">next</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#peek()">peek</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#pollRealKV()">pollRealKV</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#shipped()">shipped</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#close()">close</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#getCurrentForTesting()">getCurrentForTesting</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#getHeap()">getHeap</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#getNextIndexedKey()">getNextIndexedKey</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#getScannerOrder()">getScannerOrder</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#next(java.util.List)">next</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#next(java.util.List,%20org.apache.hadoop.hbase.regionserver.ScannerContext)">next</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#peek()">peek</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#pollRealKV()">pollRealKV</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html#shipped()">shipped</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.NonLazyKeyValueScanner">
@@ -555,6 +562,6 @@ extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHea
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

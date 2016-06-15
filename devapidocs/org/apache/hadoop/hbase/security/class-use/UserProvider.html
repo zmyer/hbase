@@ -96,38 +96,42 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.replication.regionserver">org.apache.hadoop.hbase.replication.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.rest">org.apache.hadoop.hbase.rest</a></td>
 <td class="colLast">
 <div class="block">HBase REST</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security">org.apache.hadoop.hbase.security</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.token">org.apache.hadoop.hbase.security.token</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.thrift">org.apache.hadoop.hbase.thrift</a></td>
 <td class="colLast">
 <div class="block">Provides an HBase <a href="http://incubator.apache.org/thrift/">Thrift</a>
 service.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.thrift2">org.apache.hadoop.hbase.thrift2</a></td>
 <td class="colLast">
 <div class="block">Provides an HBase <a href="http://thrift.apache.org/">Thrift</a>
 service.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -229,6 +233,24 @@ service.</div>
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.replication.regionserver">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/security/UserProvider.html" title="class in org.apache.hadoop.hbase.security">UserProvider</a> in <a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/package-summary.html">org.apache.hadoop.hbase.replication.regionserver</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/security/UserProvider.html" title="class in org.apache.hadoop.hbase.security">UserProvider</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/security/UserProvider.html" title="class in org.apache.hadoop.hbase.security">UserProvider</a></code></td>
+<td class="colLast"><span class="strong">HFileReplicator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/HFileReplicator.html#userProvider">userProvider</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.rest">
 <!--   -->
 </a>
@@ -244,6 +266,11 @@ service.</div>
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/rest/RESTServlet.html" title="class in org.apache.hadoop.hbase.rest">RESTServlet</a></code></td>
 <td class="colLast"><span class="strong">RESTServlet.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/RESTServlet.html#getInstance(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.security.UserProvider)">getInstance</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                       <a href="../../../../../../org/apache/hadoop/hbase/security/UserProvider.html" title="class in org.apache.hadoop.hbase.security">UserProvider</a>&nbsp;userProvider)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;org.mortbay.jetty.servlet.FilterHolder,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends com.sun.jersey.spi.container.servlet.ServletContainer&gt;&gt;</code></td>
+<td class="colLast"><span class="strong">RESTServer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rest/RESTServer.html#loginServerPrincipal(org.apache.hadoop.hbase.security.UserProvider,%20org.apache.hadoop.conf.Configuration)">loginServerPrincipal</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/security/UserProvider.html" title="class in org.apache.hadoop.hbase.security">UserProvider</a>&nbsp;userProvider,
+                                        org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -481,6 +508,6 @@ service.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

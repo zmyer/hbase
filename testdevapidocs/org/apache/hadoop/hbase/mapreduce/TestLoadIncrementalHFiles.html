@@ -99,7 +99,7 @@
 </dl>
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.62">TestLoadIncrementalHFiles</a>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.68">TestLoadIncrementalHFiles</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Test cases for the "load" half of the HFileOutputFormat bulk load
  functionality. These tests run faster than the full MR cluster
@@ -147,6 +147,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#SPLIT_KEYS">SPLIT_KEYS</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>org.junit.rules.TestName</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#tn">tn</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) static <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#util">util</a></strong></code>&nbsp;</td>
 </tr>
@@ -189,73 +193,78 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                                             byte[]&nbsp;last)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HTableDescriptor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#buildHTD(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.regionserver.BloomType)">buildHTD</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>private static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#createRandomDataFile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20int)">createRandomDataFile</a></strong>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                         org.apache.hadoop.fs.Path&nbsp;path,
                                         int&nbsp;size)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#runTest(java.lang.String,%20org.apache.hadoop.hbase.regionserver.BloomType,%20byte[][][])">runTest</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
-              org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType,
               byte[][][]&nbsp;hfileRanges)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#runTest(java.lang.String,%20org.apache.hadoop.hbase.regionserver.BloomType,%20byte[][],%20byte[][][])">runTest</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
-              org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType,
-              byte[][]&nbsp;tableSplitKeys,
-              byte[][][]&nbsp;hfileRanges)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#runTest(java.lang.String,%20org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.regionserver.BloomType,%20boolean,%20byte[][],%20byte[][][])">runTest</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
-              org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd,
-              org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType,
-              boolean&nbsp;preCreateTable,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType,
               byte[][]&nbsp;tableSplitKeys,
               byte[][][]&nbsp;hfileRanges)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#runTest(java.lang.String,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.regionserver.BloomType,%20boolean,%20byte[][],%20byte[][][])">runTest</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
-              org.apache.hadoop.hbase.TableName&nbsp;tableName,
-              org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#runTest(java.lang.String,%20org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.regionserver.BloomType,%20boolean,%20byte[][],%20byte[][][])">runTest</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HTableDescriptor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType,
               boolean&nbsp;preCreateTable,
               byte[][]&nbsp;tableSplitKeys,
               byte[][][]&nbsp;hfileRanges)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#runTest(java.lang.String,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.regionserver.BloomType,%20boolean,%20byte[][],%20byte[][][])">runTest</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType,
+              boolean&nbsp;preCreateTable,
+              byte[][]&nbsp;tableSplitKeys,
+              byte[][][]&nbsp;hfileRanges)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#setUpBeforeClass()">setUpBeforeClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#setupNamespace()">setupNamespace</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#tearDownAfterClass()">tearDownAfterClass</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testInferBoundaries()">testInferBoundaries</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testLoadTooMayHFiles()">testLoadTooMayHFiles</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testNonexistentColumnFamilyLoad()">testNonexistentColumnFamilyLoad</a></strong>()</code>
 <div class="block">Test loading into a column family that does not exist.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testNonHfileFolder()">testNonHfileFolder</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testNonHfileFolder(java.lang.String,%20boolean)">testNonHfileFolder</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
                                     boolean&nbsp;preCreateTable)</code>
@@ -263,75 +272,96 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  but not part of the table families.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testNonHfileFolderWithUnmatchedFamilyName()">testNonHfileFolderWithUnmatchedFamilyName</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testRegionCrossingHFileSplit()">testRegionCrossingHFileSplit</a></strong>()</code>
 <div class="block">Test case that creates some regions and loads HFiles that cross the boundaries
  and have different region boundaries than the table pre-split.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testRegionCrossingHFileSplit(org.apache.hadoop.hbase.regionserver.BloomType)">testRegionCrossingHFileSplit</a></strong>(org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testRegionCrossingHFileSplit(org.apache.hadoop.hbase.regionserver.BloomType)">testRegionCrossingHFileSplit</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testRegionCrossingHFileSplitRowBloom()">testRegionCrossingHFileSplitRowBloom</a></strong>()</code>
 <div class="block">Test case that creates some regions and loads HFiles that cross the boundaries
  have a ROW bloom filter and a different region boundaries than the table pre-split.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testRegionCrossingHFileSplitRowColBloom()">testRegionCrossingHFileSplitRowColBloom</a></strong>()</code>
 <div class="block">Test case that creates some regions and loads HFiles that cross the boundaries
  have a ROWCOL bloom filter and a different region boundaries than the table pre-split.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testRegionCrossingLoad()">testRegionCrossingLoad</a></strong>()</code>
 <div class="block">Test case that creates some regions and loads
  HFiles that cross the boundaries of those regions</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testRegionCrossingRowBloom()">testRegionCrossingRowBloom</a></strong>()</code>
 <div class="block">Test loading into a column family that has a ROW bloom filter.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testRegionCrossingRowColBloom()">testRegionCrossingRowColBloom</a></strong>()</code>
 <div class="block">Test loading into a column family that has a ROWCOL bloom filter.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testSimpleHFileSplit()">testSimpleHFileSplit</a></strong>()</code>
 <div class="block">Test case that creates some regions and loads HFiles that have
  different region boundaries than the table pre-split.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testSimpleLoad()">testSimpleLoad</a></strong>()</code>
 <div class="block">Test case that creates some regions and loads
  HFiles that fit snugly inside those regions</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testSplitALot()">testSplitALot</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testSplitStoreFile()">testSplitStoreFile</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testSplitStoreFileWithDifferentEncoding(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding,%20org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">testSplitStoreFileWithDifferentEncoding</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;bulkloadEncoding,
+                                                                              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;cfEncoding)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testSplitStoreFileWithEncodedToEncoded()">testSplitStoreFileWithEncodedToEncoded</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testSplitStoreFileWithEncodedToNone()">testSplitStoreFileWithEncodedToNone</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testSplitStoreFileWithNoneToEncoded()">testSplitStoreFileWithNoneToEncoded</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testSplitStoreFileWithNoneToNone()">testSplitStoreFileWithNoneToNone</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -339,9 +369,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testWithoutAnExistingTableAndCreateTableSetToNo()">testWithoutAnExistingTableAndCreateTableSetToNo</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testTagsSurviveBulkLoadSplit()">testTagsSurviveBulkLoadSplit</a></strong>()</code>
+<div class="block">Test that tags survive through a bulk load that needs to split hfiles.</div>
+</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#testWithoutAnExistingTableAndCreateTableSetToNo()">testWithoutAnExistingTableAndCreateTableSetToNo</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#verifyHFile(org.apache.hadoop.fs.Path)">verifyHFile</a></strong>(org.apache.hadoop.fs.Path&nbsp;p)</code>&nbsp;</td>
 </tr>
@@ -367,13 +403,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="tn">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>tn</h4>
+<pre>public&nbsp;org.junit.rules.TestName <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.70">tn</a></pre>
+</li>
+</ul>
 <a name="QUALIFIER">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>QUALIFIER</h4>
-<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.63">QUALIFIER</a></pre>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.72">QUALIFIER</a></pre>
 </li>
 </ul>
 <a name="FAMILY">
@@ -382,7 +427,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>FAMILY</h4>
-<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.64">FAMILY</a></pre>
+<pre>private static final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.73">FAMILY</a></pre>
 </li>
 </ul>
 <a name="NAMESPACE">
@@ -391,7 +436,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>NAMESPACE</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.65">NAMESPACE</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.74">NAMESPACE</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TestLoadIncrementalHFiles.NAMESPACE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -401,7 +446,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>EXPECTED_MSG_FOR_NON_EXISTING_FAMILY</h4>
-<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.67">EXPECTED_MSG_FOR_NON_EXISTING_FAMILY</a></pre>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.76">EXPECTED_MSG_FOR_NON_EXISTING_FAMILY</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TestLoadIncrementalHFiles.EXPECTED_MSG_FOR_NON_EXISTING_FAMILY">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -411,7 +456,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>MAX_FILES_PER_REGION_PER_FAMILY</h4>
-<pre>static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.68">MAX_FILES_PER_REGION_PER_FAMILY</a></pre>
+<pre>static final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.77">MAX_FILES_PER_REGION_PER_FAMILY</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TestLoadIncrementalHFiles.MAX_FILES_PER_REGION_PER_FAMILY">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -421,7 +466,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>SPLIT_KEYS</h4>
-<pre>private static final&nbsp;byte[][] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.70">SPLIT_KEYS</a></pre>
+<pre>private static final&nbsp;byte[][] <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.79">SPLIT_KEYS</a></pre>
 </li>
 </ul>
 <a name="util">
@@ -430,7 +475,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>util</h4>
-<pre>static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.75">util</a></pre>
+<pre>static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.84">util</a></pre>
 </li>
 </ul>
 </li>
@@ -447,7 +492,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestLoadIncrementalHFiles</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.62">TestLoadIncrementalHFiles</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.68">TestLoadIncrementalHFiles</a>()</pre>
 </li>
 </ul>
 </li>
@@ -464,7 +509,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setUpBeforeClass</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.78">setUpBeforeClass</a>()
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.87">setUpBeforeClass</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -476,7 +521,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setupNamespace</h4>
-<pre>protected static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.88">setupNamespace</a>()
+<pre>protected static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.100">setupNamespace</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -488,7 +533,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>tearDownAfterClass</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.93">tearDownAfterClass</a>()
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.105">tearDownAfterClass</a>()
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -500,7 +545,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSimpleLoad</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.102">testSimpleLoad</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.114">testSimpleLoad</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test case that creates some regions and loads
  HFiles that fit snugly inside those regions</div>
@@ -514,7 +559,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionCrossingLoad</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.115">testRegionCrossingLoad</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.127">testRegionCrossingLoad</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test case that creates some regions and loads
  HFiles that cross the boundaries of those regions</div>
@@ -528,7 +573,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionCrossingRowBloom</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.127">testRegionCrossingRowBloom</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.139">testRegionCrossingRowBloom</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test loading into a column family that has a ROW bloom filter.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -541,7 +586,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionCrossingRowColBloom</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.139">testRegionCrossingRowColBloom</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.151">testRegionCrossingRowColBloom</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test loading into a column family that has a ROWCOL bloom filter.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -554,7 +599,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSimpleHFileSplit</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.152">testSimpleHFileSplit</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.164">testSimpleHFileSplit</a>()
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test case that creates some regions and loads HFiles that have
  different region boundaries than the table pre-split.</div>
@@ -568,7 +613,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionCrossingHFileSplit</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.170">testRegionCrossingHFileSplit</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.182">testRegionCrossingHFileSplit</a>()
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test case that creates some regions and loads HFiles that cross the boundaries
  and have different region boundaries than the table pre-split.</div>
@@ -582,7 +627,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionCrossingHFileSplitRowBloom</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.179">testRegionCrossingHFileSplitRowBloom</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.191">testRegionCrossingHFileSplitRowBloom</a>()
                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test case that creates some regions and loads HFiles that cross the boundaries
  have a ROW bloom filter and a different region boundaries than the table pre-split.</div>
@@ -596,7 +641,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionCrossingHFileSplitRowColBloom</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.188">testRegionCrossingHFileSplitRowColBloom</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.200">testRegionCrossingHFileSplitRowColBloom</a>()
                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test case that creates some regions and loads HFiles that cross the boundaries
  have a ROWCOL bloom filter and a different region boundaries than the table pre-split.</div>
@@ -610,7 +655,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitALot</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.193">testSplitALot</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.205">testSplitALot</a>()
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -622,10 +667,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionCrossingHFileSplit</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.214">testRegionCrossingHFileSplit</a>(org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.226">testRegionCrossingHFileSplit</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType)
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="buildHTD(org.apache.hadoop.hbase.TableName, org.apache.hadoop.hbase.regionserver.BloomType)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildHTD</h4>
+<pre>private&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HTableDescriptor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.239">buildHTD</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType)</pre>
 </li>
 </ul>
 <a name="runTest(java.lang.String, org.apache.hadoop.hbase.regionserver.BloomType, byte[][][])">
@@ -634,8 +689,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>runTest</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.227">runTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
-           org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.247">runTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
+           <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType,
            byte[][][]&nbsp;hfileRanges)
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -648,8 +703,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>runTest</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.232">runTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
-           org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.252">runTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
+           <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType,
            byte[][]&nbsp;tableSplitKeys,
            byte[][][]&nbsp;hfileRanges)
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
@@ -663,9 +718,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>runTest</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.246">runTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
-           org.apache.hadoop.hbase.TableName&nbsp;tableName,
-           org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.266">runTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
+           <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+           <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType,
            boolean&nbsp;preCreateTable,
            byte[][]&nbsp;tableSplitKeys,
            byte[][][]&nbsp;hfileRanges)
@@ -680,13 +735,29 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>runTest</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.255">runTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
-           org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd,
-           org.apache.hadoop.hbase.regionserver.BloomType&nbsp;bloomType,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.272">runTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;testName,
+           <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HTableDescriptor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
+           <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/BloomType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bloomType,
            boolean&nbsp;preCreateTable,
            byte[][]&nbsp;tableSplitKeys,
            byte[][][]&nbsp;hfileRanges)
               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testTagsSurviveBulkLoadSplit()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testTagsSurviveBulkLoadSplit</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.324">testTagsSurviveBulkLoadSplit</a>()
+                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Test that tags survive through a bulk load that needs to split hfiles.
+
+ This test depends on the "hbase.client.rpc.codec" =  KeyValueCodecWithTags so that the client
+ can get tags in the responses.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -697,7 +768,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNonexistentColumnFamilyLoad</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.304">testNonexistentColumnFamilyLoad</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.366">testNonexistentColumnFamilyLoad</a>()
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test loading into a column family that does not exist.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -710,7 +781,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNonHfileFolderWithUnmatchedFamilyName</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.333">testNonHfileFolderWithUnmatchedFamilyName</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.395">testNonHfileFolderWithUnmatchedFamilyName</a>()
                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -722,7 +793,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNonHfileFolder</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.338">testNonHfileFolder</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.400">testNonHfileFolder</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -734,7 +805,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNonHfileFolder</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.347">testNonHfileFolder</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.409">testNonHfileFolder</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
                       boolean&nbsp;preCreateTable)
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Write a random data file and a non-file in a dir with a valid family name
@@ -750,7 +821,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createRandomDataFile</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.382">createRandomDataFile</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.444">createRandomDataFile</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                         org.apache.hadoop.fs.Path&nbsp;path,
                         int&nbsp;size)
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -764,8 +835,69 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitStoreFile</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.403">testSplitStoreFile</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.465">testSplitStoreFile</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testSplitStoreFileWithNoneToNone()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testSplitStoreFileWithNoneToNone</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.488">testSplitStoreFileWithNoneToNone</a>()
+                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testSplitStoreFileWithEncodedToEncoded()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testSplitStoreFileWithEncodedToEncoded</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.493">testSplitStoreFileWithEncodedToEncoded</a>()
+                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testSplitStoreFileWithEncodedToNone()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testSplitStoreFileWithEncodedToNone</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.498">testSplitStoreFileWithEncodedToNone</a>()
+                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testSplitStoreFileWithNoneToEncoded()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testSplitStoreFileWithNoneToEncoded</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.503">testSplitStoreFileWithNoneToEncoded</a>()
+                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testSplitStoreFileWithDifferentEncoding(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding, org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testSplitStoreFileWithDifferentEncoding</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.507">testSplitStoreFileWithDifferentEncoding</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;bulkloadEncoding,
+                                           <a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;cfEncoding)
+                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -776,7 +908,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyHFile</h4>
-<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.425">verifyHFile</a>(org.apache.hadoop.fs.Path&nbsp;p)
+<pre>private&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.532">verifyHFile</a>(org.apache.hadoop.fs.Path&nbsp;p)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -788,7 +920,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>addStartEndKeysForTest</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.441">addStartEndKeysForTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util">TreeMap</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;map,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.548">addStartEndKeysForTest</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util">TreeMap</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;map,
                           byte[]&nbsp;first,
                           byte[]&nbsp;last)</pre>
 </li>
@@ -799,7 +931,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testInferBoundaries</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.450">testInferBoundaries</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.557">testInferBoundaries</a>()</pre>
 </li>
 </ul>
 <a name="testLoadTooMayHFiles()">
@@ -808,7 +940,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testLoadTooMayHFiles</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.507">testLoadTooMayHFiles</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.614">testLoadTooMayHFiles</a>()
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -820,7 +952,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testWithoutAnExistingTableAndCreateTableSetToNo</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.532">testWithoutAnExistingTableAndCreateTableSetToNo</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.639">testWithoutAnExistingTableAndCreateTableSetToNo</a>()
                                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -832,7 +964,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>testTableWithCFNameStartWithUnderScore</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.541">testTableWithCFNameStartWithUnderScore</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.html#line.648">testTableWithCFNameStartWithUnderScore</a>()
                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -905,6 +1037,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -111,7 +111,7 @@
 <br>
 <pre>@InterfaceAudience.Public
 @InterfaceStability.Stable
-public class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.49">TableInputFormat</a>
+public class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.50">TableInputFormat</a>
 extends <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html" title="class in org.apache.hadoop.hbase.mapreduce">TableInputFormatBase</a>
 implements org.apache.hadoop.conf.Configurable</pre>
 <div class="block">Convert HBase tabular data into a format that is consumable by Map/Reduce.</div>
@@ -271,28 +271,35 @@ implements org.apache.hadoop.conf.Configurable</pre>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#createScanFromConfiguration(org.apache.hadoop.conf.Configuration)">createScanFromConfiguration</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
+<div class="block">Sets up a <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client"><code>Scan</code></a> instance, applying settings from the configuration property
+ constants defined in <code>TableInputFormat</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#getConf()">getConf</a></strong>()</code>
 <div class="block">Returns the current configuration.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.mapreduce.InputSplit&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#getSplits(org.apache.hadoop.mapreduce.JobContext)">getSplits</a></strong>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)</code>
 <div class="block">Calculates the splits that will serve as input for the map tasks.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;byte[][],byte[][]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#getStartEndKeys()">getStartEndKeys</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#initialize(org.apache.hadoop.mapreduce.JobContext)">initialize</a></strong>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)</code>
 <div class="block">Handle subclass specific set up.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#setConf(org.apache.hadoop.conf.Configuration)">setConf</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;configuration)</code>
 <div class="block">Sets the configuration.</div>
@@ -333,7 +340,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>INPUT_TABLE</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.56">INPUT_TABLE</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.57">INPUT_TABLE</a></pre>
 <div class="block">Job parameter that specifies the input table.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.INPUT_TABLE">Constant Field Values</a></dd></dl>
 </li>
@@ -344,7 +351,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.65">SCAN</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.66">SCAN</a></pre>
 <div class="block">Base-64 encoded scanner. All other SCAN_ confs are ignored if this is specified.
  See <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableMapReduceUtil.html#convertScanToString(org.apache.hadoop.hbase.client.Scan)"><code>TableMapReduceUtil.convertScanToString(Scan)</code></a> for more details.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN">Constant Field Values</a></dd></dl>
@@ -356,7 +363,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_ROW_START</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.67">SCAN_ROW_START</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.68">SCAN_ROW_START</a></pre>
 <div class="block">Scan start row</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_ROW_START">Constant Field Values</a></dd></dl>
 </li>
@@ -367,7 +374,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_ROW_STOP</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.69">SCAN_ROW_STOP</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.70">SCAN_ROW_STOP</a></pre>
 <div class="block">Scan stop row</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_ROW_STOP">Constant Field Values</a></dd></dl>
 </li>
@@ -378,7 +385,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_COLUMN_FAMILY</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.71">SCAN_COLUMN_FAMILY</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.72">SCAN_COLUMN_FAMILY</a></pre>
 <div class="block">Column Family to Scan</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_COLUMN_FAMILY">Constant Field Values</a></dd></dl>
 </li>
@@ -389,7 +396,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_COLUMNS</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.73">SCAN_COLUMNS</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.74">SCAN_COLUMNS</a></pre>
 <div class="block">Space delimited list of columns and column families to scan.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_COLUMNS">Constant Field Values</a></dd></dl>
 </li>
@@ -400,7 +407,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_TIMESTAMP</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.75">SCAN_TIMESTAMP</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.76">SCAN_TIMESTAMP</a></pre>
 <div class="block">The timestamp used to filter columns with a specific timestamp.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_TIMESTAMP">Constant Field Values</a></dd></dl>
 </li>
@@ -411,7 +418,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_TIMERANGE_START</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.77">SCAN_TIMERANGE_START</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.78">SCAN_TIMERANGE_START</a></pre>
 <div class="block">The starting timestamp used to filter columns with a specific range of versions.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_TIMERANGE_START">Constant Field Values</a></dd></dl>
 </li>
@@ -422,7 +429,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_TIMERANGE_END</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.79">SCAN_TIMERANGE_END</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.80">SCAN_TIMERANGE_END</a></pre>
 <div class="block">The ending timestamp used to filter columns with a specific range of versions.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_TIMERANGE_END">Constant Field Values</a></dd></dl>
 </li>
@@ -433,7 +440,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_MAXVERSIONS</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.81">SCAN_MAXVERSIONS</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.82">SCAN_MAXVERSIONS</a></pre>
 <div class="block">The maximum number of version to return.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_MAXVERSIONS">Constant Field Values</a></dd></dl>
 </li>
@@ -444,7 +451,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_CACHEBLOCKS</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.83">SCAN_CACHEBLOCKS</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.84">SCAN_CACHEBLOCKS</a></pre>
 <div class="block">Set to false to disable server-side caching of blocks for this scan.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_CACHEBLOCKS">Constant Field Values</a></dd></dl>
 </li>
@@ -455,7 +462,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_CACHEDROWS</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.85">SCAN_CACHEDROWS</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.86">SCAN_CACHEDROWS</a></pre>
 <div class="block">The number of rows for caching that will be passed to scanners.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_CACHEDROWS">Constant Field Values</a></dd></dl>
 </li>
@@ -466,7 +473,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>SCAN_BATCHSIZE</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.87">SCAN_BATCHSIZE</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.88">SCAN_BATCHSIZE</a></pre>
 <div class="block">Set the maximum number of values to return for each call to next().</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SCAN_BATCHSIZE">Constant Field Values</a></dd></dl>
 </li>
@@ -477,7 +484,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>SHUFFLE_MAPS</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.89">SHUFFLE_MAPS</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.90">SHUFFLE_MAPS</a></pre>
 <div class="block">Specify if we have to shuffle the map tasks.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.mapreduce.TableInputFormat.SHUFFLE_MAPS">Constant Field Values</a></dd></dl>
 </li>
@@ -496,7 +503,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TableInputFormat</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.49">TableInputFormat</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.50">TableInputFormat</a>()</pre>
 </li>
 </ul>
 </li>
@@ -513,7 +520,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getConf</h4>
-<pre>public&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.101">getConf</a>()</pre>
+<pre>public&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.102">getConf</a>()</pre>
 <div class="block">Returns the current configuration.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -527,7 +534,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setConf</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.114">setConf</a>(org.apache.hadoop.conf.Configuration&nbsp;configuration)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.117">setConf</a>(org.apache.hadoop.conf.Configuration&nbsp;configuration)</pre>
 <div class="block">Sets the configuration. This is used to set the details for the table to
  be scanned.</div>
 <dl>
@@ -537,13 +544,33 @@ implements org.apache.hadoop.conf.Configurable</pre>
    org.apache.hadoop.conf.Configuration)</code></dd></dl>
 </li>
 </ul>
+<a name="createScanFromConfiguration(org.apache.hadoop.conf.Configuration)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createScanFromConfiguration</h4>
+<pre>public static&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.149">createScanFromConfiguration</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets up a <a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client"><code>Scan</code></a> instance, applying settings from the configuration property
+ constants defined in <code>TableInputFormat</code>.  This allows specifying things such as:
+ <ul>
+   <li>start and stop rows</li>
+   <li>column qualifiers or families</li>
+   <li>timestamps or timerange</li>
+   <li>scanner caching and batch size</li>
+ </ul></div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
 <a name="initialize(org.apache.hadoop.mapreduce.JobContext)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>initialize</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.178">initialize</a>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.197">initialize</a>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TableInputFormatBase.html#initialize(org.apache.hadoop.mapreduce.JobContext)">TableInputFormatBase</a></code></strong></div>
 <div class="block">Handle subclass specific set up.
@@ -571,7 +598,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>addColumns</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.219">addColumns</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.238">addColumns</a>(<a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
               byte[][]&nbsp;columns)</pre>
 <div class="block">Adds an array of columns specified using old format, family:qualifier.
  <p>
@@ -586,7 +613,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getSplits</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.mapreduce.InputSplit&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.236">getSplits</a>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.mapreduce.InputSplit&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.255">getSplits</a>(org.apache.hadoop.mapreduce.JobContext&nbsp;context)
                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Calculates the splits that will serve as input for the map tasks. The
  number of splits matches the number of regions in a table. Splits are shuffled if
@@ -607,7 +634,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getStartEndKeys</h4>
-<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;byte[][],byte[][]&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.258">getStartEndKeys</a>()
+<pre>protected&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;byte[][],byte[][]&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.277">getStartEndKeys</a>()
                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
@@ -622,7 +649,7 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>configureSplitTable</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.274">configureSplitTable</a>(org.apache.hadoop.mapreduce.Job&nbsp;job,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TableInputFormat.html#line.293">configureSplitTable</a>(org.apache.hadoop.mapreduce.Job&nbsp;job,
                        <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</pre>
 <div class="block">Sets split table in map-reduce job.</div>
 </li>
@@ -694,6 +721,6 @@ implements org.apache.hadoop.conf.Configurable</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

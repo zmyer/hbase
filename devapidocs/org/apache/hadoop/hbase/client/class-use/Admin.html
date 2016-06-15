@@ -92,29 +92,51 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.replication">org.apache.hadoop.hbase.replication</a></td>
+<td class="colLast">
+<div class="block">Multi Cluster Replication</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.rest">org.apache.hadoop.hbase.rest</a></td>
 <td class="colLast">
 <div class="block">HBase REST</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.rest.model">org.apache.hadoop.hbase.rest.model</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.thrift">org.apache.hadoop.hbase.thrift</a></td>
 <td class="colLast">
 <div class="block">Provides an HBase <a href="http://incubator.apache.org/thrift/">Thrift</a>
 service.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.tool">org.apache.hadoop.hbase.tool</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
 <td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hbase.archetypes.exemplars.client">org.apache.hbase.archetypes.exemplars.client</a></td>
+<td class="colLast">
+<div class="block">This package provides fully-functional exemplar Java code demonstrating
+ simple usage of the hbase-client API, for incorporation into a Maven
+ archetype with hbase-client dependency.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hbase.archetypes.exemplars.shaded_client">org.apache.hbase.archetypes.exemplars.shaded_client</a></td>
+<td class="colLast">
+<div class="block">This package provides fully-functional exemplar Java code demonstrating
+ simple usage of the hbase-client API, for incorporation into a Maven
+ archetype with hbase-shaded-client dependency.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -152,13 +174,6 @@ service.</div>
 <td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#getAdmin()">getAdmin</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></code></td>
-<td class="colLast"><span class="strong">HConnection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HConnection.html#getAdmin()">getAdmin</a></strong>()</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
-<div class="block">Retrieve an Admin implementation to administer an HBase cluster.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></code></td>
 <td class="colLast"><span class="strong">Connection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html#getAdmin()">getAdmin</a></strong>()</code>
 <div class="block">Retrieve an Admin implementation to administer an HBase cluster.</div>
@@ -246,8 +261,8 @@ service.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">SplitNormalizationPlan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/SplitNormalizationPlan.html#execute(org.apache.hadoop.hbase.client.Admin)">execute</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>
-<div class="block">Executes normalization plan on cluster (does actual splitting/merging work).</div>
+<td class="colLast"><span class="strong">EmptyNormalizationPlan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/EmptyNormalizationPlan.html#execute(org.apache.hadoop.hbase.client.Admin)">execute</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>
+<div class="block">No-op for empty plan.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -264,9 +279,27 @@ service.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">EmptyNormalizationPlan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/EmptyNormalizationPlan.html#execute(org.apache.hadoop.hbase.client.Admin)">execute</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>
-<div class="block">No-op for empty plan.</div>
+<td class="colLast"><span class="strong">SplitNormalizationPlan.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/SplitNormalizationPlan.html#execute(org.apache.hadoop.hbase.client.Admin)">execute</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>
+<div class="block">Executes normalization plan on cluster (does actual splitting/merging work).</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.replication">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a> in <a href="../../../../../../org/apache/hadoop/hbase/replication/package-summary.html">org.apache.hadoop.hbase.replication</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/replication/package-summary.html">org.apache.hadoop.hbase.replication</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></code></td>
+<td class="colLast"><span class="strong">ReplicationTableBase.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationTableBase.html#admin">admin</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -440,20 +473,20 @@ service.</div>
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></code></td>
-<td class="colLast"><span class="strong">ConnectionCache.ConnectionInfo.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/ConnectionCache.ConnectionInfo.html#admin">admin</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></code></td>
-<td class="colLast"><span class="strong">HBaseFsck.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.html#admin">admin</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></code></td>
 <td class="colLast"><span class="strong">RegionMover.MoveWithAck.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/RegionMover.MoveWithAck.html#admin">admin</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></code></td>
 <td class="colLast"><span class="strong">RegionMover.MoveWithoutAck.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/RegionMover.MoveWithoutAck.html#admin">admin</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></code></td>
+<td class="colLast"><span class="strong">HBaseFsck.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/HBaseFsck.html#admin">admin</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></code></td>
+<td class="colLast"><span class="strong">ConnectionCache.ConnectionInfo.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/ConnectionCache.ConnectionInfo.html#admin">admin</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -588,6 +621,76 @@ service.</div>
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hbase.archetypes.exemplars.client">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a> in <a href="../../../../../../org/apache/hbase/archetypes/exemplars/client/package-summary.html">org.apache.hbase.archetypes.exemplars.client</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hbase/archetypes/exemplars/client/package-summary.html">org.apache.hbase.archetypes.exemplars.client</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><span class="strong">HelloHBase.</span><code><strong><a href="../../../../../../org/apache/hbase/archetypes/exemplars/client/HelloHBase.html#createNamespaceAndTable(org.apache.hadoop.hbase.client.Admin)">createNamespaceAndTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>
+<div class="block">Invokes Admin#createNamespace and Admin#createTable to create a namespace
+ with a table that has one column-family.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><span class="strong">HelloHBase.</span><code><strong><a href="../../../../../../org/apache/hbase/archetypes/exemplars/client/HelloHBase.html#deleteNamespaceAndTable(org.apache.hadoop.hbase.client.Admin)">deleteNamespaceAndTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>
+<div class="block">Invokes Admin#disableTable, Admin#deleteTable, and Admin#deleteNamespace to
+ disable/delete Table and delete Namespace.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static boolean</code></td>
+<td class="colLast"><span class="strong">HelloHBase.</span><code><strong><a href="../../../../../../org/apache/hbase/archetypes/exemplars/client/HelloHBase.html#namespaceExists(org.apache.hadoop.hbase.client.Admin,%20java.lang.String)">namespaceExists</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespaceName)</code>
+<div class="block">Checks to see whether a namespace exists.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hbase.archetypes.exemplars.shaded_client">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a> in <a href="../../../../../../org/apache/hbase/archetypes/exemplars/shaded_client/package-summary.html">org.apache.hbase.archetypes.exemplars.shaded_client</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hbase/archetypes/exemplars/shaded_client/package-summary.html">org.apache.hbase.archetypes.exemplars.shaded_client</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><span class="strong">HelloHBase.</span><code><strong><a href="../../../../../../org/apache/hbase/archetypes/exemplars/shaded_client/HelloHBase.html#createNamespaceAndTable(org.apache.hadoop.hbase.client.Admin)">createNamespaceAndTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>
+<div class="block">Invokes Admin#createNamespace and Admin#createTable to create a namespace
+ with a table that has one column-family.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) static void</code></td>
+<td class="colLast"><span class="strong">HelloHBase.</span><code><strong><a href="../../../../../../org/apache/hbase/archetypes/exemplars/shaded_client/HelloHBase.html#deleteNamespaceAndTable(org.apache.hadoop.hbase.client.Admin)">deleteNamespaceAndTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>
+<div class="block">Invokes Admin#disableTable, Admin#deleteTable, and Admin#deleteNamespace to
+ disable/delete Table and delete Namespace.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) static boolean</code></td>
+<td class="colLast"><span class="strong">HelloHBase.</span><code><strong><a href="../../../../../../org/apache/hbase/archetypes/exemplars/shaded_client/HelloHBase.html#namespaceExists(org.apache.hadoop.hbase.client.Admin,%20java.lang.String)">namespaceExists</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html" title="interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespaceName)</code>
+<div class="block">Checks to see whether a namespace exists.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
 </ul>
@@ -637,6 +740,6 @@ service.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -116,7 +116,7 @@
 <td class="colFirst"><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache</a></td>
 <td class="colLast">
 <div class="block">BucketCache uses <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket"><code>BucketAllocator</code></a> to allocate/free blocks, and uses
- <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html#ramCache"><code>BucketCache.ramCache</code></a> and <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html#backingMap"><code>BucketCache.backingMap</code></a> in order to
+ BucketCache#ramCache and BucketCache#backingMap in order to
  determine if a given element is in the cache.</div>
 </td>
 </tr>
@@ -146,7 +146,7 @@
 <td class="colFirst"><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/ByteBufferIOEngine.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">ByteBufferIOEngine</a></td>
 <td class="colLast">
 <div class="block">IO engine that stores data in memory using an array of ByteBuffers
- <a href="../../../../../../../org/apache/hadoop/hbase/util/ByteBufferArray.html" title="class in org.apache.hadoop.hbase.util"><code>ByteBufferArray</code></a></div>
+ <a href="../../../../../../../org/apache/hadoop/hbase/util/ByteBufferArray.html" title="class in org.apache.hadoop.hbase.util"><code>ByteBufferArray</code></a>.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -163,6 +163,13 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/FileMmapEngine.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">FileMmapEngine</a></td>
+<td class="colLast">
+<div class="block">IO engine that stores data to a file on the local file system using memory mapping
+ mechanism</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/UniqueIndexMap.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">UniqueIndexMap</a>&lt;T&gt;</td>
 <td class="colLast">
 <div class="block">Map from type T to int and vice-versa.</div>
@@ -249,6 +256,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

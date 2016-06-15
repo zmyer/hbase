@@ -100,7 +100,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.87">TestHBaseFsckOneRS</a>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.102">TestHBaseFsckOneRS</a>
 extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html" title="class in org.apache.hadoop.hbase.util">BaseTestHBaseFsck</a></pre>
 </li>
 </ul>
@@ -189,67 +189,78 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testCleanUpDaughtersNotInMetaAfterFailedSplit()">testCleanUpDaughtersNotInMetaAfterFailedSplit</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testCoveredStartKey()">testCoveredStartKey</a></strong>()</code>
 <div class="block">This creates and fixes a bad table where a region overlaps two regions --
  a start key contained in another region and its end key is contained in
  yet another region.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testDegenerateRegions()">testDegenerateRegions</a></strong>()</code>
 <div class="block">This creates and fixes a bad table with regions that has startkey == endkey</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testErrorReporter()">testErrorReporter</a></strong>()</code>
 <div class="block">Test pluggable error reporter.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testFixAssignmentsAndNoHdfsChecking()">testFixAssignmentsAndNoHdfsChecking</a></strong>()</code>
 <div class="block">Test -noHdfsChecking option can detect and fix assignments issue.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testFixByTable()">testFixByTable</a></strong>()</code>
 <div class="block">This creates two tables and mess both of them and fix them one by one</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testFixHdfsHolesNotWorkingWithNoHdfsChecking()">testFixHdfsHolesNotWorkingWithNoHdfsChecking</a></strong>()</code>
 <div class="block">Test -fixHdfsHoles doesn't work with -noHdfsChecking option,
  and -noHdfsChecking can't detect orphan Hdfs region.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testFixMetaNotWorkingWithNoHdfsChecking()">testFixMetaNotWorkingWithNoHdfsChecking</a></strong>()</code>
 <div class="block">Test -noHdfsChecking option can detect region is not in meta but deployed.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testHBaseFsckClean()">testHBaseFsckClean</a></strong>()</code>
 <div class="block">This creates a clean table and confirms that the table is clean.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testHbckAfterRegionMerge()">testHbckAfterRegionMerge</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testHbckFixOrphanTable()">testHbckFixOrphanTable</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testHbckThreadpooling()">testHbckThreadpooling</a></strong>()</code>
 <div class="block">Test thread pooling in the case where there are more regions than threads</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testHDFSRegioninfoMissing()">testHDFSRegioninfoMissing</a></strong>()</code>
+<div class="block">This creates and fixes a bad table with a missing region -- hole in meta
+ and data present but .regioninfo missing (an orphan hdfs region)in the fs.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -290,34 +301,61 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testNotInHdfs()">testNotInHdfs</a></strong>()</code>
+<div class="block">This creates and fixes a bad table with a region that is in meta but has
+ no deployment or data hdfs</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testNotInMetaHole()">testNotInMetaHole</a></strong>()</code>
+<div class="block">This creates fixes a bad table with a hole in meta.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testNotInMetaOrDeployedHole()">testNotInMetaOrDeployedHole</a></strong>()</code>
+<div class="block">This creates and fixes a bad table with a region that is missing meta and
+ not assigned to a region server.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testNoVersionFile()">testNoVersionFile</a></strong>()</code>
 <div class="block">when the hbase.version file missing, It is fix the fault.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testOverlapAndOrphan()">testOverlapAndOrphan</a></strong>()</code>
 <div class="block">This creates and fixes a bad table where a region is completely contained
  by another region, and there is a hole (sort of like a bad split)</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testParallelHbck()">testParallelHbck</a></strong>()</code>
 <div class="block">This test makes sure that parallel instances of Hbck is disabled.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testParallelWithRetriesHbck()">testParallelWithRetriesHbck</a></strong>()</code>
 <div class="block">This test makes sure that with enough retries both parallel instances
  of hbck will be completed successfully.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testQuarantineCorruptHFile()">testQuarantineCorruptHFile</a></strong>()</code>
 <div class="block">This creates a table and then corrupts an hfile.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testQuarantineMissingFamdir()">testQuarantineMissingFamdir</a></strong>()</code>
+<div class="block">This creates a table and simulates the race situation where a concurrent compaction or split
+ has removed an colfam dir before the corruption checker got to it.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -329,11 +367,24 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testReadOnlyProperty()">testReadOnlyProperty</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testQuarantineMissingRegionDir()">testQuarantineMissingRegionDir</a></strong>()</code>
+<div class="block">This creates a table and simulates the race situation where a concurrent compaction or split
+ has removed a region dir before the corruption checker got to it.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testReadOnlyProperty()">testReadOnlyProperty</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testRegionBoundariesCheck()">testRegionBoundariesCheck</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testRegionBoundariesCheckWithFlushTable()">testRegionBoundariesCheckWithFlushTable</a></strong>()</code>
+<div class="block">test region boundaries and make sure store file had been created.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -364,9 +415,15 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testTableWithNoRegions()">testTableWithNoRegions</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testSplitOrMergeStatWhenHBCKAbort()">testSplitOrMergeStatWhenHBCKAbort</a></strong>()</code>
+<div class="block">See HBASE-15406</div>
+</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testTableWithNoRegions()">testTableWithNoRegions</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#testValidLingeringSplitParent()">testValidLingeringSplitParent</a></strong>()</code>
 <div class="block">Tests that LINGERING_SPLIT_PARENT is not erroneously reported for
@@ -379,7 +436,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.util.<a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html" title="class in org.apache.hadoop.hbase.util">BaseTestHBaseFsck</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#cleanupTable(org.apache.hadoop.hbase.TableName)">cleanupTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#countRows()">countRows</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#createMobFileName(java.lang.String)">createMobFileName</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#createRegion(org.apache.hadoop.hbase.HTableDescriptor,%20byte[],%20byte[])">createRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#createTable(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.HTableDescriptor,%20byte[][])">createTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteMetaRegion(org.apache.hadoop.conf.Configuration,%20boolean,%20boolean,%20boolean)">deleteMetaRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteRegion(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HTableDescriptor,%20byte[],%20byte[],%20boolean,%20boolean,%20boolean)">deleteRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteRegion(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HTableDescriptor,%20byte[],%20byte[],%20boolean,%20boolean,%20boolean,%20boolean,%20int)">deleteRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteTable(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.TableName)">deleteTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteTableDir(org.apache.hadoop.hbase.TableName)">deleteTableDir</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#doQuarantineTest(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.util.HBaseFsck,%20int,%20int,%20int,%20int,%20int)">doQuarantineTest</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#dumpMeta(org.apache.hadoop.hbase.TableName)">dumpMeta</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#findDeployedHSI(java.util.Map,%20org.apache.hadoop.hbase.HRegionInfo)">findDeployedHSI</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#getDeployedHRIs(org.apache.hadoop.hbase.client.Admin)">getDeployedHRIs</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#getFlushedHFile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.TableName)">getFlushedHFile</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#getFlushedMobFile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.TableName)">getFlushedMobFile</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#setupMobTable(org.apache.hadoop.hbase.TableName)">setupMobTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#setupTable(org.apache.hadoop.hbase.TableName)">setupTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#setupTableWithRegionReplica(org.apache.hadoop.hbase.TableName,%20int)">setupTableWithRegionReplica</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#testCleanUpDaughtersNotInMetaAfterFailedSplit()">testCleanUpDaughtersNotInMetaAfterFailedSplit</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#testHDFSRegioninfoMissing()">testHDFSRegioninfoMissing</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#testNotInHdfs()">testNotInHdfs</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#testNotInMetaHole()">testNotInMetaHole</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#testNotInMetaOrDeployedHole()">testNotInMetaOrDeployedHole</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#testQuarantineMissingFamdir()">testQuarantineMissingFamdir</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#testQuarantineMissingRegionDir()">testQuarantineMissingRegionDir</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#undeployRegion(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.ServerName,%20org.apache.hadoop.hbase.HRegionInfo)">undeployRegion</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#cleanupTable(org.apache.hadoop.hbase.TableName)">cleanupTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#countRows()">countRows</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#countRows(byte[],%20byte[])">countRows</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#createMobFileName(java.lang.String)">createMobFileName</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#createRegion(org.apache.hadoop.hbase.HTableDescriptor,%20byte[],%20byte[])">createRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#createTable(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.HTableDescriptor,%20byte[][])">createTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteMetaRegion(org.apache.hadoop.conf.Configuration,%20boolean,%20boolean,%20boolean)">deleteMetaRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteRegion(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HTableDescriptor,%20byte[],%20byte[],%20boolean,%20boolean,%20boolean)">deleteRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteRegion(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HTableDescriptor,%20byte[],%20byte[],%20boolean,%20boolean,%20boolean,%20boolean,%20int)">deleteRegion</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteTable(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.TableName)">deleteTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#deleteTableDir(org.apache.hadoop.hbase.TableName)">deleteTableDir</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#doQuarantineTest(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.util.HBaseFsck,%20int,%20int,%20int,%20int,%20int)">doQuarantineTest</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#dumpMeta(org.apache.hadoop.hbase.TableName)">dumpMeta</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#findDeployedHSI(java.util.Map,%20org.apache.hadoop.hbase.HRegionInfo)">findDeployedHSI</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#getDeployedHRIs(org.apache.hadoop.hbase.client.Admin)">getDeployedHRIs</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#getFlushedHFile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.TableName)">getFlushedHFile</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#getFlushedMobFile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.TableName)">getFlushedMobFile</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#setupMobTable(org.apache.hadoop.hbase.TableName)">setupMobTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#setupTable(org.apache.hadoop.hbase.TableName)">setupTable</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#setupTableWithRegionReplica(org.apache.hadoop.hbase.TableName,%20int)">setupTableWithRegionReplica</a>, <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.html#undeployRegion(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.ServerName,%20org.apache.hadoop.hbase.HRegionInfo)">undeployRegion</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -408,7 +465,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestHBaseFsckOneRS</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.87">TestHBaseFsckOneRS</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.102">TestHBaseFsckOneRS</a>()</pre>
 </li>
 </ul>
 </li>
@@ -425,7 +482,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>setUpBeforeClass</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.90">setUpBeforeClass</a>()
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.105">setUpBeforeClass</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -437,7 +494,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>tearDownAfterClass</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.123">tearDownAfterClass</a>()
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.137">tearDownAfterClass</a>()
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -449,7 +506,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>setUp</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.131">setUp</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.145">setUp</a>()</pre>
 </li>
 </ul>
 <a name="testHBaseFsckClean()">
@@ -458,7 +515,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testHBaseFsckClean</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.140">testHBaseFsckClean</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.154">testHBaseFsckClean</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates a clean table and confirms that the table is clean.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -471,7 +528,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testHbckThreadpooling</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.164">testHbckThreadpooling</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.178">testHbckThreadpooling</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test thread pooling in the case where there are more regions than threads</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -484,7 +541,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testTableWithNoRegions</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.183">testTableWithNoRegions</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.197">testTableWithNoRegions</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -496,7 +553,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testHbckFixOrphanTable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.216">testHbckFixOrphanTable</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.230">testHbckFixOrphanTable</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -508,7 +565,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testReadOnlyProperty</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.265">testReadOnlyProperty</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.279">testReadOnlyProperty</a>()
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -520,7 +577,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testOverlapAndOrphan</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.285">testOverlapAndOrphan</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.299">testOverlapAndOrphan</a>()
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates and fixes a bad table where a region is completely contained
  by another region, and there is a hole (sort of like a bad split)</div>
@@ -534,7 +591,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testCoveredStartKey</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.330">testCoveredStartKey</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.343">testCoveredStartKey</a>()
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates and fixes a bad table where a region overlaps two regions --
  a start key contained in another region and its end key is contained in
@@ -549,7 +606,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionHole</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.370">testRegionHole</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.382">testRegionHole</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates and fixes a bad table with a missing region -- hole in meta
  and data missing in the fs.</div>
@@ -563,7 +620,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionShouldNotBeDeployed</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.403">testRegionShouldNotBeDeployed</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.415">testRegionShouldNotBeDeployed</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">The region is not deployed when the table is disabled.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -576,7 +633,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testParallelHbck</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.466">testParallelHbck</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.478">testParallelHbck</a>()
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This test makes sure that parallel instances of Hbck is disabled.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -589,7 +646,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testParallelWithRetriesHbck</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.516">testParallelWithRetriesHbck</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.528">testParallelWithRetriesHbck</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This test makes sure that with enough retries both parallel instances
  of hbck will be completed successfully.</div>
@@ -603,8 +660,21 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionBoundariesCheck</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.562">testRegionBoundariesCheck</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.574">testRegionBoundariesCheck</a>()
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testRegionBoundariesCheckWithFlushTable()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testRegionBoundariesCheckWithFlushTable</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.594">testRegionBoundariesCheckWithFlushTable</a>()
+                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">test region boundaries and make sure store file had been created.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -615,7 +685,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testHbckAfterRegionMerge</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.578">testHbckAfterRegionMerge</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.614">testHbckAfterRegionMerge</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -627,7 +697,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testNoHdfsTable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.629">testNoHdfsTable</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.665">testNoHdfsTable</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates entries in hbase:meta with no hdfs data.  This should cleanly
  remove the table.</div>
@@ -641,7 +711,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testNoVersionFile</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.669">testNoVersionFile</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.705">testNoVersionFile</a>()
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">when the hbase.version file missing, It is fix the fault.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -654,7 +724,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testNoTableState</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.687">testNoTableState</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.723">testNoTableState</a>()
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -666,7 +736,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testFixByTable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.715">testFixByTable</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.751">testFixByTable</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates two tables and mess both of them and fix them one by one</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -679,7 +749,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testLingeringSplitParent</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.759">testLingeringSplitParent</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.795">testLingeringSplitParent</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">A split parent in meta, in hdfs, and not deployed</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -692,7 +762,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testValidLingeringSplitParent</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.843">testValidLingeringSplitParent</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.879">testValidLingeringSplitParent</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Tests that LINGERING_SPLIT_PARENT is not erroneously reported for
  valid cases where the daughters are there.</div>
@@ -706,7 +776,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitDaughtersNotInMeta</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.896">testSplitDaughtersNotInMeta</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.932">testSplitDaughtersNotInMeta</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Split crashed after write to hbase:meta finished for the parent region, but
  failed to write daughters (pre HBASE-7721 codebase)</div>
@@ -720,7 +790,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testMissingFirstRegion</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.978">testMissingFirstRegion</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1019">testMissingFirstRegion</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates and fixes a bad table with a missing region which is the 1st region -- hole in
  meta and data missing in the fs.</div>
@@ -734,7 +804,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testRegionDeployedNotInHdfs</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1006">testRegionDeployedNotInHdfs</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1047">testRegionDeployedNotInHdfs</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates and fixes a bad table with a missing region which is the 1st region -- hole in
  meta and data missing in the fs.</div>
@@ -748,7 +818,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testMissingLastRegion</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1034">testMissingLastRegion</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1075">testMissingLastRegion</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates and fixes a bad table with missing last region -- hole in meta and data missing in
  the fs.</div>
@@ -762,7 +832,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testFixAssignmentsAndNoHdfsChecking</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1062">testFixAssignmentsAndNoHdfsChecking</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1103">testFixAssignmentsAndNoHdfsChecking</a>()
                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test -noHdfsChecking option can detect and fix assignments issue.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -775,7 +845,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testFixMetaNotWorkingWithNoHdfsChecking</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1115">testFixMetaNotWorkingWithNoHdfsChecking</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1156">testFixMetaNotWorkingWithNoHdfsChecking</a>()
                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test -noHdfsChecking option can detect region is not in meta but deployed.
  However, it can not fix it without checking Hdfs because we need to get
@@ -790,7 +860,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testFixHdfsHolesNotWorkingWithNoHdfsChecking</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1171">testFixHdfsHolesNotWorkingWithNoHdfsChecking</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1212">testFixHdfsHolesNotWorkingWithNoHdfsChecking</a>()
                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test -fixHdfsHoles doesn't work with -noHdfsChecking option,
  and -noHdfsChecking can't detect orphan Hdfs region.</div>
@@ -804,7 +874,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testQuarantineCorruptHFile</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1232">testQuarantineCorruptHFile</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1272">testQuarantineCorruptHFile</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates a table and then corrupts an hfile.  Hbck should quarantine the file.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -817,7 +887,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testQuarantineMissingHFile</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1273">testQuarantineMissingHFile</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1313">testQuarantineMissingHFile</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates a table and simulates the race situation where a concurrent compaction or split
  has removed an hfile after the corruption checker learned about it.</div>
@@ -831,7 +901,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testDegenerateRegions</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1302">testDegenerateRegions</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1342">testDegenerateRegions</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This creates and fixes a bad table with regions that has startkey == endkey</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -844,7 +914,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testMissingRegionInfoQualifier</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1341">testMissingRegionInfoQualifier</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1380">testMissingRegionInfoQualifier</a>()
                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test mission REGIONINFO_QUALIFIER in hbase:meta</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -857,7 +927,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testErrorReporter</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1393">testErrorReporter</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1432">testErrorReporter</a>()
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test pluggable error reporter. It can be plugged in
  from system property or configuration.</div>
@@ -871,7 +941,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <ul class="blockList">
 <li class="blockList">
 <h4>testCheckTableLocks</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1410">testCheckTableLocks</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1449">testCheckTableLocks</a>()
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -880,11 +950,119 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <a name="testCheckReplication()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testCheckReplication</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1485">testCheckReplication</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1528">testCheckReplication</a>()
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testHDFSRegioninfoMissing()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testHDFSRegioninfoMissing</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1586">testHDFSRegioninfoMissing</a>()
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">This creates and fixes a bad table with a missing region -- hole in meta
+ and data present but .regioninfo missing (an orphan hdfs region)in the fs.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testNotInMetaOrDeployedHole()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testNotInMetaOrDeployedHole</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1623">testNotInMetaOrDeployedHole</a>()
+                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">This creates and fixes a bad table with a region that is missing meta and
+ not assigned to a region server.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testCleanUpDaughtersNotInMetaAfterFailedSplit()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testCleanUpDaughtersNotInMetaAfterFailedSplit</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1659">testCleanUpDaughtersNotInMetaAfterFailedSplit</a>()
+                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testNotInMetaHole()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testNotInMetaHole</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1722">testNotInMetaHole</a>()
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">This creates fixes a bad table with a hole in meta.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testNotInHdfs()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testNotInHdfs</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1762">testNotInHdfs</a>()
+                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">This creates and fixes a bad table with a region that is in meta but has
+ no deployment or data hdfs</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testQuarantineMissingFamdir()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testQuarantineMissingFamdir</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1801">testQuarantineMissingFamdir</a>()
+                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">This creates a table and simulates the race situation where a concurrent compaction or split
+ has removed an colfam dir before the corruption checker got to it.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testQuarantineMissingRegionDir()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testQuarantineMissingRegionDir</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1830">testQuarantineMissingRegionDir</a>()
+                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">This creates a table and simulates the race situation where a concurrent compaction or split
+ has removed a region dir before the corruption checker got to it.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testSplitOrMergeStatWhenHBCKAbort()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>testSplitOrMergeStatWhenHBCKAbort</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/TestHBaseFsckOneRS.html#line.1858">testSplitOrMergeStatWhenHBCKAbort</a>()
+                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">See HBASE-15406</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -956,6 +1134,6 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/BaseTestHBaseFsck.h
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

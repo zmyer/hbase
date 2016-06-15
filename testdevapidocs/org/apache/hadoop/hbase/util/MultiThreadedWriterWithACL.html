@@ -110,7 +110,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.40">MultiThreadedWriterWithACL</a>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.39">MultiThreadedWriterWithACL</a>
 extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter.html" title="class in org.apache.hadoop.hbase.util">MultiThreadedWriter</a></pre>
 <div class="block">MultiThreadedWriter that helps in testing ACL</div>
 </li>
@@ -169,7 +169,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.security.User</code></td>
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/User.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">User</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#userOwner">userOwner</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -210,8 +210,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#MultiThreadedWriterWithACL(org.apache.hadoop.hbase.util.test.LoadTestDataGenerator,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.security.User)">MultiThreadedWriterWithACL</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html" title="class in org.apache.hadoop.hbase.util.test">LoadTestDataGenerator</a>&nbsp;dataGen,
                                                     org.apache.hadoop.conf.Configuration&nbsp;conf,
-                                                    org.apache.hadoop.hbase.TableName&nbsp;tableName,
-                                                    org.apache.hadoop.hbase.security.User&nbsp;userOwner)</code>&nbsp;</td>
+                                                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/User.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">User</a>&nbsp;userOwner)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -234,8 +234,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#recordFailure(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Put,%20long,%20long,%20java.io.IOException)">recordFailure</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-                          org.apache.hadoop.hbase.client.Put&nbsp;put,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#recordFailure(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Put,%20long,%20long,%20java.io.IOException)">recordFailure</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
                           long&nbsp;keyBase,
                           long&nbsp;start,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&nbsp;e)</code>&nbsp;</td>
@@ -295,7 +295,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.42">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.41">LOG</a></pre>
 </li>
 </ul>
 <a name="userOwner">
@@ -304,7 +304,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <ul class="blockListLast">
 <li class="blockList">
 <h4>userOwner</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.security.User <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.43">userOwner</a></pre>
+<pre>private&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/User.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">User</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.42">userOwner</a></pre>
 </li>
 </ul>
 </li>
@@ -321,10 +321,10 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MultiThreadedWriterWithACL</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.45">MultiThreadedWriterWithACL</a>(<a href="../../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html" title="class in org.apache.hadoop.hbase.util.test">LoadTestDataGenerator</a>&nbsp;dataGen,
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.44">MultiThreadedWriterWithACL</a>(<a href="../../../../../org/apache/hadoop/hbase/util/test/LoadTestDataGenerator.html" title="class in org.apache.hadoop.hbase.util.test">LoadTestDataGenerator</a>&nbsp;dataGen,
                           org.apache.hadoop.conf.Configuration&nbsp;conf,
-                          org.apache.hadoop.hbase.TableName&nbsp;tableName,
-                          org.apache.hadoop.hbase.security.User&nbsp;userOwner)
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/User.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">User</a>&nbsp;userOwner)
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -344,7 +344,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <ul class="blockList">
 <li class="blockList">
 <h4>start</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.52">start</a>(long&nbsp;startKey,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.51">start</a>(long&nbsp;startKey,
          long&nbsp;endKey,
          int&nbsp;numThreads)
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -361,7 +361,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <ul class="blockList">
 <li class="blockList">
 <h4>createWriterThreads</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.57">createWriterThreads</a>(int&nbsp;numThreads)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.56">createWriterThreads</a>(int&nbsp;numThreads)
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
@@ -376,8 +376,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <ul class="blockListLast">
 <li class="blockList">
 <h4>recordFailure</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.140">recordFailure</a>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-                 org.apache.hadoop.hbase.client.Put&nbsp;put,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedWriterWithACL.html#line.139">recordFailure</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+                 <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
                  long&nbsp;keyBase,
                  long&nbsp;start,
                  <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&nbsp;e)</pre>
@@ -450,6 +450,6 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedWriter
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

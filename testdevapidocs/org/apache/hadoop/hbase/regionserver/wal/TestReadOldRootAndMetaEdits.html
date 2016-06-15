@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestProtobufLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestSecureWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestSecureAsyncWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/wal/TestReadOldRootAndMetaEdits.html" target="_top">Frames</a></li>
@@ -169,9 +169,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.wal.WAL.Entry</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestReadOldRootAndMetaEdits.html#createAEntry(org.apache.hadoop.hbase.wal.WALKey,%20java.util.List)">createAEntry</a></strong>(org.apache.hadoop.hbase.wal.WALKey&nbsp;walKey,
-                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;kvs)</code>
+<td class="colFirst"><code>private <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.Entry.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WAL.Entry</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestReadOldRootAndMetaEdits.html#createAEntry(org.apache.hadoop.hbase.wal.WALKey,%20java.util.List)">createAEntry</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;walKey,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a>&gt;&nbsp;kvs)</code>
 <div class="block">Creates a WALEdit for the passed KeyValues and returns a WALProvider.Entry instance composed of
  the WALEdit and passed WALKey.</div>
 </td>
@@ -327,8 +327,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>createAEntry</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.wal.WAL.Entry&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/TestReadOldRootAndMetaEdits.html#line.154">createAEntry</a>(org.apache.hadoop.hbase.wal.WALKey&nbsp;walKey,
-                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.KeyValue&gt;&nbsp;kvs)</pre>
+<pre>private&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.Entry.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WAL.Entry</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/TestReadOldRootAndMetaEdits.html#line.154">createAEntry</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;walKey,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a>&gt;&nbsp;kvs)</pre>
 <div class="block">Creates a WALEdit for the passed KeyValues and returns a WALProvider.Entry instance composed of
  the WALEdit and passed WALKey.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>WAL.Entry instance for the passed WALKey and KeyValues</dd></dl>
@@ -361,7 +361,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestProtobufLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestSecureWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestSecureAsyncWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/regionserver/wal/TestReadOldRootAndMetaEdits.html" target="_top">Frames</a></li>
@@ -401,6 +401,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -73,20 +73,33 @@
 <ul>
 <li type="circle">java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang"><span class="strong">Object</span></a>
 <ul>
-<li type="circle">org.apache.hadoop.conf.Configured (implements org.apache.hadoop.conf.Configurable)
+<li type="circle">org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">AbstractFSWAL</span></a>&lt;W&gt; (implements org.apache.hadoop.hbase.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WAL</a>)
 <ul>
-<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/WALPerformanceEvaluation.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">WALPerformanceEvaluation</span></a> (implements org.apache.hadoop.util.Tool)</li>
-</ul>
-</li>
-<li type="circle">org.apache.hadoop.hbase.regionserver.wal.FSHLog (implements org.apache.hadoop.hbase.wal.WAL)
+<li type="circle">org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">FSHLog</span></a>
 <ul>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/FaultyFSLog.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">FaultyFSLog</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/IOTestProvider.IOTestWAL.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">IOTestProvider.IOTestWAL</span></a></li>
 </ul>
 </li>
-<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/IOTestProvider.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">IOTestProvider</span></a> (implements org.apache.hadoop.hbase.wal.WALProvider)</li>
+</ul>
+</li>
+<li type="circle">org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractProtobufLogWriter.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">AbstractProtobufLogWriter</span></a>
+<ul>
+<li type="circle">org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">ProtobufLogWriter</span></a> (implements org.apache.hadoop.hbase.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/FSHLogProvider.Writer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">FSHLogProvider.Writer</a>)
+<ul>
+<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/IOTestProvider.IOTestWriter.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">IOTestProvider.IOTestWriter</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li type="circle">org.apache.hadoop.conf.Configured (implements org.apache.hadoop.conf.Configurable)
+<ul>
+<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/WALPerformanceEvaluation.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">WALPerformanceEvaluation</span></a> (implements org.apache.hadoop.util.Tool)</li>
+</ul>
+</li>
+<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/IOTestProvider.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">IOTestProvider</span></a> (implements org.apache.hadoop.hbase.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALProvider</a>)</li>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestBoundedRegionGroupingStrategy.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestBoundedRegionGroupingStrategy</span></a></li>
-<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestDefaultWALProvider.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestDefaultWALProvider</span></a>
+<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestFSHLogProvider.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestFSHLogProvider</span></a>
 <ul>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestDefaultWALProviderWithHLogKey.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestDefaultWALProviderWithHLogKey</span></a></li>
 </ul>
@@ -96,21 +109,22 @@
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestWALFiltering.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestWALFiltering</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestWALMethods.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestWALMethods</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestWALReaderOnSecureWAL.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestWALReaderOnSecureWAL</span></a></li>
-<li type="circle">org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base (implements org.apache.hadoop.hbase.regionserver.wal.WALActionsListener)
+<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestWALSplit.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestWALSplit</span></a>
+<ul>
+<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestWALSplitCompressed.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestWALSplitCompressed</span></a></li>
+</ul>
+</li>
+<li type="circle">java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang"><span class="strong">Thread</span></a> (implements java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>)
+<ul>
+<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestWALSplit.ZombieLastLogWriterRegionServer.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestWALSplit.ZombieLastLogWriterRegionServer</span></a></li>
+</ul>
+</li>
+<li type="circle">org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal"><span class="strong">WALActionsListener.Base</span></a> (implements org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a>)
 <ul>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestWALFactory.DumbWALActionsListener.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">TestWALFactory.DumbWALActionsListener</span></a></li>
 </ul>
 </li>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/WALPerformanceEvaluation.WALPutBenchmark.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">WALPerformanceEvaluation.WALPutBenchmark</span></a> (implements java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>)</li>
-<li type="circle">org.apache.hadoop.hbase.regionserver.wal.WriterBase (implements org.apache.hadoop.hbase.wal.DefaultWALProvider.Writer)
-<ul>
-<li type="circle">org.apache.hadoop.hbase.regionserver.wal.ProtobufLogWriter
-<ul>
-<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/IOTestProvider.IOTestWriter.html" title="class in org.apache.hadoop.hbase.wal"><span class="strong">IOTestProvider.IOTestWriter</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -122,6 +136,7 @@
 <ul>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/IOTestProvider.AllowedOperations.html" title="enum in org.apache.hadoop.hbase.wal"><span class="strong">IOTestProvider.AllowedOperations</span></a></li>
 <li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/FaultyFSLog.FailureType.html" title="enum in org.apache.hadoop.hbase.wal"><span class="strong">FaultyFSLog.FailureType</span></a></li>
+<li type="circle">org.apache.hadoop.hbase.wal.<a href="../../../../../org/apache/hadoop/hbase/wal/TestWALSplit.Corruptions.html" title="enum in org.apache.hadoop.hbase.wal"><span class="strong">TestWALSplit.Corruptions</span></a></li>
 </ul>
 </li>
 </ul>
@@ -173,6 +188,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

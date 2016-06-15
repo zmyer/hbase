@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueueInfo.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesArguments.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/replication/ReplicationQueues.html" target="_top">Frames</a></li>
@@ -87,14 +87,15 @@
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html" title="class in org.apache.hadoop.hbase.replication">ReplicationQueuesZKImpl</a></dd>
+<dd><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html" title="class in org.apache.hadoop.hbase.replication">ReplicationQueuesZKImpl</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TableBasedReplicationQueuesImpl.html" title="class in org.apache.hadoop.hbase.replication">TableBasedReplicationQueuesImpl</a></dd>
 </dl>
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.32">ReplicationQueues</a></pre>
+public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.33">ReplicationQueues</a></pre>
 <div class="block">This provides an interface for maintaining a region server's replication queues. These queues
- keep track of the WALs that still need to be replicated to remote clusters.</div>
+ keep track of the WALs and HFile references (if hbase.replication.bulkload.enabled is enabled)
+ that still need to be replicated to remote clusters.</div>
 </li>
 </ul>
 </div>
@@ -115,13 +116,26 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#addHFileRefs(java.lang.String,%20java.util.List)">addHFileRefs</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;files)</code>
+<div class="block">Add new hfile references to the queue.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#addLog(java.lang.String,%20java.lang.String)">addLog</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
 <div class="block">Add a new WAL file to the given queue.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#addPeerToHFileRefs(java.lang.String)">addPeerToHFileRefs</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>
+<div class="block">Add a peer to hfile reference queue if peer does not exist.</div>
+</td>
+</tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;</code></td>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#claimQueues(java.lang.String)">claimQueues</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionserver)</code>
 <div class="block">Take ownership for the set of queues belonging to a dead region server.</div>
 </td>
@@ -159,7 +173,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#isThisOurZnode(java.lang.String)">isThisOurZnode</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#isThisOurRegionServer(java.lang.String)">isThisOurRegionServer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionserver)</code>
 <div class="block">Checks if the provided znode is the same as this region server's</div>
 </td>
 </tr>
@@ -171,9 +185,22 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#removeHFileRefs(java.lang.String,%20java.util.List)">removeHFileRefs</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId,
+                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;files)</code>
+<div class="block">Remove hfile references from the queue.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#removeLog(java.lang.String,%20java.lang.String)">removeLog</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
 <div class="block">Remove an WAL file from the given queue.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html#removePeerFromHFileRefs(java.lang.String)">removePeerFromHFileRefs</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</code>
+<div class="block">Remove a peer from hfile reference queue.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -211,7 +238,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.39">init</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serverName)
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.40">init</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serverName)
           throws <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></pre>
 <div class="block">Initialize the region server replication queue interface.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>serverName</code> - The server name of the region server that owns the replication queues this
@@ -226,7 +253,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>removeQueue</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.45">removeQueue</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId)</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.46">removeQueue</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId)</pre>
 <div class="block">Remove a replication queue.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>queueId</code> - a String that identifies the queue.</dd></dl>
 </li>
@@ -237,7 +264,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>addLog</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.52">addLog</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.53">addLog</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)
             throws <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></pre>
 <div class="block">Add a new WAL file to the given queue. If the queue does not exist it is created.</div>
@@ -252,7 +279,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>removeLog</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.59">removeLog</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.60">removeLog</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</pre>
 <div class="block">Remove an WAL file from the given queue.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>queueId</code> - a String that identifies the queue.</dd><dd><code>filename</code> - name of the WAL</dd></dl>
@@ -264,7 +291,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>setLogPosition</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.67">setLogPosition</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.68">setLogPosition</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename,
                   long&nbsp;position)</pre>
 <div class="block">Set the current position for a specific WAL in a given queue.</div>
@@ -277,7 +304,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>getLogPosition</h4>
-<pre>long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.75">getLogPosition</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
+<pre>long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.76">getLogPosition</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId,
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)
                     throws <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></pre>
 <div class="block">Get the current position for a specific WAL in a given queue.</div>
@@ -293,7 +320,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>removeAllQueues</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.80">removeAllQueues</a>()</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.81">removeAllQueues</a>()</pre>
 <div class="block">Remove all replication queues for this region server.</div>
 </li>
 </ul>
@@ -303,10 +330,10 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>getLogsInQueue</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.87">getLogsInQueue</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId)</pre>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.88">getLogsInQueue</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId)</pre>
 <div class="block">Get a list of all WALs in the given queue.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>queueId</code> - a String that identifies the queue</dd>
-<dt><span class="strong">Returns:</span></dt><dd>a list of WALs, null if this region server is dead and has no outstanding queues</dd></dl>
+<dt><span class="strong">Returns:</span></dt><dd>a list of WALs, null if no such queue exists for this server</dd></dl>
 </li>
 </ul>
 <a name="getAllQueues()">
@@ -315,9 +342,9 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>getAllQueues</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.93">getAllQueues</a>()</pre>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.94">getAllQueues</a>()</pre>
 <div class="block">Get a list of all queues for this region server.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>a list of queueIds, null if this region server is dead and has no outstanding queues</dd></dl>
+<dl><dt><span class="strong">Returns:</span></dt><dd>a list of queueIds, an empty list if this region server is dead and has no outstanding queues</dd></dl>
 </li>
 </ul>
 <a name="claimQueues(java.lang.String)">
@@ -326,10 +353,10 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>claimQueues</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.101">claimQueues</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionserver)</pre>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.102">claimQueues</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionserver)</pre>
 <div class="block">Take ownership for the set of queues belonging to a dead region server.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>regionserver</code> - the id of the dead region server</dd>
-<dt><span class="strong">Returns:</span></dt><dd>A SortedMap of the queues that have been claimed, including a SortedSet of WALs in
+<dt><span class="strong">Returns:</span></dt><dd>A Map of the queues that have been claimed, including a Set of WALs in
          each queue. Returns an empty map if no queues were failed-over.</dd></dl>
 </li>
 </ul>
@@ -339,22 +366,74 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <ul class="blockList">
 <li class="blockList">
 <h4>getListOfReplicators</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.108">getListOfReplicators</a>()</pre>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.109">getListOfReplicators</a>()</pre>
 <div class="block">Get a list of all region servers that have outstanding replication queues. These servers could
  be alive, dead or from a previous run of the cluster.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>a list of server names</dd></dl>
 </li>
 </ul>
-<a name="isThisOurZnode(java.lang.String)">
+<a name="isThisOurRegionServer(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isThisOurRegionServer</h4>
+<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.116">isThisOurRegionServer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regionserver)</pre>
+<div class="block">Checks if the provided znode is the same as this region server's</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>regionserver</code> - the id of the region server</dd>
+<dt><span class="strong">Returns:</span></dt><dd>if this is this rs's znode</dd></dl>
+</li>
+</ul>
+<a name="addPeerToHFileRefs(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPeerToHFileRefs</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.123">addPeerToHFileRefs</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)
+                        throws <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></pre>
+<div class="block">Add a peer to hfile reference queue if peer does not exist.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>peerId</code> - peer cluster id to be added</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></code> - if fails to add a peer id to hfile reference queue</dd></dl>
+</li>
+</ul>
+<a name="removePeerFromHFileRefs(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removePeerFromHFileRefs</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.129">removePeerFromHFileRefs</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId)</pre>
+<div class="block">Remove a peer from hfile reference queue.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>peerId</code> - peer cluster id to be removed</dd></dl>
+</li>
+</ul>
+<a name="addHFileRefs(java.lang.String, java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addHFileRefs</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.137">addHFileRefs</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId,
+                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;files)
+                  throws <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></pre>
+<div class="block">Add new hfile references to the queue.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>peerId</code> - peer cluster id to which the hfiles need to be replicated</dd><dd><code>files</code> - list of hfile references to be added</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationException.html" title="class in org.apache.hadoop.hbase.replication">ReplicationException</a></code> - if fails to add a hfile reference</dd></dl>
+</li>
+</ul>
+<a name="removeHFileRefs(java.lang.String, java.util.List)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>isThisOurZnode</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.115">isThisOurZnode</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;znode)</pre>
-<div class="block">Checks if the provided znode is the same as this region server's</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>znode</code> - to check</dd>
-<dt><span class="strong">Returns:</span></dt><dd>if this is this rs's znode</dd></dl>
+<h4>removeHFileRefs</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/ReplicationQueues.html#line.144">removeHFileRefs</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;peerId,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;files)</pre>
+<div class="block">Remove hfile references from the queue.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>peerId</code> - peer cluster id from which this hfile references needs to be removed</dd><dd><code>files</code> - list of hfile references to be removed</dd></dl>
 </li>
 </ul>
 </li>
@@ -384,7 +463,7 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueueInfo.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesClient.html" title="interface in org.apache.hadoop.hbase.replication"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesArguments.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/replication/ReplicationQueues.html" target="_top">Frames</a></li>
@@ -424,6 +503,6 @@ public interface <a href="../../../../../src-html/org/apache/hadoop/hbase/replic
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

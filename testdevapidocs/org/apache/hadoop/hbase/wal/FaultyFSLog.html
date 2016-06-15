@@ -86,10 +86,15 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.regionserver.wal.FSHLog</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">org.apache.hadoop.hbase.regionserver.wal.AbstractFSWAL</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALProvider.Writer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a>&gt;</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">org.apache.hadoop.hbase.regionserver.wal.FSHLog</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.wal.FaultyFSLog</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -100,13 +105,13 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd>org.apache.hadoop.hbase.wal.WAL</dd>
+<dd><a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WAL</a></dd>
 </dl>
 <hr>
 <br>
-<pre>@InterfaceAudience.Private
-public class <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.39">FaultyFSLog</a>
-extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
+<pre><a href="../../../../../../apidocs/org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
+public class <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.38">FaultyFSLog</a>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">FSHLog</a></pre>
 <div class="block">This is a utility class, used by tests, which fails operation specified by FailureType enum</div>
 </li>
 </ul>
@@ -135,8 +140,8 @@ extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.wal.WAL">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.wal.WAL</h3>
-<code>org.apache.hadoop.hbase.wal.WAL.Entry, org.apache.hadoop.hbase.wal.WAL.Reader</code></li>
+<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WAL</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.Entry.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WAL.Entry</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.Reader.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WAL.Reader</a></code></li>
 </ul>
 </li>
 </ul>
@@ -161,8 +166,15 @@ extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.FSHLog">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.FSHLog</h3>
-<code>conf, FIXED_OVERHEAD, fs</code></li>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">FSHLog</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#FIXED_OVERHEAD" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">FIXED_OVERHEAD</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.AbstractFSWAL">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">AbstractFSWAL</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#byWalRegionSequenceIds" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">byWalRegionSequenceIds</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#closeBarrier" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">closeBarrier</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#closed" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">closed</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#conf" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">conf</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#coprocessorHost" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">coprocessorHost</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#DEFAULT_SLOW_SYNC_TIME_MS" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">DEFAULT_SLOW_SYNC_TIME_MS</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#filenum" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">filenum</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#fs" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">fs</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#highestSyncedTxid" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">highestSyncedTxid</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#highestUnsyncedTxid" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">highestUnsyncedTxid</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#listeners" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">listeners</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#logrollsize" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">logrollsize</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#maxLogs" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">maxLogs</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#numEntries" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">numEntries</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#ourFiles" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">ourFiles</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#prefixPathStr" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">prefixPathStr</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#rollWriterLock" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">rollWriterLock</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#sequenceIdAccounting" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">sequenceIdAccounting</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#shutdown" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">shutdown</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#slowSyncNs" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">slowSyncNs</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#totalLogSize" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">totalLogSize</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#walArchiveDir" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">walArchiveDir</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#walDir" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">walDir</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#walFilePrefix" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">walFilePrefix</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#walFileSuffix" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">walFileSuffix</a></code></li>
 </ul>
 </li>
 </ul>
@@ -200,10 +212,9 @@ extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/FaultyFSLog.html#append(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20boolean)">append</a></strong>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd,
-            org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-            org.apache.hadoop.hbase.wal.WALKey&nbsp;key,
-            org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;edits,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/wal/FaultyFSLog.html#append(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20boolean)">append</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;key,
+            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edits,
             boolean&nbsp;inMemstore)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -219,8 +230,15 @@ extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.FSHLog">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.FSHLog</h3>
-<code>abortCacheFlush, afterCreatingZigZagLatch, beforeWaitOnSafePoint, close, completeCacheFlush, computeFilename, createWriterInstance, getCoprocessorHost, getCurrentFileName, getEarliestMemstoreSeqNum, getEarliestMemstoreSeqNum, getFileNumFromFileName, getFiles, getLogFileSize, getNumLogFiles, getNumRolledLogFiles, getWALArchivePath, main, registerWALActionsListener, requestLogRoll, rollWriter, rollWriter, shutdown, startCacheFlush, sync, toString, unregisterWALActionsListener</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">FSHLog</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#afterCreatingZigZagLatch()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">afterCreatingZigZagLatch</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#beforeWaitOnSafePoint()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">beforeWaitOnSafePoint</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#createWriterInstance(org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">createWriterInstance</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#doAppend(org.apache.hadoop.hbase.wal.WALProvider.Writer,%20org.apache.hadoop.hbase.regionserver.wal.FSWALEntry)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">doAppend</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#doReplaceWriter(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.wal.WALProvider.Writer)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">doReplaceWriter</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#doShutdown()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">doShutdown</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#logRollerExited()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">logRollerExited</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#main(java.lang.String[])" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">main</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#sync()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">sync</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.AbstractFSWAL">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">AbstractFSWAL</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#abortCacheFlush(byte[])" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">abortCacheFlush</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#append(W,%20org.apache.hadoop.hbase.regionserver.wal.FSWALEntry)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">append</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#blockOnSync(org.apache.hadoop.hbase.regionserver.wal.SyncFuture)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">blockOnSync</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#close()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">close</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#completeCacheFlush(byte[])" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">completeCacheFlush</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#computeFilename(long)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">computeFilename</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getCoprocessorHost()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getCoprocessorHost</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getCurrentFileName()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getCurrentFileName</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getEarliestMemstoreSeqNum(byte[])" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getEarliestMemstoreSeqNum</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getEarliestMemstoreSeqNum(byte[],%20byte[])" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getEarliestMemstoreSeqNum</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getFileNumFromFileName(org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getFileNumFromFileName</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getFiles()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getFiles</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getLogFileSize()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getLogFileSize</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getNumLogFiles()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getNumLogFiles</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getNumRolledLogFiles()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getNumRolledLogFiles</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getSyncFuture(long,%20org.apache.htrace.Span)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getSyncFuture</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#getWALArchivePath(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">getWALArchivePath</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#postSync(long,%20int)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">postSync</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#registerWALActionsListener(org.apache.hadoop.hbase.regionserver.wal.WALActionsListener)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">registerWALActionsListener</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#requestLogRoll()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">requestLogRoll</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#requestLogRoll(boolean)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">requestLogRoll</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#rollWriter()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">rollWriter</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#rollWriter(boolean)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">rollWriter</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#shutdown()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">shutdown</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#startCacheFlush(byte[],%20java.util.Set)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">startCacheFlush</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#toString()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">toString</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#unregisterWALActionsListener(org.apache.hadoop.hbase.regionserver.wal.WALActionsListener)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">unregisterWALActionsListener</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html?is-external=true#updateStore(byte[],%20byte[],%20java.lang.Long,%20boolean)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">updateStore</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -249,7 +267,7 @@ extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ft</h4>
-<pre><a href="../../../../../org/apache/hadoop/hbase/wal/FaultyFSLog.FailureType.html" title="enum in org.apache.hadoop.hbase.wal">FaultyFSLog.FailureType</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.43">ft</a></pre>
+<pre><a href="../../../../../org/apache/hadoop/hbase/wal/FaultyFSLog.FailureType.html" title="enum in org.apache.hadoop.hbase.wal">FaultyFSLog.FailureType</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.42">ft</a></pre>
 </li>
 </ul>
 </li>
@@ -266,7 +284,7 @@ extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>FaultyFSLog</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.45">FaultyFSLog</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.44">FaultyFSLog</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
            org.apache.hadoop.fs.Path&nbsp;rootDir,
            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;logName,
            org.apache.hadoop.conf.Configuration&nbsp;conf)
@@ -289,7 +307,7 @@ extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setFailureType</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.50">setFailureType</a>(<a href="../../../../../org/apache/hadoop/hbase/wal/FaultyFSLog.FailureType.html" title="enum in org.apache.hadoop.hbase.wal">FaultyFSLog.FailureType</a>&nbsp;fType)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.49">setFailureType</a>(<a href="../../../../../org/apache/hadoop/hbase/wal/FaultyFSLog.FailureType.html" title="enum in org.apache.hadoop.hbase.wal">FaultyFSLog.FailureType</a>&nbsp;fType)</pre>
 </li>
 </ul>
 <a name="sync(long)">
@@ -298,34 +316,33 @@ extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>sync</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.55">sync</a>(long&nbsp;txid)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.54">sync</a>(long&nbsp;txid)
           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>sync</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.wal.WAL</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.html?is-external=true#sync(long)" title="class or interface in org.apache.hadoop.hbase.wal">sync</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WAL</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>sync</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.wal.FSHLog</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#sync(long)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">sync</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">FSHLog</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
-<a name="append(org.apache.hadoop.hbase.HTableDescriptor, org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.wal.WALKey, org.apache.hadoop.hbase.regionserver.wal.WALEdit, boolean)">
+<a name="append(org.apache.hadoop.hbase.HRegionInfo, org.apache.hadoop.hbase.wal.WALKey, org.apache.hadoop.hbase.regionserver.wal.WALEdit, boolean)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>append</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.63">append</a>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd,
-          org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-          org.apache.hadoop.hbase.wal.WALKey&nbsp;key,
-          org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;edits,
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/wal/FaultyFSLog.html#line.62">append</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;key,
+          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edits,
           boolean&nbsp;inMemstore)
             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>append</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.wal.WAL</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.html?is-external=true#append(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20boolean)" title="class or interface in org.apache.hadoop.hbase.wal">append</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WAL.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WAL</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>append</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.wal.FSHLog</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true#append(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20boolean)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">append</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/FSHLog.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">FSHLog</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -397,6 +414,6 @@ extends org.apache.hadoop.hbase.regionserver.wal.FSHLog</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

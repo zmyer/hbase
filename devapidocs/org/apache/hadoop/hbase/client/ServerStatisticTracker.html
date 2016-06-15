@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/client/ScannerTimeoutException.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/SnapshotDescription.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/ServerStatisticTracker.html" target="_top">Frames</a></li>
@@ -93,11 +93,16 @@
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../org/apache/hadoop/hbase/client/StatisticTrackable.html" title="interface in org.apache.hadoop.hbase.client">StatisticTrackable</a></dd>
+</dl>
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ServerStatisticTracker.html#line.34">ServerStatisticTracker</a>
-extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+public class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ServerStatisticTracker.html#line.33">ServerStatisticTracker</a>
+extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../org/apache/hadoop/hbase/client/StatisticTrackable.html" title="interface in org.apache.hadoop.hbase.client">StatisticTrackable</a></pre>
 <div class="block">Tracks the statistics for multiple regions</div>
 </li>
 </ul>
@@ -167,9 +172,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ServerStatisticTracker.html#updateRegionStats(org.apache.hadoop.hbase.ServerName,%20byte[],%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats)">updateRegionStats</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;server,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ServerStatisticTracker.html#updateRegionStats(org.apache.hadoop.hbase.ServerName,%20byte[],%20org.apache.hadoop.hbase.client.RegionLoadStats)">updateRegionStats</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;server,
                                   byte[]&nbsp;region,
-                                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats&nbsp;currentStats)</code>&nbsp;</td>
+                                  <a href="../../../../../org/apache/hadoop/hbase/client/RegionLoadStats.html" title="class in org.apache.hadoop.hbase.client">RegionLoadStats</a>&nbsp;currentStats)</code>
+<div class="block">Update stats per region.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -199,7 +206,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>stats</h4>
-<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="../../../../../org/apache/hadoop/hbase/client/backoff/ServerStatistics.html" title="class in org.apache.hadoop.hbase.client.backoff">ServerStatistics</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ServerStatisticTracker.html#line.36">stats</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentHashMap</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="../../../../../org/apache/hadoop/hbase/client/backoff/ServerStatistics.html" title="class in org.apache.hadoop.hbase.client.backoff">ServerStatistics</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ServerStatisticTracker.html#line.35">stats</a></pre>
 </li>
 </ul>
 </li>
@@ -216,7 +223,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ServerStatisticTracker</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ServerStatisticTracker.html#line.34">ServerStatisticTracker</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ServerStatisticTracker.html#line.33">ServerStatisticTracker</a>()</pre>
 </li>
 </ul>
 </li>
@@ -227,7 +234,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="updateRegionStats(org.apache.hadoop.hbase.ServerName, byte[], org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats)">
+<a name="updateRegionStats(org.apache.hadoop.hbase.ServerName, byte[], org.apache.hadoop.hbase.client.RegionLoadStats)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -235,7 +242,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>updateRegionStats</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ServerStatisticTracker.html#line.39">updateRegionStats</a>(<a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;server,
                      byte[]&nbsp;region,
-                     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats&nbsp;currentStats)</pre>
+                     <a href="../../../../../org/apache/hadoop/hbase/client/RegionLoadStats.html" title="class in org.apache.hadoop.hbase.client">RegionLoadStats</a>&nbsp;currentStats)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/StatisticTrackable.html#updateRegionStats(org.apache.hadoop.hbase.ServerName,%20byte[],%20org.apache.hadoop.hbase.client.RegionLoadStats)">StatisticTrackable</a></code></strong></div>
+<div class="block">Update stats per region.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/client/StatisticTrackable.html#updateRegionStats(org.apache.hadoop.hbase.ServerName,%20byte[],%20org.apache.hadoop.hbase.client.RegionLoadStats)">updateRegionStats</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/client/StatisticTrackable.html" title="interface in org.apache.hadoop.hbase.client">StatisticTrackable</a></code></dd>
+</dl>
 </li>
 </ul>
 <a name="getStats(org.apache.hadoop.hbase.ServerName)">
@@ -292,7 +305,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/client/ScannerTimeoutException.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/SnapshotDescription.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/ServerStatisticTracker.html" target="_top">Frames</a></li>
@@ -332,6 +345,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

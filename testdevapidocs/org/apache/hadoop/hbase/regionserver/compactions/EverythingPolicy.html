@@ -86,13 +86,18 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy</li>
+<li><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</li>
+<li><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.SortedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.SortedCompactionPolicy</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.RatioBasedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.regionserver.compactions.EverythingPolicy</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -106,7 +111,7 @@
 <hr>
 <br>
 <pre>public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html#line.32">EverythingPolicy</a>
-extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</pre>
+extends <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.RatioBasedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</a></pre>
 <div class="block">Test Policy to compact everything every time.</div>
 </li>
 </ul>
@@ -124,7 +129,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy</h3>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">CompactionPolicy</a></h3>
 <code>comConf, storeConfigInfo</code></li>
 </ul>
 </li>
@@ -142,7 +147,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html#EverythingPolicy(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.StoreConfigInformation)">EverythingPolicy</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-                                org.apache.hadoop.hbase.regionserver.StoreConfigInformation&nbsp;storeConfigInfo)</code>
+                                <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreConfigInformation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreConfigInformation</a>&nbsp;storeConfigInfo)</code>
 <div class="block">Constructor.</div>
 </td>
 </tr>
@@ -162,8 +167,8 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>(package private) <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html#applyCompactionPolicy(java.util.ArrayList,%20boolean,%20boolean)">applyCompactionPolicy</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;candidates,
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html#applyCompactionPolicy(java.util.ArrayList,%20boolean,%20boolean)">applyCompactionPolicy</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
                                           boolean&nbsp;mayUseOffPeak,
                                           boolean&nbsp;mayBeStuck)</code>&nbsp;</td>
 </tr>
@@ -172,14 +177,21 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</h3>
-<code><clinit>, getNextMajorCompactTime, isMajorCompaction, needsCompaction, preSelectCompactionForCoprocessor, selectCompaction, throttleCompaction</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.RatioBasedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RatioBasedCompactionPolicy</a></h3>
+<code><clinit>, createCompactionRequest, needsCompaction, setMinThreshold, shouldPerformMajorCompaction</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.SortedCompactionPolicy">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.SortedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">SortedCompactionPolicy</a></h3>
+<code>checkMinFilesCriteria, filterBulk, getCurrentEligibleFiles, getNextMajorCompactTime, preSelectCompactionForCoprocessor, removeExcessFiles, selectCompaction, skipLargeFiles, throttleCompaction</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy</h3>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">CompactionPolicy</a></h3>
 <code>getConf, setConf</code></li>
 </ul>
 <ul class="blockList">
@@ -210,7 +222,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <li class="blockList">
 <h4>EverythingPolicy</h4>
 <pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html#line.39">EverythingPolicy</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-                org.apache.hadoop.hbase.regionserver.StoreConfigInformation&nbsp;storeConfigInfo)</pre>
+                <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreConfigInformation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreConfigInformation</a>&nbsp;storeConfigInfo)</pre>
 <div class="block">Constructor.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - The Conf.</dd><dd><code>storeConfigInfo</code> - Info about the store.</dd></dl>
 </li>
@@ -229,13 +241,13 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <ul class="blockListLast">
 <li class="blockList">
 <h4>applyCompactionPolicy</h4>
-<pre>final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html#line.45">applyCompactionPolicy</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;candidates,
-                                                                              boolean&nbsp;mayUseOffPeak,
-                                                                              boolean&nbsp;mayBeStuck)
-                                                                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/EverythingPolicy.html#line.45">applyCompactionPolicy</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;candidates,
+                                         boolean&nbsp;mayUseOffPeak,
+                                         boolean&nbsp;mayBeStuck)
+                                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>applyCompactionPolicy</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</code></dd>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.RatioBasedCompactionPolicy.html?is-external=true#applyCompactionPolicy(java.util.ArrayList,%20boolean,%20boolean)" title="class or interface in org.apache.hadoop.hbase.regionserver">applyCompactionPolicy</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.RatioBasedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -307,6 +319,6 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

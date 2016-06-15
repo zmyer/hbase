@@ -103,7 +103,15 @@
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesZKImpl.html" title="class in org.apache.hadoop.hbase.replication">ReplicationQueuesZKImpl</a></strong></code>
-<div class="block">This class provides an implementation of the ReplicationQueues interface using Zookeeper.</div>
+<div class="block">This class provides an implementation of the
+ interface using ZooKeeper.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/TableBasedReplicationQueuesImpl.html" title="class in org.apache.hadoop.hbase.replication">TableBasedReplicationQueuesImpl</a></strong></code>
+<div class="block">This class provides an implementation of the ReplicationQueues interface using an HBase table
+ "Replication Table".</div>
 </td>
 </tr>
 </tbody>
@@ -117,9 +125,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueues</a></code></td>
-<td class="colLast"><span class="strong">ReplicationFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationFactory.html#getReplicationQueues(org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.Abortable)">getReplicationQueues</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;zk,
-                                        org.apache.hadoop.conf.Configuration&nbsp;conf,
-                                        <a href="../../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;abortable)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">ReplicationFactory.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationFactory.html#getReplicationQueues(org.apache.hadoop.hbase.replication.ReplicationQueuesArguments)">getReplicationQueues</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueuesArguments.html" title="class in org.apache.hadoop.hbase.replication">ReplicationQueuesArguments</a>&nbsp;args)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -137,11 +143,11 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueues</a></code></td>
-<td class="colLast"><span class="strong">ReplicationSource.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationSource.html#replicationQueues">replicationQueues</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">Replication.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/Replication.html#replicationQueues">replicationQueues</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueues</a></code></td>
-<td class="colLast"><span class="strong">Replication.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/Replication.html#replicationQueues">replicationQueues</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">ReplicationSource.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/ReplicationSource.html#replicationQueues">replicationQueues</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationQueues.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationQueues</a></code></td>
@@ -284,6 +290,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

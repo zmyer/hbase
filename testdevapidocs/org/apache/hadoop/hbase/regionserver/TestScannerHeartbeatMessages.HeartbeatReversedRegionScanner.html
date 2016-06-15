@@ -95,7 +95,7 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a>, org.apache.hadoop.hbase.ipc.RpcCallback, org.apache.hadoop.hbase.regionserver.InternalScanner, org.apache.hadoop.hbase.regionserver.RegionScanner, org.apache.hadoop.hbase.regionserver.Shipper</dd>
+<dd><a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/ipc/RpcCallback.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.ipc">RpcCallback</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/InternalScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Shipper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Shipper</a></dd>
 </dl>
 <dl>
 <dt>Enclosing class:</dt>
@@ -103,7 +103,7 @@
 </dl>
 <hr>
 <br>
-<pre>private static class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.html#line.443">TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner</a>
+<pre>private static class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.html#line.503">TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Custom ReversedRegionScanner that can be configured to sleep between retrievals of row Results
  and/or column family cells</div>
@@ -126,35 +126,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.CellComparator</code></td>
+<td class="colFirst"><code>protected <a href="../../../../../../apidocs/org/apache/hadoop/hbase/CellComparator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">CellComparator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#comparator">comparator</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#copyCellsFromSharedMem">copyCellsFromSharedMem</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#isScan">isScan</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.Cell</code></td>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#joinedContinuationRow">joinedContinuationRow</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.regionserver.KeyValueHeap</code></td>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#joinedHeap">joinedHeap</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">HRegion</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#region">region</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#stopRow">stopRow</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.regionserver.KeyValueHeap</code></td>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#storeHeap">storeHeap</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -172,10 +168,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner(org.apache.hadoop.hbase.client.Scan,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.HRegion,%20boolean)">TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner</a></strong>(org.apache.hadoop.hbase.client.Scan&nbsp;scan,
-                                                                                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.KeyValueScanner&gt;&nbsp;additionalScanners,
-                                                                                                                      org.apache.hadoop.hbase.regionserver.HRegion&nbsp;region,
-                                                                                                                      boolean&nbsp;copyCells)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner(org.apache.hadoop.hbase.client.Scan,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.HRegion)">TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Scan.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                                                                                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;additionalScanners,
+                                                                                                                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;region)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -213,26 +208,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#getMvccReadPoint()">getMvccReadPoint</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.HRegionInfo</code></td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#getRegionInfo()">getRegionInfo</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.regionserver.KeyValueHeap</code></td>
+<td class="colFirst"><code>(package private) <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#getStoreHeapForTesting()">getStoreHeapForTesting</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#incrementCountOfRowsFilteredMetric(org.apache.hadoop.hbase.regionserver.ScannerContext)">incrementCountOfRowsFilteredMetric</a></strong>(org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;arg0)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#incrementCountOfRowsFilteredMetric(org.apache.hadoop.hbase.regionserver.ScannerContext)">incrementCountOfRowsFilteredMetric</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;arg0)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#incrementCountOfRowsScannedMetric(org.apache.hadoop.hbase.regionserver.ScannerContext)">incrementCountOfRowsScannedMetric</a></strong>(org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;arg0)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#incrementCountOfRowsScannedMetric(org.apache.hadoop.hbase.regionserver.ScannerContext)">incrementCountOfRowsScannedMetric</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;arg0)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#initializeKVHeap(java.util.List,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.HRegion)">initializeKVHeap</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.KeyValueScanner&gt;&nbsp;scanners,
-                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.KeyValueScanner&gt;&nbsp;joinedScanners,
-                                org.apache.hadoop.hbase.regionserver.HRegion&nbsp;region)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#initializeKVHeap(java.util.List,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.HRegion)">initializeKVHeap</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;scanners,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;joinedScanners,
+                                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;region)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -240,30 +235,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#isStopRow(org.apache.hadoop.hbase.Cell)">isStopRow</a></strong>(org.apache.hadoop.hbase.Cell&nbsp;arg0)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#isStopRow(org.apache.hadoop.hbase.Cell)">isStopRow</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;arg0)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#next(java.util.List)">next</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;arg0)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#next(java.util.List)">next</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;arg0)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#next(java.util.List,%20org.apache.hadoop.hbase.regionserver.ScannerContext)">next</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;arg0,
-        org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;arg1)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#next(java.util.List,%20org.apache.hadoop.hbase.regionserver.ScannerContext)">next</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;arg0,
+        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;arg1)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#nextRaw(java.util.List)">nextRaw</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;arg0)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#nextRaw(java.util.List)">nextRaw</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;arg0)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#nextRaw(java.util.List,%20org.apache.hadoop.hbase.regionserver.ScannerContext)">nextRaw</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;outResults,
-              org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;context)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#nextRaw(java.util.List,%20org.apache.hadoop.hbase.regionserver.ScannerContext)">nextRaw</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;outResults,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;context)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#nextRow(org.apache.hadoop.hbase.regionserver.ScannerContext,%20org.apache.hadoop.hbase.Cell)">nextRow</a></strong>(org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;arg0,
-              org.apache.hadoop.hbase.Cell&nbsp;arg1)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#nextRow(org.apache.hadoop.hbase.regionserver.ScannerContext,%20org.apache.hadoop.hbase.Cell)">nextRow</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;arg0,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;arg1)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -278,10 +273,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#run()">run</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#setCopyCellsFromSharedMem(boolean)">setCopyCellsFromSharedMem</a></strong>(boolean&nbsp;arg0)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#shipped()">shipped</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -313,7 +304,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>storeHeap</h4>
-<pre>org.apache.hadoop.hbase.regionserver.KeyValueHeap <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">storeHeap</a></pre>
+<pre><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">storeHeap</a></pre>
 </li>
 </ul>
 <a name="joinedHeap">
@@ -322,7 +313,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>joinedHeap</h4>
-<pre>org.apache.hadoop.hbase.regionserver.KeyValueHeap <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">joinedHeap</a></pre>
+<pre><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">joinedHeap</a></pre>
 </li>
 </ul>
 <a name="joinedContinuationRow">
@@ -331,7 +322,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>joinedContinuationRow</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.Cell <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">joinedContinuationRow</a></pre>
+<pre>protected&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">joinedContinuationRow</a></pre>
 </li>
 </ul>
 <a name="isScan">
@@ -358,25 +349,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>region</h4>
-<pre>protected final&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">region</a></pre>
+<pre>protected final&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">HRegion</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">region</a></pre>
 </li>
 </ul>
 <a name="comparator">
 <!--   -->
 </a>
-<ul class="blockList">
-<li class="blockList">
-<h4>comparator</h4>
-<pre>protected final&nbsp;org.apache.hadoop.hbase.CellComparator <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">comparator</a></pre>
-</li>
-</ul>
-<a name="copyCellsFromSharedMem">
-<!--   -->
-</a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>copyCellsFromSharedMem</h4>
-<pre>protected&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">copyCellsFromSharedMem</a></pre>
+<h4>comparator</h4>
+<pre>protected final&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/CellComparator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">CellComparator</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">comparator</a></pre>
 </li>
 </ul>
 </li>
@@ -387,16 +369,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner(org.apache.hadoop.hbase.client.Scan, java.util.List, org.apache.hadoop.hbase.regionserver.HRegion, boolean)">
+<a name="TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner(org.apache.hadoop.hbase.client.Scan, java.util.List, org.apache.hadoop.hbase.regionserver.HRegion)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner</h4>
-<pre><a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#line.444">TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner</a>(org.apache.hadoop.hbase.client.Scan&nbsp;scan,
-                                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.KeyValueScanner&gt;&nbsp;additionalScanners,
-                                                           org.apache.hadoop.hbase.regionserver.HRegion&nbsp;region,
-                                                           boolean&nbsp;copyCells)
+<pre><a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#line.504">TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Scan.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
+                                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;additionalScanners,
+                                                           <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;region)
                                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -416,12 +397,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>nextRaw</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#line.450">nextRaw</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;outResults,
-              org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;context)
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#line.510">nextRaw</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;outResults,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;context)
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>nextRaw</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true#nextRaw(java.util.List,%20org.apache.hadoop.hbase.regionserver.ScannerContext)" title="class or interface in org.apache.hadoop.hbase.regionserver">nextRaw</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -432,9 +413,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>initializeKVHeap</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#line.458">initializeKVHeap</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.KeyValueScanner&gt;&nbsp;scanners,
-                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.KeyValueScanner&gt;&nbsp;joinedScanners,
-                    org.apache.hadoop.hbase.regionserver.HRegion&nbsp;region)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html#line.518">initializeKVHeap</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;scanners,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&gt;&nbsp;joinedScanners,
+                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">HRegion</a>&nbsp;region)
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -446,7 +427,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>isStopRow</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/ReversedRegionScannerImpl.html#line.0">isStopRow</a>(org.apache.hadoop.hbase.Cell&nbsp;arg0)</pre>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/ReversedRegionScannerImpl.html#line.0">isStopRow</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;arg0)</pre>
 </li>
 </ul>
 <a name="nextRow(org.apache.hadoop.hbase.regionserver.ScannerContext, org.apache.hadoop.hbase.Cell)">
@@ -455,8 +436,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>nextRow</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/ReversedRegionScannerImpl.html#line.0">nextRow</a>(org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;arg0,
-              org.apache.hadoop.hbase.Cell&nbsp;arg1)
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/ReversedRegionScannerImpl.html#line.0">nextRow</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;arg0,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;arg1)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -477,20 +458,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getRegionInfo</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.HRegionInfo&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">getRegionInfo</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">getRegionInfo</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getRegionInfo</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true#getRegionInfo()" title="class or interface in org.apache.hadoop.hbase.regionserver">getRegionInfo</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></dd>
 </dl>
-</li>
-</ul>
-<a name="setCopyCellsFromSharedMem(boolean)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setCopyCellsFromSharedMem</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">setCopyCellsFromSharedMem</a>(boolean&nbsp;arg0)</pre>
 </li>
 </ul>
 <a name="getMaxResultSize()">
@@ -502,7 +474,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">getMaxResultSize</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getMaxResultSize</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true#getMaxResultSize()" title="class or interface in org.apache.hadoop.hbase.regionserver">getMaxResultSize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -515,7 +487,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">getMvccReadPoint</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getMvccReadPoint</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true#getMvccReadPoint()" title="class or interface in org.apache.hadoop.hbase.regionserver">getMvccReadPoint</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -528,7 +500,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">getBatch</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getBatch</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true#getBatch()" title="class or interface in org.apache.hadoop.hbase.regionserver">getBatch</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -550,11 +522,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>next</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">next</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;arg0)
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">next</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;arg0)
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>next</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.InternalScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/InternalScanner.html?is-external=true#next(java.util.List)" title="class or interface in org.apache.hadoop.hbase.regionserver">next</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/InternalScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -565,12 +537,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>next</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">next</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;arg0,
-           org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;arg1)
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">next</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;arg0,
+           <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;arg1)
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>next</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.InternalScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/InternalScanner.html?is-external=true#next(java.util.List,%20org.apache.hadoop.hbase.regionserver.ScannerContext)" title="class or interface in org.apache.hadoop.hbase.regionserver">next</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/InternalScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -581,11 +553,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>nextRaw</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">nextRaw</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.Cell&gt;&nbsp;arg0)
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">nextRaw</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;arg0)
                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>nextRaw</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true#nextRaw(java.util.List)" title="class or interface in org.apache.hadoop.hbase.regionserver">nextRaw</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -600,7 +572,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>isFilterDone</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true#isFilterDone()" title="class or interface in org.apache.hadoop.hbase.regionserver">isFilterDone</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -611,7 +583,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>incrementCountOfRowsFilteredMetric</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">incrementCountOfRowsFilteredMetric</a>(org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;arg0)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">incrementCountOfRowsFilteredMetric</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;arg0)</pre>
 </li>
 </ul>
 <a name="incrementCountOfRowsScannedMetric(org.apache.hadoop.hbase.regionserver.ScannerContext)">
@@ -620,7 +592,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>incrementCountOfRowsScannedMetric</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">incrementCountOfRowsScannedMetric</a>(org.apache.hadoop.hbase.regionserver.ScannerContext&nbsp;arg0)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">incrementCountOfRowsScannedMetric</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ScannerContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ScannerContext</a>&nbsp;arg0)</pre>
 </li>
 </ul>
 <a name="close()">
@@ -636,7 +608,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true#close()" title="class or interface in java.lang">close</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></code></dd>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>close</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.InternalScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/InternalScanner.html?is-external=true#close()" title="class or interface in org.apache.hadoop.hbase.regionserver">close</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/InternalScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -646,7 +618,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getStoreHeapForTesting</h4>
-<pre>org.apache.hadoop.hbase.regionserver.KeyValueHeap&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">getStoreHeapForTesting</a>()</pre>
+<pre><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/KeyValueHeap.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html#line.0">getStoreHeapForTesting</a>()</pre>
 </li>
 </ul>
 <a name="reseek(byte[])">
@@ -659,7 +631,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>reseek</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.RegionScanner</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true#reseek(byte[])" title="class or interface in org.apache.hadoop.hbase.regionserver">reseek</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -674,7 +646,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>shipped</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.Shipper</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Shipper.html?is-external=true#shipped()" title="class or interface in org.apache.hadoop.hbase.regionserver">shipped</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Shipper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Shipper</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -689,7 +661,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>run</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.ipc.RpcCallback</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/ipc/RpcCallback.html?is-external=true#run()" title="class or interface in org.apache.hadoop.hbase.ipc">run</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/ipc/RpcCallback.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.ipc">RpcCallback</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -761,6 +733,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

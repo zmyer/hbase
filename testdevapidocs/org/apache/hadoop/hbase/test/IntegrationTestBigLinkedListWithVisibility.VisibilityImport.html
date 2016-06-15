@@ -86,13 +86,13 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.client.Result,KEYOUT,VALUEOUT&gt;</li>
+<li>org.apache.hadoop.mapreduce.Mapper&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>,KEYOUT,VALUEOUT&gt;</li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.mapreduce.TableMapper&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.client.Mutation&gt;</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TableMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce.TableMapper</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Mutation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Mutation</a>&gt;</li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.mapreduce.Import.Importer</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/Import.Importer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce.Import.Importer</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.test.IntegrationTestBigLinkedListWithVisibility.VisibilityImport</li>
@@ -115,7 +115,7 @@
 <hr>
 <br>
 <pre>static class <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestBigLinkedListWithVisibility.html#line.298">IntegrationTestBigLinkedListWithVisibility.VisibilityImport</a>
-extends org.apache.hadoop.hbase.mapreduce.Import.Importer</pre>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/Import.Importer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">Import.Importer</a></pre>
 </li>
 </ul>
 </div>
@@ -195,8 +195,8 @@ extends org.apache.hadoop.hbase.mapreduce.Import.Importer</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedListWithVisibility.VisibilityImport.html#addPutToKv(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.Cell)">addPutToKv</a></strong>(org.apache.hadoop.hbase.client.Put&nbsp;put,
-                    org.apache.hadoop.hbase.Cell&nbsp;kv)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedListWithVisibility.VisibilityImport.html#addPutToKv(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.Cell)">addPutToKv</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
+                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -207,8 +207,8 @@ extends org.apache.hadoop.hbase.mapreduce.Import.Importer</pre>
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.mapreduce.Import.Importer">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.mapreduce.Import.Importer</h3>
-<code>map, processKV</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.mapreduce.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/Import.Importer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">Import.Importer</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/Import.Importer.html?is-external=true#map(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.mapreduce.Mapper.Context)" title="class or interface in org.apache.hadoop.hbase.mapreduce">map</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/Import.Importer.html?is-external=true#processKV(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.mapreduce.Mapper.Context,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.client.Delete)" title="class or interface in org.apache.hadoop.hbase.mapreduce">processKV</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.mapreduce.Mapper">
@@ -299,7 +299,7 @@ extends org.apache.hadoop.hbase.mapreduce.Import.Importer</pre>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestBigLinkedListWithVisibility.VisibilityImport.html#line.304">setup</a>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>setup</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.mapreduce.Import.Importer</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/Import.Importer.html?is-external=true#setup(org.apache.hadoop.mapreduce.Mapper.Context)" title="class or interface in org.apache.hadoop.hbase.mapreduce">setup</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/Import.Importer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">Import.Importer</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -309,12 +309,12 @@ extends org.apache.hadoop.hbase.mapreduce.Import.Importer</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>addPutToKv</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestBigLinkedListWithVisibility.VisibilityImport.html#line.312">addPutToKv</a>(org.apache.hadoop.hbase.client.Put&nbsp;put,
-              org.apache.hadoop.hbase.Cell&nbsp;kv)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestBigLinkedListWithVisibility.VisibilityImport.html#line.312">addPutToKv</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>addPutToKv</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.mapreduce.Import.Importer</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/Import.Importer.html?is-external=true#addPutToKv(org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.Cell)" title="class or interface in org.apache.hadoop.hbase.mapreduce">addPutToKv</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/Import.Importer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">Import.Importer</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -386,6 +386,6 @@ extends org.apache.hadoop.hbase.mapreduce.Import.Importer</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

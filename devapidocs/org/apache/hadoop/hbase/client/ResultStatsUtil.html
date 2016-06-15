@@ -96,7 +96,7 @@
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public final class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ResultStatsUtil.html#line.29">ResultStatsUtil</a>
+public final class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/ResultStatsUtil.html#line.28">ResultStatsUtil</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">A <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client"><code>Result</code></a> with some statistics about the server/region status</div>
 </li>
@@ -137,12 +137,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ResultStatsUtil.html#updateStats(org.apache.hadoop.hbase.client.StatisticTrackable,%20org.apache.hadoop.hbase.ServerName,%20byte[],%20org.apache.hadoop.hbase.client.RegionLoadStats)">updateStats</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/StatisticTrackable.html" title="interface in org.apache.hadoop.hbase.client">StatisticTrackable</a>&nbsp;tracker,
+                      <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;server,
+                      byte[]&nbsp;regionName,
+                      <a href="../../../../../org/apache/hadoop/hbase/client/RegionLoadStats.html" title="class in org.apache.hadoop.hbase.client">RegionLoadStats</a>&nbsp;stats)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ResultStatsUtil.html#updateStats(T,%20org.apache.hadoop.hbase.client.ServerStatisticTracker,%20org.apache.hadoop.hbase.HRegionLocation)">updateStats</a></strong>(T&nbsp;r,
                       <a href="../../../../../org/apache/hadoop/hbase/client/ServerStatisticTracker.html" title="class in org.apache.hadoop.hbase.client">ServerStatisticTracker</a>&nbsp;stats,
                       <a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase">HRegionLocation</a>&nbsp;regionLocation)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/ResultStatsUtil.html#updateStats(T,%20org.apache.hadoop.hbase.client.ServerStatisticTracker,%20org.apache.hadoop.hbase.ServerName,%20byte[])">updateStats</a></strong>(T&nbsp;r,
                       <a href="../../../../../org/apache/hadoop/hbase/client/ServerStatisticTracker.html" title="class in org.apache.hadoop.hbase.client">ServerStatisticTracker</a>&nbsp;serverStats,
@@ -179,7 +186,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ResultStatsUtil</h4>
-<pre>private&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ResultStatsUtil.html#line.31">ResultStatsUtil</a>()</pre>
+<pre>private&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ResultStatsUtil.html#line.30">ResultStatsUtil</a>()</pre>
 </li>
 </ul>
 </li>
@@ -198,13 +205,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updateStats</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ResultStatsUtil.html#line.46">updateStats</a>(T&nbsp;r,
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ResultStatsUtil.html#line.45">updateStats</a>(T&nbsp;r,
                 <a href="../../../../../org/apache/hadoop/hbase/client/ServerStatisticTracker.html" title="class in org.apache.hadoop.hbase.client">ServerStatisticTracker</a>&nbsp;serverStats,
                 <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;server,
                 byte[]&nbsp;regionName)</pre>
 <div class="block">Update the stats for the specified region if the result is an instance of <a href="../../../../../org/apache/hadoop/hbase/client/ResultStatsUtil.html" title="class in org.apache.hadoop.hbase.client"><code>ResultStatsUtil</code></a></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>r</code> - object that contains the result and possibly the statistics about the region</dd><dd><code>serverStats</code> - stats tracker to update from the result</dd><dd><code>server</code> - server from which the result was obtained</dd><dd><code>regionName</code> - full region name for the stats.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>the underlying <a href="../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client"><code>Result</code></a> if the passed result is an <a href="../../../../../org/apache/hadoop/hbase/client/ResultStatsUtil.html" title="class in org.apache.hadoop.hbase.client"><code>ResultStatsUtil</code></a> or just returns the result;</dd></dl>
+</li>
+</ul>
+<a name="updateStats(org.apache.hadoop.hbase.client.StatisticTrackable, org.apache.hadoop.hbase.ServerName, byte[], org.apache.hadoop.hbase.client.RegionLoadStats)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateStats</h4>
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ResultStatsUtil.html#line.61">updateStats</a>(<a href="../../../../../org/apache/hadoop/hbase/client/StatisticTrackable.html" title="interface in org.apache.hadoop.hbase.client">StatisticTrackable</a>&nbsp;tracker,
+               <a href="../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;server,
+               byte[]&nbsp;regionName,
+               <a href="../../../../../org/apache/hadoop/hbase/client/RegionLoadStats.html" title="class in org.apache.hadoop.hbase.client">RegionLoadStats</a>&nbsp;stats)</pre>
 </li>
 </ul>
 <a name="updateStats(java.lang.Object,org.apache.hadoop.hbase.client.ServerStatisticTracker,org.apache.hadoop.hbase.HRegionLocation)">
@@ -215,7 +234,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>updateStats</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ResultStatsUtil.html#line.65">updateStats</a>(T&nbsp;r,
+<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/ResultStatsUtil.html#line.68">updateStats</a>(T&nbsp;r,
                 <a href="../../../../../org/apache/hadoop/hbase/client/ServerStatisticTracker.html" title="class in org.apache.hadoop.hbase.client">ServerStatisticTracker</a>&nbsp;stats,
                 <a href="../../../../../org/apache/hadoop/hbase/HRegionLocation.html" title="class in org.apache.hadoop.hbase">HRegionLocation</a>&nbsp;regionLocation)</pre>
 </li>
@@ -287,6 +306,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

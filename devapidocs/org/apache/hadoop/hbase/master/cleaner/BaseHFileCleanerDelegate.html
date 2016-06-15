@@ -109,7 +109,7 @@
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/HFileLinkCleaner.html" title="class in org.apache.hadoop.hbase.master.cleaner">HFileLinkCleaner</a>, <a href="../../../../../../org/apache/hadoop/hbase/backup/example/LongTermArchivingHFileCleaner.html" title="class in org.apache.hadoop.hbase.backup.example">LongTermArchivingHFileCleaner</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotHFileCleaner.html" title="class in org.apache.hadoop.hbase.master.snapshot">SnapshotHFileCleaner</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TimeToLiveHFileCleaner.html" title="class in org.apache.hadoop.hbase.master.cleaner">TimeToLiveHFileCleaner</a></dd>
+<dd><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/HFileLinkCleaner.html" title="class in org.apache.hadoop.hbase.master.cleaner">HFileLinkCleaner</a>, <a href="../../../../../../org/apache/hadoop/hbase/backup/example/LongTermArchivingHFileCleaner.html" title="class in org.apache.hadoop.hbase.backup.example">LongTermArchivingHFileCleaner</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/master/ReplicationHFileCleaner.html" title="class in org.apache.hadoop.hbase.replication.master">ReplicationHFileCleaner</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotHFileCleaner.html" title="class in org.apache.hadoop.hbase.master.snapshot">SnapshotHFileCleaner</a>, <a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TimeToLiveHFileCleaner.html" title="class in org.apache.hadoop.hbase.master.cleaner">TimeToLiveHFileCleaner</a></dd>
 </dl>
 <hr>
 <br>
@@ -281,7 +281,8 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/BaseFi
 <h4>stop</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/cleaner/BaseHFileCleanerDelegate.html#line.46">stop</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;why)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/Stoppable.html#stop(java.lang.String)">Stoppable</a></code></strong></div>
-<div class="block">Stop this service.</div>
+<div class="block">Stop this service.
+ Implementers should favor logging errors over throwing RuntimeExceptions.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>why</code> - Why we're stopping.</dd></dl>
 </li>
 </ul>
@@ -362,6 +363,6 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/BaseFi
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

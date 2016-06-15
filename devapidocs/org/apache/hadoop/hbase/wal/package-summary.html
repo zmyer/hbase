@@ -75,37 +75,45 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.Reader.html" title="interface in org.apache.hadoop.hbase.wal">DefaultWALProvider.Reader</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/AbstractFSWALProvider.Reader.html" title="interface in org.apache.hadoop.hbase.wal">AbstractFSWALProvider.Reader</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">DefaultWALProvider.Writer</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/AsyncFSWALProvider.AsyncWriter.html" title="interface in org.apache.hadoop.hbase.wal">AsyncFSWALProvider.AsyncWriter</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/FSHLogProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">FSHLogProvider.Writer</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/RegionGroupingProvider.RegionGroupingStrategy.html" title="interface in org.apache.hadoop.hbase.wal">RegionGroupingProvider.RegionGroupingStrategy</a></td>
 <td class="colLast">
 <div class="block">Map identifiers to a group number.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/WAL.html" title="interface in org.apache.hadoop.hbase.wal">WAL</a></td>
 <td class="colLast">
 <div class="block">A Write Ahead Log (WAL) provides service for reading, writing waledits.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/WAL.Reader.html" title="interface in org.apache.hadoop.hbase.wal">WAL.Reader</a></td>
 <td class="colLast">
 <div class="block">When outside clients need to consume persisted WALs, they rely on a provided
  Reader.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider</a></td>
 <td class="colLast">
 <div class="block">The Write Ahead Log (WAL) stores all durable edits to the HRegion.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.AsyncWriter.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.AsyncWriter</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.Writer.html" title="interface in org.apache.hadoop.hbase.wal">WALProvider.Writer</a></td>
@@ -123,6 +131,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/AbstractFSWALProvider.html" title="class in org.apache.hadoop.hbase.wal">AbstractFSWALProvider</a>&lt;T extends <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AbstractFSWAL</a>&lt;?&gt;&gt;</td>
+<td class="colLast">
+<div class="block">Base class of a WAL Provider that returns a single thread safe WAL that writes to HDFS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/AsyncFSWALProvider.html" title="class in org.apache.hadoop.hbase.wal">AsyncFSWALProvider</a></td>
+<td class="colLast">
+<div class="block">A WAL provider that use <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/AsyncFSWAL.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><code>AsyncFSWAL</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/BoundedGroupingStrategy.html" title="class in org.apache.hadoop.hbase.wal">BoundedGroupingStrategy</a></td>
 <td class="colLast">
 <div class="block">A WAL grouping strategy that limits the number of wal groups to
@@ -130,20 +150,20 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/DefaultWALProvider.html" title="class in org.apache.hadoop.hbase.wal">DefaultWALProvider</a></td>
-<td class="colLast">
-<div class="block">A WAL Provider that returns a single thread safe WAL that writes to HDFS.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/DisabledWALProvider.html" title="class in org.apache.hadoop.hbase.wal">DisabledWALProvider</a></td>
 <td class="colLast">
 <div class="block">No-op implementation of <a href="../../../../../org/apache/hadoop/hbase/wal/WALProvider.html" title="interface in org.apache.hadoop.hbase.wal"><code>WALProvider</code></a> used when the WAL is disabled.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/DisabledWALProvider.DisabledWAL.html" title="class in org.apache.hadoop.hbase.wal">DisabledWALProvider.DisabledWAL</a></td>
 <td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/FSHLogProvider.html" title="class in org.apache.hadoop.hbase.wal">FSHLogProvider</a></td>
+<td class="colLast">
+<div class="block">A WAL provider that use <a href="../../../../../org/apache/hadoop/hbase/regionserver/wal/FSHLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal"><code>FSHLog</code></a>.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/NamespaceGroupingStrategy.html" title="class in org.apache.hadoop.hbase.wal">NamespaceGroupingStrategy</a></td>
@@ -176,7 +196,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a></td>
 <td class="colLast">
-<div class="block">A Key for an entry in the change log.</div>
+<div class="block">A Key for an entry in the WAL.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -342,6 +362,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

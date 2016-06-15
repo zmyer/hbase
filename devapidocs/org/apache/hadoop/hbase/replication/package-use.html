@@ -89,32 +89,36 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.mapreduce.replication">org.apache.hadoop.hbase.mapreduce.replication</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.replication">org.apache.hadoop.hbase.replication</a></td>
 <td class="colLast">
 <div class="block">Multi Cluster Replication</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.replication.master">org.apache.hadoop.hbase.replication.master</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.replication.regionserver">org.apache.hadoop.hbase.replication.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util.hbck">org.apache.hadoop.hbase.util.hbck</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -193,6 +197,23 @@
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationEndpoint.html#org.apache.hadoop.hbase.coprocessor">ReplicationEndpoint</a>
 <div class="block">ReplicationEndpoint is a plugin which implements replication
  to other HBase clusters, or other systems.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.mapreduce.replication">
+<!--   -->
+</a>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/apache/hadoop/hbase/replication/package-summary.html">org.apache.hadoop.hbase.replication</a> used by <a href="../../../../../org/apache/hadoop/hbase/mapreduce/replication/package-summary.html">org.apache.hadoop.hbase.mapreduce.replication</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerConfig.html#org.apache.hadoop.hbase.mapreduce.replication">ReplicationPeerConfig</a>
+<div class="block">A configuration for the replication peer cluster.</div>
 </td>
 </tr>
 </tbody>
@@ -277,12 +298,20 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerConfigListener.html#org.apache.hadoop.hbase.replication">ReplicationPeerConfigListener</a>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeers.html#org.apache.hadoop.hbase.replication">ReplicationPeers</a>
 <div class="block">This provides an interface for maintaining a set of peer clusters.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerZKImpl.html#org.apache.hadoop.hbase.replication">ReplicationPeerZKImpl</a>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerZKImpl.PeerConfigTracker.html#org.apache.hadoop.hbase.replication">ReplicationPeerZKImpl.PeerConfigTracker</a>
+<div class="block">Tracker for PeerConfigNode of this peer</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerZKImpl.PeerStateTracker.html#org.apache.hadoop.hbase.replication">ReplicationPeerZKImpl.PeerStateTracker</a>
@@ -290,14 +319,12 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerZKImpl.TableCFsTracker.html#org.apache.hadoop.hbase.replication">ReplicationPeerZKImpl.TableCFsTracker</a>
-<div class="block">Tracker for (table, cf-list) map of this peer</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationQueues.html#org.apache.hadoop.hbase.replication">ReplicationQueues</a>
 <div class="block">This provides an interface for maintaining a region server's replication queues.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationQueuesArguments.html#org.apache.hadoop.hbase.replication">ReplicationQueuesArguments</a>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationQueuesClient.html#org.apache.hadoop.hbase.replication">ReplicationQueuesClient</a>
@@ -305,9 +332,15 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationQueuesClientArguments.html#org.apache.hadoop.hbase.replication">ReplicationQueuesClientArguments</a>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationStateZKBase.html#org.apache.hadoop.hbase.replication">ReplicationStateZKBase</a>
 <div class="block">This is a base class for maintaining replication state in zookeeper.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationTableBase.html#org.apache.hadoop.hbase.replication">ReplicationTableBase</a>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationTracker.html#org.apache.hadoop.hbase.replication">ReplicationTracker</a>
@@ -332,8 +365,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerConfig.html#org.apache.hadoop.hbase.replication.master">ReplicationPeerConfig</a>
+<div class="block">A configuration for the replication peer cluster.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationQueuesClient.html#org.apache.hadoop.hbase.replication.master">ReplicationQueuesClient</a>
 <div class="block">This provides an interface for clients of replication to view replication queues.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationStateZKBase.html#org.apache.hadoop.hbase.replication.master">ReplicationStateZKBase</a>
+<div class="block">This is a base class for maintaining replication state in zookeeper.</div>
 </td>
 </tr>
 </tbody>
@@ -400,26 +443,29 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerConfigListener.html#org.apache.hadoop.hbase.replication.regionserver">ReplicationPeerConfigListener</a>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeers.html#org.apache.hadoop.hbase.replication.regionserver">ReplicationPeers</a>
 <div class="block">This provides an interface for maintaining a set of peer clusters.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationQueueInfo.html#org.apache.hadoop.hbase.replication.regionserver">ReplicationQueueInfo</a>
 <div class="block">This class is responsible for the parsing logic for a znode representing a queue.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationQueues.html#org.apache.hadoop.hbase.replication.regionserver">ReplicationQueues</a>
 <div class="block">This provides an interface for maintaining a region server's replication queues.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationTracker.html#org.apache.hadoop.hbase.replication.regionserver">ReplicationTracker</a>
 <div class="block">This is the interface for a Replication Tracker.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/WALEntryFilter.html#org.apache.hadoop.hbase.replication.regionserver">WALEntryFilter</a>
 <div class="block">A Filter for WAL entries before being sent over to replication.</div>
 </td>
@@ -467,6 +513,14 @@
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationEndpoint.ReplicateContext.html#org.apache.hadoop.hbase.security.visibility">ReplicationEndpoint.ReplicateContext</a>
 <div class="block">A context for <a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.html#replicate(org.apache.hadoop.hbase.replication.ReplicationEndpoint.ReplicateContext)"><code>ReplicationEndpoint.replicate(ReplicateContext)</code></a> method.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerConfig.html#org.apache.hadoop.hbase.security.visibility">ReplicationPeerConfig</a>
+<div class="block">A configuration for the replication peer cluster.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/ReplicationPeerConfigListener.html#org.apache.hadoop.hbase.security.visibility">ReplicationPeerConfigListener</a>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/replication/class-use/WALEntryFilter.html#org.apache.hadoop.hbase.security.visibility">WALEntryFilter</a>
@@ -550,6 +604,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

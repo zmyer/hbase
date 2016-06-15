@@ -106,13 +106,11 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#isSnapshotFinished(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription)">isSnapshotFinished</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot)</code>
-<div class="block">Check the current state of the passed snapshot.</div>
-</td>
+<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#isSnapshotFinished(org.apache.hadoop.hbase.client.SnapshotDescription)">isSnapshotFinished</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/SnapshotDescription.html" title="class in org.apache.hadoop.hbase.client">SnapshotDescription</a>&nbsp;snapshotDesc)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">Admin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html#isSnapshotFinished(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription)">isSnapshotFinished</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot)</code>
+<td class="colLast"><span class="strong">Admin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Admin.html#isSnapshotFinished(org.apache.hadoop.hbase.client.SnapshotDescription)">isSnapshotFinished</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/SnapshotDescription.html" title="class in org.apache.hadoop.hbase.client">SnapshotDescription</a>&nbsp;snapshot)</code>
 <div class="block">Check the current state of the passed snapshot.</div>
 </td>
 </tr>
@@ -131,9 +129,11 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>(package private) void</code></td>
-<td class="colLast"><span class="strong">SnapshotManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotManager.html#cloneSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">cloneSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
-                          <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor)</code>
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><span class="strong">SnapshotManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotManager.html#cloneSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor,%20long,%20long)">cloneSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
+                          <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor,
+                          long&nbsp;nonceGroup,
+                          long&nbsp;nonce)</code>
 <div class="block">Clone the specified snapshot into a new table.</div>
 </td>
 </tr>
@@ -144,9 +144,11 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private void</code></td>
-<td class="colLast"><span class="strong">SnapshotManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotManager.html#restoreSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">restoreSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
-                              <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor)</code>
+<td class="colFirst"><code>private long</code></td>
+<td class="colLast"><span class="strong">SnapshotManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotManager.html#restoreSnapshot(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor,%20long,%20long)">restoreSnapshot</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
+                              <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor,
+                              long&nbsp;nonceGroup,
+                              long&nbsp;nonce)</code>
 <div class="block">Restore the specified snapshot.</div>
 </td>
 </tr>
@@ -284,6 +286,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -120,38 +120,50 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/AbstractRegionServerCallable.html" title="class in org.apache.hadoop.hbase.client">AbstractRegionServerCallable</a>&lt;T&gt;</strong></code>
+<div class="block">Implementations call a RegionServer.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.SmallScannerCallable.html" title="class in org.apache.hadoop.hbase.client">ClientSmallScanner.SmallScannerCallable</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionCallable.html" title="class in org.apache.hadoop.hbase.client">ConnectionCallable</a>&lt;V&gt;</strong></code>
 <div class="block">A RetryingCallable for generic connection operations.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/DelegatingRetryingCallable.html" title="class in org.apache.hadoop.hbase.client">DelegatingRetryingCallable</a>&lt;T,D extends <a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;T&gt;&gt;</strong></code>
 <div class="block">Helper callable for internal use when you just want to override a single method of a <a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client"><code>RetryingCallable</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/FlushRegionCallable.html" title="class in org.apache.hadoop.hbase.client">FlushRegionCallable</a></strong></code>
 <div class="block">A Callable for flushRegion() RPC.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/MasterCallable.html" title="class in org.apache.hadoop.hbase.client">MasterCallable</a>&lt;V&gt;</strong></code>
 <div class="block">A RetryingCallable for master operations.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/MultiServerCallable.html" title="class in org.apache.hadoop.hbase.client">MultiServerCallable</a>&lt;R&gt;</strong></code>
 <div class="block">Callable that handles the <code>multi</code> method call going against a single
  regionserver; i.e.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/PayloadCarryingServerCallable.html" title="class in org.apache.hadoop.hbase.client">PayloadCarryingServerCallable</a>&lt;T&gt;</strong></code>
+<div class="block">This class is used to unify HTable calls with AsyncProcess Framework.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -226,9 +238,10 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private static &lt;C extends <a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;V&gt; & <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>,V&gt;&nbsp;<br>V</code></td>
-<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#executeCallable(C,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20int)">executeCallable</a></strong>(C&nbsp;callable,
+<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#executeCallable(C,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20int,%20int)">executeCallable</a></strong>(C&nbsp;callable,
                               <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a>&nbsp;rpcCallerFactory,
-                              int&nbsp;operationTimeout)</code>&nbsp;</td>
+                              int&nbsp;operationTimeout,
+                              int&nbsp;rpcTimeout)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -240,26 +253,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a></code></td>
-<td class="colLast"><span class="strong">StatsTrackingRpcRetryingCaller.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#callWithoutRetries(org.apache.hadoop.hbase.client.RetryingCallable,%20int)">callWithoutRetries</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&gt;&nbsp;callable,
-                                    int&nbsp;callTimeout)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="type parameter in RpcRetryingCaller">T</a></code></td>
 <td class="colLast"><span class="strong">RpcRetryingCaller.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html#callWithoutRetries(org.apache.hadoop.hbase.client.RetryingCallable,%20int)">callWithoutRetries</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="type parameter in RpcRetryingCaller">T</a>&gt;&nbsp;callable,
                                     int&nbsp;callTimeout)</code>
 <div class="block">Call the server once only.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerImpl.html" title="type parameter in RpcRetryingCallerImpl">T</a></code></td>
 <td class="colLast"><span class="strong">RpcRetryingCallerImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerImpl.html#callWithoutRetries(org.apache.hadoop.hbase.client.RetryingCallable,%20int)">callWithoutRetries</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerImpl.html" title="type parameter in RpcRetryingCallerImpl">T</a>&gt;&nbsp;callable,
                                     int&nbsp;callTimeout)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a></code></td>
-<td class="colLast"><span class="strong">StatsTrackingRpcRetryingCaller.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#callWithRetries(org.apache.hadoop.hbase.client.RetryingCallable,%20int)">callWithRetries</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&gt;&nbsp;callable,
-                              int&nbsp;callTimeout)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="type parameter in RpcRetryingCaller">T</a></code></td>
@@ -274,49 +277,10 @@
                               int&nbsp;callTimeout)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/FastFailInterceptorContext.html" title="class in org.apache.hadoop.hbase.client">FastFailInterceptorContext</a></code></td>
-<td class="colLast"><span class="strong">FastFailInterceptorContext.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/FastFailInterceptorContext.html#prepare(org.apache.hadoop.hbase.client.RetryingCallable)">prepare</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;?&gt;&nbsp;callable)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>abstract <a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html" title="class in org.apache.hadoop.hbase.client">RetryingCallerInterceptorContext</a></code></td>
-<td class="colLast"><span class="strong">RetryingCallerInterceptorContext.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html#prepare(org.apache.hadoop.hbase.client.RetryingCallable)">prepare</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;?&gt;&nbsp;callable)</code>
-<div class="block">This prepares the context object by populating it with information specific
- to the implementation of the <a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallerInterceptor.html" title="class in org.apache.hadoop.hbase.client"><code>RetryingCallerInterceptor</code></a> along with
- which this will be used.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html" title="class in org.apache.hadoop.hbase.client">RetryingCallerInterceptorContext</a></code></td>
-<td class="colLast"><span class="strong">NoOpRetryingInterceptorContext.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/NoOpRetryingInterceptorContext.html#prepare(org.apache.hadoop.hbase.client.RetryingCallable)">prepare</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;?&gt;&nbsp;callable)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/FastFailInterceptorContext.html" title="class in org.apache.hadoop.hbase.client">FastFailInterceptorContext</a></code></td>
-<td class="colLast"><span class="strong">FastFailInterceptorContext.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/FastFailInterceptorContext.html#prepare(org.apache.hadoop.hbase.client.RetryingCallable,%20int)">prepare</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;?&gt;&nbsp;callable,
-              int&nbsp;tries)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>abstract <a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html" title="class in org.apache.hadoop.hbase.client">RetryingCallerInterceptorContext</a></code></td>
-<td class="colLast"><span class="strong">RetryingCallerInterceptorContext.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html#prepare(org.apache.hadoop.hbase.client.RetryingCallable,%20int)">prepare</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;?&gt;&nbsp;callable,
-              int&nbsp;tries)</code>
-<div class="block">Telescopic extension that takes which of the many retries we are currently
- in.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html" title="class in org.apache.hadoop.hbase.client">RetryingCallerInterceptorContext</a></code></td>
-<td class="colLast"><span class="strong">NoOpRetryingInterceptorContext.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/NoOpRetryingInterceptorContext.html#prepare(org.apache.hadoop.hbase.client.RetryingCallable,%20int)">prepare</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;?&gt;&nbsp;callable,
-              int&nbsp;tries)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ResultBoundedCompletionService.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ResultBoundedCompletionService.html#submit(org.apache.hadoop.hbase.client.RetryingCallable,%20int,%20int)">submit</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/ResultBoundedCompletionService.html" title="type parameter in ResultBoundedCompletionService">V</a>&gt;&nbsp;task,
             int&nbsp;callTimeout,
             int&nbsp;id)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a></code></td>
-<td class="colLast"><span class="strong">StatsTrackingRpcRetryingCaller.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html#updateStatsAndUnwrap(T,%20org.apache.hadoop.hbase.client.RetryingCallable)">updateStatsAndUnwrap</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&nbsp;result,
-                                        <a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="type parameter in StatsTrackingRpcRetryingCaller">T</a>&gt;&nbsp;callable)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -448,6 +412,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

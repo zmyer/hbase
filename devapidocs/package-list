@@ -38,6 +38,7 @@ org.apache.hadoop.hbase.http.jmx
 org.apache.hadoop.hbase.http.lib
 org.apache.hadoop.hbase.http.log
 org.apache.hadoop.hbase.io
+org.apache.hadoop.hbase.io.asyncfs
 org.apache.hadoop.hbase.io.compress
 org.apache.hadoop.hbase.io.crypto
 org.apache.hadoop.hbase.io.crypto.aes
@@ -75,6 +76,7 @@ org.apache.hadoop.hbase.regionserver
 org.apache.hadoop.hbase.regionserver.compactions
 org.apache.hadoop.hbase.regionserver.handler
 org.apache.hadoop.hbase.regionserver.snapshot
+org.apache.hadoop.hbase.regionserver.throttle
 org.apache.hadoop.hbase.regionserver.wal
 org.apache.hadoop.hbase.replication
 org.apache.hadoop.hbase.replication.master
@@ -86,6 +88,7 @@ org.apache.hadoop.hbase.rest.model
 org.apache.hadoop.hbase.rest.provider
 org.apache.hadoop.hbase.rest.provider.consumer
 org.apache.hadoop.hbase.rest.provider.producer
+org.apache.hadoop.hbase.rsgroup
 org.apache.hadoop.hbase.security
 org.apache.hadoop.hbase.security.access
 org.apache.hadoop.hbase.security.token
@@ -112,3 +115,5 @@ org.apache.hadoop.metrics2
 org.apache.hadoop.metrics2.impl
 org.apache.hadoop.metrics2.lib
 org.apache.hadoop.metrics2.util
+org.apache.hbase.archetypes.exemplars.client
+org.apache.hbase.archetypes.exemplars.shaded_client

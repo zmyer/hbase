@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">Prev Package</a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/package-summary.html">Prev Package</a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/replication/package-summary.html">Next Package</a></li>
 </ul>
 <ul class="navList">
@@ -75,6 +75,42 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/AbstractTestFSWAL.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AbstractTestFSWAL</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/AbstractTestLogRolling.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AbstractTestLogRolling</a></td>
+<td class="colLast">
+<div class="block">Test log deletion as logs are rolled.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/AbstractTestLogRollPeriod.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AbstractTestLogRollPeriod</a></td>
+<td class="colLast">
+<div class="block">Tests that verifies that the log is forced to be rolled every "hbase.regionserver.logroll.period"</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/AbstractTestProtobufLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AbstractTestProtobufLog</a>&lt;W extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>&gt;</td>
+<td class="colLast">
+<div class="block">WAL tests that can be reused across providers.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/AbstractTestWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AbstractTestWALReplay</a></td>
+<td class="colLast">
+<div class="block">Test replay of edits out of a WAL split.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/AbstractTestWALReplay.CustomStoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AbstractTestWALReplay.CustomStoreFlusher</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/AbstractTestWALReplay.MockWAL.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AbstractTestWALReplay.MockWAL</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/FaultySequenceFileLogReader.html" title="class in org.apache.hadoop.hbase.regionserver.wal">FaultySequenceFileLogReader</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -88,6 +124,32 @@
 <div class="block">Implementation of <code>WALProvider.Writer</code> that delegates to
  SequenceFile.Writer.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestAsyncFSWAL.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestAsyncFSWAL</a></td>
+<td class="colLast">
+<div class="block">Provides AsyncFSWAL test cases.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestAsyncLogRolling.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestAsyncLogRolling</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestAsyncLogRollPeriod.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestAsyncLogRollPeriod</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestAsyncProtobufLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestAsyncProtobufLog</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestAsyncWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestAsyncWALReplay</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestAsyncWALReplayCompressed.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestAsyncWALReplayCompressed</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestCompressor.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestCompressor</a></td>
@@ -130,9 +192,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestLogRolling.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestLogRolling</a></td>
-<td class="colLast">
-<div class="block">Test log deletion as logs are rolled.</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestLogRollingNoCluster.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestLogRollingNoCluster</a></td>
@@ -148,9 +208,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestLogRollPeriod.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestLogRollPeriod</a></td>
-<td class="colLast">
-<div class="block">Tests that verifies that the log is forced to be rolled every "hbase.regionserver.logroll.period"</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestMetricsWAL.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestMetricsWAL</a></td>
@@ -166,9 +224,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestProtobufLog.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestProtobufLog</a></td>
-<td class="colLast">
-<div class="block">WAL tests that can be reused across providers.</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestReadOldRootAndMetaEdits.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestReadOldRootAndMetaEdits</a></td>
@@ -177,41 +233,35 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestSecureWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestSecureWALReplay</a></td>
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestSecureAsyncWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestSecureAsyncWALReplay</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestSequenceIdAccounting.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestSequenceIdAccounting</a></td>
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestSecureWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestSecureWALReplay</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestSequenceIdAccounting.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestSequenceIdAccounting</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestWALActionsListener.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestWALActionsListener</a></td>
 <td class="colLast">
 <div class="block">Test that the actions are called while playing with an WAL</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestWALActionsListener.DummyWALActionsListener.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestWALActionsListener.DummyWALActionsListener</a></td>
 <td class="colLast">
 <div class="block">Just counts when methods are called</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestWALCellCodecWithCompression.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestWALCellCodecWithCompression</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestWALReplay</a></td>
-<td class="colLast">
-<div class="block">Test replay of edits out of a WAL split.</div>
-</td>
-</tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestWALReplay.CustomStoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestWALReplay.CustomStoreFlusher</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestWALReplay.MockWAL.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestWALReplay.MockWAL</a></td>
+<td class="colFirst"><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/TestWALReplay.html" title="class in org.apache.hadoop.hbase.regionserver.wal">TestWALReplay</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -259,7 +309,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">Prev Package</a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/package-summary.html">Prev Package</a></li>
 <li><a href="../../../../../../org/apache/hadoop/hbase/replication/package-summary.html">Next Package</a></li>
 </ul>
 <ul class="navList">
@@ -285,6 +335,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

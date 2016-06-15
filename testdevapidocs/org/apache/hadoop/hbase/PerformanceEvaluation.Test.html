@@ -103,7 +103,7 @@
 </dl>
 <hr>
 <br>
-<pre>abstract static class <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.html#line.956">PerformanceEvaluation.Test</a>
+<pre>abstract static class <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.html#line.972">PerformanceEvaluation.Test</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 </li>
 </ul>
@@ -128,7 +128,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#conf">conf</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.client.Connection</code></td>
+<td class="colFirst"><code>protected <a href="../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Connection</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#connection">connection</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -136,8 +136,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#everyN">everyN</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private com.yammer.metrics.core.Histogram</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#latency">latency</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private com.codahale.metrics.Histogram</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#latencyHistogram">latencyHistogram</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.TestOptions.html" title="class in org.apache.hadoop.hbase">PerformanceEvaluation.TestOptions</a></code></td>
@@ -152,7 +152,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#randomSeed">randomSeed</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.trace.SpanReceiverHost</code></td>
+<td class="colFirst"><code>private <a href="../../../../../apidocs/org/apache/hadoop/hbase/trace.SpanReceiverHost.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.trace.SpanReceiverHost</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#receiverHost">receiverHost</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -168,8 +168,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#traceSampler">traceSampler</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private com.yammer.metrics.core.Histogram</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#valueSize">valueSize</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private com.codahale.metrics.Histogram</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#valueSizeHistogram">valueSizeHistogram</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../org/apache/hadoop/hbase/io/hfile/RandomDistribution.Zipf.html" title="class in org.apache.hadoop.hbase.io.hfile">RandomDistribution.Zipf</a></code></td>
@@ -190,7 +190,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#PerformanceEvaluation.Test(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.PerformanceEvaluation.TestOptions,%20org.apache.hadoop.hbase.PerformanceEvaluation.Status)">PerformanceEvaluation.Test</a></strong>(org.apache.hadoop.hbase.client.Connection&nbsp;con,
+<td class="colOne"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#PerformanceEvaluation.Test(org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.PerformanceEvaluation.TestOptions,%20org.apache.hadoop.hbase.PerformanceEvaluation.Status)">PerformanceEvaluation.Test</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;con,
                                                     <a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.TestOptions.html" title="class in org.apache.hadoop.hbase">PerformanceEvaluation.TestOptions</a>&nbsp;options,
                                                     <a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Status.html" title="interface in org.apache.hadoop.hbase">PerformanceEvaluation.Status</a>&nbsp;status)</code>
 <div class="block">Note that all subclasses of this class must provide a public constructor
@@ -219,22 +219,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                             int&nbsp;lr)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>com.yammer.metrics.core.Histogram</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#getLatency()">getLatency</a></strong>()</code>
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#getLastRow()">getLastRow</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>com.codahale.metrics.Histogram</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#getLatencyHistogram()">getLatencyHistogram</a></strong>()</code>
 <div class="block">Populated by testTakedown.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#getReportingPeriod()">getReportingPeriod</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#getShortLatencyReport()">getShortLatencyReport</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#getShortValueSizeReport()">getShortValueSizeReport</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#getStartRow()">getStartRow</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) int</code></td>
@@ -257,52 +265,38 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#onTakedown()">onTakedown</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#reportHistogram(com.yammer.metrics.core.Histogram)">reportHistogram</a></strong>(com.yammer.metrics.core.Histogram&nbsp;h)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#reportLatency()">reportLatency</a></strong>()</code>
-<div class="block">report percentiles of latency</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#reportValueSize()">reportValueSize</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>(package private) long</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#test()">test</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) abstract void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#testRow(int)">testRow</a></strong>(int&nbsp;i)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#testSetup()">testSetup</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#testTakedown()">testTakedown</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#testTimed()">testTimed</a></strong>()</code>
 <div class="block">Provides an extension point for tests that don't want a per row invocation.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) void</code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#updateValueSize(int)">updateValueSize</a></strong>(int&nbsp;valueSize)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>(package private) void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#updateValueSize(org.apache.hadoop.hbase.client.Result)">updateValueSize</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;r)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code>(package private) void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#updateValueSize(org.apache.hadoop.hbase.client.Result[])">updateValueSize</a></strong>(org.apache.hadoop.hbase.client.Result[]&nbsp;rs)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#updateValueSize(org.apache.hadoop.hbase.client.Result)">updateValueSize</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;r)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#updateValueSize(org.apache.hadoop.hbase.client.Result[])">updateValueSize</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>[]&nbsp;rs)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -332,7 +326,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>randomSeed</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.959">randomSeed</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.975">randomSeed</a></pre>
 </li>
 </ul>
 <a name="everyN">
@@ -341,7 +335,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>everyN</h4>
-<pre>private final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.964">everyN</a></pre>
+<pre>private final&nbsp;int <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.980">everyN</a></pre>
 </li>
 </ul>
 <a name="rand">
@@ -350,7 +344,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>rand</h4>
-<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.966">rand</a></pre>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.982">rand</a></pre>
 </li>
 </ul>
 <a name="conf">
@@ -359,7 +353,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>conf</h4>
-<pre>protected final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.967">conf</a></pre>
+<pre>protected final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.983">conf</a></pre>
 </li>
 </ul>
 <a name="opts">
@@ -368,7 +362,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>opts</h4>
-<pre>protected final&nbsp;<a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.TestOptions.html" title="class in org.apache.hadoop.hbase">PerformanceEvaluation.TestOptions</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.968">opts</a></pre>
+<pre>protected final&nbsp;<a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.TestOptions.html" title="class in org.apache.hadoop.hbase">PerformanceEvaluation.TestOptions</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.984">opts</a></pre>
 </li>
 </ul>
 <a name="status">
@@ -377,7 +371,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>status</h4>
-<pre>private final&nbsp;<a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Status.html" title="interface in org.apache.hadoop.hbase">PerformanceEvaluation.Status</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.970">status</a></pre>
+<pre>private final&nbsp;<a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Status.html" title="interface in org.apache.hadoop.hbase">PerformanceEvaluation.Status</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.986">status</a></pre>
 </li>
 </ul>
 <a name="traceSampler">
@@ -386,7 +380,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>traceSampler</h4>
-<pre>private final&nbsp;org.apache.htrace.Sampler&lt;?&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.971">traceSampler</a></pre>
+<pre>private final&nbsp;org.apache.htrace.Sampler&lt;?&gt; <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.987">traceSampler</a></pre>
 </li>
 </ul>
 <a name="receiverHost">
@@ -395,7 +389,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>receiverHost</h4>
-<pre>private final&nbsp;org.apache.hadoop.hbase.trace.SpanReceiverHost <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.972">receiverHost</a></pre>
+<pre>private final&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/trace.SpanReceiverHost.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.trace.SpanReceiverHost</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.988">receiverHost</a></pre>
 </li>
 </ul>
 <a name="connection">
@@ -404,7 +398,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>connection</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.client.Connection <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.973">connection</a></pre>
+<pre>protected&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Connection</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.989">connection</a></pre>
 </li>
 </ul>
 <a name="testName">
@@ -413,25 +407,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testName</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.976">testName</a></pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.992">testName</a></pre>
 </li>
 </ul>
-<a name="latency">
+<a name="latencyHistogram">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>latency</h4>
-<pre>private&nbsp;com.yammer.metrics.core.Histogram <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.977">latency</a></pre>
+<h4>latencyHistogram</h4>
+<pre>private&nbsp;com.codahale.metrics.Histogram <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.993">latencyHistogram</a></pre>
 </li>
 </ul>
-<a name="valueSize">
+<a name="valueSizeHistogram">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>valueSize</h4>
-<pre>private&nbsp;com.yammer.metrics.core.Histogram <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.978">valueSize</a></pre>
+<h4>valueSizeHistogram</h4>
+<pre>private&nbsp;com.codahale.metrics.Histogram <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.994">valueSizeHistogram</a></pre>
 </li>
 </ul>
 <a name="zipf">
@@ -440,7 +434,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>zipf</h4>
-<pre>private&nbsp;<a href="../../../../org/apache/hadoop/hbase/io/hfile/RandomDistribution.Zipf.html" title="class in org.apache.hadoop.hbase.io.hfile">RandomDistribution.Zipf</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.979">zipf</a></pre>
+<pre>private&nbsp;<a href="../../../../org/apache/hadoop/hbase/io/hfile/RandomDistribution.Zipf.html" title="class in org.apache.hadoop.hbase.io.hfile">RandomDistribution.Zipf</a> <a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.995">zipf</a></pre>
 </li>
 </ul>
 </li>
@@ -457,7 +451,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>PerformanceEvaluation.Test</h4>
-<pre><a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.985">PerformanceEvaluation.Test</a>(org.apache.hadoop.hbase.client.Connection&nbsp;con,
+<pre><a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1001">PerformanceEvaluation.Test</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;con,
                           <a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.TestOptions.html" title="class in org.apache.hadoop.hbase">PerformanceEvaluation.TestOptions</a>&nbsp;options,
                           <a href="../../../../org/apache/hadoop/hbase/PerformanceEvaluation.Status.html" title="interface in org.apache.hadoop.hbase">PerformanceEvaluation.Status</a>&nbsp;status)</pre>
 <div class="block">Note that all subclasses of this class must provide a public constructor
@@ -478,7 +472,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>nextRandomSeed</h4>
-<pre>private static&nbsp;long&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.961">nextRandomSeed</a>()</pre>
+<pre>private static&nbsp;long&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.977">nextRandomSeed</a>()</pre>
 </li>
 </ul>
 <a name="getValueLength(java.util.Random)">
@@ -487,7 +481,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getValueLength</h4>
-<pre>int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1007">getValueLength</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;r)</pre>
+<pre>int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1023">getValueLength</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;r)</pre>
 </li>
 </ul>
 <a name="updateValueSize(org.apache.hadoop.hbase.client.Result[])">
@@ -496,7 +490,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updateValueSize</h4>
-<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1013">updateValueSize</a>(org.apache.hadoop.hbase.client.Result[]&nbsp;rs)
+<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1029">updateValueSize</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>[]&nbsp;rs)
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -508,7 +502,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updateValueSize</h4>
-<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1018">updateValueSize</a>(org.apache.hadoop.hbase.client.Result&nbsp;r)
+<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1034">updateValueSize</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;r)
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -520,7 +514,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updateValueSize</h4>
-<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1027">updateValueSize</a>(int&nbsp;valueSize)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1043">updateValueSize</a>(int&nbsp;valueSize)</pre>
 </li>
 </ul>
 <a name="generateStatus(int, int, int)">
@@ -529,7 +523,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>generateStatus</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1032">generateStatus</a>(int&nbsp;sr,
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1048">generateStatus</a>(int&nbsp;sr,
                     int&nbsp;i,
                     int&nbsp;lr)</pre>
 </li>
@@ -540,7 +534,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>isRandomValueSize</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1037">isRandomValueSize</a>()</pre>
+<pre>boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1053">isRandomValueSize</a>()</pre>
 </li>
 </ul>
 <a name="getReportingPeriod()">
@@ -549,16 +543,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getReportingPeriod</h4>
-<pre>protected&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1041">getReportingPeriod</a>()</pre>
+<pre>protected&nbsp;int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1057">getReportingPeriod</a>()</pre>
 </li>
 </ul>
-<a name="getLatency()">
+<a name="getLatencyHistogram()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getLatency</h4>
-<pre>public&nbsp;com.yammer.metrics.core.Histogram&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1048">getLatency</a>()</pre>
+<h4>getLatencyHistogram</h4>
+<pre>public&nbsp;com.codahale.metrics.Histogram&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1064">getLatencyHistogram</a>()</pre>
 <div class="block">Populated by testTakedown. Only implemented by RandomReadTest at the moment.</div>
 </li>
 </ul>
@@ -568,7 +562,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSetup</h4>
-<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1052">testSetup</a>()
+<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1068">testSetup</a>()
          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -580,7 +574,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>onStartup</h4>
-<pre>abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1061">onStartup</a>()
+<pre>abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1077">onStartup</a>()
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -592,7 +586,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testTakedown</h4>
-<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1063">testTakedown</a>()
+<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1079">testTakedown</a>()
             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -604,7 +598,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>onTakedown</h4>
-<pre>abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1073">onTakedown</a>()
+<pre>abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1101">onTakedown</a>()
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -616,12 +610,30 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>test</h4>
-<pre>long&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1080">test</a>()
+<pre>long&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1108">test</a>()
     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getStartRow()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStartRow</h4>
+<pre>int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1120">getStartRow</a>()</pre>
+</li>
+</ul>
+<a name="getLastRow()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLastRow</h4>
+<pre>int&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1124">getLastRow</a>()</pre>
 </li>
 </ul>
 <a name="testTimed()">
@@ -630,7 +642,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testTimed</h4>
-<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1095">testTimed</a>()
+<pre>void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1131">testTimed</a>()
          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Provides an extension point for tests that don't want a per row invocation.</div>
@@ -639,50 +651,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
-<a name="reportLatency()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>reportLatency</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1122">reportLatency</a>()
-                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">report percentiles of latency</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
-</li>
-</ul>
-<a name="reportValueSize()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>reportValueSize</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1128">reportValueSize</a>()
-                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
-</li>
-</ul>
-<a name="reportHistogram(com.yammer.metrics.core.Histogram)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>reportHistogram</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1134">reportHistogram</a>(com.yammer.metrics.core.Histogram&nbsp;h)
-                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
-</li>
-</ul>
 <a name="getShortLatencyReport()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getShortLatencyReport</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1152">getShortLatencyReport</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1164">getShortLatencyReport</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>Subset of the histograms' calculation.</dd></dl>
 </li>
 </ul>
@@ -692,7 +667,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getShortValueSizeReport</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1159">getShortValueSizeReport</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1171">getShortValueSizeReport</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>Subset of the histograms' calculation.</dd></dl>
 </li>
 </ul>
@@ -702,7 +677,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>testRow</h4>
-<pre>abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1167">testRow</a>(int&nbsp;i)
+<pre>abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/PerformanceEvaluation.Test.html#line.1179">testRow</a>(int&nbsp;i)
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -777,6 +752,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

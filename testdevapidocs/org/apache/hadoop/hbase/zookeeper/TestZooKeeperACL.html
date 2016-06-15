@@ -147,7 +147,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#TEST_UTIL">TEST_UTIL</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#zkw">zkw</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -197,7 +197,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#testHBaseIDZNodeACL()">testHBaseIDZNodeACL</a></strong>()</code>
-<div class="block">When authentication is enabled on Zookeeper, /hbase/hbaseid should be
+<div class="block">When authentication is enabled on ZooKeeper, /hbase/hbaseid should be
  created with 2 ACLs: one specifies that the hbase user has full access
  to the node; the other, that it is world-readable.</div>
 </td>
@@ -205,7 +205,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#testHBaseMasterServerZNodeACL()">testHBaseMasterServerZNodeACL</a></strong>()</code>
-<div class="block">When authentication is enabled on Zookeeper, /hbase/master should be
+<div class="block">When authentication is enabled on ZooKeeper, /hbase/master should be
  created with 2 ACLs: one specifies that the hbase user has full access
  to the node; the other, that it is world-readable.</div>
 </td>
@@ -213,7 +213,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#testHBaseRootRegionServerZNodeACL()">testHBaseRootRegionServerZNodeACL</a></strong>()</code>
-<div class="block">When authentication is enabled on Zookeeper, /hbase/root-region-server
+<div class="block">When authentication is enabled on ZooKeeper, /hbase/root-region-server
  should be created with 2 ACLs: one specifies that the hbase user has
  full access to the node; the other, that it is world-readable.</div>
 </td>
@@ -289,7 +289,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>zkw</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher <a href="../../../../../src-html/org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#line.51">zkw</a></pre>
+<pre>private static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#line.51">zkw</a></pre>
 </li>
 </ul>
 <a name="secureZKAvailable">
@@ -371,7 +371,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#line.127">testHBaseRootZNodeACL</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Create a node and check its ACL. When authentication is enabled on 
- Zookeeper, all nodes (except /hbase/root-region-server, /hbase/master
+ ZooKeeper, all nodes (except /hbase/root-region-server, /hbase/master
  and /hbase/hbaseid) should be created so that only the hbase server user
  (master or region server user) that created them can access them, and
  this user should have all permissions on this node. For
@@ -392,7 +392,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>testHBaseRootRegionServerZNodeACL</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#line.146">testHBaseRootRegionServerZNodeACL</a>()
                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
-<div class="block">When authentication is enabled on Zookeeper, /hbase/root-region-server
+<div class="block">When authentication is enabled on ZooKeeper, /hbase/root-region-server
  should be created with 2 ACLs: one specifies that the hbase user has
  full access to the node; the other, that it is world-readable.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -407,7 +407,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>testHBaseMasterServerZNodeACL</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#line.183">testHBaseMasterServerZNodeACL</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
-<div class="block">When authentication is enabled on Zookeeper, /hbase/master should be
+<div class="block">When authentication is enabled on ZooKeeper, /hbase/master should be
  created with 2 ACLs: one specifies that the hbase user has full access
  to the node; the other, that it is world-readable.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -422,7 +422,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>testHBaseIDZNodeACL</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.html#line.219">testHBaseIDZNodeACL</a>()
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
-<div class="block">When authentication is enabled on Zookeeper, /hbase/hbaseid should be
+<div class="block">When authentication is enabled on ZooKeeper, /hbase/hbaseid should be
  created with 2 ACLs: one specifies that the hbase user has full access
  to the node; the other, that it is world-readable.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -536,6 +536,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

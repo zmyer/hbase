@@ -99,7 +99,7 @@
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">CloseRegionHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/handler/CreateTableHandler.html" title="class in org.apache.hadoop.hbase.master.handler">CreateTableHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/handler/DisableTableHandler.html" title="class in org.apache.hadoop.hbase.master.handler">DisableTableHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/handler/DispatchMergingRegionHandler.html" title="class in org.apache.hadoop.hbase.master.handler">DispatchMergingRegionHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/handler/EnableTableHandler.html" title="class in org.apache.hadoop.hbase.master.handler">EnableTableHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/FinishRegionRecoveringHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">FinishRegionRecoveringHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/OpenRegionHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">OpenRegionHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/ParallelSeekHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">ParallelSeekHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/RegionReplicaFlushHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">RegionReplicaFlushHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html" title="class in org.apache.hadoop.hbase.master.handler">TableEventHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/snapshot/TakeSnapshotHandler.html" title="class in org.apache.hadoop.hbase.master.snapshot">TakeSnapshotHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">WALSplitterHandler</a></dd>
+<dd><a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">CloseRegionHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactedHFilesDischargeHandler.html" title="class in org.apache.hadoop.hbase.regionserver">CompactedHFilesDischargeHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/handler/DisableTableHandler.html" title="class in org.apache.hadoop.hbase.master.handler">DisableTableHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/handler/DispatchMergingRegionHandler.html" title="class in org.apache.hadoop.hbase.master.handler">DispatchMergingRegionHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/handler/EnableTableHandler.html" title="class in org.apache.hadoop.hbase.master.handler">EnableTableHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/FinishRegionRecoveringHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">FinishRegionRecoveringHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/OpenRegionHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">OpenRegionHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/ParallelSeekHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">ParallelSeekHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/RegionReplicaFlushHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">RegionReplicaFlushHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/master/snapshot/TakeSnapshotHandler.html" title="class in org.apache.hadoop.hbase.master.snapshot">TakeSnapshotHandler</a>, <a href="../../../../../org/apache/hadoop/hbase/regionserver/handler/WALSplitterHandler.html" title="class in org.apache.hadoop.hbase.regionserver.handler">WALSplitterHandler</a></dd>
 </dl>
 <hr>
 <br>
@@ -401,7 +401,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>run</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.100">run</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.101">run</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true#run()" title="class or interface in java.lang">run</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a></code></dd>
@@ -414,7 +414,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>process</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.116">process</a>()
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.117">process</a>()
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">This method is the main processing loop to be implemented by the various
  subclasses.</div>
@@ -428,7 +428,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>getEventType</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/executor/EventType.html" title="enum in org.apache.hadoop.hbase.executor">EventType</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.122">getEventType</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/executor/EventType.html" title="enum in org.apache.hadoop.hbase.executor">EventType</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.123">getEventType</a>()</pre>
 <div class="block">Return the event type</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The event type.</dd></dl>
 </li>
@@ -439,7 +439,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>getPriority</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.138">getPriority</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.139">getPriority</a>()</pre>
 <div class="block">Get the priority level for this handler instance.  This uses natural
  ordering so lower numbers are higher priority.
  <p>
@@ -458,7 +458,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>getSeqid</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.145">getSeqid</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.146">getSeqid</a>()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>This events' sequence id.</dd></dl>
 </li>
 </ul>
@@ -468,7 +468,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>compareTo</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.156">compareTo</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;o)</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.157">compareTo</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;o)</pre>
 <div class="block">Default prioritized runnable comparator which implements a FIFO ordering.
  <p>
  Subclasses should not override this.  Instead, if they want to implement
@@ -485,7 +485,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.165">toString</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.166">toString</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
@@ -498,7 +498,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockList">
 <li class="blockList">
 <h4>getInformativeName</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.177">getInformativeName</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.178">getInformativeName</a>()</pre>
 <div class="block">Event implementations should override thie class to provide an
  informative name about what event they are handling. For example,
  event-specific information such as which region or server is
@@ -511,7 +511,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <ul class="blockListLast">
 <li class="blockList">
 <h4>handleException</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.185">handleException</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;t)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/executor/EventHandler.html#line.186">handleException</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;t)</pre>
 <div class="block">Event exception handler, may be overridden</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>t</code> - Throwable object</dd></dl>
 </li>
@@ -583,6 +583,6 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

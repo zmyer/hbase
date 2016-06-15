@@ -47,7 +47,7 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.TableNotFoundException;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.backup.HFileArchiver;
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.classification.InterfaceAudience;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ClusterConnection;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Connection;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Delete;
 <a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Result;
 <a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ResultScanner;
@@ -210,13 +210,13 @@
 <a class="jxr_linenumber" name="200" href="#200">200</a> 
 <a class="jxr_linenumber" name="201" href="#201">201</a>   @Override
 <a class="jxr_linenumber" name="202" href="#202">202</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">boolean</strong> acquireLock(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env) {
-<a class="jxr_linenumber" name="203" href="#203">203</a>     <strong class="jxr_keyword">if</strong> (!env.isInitialized()) <strong class="jxr_keyword">return</strong> false;
-<a class="jxr_linenumber" name="204" href="#204">204</a>     <strong class="jxr_keyword">return</strong> env.getProcedureQueue().tryAcquireTableExclusiveLock(getTableName(), <span class="jxr_string">"delete table"</span>);
+<a class="jxr_linenumber" name="203" href="#203">203</a>     <strong class="jxr_keyword">if</strong> (env.waitInitialized(<strong class="jxr_keyword">this</strong>)) <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="204" href="#204">204</a>     <strong class="jxr_keyword">return</strong> env.getProcedureQueue().tryAcquireTableExclusiveLock(<strong class="jxr_keyword">this</strong>, getTableName());
 <a class="jxr_linenumber" name="205" href="#205">205</a>   }
 <a class="jxr_linenumber" name="206" href="#206">206</a> 
 <a class="jxr_linenumber" name="207" href="#207">207</a>   @Override
 <a class="jxr_linenumber" name="208" href="#208">208</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> releaseLock(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env) {
-<a class="jxr_linenumber" name="209" href="#209">209</a>     env.getProcedureQueue().releaseTableExclusiveLock(getTableName());
+<a class="jxr_linenumber" name="209" href="#209">209</a>     env.getProcedureQueue().releaseTableExclusiveLock(<strong class="jxr_keyword">this</strong>, getTableName());
 <a class="jxr_linenumber" name="210" href="#210">210</a>   }
 <a class="jxr_linenumber" name="211" href="#211">211</a> 
 <a class="jxr_linenumber" name="212" href="#212">212</a>   @Override
@@ -279,7 +279,7 @@
 <a class="jxr_linenumber" name="269" href="#269">269</a>       user.doAs(<strong class="jxr_keyword">new</strong> PrivilegedExceptionAction&lt;Void&gt;() {
 <a class="jxr_linenumber" name="270" href="#270">270</a>         @Override
 <a class="jxr_linenumber" name="271" href="#271">271</a>         <strong class="jxr_keyword">public</strong> Void run() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="272" href="#272">272</a>           cpHost.preDeleteTableHandler(tableName);
+<a class="jxr_linenumber" name="272" href="#272">272</a>           cpHost.preDeleteTableAction(tableName);
 <a class="jxr_linenumber" name="273" href="#273">273</a>           <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="274" href="#274">274</a>         }
 <a class="jxr_linenumber" name="275" href="#275">275</a>       });
@@ -297,7 +297,7 @@
 <a class="jxr_linenumber" name="287" href="#287">287</a>       user.doAs(<strong class="jxr_keyword">new</strong> PrivilegedExceptionAction&lt;Void&gt;() {
 <a class="jxr_linenumber" name="288" href="#288">288</a>         @Override
 <a class="jxr_linenumber" name="289" href="#289">289</a>         <strong class="jxr_keyword">public</strong> Void run() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="290" href="#290">290</a>           cpHost.postDeleteTableHandler(tableName);
+<a class="jxr_linenumber" name="290" href="#290">290</a>           cpHost.postCompletedDeleteTableAction(tableName);
 <a class="jxr_linenumber" name="291" href="#291">291</a>           <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="292" href="#292">292</a>         }
 <a class="jxr_linenumber" name="293" href="#293">293</a>       });
@@ -384,7 +384,7 @@
 <a class="jxr_linenumber" name="374" href="#374">374</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="375" href="#375">375</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> cleanAnyRemainingRows(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env,
 <a class="jxr_linenumber" name="376" href="#376">376</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="377" href="#377">377</a>     <a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html">ClusterConnection</a> connection = env.getMasterServices().getConnection();
+<a class="jxr_linenumber" name="377" href="#377">377</a>     <a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html">Connection</a> connection = env.getMasterServices().getConnection();
 <a class="jxr_linenumber" name="378" href="#378">378</a>     <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html">Scan</a> tableScan = MetaTableAccessor.getScanForTableName(connection, tableName);
 <a class="jxr_linenumber" name="379" href="#379">379</a>     <strong class="jxr_keyword">try</strong> (Table metaTable =
 <a class="jxr_linenumber" name="380" href="#380">380</a>         connection.getTable(TableName.META_TABLE_NAME)) {
@@ -412,7 +412,7 @@
 <a class="jxr_linenumber" name="402" href="#402">402</a> 
 <a class="jxr_linenumber" name="403" href="#403">403</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> deleteAssignmentState(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env,
 <a class="jxr_linenumber" name="404" href="#404">404</a>       <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/TableName.html">TableName</a> tableName) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="405" href="#405">405</a>     <a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html">AssignmentManager</a> am = env.getMasterServices().getAssignmentManager();
+<a class="jxr_linenumber" name="405" href="#405">405</a>     <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html">AssignmentManager</a> am = env.getMasterServices().getAssignmentManager();
 <a class="jxr_linenumber" name="406" href="#406">406</a> 
 <a class="jxr_linenumber" name="407" href="#407">407</a>     <em class="jxr_comment">// Clean up regions of the table in RegionStates.</em>
 <a class="jxr_linenumber" name="408" href="#408">408</a>     LOG.debug(<span class="jxr_string">"Removing '"</span> + tableName + <span class="jxr_string">"' from region states."</span>);
@@ -420,7 +420,7 @@
 <a class="jxr_linenumber" name="410" href="#410">410</a> 
 <a class="jxr_linenumber" name="411" href="#411">411</a>     <em class="jxr_comment">// If entry for this table states, remove it.</em>
 <a class="jxr_linenumber" name="412" href="#412">412</a>     LOG.debug(<span class="jxr_string">"Marking '"</span> + tableName + <span class="jxr_string">"' as deleted."</span>);
-<a class="jxr_linenumber" name="413" href="#413">413</a>     am.getTableStateManager().setDeletedTable(tableName);
+<a class="jxr_linenumber" name="413" href="#413">413</a>     env.getMasterServices().getTableStateManager().setDeletedTable(tableName);
 <a class="jxr_linenumber" name="414" href="#414">414</a>   }
 <a class="jxr_linenumber" name="415" href="#415">415</a> 
 <a class="jxr_linenumber" name="416" href="#416">416</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> deleteTableDescriptorCache(<strong class="jxr_keyword">final</strong> <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html">MasterProcedureEnv</a> env,

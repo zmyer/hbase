@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.CallQueueTooBigPffeInterceptor.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -99,7 +99,7 @@
 </dl>
 <hr>
 <br>
-<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFastFail.html#line.288">TestFastFail.MyPreemptiveFastFailInterceptor</a>
+<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFastFail.html#line.335">TestFastFail.MyPreemptiveFastFailInterceptor</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 </li>
 </ul>
@@ -136,7 +136,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#numBraveSouls">numBraveSouls</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;org.apache.hadoop.hbase.ServerName,org.apache.hadoop.hbase.client.FailureInfo&gt;</code></td>
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FailureInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FailureInfo</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#repeatedFailuresMap">repeatedFailuresMap</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -176,56 +176,62 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#%3Cclinit%3E()"><clinit></a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext</code></td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#createEmptyContext()">createEmptyContext</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#handleFailure(org.apache.hadoop.hbase.client.FastFailInterceptorContext,%20java.lang.Throwable)">handleFailure</a></strong>(org.apache.hadoop.hbase.client.FastFailInterceptorContext&nbsp;arg0,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#handleFailure(org.apache.hadoop.hbase.client.FastFailInterceptorContext,%20java.lang.Throwable)">handleFailure</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FastFailInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FastFailInterceptorContext</a>&nbsp;arg0,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;arg1)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#handleFailure(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext,%20java.lang.Throwable)">handleFailure</a></strong>(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext&nbsp;arg0,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#handleFailure(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext,%20java.lang.Throwable)">handleFailure</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext</a>&nbsp;arg0,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;arg1)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#handleThrowable(java.lang.Throwable,%20org.apache.hadoop.hbase.ServerName,%20org.apache.commons.lang.mutable.MutableBoolean)">handleThrowable</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;arg0,
-                              org.apache.hadoop.hbase.ServerName&nbsp;arg1,
-                              org.apache.commons.lang.mutable.MutableBoolean&nbsp;arg2)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#intercept(org.apache.hadoop.hbase.client.FastFailInterceptorContext)">intercept</a></strong>(org.apache.hadoop.hbase.client.FastFailInterceptorContext&nbsp;arg0)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#intercept(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext)">intercept</a></strong>(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext&nbsp;arg0)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#isServerInFailureMap(org.apache.hadoop.hbase.ServerName)">isServerInFailureMap</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;arg0)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#occasionallyCleanupFailureInformation()">occasionallyCleanupFailureInformation</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#handleFailureToServer(org.apache.hadoop.hbase.ServerName,%20java.lang.Throwable)">handleFailureToServer</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;arg0,
+                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;arg1)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#shouldRetryInspiteOfFastFail(org.apache.hadoop.hbase.client.FailureInfo)">shouldRetryInspiteOfFastFail</a></strong>(org.apache.hadoop.hbase.client.FailureInfo&nbsp;fInfo)</code>&nbsp;</td>
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#handleThrowable(java.lang.Throwable,%20org.apache.hadoop.hbase.ServerName,%20org.apache.commons.lang.mutable.MutableBoolean,%20org.apache.commons.lang.mutable.MutableBoolean)">handleThrowable</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;arg0,
+                              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;arg1,
+                              org.apache.commons.lang.mutable.MutableBoolean&nbsp;arg2,
+                              org.apache.commons.lang.mutable.MutableBoolean&nbsp;arg3)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#intercept(org.apache.hadoop.hbase.client.FastFailInterceptorContext)">intercept</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FastFailInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FastFailInterceptorContext</a>&nbsp;arg0)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#intercept(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext)">intercept</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext</a>&nbsp;arg0)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#isServerInFailureMap(org.apache.hadoop.hbase.ServerName)">isServerInFailureMap</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;arg0)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#occasionallyCleanupFailureInformation()">occasionallyCleanupFailureInformation</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#shouldRetryInspiteOfFastFail(org.apache.hadoop.hbase.client.FailureInfo)">shouldRetryInspiteOfFastFail</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FailureInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FailureInfo</a>&nbsp;fInfo)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#toString()">toString</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#updateFailureInfo(org.apache.hadoop.hbase.client.FastFailInterceptorContext)">updateFailureInfo</a></strong>(org.apache.hadoop.hbase.client.FastFailInterceptorContext&nbsp;arg0)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#updateFailureInfo(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext)">updateFailureInfo</a></strong>(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext&nbsp;arg0)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#updateFailureInfo(org.apache.hadoop.hbase.client.FastFailInterceptorContext)">updateFailureInfo</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FastFailInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FastFailInterceptorContext</a>&nbsp;arg0)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#updateFailureInfo(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext)">updateFailureInfo</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext</a>&nbsp;arg0)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -255,7 +261,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>numBraveSouls</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#line.290">numBraveSouls</a></pre>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#line.337">numBraveSouls</a></pre>
 </li>
 </ul>
 <a name="fastFailThresholdMilliSec">
@@ -273,7 +279,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>repeatedFailuresMap</h4>
-<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;org.apache.hadoop.hbase.ServerName,org.apache.hadoop.hbase.client.FailureInfo&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">repeatedFailuresMap</a></pre>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FailureInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FailureInfo</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">repeatedFailuresMap</a></pre>
 </li>
 </ul>
 <a name="failureMapCleanupIntervalMilliSec">
@@ -308,7 +314,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestFastFail.MyPreemptiveFastFailInterceptor</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#line.300">TestFastFail.MyPreemptiveFastFailInterceptor</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#line.347">TestFastFail.MyPreemptiveFastFailInterceptor</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 </li>
 </ul>
 </li>
@@ -325,7 +331,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>shouldRetryInspiteOfFastFail</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#line.293">shouldRetryInspiteOfFastFail</a>(org.apache.hadoop.hbase.client.FailureInfo&nbsp;fInfo)</pre>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestFastFail.MyPreemptiveFastFailInterceptor.html#line.340">shouldRetryInspiteOfFastFail</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FailureInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FailureInfo</a>&nbsp;fInfo)</pre>
 </li>
 </ul>
 <a name="intercept(org.apache.hadoop.hbase.client.FastFailInterceptorContext)">
@@ -334,10 +340,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>intercept</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">intercept</a>(org.apache.hadoop.hbase.client.FastFailInterceptorContext&nbsp;arg0)
-               throws org.apache.hadoop.hbase.exceptions.PreemptiveFastFailException</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">intercept</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FastFailInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FastFailInterceptorContext</a>&nbsp;arg0)
+               throws <a href="../../../../../../apidocs/org/apache/hadoop/hbase/exceptions/PreemptiveFastFailException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.exceptions">PreemptiveFastFailException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.exceptions.PreemptiveFastFailException</code></dd></dl>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/exceptions/PreemptiveFastFailException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.exceptions">PreemptiveFastFailException</a></code></dd></dl>
 </li>
 </ul>
 <a name="handleFailure(org.apache.hadoop.hbase.client.FastFailInterceptorContext, java.lang.Throwable)">
@@ -346,7 +352,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>handleFailure</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">handleFailure</a>(org.apache.hadoop.hbase.client.FastFailInterceptorContext&nbsp;arg0,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">handleFailure</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FastFailInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FastFailInterceptorContext</a>&nbsp;arg0,
                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;arg1)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -359,18 +365,29 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updateFailureInfo</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">updateFailureInfo</a>(org.apache.hadoop.hbase.client.FastFailInterceptorContext&nbsp;arg0)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">updateFailureInfo</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/FastFailInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.FastFailInterceptorContext</a>&nbsp;arg0)</pre>
 </li>
 </ul>
-<a name="handleThrowable(java.lang.Throwable, org.apache.hadoop.hbase.ServerName, org.apache.commons.lang.mutable.MutableBoolean)">
+<a name="handleFailureToServer(org.apache.hadoop.hbase.ServerName, java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleFailureToServer</h4>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">handleFailureToServer</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;arg0,
+                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;arg1)</pre>
+</li>
+</ul>
+<a name="handleThrowable(java.lang.Throwable, org.apache.hadoop.hbase.ServerName, org.apache.commons.lang.mutable.MutableBoolean, org.apache.commons.lang.mutable.MutableBoolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>handleThrowable</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">handleThrowable</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;arg0,
-                   org.apache.hadoop.hbase.ServerName&nbsp;arg1,
-                   org.apache.commons.lang.mutable.MutableBoolean&nbsp;arg2)
+                   <a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;arg1,
+                   org.apache.commons.lang.mutable.MutableBoolean&nbsp;arg2,
+                   org.apache.commons.lang.mutable.MutableBoolean&nbsp;arg3)
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -391,10 +408,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>intercept</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">intercept</a>(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext&nbsp;arg0)
-               throws org.apache.hadoop.hbase.exceptions.PreemptiveFastFailException</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">intercept</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext</a>&nbsp;arg0)
+               throws <a href="../../../../../../apidocs/org/apache/hadoop/hbase/exceptions/PreemptiveFastFailException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.exceptions">PreemptiveFastFailException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.exceptions.PreemptiveFastFailException</code></dd></dl>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/exceptions/PreemptiveFastFailException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.exceptions">PreemptiveFastFailException</a></code></dd></dl>
 </li>
 </ul>
 <a name="handleFailure(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext, java.lang.Throwable)">
@@ -403,7 +420,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>handleFailure</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">handleFailure</a>(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext&nbsp;arg0,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">handleFailure</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext</a>&nbsp;arg0,
                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;arg1)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -416,7 +433,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>updateFailureInfo</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">updateFailureInfo</a>(org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext&nbsp;arg0)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">updateFailureInfo</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext</a>&nbsp;arg0)</pre>
 </li>
 </ul>
 <a name="createEmptyContext()">
@@ -425,7 +442,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createEmptyContext</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">createEmptyContext</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RetryingCallerInterceptorContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.RetryingCallerInterceptorContext</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">createEmptyContext</a>()</pre>
 </li>
 </ul>
 <a name="isServerInFailureMap(org.apache.hadoop.hbase.ServerName)">
@@ -434,7 +451,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>isServerInFailureMap</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">isServerInFailureMap</a>(org.apache.hadoop.hbase.ServerName&nbsp;arg0)</pre>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html#line.0">isServerInFailureMap</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;arg0)</pre>
 </li>
 </ul>
 <a name="toString()">
@@ -481,7 +498,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestFastFail.CallQueueTooBigPffeInterceptor.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestFromClientSide.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -522,6 +539,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

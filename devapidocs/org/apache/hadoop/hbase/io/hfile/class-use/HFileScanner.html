@@ -215,17 +215,25 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileScanner.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileScanner</a></code></td>
-<td class="colLast"><span class="strong">StoreFile.Reader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html#getScanner(boolean,%20boolean)">getScanner</a></strong>(boolean&nbsp;cacheBlocks,
+<td class="colLast"><span class="strong">StoreFileReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileReader.html#getScanner(boolean,%20boolean)">getScanner</a></strong>(boolean&nbsp;cacheBlocks,
                     boolean&nbsp;pread)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Do not write further code which depends on this call. Instead
+   use getStoreFileScanner() which uses the StoreFileScanner class/interface
+   which is the preferred way to scan a store with higher level concepts.</i></div>
+</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileScanner.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileScanner</a></code></td>
-<td class="colLast"><span class="strong">StoreFile.Reader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html#getScanner(boolean,%20boolean,%20boolean)">getScanner</a></strong>(boolean&nbsp;cacheBlocks,
+<td class="colLast"><span class="strong">StoreFileReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileReader.html#getScanner(boolean,%20boolean,%20boolean)">getScanner</a></strong>(boolean&nbsp;cacheBlocks,
                     boolean&nbsp;pread,
                     boolean&nbsp;isCompaction)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Do not write further code which depends on this call. Instead
+   use getStoreFileScanner() which uses the StoreFileScanner class/interface
+   which is the preferred way to scan a store with higher level concepts.</i></div>
+</div>
 </td>
 </tr>
 </tbody>
@@ -256,11 +264,21 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileScanner.html#StoreFileScanner(org.apache.hadoop.hbase.regionserver.StoreFile.Reader,%20org.apache.hadoop.hbase.io.hfile.HFileScanner,%20boolean,%20boolean,%20long)">StoreFileScanner</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Reader</a>&nbsp;reader,
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileScanner.html#StoreFileScanner(org.apache.hadoop.hbase.regionserver.StoreFileReader,%20org.apache.hadoop.hbase.io.hfile.HFileScanner,%20boolean,%20boolean,%20long)">StoreFileScanner</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileReader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileReader</a>&nbsp;reader,
                                 <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileScanner.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileScanner</a>&nbsp;hfs,
                                 boolean&nbsp;useMVCC,
                                 boolean&nbsp;hasMVCC,
                                 long&nbsp;readPt)</code>
+<div class="block">Implements a <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver"><code>KeyValueScanner</code></a> on top of the specified <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileScanner.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>HFileScanner</code></a></div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileScanner.html#StoreFileScanner(org.apache.hadoop.hbase.regionserver.StoreFileReader,%20org.apache.hadoop.hbase.io.hfile.HFileScanner,%20boolean,%20boolean,%20long,%20long)">StoreFileScanner</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileReader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileReader</a>&nbsp;reader,
+                                <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileScanner.html" title="interface in org.apache.hadoop.hbase.io.hfile">HFileScanner</a>&nbsp;hfs,
+                                boolean&nbsp;useMVCC,
+                                boolean&nbsp;hasMVCC,
+                                long&nbsp;readPt,
+                                long&nbsp;scannerOrder)</code>
 <div class="block">Implements a <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver"><code>KeyValueScanner</code></a> on top of the specified <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileScanner.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>HFileScanner</code></a></div>
 </td>
 </tr>
@@ -316,6 +334,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -86,7 +86,7 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.mapreduce.TestImportExport.TableWALActionListener</li>
@@ -100,7 +100,7 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd>org.apache.hadoop.hbase.regionserver.wal.WALActionsListener</dd>
+<dd><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a></dd>
 </dl>
 <dl>
 <dt>Enclosing class:</dt>
@@ -108,9 +108,9 @@
 </dl>
 <hr>
 <br>
-<pre>private static class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.html#line.696">TestImportExport.TableWALActionListener</a>
-extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
-<div class="block">This listens to the <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>visitLogEntryBeforeWrite(HTableDescriptor, WALKey, WALEdit)</code></a> to
+<pre>private static class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.html#line.709">TestImportExport.TableWALActionListener</a>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener.Base</a></pre>
+<div class="block">This listens to the <code>#visitLogEntryBeforeWrite(HTableDescriptor, WALKey, WALEdit)</code> to
  identify that an entry is written to the Write Ahead Log for the given table.</div>
 </li>
 </ul>
@@ -128,8 +128,8 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.WALActionsListener">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.regionserver.wal.WALActionsListener</h3>
-<code>org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</code></li>
+<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener.Base</a></code></li>
 </ul>
 </li>
 </ul>
@@ -150,8 +150,8 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#isVisited">isVisited</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#tableName">tableName</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#regionInfo">regionInfo</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -168,7 +168,7 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#TestImportExport.TableWALActionListener(java.lang.String)">TestImportExport.TableWALActionListener</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#TestImportExport.TableWALActionListener(org.apache.hadoop.hbase.HRegionInfo)">TestImportExport.TableWALActionListener</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -191,17 +191,16 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">visitLogEntryBeforeWrite</a></strong>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd,
-                                                org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                                                org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">visitLogEntryBeforeWrite</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                                                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</h3>
-<code>logCloseRequested, logRollRequested, postAppend, postLogArchive, postLogRoll, postSync, preLogArchive, preLogRoll, visitLogEntryBeforeWrite</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.wal.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener.Base</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#logCloseRequested()" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">logCloseRequested</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#logRollRequested(boolean)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">logRollRequested</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#postAppend(long,%20long,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">postAppend</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#postLogArchive(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">postLogArchive</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#postLogRoll(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">postLogRoll</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#postSync(long,%20int)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">postSync</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#preLogArchive(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">preLogArchive</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#preLogRoll(org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">preLogRoll</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">visitLogEntryBeforeWrite</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -224,13 +223,13 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
-<a name="tableName">
+<a name="regionInfo">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>tableName</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.698">tableName</a></pre>
+<h4>regionInfo</h4>
+<pre>private&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.711">regionInfo</a></pre>
 </li>
 </ul>
 <a name="isVisited">
@@ -239,7 +238,7 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>isVisited</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.699">isVisited</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.712">isVisited</a></pre>
 </li>
 </ul>
 </li>
@@ -250,13 +249,13 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="TestImportExport.TableWALActionListener(java.lang.String)">
+<a name="TestImportExport.TableWALActionListener(org.apache.hadoop.hbase.HRegionInfo)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestImportExport.TableWALActionListener</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.701">TestImportExport.TableWALActionListener</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName)</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.714">TestImportExport.TableWALActionListener</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region)</pre>
 </li>
 </ul>
 </li>
@@ -267,20 +266,19 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="visitLogEntryBeforeWrite(org.apache.hadoop.hbase.HTableDescriptor, org.apache.hadoop.hbase.wal.WALKey, org.apache.hadoop.hbase.regionserver.wal.WALEdit)">
+<a name="visitLogEntryBeforeWrite(org.apache.hadoop.hbase.wal.WALKey, org.apache.hadoop.hbase.regionserver.wal.WALEdit)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>visitLogEntryBeforeWrite</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.706">visitLogEntryBeforeWrite</a>(org.apache.hadoop.hbase.HTableDescriptor&nbsp;htd,
-                            org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                            org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.719">visitLogEntryBeforeWrite</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>visitLogEntryBeforeWrite</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.regionserver.wal.WALActionsListener</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html?is-external=true#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">visitLogEntryBeforeWrite</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>visitLogEntryBeforeWrite</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">visitLogEntryBeforeWrite</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener.Base</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -290,7 +288,7 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>isWALVisited</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.712">isWALVisited</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestImportExport.TableWALActionListener.html#line.726">isWALVisited</a>()</pre>
 </li>
 </ul>
 </li>
@@ -360,6 +358,6 @@ extends org.apache.hadoop.hbase.regionserver.wal.WALActionsListener.Base</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

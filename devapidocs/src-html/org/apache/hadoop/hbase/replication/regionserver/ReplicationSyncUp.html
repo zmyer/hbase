@@ -48,7 +48,7 @@
 <span class="sourceLineNo">040</span>/**<a name="line.40"></a>
 <span class="sourceLineNo">041</span> * In a scenario of Replication based Disaster/Recovery, when hbase<a name="line.41"></a>
 <span class="sourceLineNo">042</span> * Master-Cluster crashes, this tool is used to sync-up the delta from Master to<a name="line.42"></a>
-<span class="sourceLineNo">043</span> * Slave using the info from Zookeeper. The tool will run on Master-Cluser, and<a name="line.43"></a>
+<span class="sourceLineNo">043</span> * Slave using the info from ZooKeeper. The tool will run on Master-Cluser, and<a name="line.43"></a>
 <span class="sourceLineNo">044</span> * assume ZK, Filesystem and NetWork still available after hbase crashes<a name="line.44"></a>
 <span class="sourceLineNo">045</span> *<a name="line.45"></a>
 <span class="sourceLineNo">046</span> * hbase org.apache.hadoop.hbase.replication.regionserver.ReplicationSyncUp<a name="line.46"></a>
@@ -195,8 +195,14 @@
 <span class="sourceLineNo">187</span>    public ChoreService getChoreService() {<a name="line.187"></a>
 <span class="sourceLineNo">188</span>      return null;<a name="line.188"></a>
 <span class="sourceLineNo">189</span>    }<a name="line.189"></a>
-<span class="sourceLineNo">190</span>  }<a name="line.190"></a>
-<span class="sourceLineNo">191</span>}<a name="line.191"></a>
+<span class="sourceLineNo">190</span><a name="line.190"></a>
+<span class="sourceLineNo">191</span>    @Override<a name="line.191"></a>
+<span class="sourceLineNo">192</span>    public ClusterConnection getClusterConnection() {<a name="line.192"></a>
+<span class="sourceLineNo">193</span>      // TODO Auto-generated method stub<a name="line.193"></a>
+<span class="sourceLineNo">194</span>      return null;<a name="line.194"></a>
+<span class="sourceLineNo">195</span>    }<a name="line.195"></a>
+<span class="sourceLineNo">196</span>  }<a name="line.196"></a>
+<span class="sourceLineNo">197</span>}<a name="line.197"></a>
 
 
 

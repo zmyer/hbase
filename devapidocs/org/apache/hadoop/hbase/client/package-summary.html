@@ -117,7 +117,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a></td>
 <td class="colLast">
-<div class="block">Internal methods on HConnection that should not be used by user code.</div>
+<div class="block">Internal methods on Connection that should not be used by user code.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -140,14 +140,14 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.ProcedureFuture.WaitForStateCallable.html" title="interface in org.apache.hadoop.hbase.client">HBaseAdmin.ProcedureFuture.WaitForStateCallable</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Future.html" title="interface in org.apache.hadoop.hbase.client">Future</a>&lt;V&gt;</td>
+<td class="colLast">
+<div class="block">Promise for responses</div>
+</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a></td>
-<td class="colLast">Deprecated
-<div class="block"><i>in favor of <a href="../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client"><code>Connection</code></a> and <a href="../../../../../org/apache/hadoop/hbase/client/ConnectionFactory.html" title="class in org.apache.hadoop.hbase.client"><code>ConnectionFactory</code></a></i></div>
-</td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.ProcedureFuture.WaitForStateCallable.html" title="interface in org.apache.hadoop.hbase.client">HBaseAdmin.ProcedureFuture.WaitForStateCallable</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HTableInterface.html" title="interface in org.apache.hadoop.hbase.client">HTableInterface</a></td>
@@ -187,15 +187,27 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ResponseFutureListener.html" title="interface in org.apache.hadoop.hbase.client">ResponseFutureListener</a>&lt;V&gt;</td>
+<td class="colLast">
+<div class="block">Specific interface for the Response future listener</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a></td>
 <td class="colLast">
 <div class="block">Interface for client-side scanning.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;T&gt;</td>
 <td class="colLast">
 <div class="block">A Callable&lt;T&gt; that will be retried.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RetryingCallableBase.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallableBase</a></td>
+<td class="colLast">
+<div class="block">All generic methods for a Callable that can be retried.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -209,6 +221,12 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/StatisticTrackable.html" title="interface in org.apache.hadoop.hbase.client">StatisticTrackable</a></td>
+<td class="colLast">
+<div class="block">Parent interface for an object to get updates about per-region statistics.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a></td>
 <td class="colLast">
 <div class="block">Used to communicate with a single HBase table.</div>
@@ -232,34 +250,40 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/AbstractRegionServerCallable.html" title="class in org.apache.hadoop.hbase.client">AbstractRegionServerCallable</a>&lt;T&gt;</td>
+<td class="colLast">
+<div class="block">Implementations call a RegionServer.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Action.html" title="class in org.apache.hadoop.hbase.client">Action</a>&lt;R&gt;</td>
 <td class="colLast">
 <div class="block">A Get, Put, Increment, Append, or Delete associated with it's region.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a></td>
 <td class="colLast">
 <div class="block">Performs Append operations on a single row.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/AsyncProcess.html" title="class in org.apache.hadoop.hbase.client">AsyncProcess</a></td>
 <td class="colLast">
 <div class="block">This class  allows a continuous flow of requests.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/AsyncProcess.BatchErrors.html" title="class in org.apache.hadoop.hbase.client">AsyncProcess.BatchErrors</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/AsyncProcess.ReplicaResultState.html" title="class in org.apache.hadoop.hbase.client">AsyncProcess.ReplicaResultState</a></td>
 <td class="colLast">
 <div class="block">Sync point for calls to multiple replicas for the same user request (Get).</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/BufferedMutatorImpl.html" title="class in org.apache.hadoop.hbase.client">BufferedMutatorImpl</a></td>
 <td class="colLast">
 <div class="block">
@@ -267,74 +291,80 @@
  but meant for batched, potentially asynchronous puts.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/BufferedMutatorParams.html" title="class in org.apache.hadoop.hbase.client">BufferedMutatorParams</a></td>
 <td class="colLast">
 <div class="block">Parameters for instantiating a <a href="../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client"><code>BufferedMutator</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClientAsyncPrefetchScanner.html" title="class in org.apache.hadoop.hbase.client">ClientAsyncPrefetchScanner</a></td>
 <td class="colLast">
 <div class="block">ClientAsyncPrefetchScanner implements async scanner behaviour.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClientIdGenerator.html" title="class in org.apache.hadoop.hbase.client">ClientIdGenerator</a></td>
 <td class="colLast">
 <div class="block">The class that is able to determine some unique strings for the client,
  such as an IP address, PID, and composite deterministic ID.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClientScanner.html" title="class in org.apache.hadoop.hbase.client">ClientScanner</a></td>
 <td class="colLast">
 <div class="block">Implements the scanner interface for the HBase client.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClientSideRegionScanner.html" title="class in org.apache.hadoop.hbase.client">ClientSideRegionScanner</a></td>
 <td class="colLast">
 <div class="block">A client scanner for a region opened for read-only on the client side.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClientSimpleScanner.html" title="class in org.apache.hadoop.hbase.client">ClientSimpleScanner</a></td>
 <td class="colLast">
 <div class="block">ClientSimpleScanner implements a sync scanner behaviour.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClientSmallReversedScanner.html" title="class in org.apache.hadoop.hbase.client">ClientSmallReversedScanner</a></td>
 <td class="colLast">
 <div class="block">
  Client scanner for small reversed scan.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.html" title="class in org.apache.hadoop.hbase.client">ClientSmallScanner</a></td>
 <td class="colLast">
 <div class="block">Client scanner for small scan.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.SmallScannerCallable.html" title="class in org.apache.hadoop.hbase.client">ClientSmallScanner.SmallScannerCallable</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClientSmallScanner.SmallScannerCallableFactory.html" title="class in org.apache.hadoop.hbase.client">ClientSmallScanner.SmallScannerCallableFactory</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ClusterStatusListener.html" title="class in org.apache.hadoop.hbase.client">ClusterStatusListener</a></td>
 <td class="colLast">
 <div class="block">A class that receives the cluster status, and provide it as a set of service to the client.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionCallable.html" title="class in org.apache.hadoop.hbase.client">ConnectionCallable</a>&lt;V&gt;</td>
 <td class="colLast">
 <div class="block">A RetryingCallable for generic connection operations.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ConnectionConfiguration.html" title="class in org.apache.hadoop.hbase.client">ConnectionConfiguration</a></td>
+<td class="colLast">
+<div class="block">Configuration parameters for the connection.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -474,10 +504,18 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.NamespaceFuture.html" title="class in org.apache.hadoop.hbase.client">HBaseAdmin.NamespaceFuture</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.ProcedureFuture.html" title="class in org.apache.hadoop.hbase.client">HBaseAdmin.ProcedureFuture</a>&lt;V&gt;</td>
 <td class="colLast">
 <div class="block">Future that waits on a procedure result.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.RestoreSnapshotFuture.html" title="class in org.apache.hadoop.hbase.client">HBaseAdmin.RestoreSnapshotFuture</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.TableFuture.html" title="class in org.apache.hadoop.hbase.client">HBaseAdmin.TableFuture</a>&lt;V&gt;</td>
@@ -494,106 +532,107 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HConnectable.html" title="class in org.apache.hadoop.hbase.client">HConnectable</a>&lt;T&gt;</td>
-<td class="colLast">
-<div class="block">This class makes it convenient for one to execute a command in the context
- of a <a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client"><code>HConnection</code></a> instance based on the given <code>Configuration</code>.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HRegionLocator.html" title="class in org.apache.hadoop.hbase.client">HRegionLocator</a></td>
 <td class="colLast">
 <div class="block">An implementation of <a href="../../../../../org/apache/hadoop/hbase/client/RegionLocator.html" title="interface in org.apache.hadoop.hbase.client"><code>RegionLocator</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HTable.html" title="class in org.apache.hadoop.hbase.client">HTable</a></td>
 <td class="colLast">
 <div class="block">An implementation of <a href="../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client"><code>Table</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HTableMultiplexer.html" title="class in org.apache.hadoop.hbase.client">HTableMultiplexer</a></td>
 <td class="colLast">
 <div class="block">HTableMultiplexer provides a thread-safe non blocking PUT API across all the tables.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HTableMultiplexer.AtomicAverageCounter.html" title="class in org.apache.hadoop.hbase.client">HTableMultiplexer.AtomicAverageCounter</a></td>
 <td class="colLast">
 <div class="block">Helper to count the average over an interval until reset.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HTableMultiplexer.FlushWorker.html" title="class in org.apache.hadoop.hbase.client">HTableMultiplexer.FlushWorker</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HTableMultiplexer.HTableMultiplexerStatus.html" title="class in org.apache.hadoop.hbase.client">HTableMultiplexer.HTableMultiplexerStatus</a></td>
 <td class="colLast">
 <div class="block">HTableMultiplexerStatus keeps track of the current status of the HTableMultiplexer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HTableMultiplexer.PutStatus.html" title="class in org.apache.hadoop.hbase.client">HTableMultiplexer.PutStatus</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/HTableWrapper.html" title="class in org.apache.hadoop.hbase.client">HTableWrapper</a></td>
 <td class="colLast">
 <div class="block">A wrapper for HTable.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a></td>
 <td class="colLast">
 <div class="block">Used to perform Increment operations on a single row.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MasterCallable.html" title="class in org.apache.hadoop.hbase.client">MasterCallable</a>&lt;V&gt;</td>
 <td class="colLast">
 <div class="block">A RetryingCallable for master operations.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MetaCache.html" title="class in org.apache.hadoop.hbase.client">MetaCache</a></td>
 <td class="colLast">
 <div class="block">A cache implementation for region locations from meta.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection</a></td>
 <td class="colLast">
 <div class="block">This class is for maintaining the various connection statistics and publishing them through
  the metrics interfaces.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallStats</a></td>
 <td class="colLast">
 <div class="block">A container class for collecting details about the RPC call as it percolates.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RegionStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RegionStats</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.CallTracker.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.CallTracker</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RunnerStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RunnerStats</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RegionStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RegionStats</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MetricsConnection.RunnerStats.html" title="class in org.apache.hadoop.hbase.client">MetricsConnection.RunnerStats</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MultiAction.html" title="class in org.apache.hadoop.hbase.client">MultiAction</a>&lt;R&gt;</td>
 <td class="colLast">
 <div class="block">Container for Actions (i.e.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MultiResponse.html" title="class in org.apache.hadoop.hbase.client">MultiResponse</a></td>
 <td class="colLast">
 <div class="block">A container for Result objects, grouped by regionName.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MultiResponse.RegionResult.html" title="class in org.apache.hadoop.hbase.client">MultiResponse.RegionResult</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MultiServerCallable.html" title="class in org.apache.hadoop.hbase.client">MultiServerCallable</a>&lt;R&gt;</td>
@@ -627,39 +666,51 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/PayloadCarryingServerCallable.html" title="class in org.apache.hadoop.hbase.client">PayloadCarryingServerCallable</a>&lt;T&gt;</td>
+<td class="colLast">
+<div class="block">This class is used to unify HTable calls with AsyncProcess Framework.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/PerClientRandomNonceGenerator.html" title="class in org.apache.hadoop.hbase.client">PerClientRandomNonceGenerator</a></td>
 <td class="colLast">
 <div class="block">NonceGenerator implementation that uses client ID hash + random int as nonce group,
  and random numbers as nonces.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/PreemptiveFastFailInterceptor.html" title="class in org.apache.hadoop.hbase.client">PreemptiveFastFailInterceptor</a></td>
 <td class="colLast">
 <div class="block">The concrete <a href="../../../../../org/apache/hadoop/hbase/client/RetryingCallerInterceptor.html" title="class in org.apache.hadoop.hbase.client"><code>RetryingCallerInterceptor</code></a> class that implements the preemptive fast fail
  feature.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></td>
 <td class="colLast">
 <div class="block">Used to perform Put operations for a single row.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RegionAdminServiceCallable.html" title="class in org.apache.hadoop.hbase.client">RegionAdminServiceCallable</a>&lt;T&gt;</td>
 <td class="colLast">
 <div class="block">Similar to <a href="../../../../../org/apache/hadoop/hbase/client/RegionServerCallable.html" title="class in org.apache.hadoop.hbase.client"><code>RegionServerCallable</code></a> but for the AdminService interface.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RegionCoprocessorServiceExec.html" title="class in org.apache.hadoop.hbase.client">RegionCoprocessorServiceExec</a></td>
 <td class="colLast">
 <div class="block">Represents a coprocessor service method execution against a single region.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RegionLoadStats.html" title="class in org.apache.hadoop.hbase.client">RegionLoadStats</a></td>
+<td class="colLast">
+<div class="block">POJO representing region server load</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -727,77 +778,76 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RetryingTimeTracker.html" title="class in org.apache.hadoop.hbase.client">RetryingTimeTracker</a></td>
+<td class="colLast">
+<div class="block">Tracks the amount of time remaining for an operation.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ReversedClientScanner.html" title="class in org.apache.hadoop.hbase.client">ReversedClientScanner</a></td>
 <td class="colLast">
 <div class="block">A reversed client scanner which support backward scanning</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ReversedScannerCallable.html" title="class in org.apache.hadoop.hbase.client">ReversedScannerCallable</a></td>
 <td class="colLast">
 <div class="block">A reversed ScannerCallable which supports backward scanning.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RowMutations.html" title="class in org.apache.hadoop.hbase.client">RowMutations</a></td>
 <td class="colLast">
 <div class="block">Performs multiple mutations atomically on a single row.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></td>
 <td class="colLast">
 <div class="block">Factory to create an <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="interface in org.apache.hadoop.hbase.client"><code>RpcRetryingCaller</code></a></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerImpl.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerImpl</a>&lt;T&gt;</td>
 <td class="colLast">
 <div class="block">Runs an rpc'ing <a href="../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client"><code>RetryingCallable</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerWithReadReplicas.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerWithReadReplicas</a></td>
 <td class="colLast">
 <div class="block">Caller that goes to replica if the primary region does no answer within a configurable
  timeout.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></td>
 <td class="colLast">
 <div class="block">Used to perform Scan operations.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ScannerCallable.html" title="class in org.apache.hadoop.hbase.client">ScannerCallable</a></td>
 <td class="colLast">
 <div class="block">Scanner operations such as create, next, etc.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ScannerCallableWithReplicas.html" title="class in org.apache.hadoop.hbase.client">ScannerCallableWithReplicas</a></td>
 <td class="colLast">
 <div class="block">This class has the logic for handling scanners for regions with and without replicas.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ServerStatisticTracker.html" title="class in org.apache.hadoop.hbase.client">ServerStatisticTracker</a></td>
 <td class="colLast">
 <div class="block">Tracks the statistics for multiple regions</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/StatsTrackingRpcRetryingCaller.html" title="class in org.apache.hadoop.hbase.client">StatsTrackingRpcRetryingCaller</a>&lt;T&gt;</td>
-<td class="colLast">
-<div class="block">An <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="interface in org.apache.hadoop.hbase.client"><code>RpcRetryingCaller</code></a> that will update the per-region stats for the call on return,
- if stats are available</div>
-</td>
-</tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/TableConfiguration.html" title="class in org.apache.hadoop.hbase.client">TableConfiguration</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/SnapshotDescription.html" title="class in org.apache.hadoop.hbase.client">SnapshotDescription</a></td>
 <td class="colLast">
-<div class="block">Configuration is a heavy weight registry that does a lot of string operations and regex matching.</div>
+<div class="block">The POJO equivalent of HBaseProtos.SnapshotDescription</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -823,6 +873,12 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/VersionInfoUtil.html" title="class in org.apache.hadoop.hbase.client">VersionInfoUtil</a></td>
+<td class="colLast">
+<div class="block">Class to help with parsing the version info.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ZooKeeperKeepAliveConnection.html" title="class in org.apache.hadoop.hbase.client">ZooKeeperKeepAliveConnection</a></td>
 <td class="colLast">
 <div class="block">We inherit the current ZooKeeperWatcher implementation to change the semantic
@@ -830,7 +886,7 @@
   will have a keep alive.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/ZooKeeperRegistry.html" title="class in org.apache.hadoop.hbase.client">ZooKeeperRegistry</a></td>
 <td class="colLast">
 <div class="block">A cluster registry that stores to zookeeper.</div>
@@ -848,7 +904,19 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Admin.CompactType.html" title="enum in org.apache.hadoop.hbase.client">Admin.CompactType</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/AsyncProcess.Retry.html" title="enum in org.apache.hadoop.hbase.client">AsyncProcess.Retry</a></td>
+<td class="colLast">
+<div class="block">For <code>AsyncRequestFutureImpl#manageError(int, Row, Retry, Throwable, ServerName)</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/CompactionState.html" title="enum in org.apache.hadoop.hbase.client">CompactionState</a></td>
+<td class="colLast">
+<div class="block">POJO representing the compaction state</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/CompactType.html" title="enum in org.apache.hadoop.hbase.client">CompactType</a></td>
 <td class="colLast">
 <div class="block">Currently, there are only two compact types:
  <code>NORMAL</code> means do store files compaction;
@@ -856,31 +924,37 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/AsyncProcess.Retry.html" title="enum in org.apache.hadoop.hbase.client">AsyncProcess.Retry</a></td>
-<td class="colLast">
-<div class="block">For <code>AsyncRequestFutureImpl#manageError(int, Row, Retry, Throwable, ServerName)</code>.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a></td>
 <td class="colLast">
 <div class="block">Consistency defines the expected consistency level for an operation.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></td>
 <td class="colLast">
 <div class="block">Enum describing the durability guarantees for tables and <a href="../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client"><code>Mutation</code></a>s
  Note that the items must be sorted in order of increasing durability</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/IsolationLevel.html" title="enum in org.apache.hadoop.hbase.client">IsolationLevel</a></td>
 <td class="colLast">
 <div class="block">Specify Isolation levels in Scan operations.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/MasterSwitchType.html" title="enum in org.apache.hadoop.hbase.client">MasterSwitchType</a></td>
+<td class="colLast">
+<div class="block">Represents the master switch type</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/SnapshotType.html" title="enum in org.apache.hadoop.hbase.client">SnapshotType</a></td>
+<td class="colLast">
+<div class="block">POJO representing the snapshot type</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/client/TableState.State.html" title="enum in org.apache.hadoop.hbase.client">TableState.State</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -1189,6 +1263,6 @@ public class MyLittleHBaseClient {
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -95,9 +95,9 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.52">TestSimpleRegionNormalizer</a>
+<pre>public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.59">TestSimpleRegionNormalizer</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">Tests logic of <code>SimpleRegionNormalizer</code>.</div>
+<div class="block">Tests logic of <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/master/normalizer.SimpleRegionNormalizer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master"><code>SimpleRegionNormalizer</code></a>.</div>
 </li>
 </ul>
 </div>
@@ -121,11 +121,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.master.MasterServices</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/master/MasterRpcServices.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">MasterRpcServices</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#masterRpcServices">masterRpcServices</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.master.normalizer.RegionNormalizer</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/master/MasterServices.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/master/normalizer.RegionNormalizer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">org.apache.hadoop.hbase.master.normalizer.RegionNormalizer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#normalizer">normalizer</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -167,29 +171,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#setupMocksForNormalizer(java.util.Map,%20java.util.List)">setupMocksForNormalizer</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;regionSizes,
-                                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.HRegionInfo&gt;&nbsp;hris)</code>&nbsp;</td>
+                                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;hris)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#testMergeOfSecondSmallestRegions()">testMergeOfSecondSmallestRegions</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#testMergeOfSmallNonAdjacentRegions()">testMergeOfSmallNonAdjacentRegions</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#testMergeOfSmallRegions()">testMergeOfSmallRegions</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#testNoNormalizationForMetaTable()">testNoNormalizationForMetaTable</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#testNoNormalizationIfTooFewRegions()">testNoNormalizationIfTooFewRegions</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#testNoNormalizationOnNormalizedCluster()">testNoNormalizationOnNormalizedCluster</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#testSplitOfLargeRegion()">testSplitOfLargeRegion</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -221,7 +229,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.53">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.60">LOG</a></pre>
 </li>
 </ul>
 <a name="normalizer">
@@ -230,16 +238,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>normalizer</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.master.normalizer.RegionNormalizer <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.55">normalizer</a></pre>
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/master/normalizer.RegionNormalizer.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">org.apache.hadoop.hbase.master.normalizer.RegionNormalizer</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.62">normalizer</a></pre>
 </li>
 </ul>
 <a name="masterServices">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>masterServices</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.master.MasterServices <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.58">masterServices</a></pre>
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/master/MasterServices.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">MasterServices</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.65">masterServices</a></pre>
+</li>
+</ul>
+<a name="masterRpcServices">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>masterRpcServices</h4>
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/master/MasterRpcServices.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">MasterRpcServices</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.66">masterRpcServices</a></pre>
 </li>
 </ul>
 </li>
@@ -256,7 +273,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestSimpleRegionNormalizer</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.52">TestSimpleRegionNormalizer</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.59">TestSimpleRegionNormalizer</a>()</pre>
 </li>
 </ul>
 </li>
@@ -273,7 +290,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>beforeAllTests</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.61">beforeAllTests</a>()
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.69">beforeAllTests</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -285,10 +302,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNoNormalizationForMetaTable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.66">testNoNormalizationForMetaTable</a>()
-                                     throws org.apache.hadoop.hbase.HBaseIOException</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.74">testNoNormalizationForMetaTable</a>()
+                                     throws <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.HBaseIOException</code></dd></dl>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testNoNormalizationIfTooFewRegions()">
@@ -297,10 +314,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNoNormalizationIfTooFewRegions</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.77">testNoNormalizationIfTooFewRegions</a>()
-                                        throws org.apache.hadoop.hbase.HBaseIOException</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.85">testNoNormalizationIfTooFewRegions</a>()
+                                        throws <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.HBaseIOException</code></dd></dl>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testNoNormalizationOnNormalizedCluster()">
@@ -309,10 +326,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNoNormalizationOnNormalizedCluster</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.96">testNoNormalizationOnNormalizedCluster</a>()
-                                            throws org.apache.hadoop.hbase.HBaseIOException</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.104">testNoNormalizationOnNormalizedCluster</a>()
+                                            throws <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.HBaseIOException</code></dd></dl>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testMergeOfSmallRegions()">
@@ -321,10 +338,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMergeOfSmallRegions</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.124">testMergeOfSmallRegions</a>()
-                             throws org.apache.hadoop.hbase.HBaseIOException</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.131">testMergeOfSmallRegions</a>()
+                             throws <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.HBaseIOException</code></dd></dl>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testMergeOfSecondSmallestRegions()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testMergeOfSecondSmallestRegions</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.167">testMergeOfSecondSmallestRegions</a>()
+                                      throws <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testMergeOfSmallNonAdjacentRegions()">
@@ -333,10 +362,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMergeOfSmallNonAdjacentRegions</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.158">testMergeOfSmallNonAdjacentRegions</a>()
-                                        throws org.apache.hadoop.hbase.HBaseIOException</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.206">testMergeOfSmallNonAdjacentRegions</a>()
+                                        throws <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.HBaseIOException</code></dd></dl>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testSplitOfLargeRegion()">
@@ -345,10 +374,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitOfLargeRegion</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.190">testSplitOfLargeRegion</a>()
-                            throws org.apache.hadoop.hbase.HBaseIOException</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.238">testSplitOfLargeRegion</a>()
+                            throws <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.HBaseIOException</code></dd></dl>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HBaseIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HBaseIOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="setupMocksForNormalizer(java.util.Map, java.util.List)">
@@ -357,8 +386,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setupMocksForNormalizer</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.218">setupMocksForNormalizer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;regionSizes,
-                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.HRegionInfo&gt;&nbsp;hris)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/normalizer/TestSimpleRegionNormalizer.html#line.267">setupMocksForNormalizer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;regionSizes,
+                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;hris)</pre>
 </li>
 </ul>
 </li>
@@ -428,6 +457,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

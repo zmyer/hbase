@@ -86,10 +86,10 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.io.LongWritable,org.apache.hadoop.io.Text,org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.client.Put&gt;</li>
+<li>org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.io.LongWritable,org.apache.hadoop.io.Text,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&gt;</li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.mapreduce.TsvImporterCustomTestMapper</li>
@@ -106,7 +106,7 @@
 <hr>
 <br>
 <pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TsvImporterCustomTestMapper.html#line.35">TsvImporterCustomTestMapper</a>
-extends org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</pre>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">TsvImporterMapper</a></pre>
 <div class="block">Dummy mapper used for unit tests to verify that the mapper can be injected.
  This approach would be used if a custom transformation needed to be done after
  reading the input data before writing it to HFiles.</div>
@@ -141,8 +141,8 @@ extends org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</pre>
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.mapreduce.TsvImporterMapper">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</h3>
-<code>cellVisibilityExpr, conf, kvCreator, parser, ts, ttl</code></li>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.mapreduce.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">TsvImporterMapper</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#cellVisibilityExpr" title="class or interface in org.apache.hadoop.hbase.mapreduce">cellVisibilityExpr</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#conf" title="class or interface in org.apache.hadoop.hbase.mapreduce">conf</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#kvCreator" title="class or interface in org.apache.hadoop.hbase.mapreduce">kvCreator</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#parser" title="class or interface in org.apache.hadoop.hbase.mapreduce">parser</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#ts" title="class or interface in org.apache.hadoop.hbase.mapreduce">ts</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#ttl" title="class or interface in org.apache.hadoop.hbase.mapreduce">ttl</a></code></li>
 </ul>
 </li>
 </ul>
@@ -193,8 +193,8 @@ extends org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</pre>
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.mapreduce.TsvImporterMapper">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</h3>
-<code>doSetup, getBadLineCount, getSkipBadLines, getTs, incrementBadLineCount, populatePut</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.mapreduce.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">TsvImporterMapper</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#doSetup(org.apache.hadoop.mapreduce.Mapper.Context)" title="class or interface in org.apache.hadoop.hbase.mapreduce">doSetup</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#getBadLineCount()" title="class or interface in org.apache.hadoop.hbase.mapreduce">getBadLineCount</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#getSkipBadLines()" title="class or interface in org.apache.hadoop.hbase.mapreduce">getSkipBadLines</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#getTs()" title="class or interface in org.apache.hadoop.hbase.mapreduce">getTs</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#incrementBadLineCount(int)" title="class or interface in org.apache.hadoop.hbase.mapreduce">incrementBadLineCount</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#populatePut(byte[],%20org.apache.hadoop.hbase.mapreduce.ImportTsv.TsvParser.ParsedLine,%20org.apache.hadoop.hbase.client.Put,%20int)" title="class or interface in org.apache.hadoop.hbase.mapreduce">populatePut</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.mapreduce.Mapper">
@@ -250,7 +250,7 @@ extends org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</pre>
 <pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TsvImporterCustomTestMapper.html#line.38">setup</a>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>setup</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#setup(org.apache.hadoop.mapreduce.Mapper.Context)" title="class or interface in org.apache.hadoop.hbase.mapreduce">setup</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">TsvImporterMapper</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -268,7 +268,7 @@ extends org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</pre>
  values by multiplying them by 3.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>map</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true#map(org.apache.hadoop.io.LongWritable,%20org.apache.hadoop.io.Text,%20org.apache.hadoop.mapreduce.Mapper.Context)" title="class or interface in org.apache.hadoop.hbase.mapreduce">map</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TsvImporterMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">TsvImporterMapper</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -340,6 +340,6 @@ extends org.apache.hadoop.hbase.mapreduce.TsvImporterMapper</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

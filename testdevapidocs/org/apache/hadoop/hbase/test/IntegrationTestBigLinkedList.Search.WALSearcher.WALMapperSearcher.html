@@ -86,10 +86,15 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.hbase.wal.WALKey,org.apache.hadoop.hbase.regionserver.wal.WALEdit,org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.client.Mutation&gt;</li>
+<li>org.apache.hadoop.mapreduce.Mapper&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Mutation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Mutation</a>&gt;</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/WALPlayer.WALMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce.WALPlayer.WALMapper</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.test.IntegrationTestBigLinkedList.Search.WALSearcher.WALMapperSearcher</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -105,7 +110,7 @@
 <hr>
 <br>
 <pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Search.WALSearcher.html#line.681">IntegrationTestBigLinkedList.Search.WALSearcher.WALMapperSearcher</a>
-extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.hbase.wal.WALKey,org.apache.hadoop.hbase.regionserver.wal.WALEdit,org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.client.Mutation&gt;</pre>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/WALPlayer.WALMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">WALPlayer.WALMapper</a></pre>
 <div class="block">The actual searcher mapper.</div>
 </li>
 </ul>
@@ -183,13 +188,20 @@ extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.hbase.wal.WALKey
 <tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Search.WALSearcher.WALMapperSearcher.html#filter(org.apache.hadoop.mapreduce.Mapper.Context,%20org.apache.hadoop.hbase.Cell)">filter</a></strong>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context,
-            org.apache.hadoop.hbase.Cell&nbsp;cell)</code>&nbsp;</td>
+            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Search.WALSearcher.WALMapperSearcher.html#setup(org.apache.hadoop.mapreduce.Mapper.Context)">setup</a></strong>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context)</code>&nbsp;</td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.mapreduce.WALPlayer.WALMapper">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.mapreduce.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/WALPlayer.WALMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">WALPlayer.WALMapper</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/WALPlayer.WALMapper.html?is-external=true#map(org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.mapreduce.Mapper.Context)" title="class or interface in org.apache.hadoop.hbase.mapreduce">map</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.mapreduce.Mapper">
 <!--   -->
@@ -269,7 +281,10 @@ extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.hbase.wal.WALKey
 <h4>setup</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Search.WALSearcher.WALMapperSearcher.html#line.686">setup</a>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context)
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/WALPlayer.WALMapper.html?is-external=true#setup(org.apache.hadoop.mapreduce.Mapper.Context)" title="class or interface in org.apache.hadoop.hbase.mapreduce">setup</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/WALPlayer.WALMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">WALPlayer.WALMapper</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -280,7 +295,11 @@ extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.hbase.wal.WALKey
 <li class="blockList">
 <h4>filter</h4>
 <pre>protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/test/IntegrationTestBigLinkedList.Search.WALSearcher.WALMapperSearcher.html#line.698">filter</a>(org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context,
-             org.apache.hadoop.hbase.Cell&nbsp;cell)</pre>
+             <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell)</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/WALPlayer.WALMapper.html?is-external=true#filter(org.apache.hadoop.mapreduce.Mapper.Context,%20org.apache.hadoop.hbase.Cell)" title="class or interface in org.apache.hadoop.hbase.mapreduce">filter</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/WALPlayer.WALMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">WALPlayer.WALMapper</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -350,6 +369,6 @@ extends org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.hbase.wal.WALKey
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -44,18 +44,18 @@
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> org.apache.commons.logging.LogFactory;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.conf.Configuration;
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.fs.FSDataOutputStream;
-<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.Cell;
-<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.CellComparator;
-<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.CellUtil;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.HConstants;
+<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.ByteBufferedKeyOnlyKeyValue;
+<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.Cell;
+<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.CellComparator;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.CellUtil;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.KeyValue;
 <a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.KeyValue.KeyOnlyKeyValue;
-<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.ByteBufferedKeyOnlyKeyValue;
-<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.classification.InterfaceAudience;
-<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.io.HeapSize;
-<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.io.encoding.DataBlockEncoding;
-<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.io.hfile.HFile.CachingBlockReader;
-<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.nio.ByteBuff;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.classification.InterfaceAudience;
+<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.io.HeapSize;
+<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.io.encoding.DataBlockEncoding;
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.io.hfile.HFile.CachingBlockReader;
+<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.nio.ByteBuff;
+<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.regionserver.KeyValueScanner;
 <a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Bytes;
 <a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.ClassSize;
 <a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.ObjectIntPair;
@@ -70,7 +70,7 @@
 <a class="jxr_linenumber" name="60" href="#60">60</a>  <em class="jxr_javadoccomment"> * Examples of how to use the block index writer can be found in</em>
 <a class="jxr_linenumber" name="61" href="#61">61</a>  <em class="jxr_javadoccomment"> * {@link org.apache.hadoop.hbase.io.hfile.CompoundBloomFilterWriter} and</em>
 <a class="jxr_linenumber" name="62" href="#62">62</a>  <em class="jxr_javadoccomment"> *  {@link HFileWriterImpl}. Examples of how to use the reader can be</em>
-<a class="jxr_linenumber" name="63" href="#63">63</a>  <em class="jxr_javadoccomment"> *  found in {@link HFileWriterImpl} and</em>
+<a class="jxr_linenumber" name="63" href="#63">63</a>  <em class="jxr_javadoccomment"> *  found in {@link HFileReaderImpl} and</em>
 <a class="jxr_linenumber" name="64" href="#64">64</a>  <em class="jxr_javadoccomment"> *  {@link org.apache.hadoop.hbase.io.hfile.TestHFileBlockIndex}.</em>
 <a class="jxr_linenumber" name="65" href="#65">65</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="66" href="#66">66</a>  @InterfaceAudience.Private
@@ -299,7 +299,7 @@
 <a class="jxr_linenumber" name="289" href="#289">289</a>       <strong class="jxr_keyword">if</strong> (rootLevelIndex &lt; blockKeys.length - 1) {
 <a class="jxr_linenumber" name="290" href="#290">290</a>         nextIndexedKey = blockKeys[rootLevelIndex + 1];
 <a class="jxr_linenumber" name="291" href="#291">291</a>       } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="292" href="#292">292</a>         nextIndexedKey = HConstants.NO_NEXT_INDEXED_KEY;
+<a class="jxr_linenumber" name="292" href="#292">292</a>         nextIndexedKey = KeyValueScanner.NO_NEXT_INDEXED_KEY;
 <a class="jxr_linenumber" name="293" href="#293">293</a>       }
 <a class="jxr_linenumber" name="294" href="#294">294</a> 
 <a class="jxr_linenumber" name="295" href="#295">295</a>       <strong class="jxr_keyword">int</strong> lookupLevel = 1; <em class="jxr_comment">// How many levels deep we are in our lookup.</em>
@@ -1180,7 +1180,7 @@
 <a class="jxr_linenumber" name="1170" href="#1170">1170</a>       <strong class="jxr_keyword">if</strong> (cacheConf != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="1171" href="#1171">1171</a>         <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html">HFileBlock</a> blockForCaching = blockWriter.getBlockForCaching(cacheConf);
 <a class="jxr_linenumber" name="1172" href="#1172">1172</a>         cacheConf.getBlockCache().cacheBlock(<strong class="jxr_keyword">new</strong> BlockCacheKey(nameForCaching,
-<a class="jxr_linenumber" name="1173" href="#1173">1173</a>           beginOffset), blockForCaching);
+<a class="jxr_linenumber" name="1173" href="#1173">1173</a>           beginOffset, <strong class="jxr_keyword">true</strong>, blockForCaching.getBlockType()), blockForCaching);
 <a class="jxr_linenumber" name="1174" href="#1174">1174</a>       }
 <a class="jxr_linenumber" name="1175" href="#1175">1175</a> 
 <a class="jxr_linenumber" name="1176" href="#1176">1176</a>       <em class="jxr_comment">// Add intermediate index block size</em>
@@ -1511,7 +1511,7 @@
 <a class="jxr_linenumber" name="1501" href="#1501">1501</a> <em class="jxr_javadoccomment">     * @throws IOException if could not create metadata for computing mid-key</em>
 <a class="jxr_linenumber" name="1502" href="#1502">1502</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="1503" href="#1503">1503</a>     <strong class="jxr_keyword">public</strong> byte[] getMidKeyMetadata() <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="1504" href="#1504">1504</a>       ByteArrayOutputStream baos = <strong class="jxr_keyword">new</strong> ByteArrayOutputStream(
+<a class="jxr_linenumber" name="1504" href="#1504">1504</a>       <a href="../../../../../../org/apache/hadoop/hbase/io/ByteArrayOutputStream.html">ByteArrayOutputStream</a> baos = <strong class="jxr_keyword">new</strong> <a href="../../../../../../org/apache/hadoop/hbase/io/ByteArrayOutputStream.html">ByteArrayOutputStream</a>(
 <a class="jxr_linenumber" name="1505" href="#1505">1505</a>           MID_KEY_METADATA_SIZE);
 <a class="jxr_linenumber" name="1506" href="#1506">1506</a>       DataOutputStream baosDos = <strong class="jxr_keyword">new</strong> DataOutputStream(baos);
 <a class="jxr_linenumber" name="1507" href="#1507">1507</a>       <strong class="jxr_keyword">long</strong> totalNumSubEntries = numSubEntriesAt.get(blockKeys.size() - 1);

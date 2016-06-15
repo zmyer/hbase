@@ -163,6 +163,17 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#postCheckAndDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">postCheckAndDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+                                    byte[]&nbsp;row,
+                                    byte[]&nbsp;family,
+                                    byte[]&nbsp;qualifier,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
+                                    boolean&nbsp;result)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#postCheckAndDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">postCheckAndDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                     byte[]&nbsp;row,
                                     byte[]&nbsp;family,
@@ -174,18 +185,18 @@
 <div class="block">Called after checkAndDelete</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#postCheckAndDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">postCheckAndDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-                                    byte[]&nbsp;row,
-                                    byte[]&nbsp;family,
-                                    byte[]&nbsp;qualifier,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
-                                    boolean&nbsp;result)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#postCheckAndPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">postCheckAndPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+                              byte[]&nbsp;row,
+                              byte[]&nbsp;family,
+                              byte[]&nbsp;qualifier,
+                              <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
+                              <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
+                              <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
+                              boolean&nbsp;result)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#postCheckAndPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">postCheckAndPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                               byte[]&nbsp;row,
@@ -198,18 +209,18 @@
 <div class="block">Called after checkAndPut</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#postCheckAndPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">postCheckAndPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-                              byte[]&nbsp;row,
-                              byte[]&nbsp;family,
-                              byte[]&nbsp;qualifier,
-                              <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
-                              <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
-                              <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
-                              boolean&nbsp;result)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preCheckAndDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">preCheckAndDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+                                  byte[]&nbsp;row,
+                                  byte[]&nbsp;family,
+                                  byte[]&nbsp;qualifier,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
+                                  boolean&nbsp;result)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#preCheckAndDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">preCheckAndDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                   byte[]&nbsp;row,
@@ -222,18 +233,18 @@
 <div class="block">Called before checkAndDelete.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preCheckAndDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">preCheckAndDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-                                  byte[]&nbsp;row,
-                                  byte[]&nbsp;family,
-                                  byte[]&nbsp;qualifier,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
-                                  boolean&nbsp;result)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preCheckAndDeleteAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">preCheckAndDeleteAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+                                                          byte[]&nbsp;row,
+                                                          byte[]&nbsp;family,
+                                                          byte[]&nbsp;qualifier,
+                                                          <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
+                                                          <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
+                                                          <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
+                                                          boolean&nbsp;result)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#preCheckAndDeleteAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">preCheckAndDeleteAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                                           byte[]&nbsp;row,
@@ -246,18 +257,18 @@
 <div class="block">Called before checkAndDelete but after acquiring rowock.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preCheckAndDeleteAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">preCheckAndDeleteAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-                                                          byte[]&nbsp;row,
-                                                          byte[]&nbsp;family,
-                                                          byte[]&nbsp;qualifier,
-                                                          <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
-                                                          <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
-                                                          <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
-                                                          boolean&nbsp;result)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preCheckAndPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">preCheckAndPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+                            byte[]&nbsp;row,
+                            byte[]&nbsp;family,
+                            byte[]&nbsp;qualifier,
+                            <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
+                            <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
+                            <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
+                            boolean&nbsp;result)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#preCheckAndPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">preCheckAndPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                             byte[]&nbsp;row,
@@ -270,18 +281,18 @@
 <div class="block">Called before checkAndPut.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preCheckAndPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">preCheckAndPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-                            byte[]&nbsp;row,
-                            byte[]&nbsp;family,
-                            byte[]&nbsp;qualifier,
-                            <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
-                            <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
-                            <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
-                            boolean&nbsp;result)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preCheckAndPutAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">preCheckAndPutAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+                                                    byte[]&nbsp;row,
+                                                    byte[]&nbsp;family,
+                                                    byte[]&nbsp;qualifier,
+                                                    <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
+                                                    <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
+                                                    <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
+                                                    boolean&nbsp;result)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#preCheckAndPutAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">preCheckAndPutAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                                                     byte[]&nbsp;row,
@@ -293,17 +304,6 @@
                                                     boolean&nbsp;result)</code>
 <div class="block">Called before checkAndPut but after acquiring rowlock.</div>
 </td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preCheckAndPutAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">preCheckAndPutAfterRowLock</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-                                                    byte[]&nbsp;row,
-                                                    byte[]&nbsp;family,
-                                                    byte[]&nbsp;qualifier,
-                                                    <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
-                                                    <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
-                                                    <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
-                                                    boolean&nbsp;result)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -379,11 +379,11 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a></code></td>
-<td class="colLast"><span class="strong">CompareFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html#comparator">comparator</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">SingleColumnValueFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueFilter.html#comparator">comparator</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a></code></td>
-<td class="colLast"><span class="strong">SingleColumnValueFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueFilter.html#comparator">comparator</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">CompareFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html#comparator">comparator</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -402,11 +402,11 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a></code></td>
-<td class="colLast"><span class="strong">CompareFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html#getComparator()">getComparator</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><span class="strong">SingleColumnValueFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueFilter.html#getComparator()">getComparator</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a></code></td>
-<td class="colLast"><span class="strong">SingleColumnValueFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/SingleColumnValueFilter.html#getComparator()">getComparator</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><span class="strong">CompareFilter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.html#getComparator()">getComparator</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a></code></td>
@@ -427,7 +427,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) boolean</code></td>
-<td class="colLast"><span class="strong">BinaryPrefixComparator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/BinaryPrefixComparator.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">RegexStringComparator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>(package private) boolean</code></td>
@@ -435,7 +435,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) boolean</code></td>
-<td class="colLast"><span class="strong">RegexStringComparator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/RegexStringComparator.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">BitComparator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/BitComparator.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>(package private) boolean</code></td>
@@ -443,11 +443,11 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) boolean</code></td>
-<td class="colLast"><span class="strong">NullComparator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/NullComparator.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">BinaryPrefixComparator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/BinaryPrefixComparator.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>(package private) boolean</code></td>
-<td class="colLast"><span class="strong">BitComparator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/BitComparator.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">NullComparator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/filter/NullComparator.html#areSerializedFieldsEqual(org.apache.hadoop.hbase.filter.ByteArrayComparable)">areSerializedFieldsEqual</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;other)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
@@ -580,7 +580,7 @@
                             byte[]&nbsp;qualifier,
                             <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
                             <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
-                            <a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;w,
+                            <a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;mutation,
                             boolean&nbsp;writeToWAL)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -592,8 +592,8 @@
                             <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
                             <a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;mutation,
                             boolean&nbsp;writeToWAL)</code>
-<div class="block">Atomically checks if a row/family/qualifier value matches the expected val
- If it does, it performs the row mutations.</div>
+<div class="block">Atomically checks if a row/family/qualifier value matches the expected value and if it does,
+ it performs the mutation.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -615,24 +615,38 @@
                                   <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
                                   <a href="../../../../../../org/apache/hadoop/hbase/client/RowMutations.html" title="class in org.apache.hadoop.hbase.client">RowMutations</a>&nbsp;mutations,
                                   boolean&nbsp;writeToWAL)</code>
-<div class="block">Atomically checks if a row/family/qualifier value matches the expected val
- If it does, it performs the row mutations.</div>
+<div class="block">Atomically checks if a row/family/qualifier value matches the expected values and if it does,
+ it performs the row mutations.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private boolean</code></td>
-<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#checkAndRowMutate(org.apache.hadoop.hbase.regionserver.Region,%20java.util.List,%20org.apache.hadoop.hbase.CellScanner,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable)">checkAndRowMutate</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
+<td class="colLast"><span class="strong">RSRpcServices.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html#checkAndRowMutate(org.apache.hadoop.hbase.regionserver.Region,%20java.util.List,%20org.apache.hadoop.hbase.CellScanner,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder)">checkAndRowMutate</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region,
                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action&gt;&nbsp;actions,
                                   <a href="../../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
                                   byte[]&nbsp;row,
                                   byte[]&nbsp;family,
                                   byte[]&nbsp;qualifier,
                                   <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator)</code>
+                                  <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
+                                  org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder&nbsp;builder)</code>
 <div class="block">Mutate a list of rows atomically.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#doCheckAndRowMutate(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.RowMutations,%20org.apache.hadoop.hbase.client.Mutation,%20boolean)">doCheckAndRowMutate</a></strong>(byte[]&nbsp;row,
+                                      byte[]&nbsp;family,
+                                      byte[]&nbsp;qualifier,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html" title="enum in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/client/RowMutations.html" title="class in org.apache.hadoop.hbase.client">RowMutations</a>&nbsp;rowMutations,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;mutation,
+                                      boolean&nbsp;writeToWAL)</code>
+<div class="block">checkAndMutate and checkAndRowMutate are 90% the same.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postCheckAndDelete(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)">postCheckAndDelete</a></strong>(byte[]&nbsp;row,
                                     byte[]&nbsp;family,
@@ -642,7 +656,7 @@
                                     <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
                                     boolean&nbsp;result)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#postCheckAndPut(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)">postCheckAndPut</a></strong>(byte[]&nbsp;row,
                               byte[]&nbsp;family,
@@ -652,7 +666,7 @@
                               <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
                               boolean&nbsp;result)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preCheckAndDelete(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete)">preCheckAndDelete</a></strong>(byte[]&nbsp;row,
                                   byte[]&nbsp;family,
@@ -661,7 +675,7 @@
                                   <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
                                   <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preCheckAndDeleteAfterRowLock(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete)">preCheckAndDeleteAfterRowLock</a></strong>(byte[]&nbsp;row,
                                                           byte[]&nbsp;family,
@@ -670,7 +684,7 @@
                                                           <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
                                                           <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preCheckAndPut(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put)">preCheckAndPut</a></strong>(byte[]&nbsp;row,
                             byte[]&nbsp;family,
@@ -679,7 +693,7 @@
                             <a href="../../../../../../org/apache/hadoop/hbase/filter/ByteArrayComparable.html" title="class in org.apache.hadoop.hbase.filter">ByteArrayComparable</a>&nbsp;comparator,
                             <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a></code></td>
 <td class="colLast"><span class="strong">RegionCoprocessorHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html#preCheckAndPutAfterRowLock(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put)">preCheckAndPutAfterRowLock</a></strong>(byte[]&nbsp;row,
                                                     byte[]&nbsp;family,
@@ -827,6 +841,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

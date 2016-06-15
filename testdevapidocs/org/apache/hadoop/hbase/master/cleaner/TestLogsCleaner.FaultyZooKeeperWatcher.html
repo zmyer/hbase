@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TestLogsCleaner.FaultyZooKeeperWatcher (Apache HBase 2.0.0-SNAPSHOT Test API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="TestLogsCleaner.FaultyZooKeeperWatcher (Apache HBase 2.0.0-SNAPSHOT Test API)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/TestLogsCleaner.FaultyZooKeeperWatcher.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.DummyServer.html" title="class in org.apache.hadoop.hbase.master.cleaner"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TestReplicationHFileCleaner.html" title="class in org.apache.hadoop.hbase.master.cleaner"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html" target="_top">Frames</a></li>
+<li><a href="TestLogsCleaner.FaultyZooKeeperWatcher.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.hadoop.hbase.master.cleaner</div>
+<h2 title="Class TestLogsCleaner.FaultyZooKeeperWatcher" class="title">Class TestLogsCleaner.FaultyZooKeeperWatcher</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.hadoop.hbase.master.cleaner.TestLogsCleaner.FaultyZooKeeperWatcher</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/Abortable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Abortable</a>, org.apache.zookeeper.Watcher</dd>
+</dl>
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.html" title="class in org.apache.hadoop.hbase.master.cleaner">TestLogsCleaner</a></dd>
+</dl>
+<hr>
+<br>
+<pre>static class <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.html#line.292">TestLogsCleaner.FaultyZooKeeperWatcher</a>
+extends <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a></pre>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.zookeeper.Watcher">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.zookeeper.Watcher</h3>
+<code>org.apache.zookeeper.Watcher.Event</code></li>
+</ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/RecoverableZooKeeper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">RecoverableZooKeeper</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html#zk">zk</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.zookeeper.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a></h3>
+<code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#abortable" title="class or interface in org.apache.hadoop.hbase.zookeeper">abortable</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#backupMasterAddressesZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">backupMasterAddressesZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#balancerZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">balancerZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#baseZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">baseZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#clusterIdZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">clusterIdZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#clusterStateZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">clusterStateZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#drainingZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">drainingZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#META_ZNODE_PREFIX" title="class or interface in org.apache.hadoop.hbase.zookeeper">META_ZNODE_PREFIX</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#namespaceZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">namespaceZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#recoveringRegionsZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">recoveringRegionsZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#rsZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">rsZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#saslLatch" title="class or interface in org.apache.hadoop.hbase.zookeeper">saslLatch</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#splitLogZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">splitLogZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#tableLockZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">tableLockZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#tableZNode" title="class or interface in org.apache.hadoop.hbase.zookeeper">tableZNode</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html#TestLogsCleaner.FaultyZooKeeperWatcher(org.apache.hadoop.conf.Configuration,%20java.lang.String,%20org.apache.hadoop.hbase.Abortable)">TestLogsCleaner.FaultyZooKeeperWatcher</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;identifier,
+                                                                            <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/Abortable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;abortable)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/RecoverableZooKeeper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">RecoverableZooKeeper</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html#getRecoverableZooKeeper()">getRecoverableZooKeeper</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html#init()">init</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.zookeeper.<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a></h3>
+<code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#abort(java.lang.String,%20java.lang.Throwable)" title="class or interface in org.apache.hadoop.hbase.zookeeper">abort</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#checkAndSetZNodeAcls()" title="class or interface in org.apache.hadoop.hbase.zookeeper">checkAndSetZNodeAcls</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#close()" title="class or interface in org.apache.hadoop.hbase.zookeeper">close</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getBaseZNode()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getBaseZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getConfiguration()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getConfiguration</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getListeners()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getListeners</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getMasterAddressZNode()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getMasterAddressZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getMetaReplicaIdFromZnode(java.lang.String)" title="class or interface in org.apache.hadoop.hbase.zookeeper">getMetaReplicaIdFromZnode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getMetaReplicaNodes()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getMetaReplicaNodes</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getNumberOfListeners()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getNumberOfListeners</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getQuorum()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getQuorum</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getRegionNormalizerZNode()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getRegionNormalizerZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getSwitchLockZNode()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getSwitchLockZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getSwitchZNode()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getSwitchZNode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getZNodeForReplica(int)" title="class or interface in org.apache.hadoop.hbase.zookeeper">getZNodeForReplica</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#interruptedException(java.lang.InterruptedException)" title="class or interface in org.apache.hadoop.hbase.zookeeper">interruptedException</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#isAborted()" title="class or interface in org.apache.hadoop.hbase.zookeeper">isAborted</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#isAnyMetaReplicaZnode(java.lang.String)" title="class or interface in org.apache.hadoop.hbase.zookeeper">isAnyMetaReplicaZnode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#isClientReadable(java.lang.String)" title="class or interface in org.apache.hadoop.hbase.zookeeper">isClientReadable</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#isDefaultMetaReplicaZnode(java.lang.String)" title="class or interface in org.apache.hadoop.hbase.zookeeper">isDefaultMetaReplicaZnode</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#isSuperUserId(java.lang.String[],%20org.apache.zookeeper.data.Id)" title="class or interface in org.apache.hadoop.hbase.zookeeper">isSuperUserId</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#keeperException(org.apache.zookeeper.KeeperException)" title="class or interface in org.apache.hadoop.hbase.zookeeper">keeperException</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#prefix(java.lang.String)" title="class or interface in org.apache.hadoop.hbase.zookeeper">prefix</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#process(org.apache.zookeeper.WatchedEvent)" title="class or interface in org.apache.hadoop.hbase.zookeeper">process</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#reconnectAfterExpiration()" title="class or interface in org.apache.hadoop.hbase.zookeeper">reconnectAfterExpiration</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#registerListener(org.apache.hadoop.hbase.zookeeper.ZooKeeperListener)" title="class or interface in org.apache.hadoop.hbase.zookeeper">registerListener</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#registerListenerFirst(org.apache.hadoop.hbase.zookeeper.ZooKeeperListener)" title="class or interface in org.apache.hadoop.hbase.zookeeper">registerListenerFirst</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#sync(java.lang.String)" title="class or interface in org.apache.hadoop.hbase.zookeeper">sync</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#toString()" title="class or interface in org.apache.hadoop.hbase.zookeeper">toString</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#unregisterAllListeners()" title="class or interface in org.apache.hadoop.hbase.zookeeper">unregisterAllListeners</a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#unregisterListener(org.apache.hadoop.hbase.zookeeper.ZooKeeperListener)" title="class or interface in org.apache.hadoop.hbase.zookeeper">unregisterListener</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="zk">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>zk</h4>
+<pre>private&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/RecoverableZooKeeper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">RecoverableZooKeeper</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html#line.293">zk</a></pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="TestLogsCleaner.FaultyZooKeeperWatcher(org.apache.hadoop.conf.Configuration, java.lang.String, org.apache.hadoop.hbase.Abortable)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TestLogsCleaner.FaultyZooKeeperWatcher</h4>
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html#line.295">TestLogsCleaner.FaultyZooKeeperWatcher</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;identifier,
+                                      <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/Abortable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;abortable)
+                                       throws <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/ZooKeeperConnectionException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ZooKeeperConnectionException</a>,
+                                              <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/ZooKeeperConnectionException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ZooKeeperConnectionException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="init()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html#line.300">init</a>()
+          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="getRecoverableZooKeeper()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getRecoverableZooKeeper</h4>
+<pre>public&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/RecoverableZooKeeper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">RecoverableZooKeeper</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html#line.306">getRecoverableZooKeeper</a>()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true#getRecoverableZooKeeper()" title="class or interface in org.apache.hadoop.hbase.zookeeper">getRecoverableZooKeeper</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/TestLogsCleaner.FaultyZooKeeperWatcher.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.DummyServer.html" title="class in org.apache.hadoop.hbase.master.cleaner"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/master/cleaner/TestReplicationHFileCleaner.html" title="class in org.apache.hadoop.hbase.master.cleaner"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.FaultyZooKeeperWatcher.html" target="_top">Frames</a></li>
+<li><a href="TestLogsCleaner.FaultyZooKeeperWatcher.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

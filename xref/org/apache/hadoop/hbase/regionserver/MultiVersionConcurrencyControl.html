@@ -155,28 +155,28 @@
 <a class="jxr_linenumber" name="145" href="#145">145</a> <em class="jxr_javadoccomment">   * of the passed in WriteEntry.  Thus, the write is visible to MVCC readers.</em>
 <a class="jxr_linenumber" name="146" href="#146">146</a> <em class="jxr_javadoccomment">   */</em>
 <a class="jxr_linenumber" name="147" href="#147">147</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> completeAndWait(<a href="../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.html">WriteEntry</a> e) {
-<a class="jxr_linenumber" name="148" href="#148">148</a>     complete(e);
-<a class="jxr_linenumber" name="149" href="#149">149</a>     waitForRead(e);
-<a class="jxr_linenumber" name="150" href="#150">150</a>   }
-<a class="jxr_linenumber" name="151" href="#151">151</a> 
-<a class="jxr_linenumber" name="152" href="#152">152</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="153" href="#153">153</a> <em class="jxr_javadoccomment">   * Mark the {@link WriteEntry} as complete and advance the read point as much as possible.</em>
-<a class="jxr_linenumber" name="154" href="#154">154</a> <em class="jxr_javadoccomment">   * Call this even if the write has FAILED (AFTER backing out the write transaction</em>
-<a class="jxr_linenumber" name="155" href="#155">155</a> <em class="jxr_javadoccomment">   * changes completely) so we can clean up the outstanding transaction.</em>
-<a class="jxr_linenumber" name="156" href="#156">156</a> <em class="jxr_javadoccomment">   *</em>
-<a class="jxr_linenumber" name="157" href="#157">157</a> <em class="jxr_javadoccomment">   * How much is the read point advanced?</em>
-<a class="jxr_linenumber" name="158" href="#158">158</a> <em class="jxr_javadoccomment">   * </em>
-<a class="jxr_linenumber" name="159" href="#159">159</a> <em class="jxr_javadoccomment">   * Let S be the set of all write numbers that are completed. Set the read point to the highest</em>
-<a class="jxr_linenumber" name="160" href="#160">160</a> <em class="jxr_javadoccomment">   * numbered write of S.</em>
-<a class="jxr_linenumber" name="161" href="#161">161</a> <em class="jxr_javadoccomment">   *</em>
-<a class="jxr_linenumber" name="162" href="#162">162</a> <em class="jxr_javadoccomment">   * @param writeEntry</em>
-<a class="jxr_linenumber" name="163" href="#163">163</a> <em class="jxr_javadoccomment">   *</em>
-<a class="jxr_linenumber" name="164" href="#164">164</a> <em class="jxr_javadoccomment">   * @return true if e is visible to MVCC readers (that is, readpoint &gt;= e.writeNumber)</em>
-<a class="jxr_linenumber" name="165" href="#165">165</a> <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="166" href="#166">166</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> complete(<a href="../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.html">WriteEntry</a> writeEntry) {
-<a class="jxr_linenumber" name="167" href="#167">167</a>     <strong class="jxr_keyword">synchronized</strong> (writeQueue) {
-<a class="jxr_linenumber" name="168" href="#168">168</a>       writeEntry.markCompleted();
-<a class="jxr_linenumber" name="169" href="#169">169</a> 
+<a class="jxr_linenumber" name="148" href="#148">148</a>     <strong class="jxr_keyword">if</strong> (!complete(e)) {
+<a class="jxr_linenumber" name="149" href="#149">149</a>       waitForRead(e);
+<a class="jxr_linenumber" name="150" href="#150">150</a>     }
+<a class="jxr_linenumber" name="151" href="#151">151</a>   }
+<a class="jxr_linenumber" name="152" href="#152">152</a> 
+<a class="jxr_linenumber" name="153" href="#153">153</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="154" href="#154">154</a> <em class="jxr_javadoccomment">   * Mark the {@link WriteEntry} as complete and advance the read point as much as possible.</em>
+<a class="jxr_linenumber" name="155" href="#155">155</a> <em class="jxr_javadoccomment">   * Call this even if the write has FAILED (AFTER backing out the write transaction</em>
+<a class="jxr_linenumber" name="156" href="#156">156</a> <em class="jxr_javadoccomment">   * changes completely) so we can clean up the outstanding transaction.</em>
+<a class="jxr_linenumber" name="157" href="#157">157</a> <em class="jxr_javadoccomment">   *</em>
+<a class="jxr_linenumber" name="158" href="#158">158</a> <em class="jxr_javadoccomment">   * How much is the read point advanced?</em>
+<a class="jxr_linenumber" name="159" href="#159">159</a> <em class="jxr_javadoccomment">   *</em>
+<a class="jxr_linenumber" name="160" href="#160">160</a> <em class="jxr_javadoccomment">   * Let S be the set of all write numbers that are completed. Set the read point to the highest</em>
+<a class="jxr_linenumber" name="161" href="#161">161</a> <em class="jxr_javadoccomment">   * numbered write of S.</em>
+<a class="jxr_linenumber" name="162" href="#162">162</a> <em class="jxr_javadoccomment">   *</em>
+<a class="jxr_linenumber" name="163" href="#163">163</a> <em class="jxr_javadoccomment">   * @param writeEntry</em>
+<a class="jxr_linenumber" name="164" href="#164">164</a> <em class="jxr_javadoccomment">   *</em>
+<a class="jxr_linenumber" name="165" href="#165">165</a> <em class="jxr_javadoccomment">   * @return true if e is visible to MVCC readers (that is, readpoint &gt;= e.writeNumber)</em>
+<a class="jxr_linenumber" name="166" href="#166">166</a> <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="167" href="#167">167</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> complete(<a href="../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.html">WriteEntry</a> writeEntry) {
+<a class="jxr_linenumber" name="168" href="#168">168</a>     <strong class="jxr_keyword">synchronized</strong> (writeQueue) {
+<a class="jxr_linenumber" name="169" href="#169">169</a>       writeEntry.markCompleted();
 <a class="jxr_linenumber" name="170" href="#170">170</a>       <strong class="jxr_keyword">long</strong> nextReadValue = NONE;
 <a class="jxr_linenumber" name="171" href="#171">171</a>       <strong class="jxr_keyword">boolean</strong> ranOnce = false;
 <a class="jxr_linenumber" name="172" href="#172">172</a>       <strong class="jxr_keyword">while</strong> (!writeQueue.isEmpty()) {

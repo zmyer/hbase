@@ -60,37 +60,37 @@
 <a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Bytes;
 <a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.FSUtils;
 <a class="jxr_linenumber" name="52" href="#52">52</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.HFileArchiveUtil;
-<a class="jxr_linenumber" name="53" href="#53">53</a>  <strong class="jxr_keyword">import</strong> org.junit.AfterClass;
-<a class="jxr_linenumber" name="54" href="#54">54</a>  <strong class="jxr_keyword">import</strong> org.junit.Assert;
-<a class="jxr_linenumber" name="55" href="#55">55</a>  <strong class="jxr_keyword">import</strong> org.junit.BeforeClass;
-<a class="jxr_linenumber" name="56" href="#56">56</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
-<a class="jxr_linenumber" name="57" href="#57">57</a>  <strong class="jxr_keyword">import</strong> org.junit.experimental.categories.Category;
-<a class="jxr_linenumber" name="58" href="#58">58</a>  
-<a class="jxr_linenumber" name="59" href="#59">59</a>  @Category(MediumTests.<strong class="jxr_keyword">class</strong>)
-<a class="jxr_linenumber" name="60" href="#60">60</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html">TestMobStoreScanner</a> {
-<a class="jxr_linenumber" name="61" href="#61">61</a>  
-<a class="jxr_linenumber" name="62" href="#62">62</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> TEST_UTIL = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a>();
-<a class="jxr_linenumber" name="63" href="#63">63</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] row1 = Bytes.toBytes(<span class="jxr_string">"row1"</span>);
-<a class="jxr_linenumber" name="64" href="#64">64</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] row2 = Bytes.toBytes(<span class="jxr_string">"row2"</span>);
-<a class="jxr_linenumber" name="65" href="#65">65</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] family = Bytes.toBytes(<span class="jxr_string">"family"</span>);
-<a class="jxr_linenumber" name="66" href="#66">66</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] qf1 = Bytes.toBytes(<span class="jxr_string">"qualifier1"</span>);
-<a class="jxr_linenumber" name="67" href="#67">67</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] qf2 = Bytes.toBytes(<span class="jxr_string">"qualifier2"</span>);
-<a class="jxr_linenumber" name="68" href="#68">68</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">final</strong> byte[] qf3 = Bytes.toBytes(<span class="jxr_string">"qualifier3"</span>);
-<a class="jxr_linenumber" name="69" href="#69">69</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Table table;
-<a class="jxr_linenumber" name="70" href="#70">70</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Admin admin;
-<a class="jxr_linenumber" name="71" href="#71">71</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> HColumnDescriptor hcd;
-<a class="jxr_linenumber" name="72" href="#72">72</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> HTableDescriptor desc;
-<a class="jxr_linenumber" name="73" href="#73">73</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Random random = <strong class="jxr_keyword">new</strong> Random();
-<a class="jxr_linenumber" name="74" href="#74">74</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">long</strong> defaultThreshold = 10;
-<a class="jxr_linenumber" name="75" href="#75">75</a>    <strong class="jxr_keyword">private</strong> FileSystem fs;
-<a class="jxr_linenumber" name="76" href="#76">76</a>    <strong class="jxr_keyword">private</strong> Configuration conf;
-<a class="jxr_linenumber" name="77" href="#77">77</a>  
-<a class="jxr_linenumber" name="78" href="#78">78</a>    @BeforeClass
-<a class="jxr_linenumber" name="79" href="#79">79</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setUpBeforeClass() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="80" href="#80">80</a>      TEST_UTIL.getConfiguration().setInt(<span class="jxr_string">"hbase.master.info.port"</span>, 0);
-<a class="jxr_linenumber" name="81" href="#81">81</a>      TEST_UTIL.getConfiguration().setBoolean(<span class="jxr_string">"hbase.regionserver.info.port.auto"</span>, <strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="82" href="#82">82</a>      TEST_UTIL.getConfiguration().setInt(<span class="jxr_string">"hbase.client.keyvalue.maxsize"</span>, 100*1024*1024);
-<a class="jxr_linenumber" name="83" href="#83">83</a>  
+<a class="jxr_linenumber" name="53" href="#53">53</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.wal.WALFactory;
+<a class="jxr_linenumber" name="54" href="#54">54</a>  <strong class="jxr_keyword">import</strong> org.junit.AfterClass;
+<a class="jxr_linenumber" name="55" href="#55">55</a>  <strong class="jxr_keyword">import</strong> org.junit.Assert;
+<a class="jxr_linenumber" name="56" href="#56">56</a>  <strong class="jxr_keyword">import</strong> org.junit.BeforeClass;
+<a class="jxr_linenumber" name="57" href="#57">57</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="58" href="#58">58</a>  <strong class="jxr_keyword">import</strong> org.junit.experimental.categories.Category;
+<a class="jxr_linenumber" name="59" href="#59">59</a>  
+<a class="jxr_linenumber" name="60" href="#60">60</a>  @Category(MediumTests.<strong class="jxr_keyword">class</strong>)
+<a class="jxr_linenumber" name="61" href="#61">61</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.html">TestMobStoreScanner</a> {
+<a class="jxr_linenumber" name="62" href="#62">62</a>  
+<a class="jxr_linenumber" name="63" href="#63">63</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> TEST_UTIL = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a>();
+<a class="jxr_linenumber" name="64" href="#64">64</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] row1 = Bytes.toBytes(<span class="jxr_string">"row1"</span>);
+<a class="jxr_linenumber" name="65" href="#65">65</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] row2 = Bytes.toBytes(<span class="jxr_string">"row2"</span>);
+<a class="jxr_linenumber" name="66" href="#66">66</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] family = Bytes.toBytes(<span class="jxr_string">"family"</span>);
+<a class="jxr_linenumber" name="67" href="#67">67</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] qf1 = Bytes.toBytes(<span class="jxr_string">"qualifier1"</span>);
+<a class="jxr_linenumber" name="68" href="#68">68</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> byte [] qf2 = Bytes.toBytes(<span class="jxr_string">"qualifier2"</span>);
+<a class="jxr_linenumber" name="69" href="#69">69</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">final</strong> byte[] qf3 = Bytes.toBytes(<span class="jxr_string">"qualifier3"</span>);
+<a class="jxr_linenumber" name="70" href="#70">70</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Table table;
+<a class="jxr_linenumber" name="71" href="#71">71</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Admin admin;
+<a class="jxr_linenumber" name="72" href="#72">72</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> HColumnDescriptor hcd;
+<a class="jxr_linenumber" name="73" href="#73">73</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> HTableDescriptor desc;
+<a class="jxr_linenumber" name="74" href="#74">74</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Random random = <strong class="jxr_keyword">new</strong> Random();
+<a class="jxr_linenumber" name="75" href="#75">75</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">long</strong> defaultThreshold = 10;
+<a class="jxr_linenumber" name="76" href="#76">76</a>    <strong class="jxr_keyword">private</strong> FileSystem fs;
+<a class="jxr_linenumber" name="77" href="#77">77</a>    <strong class="jxr_keyword">private</strong> Configuration conf;
+<a class="jxr_linenumber" name="78" href="#78">78</a>  
+<a class="jxr_linenumber" name="79" href="#79">79</a>    @BeforeClass
+<a class="jxr_linenumber" name="80" href="#80">80</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setUpBeforeClass() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="81" href="#81">81</a>      TEST_UTIL.getConfiguration().setInt(<span class="jxr_string">"hbase.client.keyvalue.maxsize"</span>, 100 * 1024 * 1024);
+<a class="jxr_linenumber" name="82" href="#82">82</a>      <em class="jxr_comment">// TODO: AsyncFSWAL can not handle large edits right now, remove this after we fix the issue.</em>
+<a class="jxr_linenumber" name="83" href="#83">83</a>      TEST_UTIL.getConfiguration().set(WALFactory.WAL_PROVIDER, <span class="jxr_string">"filesystem"</span>);
 <a class="jxr_linenumber" name="84" href="#84">84</a>      TEST_UTIL.startMiniCluster(1);
 <a class="jxr_linenumber" name="85" href="#85">85</a>    }
 <a class="jxr_linenumber" name="86" href="#86">86</a>  

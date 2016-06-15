@@ -95,24 +95,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
-<td class="colLast"><span class="strong">DefaultMemStore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#snapshotTimeRangeTracker">snapshotTimeRangeTracker</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
+<td class="colLast"><span class="strong">Segment.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/Segment.html#timeRangeTracker">timeRangeTracker</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
-<td class="colLast"><span class="strong">DefaultMemStore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html#timeRangeTracker">timeRangeTracker</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
-<td class="colLast"><span class="strong">StoreFile.Writer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html#timeRangeTracker">timeRangeTracker</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
-<td class="colLast"><span class="strong">StoreFile.Reader.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html#timeRangeTracker">timeRangeTracker</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
 <td class="colLast"><span class="strong">MemStoreSnapshot.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html#timeRangeTracker">timeRangeTracker</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
+<td class="colLast"><span class="strong">StoreFileWriter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.html#timeRangeTracker">timeRangeTracker</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -125,7 +117,15 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
+<td class="colLast"><span class="strong">Segment.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/Segment.html#getTimeRangeTracker()">getTimeRangeTracker</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
 <td class="colLast"><span class="strong">MemStoreSnapshot.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html#getTimeRangeTracker()">getTimeRangeTracker</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
+<td class="colLast"><span class="strong">TimeRangeTracker.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html#getTimeRangeTracker(byte[])">getTimeRangeTracker</a></strong>(byte[]&nbsp;timeRangeTrackerBytes)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -137,14 +137,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/StripeMultiFileWriter.WriterFactory.html" title="interface in org.apache.hadoop.hbase.regionserver">StripeMultiFileWriter.WriterFactory</a></code></td>
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/AbstractMultiFileWriter.WriterFactory.html" title="interface in org.apache.hadoop.hbase.regionserver">AbstractMultiFileWriter.WriterFactory</a></code></td>
 <td class="colLast"><span class="strong">StripeStoreFlusher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFlusher.html#createWriterFactory(org.apache.hadoop.hbase.regionserver.TimeRangeTracker,%20long)">createWriterFactory</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a>&nbsp;tracker,
                                       long&nbsp;kvCount)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">StoreFile.Writer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html#setTimeRangeTracker(org.apache.hadoop.hbase.regionserver.TimeRangeTracker)">setTimeRangeTracker</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a>&nbsp;trt)</code>
-<div class="block">Set TimeRangeTracker</div>
+<td class="colLast"><span class="strong">StoreFileWriter.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.html#setTimeRangeTracker(org.apache.hadoop.hbase.regionserver.TimeRangeTracker)">setTimeRangeTracker</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a>&nbsp;trt)</code>
+<div class="block">Set TimeRangeTracker.</div>
 </td>
 </tr>
 </tbody>
@@ -156,14 +156,6 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html#MemStoreSnapshot(long,%20int,%20long,%20org.apache.hadoop.hbase.regionserver.TimeRangeTracker,%20org.apache.hadoop.hbase.regionserver.KeyValueScanner,%20boolean)">MemStoreSnapshot</a></strong>(long&nbsp;id,
-                                int&nbsp;cellsCount,
-                                long&nbsp;size,
-                                <a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a>&nbsp;timeRangeTracker,
-                                <a href="../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a>&nbsp;scanner,
-                                boolean&nbsp;tagsPresent)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html#TimeRangeTracker(org.apache.hadoop.hbase.regionserver.TimeRangeTracker)">TimeRangeTracker</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a>&nbsp;trt)</code>
 <div class="block">Copy Constructor</div>
 </td>
@@ -220,6 +212,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

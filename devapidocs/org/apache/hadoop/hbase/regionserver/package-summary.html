@@ -75,12 +75,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/AbstractMultiFileWriter.WriterFactory.html" title="interface in org.apache.hadoop.hbase.regionserver">AbstractMultiFileWriter.WriterFactory</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ChangedReadersObserver.html" title="interface in org.apache.hadoop.hbase.regionserver">ChangedReadersObserver</a></td>
 <td class="colLast">
 <div class="block">If set of MapFile.Readers in Store change, implementors are notified.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ColumnTracker.html" title="interface in org.apache.hadoop.hbase.regionserver">ColumnTracker</a></td>
 <td class="colLast">
 <div class="block">Implementing classes of this interface will be used for the tracking
@@ -88,122 +92,143 @@
  the course of a Get or Scan operation.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactionRequestor.html" title="interface in org.apache.hadoop.hbase.regionserver">CompactionRequestor</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/DeleteTracker.html" title="interface in org.apache.hadoop.hbase.regionserver">DeleteTracker</a></td>
 <td class="colLast">
 <div class="block">This interface is used for the tracking and enforcement of Deletes
  during the course of a Get or Scan operation.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/FavoredNodesForRegion.html" title="interface in org.apache.hadoop.hbase.regionserver">FavoredNodesForRegion</a></td>
 <td class="colLast">
 <div class="block">Abstraction that allows different modules in RegionServer to update/get
  the favored nodes information for regions.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushRequester.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequester</a></td>
 <td class="colLast">
 <div class="block">Request a flush.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushRequestListener.html" title="interface in org.apache.hadoop.hbase.regionserver">FlushRequestListener</a></td>
 <td class="colLast">
 <div class="block">Listener which will get notified regarding flush requests of regions.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemoryTuner.html" title="interface in org.apache.hadoop.hbase.regionserver">HeapMemoryTuner</a></td>
 <td class="colLast">
 <div class="block">Makes the decision regarding proper sizing of the heap memory.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a></td>
 <td class="colLast">
 <div class="block">Internal scanners differ from client-side scanners in that they operate on
  HStoreKeys and byte[] instead of RowResults.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">KeyValueScanner</a></td>
 <td class="colLast">
 <div class="block">Scanner that returns the next KeyValue.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/LastSequenceId.html" title="interface in org.apache.hadoop.hbase.regionserver">LastSequenceId</a></td>
 <td class="colLast">
 <div class="block">Last flushed sequence Ids for the regions and their stores on region server</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/LeaseListener.html" title="interface in org.apache.hadoop.hbase.regionserver">LeaseListener</a></td>
 <td class="colLast">
 <div class="block">LeaseListener is an interface meant to be implemented by users of the Leases
  class.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStore.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStore</a></td>
 <td class="colLast">
 <div class="block">The MemStore holds in-memory modifications to the Store.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreFlusher.FlushQueueEntry.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStoreFlusher.FlushQueueEntry</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreLAB.html" title="interface in org.apache.hadoop.hbase.regionserver">MemStoreLAB</a></td>
 <td class="colLast">
 <div class="block">A memstore-local allocation buffer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionAggregateSource.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsRegionAggregateSource</a></td>
 <td class="colLast">
 <div class="block">This interface will be implemented by a MetricsSource that will export metrics from
  multiple regions into the hadoop metrics system.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerSource.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsRegionServerSource</a></td>
 <td class="colLast">
 <div class="block">Interface for classes that expose metrics about the regionserver.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerSourceFactory.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsRegionServerSourceFactory</a></td>
 <td class="colLast">
 <div class="block">Interface of a factory to create Metrics Sources used inside of regionservers.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerWrapper.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsRegionServerWrapper</a></td>
 <td class="colLast">
 <div class="block">This is the interface that will expose RegionServer information to hadoop1/hadoop2
  implementations of the MetricsRegionServerSource.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsRegionSource</a></td>
 <td class="colLast">
 <div class="block">This interface will be implemented to allow single regions to push metrics into
  MetricsRegionAggregateSource that will in turn push data to the Hadoop metrics system.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionWrapper.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsRegionWrapper</a></td>
 <td class="colLast">
 <div class="block">Interface of class that will wrap an HRegion and export numbers so they can be
  used in MetricsRegionSource</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableAggregateSource.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsTableAggregateSource</a></td>
+<td class="colLast">
+<div class="block">This interface will be implemented by a MetricsSource that will export metrics from
+ multiple regions of a table into the hadoop metrics system.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableSource.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsTableSource</a></td>
+<td class="colLast">
+<div class="block">This interface will be implemented to allow region server to push table metrics into
+ MetricsRegionAggregateSource that will in turn push data to the Hadoop metrics system.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableWrapperAggregate.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsTableWrapperAggregate</a></td>
+<td class="colLast">
+<div class="block">Interface of class that will wrap a MetricsTableSource and export numbers so they can be
+ used in MetricsTableSource</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -359,10 +384,6 @@
 <div class="block">A package protected interface for a store flushing.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeMultiFileWriter.WriterFactory.html" title="interface in org.apache.hadoop.hbase.regionserver">StripeMultiFileWriter.WriterFactory</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -374,6 +395,18 @@
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/AbstractMemStore.html" title="class in org.apache.hadoop.hbase.regionserver">AbstractMemStore</a></td>
+<td class="colLast">
+<div class="block">An abstract class, which implements the behaviour shared by all concrete memstore instances.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/AbstractMultiFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">AbstractMultiFileWriter</a></td>
+<td class="colLast">
+<div class="block">Base class for cell sink that separates the provided cells into multiple files.</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/AnnotationReadingPriorityFunction.html" title="class in org.apache.hadoop.hbase.regionserver">AnnotationReadingPriorityFunction</a></td>
 <td class="colLast">
@@ -388,10 +421,10 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CellSkipListSet.html" title="class in org.apache.hadoop.hbase.regionserver">CellSkipListSet</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CellSet.html" title="class in org.apache.hadoop.hbase.regionserver">CellSet</a></td>
 <td class="colLast">
-<div class="block">A <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util"><code>Set</code></a> of <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase"><code>Cell</code></a>s implemented on top of a
- <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentSkipListMap.html?is-external=true" title="class or interface in java.util.concurrent"><code>ConcurrentSkipListMap</code></a>.</div>
+<div class="block">A <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util"><code>Set</code></a> of <a href="../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase"><code>Cell</code></a>s, where an add will overwrite the entry if already
+ exists in the set.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -401,43 +434,83 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactedHFilesDischargeHandler.html" title="class in org.apache.hadoop.hbase.regionserver">CompactedHFilesDischargeHandler</a></td>
+<td class="colLast">
+<div class="block">Event handler that handles the removal and archival of the compacted hfiles</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactedHFilesDischarger.html" title="class in org.apache.hadoop.hbase.regionserver">CompactedHFilesDischarger</a></td>
+<td class="colLast">
+<div class="block">A chore service that periodically cleans up the compacted files when there are no active readers
+ using those compacted files and also helps in clearing the block cache with these compacted
+ file entries</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactingMemStore.html" title="class in org.apache.hadoop.hbase.regionserver">CompactingMemStore</a></td>
+<td class="colLast">
+<div class="block">A memstore implementation which supports in-memory compaction.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactionPipeline.html" title="class in org.apache.hadoop.hbase.regionserver">CompactionPipeline</a></td>
+<td class="colLast">
+<div class="block">The compaction pipeline of a <a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactingMemStore.html" title="class in org.apache.hadoop.hbase.regionserver"><code>CompactingMemStore</code></a>, is a FIFO queue of segments.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactionTool.html" title="class in org.apache.hadoop.hbase.regionserver">CompactionTool</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactionTool.CompactionInputFormat.html" title="class in org.apache.hadoop.hbase.regionserver">CompactionTool.CompactionInputFormat</a></td>
 <td class="colLast">
 <div class="block">Input format that uses store files block location as input split locality.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactionTool.CompactionMapper.html" title="class in org.apache.hadoop.hbase.regionserver">CompactionTool.CompactionMapper</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactionTool.CompactionWorker.html" title="class in org.apache.hadoop.hbase.regionserver">CompactionTool.CompactionWorker</a></td>
 <td class="colLast">
 <div class="block">Class responsible to execute the Compaction on the specified path.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactSplitThread.html" title="class in org.apache.hadoop.hbase.regionserver">CompactSplitThread</a></td>
 <td class="colLast">
 <div class="block">Compact region on request and then run split if appropriate</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CompactSplitThread.Rejection.html" title="class in org.apache.hadoop.hbase.regionserver">CompactSplitThread.Rejection</a></td>
 <td class="colLast">
 <div class="block">Cleanup class to use when rejecting a compaction request from the queue.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">ConstantSizeRegionSplitPolicy</a></td>
 <td class="colLast">
 <div class="block">A <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><code>RegionSplitPolicy</code></a> implementation which splits a region
  as soon as any of its store files exceeds a maximum configurable
  size.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/DateTieredMultiFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">DateTieredMultiFileWriter</a></td>
+<td class="colLast">
+<div class="block">class for cell sink that separates the provided cells into multiple files for date tiered
+ compaction.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/DateTieredStoreEngine.html" title="class in org.apache.hadoop.hbase.regionserver">DateTieredStoreEngine</a></td>
+<td class="colLast">
+<div class="block">HBASE-15400 This store engine allows us to store data in date tiered layout with exponential
+ sizing so that the more recent data has more granularity.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -452,39 +525,39 @@
 <div class="block">The MemStore holds in-memory modifications to the Store.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStoreEngine.html" title="class in org.apache.hadoop.hbase.regionserver">DefaultStoreEngine</a></td>
 <td class="colLast">
 <div class="block">Default StoreEngine creates the default compactor, policy, and store file manager, or
  their derivatives.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStoreFileManager.html" title="class in org.apache.hadoop.hbase.regionserver">DefaultStoreFileManager</a></td>
 <td class="colLast">
 <div class="block">Default implementation of StoreFileManager.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/DefaultStoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver">DefaultStoreFlusher</a></td>
 <td class="colLast">
 <div class="block">Default implementation of StoreFlusher.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/DelimitedKeyPrefixRegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">DelimitedKeyPrefixRegionSplitPolicy</a></td>
 <td class="colLast">
 <div class="block">A custom RegionSplitPolicy implementing a SplitPolicy that groups
  rows by a prefix of the row-key with a delimiter.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/DisabledRegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">DisabledRegionSplitPolicy</a></td>
 <td class="colLast">
 <div class="block">A <a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><code>RegionSplitPolicy</code></a> that disables region splits.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ExplicitColumnTracker.html" title="class in org.apache.hadoop.hbase.regionserver">ExplicitColumnTracker</a></td>
 <td class="colLast">
 <div class="block">This class is used for the tracking and enforcement of columns and numbers
@@ -492,16 +565,34 @@
  column qualifiers have been asked for in the query.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/FifoRpcSchedulerFactory.html" title="class in org.apache.hadoop.hbase.regionserver">FifoRpcSchedulerFactory</a></td>
+<td class="colLast">
+<div class="block">Factory to use when you want to use the <a href="../../../../../org/apache/hadoop/hbase/ipc/FifoRpcScheduler.html" title="class in org.apache.hadoop.hbase.ipc"><code>FifoRpcScheduler</code></a></div>
+</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushAllLargeStoresPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">FlushAllLargeStoresPolicy</a></td>
+<td class="colLast">
+<div class="block">A <a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><code>FlushPolicy</code></a> that only flushes store larger a given threshold.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushAllStoresPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">FlushAllStoresPolicy</a></td>
 <td class="colLast">
 <div class="block">A <a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><code>FlushPolicy</code></a> that always flushes all stores for a given region.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushLargeStoresPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">FlushLargeStoresPolicy</a></td>
 <td class="colLast">
 <div class="block">A <a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><code>FlushPolicy</code></a> that only flushes store larger a given threshold.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushNonSloppyStoresFirstPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">FlushNonSloppyStoresFirstPolicy</a></td>
+<td class="colLast">
+<div class="block">A <a href="../../../../../org/apache/hadoop/hbase/regionserver/FlushPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><code>FlushPolicy</code></a> that only flushes store larger than a given threshold.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -557,7 +648,7 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.BatchOperationInProgress.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion.BatchOperationInProgress</a>&lt;T&gt;</td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/HRegion.BatchOperation.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion.BatchOperation</a>&lt;T&gt;</td>
 <td class="colLast">
 <div class="block">Struct-like class that tracks the progress of a batch operation,
  accumulating status codes and tracking the index at which processing
@@ -639,6 +730,13 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ImmutableSegment.html" title="class in org.apache.hadoop.hbase.regionserver">ImmutableSegment</a></td>
+<td class="colLast">
+<div class="block">ImmutableSegment is an abstract class that extends the API supported by a <a href="../../../../../org/apache/hadoop/hbase/regionserver/Segment.html" title="class in org.apache.hadoop.hbase.regionserver"><code>Segment</code></a>,
+ and is not needed for a <a href="../../../../../org/apache/hadoop/hbase/regionserver/MutableSegment.html" title="class in org.apache.hadoop.hbase.regionserver"><code>MutableSegment</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/IncreasingToUpperBoundRegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">IncreasingToUpperBoundRegionSplitPolicy</a></td>
 <td class="colLast">
 <div class="block">Split size is the number of regions that are on this server that all are
@@ -646,14 +744,14 @@
  region split size, whichever is smaller.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScan.html" title="class in org.apache.hadoop.hbase.regionserver">InternalScan</a></td>
 <td class="colLast">
 <div class="block">Special scanner, currently used for increment operations to
  allow additional server-side arguments for Scan operations.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyPrefixRegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">KeyPrefixRegionSplitPolicy</a></td>
 <td class="colLast">
 <div class="block">A custom RegionSplitPolicy implementing a SplitPolicy that groups
@@ -662,17 +760,17 @@
  This ensures that a region is not split "inside" a prefix of a row key.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html" title="class in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a></td>
 <td class="colLast">
 <div class="block">Implements a heap merge across any number of KeyValueScanners.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.KVScannerComparator.html" title="class in org.apache.hadoop.hbase.regionserver">KeyValueHeap.KVScannerComparator</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/Leases.html" title="class in org.apache.hadoop.hbase.regionserver">Leases</a></td>
 <td class="colLast">
 <div class="block">Leases
@@ -681,40 +779,47 @@
  clients that occasionally send heartbeats.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/Leases.Lease.html" title="class in org.apache.hadoop.hbase.regionserver">Leases.Lease</a></td>
 <td class="colLast">
 <div class="block">This class tracks a single Lease.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/LogRoller.html" title="class in org.apache.hadoop.hbase.regionserver">LogRoller</a></td>
 <td class="colLast">
 <div class="block">Runs periodically to determine if the WAL should be rolled.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/LruHashMap.html" title="class in org.apache.hadoop.hbase.regionserver">LruHashMap</a>&lt;K extends <a href="../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a>,V extends <a href="../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a>&gt;</td>
 <td class="colLast">
 <div class="block">The LruHashMap is a memory-aware HashMap with a configurable maximum
  memory footprint.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/LruHashMap.Entry.html" title="class in org.apache.hadoop.hbase.regionserver">LruHashMap.Entry</a>&lt;K extends <a href="../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a>,V extends <a href="../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io">HeapSize</a>&gt;</td>
 <td class="colLast">
 <div class="block">Entry to store key/value mappings.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreChunkPool.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreChunkPool</a></td>
 <td class="colLast">
 <div class="block">A pool of <a href="../../../../../org/apache/hadoop/hbase/regionserver/HeapMemStoreLAB.Chunk.html" title="class in org.apache.hadoop.hbase.regionserver"><code>HeapMemStoreLAB.Chunk</code></a> instances.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreChunkPool.StatisticsThread.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreChunkPool.StatisticsThread</a></td>
 <td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreCompactor.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreCompactor</a></td>
+<td class="colLast">
+<div class="block">The ongoing MemStore Compaction manager, dispatches a solo running compaction
+ and interrupts the compaction if requested.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreFlusher</a></td>
@@ -739,23 +844,29 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreScanner</a></td>
+<td class="colLast">
+<div class="block">This is the scanner for any MemStore implementation, derived from MemStore.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreSnapshot.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreSnapshot</a></td>
 <td class="colLast">
 <div class="block">Holds details of the snapshot taken on a MemStore.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegion.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegion</a></td>
 <td class="colLast">
 <div class="block">This is the glue between the HRegion and whatever hadoop shim layer
  is loaded (hbase-hadoop1-compat or hbase-hadoop2-compat).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionAggregateSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionAggregateSourceImpl</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionServer</a></td>
 <td class="colLast">
 <div class="block">
@@ -763,73 +874,99 @@
  and publishing them through the metrics interfaces.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerSourceFactoryImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionServerSourceFactoryImpl</a></td>
 <td class="colLast">
 <div class="block">Factory to create MetricsRegionServerSource when given a  MetricsRegionServerWrapper</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionServerSourceImpl</a></td>
 <td class="colLast">
 <div class="block">Hadoop2 implementation of MetricsRegionServerSource.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerWrapperImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionServerWrapperImpl</a></td>
 <td class="colLast">
 <div class="block">Impl for exposing HRegionServer Information through Hadoop's metrics 2 system.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionSourceImpl</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionWrapperImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionWrapperImpl</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTable.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsTable</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableAggregateSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsTableAggregateSourceImpl</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsTableSourceImpl</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableWrapperAggregateImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsTableWrapperAggregateImpl</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableWrapperAggregateImpl.MetricsTableValues.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsTableWrapperAggregateImpl.MetricsTableValues</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MiniBatchOperationInProgress.html" title="class in org.apache.hadoop.hbase.regionserver">MiniBatchOperationInProgress</a>&lt;T&gt;</td>
 <td class="colLast">
 <div class="block">Wraps together the mutations which are applied as a batch to the region and their operation
  status and WALEdits.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MobCompactionStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">MobCompactionStoreScanner</a></td>
 <td class="colLast">
 <div class="block">Scanner scans the MOB Store.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MobReferenceOnlyFilter.html" title="class in org.apache.hadoop.hbase.regionserver">MobReferenceOnlyFilter</a></td>
 <td class="colLast">
 <div class="block">A filter that returns the cells which have mob reference tags.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MobStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">MobStoreScanner</a></td>
 <td class="colLast">
 <div class="block">Scanner scans both the memstore and the MOB Store.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MultiRowMutationProcessor.html" title="class in org.apache.hadoop.hbase.regionserver">MultiRowMutationProcessor</a></td>
 <td class="colLast">
 <div class="block">A <code>MultiRowProcessor</code> that performs multiple puts and deletes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.html" title="class in org.apache.hadoop.hbase.regionserver">MultiVersionConcurrencyControl</a></td>
 <td class="colLast">
 <div class="block">Manages the read/write consistency.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.WriteEntry.html" title="class in org.apache.hadoop.hbase.regionserver">MultiVersionConcurrencyControl.WriteEntry</a></td>
 <td class="colLast">
 <div class="block">Write number and whether write has completed given out at start of a write transaction.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MutableSegment.html" title="class in org.apache.hadoop.hbase.regionserver">MutableSegment</a></td>
+<td class="colLast">
+<div class="block">A mutable segment in memstore, specifically the active segment.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -967,92 +1104,98 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionServicesForStores.html" title="class in org.apache.hadoop.hbase.regionserver">RegionServicesForStores</a></td>
+<td class="colLast">
+<div class="block">Services a Store needs from a Region.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">RegionSplitPolicy</a></td>
 <td class="colLast">
 <div class="block">A split policy determines when a region should be split.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ReversedKeyValueHeap.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedKeyValueHeap</a></td>
 <td class="colLast">
 <div class="block">ReversedKeyValueHeap is used for supporting reversed scanning.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ReversedKeyValueHeap.ReversedKVScannerComparator.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedKeyValueHeap.ReversedKVScannerComparator</a></td>
 <td class="colLast">
 <div class="block">In ReversedKVScannerComparator, we compare the row of scanners' peek values
  first, sort bigger one before the smaller one.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ReversedMobStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedMobStoreScanner</a></td>
 <td class="colLast">
 <div class="block">ReversedMobStoreScanner extends from ReversedStoreScanner, and is used to support
  reversed scanning in both the memstore and the MOB store.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ReversedRegionScannerImpl.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedRegionScannerImpl</a></td>
 <td class="colLast">
 <div class="block">ReversibleRegionScannerImpl extends from RegionScannerImpl, and is used to
  support reversed scanning.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ReversedStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">ReversedStoreScanner</a></td>
 <td class="colLast">
 <div class="block">ReversedStoreScanner extends from StoreScanner, and is used to support
  reversed scanning.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSDumpServlet.html" title="class in org.apache.hadoop.hbase.regionserver">RSDumpServlet</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices</a></td>
 <td class="colLast">
 <div class="block">Implements the regionserver RPC services.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerCloseCallBack.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannerCloseCallBack</a></td>
 <td class="colLast">
 <div class="block">An Rpc callback for closing a RegionScanner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannerHolder.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannerHolder</a></td>
 <td class="colLast">
 <div class="block">Holder class which holds the RegionScanner, nextCallSeq and RpcCallbacks together.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSRpcServices.RegionScannersCloseCallBack.html" title="class in org.apache.hadoop.hbase.regionserver">RSRpcServices.RegionScannersCloseCallBack</a></td>
 <td class="colLast">
 <div class="block">An RpcCallBack that creates a list of scanners that needs to perform callBack operation on
  completion of multiGets.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RSStatusServlet.html" title="class in org.apache.hadoop.hbase.regionserver">RSStatusServlet</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScanDeleteTracker.html" title="class in org.apache.hadoop.hbase.regionserver">ScanDeleteTracker</a></td>
 <td class="colLast">
 <div class="block">This class is responsible for the tracking and enforcement of Deletes
  during the course of a Scan operation.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScanInfo.html" title="class in org.apache.hadoop.hbase.regionserver">ScanInfo</a></td>
 <td class="colLast">
 <div class="block">Immutable information for scans over a store.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScannerContext.html" title="class in org.apache.hadoop.hbase.regionserver">ScannerContext</a></td>
 <td class="colLast">
 <div class="block">ScannerContext instances encapsulate limit tracking AND progress towards those limits during
@@ -1060,27 +1203,46 @@
  <a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html#next(java.util.List)"><code>InternalScanner.next(java.util.List)</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScannerContext.Builder.html" title="class in org.apache.hadoop.hbase.regionserver">ScannerContext.Builder</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScannerContext.LimitFields.html" title="class in org.apache.hadoop.hbase.regionserver">ScannerContext.LimitFields</a></td>
 <td class="colLast">
 <div class="block">The different fields that can be used as limits in calls to
  <a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html#next(java.util.List)"><code>InternalScanner.next(java.util.List)</code></a> and <a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html#next(java.util.List)"><code>InternalScanner.next(java.util.List)</code></a></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScanQueryMatcher.html" title="class in org.apache.hadoop.hbase.regionserver">ScanQueryMatcher</a></td>
 <td class="colLast">
 <div class="block">A query matcher that is specifically designed for the scan case.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScanWildcardColumnTracker.html" title="class in org.apache.hadoop.hbase.regionserver">ScanWildcardColumnTracker</a></td>
 <td class="colLast">
 <div class="block">Keeps track of the columns for a scan if they are not explicitly specified</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/Segment.html" title="class in org.apache.hadoop.hbase.regionserver">Segment</a></td>
+<td class="colLast">
+<div class="block">This is an abstraction of a segment maintained in a memstore, e.g., the active
+ cell set or its snapshot.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/SegmentFactory.html" title="class in org.apache.hadoop.hbase.regionserver">SegmentFactory</a></td>
+<td class="colLast">
+<div class="block">A singleton store segment factory.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/SegmentScanner.html" title="class in org.apache.hadoop.hbase.regionserver">SegmentScanner</a></td>
+<td class="colLast">
+<div class="block">A scanner of a single memstore segment.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1175,27 +1337,15 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Comparators.GetMaxTimestamp.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Comparators.GetMaxTimestamp</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Comparators.GetPathName.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Comparators.GetPathName</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Comparators.GetSeqId.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Comparators.GetSeqId</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Reader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Reader</a></td>
-<td class="colLast">
-<div class="block">Reader for a StoreFile.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></td>
-<td class="colLast">
-<div class="block">A StoreFile writer.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.WriterBuilder.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.WriterBuilder</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -1205,111 +1355,135 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileReader.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileReader</a></td>
+<td class="colLast">
+<div class="block">Reader for a StoreFile.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StorefileRefresherChore.html" title="class in org.apache.hadoop.hbase.regionserver">StorefileRefresherChore</a></td>
 <td class="colLast">
 <div class="block">A chore for refreshing the store files for secondary regions hosted in the region server.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileScanner</a></td>
 <td class="colLast">
 <div class="block">KeyValueScanner adaptor over the Reader.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a></td>
+<td class="colLast">
+<div class="block">A StoreFile writer.</div>
+</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.Builder.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileWriter.Builder</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFlusher</a></td>
 <td class="colLast">
 <div class="block">Store flusher interface.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreScanner</a></td>
 <td class="colLast">
 <div class="block">Scanner scans both the memstore and the Store.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreUtils.html" title="class in org.apache.hadoop.hbase.regionserver">StoreUtils</a></td>
 <td class="colLast">
 <div class="block">Utility functions for region server storage layer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeMultiFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StripeMultiFileWriter</a></td>
 <td class="colLast">
-<div class="block">Base class for cell sink that separates the provided cells into multiple files.</div>
+<div class="block">Base class for cell sink that separates the provided cells into multiple files for stripe
+ compaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeMultiFileWriter.BoundaryMultiWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StripeMultiFileWriter.BoundaryMultiWriter</a></td>
 <td class="colLast">
 <div class="block">MultiWriter that separates the cells based on fixed row-key boundaries.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeMultiFileWriter.SizeMultiWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StripeMultiFileWriter.SizeMultiWriter</a></td>
 <td class="colLast">
 <div class="block">MultiWriter that separates the cells based on target cell number per file and file count.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreConfig.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreConfig</a></td>
 <td class="colLast">
 <div class="block">Configuration class for stripe store and compactions.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreEngine.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreEngine</a></td>
 <td class="colLast">
 <div class="block">The storage engine that implements the stripe-based store/compaction scheme.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreFileManager</a></td>
 <td class="colLast">
 <div class="block">Stripe implementation of StoreFileManager.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.KeyBeforeConcatenatedLists.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreFileManager.KeyBeforeConcatenatedLists</a></td>
 <td class="colLast">
 <div class="block">An extension of ConcatenatedLists that has several peculiar properties.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFileManager.State.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreFileManager.State</a></td>
 <td class="colLast">
 <div class="block">The state class.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFlusher.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreFlusher</a></td>
 <td class="colLast">
 <div class="block">Stripe implementation of StoreFlusher.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFlusher.BoundaryStripeFlushRequest.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreFlusher.BoundaryStripeFlushRequest</a></td>
 <td class="colLast">
 <div class="block">Stripe flush request wrapper based on boundaries.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFlusher.SizeStripeFlushRequest.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreFlusher.SizeStripeFlushRequest</a></td>
 <td class="colLast">
 <div class="block">Stripe flush request wrapper based on size.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreFlusher.StripeFlushRequest.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreFlusher.StripeFlushRequest</a></td>
 <td class="colLast">
 <div class="block">Stripe flush request wrapper that writes a non-striped file.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></td>
 <td class="colLast">
-<div class="block">Stores the minimum and maximum timestamp values (both are inclusive).</div>
+<div class="block">Stores minimum and maximum timestamp values.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/VersionedSegmentsList.html" title="class in org.apache.hadoop.hbase.regionserver">VersionedSegmentsList</a></td>
+<td class="colLast">
+<div class="block">A list of segment managers coupled with the version of the memstore (version at the time it was
+ created).</div>
 </td>
 </tr>
 </tbody>
@@ -1348,65 +1522,71 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerSourceFactoryImpl.FactoryStorage.html" title="enum in org.apache.hadoop.hbase.regionserver">MetricsRegionServerSourceFactoryImpl.FactoryStorage</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.FlushResult.Result.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.FlushResult.Result</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.Operation.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.Operation</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MemStoreScanner.Type.html" title="enum in org.apache.hadoop.hbase.regionserver">MemStoreScanner.Type</a></td>
 <td class="colLast">
-<div class="block">Operation enum is used in <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#startRegionOperation()"><code>Region.startRegionOperation()</code></a> to provide context for
- various checks before any region operation begins.</div>
+<div class="block">Types of cell MemStoreScanner</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerSourceFactoryImpl.FactoryStorage.html" title="enum in org.apache.hadoop.hbase.regionserver">MetricsRegionServerSourceFactoryImpl.FactoryStorage</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.FlushResult.Result.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.FlushResult.Result</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.Operation.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.Operation</a></td>
+<td class="colLast">
+<div class="block">Operation enum is used in <a href="../../../../../org/apache/hadoop/hbase/regionserver/Region.html#startRegionOperation()"><code>Region.startRegionOperation()</code></a> and elsewhere to provide
+ context for various checks.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransaction.RegionMergeTransactionPhase.html" title="enum in org.apache.hadoop.hbase.regionserver">RegionMergeTransaction.RegionMergeTransactionPhase</a></td>
 <td class="colLast">
 <div class="block">Each enum is a step in the merge transaction.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionOpeningState.html" title="enum in org.apache.hadoop.hbase.regionserver">RegionOpeningState</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScannerContext.LimitScope.html" title="enum in org.apache.hadoop.hbase.regionserver">ScannerContext.LimitScope</a></td>
 <td class="colLast">
 <div class="block">The various scopes where a limit can be enforced.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScannerContext.NextState.html" title="enum in org.apache.hadoop.hbase.regionserver">ScannerContext.NextState</a></td>
 <td class="colLast">
 <div class="block">The possible states a scanner may be in following a call to <a href="../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html#next(java.util.List)"><code>InternalScanner.next(List)</code></a></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScanQueryMatcher.MatchCode.html" title="enum in org.apache.hadoop.hbase.regionserver">ScanQueryMatcher.MatchCode</a></td>
 <td class="colLast">
 <div class="block"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScanQueryMatcher.html#match(org.apache.hadoop.hbase.Cell)"><code>ScanQueryMatcher.match(org.apache.hadoop.hbase.Cell)</code></a> return codes.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/ScanType.html" title="enum in org.apache.hadoop.hbase.regionserver">ScanType</a></td>
 <td class="colLast">
 <div class="block">Enum to distinguish general scan types.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitLogWorker.TaskExecutor.Status.html" title="enum in org.apache.hadoop.hbase.regionserver">SplitLogWorker.TaskExecutor.Status</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.SplitTransactionPhase.html" title="enum in org.apache.hadoop.hbase.regionserver">SplitTransaction.SplitTransactionPhase</a></td>
 <td class="colLast">
 <div class="block">Each enum is a step in the split transaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreScanner.StoreScannerCompactionRace.html" title="enum in org.apache.hadoop.hbase.regionserver">StoreScanner.StoreScannerCompactionRace</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -1525,6 +1705,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

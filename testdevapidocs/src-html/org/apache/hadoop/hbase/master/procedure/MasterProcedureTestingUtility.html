@@ -137,8 +137,8 @@
 <span class="sourceLineNo">129</span>    assertEquals(family.length, htd.getFamilies().size());<a name="line.129"></a>
 <span class="sourceLineNo">130</span>  }<a name="line.130"></a>
 <span class="sourceLineNo">131</span><a name="line.131"></a>
-<span class="sourceLineNo">132</span>  public static void validateTableDeletion(final HMaster master, final TableName tableName,<a name="line.132"></a>
-<span class="sourceLineNo">133</span>      final HRegionInfo[] regions, String... family) throws IOException {<a name="line.133"></a>
+<span class="sourceLineNo">132</span>  public static void validateTableDeletion(<a name="line.132"></a>
+<span class="sourceLineNo">133</span>      final HMaster master, final TableName tableName) throws IOException {<a name="line.133"></a>
 <span class="sourceLineNo">134</span>    // check filesystem<a name="line.134"></a>
 <span class="sourceLineNo">135</span>    final FileSystem fs = master.getMasterFileSystem().getFileSystem();<a name="line.135"></a>
 <span class="sourceLineNo">136</span>    final Path tableDir = FSUtils.getTableDir(master.getMasterFileSystem().getRootDir(), tableName);<a name="line.136"></a>
@@ -190,13 +190,13 @@
 <span class="sourceLineNo">182</span><a name="line.182"></a>
 <span class="sourceLineNo">183</span>  public static void validateTableIsEnabled(final HMaster master, final TableName tableName)<a name="line.183"></a>
 <span class="sourceLineNo">184</span>      throws IOException {<a name="line.184"></a>
-<span class="sourceLineNo">185</span>    TableStateManager tsm = master.getAssignmentManager().getTableStateManager();<a name="line.185"></a>
+<span class="sourceLineNo">185</span>    TableStateManager tsm = master.getTableStateManager();<a name="line.185"></a>
 <span class="sourceLineNo">186</span>    assertTrue(tsm.getTableState(tableName).equals(TableState.State.ENABLED));<a name="line.186"></a>
 <span class="sourceLineNo">187</span>  }<a name="line.187"></a>
 <span class="sourceLineNo">188</span><a name="line.188"></a>
 <span class="sourceLineNo">189</span>  public static void validateTableIsDisabled(final HMaster master, final TableName tableName)<a name="line.189"></a>
 <span class="sourceLineNo">190</span>      throws IOException {<a name="line.190"></a>
-<span class="sourceLineNo">191</span>    TableStateManager tsm = master.getAssignmentManager().getTableStateManager();<a name="line.191"></a>
+<span class="sourceLineNo">191</span>    TableStateManager tsm = master.getTableStateManager();<a name="line.191"></a>
 <span class="sourceLineNo">192</span>    assertTrue(tsm.getTableState(tableName).equals(TableState.State.DISABLED));<a name="line.192"></a>
 <span class="sourceLineNo">193</span>  }<a name="line.193"></a>
 <span class="sourceLineNo">194</span><a name="line.194"></a>
@@ -446,11 +446,11 @@
 <span class="sourceLineNo">438</span>  }<a name="line.438"></a>
 <span class="sourceLineNo">439</span><a name="line.439"></a>
 <span class="sourceLineNo">440</span>  public static long generateNonceGroup(final HMaster master) {<a name="line.440"></a>
-<span class="sourceLineNo">441</span>    return master.getConnection().getNonceGenerator().getNonceGroup();<a name="line.441"></a>
+<span class="sourceLineNo">441</span>    return master.getClusterConnection().getNonceGenerator().getNonceGroup();<a name="line.441"></a>
 <span class="sourceLineNo">442</span>  }<a name="line.442"></a>
 <span class="sourceLineNo">443</span><a name="line.443"></a>
 <span class="sourceLineNo">444</span>  public static long generateNonce(final HMaster master) {<a name="line.444"></a>
-<span class="sourceLineNo">445</span>    return master.getConnection().getNonceGenerator().newNonce();<a name="line.445"></a>
+<span class="sourceLineNo">445</span>    return master.getClusterConnection().getNonceGenerator().newNonce();<a name="line.445"></a>
 <span class="sourceLineNo">446</span>  }<a name="line.446"></a>
 <span class="sourceLineNo">447</span><a name="line.447"></a>
 <span class="sourceLineNo">448</span>  public static class InjectAbortOnLoadListener<a name="line.448"></a>

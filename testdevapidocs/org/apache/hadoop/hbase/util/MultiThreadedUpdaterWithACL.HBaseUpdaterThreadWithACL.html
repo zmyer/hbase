@@ -113,7 +113,7 @@
 </dl>
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.html#line.78">MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL</a>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.html#line.76">MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL</a>
 extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdater.HBaseUpdaterThread.html" title="class in org.apache.hadoop.hbase.util">MultiThreadedUpdater.HBaseUpdaterThread</a></pre>
 </li>
 </ul>
@@ -164,7 +164,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#mutateAction">mutateAction</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#table">table</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -211,19 +211,19 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#closeHTable()">closeHTable</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.client.HTableInterface</code></td>
+<td class="colFirst"><code>protected <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#createTable()">createTable</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.client.Result</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#getRow(org.apache.hadoop.hbase.client.Get,%20long,%20byte[])">getRow</a></strong>(org.apache.hadoop.hbase.client.Get&nbsp;get,
+<td class="colFirst"><code>protected <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#getRow(org.apache.hadoop.hbase.client.Get,%20long,%20byte[])">getRow</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
             long&nbsp;rowKeyBase,
             byte[]&nbsp;cf)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#mutate(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Mutation,%20long,%20byte[],%20byte[],%20byte[],%20byte[])">mutate</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-            org.apache.hadoop.hbase.client.Mutation&nbsp;m,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#mutate(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Mutation,%20long,%20byte[],%20byte[],%20byte[],%20byte[])">mutate</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Mutation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;m,
             long&nbsp;keyBase,
             byte[]&nbsp;row,
             byte[]&nbsp;cf,
@@ -232,7 +232,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#recordFailure(org.apache.hadoop.hbase.client.Mutation,%20long,%20long,%20java.io.IOException)">recordFailure</a></strong>(org.apache.hadoop.hbase.client.Mutation&nbsp;m,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#recordFailure(org.apache.hadoop.hbase.client.Mutation,%20long,%20long,%20java.io.IOException)">recordFailure</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Mutation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;m,
                           long&nbsp;keyBase,
                           long&nbsp;start,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&nbsp;e)</code>&nbsp;</td>
@@ -279,7 +279,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <ul class="blockList">
 <li class="blockList">
 <h4>table</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.client.Table <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.80">table</a></pre>
+<pre>private&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.78">table</a></pre>
 </li>
 </ul>
 <a name="mutateAction">
@@ -288,7 +288,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <ul class="blockListLast">
 <li class="blockList">
 <h4>mutateAction</h4>
-<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.MutateAccessAction.html" title="class in org.apache.hadoop.hbase.util">MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.MutateAccessAction</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.81">mutateAction</a></pre>
+<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.MutateAccessAction.html" title="class in org.apache.hadoop.hbase.util">MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.MutateAccessAction</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.79">mutateAction</a></pre>
 </li>
 </ul>
 </li>
@@ -305,7 +305,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.83">MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL</a>(int&nbsp;updaterId)
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.81">MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL</a>(int&nbsp;updaterId)
                                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -325,8 +325,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <ul class="blockList">
 <li class="blockList">
 <h4>createTable</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.client.HTableInterface&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.88">createTable</a>()
-                                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>protected&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.86">createTable</a>()
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdater.HBaseUpdaterThread.html#createTable()">createTable</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdater.HBaseUpdaterThread.html" title="class in org.apache.hadoop.hbase.util">MultiThreadedUpdater.HBaseUpdaterThread</a></code></dd>
@@ -340,7 +340,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <ul class="blockList">
 <li class="blockList">
 <h4>closeHTable</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.93">closeHTable</a>()</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.91">closeHTable</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdater.HBaseUpdaterThread.html#closeHTable()">closeHTable</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdater.HBaseUpdaterThread.html" title="class in org.apache.hadoop.hbase.util">MultiThreadedUpdater.HBaseUpdaterThread</a></code></dd>
@@ -353,9 +353,9 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <ul class="blockList">
 <li class="blockList">
 <h4>getRow</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.client.Result&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.111">getRow</a>(org.apache.hadoop.hbase.client.Get&nbsp;get,
-                                           long&nbsp;rowKeyBase,
-                                           byte[]&nbsp;cf)</pre>
+<pre>protected&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.109">getRow</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&nbsp;get,
+            long&nbsp;rowKeyBase,
+            byte[]&nbsp;cf)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdater.HBaseUpdaterThread.html#getRow(org.apache.hadoop.hbase.client.Get,%20long,%20byte[])">getRow</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdater.HBaseUpdaterThread.html" title="class in org.apache.hadoop.hbase.util">MultiThreadedUpdater.HBaseUpdaterThread</a></code></dd>
@@ -368,8 +368,8 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <ul class="blockList">
 <li class="blockList">
 <h4>mutate</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.164">mutate</a>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-          org.apache.hadoop.hbase.client.Mutation&nbsp;m,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.162">mutate</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Mutation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;m,
           long&nbsp;keyBase,
           byte[]&nbsp;row,
           byte[]&nbsp;cf,
@@ -387,7 +387,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <ul class="blockListLast">
 <li class="blockList">
 <h4>recordFailure</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.252">recordFailure</a>(org.apache.hadoop.hbase.client.Mutation&nbsp;m,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/util/MultiThreadedUpdaterWithACL.HBaseUpdaterThreadWithACL.html#line.250">recordFailure</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Mutation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;m,
                  long&nbsp;keyBase,
                  long&nbsp;start,
                  <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&nbsp;e)</pre>
@@ -460,6 +460,6 @@ extends <a href="../../../../../org/apache/hadoop/hbase/util/MultiThreadedUpdate
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

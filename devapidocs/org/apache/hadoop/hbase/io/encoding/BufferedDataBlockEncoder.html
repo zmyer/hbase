@@ -173,7 +173,9 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private static int</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#INITIAL_KEY_BUFFER_SIZE">INITIAL_KEY_BUFFER_SIZE</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#INITIAL_KEY_BUFFER_SIZE">INITIAL_KEY_BUFFER_SIZE</a></strong></code>
+<div class="block">TODO: This datablockencoder is dealing in internals of hfileblocks.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -345,7 +347,8 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <ul class="blockListLast">
 <li class="blockList">
 <h4>INITIAL_KEY_BUFFER_SIZE</h4>
-<pre>private static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.56">INITIAL_KEY_BUFFER_SIZE</a></pre>
+<pre>private static&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.58">INITIAL_KEY_BUFFER_SIZE</a></pre>
+<div class="block">TODO: This datablockencoder is dealing in internals of hfileblocks. Purge reference to HFBs</div>
 </li>
 </ul>
 </li>
@@ -379,7 +382,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <ul class="blockList">
 <li class="blockList">
 <h4>decodeKeyValues</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.59">decodeKeyValues</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html?is-external=true" title="class or interface in java.io">DataInputStream</a>&nbsp;source,
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.61">decodeKeyValues</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html?is-external=true" title="class or interface in java.io">DataInputStream</a>&nbsp;source,
                          <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockDecodingContext.html" title="interface in org.apache.hadoop.hbase.io.encoding">HFileBlockDecodingContext</a>&nbsp;blkDecodingCtx)
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoder.html#decodeKeyValues(java.io.DataInputStream,%20org.apache.hadoop.hbase.io.encoding.HFileBlockDecodingContext)">DataBlockEncoder</a></code></strong></div>
@@ -399,7 +402,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <ul class="blockList">
 <li class="blockList">
 <h4>compareCommonRowPrefix</h4>
-<pre>public static&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.90">compareCommonRowPrefix</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
+<pre>public static&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.92">compareCommonRowPrefix</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
                          <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;right,
                          int&nbsp;rowCommonPrefix)</pre>
 <div class="block">common prefixes</div>
@@ -411,7 +414,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <ul class="blockList">
 <li class="blockList">
 <h4>compareCommonFamilyPrefix</h4>
-<pre>public static&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.96">compareCommonFamilyPrefix</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
+<pre>public static&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.98">compareCommonFamilyPrefix</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
                             <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;right,
                             int&nbsp;familyCommonPrefix)</pre>
 </li>
@@ -422,7 +425,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <ul class="blockList">
 <li class="blockList">
 <h4>compareCommonQualifierPrefix</h4>
-<pre>public static&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.102">compareCommonQualifierPrefix</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
+<pre>public static&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.104">compareCommonQualifierPrefix</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;left,
                                <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;right,
                                int&nbsp;qualCommonPrefix)</pre>
 </li>
@@ -433,7 +436,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <ul class="blockList">
 <li class="blockList">
 <h4>afterEncodingKeyValue</h4>
-<pre>protected final&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.993">afterEncodingKeyValue</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
+<pre>protected final&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/encoding/BufferedDataBlockEncoder.html#line.995">afterEncodingKeyValue</a>(<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&nbsp;cell,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataOutputStream.html?is-external=true" title="class or interface in java.io">DataOutputStream</a>&nbsp;out,
                         <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/HFileBlockDefaultEncodingContext.html" title="class in org.apache.hadoop.hbase.io.encoding">HFileBlockDefaultEncodingContext</a>&nbsp;encodingCtx)
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -675,6 +678,6 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/encoding/DataBl
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

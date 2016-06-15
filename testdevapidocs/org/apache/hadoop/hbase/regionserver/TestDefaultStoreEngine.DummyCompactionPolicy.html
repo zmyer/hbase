@@ -86,13 +86,18 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.SortedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.SortedCompactionPolicy</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.RatioBasedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.regionserver.TestDefaultStoreEngine.DummyCompactionPolicy</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -110,7 +115,7 @@
 <hr>
 <br>
 <pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultStoreEngine.html#line.48">TestDefaultStoreEngine.DummyCompactionPolicy</a>
-extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</pre>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.RatioBasedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</a></pre>
 </li>
 </ul>
 </div>
@@ -127,7 +132,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy</h3>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">CompactionPolicy</a></h3>
 <code>comConf, storeConfigInfo</code></li>
 </ul>
 </li>
@@ -145,7 +150,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultStoreEngine.DummyCompactionPolicy.html#TestDefaultStoreEngine.DummyCompactionPolicy(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.regionserver.StoreConfigInformation)">TestDefaultStoreEngine.DummyCompactionPolicy</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-                                                                                        org.apache.hadoop.hbase.regionserver.StoreConfigInformation&nbsp;storeConfigInfo)</code>&nbsp;</td>
+                                                                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreConfigInformation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreConfigInformation</a>&nbsp;storeConfigInfo)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -160,14 +165,21 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPolicy</h3>
-<code>getNextMajorCompactTime, isMajorCompaction, needsCompaction, preSelectCompactionForCoprocessor, selectCompaction, throttleCompaction</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.RatioBasedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">RatioBasedCompactionPolicy</a></h3>
+<code>applyCompactionPolicy, createCompactionRequest, needsCompaction, setMinThreshold, shouldPerformMajorCompaction</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.SortedCompactionPolicy">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.SortedCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">SortedCompactionPolicy</a></h3>
+<code>checkMinFilesCriteria, filterBulk, getCurrentEligibleFiles, getNextMajorCompactTime, preSelectCompactionForCoprocessor, removeExcessFiles, selectCompaction, skipLargeFiles, throttleCompaction</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.CompactionPolicy</h3>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">CompactionPolicy</a></h3>
 <code>getConf, setConf</code></li>
 </ul>
 <ul class="blockList">
@@ -198,7 +210,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <li class="blockList">
 <h4>TestDefaultStoreEngine.DummyCompactionPolicy</h4>
 <pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestDefaultStoreEngine.DummyCompactionPolicy.html#line.49">TestDefaultStoreEngine.DummyCompactionPolicy</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-                                            org.apache.hadoop.hbase.regionserver.StoreConfigInformation&nbsp;storeConfigInfo)</pre>
+                                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreConfigInformation.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreConfigInformation</a>&nbsp;storeConfigInfo)</pre>
 </li>
 </ul>
 </li>
@@ -268,6 +280,6 @@ extends org.apache.hadoop.hbase.regionserver.compactions.RatioBasedCompactionPol
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

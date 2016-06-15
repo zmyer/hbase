@@ -185,15 +185,23 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.procedure2.store.wal">org.apache.hadoop.hbase.procedure2.store.wal</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.compactions">org.apache.hadoop.hbase.regionserver.compactions</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.compactions">org.apache.hadoop.hbase.regionserver.compactions</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.snapshot">org.apache.hadoop.hbase.regionserver.snapshot</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.regionserver.throttle">org.apache.hadoop.hbase.regionserver.throttle</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -328,12 +336,6 @@ service.</div>
 <div class="block">Using this Interface one can mark a Cell as timestamp changeable.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>interface&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/Stoppable.html" title="interface in org.apache.hadoop.hbase">Stoppable</a></strong></code>
-<div class="block">Implementers are Stoppable.</div>
-</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -396,6 +398,24 @@ service.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/BigDecimalColumnInterpreter.html" title="class in org.apache.hadoop.hbase.client.coprocessor">BigDecimalColumnInterpreter</a></strong></code>
+<div class="block">ColumnInterpreter for doing Aggregation's with BigDecimal columns.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/DoubleColumnInterpreter.html" title="class in org.apache.hadoop.hbase.client.coprocessor">DoubleColumnInterpreter</a></strong></code>
+<div class="block">a concrete column interpreter implementation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/LongColumnInterpreter.html" title="class in org.apache.hadoop.hbase.client.coprocessor">LongColumnInterpreter</a></strong></code>
+<div class="block">a concrete column interpreter implementation.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/RowProcessorClient.html" title="class in org.apache.hadoop.hbase.client.coprocessor">RowProcessorClient</a></strong></code>
 <div class="block">Convenience class that is used to make RowProcessorEndpoint invocations.</div>
@@ -538,37 +558,44 @@ service.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ColumnInterpreter.html" title="class in org.apache.hadoop.hbase.coprocessor">ColumnInterpreter</a>&lt;T,S,P extends com.google.protobuf.Message,Q extends com.google.protobuf.Message,R extends com.google.protobuf.Message&gt;</strong></code>
+<div class="block">Defines how value for specific column is interpreted and provides utility
+ methods like compare, add, multiply etc for them.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorHost.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorHost</a>&lt;E extends <a href="../../../../../../org/apache/hadoop/hbase/CoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase">CoprocessorEnvironment</a>&gt;</strong></code>
 <div class="block">Provides the common setup framework and runtime services for coprocessor
  invocation from HBase services.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorService.html" title="interface in org.apache.hadoop.hbase.coprocessor">CoprocessorService</a></strong></code>
 <div class="block">Coprocessor endpoints providing protobuf services should implement this
  interface and return the <code>Service</code> instance via <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorService.html#getService()"><code>CoprocessorService.getService()</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/EndpointObserver.html" title="interface in org.apache.hadoop.hbase.coprocessor">EndpointObserver</a></strong></code>
 <div class="block">Coprocessors implement this interface to observe and mediate endpoint invocations
  on a region.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterObserver</a></strong></code>
 <div class="block">Defines coprocessor hooks for interacting with operations on the
  <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master"><code>HMaster</code></a> process.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/MultiRowMutationEndpoint.html" title="class in org.apache.hadoop.hbase.coprocessor">MultiRowMutationEndpoint</a></strong></code>
 <div class="block">This class demonstrates how to implement atomic multi row transactions using
@@ -576,7 +603,7 @@ service.</div>
  and Coprocessor endpoints.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;E extends <a href="../../../../../../org/apache/hadoop/hbase/CoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase">CoprocessorEnvironment</a>&gt;</strong></code>
 <div class="block">Carries the execution state for a given invocation of an Observer coprocessor
@@ -584,29 +611,29 @@ service.</div>
  method.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionObserver</a></strong></code>
 <div class="block">Coprocessors implement this interface to observe and mediate client actions
  on the region.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/SingletonCoprocessorService.html" title="interface in org.apache.hadoop.hbase.coprocessor">SingletonCoprocessorService</a></strong></code>
 <div class="block">Coprocessor endpoints registered once per server and providing protobuf services should implement
  this interface and return the <code>Service</code> instance via <a href="../../../../../../org/apache/hadoop/hbase/coprocessor/SingletonCoprocessorService.html#getService()"><code>SingletonCoprocessorService.getService()</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/WALObserver.html" title="interface in org.apache.hadoop.hbase.coprocessor">WALObserver</a></strong></code>
 <div class="block">It's provided to have a way for coprocessors to observe, rewrite,
@@ -759,21 +786,35 @@ service.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/CallRunner.html" title="class in org.apache.hadoop.hbase.ipc">CallRunner</a></strong></code>
+<div class="block">The request processing logic, which is usually executed in thread pools provided by an
+ <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcScheduler.html" title="class in org.apache.hadoop.hbase.ipc"><code>RpcScheduler</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/PriorityFunction.html" title="interface in org.apache.hadoop.hbase.ipc">PriorityFunction</a></strong></code>
 <div class="block">Function to figure priority of incoming request.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcScheduler.html" title="class in org.apache.hadoop.hbase.ipc">RpcScheduler</a></strong></code>
 <div class="block">An interface for RPC request scheduling algorithm.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcServer.html" title="class in org.apache.hadoop.hbase.ipc">RpcServer</a></strong></code>
 <div class="block">An RPC server that hosts protobuf described Services.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcServer.Call.html" title="class in org.apache.hadoop.hbase.ipc">RpcServer.Call</a></strong></code>
+<div class="block">Datastructure that holds all necessary to a method invocation and then afterward, carries
+ the result.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -789,8 +830,7 @@ service.</div>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/SimpleRpcScheduler.html" title="class in org.apache.hadoop.hbase.ipc">SimpleRpcScheduler</a></strong></code>
-<div class="block">A scheduler that maintains isolated handler pools for general,
- high-priority, and replication requests.</div>
+<div class="block">The default scheduler.</div>
 </td>
 </tr>
 </tbody>
@@ -990,6 +1030,26 @@ service.</div>
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.procedure2.store.wal">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.LimitedPrivate.html" title="annotation in org.apache.hadoop.hbase.classification">InterfaceAudience.LimitedPrivate</a> in <a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/package-summary.html">org.apache.hadoop.hbase.procedure2.store.wal</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/package-summary.html">org.apache.hadoop.hbase.procedure2.store.wal</a> with annotations of type <a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.LimitedPrivate.html" title="annotation in org.apache.hadoop.hbase.classification">InterfaceAudience.LimitedPrivate</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALPrettyPrinter.html" title="class in org.apache.hadoop.hbase.procedure2.store.wal">ProcedureWALPrettyPrinter</a></strong></code>
+<div class="block">ProcedureWALPrettyPrinter prints the contents of a given ProcedureWAL file</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver">
 <!--   -->
 </a>
@@ -1066,79 +1126,86 @@ service.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MiniBatchOperationInProgress.html" title="class in org.apache.hadoop.hbase.regionserver">MiniBatchOperationInProgress</a>&lt;T&gt;</strong></code>
+<div class="block">Wraps together the mutations which are applied as a batch to the region and their operation
+ status and WALEdits.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/NoLimitScannerContext.html" title="class in org.apache.hadoop.hbase.regionserver">NoLimitScannerContext</a></strong></code>
 <div class="block">This is a special <a href="../../../../../../org/apache/hadoop/hbase/regionserver/ScannerContext.html" title="class in org.apache.hadoop.hbase.regionserver"><code>ScannerContext</code></a> subclass that is designed to be used globally when
  limits should not be enforced during invocations of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html#next(java.util.List)"><code>InternalScanner.next(java.util.List)</code></a>
  or <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html#next(java.util.List)"><code>InternalScanner.next(java.util.List)</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/OnlineRegions.html" title="interface in org.apache.hadoop.hbase.regionserver">OnlineRegions</a></strong></code>
 <div class="block">Interface to Map of online regions.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver">Region</a></strong></code>
 <div class="block">Regions store data for a certain region of a table.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.html" title="class in org.apache.hadoop.hbase.regionserver">RegionCoprocessorHost</a></strong></code>
 <div class="block">Implements the coprocessor environment and runtime support for coprocessors
  loaded within a <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.html" title="interface in org.apache.hadoop.hbase.regionserver"><code>Region</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransaction.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionMergeTransaction</a></strong></code>
 <div class="block">Executes region merge as a "transaction".</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionMergeTransactionFactory.html" title="class in org.apache.hadoop.hbase.regionserver">RegionMergeTransactionFactory</a></strong></code>
 <div class="block">A factory for creating RegionMergeTransactions, which execute region split as a "transaction".</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionScanner</a></strong></code>
 <div class="block">RegionScanner describes iterators over rows in an HRegion.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerCoprocessorHost.html" title="class in org.apache.hadoop.hbase.regionserver">RegionServerCoprocessorHost</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionServerServices.html" title="interface in org.apache.hadoop.hbase.regionserver">RegionServerServices</a></strong></code>
 <div class="block">Services provided by <a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver"><code>HRegionServer</code></a></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">RegionSplitPolicy</a></strong></code>
 <div class="block">A split policy determines when a region should be split.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RowProcessor.html" title="interface in org.apache.hadoop.hbase.regionserver">RowProcessor</a>&lt;S extends com.google.protobuf.Message,T extends com.google.protobuf.Message&gt;</strong></code>
 <div class="block">Defines the procedure to atomically perform multiple scans and mutations
  on a HRegion.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/RpcSchedulerFactory.html" title="interface in org.apache.hadoop.hbase.regionserver">RpcSchedulerFactory</a></strong></code>
 <div class="block">A factory class that constructs an <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcScheduler.html" title="class in org.apache.hadoop.hbase.ipc"><code>RpcScheduler</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ScannerContext.html" title="class in org.apache.hadoop.hbase.regionserver">ScannerContext</a></strong></code>
 <div class="block">ScannerContext instances encapsulate limit tracking AND progress towards those limits during
@@ -1146,49 +1213,49 @@ service.</div>
  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html#next(java.util.List)"><code>InternalScanner.next(java.util.List)</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/ScanType.html" title="enum in org.apache.hadoop.hbase.regionserver">ScanType</a></strong></code>
 <div class="block">Enum to distinguish general scan types.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SimpleRpcSchedulerFactory.html" title="class in org.apache.hadoop.hbase.regionserver">SimpleRpcSchedulerFactory</a></strong></code>
 <div class="block">Constructs a <a href="../../../../../../org/apache/hadoop/hbase/ipc/SimpleRpcScheduler.html" title="class in org.apache.hadoop.hbase.ipc"><code>SimpleRpcScheduler</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransaction.html" title="interface in org.apache.hadoop.hbase.regionserver">SplitTransaction</a></strong></code>
 <div class="block">Executes region split as a "transaction".</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SplitTransactionFactory.html" title="class in org.apache.hadoop.hbase.regionserver">SplitTransactionFactory</a></strong></code>
 <div class="block">A factory for creating SplitTransactions, which execute region split as a "transaction".</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a></strong></code>
 <div class="block">Interface for objects that hold a column family in a Region.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile</a></strong></code>
 <div class="block">A Store data file.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileScanner</a></strong></code>
 <div class="block">KeyValueScanner adaptor over the Reader.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StripeStoreEngine.html" title="class in org.apache.hadoop.hbase.regionserver">StripeStoreEngine</a></strong></code>
 <div class="block">The storage engine that implements the stripe-based store/compaction scheme.</div>
@@ -1215,35 +1282,26 @@ service.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>interface&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionThroughputController.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">CompactionThroughputController</a></strong></code>
-<div class="block">A utility that constrains the total throughput of one or more simultaneous flows (compactions) by
- sleeping when necessary.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionThroughputControllerFactory.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">CompactionThroughputControllerFactory</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/NoLimitCompactionThroughputController.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">NoLimitCompactionThroughputController</a></strong></code>
-<div class="block">A dummy CompactionThroughputController that does nothing.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">PressureAwareCompactionThroughputController</a></strong></code>
-<div class="block">A throughput controller which uses the follow schema to limit throughput
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/DateTieredCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">DateTieredCompactionPolicy</a></strong></code>
+<div class="block">HBASE-15181 This is a simple implementation of date-based tiered compaction similar to
+ Cassandra's for the following benefits:
  
- If compaction pressure is greater than 1.0, no limitation.
- In off peak hours, use a fixed throughput limitation
- <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK">"hbase.hstore.compaction.throughput.offpeak"</a>
- In normal hours, the max throughput is tune between
- <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND">"hbase.hstore.compaction.throughput.lower.bound"</a> and
- <a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/PressureAwareCompactionThroughputController.html#HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND">"hbase.hstore.compaction.throughput.higher.bound"</a>, using the formula &quot;lower +
- (higer - lower) * compactionPressure&quot;, where compactionPressure is in range [0.0, 1.0]
- </div>
+ Improve date-range-based scan by structuring store files in date-based tiered layout.
+ Reduce compaction overhead.
+ Improve TTL efficiency.
+ 
+ Perfect fit for the use cases that:
+ 
+ has mostly date-based data write and scan and a focus on the most recent data.
+ 
+ Out-of-order writes are handled gracefully.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/ExponentialCompactionWindowFactory.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">ExponentialCompactionWindowFactory</a></strong></code>
+<div class="block">Exponential compaction window implementation.</div>
 </td>
 </tr>
 </tbody>
@@ -1269,6 +1327,71 @@ service.</div>
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.regionserver.throttle">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.LimitedPrivate.html" title="annotation in org.apache.hadoop.hbase.classification">InterfaceAudience.LimitedPrivate</a> in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/package-summary.html">org.apache.hadoop.hbase.regionserver.throttle</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/package-summary.html">org.apache.hadoop.hbase.regionserver.throttle</a> with annotations of type <a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.LimitedPrivate.html" title="annotation in org.apache.hadoop.hbase.classification">InterfaceAudience.LimitedPrivate</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/CompactionThroughputControllerFactory.html" title="class in org.apache.hadoop.hbase.regionserver.throttle">CompactionThroughputControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/FlushThroughputControllerFactory.html" title="class in org.apache.hadoop.hbase.regionserver.throttle">FlushThroughputControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/NoLimitThroughputController.html" title="class in org.apache.hadoop.hbase.regionserver.throttle">NoLimitThroughputController</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/PressureAwareCompactionThroughputController.html" title="class in org.apache.hadoop.hbase.regionserver.throttle">PressureAwareCompactionThroughputController</a></strong></code>
+<div class="block">A throughput controller which uses the follow schema to limit throughput
+ 
+ If compaction pressure is greater than 1.0, no limitation.
+ In off peak hours, use a fixed throughput limitation
+ <a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/PressureAwareCompactionThroughputController.html#HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_OFFPEAK">"hbase.hstore.compaction.throughput.offpeak"</a>
+ In normal hours, the max throughput is tuned between
+ <a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/PressureAwareCompactionThroughputController.html#HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_LOWER_BOUND">"hbase.hstore.compaction.throughput.lower.bound"</a> and
+ <a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/PressureAwareCompactionThroughputController.html#HBASE_HSTORE_COMPACTION_MAX_THROUGHPUT_HIGHER_BOUND">"hbase.hstore.compaction.throughput.higher.bound"</a>, using the formula &quot;lower +
+ (higer - lower) * compactionPressure&quot;, where compactionPressure is in range [0.0, 1.0]
+ </div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/PressureAwareFlushThroughputController.html" title="class in org.apache.hadoop.hbase.regionserver.throttle">PressureAwareFlushThroughputController</a></strong></code>
+<div class="block">A throughput controller which uses the follow schema to limit throughput
+ 
+ If flush pressure is greater than or equal to 1.0, no limitation.
+ In normal case, the max throughput is tuned between
+ <a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/PressureAwareFlushThroughputController.html#HBASE_HSTORE_FLUSH_MAX_THROUGHPUT_LOWER_BOUND">"hbase.hstore.flush.throughput.lower.bound"</a> and
+ <a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/PressureAwareFlushThroughputController.html#HBASE_HSTORE_FLUSH_MAX_THROUGHPUT_UPPER_BOUND">"hbase.hstore.flush.throughput.upper.bound"</a>, using the formula &quot;lower +
+ (upper - lower) * flushPressure&quot;, where flushPressure is in range [0.0, 1.0)
+ </div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/PressureAwareThroughputController.html" title="class in org.apache.hadoop.hbase.regionserver.throttle">PressureAwareThroughputController</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/throttle/ThroughputController.html" title="interface in org.apache.hadoop.hbase.regionserver.throttle">ThroughputController</a></strong></code>
+<div class="block">A utility that constrains the total throughput of one or more simultaneous flows by
+ sleeping when necessary.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.regionserver.wal">
 <!--   -->
 </a>
@@ -1282,6 +1405,18 @@ service.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/AbstractProtobufLogWriter.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AbstractProtobufLogWriter</a></strong></code>
+<div class="block">Base class for Protobuf log writer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/AsyncFSWAL.html" title="class in org.apache.hadoop.hbase.regionserver.wal">AsyncFSWAL</a></strong></code>
+<div class="block">An asynchronous implementation of FSWAL.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/CompressionContext.html" title="class in org.apache.hadoop.hbase.regionserver.wal">CompressionContext</a></strong></code>
 <div class="block">Context that holds the various dictionaries for compression in WAL.</div>
 </td>
@@ -1290,7 +1425,7 @@ service.</div>
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html" title="class in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a></strong></code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>use WALKey.  as of 2.0.  Remove in 3.0</i></div>
+<div class="block"><i>use WALKey. Deprecated as of 1.0 (HBASE-12522). Remove in 2.0</i></div>
 </div>
 </td>
 </tr>
@@ -1310,13 +1445,11 @@ service.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ProtobufLogWriter.html" title="class in org.apache.hadoop.hbase.regionserver.wal">ProtobufLogWriter</a></strong></code>
-<div class="block">Writer for protobuf-based WAL.</div>
-</td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ReaderBase.html" title="class in org.apache.hadoop.hbase.regionserver.wal">ReaderBase</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/ReaderBase.html" title="class in org.apache.hadoop.hbase.regionserver.wal">ReaderBase</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/SecureAsyncProtobufLogWriter.html" title="class in org.apache.hadoop.hbase.regionserver.wal">SecureAsyncProtobufLogWriter</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
@@ -1408,6 +1541,10 @@ service.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationPeerConfigListener.html" title="interface in org.apache.hadoop.hbase.replication">ReplicationPeerConfigListener</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/WALEntryFilter.html" title="interface in org.apache.hadoop.hbase.replication">WALEntryFilter</a></strong></code>
 <div class="block">A Filter for WAL entries before being sent over to replication.</div>
 </td>
@@ -1427,6 +1564,13 @@ service.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/master/ReplicationHFileCleaner.html" title="class in org.apache.hadoop.hbase.replication.master">ReplicationHFileCleaner</a></strong></code>
+<div class="block">Implementation of a file cleaner that checks if a hfile is still scheduled for replication before
+ deleting it from hfile archive directory.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/master/ReplicationLogCleaner.html" title="class in org.apache.hadoop.hbase.replication.master">ReplicationLogCleaner</a></strong></code>
 <div class="block">Implementation of a log cleaner that checks if a log is still scheduled for
@@ -1452,6 +1596,13 @@ service.</div>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/MetricsSource.html" title="class in org.apache.hadoop.hbase.replication.regionserver">MetricsSource</a></strong></code>
 <div class="block">This class is for maintaining the various replication statistics for a source and publishing them
  through the metrics interfaces.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/SourceFSConfigurationProvider.html" title="interface in org.apache.hadoop.hbase.replication.regionserver">SourceFSConfigurationProvider</a></strong></code>
+<div class="block">Interface that defines how a region server in peer cluster will get source cluster file system
+ configurations.</div>
 </td>
 </tr>
 </tbody>
@@ -1653,7 +1804,7 @@ service.</div>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a></strong></code>
-<div class="block">A Key for an entry in the change log.</div>
+<div class="block">A Key for an entry in the WAL.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1749,6 +1900,6 @@ service.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

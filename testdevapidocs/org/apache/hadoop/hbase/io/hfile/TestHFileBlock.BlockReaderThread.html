@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlockCompatibility.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlockIndex.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html" target="_top">Frames</a></li>
@@ -103,7 +103,7 @@
 </dl>
 <hr>
 <br>
-<pre>private class <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.html#line.650">TestHFileBlock.BlockReaderThread</a>
+<pre>private class <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.html#line.648">TestHFileBlock.BlockReaderThread</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html?is-external=true" title="class or interface in java.util.concurrent">Callable</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;</pre>
 </li>
@@ -133,7 +133,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#fileSize">fileSize</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader</code></td>
+<td class="colFirst"><code>private <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#hbr">hbr</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -141,7 +141,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#offsets">offsets</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.io.hfile.BlockType&gt;</code></td>
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/BlockType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">BlockType</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#types">types</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -160,9 +160,9 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#TestHFileBlock.BlockReaderThread(java.lang.String,%20org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader,%20java.util.List,%20java.util.List,%20long)">TestHFileBlock.BlockReaderThread</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clientId,
-                                                                org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader&nbsp;hbr,
+                                                                <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader</a>&nbsp;hbr,
                                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;offsets,
-                                                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.io.hfile.BlockType&gt;&nbsp;types,
+                                                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/BlockType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">BlockType</a>&gt;&nbsp;types,
                                                                 long&nbsp;fileSize)</code>&nbsp;</td>
 </tr>
 </table>
@@ -212,7 +212,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <ul class="blockList">
 <li class="blockList">
 <h4>clientId</h4>
-<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.651">clientId</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.649">clientId</a></pre>
 </li>
 </ul>
 <a name="hbr">
@@ -221,7 +221,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <ul class="blockList">
 <li class="blockList">
 <h4>hbr</h4>
-<pre>private final&nbsp;org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.652">hbr</a></pre>
+<pre>private final&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.650">hbr</a></pre>
 </li>
 </ul>
 <a name="offsets">
@@ -230,7 +230,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <ul class="blockList">
 <li class="blockList">
 <h4>offsets</h4>
-<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.653">offsets</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.651">offsets</a></pre>
 </li>
 </ul>
 <a name="types">
@@ -239,7 +239,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <ul class="blockList">
 <li class="blockList">
 <h4>types</h4>
-<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.io.hfile.BlockType&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.654">types</a></pre>
+<pre>private final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/BlockType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">BlockType</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.652">types</a></pre>
 </li>
 </ul>
 <a name="fileSize">
@@ -248,7 +248,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <ul class="blockListLast">
 <li class="blockList">
 <h4>fileSize</h4>
-<pre>private final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.655">fileSize</a></pre>
+<pre>private final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.653">fileSize</a></pre>
 </li>
 </ul>
 </li>
@@ -265,10 +265,10 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestHFileBlock.BlockReaderThread</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.657">TestHFileBlock.BlockReaderThread</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clientId,
-                                org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader&nbsp;hbr,
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.655">TestHFileBlock.BlockReaderThread</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clientId,
+                                <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">org.apache.hadoop.hbase.io.hfile.HFileBlock.FSReader</a>&nbsp;hbr,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;offsets,
-                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.io.hfile.BlockType&gt;&nbsp;types,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/BlockType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">BlockType</a>&gt;&nbsp;types,
                                 long&nbsp;fileSize)</pre>
 </li>
 </ul>
@@ -286,7 +286,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <ul class="blockListLast">
 <li class="blockList">
 <h4>call</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.668">call</a>()
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html#line.666">call</a>()
              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -322,7 +322,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlockCompatibility.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestHFileBlockIndex.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/io/hfile/TestHFileBlock.BlockReaderThread.html" target="_top">Frames</a></li>
@@ -362,6 +362,6 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurren
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

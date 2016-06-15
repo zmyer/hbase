@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.TrackableCompactionRequest.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionWithCoprocessor.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -162,9 +162,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionState.html#compaction(java.lang.String,%20int,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.GetRegionInfoResponse.CompactionState,%20boolean)">compaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionState.html#compaction(java.lang.String,%20int,%20org.apache.hadoop.hbase.client.CompactionState,%20boolean)">compaction</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
                     int&nbsp;flushes,
-                    org.apache.hadoop.hbase.protobuf.generated.AdminProtos.GetRegionInfoResponse.CompactionState&nbsp;expectedState,
+                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/CompactionState.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">CompactionState</a>&nbsp;expectedState,
                     boolean&nbsp;singleFamily)</code>
 <div class="block">Load data to a table, flush it to disk, trigger compaction,
  confirm the compaction state is right and wait till it is done.</div>
@@ -172,17 +172,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private static int</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionState.html#countStoreFilesInFamilies(java.util.List,%20byte[][])">countStoreFilesInFamilies</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.Region&gt;&nbsp;regions,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionState.html#countStoreFilesInFamilies(java.util.List,%20byte[][])">countStoreFilesInFamilies</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Region.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;&nbsp;regions,
                                                   byte[][]&nbsp;families)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private static int</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionState.html#countStoreFilesInFamily(java.util.List,%20byte[])">countStoreFilesInFamily</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.Region&gt;&nbsp;regions,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionState.html#countStoreFilesInFamily(java.util.List,%20byte[])">countStoreFilesInFamily</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Region.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;&nbsp;regions,
                                               byte[]&nbsp;family)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionState.html#loadData(org.apache.hadoop.hbase.client.Table,%20byte[][],%20int,%20int)">loadData</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionState.html#loadData(org.apache.hadoop.hbase.client.Table,%20byte[][],%20int,%20int)">loadData</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
                 byte[][]&nbsp;families,
                 int&nbsp;rows,
                 int&nbsp;flushes)</code>&nbsp;</td>
@@ -383,7 +383,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
-<a name="compaction(java.lang.String, int, org.apache.hadoop.hbase.protobuf.generated.AdminProtos.GetRegionInfoResponse.CompactionState, boolean)">
+<a name="compaction(java.lang.String, int, org.apache.hadoop.hbase.client.CompactionState, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -391,7 +391,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <h4>compaction</h4>
 <pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompactionState.html#line.123">compaction</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
               int&nbsp;flushes,
-              org.apache.hadoop.hbase.protobuf.generated.AdminProtos.GetRegionInfoResponse.CompactionState&nbsp;expectedState,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/CompactionState.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">CompactionState</a>&nbsp;expectedState,
               boolean&nbsp;singleFamily)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
@@ -409,7 +409,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>countStoreFilesInFamily</h4>
-<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompactionState.html#line.203">countStoreFilesInFamily</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.Region&gt;&nbsp;regions,
+<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompactionState.html#line.203">countStoreFilesInFamily</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Region.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;&nbsp;regions,
                           byte[]&nbsp;family)</pre>
 </li>
 </ul>
@@ -419,7 +419,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>countStoreFilesInFamilies</h4>
-<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompactionState.html#line.208">countStoreFilesInFamilies</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.Region&gt;&nbsp;regions,
+<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompactionState.html#line.208">countStoreFilesInFamilies</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Region.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Region</a>&gt;&nbsp;regions,
                             byte[][]&nbsp;families)</pre>
 </li>
 </ul>
@@ -429,7 +429,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>loadData</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompactionState.html#line.216">loadData</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompactionState.html#line.216">loadData</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
             byte[][]&nbsp;families,
             int&nbsp;rows,
             int&nbsp;flushes)
@@ -464,7 +464,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.TrackableCompactionRequest.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionWithCoprocessor.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -505,6 +505,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

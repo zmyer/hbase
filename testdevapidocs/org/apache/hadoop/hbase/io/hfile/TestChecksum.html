@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestCacheOnWrite.CacheOnWriteType.html" title="enum in org.apache.hadoop.hbase.io.hfile"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.FSReaderImplTest.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.CorruptedFSReaderImpl.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/io/hfile/TestChecksum.html" target="_top">Frames</a></li>
@@ -117,9 +117,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.FSReaderImplTest.html" title="class in org.apache.hadoop.hbase.io.hfile">TestChecksum.FSReaderImplTest</a></strong></code>
-<div class="block">A class that introduces hbase-checksum failures while 
- reading  data from hfiles.</div>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.CorruptedFSReaderImpl.html" title="class in org.apache.hadoop.hbase.io.hfile">TestChecksum.CorruptedFSReaderImpl</a></strong></code>
+<div class="block">This class is to test checksum behavior when data is corrupted.</div>
 </td>
 </tr>
 </table>
@@ -142,7 +141,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.html#BYTES_PER_CHECKSUM">BYTES_PER_CHECKSUM</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.io.compress.Compression.Algorithm[]</code></td>
+<td class="colFirst"><code>(package private) static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/compress.Compression.Algorithm.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">org.apache.hadoop.hbase.io.compress.Compression.Algorithm</a>[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.html#COMPRESSION_ALGORITHMS">COMPRESSION_ALGORITHMS</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -150,7 +149,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.html#fs">fs</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.fs.HFileSystem</code></td>
+<td class="colFirst"><code>private <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/fs.HFileSystem.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.fs.HFileSystem</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.html#hfs">hfs</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -269,7 +268,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>COMPRESSION_ALGORITHMS</h4>
-<pre>static final&nbsp;org.apache.hadoop.hbase.io.compress.Compression.Algorithm[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.60">COMPRESSION_ALGORITHMS</a></pre>
+<pre>static final&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/compress.Compression.Algorithm.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">org.apache.hadoop.hbase.io.compress.Compression.Algorithm</a>[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.60">COMPRESSION_ALGORITHMS</a></pre>
 </li>
 </ul>
 <a name="BYTES_PER_CHECKSUM">
@@ -305,7 +304,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>hfs</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.fs.HFileSystem <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.69">hfs</a></pre>
+<pre>private&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/fs.HFileSystem.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.fs.HFileSystem</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.69">hfs</a></pre>
 </li>
 </ul>
 </li>
@@ -376,7 +375,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testChecksumCorruption</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.149">testChecksumCorruption</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.151">testChecksumCorruption</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Introduce checksum failures and check that we can still read
  the data</div>
@@ -390,7 +389,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testChecksumCorruptionInternals</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.154">testChecksumCorruptionInternals</a>(boolean&nbsp;useTags)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.156">testChecksumCorruptionInternals</a>(boolean&nbsp;useTags)
                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -402,7 +401,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testChecksumChunks</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.257">testChecksumChunks</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.259">testChecksumChunks</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Test different values of bytesPerChecksum</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -415,7 +414,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testChecksumInternals</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.262">testChecksumInternals</a>(boolean&nbsp;useTags)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.264">testChecksumInternals</a>(boolean&nbsp;useTags)
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -427,7 +426,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>validateData</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.332">validateData</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html?is-external=true" title="class or interface in java.io">DataInputStream</a>&nbsp;in)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestChecksum.html#line.334">validateData</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html?is-external=true" title="class or interface in java.io">DataInputStream</a>&nbsp;in)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -460,7 +459,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestCacheOnWrite.CacheOnWriteType.html" title="enum in org.apache.hadoop.hbase.io.hfile"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.FSReaderImplTest.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestChecksum.CorruptedFSReaderImpl.html" title="class in org.apache.hadoop.hbase.io.hfile"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?org/apache/hadoop/hbase/io/hfile/TestChecksum.html" target="_top">Frames</a></li>
@@ -500,6 +499,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

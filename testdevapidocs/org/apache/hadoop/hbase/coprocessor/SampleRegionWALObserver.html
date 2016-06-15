@@ -86,7 +86,7 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.coprocessor.SampleRegionWALObserver</li>
@@ -100,7 +100,7 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd>org.apache.hadoop.hbase.Coprocessor, org.apache.hadoop.hbase.coprocessor.RegionObserver, org.apache.hadoop.hbase.coprocessor.WALObserver</dd>
+<dd><a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Coprocessor</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionObserver</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALObserver</a></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
@@ -108,9 +108,9 @@
 </dl>
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.45">SampleRegionWALObserver</a>
-extends org.apache.hadoop.hbase.coprocessor.BaseRegionObserver
-implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.46">SampleRegionWALObserver</a>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">BaseRegionObserver</a>
+implements <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALObserver</a></pre>
 <div class="block">Class for testing WALObserver coprocessor.
 
  It will monitor WAL writing and restoring, and modify passed-in WALEdit, i.e,
@@ -147,15 +147,15 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.Coprocessor">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.Coprocessor</h3>
-<code>org.apache.hadoop.hbase.Coprocessor.State</code></li>
+<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Coprocessor</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.State.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Coprocessor.State</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.coprocessor.RegionObserver">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.coprocessor.RegionObserver</h3>
-<code>org.apache.hadoop.hbase.coprocessor.RegionObserver.MutationType</code></li>
+<h3>Nested classes/interfaces inherited from interface&nbsp;org.apache.hadoop.hbase.coprocessor.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionObserver</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.MutationType.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionObserver.MutationType</a></code></li>
 </ul>
 </li>
 </ul>
@@ -209,19 +209,27 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALWriteCalled">postWALWriteCalled</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALRollCalled">postWALRollCalled</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALWriteDeprecatedCalled">postWALWriteDeprecatedCalled</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALWriteCalled">postWALWriteCalled</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALRestoreCalled">preWALRestoreCalled</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALWriteDeprecatedCalled">postWALWriteDeprecatedCalled</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALRestoreCalled">preWALRestoreCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALRestoreDeprecatedCalled">preWALRestoreDeprecatedCalled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALRollCalled">preWALRollCalled</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private boolean</code></td>
@@ -244,8 +252,8 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.Coprocessor">
 <!--   -->
 </a>
-<h3>Fields inherited from interface&nbsp;org.apache.hadoop.hbase.Coprocessor</h3>
-<code>PRIORITY_HIGHEST, PRIORITY_LOWEST, PRIORITY_SYSTEM, PRIORITY_USER, VERSION</code></li>
+<h3>Fields inherited from interface&nbsp;org.apache.hadoop.hbase.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Coprocessor</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true#PRIORITY_HIGHEST" title="class or interface in org.apache.hadoop.hbase">PRIORITY_HIGHEST</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true#PRIORITY_LOWEST" title="class or interface in org.apache.hadoop.hbase">PRIORITY_LOWEST</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true#PRIORITY_SYSTEM" title="class or interface in org.apache.hadoop.hbase">PRIORITY_SYSTEM</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true#PRIORITY_USER" title="class or interface in org.apache.hadoop.hbase">PRIORITY_USER</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true#VERSION" title="class or interface in org.apache.hadoop.hbase">VERSION</a></code></li>
 </ul>
 </li>
 </ul>
@@ -288,19 +296,27 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#isPostWALWriteCalled()">isPostWALWriteCalled</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#isPostWALRollCalled()">isPostWALRollCalled</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#isPostWALWriteDeprecatedCalled()">isPostWALWriteDeprecatedCalled</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#isPostWALWriteCalled()">isPostWALWriteCalled</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#isPreWALRestoreCalled()">isPreWALRestoreCalled</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#isPostWALWriteDeprecatedCalled()">isPostWALWriteDeprecatedCalled</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#isPreWALRestoreCalled()">isPreWALRestoreCalled</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#isPreWALRestoreDeprecatedCalled()">isPreWALRestoreDeprecatedCalled</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#isPreWALRollCalled()">isPreWALRollCalled</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -312,65 +328,77 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postWALRestore</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;? extends org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;env,
-                            org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                            org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                            org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</code>
-<div class="block">Triggered after <code>HRegion</code> when WAL is
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postWALRestore</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;env,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>
+<div class="block">Triggered after <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>HRegion</code></a> when WAL is
  Restoreed.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postWALRestore</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;env,
-                            org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                            org.apache.hadoop.hbase.regionserver.wal.HLogKey&nbsp;logKey,
-                            org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postWALRestore</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;env,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/HLogKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postWALWrite</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;? extends org.apache.hadoop.hbase.coprocessor.WALCoprocessorEnvironment&gt;&nbsp;env,
-                        org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                        org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                        org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALRoll(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)">postWALRoll</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                      org.apache.hadoop.fs.Path&nbsp;oldPath,
+                      org.apache.hadoop.fs.Path&nbsp;newPath)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postWALWrite</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.WALCoprocessorEnvironment&gt;&nbsp;env,
-                        org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                        org.apache.hadoop.hbase.regionserver.wal.HLogKey&nbsp;logKey,
-                        org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postWALWrite</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;env,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">preWALRestore</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;? extends org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;env,
-                          org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                          org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                          org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</code>
-<div class="block">Triggered before  <code>HRegion</code> when WAL is
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#postWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postWALWrite</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;env,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/HLogKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">preWALRestore</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;env,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>
+<div class="block">Triggered before  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>HRegion</code></a> when WAL is
  Restoreed.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">preWALRestore</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;env,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/HLogKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">preWALRestore</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;env,
-                          org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                          org.apache.hadoop.hbase.regionserver.wal.HLogKey&nbsp;logKey,
-                          org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALRoll(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)">preWALRoll</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                    org.apache.hadoop.fs.Path&nbsp;oldPath,
+                    org.apache.hadoop.fs.Path&nbsp;newPath)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">preWALWrite</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;? extends org.apache.hadoop.hbase.coprocessor.WALCoprocessorEnvironment&gt;&nbsp;env,
-                      org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                      org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                      org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">preWALWrite</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;env,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">preWALWrite</a></strong>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.WALCoprocessorEnvironment&gt;&nbsp;env,
-                      org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                      org.apache.hadoop.hbase.regionserver.wal.HLogKey&nbsp;logKey,
-                      org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#preWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">preWALWrite</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;env,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/HLogKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -391,8 +419,8 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.coprocessor.BaseRegionObserver">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</h3>
-<code>postAppend, postBatchMutate, postBatchMutateIndispensably, postBulkLoadHFile, postCheckAndDelete, postCheckAndPut, postClose, postCloseRegionOperation, postCompact, postCompact, postCompactSelection, postCompactSelection, postCompleteSplit, postDelete, postExists, postFlush, postFlush, postGetOp, postIncrement, postIncrementColumnValue, postInstantiateDeleteTracker, postLogReplay, postMutationBeforeWAL, postOpen, postPut, postRollBackSplit, postScannerClose, postScannerFilterRow, postScannerFilterRow, postScannerNext, postScannerOpen, postSplit, postStartRegionOperation, postStoreFileReaderOpen, preAppend, preAppendAfterRowLock, preBatchMutate, preBulkLoadHFile, preCheckAndDelete, preCheckAndDeleteAfterRowLock, preCheckAndPut, preCheckAndPutAfterRowLock, preClose, preCompact, preCompact, preCompactScannerOpen, preCompactScannerOpen, preCompactSelection, preCompactSelection, preDelete, preExists, preFlush, preFlush, preFlushScannerOpen, preGetOp, preIncrement, preIncrementAfterRowLock, preIncrementColumnValue, preOpen, prePrepareTimeStampForDeleteVersion, prePut, preRollBackSplit, preScannerClose, preScannerNext, preScannerOpen, preSplit, preSplit, preSplitAfterPONR, preSplitBeforePONR, preStoreFileReaderOpen, preStoreScannerOpen, start, stop</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.coprocessor.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">BaseRegionObserver</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postAppend(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Append,%20org.apache.hadoop.hbase.client.Result)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postAppend</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postBatchMutate(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.MiniBatchOperationInProgress)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postBatchMutate</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postBatchMutateIndispensably(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.MiniBatchOperationInProgress,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postBatchMutateIndispensably</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postBulkLoadHFile(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20java.util.List,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postBulkLoadHFile</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postCheckAndDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postCheckAndDelete</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postCheckAndPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postCheckAndPut</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postClose</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postCloseRegionOperation(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Region.Operation)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postCloseRegionOperation</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postCompact(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.StoreFile)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postCompact</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postCompact(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.StoreFile,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postCompact</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postCompactSelection(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20com.google.common.collect.ImmutableList)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postCompactSelection</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postCompactSelection(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20com.google.common.collect.ImmutableList,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postCompactSelection</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postCompleteSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postCompleteSplit</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postDelete</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postExists(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Get,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postExists</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postFlush(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postFlush</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postFlush(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.StoreFile)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postFlush</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postGetOp(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Get,%20java.util.List)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postGetOp</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postIncrement(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Increment,%20org.apache.hadoop.hbase.client.Result)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postIncrement</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postIncrementColumnValue(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20long,%20boolean,%20long)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postIncrementColumnValue</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postInstantiateDeleteTracker(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.DeleteTracker)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postInstantiateDeleteTracker</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postLogReplay(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postLogReplay</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postMutationBeforeWAL(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.coprocessor.RegionObserver.MutationType,%20org.apache.hadoop.hbase.client.Mutation,%20org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postMutationBeforeWAL</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postPut</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postReplayWALs(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postReplayWALs</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postRollBackSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postRollBackSplit</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postScannerClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postScannerClose</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postScannerFilterRow(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20byte[],%20int,%20short,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postScannerFilterRow</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postScannerFilterRow(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.Cell,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postScannerFilterRow</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postScannerNext(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20java.util.List,%20int,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postScannerNext</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.RegionScanner)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postScannerOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Region,%20org.apache.hadoop.hbase.regionserver.Region)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postSplit</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postStartRegionOperation(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Region.Operation)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postStartRegionOperation</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postStoreFileReaderOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.io.FSDataInputStreamWrapper,%20long,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.Reference,%20org.apache.hadoop.hbase.regionserver.StoreFileReader)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postStoreFileReaderOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preAppend(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Append)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preAppend</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preAppendAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Append)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preAppendAfterRowLock</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preBatchMutate(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.MiniBatchOperationInProgress)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preBatchMutate</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preBulkLoadHFile(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20java.util.List)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preBulkLoadHFile</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCheckAndDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCheckAndDelete</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCheckAndDeleteAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Delete,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCheckAndDeleteAfterRowLock</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCheckAndPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCheckAndPut</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCheckAndPutAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20org.apache.hadoop.hbase.filter.ByteArrayComparable,%20org.apache.hadoop.hbase.client.Put,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCheckAndPutAfterRowLock</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preClose</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCompact(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.ScanType)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCompact</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCompact(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.ScanType,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCompact</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCompactScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.ScanType,%20long,%20org.apache.hadoop.hbase.regionserver.InternalScanner)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCompactScannerOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCompactScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.ScanType,%20long,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCompactScannerOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCompactSelection(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20java.util.List)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCompactSelection</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preCompactSelection(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20java.util.List,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionRequest)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preCompactSelection</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preDelete</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preExists(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Get,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preExists</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preFlush(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preFlush</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preFlush(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.InternalScanner)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preFlush</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preFlushScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.KeyValueScanner,%20org.apache.hadoop.hbase.regionserver.InternalScanner)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preFlushScannerOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preGetOp(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Get,%20java.util.List)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preGetOp</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preIncrement(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Increment)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preIncrement</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preIncrementAfterRowLock(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Increment)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preIncrementAfterRowLock</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preIncrementColumnValue(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20byte[],%20byte[],%20long,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preIncrementColumnValue</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#prePrepareTimeStampForDeleteVersion(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Mutation,%20org.apache.hadoop.hbase.Cell,%20byte[],%20org.apache.hadoop.hbase.client.Get)" title="class or interface in org.apache.hadoop.hbase.coprocessor">prePrepareTimeStampForDeleteVersion</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#prePut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)" title="class or interface in org.apache.hadoop.hbase.coprocessor">prePut</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preReplayWALs(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preReplayWALs</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preRollBackSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preRollBackSplit</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preScannerClose(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preScannerClose</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preScannerNext(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20java.util.List,%20int,%20boolean)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preScannerNext</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Scan,%20org.apache.hadoop.hbase.regionserver.RegionScanner)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preScannerOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preSplit</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preSplit(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[])" title="class or interface in org.apache.hadoop.hbase.coprocessor">preSplit</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preSplitAfterPONR(org.apache.hadoop.hbase.coprocessor.ObserverContext)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preSplitAfterPONR</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preSplitBeforePONR(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20byte[],%20java.util.List)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preSplitBeforePONR</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preStoreFileReaderOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.io.FSDataInputStreamWrapper,%20long,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.Reference,%20org.apache.hadoop.hbase.regionserver.StoreFileReader)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preStoreFileReaderOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preStoreScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.client.Scan,%20java.util.NavigableSet,%20org.apache.hadoop.hbase.regionserver.KeyValueScanner)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preStoreScannerOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preStoreScannerOpen(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.client.Scan,%20java.util.NavigableSet,%20org.apache.hadoop.hbase.regionserver.KeyValueScanner,%20long)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preStoreScannerOpen</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#start(org.apache.hadoop.hbase.CoprocessorEnvironment)" title="class or interface in org.apache.hadoop.hbase.coprocessor">start</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#stop(org.apache.hadoop.hbase.CoprocessorEnvironment)" title="class or interface in org.apache.hadoop.hbase.coprocessor">stop</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -405,8 +433,8 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.Coprocessor">
 <!--   -->
 </a>
-<h3>Methods inherited from interface&nbsp;org.apache.hadoop.hbase.Coprocessor</h3>
-<code>start, stop</code></li>
+<h3>Methods inherited from interface&nbsp;org.apache.hadoop.hbase.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Coprocessor</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true#start(org.apache.hadoop.hbase.CoprocessorEnvironment)" title="class or interface in org.apache.hadoop.hbase">start</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Coprocessor.html?is-external=true#stop(org.apache.hadoop.hbase.CoprocessorEnvironment)" title="class or interface in org.apache.hadoop.hbase">stop</a></code></li>
 </ul>
 </li>
 </ul>
@@ -428,7 +456,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.48">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.49">LOG</a></pre>
 </li>
 </ul>
 <a name="tableName">
@@ -437,7 +465,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>tableName</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.50">tableName</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.51">tableName</a></pre>
 </li>
 </ul>
 <a name="row">
@@ -446,7 +474,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>row</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.51">row</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.52">row</a></pre>
 </li>
 </ul>
 <a name="ignoredFamily">
@@ -455,7 +483,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>ignoredFamily</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.52">ignoredFamily</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.53">ignoredFamily</a></pre>
 </li>
 </ul>
 <a name="ignoredQualifier">
@@ -464,7 +492,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>ignoredQualifier</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.53">ignoredQualifier</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.54">ignoredQualifier</a></pre>
 </li>
 </ul>
 <a name="addedFamily">
@@ -473,7 +501,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>addedFamily</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.54">addedFamily</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.55">addedFamily</a></pre>
 </li>
 </ul>
 <a name="addedQualifier">
@@ -482,7 +510,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>addedQualifier</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.55">addedQualifier</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.56">addedQualifier</a></pre>
 </li>
 </ul>
 <a name="changedFamily">
@@ -491,7 +519,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>changedFamily</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.56">changedFamily</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.57">changedFamily</a></pre>
 </li>
 </ul>
 <a name="changedQualifier">
@@ -500,7 +528,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>changedQualifier</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.57">changedQualifier</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.58">changedQualifier</a></pre>
 </li>
 </ul>
 <a name="preWALWriteCalled">
@@ -509,7 +537,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>preWALWriteCalled</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.59">preWALWriteCalled</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.60">preWALWriteCalled</a></pre>
 </li>
 </ul>
 <a name="postWALWriteCalled">
@@ -518,7 +546,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>postWALWriteCalled</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.60">postWALWriteCalled</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.61">postWALWriteCalled</a></pre>
 </li>
 </ul>
 <a name="preWALRestoreCalled">
@@ -527,7 +555,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>preWALRestoreCalled</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.61">preWALRestoreCalled</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.62">preWALRestoreCalled</a></pre>
 </li>
 </ul>
 <a name="postWALRestoreCalled">
@@ -536,7 +564,25 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>postWALRestoreCalled</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.62">postWALRestoreCalled</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.63">postWALRestoreCalled</a></pre>
+</li>
+</ul>
+<a name="preWALRollCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preWALRollCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.64">preWALRollCalled</a></pre>
+</li>
+</ul>
+<a name="postWALRollCalled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postWALRollCalled</h4>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.65">postWALRollCalled</a></pre>
 </li>
 </ul>
 <a name="preWALWriteDeprecatedCalled">
@@ -545,7 +591,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>preWALWriteDeprecatedCalled</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.65">preWALWriteDeprecatedCalled</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.68">preWALWriteDeprecatedCalled</a></pre>
 </li>
 </ul>
 <a name="postWALWriteDeprecatedCalled">
@@ -554,7 +600,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>postWALWriteDeprecatedCalled</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.66">postWALWriteDeprecatedCalled</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.69">postWALWriteDeprecatedCalled</a></pre>
 </li>
 </ul>
 <a name="preWALRestoreDeprecatedCalled">
@@ -563,7 +609,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>preWALRestoreDeprecatedCalled</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.67">preWALRestoreDeprecatedCalled</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.70">preWALRestoreDeprecatedCalled</a></pre>
 </li>
 </ul>
 <a name="postWALRestoreDeprecatedCalled">
@@ -572,7 +618,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>postWALRestoreDeprecatedCalled</h4>
-<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.68">postWALRestoreDeprecatedCalled</a></pre>
+<pre>private&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.71">postWALRestoreDeprecatedCalled</a></pre>
 </li>
 </ul>
 </li>
@@ -589,7 +635,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>SampleRegionWALObserver</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.45">SampleRegionWALObserver</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.46">SampleRegionWALObserver</a>()</pre>
 </li>
 </ul>
 </li>
@@ -606,7 +652,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setTestValues</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.74">setTestValues</a>(byte[]&nbsp;tableName,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.77">setTestValues</a>(byte[]&nbsp;tableName,
                  byte[]&nbsp;row,
                  byte[]&nbsp;igf,
                  byte[]&nbsp;igq,
@@ -624,14 +670,14 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>postWALWrite</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.95">postWALWrite</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;? extends org.apache.hadoop.hbase.coprocessor.WALCoprocessorEnvironment&gt;&nbsp;env,
-                org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.100">postWALWrite</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;env,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>postWALWrite</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.coprocessor.WALObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true#postWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postWALWrite</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALObserver</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -642,14 +688,14 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>postWALWrite</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.101">postWALWrite</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.WALCoprocessorEnvironment&gt;&nbsp;env,
-                org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                org.apache.hadoop.hbase.regionserver.wal.HLogKey&nbsp;logKey,
-                org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.106">postWALWrite</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;env,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/HLogKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>postWALWrite</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.coprocessor.WALObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true#postWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postWALWrite</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALObserver</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -660,14 +706,14 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>preWALWrite</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.108">preWALWrite</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;? extends org.apache.hadoop.hbase.coprocessor.WALCoprocessorEnvironment&gt;&nbsp;env,
-                  org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                  org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                  org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.113">preWALWrite</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;env,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>preWALWrite</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.coprocessor.WALObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true#preWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preWALWrite</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALObserver</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -678,14 +724,14 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>preWALWrite</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.147">preWALWrite</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.WALCoprocessorEnvironment&gt;&nbsp;env,
-                  org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                  org.apache.hadoop.hbase.regionserver.wal.HLogKey&nbsp;logKey,
-                  org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.152">preWALWrite</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;env,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/HLogKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>preWALWrite</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.coprocessor.WALObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true#preWALWrite(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preWALWrite</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALObserver</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -696,18 +742,18 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>preWALRestore</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.158">preWALRestore</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;? extends org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;env,
-                 org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                 org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                 org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.163">preWALRestore</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;env,
+                 <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                 <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                 <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Triggered before  <code>HRegion</code> when WAL is
+<div class="block">Triggered before  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>HRegion</code></a> when WAL is
  Restoreed.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>preWALRestore</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.coprocessor.RegionObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true#preWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preWALRestore</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionObserver</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>preWALRestore</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preWALRestore</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">BaseRegionObserver</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -718,16 +764,50 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>preWALRestore</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.164">preWALRestore</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;env,
-                 org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                 org.apache.hadoop.hbase.regionserver.wal.HLogKey&nbsp;logKey,
-                 org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.169">preWALRestore</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;env,
+                 <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                 <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/HLogKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
+                 <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>preWALRestore</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.coprocessor.RegionObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true#preWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preWALRestore</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionObserver</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>preWALRestore</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#preWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preWALRestore</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">BaseRegionObserver</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="preWALRoll(org.apache.hadoop.hbase.coprocessor.ObserverContext, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preWALRoll</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.176">preWALRoll</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+              org.apache.hadoop.fs.Path&nbsp;oldPath,
+              org.apache.hadoop.fs.Path&nbsp;newPath)
+                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true#preWALRoll(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.coprocessor">preWALRoll</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALObserver</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="postWALRoll(org.apache.hadoop.hbase.coprocessor.ObserverContext, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postWALRoll</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.182">postWALRoll</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+               org.apache.hadoop.fs.Path&nbsp;oldPath,
+               org.apache.hadoop.fs.Path&nbsp;newPath)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true#postWALRoll(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postWALRoll</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/WALObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">WALObserver</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -738,18 +818,18 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>postWALRestore</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.175">postWALRestore</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;? extends org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;env,
-                  org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                  org.apache.hadoop.hbase.wal.WALKey&nbsp;logKey,
-                  org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.192">postWALRestore</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;env,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/wal/WALKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Triggered after <code>HRegion</code> when WAL is
+<div class="block">Triggered after <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>HRegion</code></a> when WAL is
  Restoreed.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>postWALRestore</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.coprocessor.RegionObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true#postWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postWALRestore</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionObserver</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>postWALRestore</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postWALRestore</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">BaseRegionObserver</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -760,16 +840,16 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>postWALRestore</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.181">postWALRestore</a>(org.apache.hadoop.hbase.coprocessor.ObserverContext&lt;org.apache.hadoop.hbase.coprocessor.RegionCoprocessorEnvironment&gt;&nbsp;env,
-                  org.apache.hadoop.hbase.HRegionInfo&nbsp;info,
-                  org.apache.hadoop.hbase.regionserver.wal.HLogKey&nbsp;logKey,
-                  org.apache.hadoop.hbase.regionserver.wal.WALEdit&nbsp;logEdit)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.198">postWALRestore</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/ObserverContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;env,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;info,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/HLogKey.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a>&nbsp;logKey,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/wal/WALEdit.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>postWALRestore</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.coprocessor.RegionObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true#postWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postWALRestore</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/RegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">RegionObserver</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>postWALRestore</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.coprocessor.BaseRegionObserver</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true#postWALRestore(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.regionserver.wal.HLogKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)" title="class or interface in org.apache.hadoop.hbase.coprocessor">postWALRestore</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.coprocessor">BaseRegionObserver</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -780,7 +860,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isPreWALWriteCalled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.187">isPreWALWriteCalled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.204">isPreWALWriteCalled</a>()</pre>
 </li>
 </ul>
 <a name="isPostWALWriteCalled()">
@@ -789,7 +869,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isPostWALWriteCalled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.191">isPostWALWriteCalled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.208">isPostWALWriteCalled</a>()</pre>
 </li>
 </ul>
 <a name="isPreWALRestoreCalled()">
@@ -798,7 +878,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isPreWALRestoreCalled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.195">isPreWALRestoreCalled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.212">isPreWALRestoreCalled</a>()</pre>
 </li>
 </ul>
 <a name="isPostWALRestoreCalled()">
@@ -807,7 +887,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isPostWALRestoreCalled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.201">isPostWALRestoreCalled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.218">isPostWALRestoreCalled</a>()</pre>
 </li>
 </ul>
 <a name="isPreWALWriteDeprecatedCalled()">
@@ -816,7 +896,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isPreWALWriteDeprecatedCalled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.207">isPreWALWriteDeprecatedCalled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.224">isPreWALWriteDeprecatedCalled</a>()</pre>
 </li>
 </ul>
 <a name="isPostWALWriteDeprecatedCalled()">
@@ -825,7 +905,7 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isPostWALWriteDeprecatedCalled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.211">isPostWALWriteDeprecatedCalled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.228">isPostWALWriteDeprecatedCalled</a>()</pre>
 </li>
 </ul>
 <a name="isPreWALRestoreDeprecatedCalled()">
@@ -834,16 +914,34 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isPreWALRestoreDeprecatedCalled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.215">isPreWALRestoreDeprecatedCalled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.232">isPreWALRestoreDeprecatedCalled</a>()</pre>
 </li>
 </ul>
 <a name="isPostWALRestoreDeprecatedCalled()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>isPostWALRestoreDeprecatedCalled</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.219">isPostWALRestoreDeprecatedCalled</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.236">isPostWALRestoreDeprecatedCalled</a>()</pre>
+</li>
+</ul>
+<a name="isPreWALRollCalled()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isPreWALRollCalled</h4>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.240">isPreWALRollCalled</a>()</pre>
+</li>
+</ul>
+<a name="isPostWALRollCalled()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isPostWALRollCalled</h4>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.html#line.244">isPostWALRollCalled</a>()</pre>
 </li>
 </ul>
 </li>
@@ -913,6 +1011,6 @@ implements org.apache.hadoop.hbase.coprocessor.WALObserver</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

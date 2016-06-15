@@ -97,8 +97,8 @@
 <br>
 <pre>public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestLazyDataBlockDecompression.html#line.57">TestLazyDataBlockDecompression</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">A kind of integration test at the intersection of <code>HFileBlock</code>, <code>CacheConfig</code>,
- and <code>LruBlockCache</code>.</div>
+<div class="block">A kind of integration test at the intersection of <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFileBlock.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile"><code>HFileBlock</code></a>, <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/CacheConfig.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile"><code>CacheConfig</code></a>,
+ and <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/LruBlockCache.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile"><code>LruBlockCache</code></a>.</div>
 </li>
 </ul>
 </div>
@@ -168,10 +168,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>private static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestLazyDataBlockDecompression.html#cacheBlocks(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.io.hfile.HFileContext)">cacheBlocks</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-                      org.apache.hadoop.hbase.io.hfile.CacheConfig&nbsp;cacheConfig,
+                      <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/CacheConfig.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
                       org.apache.hadoop.fs.FileSystem&nbsp;fs,
                       org.apache.hadoop.fs.Path&nbsp;path,
-                      org.apache.hadoop.hbase.io.hfile.HFileContext&nbsp;cxt)</code>
+                      <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFileContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">HFileContext</a>&nbsp;cxt)</code>
 <div class="block">Read all blocks from <code>path</code> to populate <code>blockCache</code>.</div>
 </td>
 </tr>
@@ -194,10 +194,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>private static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/TestLazyDataBlockDecompression.html#writeHFile(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.io.hfile.HFileContext,%20int)">writeHFile</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-                    org.apache.hadoop.hbase.io.hfile.CacheConfig&nbsp;cc,
+                    <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/CacheConfig.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cc,
                     org.apache.hadoop.fs.FileSystem&nbsp;fs,
                     org.apache.hadoop.fs.Path&nbsp;path,
-                    org.apache.hadoop.hbase.io.hfile.HFileContext&nbsp;cxt,
+                    <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFileContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">HFileContext</a>&nbsp;cxt,
                     int&nbsp;entryCount)</code>
 <div class="block">Write <code>entryCount</code> random keyvalues to a new HFile at <code>path</code>.</div>
 </td>
@@ -322,10 +322,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>writeHFile</h4>
 <pre>private static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestLazyDataBlockDecompression.html#line.90">writeHFile</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-              org.apache.hadoop.hbase.io.hfile.CacheConfig&nbsp;cc,
+              <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/CacheConfig.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cc,
               org.apache.hadoop.fs.FileSystem&nbsp;fs,
               org.apache.hadoop.fs.Path&nbsp;path,
-              org.apache.hadoop.hbase.io.hfile.HFileContext&nbsp;cxt,
+              <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFileContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">HFileContext</a>&nbsp;cxt,
               int&nbsp;entryCount)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Write <code>entryCount</code> random keyvalues to a new HFile at <code>path</code>. Returns the row
@@ -341,10 +341,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>cacheBlocks</h4>
 <pre>private static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/TestLazyDataBlockDecompression.html#line.114">cacheBlocks</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-               org.apache.hadoop.hbase.io.hfile.CacheConfig&nbsp;cacheConfig,
+               <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/CacheConfig.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConfig,
                org.apache.hadoop.fs.FileSystem&nbsp;fs,
                org.apache.hadoop.fs.Path&nbsp;path,
-               org.apache.hadoop.hbase.io.hfile.HFileContext&nbsp;cxt)
+               <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFileContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile">HFileContext</a>&nbsp;cxt)
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read all blocks from <code>path</code> to populate <code>blockCache</code>.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -430,6 +430,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

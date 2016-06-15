@@ -75,6 +75,10 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.io.asyncfs">org.apache.hadoop.hbase.io.asyncfs</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -83,6 +87,48 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.io.asyncfs">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/util/FSUtils.html" title="class in org.apache.hadoop.hbase.util">FSUtils</a> in <a href="../../../../../../org/apache/hadoop/hbase/io/asyncfs/package-summary.html">org.apache.hadoop.hbase.io.asyncfs</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/io/asyncfs/package-summary.html">org.apache.hadoop.hbase.io.asyncfs</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/util/FSUtils.html" title="class in org.apache.hadoop.hbase.util">FSUtils</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/util/FSUtils.html" title="class in org.apache.hadoop.hbase.util">FSUtils</a></code></td>
+<td class="colLast"><span class="strong">FanOutOneBlockAsyncDFSOutput.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/asyncfs/FanOutOneBlockAsyncDFSOutput.html#fsUtils">fsUtils</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/io/asyncfs/package-summary.html">org.apache.hadoop.hbase.io.asyncfs</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/util/FSUtils.html" title="class in org.apache.hadoop.hbase.util">FSUtils</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/asyncfs/FanOutOneBlockAsyncDFSOutput.html#FanOutOneBlockAsyncDFSOutput(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.util.FSUtils,%20org.apache.hadoop.hdfs.DistributedFileSystem,%20org.apache.hadoop.hdfs.DFSClient,%20org.apache.hadoop.hdfs.protocol.ClientProtocol,%20java.lang.String,%20java.lang.String,%20long,%20org.apache.hadoop.hdfs.protocol.LocatedBlock,%20org.apache.hadoop.hbase.io.asyncfs.FanOutOneBlockAsyncDFSOutputSaslHelper.CryptoCodec,%20io.netty.channel.EventLoop,%20java.util.List,%20org.apache.hadoop.util.DataChecksum,%20io.netty.buffer.ByteBufAllocator)">FanOutOneBlockAsyncDFSOutput</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                                        <a href="../../../../../../org/apache/hadoop/hbase/util/FSUtils.html" title="class in org.apache.hadoop.hbase.util">FSUtils</a>&nbsp;fsUtils,
+                                                        org.apache.hadoop.hdfs.DistributedFileSystem&nbsp;dfs,
+                                                        org.apache.hadoop.hdfs.DFSClient&nbsp;client,
+                                                        org.apache.hadoop.hdfs.protocol.ClientProtocol&nbsp;namenode,
+                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clientName,
+                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;src,
+                                                        long&nbsp;fileId,
+                                                        org.apache.hadoop.hdfs.protocol.LocatedBlock&nbsp;locatedBlock,
+                                                        <a href="../../../../../../org/apache/hadoop/hbase/io/asyncfs/FanOutOneBlockAsyncDFSOutputSaslHelper.CryptoCodec.html" title="class in org.apache.hadoop.hbase.io.asyncfs">FanOutOneBlockAsyncDFSOutputSaslHelper.CryptoCodec</a>&nbsp;cryptoCodec,
+                                                        io.netty.channel.EventLoop&nbsp;eventLoop,
+                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;io.netty.channel.Channel&gt;&nbsp;datanodeList,
+                                                        org.apache.hadoop.util.DataChecksum&nbsp;summer,
+                                                        io.netty.buffer.ByteBufAllocator&nbsp;alloc)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.util">
 <!--   -->
 </a>
@@ -172,6 +218,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -169,14 +169,14 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/replication/WALEntryFilter.html" title="interface in org.apache.hadoop.hbase.replication">WALEntryFilter</a></code></td>
-<td class="colLast"><span class="strong">ReplicationEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.html#getWALEntryfilter()">getWALEntryfilter</a></strong>()</code>
-<div class="block">Returns a WALEntryFilter to use for filtering out WALEntries from the log.</div>
+<td class="colLast"><span class="strong">BaseReplicationEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/BaseReplicationEndpoint.html#getWALEntryfilter()">getWALEntryfilter</a></strong>()</code>
+<div class="block">Returns a default set of filters</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/replication/WALEntryFilter.html" title="interface in org.apache.hadoop.hbase.replication">WALEntryFilter</a></code></td>
-<td class="colLast"><span class="strong">BaseReplicationEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/BaseReplicationEndpoint.html#getWALEntryfilter()">getWALEntryfilter</a></strong>()</code>
-<div class="block">Returns a default set of filters</div>
+<td class="colLast"><span class="strong">ReplicationEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationEndpoint.html#getWALEntryfilter()">getWALEntryfilter</a></strong>()</code>
+<div class="block">Returns a WALEntryFilter to use for filtering out WALEntries from the log.</div>
 </td>
 </tr>
 </tbody>
@@ -216,7 +216,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>private class&nbsp;</code></td>
+<td class="colFirst"><code>private static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/replication/regionserver/RegionReplicaReplicationEndpoint.SkipReplayedEditsFilter.html" title="class in org.apache.hadoop.hbase.replication.regionserver">RegionReplicaReplicationEndpoint.SkipReplayedEditsFilter</a></strong></code>
 <div class="block">Skips the entries which has original seqId.</div>
 </td>
@@ -325,6 +325,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

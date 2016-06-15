@@ -213,15 +213,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) static boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#checkResult(org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20byte[],%20byte[])">checkResult</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;r,
-                      org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#checkResult(org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20byte[],%20byte[])">checkResult</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;r,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
                       byte[]&nbsp;expectedKey,
                       byte[]&nbsp;expectedValue)</code>
 <div class="block">Verify that the result and key have expected values.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colFirst"><code>(package private) static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#createDNRIOEScannerTable(byte[],%20int)">createDNRIOEScannerTable</a></strong>(byte[]&nbsp;name,
                                                 int&nbsp;failCnt)</code>
 <div class="block">Create a table that throws a NotServingRegionException on first scanner 
@@ -229,20 +229,20 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>(package private) static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colFirst"><code>(package private) static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#createIOEScannerTable(byte[],%20int)">createIOEScannerTable</a></strong>(byte[]&nbsp;name,
                                           int&nbsp;failCnt)</code>
 <div class="block">Create a table that IOE's on first scanner next call</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#createTable(byte[])">createTable</a></strong>(byte[]&nbsp;tableName)</code>
 <div class="block">Setup a table with two rows and values.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static org.apache.hadoop.hbase.client.Table</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#createTable(byte[],%20byte[][])">createTable</a></strong>(byte[]&nbsp;tableName,
                       byte[][]&nbsp;families)</code>
 <div class="block">Setup a table with two rows and values per column family.</div>
@@ -250,7 +250,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>(package private) static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#runTestMapreduce(org.apache.hadoop.hbase.client.Table)">runTestMapreduce</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#runTestMapreduce(org.apache.hadoop.hbase.client.Table)">runTestMapreduce</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)</code>
 <div class="block">Create table data and run tests on specified htable using the
  o.a.h.hbase.mapreduce API.</div>
 </td>
@@ -437,8 +437,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createTable</h4>
-<pre>public static&nbsp;org.apache.hadoop.hbase.client.Table&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.107">createTable</a>(byte[]&nbsp;tableName)
-                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.107">createTable</a>(byte[]&nbsp;tableName)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Setup a table with two rows and values.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableName</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd></dd>
@@ -452,9 +452,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createTable</h4>
-<pre>public static&nbsp;org.apache.hadoop.hbase.client.Table&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.118">createTable</a>(byte[]&nbsp;tableName,
-                                               byte[][]&nbsp;families)
-                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.118">createTable</a>(byte[]&nbsp;tableName,
+                byte[][]&nbsp;families)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Setup a table with two rows and values per column family.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>tableName</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd></dd>
@@ -468,8 +468,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>checkResult</h4>
-<pre>static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.142">checkResult</a>(org.apache.hadoop.hbase.client.Result&nbsp;r,
-                  org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
+<pre>static&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.142">checkResult</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;r,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
                   byte[]&nbsp;expectedKey,
                   byte[]&nbsp;expectedValue)</pre>
 <div class="block">Verify that the result and key have expected values.</div>
@@ -483,7 +483,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>runTestMapreduce</h4>
-<pre>static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.159">runTestMapreduce</a>(org.apache.hadoop.hbase.client.Table&nbsp;table)
+<pre>static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.159">runTestMapreduce</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Create table data and run tests on specified htable using the
@@ -500,9 +500,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createIOEScannerTable</h4>
-<pre>static&nbsp;org.apache.hadoop.hbase.client.Table&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.196">createIOEScannerTable</a>(byte[]&nbsp;name,
-                                                         int&nbsp;failCnt)
-                                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.196">createIOEScannerTable</a>(byte[]&nbsp;name,
+                          int&nbsp;failCnt)
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Create a table that IOE's on first scanner next call</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -514,9 +514,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createDNRIOEScannerTable</h4>
-<pre>static&nbsp;org.apache.hadoop.hbase.client.Table&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.231">createDNRIOEScannerTable</a>(byte[]&nbsp;name,
-                                                            int&nbsp;failCnt)
-                                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableInputFormat.html#line.231">createDNRIOEScannerTable</a>(byte[]&nbsp;name,
+                             int&nbsp;failCnt)
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Create a table that throws a NotServingRegionException on first scanner 
  next call</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -580,7 +580,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Run test assuming NotServingRegionException using newer mapreduce api</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
-<dd><code>org.apache.hadoop.hbase.DoNotRetryIOException</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/DoNotRetryIOException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">DoNotRetryIOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -596,7 +596,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Run test assuming NotServingRegionException using newer mapreduce api</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
-<dd><code>org.apache.hadoop.hbase.NotServingRegionException</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/NotServingRegionException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">NotServingRegionException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -732,6 +732,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

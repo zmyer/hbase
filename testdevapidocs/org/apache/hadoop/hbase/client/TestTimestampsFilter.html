@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestUpdateConfiguration.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestUnmodifyableHTableDescriptor.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/TestTimestampsFilter.html" target="_top">Frames</a></li>
@@ -97,7 +97,7 @@
 <br>
 <pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.49">TestTimestampsFilter</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">Run tests related to <code>TimestampsFilter</code> using HBase client APIs.
+<div class="block">Run tests related to <a href="../../../../../../apidocs/org/apache/hadoop/hbase/filter/TimestampsFilter.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.filter"><code>TimestampsFilter</code></a> using HBase client APIs.
  Sets up the HBase mini cluster once at start. Each creates a table
  named for the method and does its stuff against that.</div>
 </li>
@@ -160,7 +160,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#checkOneCell(org.apache.hadoop.hbase.Cell,%20byte[],%20int,%20int,%20long)">checkOneCell</a></strong>(org.apache.hadoop.hbase.Cell&nbsp;kv,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#checkOneCell(org.apache.hadoop.hbase.Cell,%20byte[],%20int,%20int,%20long)">checkOneCell</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv,
                         byte[]&nbsp;cf,
                         int&nbsp;rowIdx,
                         int&nbsp;colIdx,
@@ -171,7 +171,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#deleteOneVersion(org.apache.hadoop.hbase.client.Table,%20byte[],%20int,%20int,%20long)">deleteOneVersion</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#deleteOneVersion(org.apache.hadoop.hbase.client.Table,%20byte[],%20int,%20int,%20long)">deleteOneVersion</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
                                 byte[]&nbsp;cf,
                                 int&nbsp;rowIdx,
                                 int&nbsp;colIdx,
@@ -181,8 +181,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.Cell[]</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#getNVersions(org.apache.hadoop.hbase.client.Table,%20byte[],%20int,%20int,%20java.util.List)">getNVersions</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#getNVersions(org.apache.hadoop.hbase.client.Table,%20byte[],%20int,%20int,%20java.util.List)">getNVersions</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
                         byte[]&nbsp;cf,
                         int&nbsp;rowIdx,
                         int&nbsp;colIdx,
@@ -193,7 +193,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#putNVersions(org.apache.hadoop.hbase.client.Table,%20byte[],%20int,%20int,%20long,%20long)">putNVersions</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#putNVersions(org.apache.hadoop.hbase.client.Table,%20byte[],%20int,%20int,%20long,%20long)">putNVersions</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
                         byte[]&nbsp;cf,
                         int&nbsp;rowIdx,
                         int&nbsp;colIdx,
@@ -204,8 +204,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.client.Result[]</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#scanNVersions(org.apache.hadoop.hbase.client.Table,%20byte[],%20int,%20int,%20java.util.List)">scanNVersions</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#scanNVersions(org.apache.hadoop.hbase.client.Table,%20byte[],%20int,%20int,%20java.util.List)">scanNVersions</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
                           byte[]&nbsp;cf,
                           int&nbsp;startRowIdx,
                           int&nbsp;endRowIdx,
@@ -252,7 +252,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#verifyInsertedValues(org.apache.hadoop.hbase.client.Table,%20byte[])">verifyInsertedValues</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html#verifyInsertedValues(org.apache.hadoop.hbase.client.Table,%20byte[])">verifyInsertedValues</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
                                         byte[]&nbsp;cf)</code>&nbsp;</td>
 </tr>
 </table>
@@ -427,7 +427,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyInsertedValues</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.259">verifyInsertedValues</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.259">verifyInsertedValues</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
                         byte[]&nbsp;cf)
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -440,7 +440,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>checkOneCell</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.291">checkOneCell</a>(org.apache.hadoop.hbase.Cell&nbsp;kv,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.291">checkOneCell</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;kv,
                 byte[]&nbsp;cf,
                 int&nbsp;rowIdx,
                 int&nbsp;colIdx,
@@ -455,12 +455,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getNVersions</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.Cell[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.318">getNVersions</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
-                                          byte[]&nbsp;cf,
-                                          int&nbsp;rowIdx,
-                                          int&nbsp;colIdx,
-                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;versions)
-                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>private&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.318">getNVersions</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
+                  byte[]&nbsp;cf,
+                  int&nbsp;rowIdx,
+                  int&nbsp;colIdx,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;versions)
+                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Uses the TimestampFilter on a Get to request a specified list of
  versions for the row/column specified by rowIdx & colIdx.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -473,12 +473,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>scanNVersions</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.client.Result[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.337">scanNVersions</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
-                                                    byte[]&nbsp;cf,
-                                                    int&nbsp;startRowIdx,
-                                                    int&nbsp;endRowIdx,
-                                                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;versions)
-                                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>private&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.337">scanNVersions</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
+                     byte[]&nbsp;cf,
+                     int&nbsp;startRowIdx,
+                     int&nbsp;endRowIdx,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;versions)
+                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Uses the TimestampFilter on a Scan to request a specified list of
  versions for the rows from startRowIdx to endRowIdx (both inclusive).</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -491,7 +491,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>putNVersions</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.354">putNVersions</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.354">putNVersions</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
                 byte[]&nbsp;cf,
                 int&nbsp;rowIdx,
                 int&nbsp;colIdx,
@@ -510,7 +510,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>deleteOneVersion</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.373">deleteOneVersion</a>(org.apache.hadoop.hbase.client.Table&nbsp;ht,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTimestampsFilter.html#line.373">deleteOneVersion</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;ht,
                     byte[]&nbsp;cf,
                     int&nbsp;rowIdx,
                     int&nbsp;colIdx,
@@ -549,7 +549,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestUpdateConfiguration.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestUnmodifyableHTableDescriptor.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/client/TestTimestampsFilter.html" target="_top">Frames</a></li>
@@ -589,6 +589,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

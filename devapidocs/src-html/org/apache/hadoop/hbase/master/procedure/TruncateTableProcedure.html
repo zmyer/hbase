@@ -190,13 +190,13 @@
 <span class="sourceLineNo">182</span><a name="line.182"></a>
 <span class="sourceLineNo">183</span>  @Override<a name="line.183"></a>
 <span class="sourceLineNo">184</span>  protected boolean acquireLock(final MasterProcedureEnv env) {<a name="line.184"></a>
-<span class="sourceLineNo">185</span>    if (!env.isInitialized()) return false;<a name="line.185"></a>
-<span class="sourceLineNo">186</span>    return env.getProcedureQueue().tryAcquireTableExclusiveLock(getTableName(), "truncate table");<a name="line.186"></a>
+<span class="sourceLineNo">185</span>    if (env.waitInitialized(this)) return false;<a name="line.185"></a>
+<span class="sourceLineNo">186</span>    return env.getProcedureQueue().tryAcquireTableExclusiveLock(this, getTableName());<a name="line.186"></a>
 <span class="sourceLineNo">187</span>  }<a name="line.187"></a>
 <span class="sourceLineNo">188</span><a name="line.188"></a>
 <span class="sourceLineNo">189</span>  @Override<a name="line.189"></a>
 <span class="sourceLineNo">190</span>  protected void releaseLock(final MasterProcedureEnv env) {<a name="line.190"></a>
-<span class="sourceLineNo">191</span>    env.getProcedureQueue().releaseTableExclusiveLock(getTableName());<a name="line.191"></a>
+<span class="sourceLineNo">191</span>    env.getProcedureQueue().releaseTableExclusiveLock(this, getTableName());<a name="line.191"></a>
 <span class="sourceLineNo">192</span>  }<a name="line.192"></a>
 <span class="sourceLineNo">193</span><a name="line.193"></a>
 <span class="sourceLineNo">194</span>  @Override<a name="line.194"></a>
@@ -218,7 +218,7 @@
 <span class="sourceLineNo">210</span>        .setUserInfo(MasterProcedureUtil.toProtoUserInfo(this.user))<a name="line.210"></a>
 <span class="sourceLineNo">211</span>        .setPreserveSplits(preserveSplits);<a name="line.211"></a>
 <span class="sourceLineNo">212</span>    if (hTableDescriptor != null) {<a name="line.212"></a>
-<span class="sourceLineNo">213</span>      state.setTableSchema(hTableDescriptor.convert());<a name="line.213"></a>
+<span class="sourceLineNo">213</span>      state.setTableSchema(ProtobufUtil.convertToTableSchema(hTableDescriptor));<a name="line.213"></a>
 <span class="sourceLineNo">214</span>    } else {<a name="line.214"></a>
 <span class="sourceLineNo">215</span>      state.setTableName(ProtobufUtil.toProtoTableName(tableName));<a name="line.215"></a>
 <span class="sourceLineNo">216</span>    }<a name="line.216"></a>
@@ -238,7 +238,7 @@
 <span class="sourceLineNo">230</span>      MasterProcedureProtos.TruncateTableStateData.parseDelimitedFrom(stream);<a name="line.230"></a>
 <span class="sourceLineNo">231</span>    user = MasterProcedureUtil.toUserInfo(state.getUserInfo());<a name="line.231"></a>
 <span class="sourceLineNo">232</span>    if (state.hasTableSchema()) {<a name="line.232"></a>
-<span class="sourceLineNo">233</span>      hTableDescriptor = HTableDescriptor.convert(state.getTableSchema());<a name="line.233"></a>
+<span class="sourceLineNo">233</span>      hTableDescriptor = ProtobufUtil.convertToHTableDesc(state.getTableSchema());<a name="line.233"></a>
 <span class="sourceLineNo">234</span>      tableName = hTableDescriptor.getTableName();<a name="line.234"></a>
 <span class="sourceLineNo">235</span>    } else {<a name="line.235"></a>
 <span class="sourceLineNo">236</span>      tableName = ProtobufUtil.toTableName(state.getTableName());<a name="line.236"></a>
@@ -272,7 +272,7 @@
 <span class="sourceLineNo">264</span>      user.doAs(new PrivilegedExceptionAction&lt;Void&gt;() {<a name="line.264"></a>
 <span class="sourceLineNo">265</span>        @Override<a name="line.265"></a>
 <span class="sourceLineNo">266</span>        public Void run() throws Exception {<a name="line.266"></a>
-<span class="sourceLineNo">267</span>          cpHost.preTruncateTableHandler(tableName);<a name="line.267"></a>
+<span class="sourceLineNo">267</span>          cpHost.preTruncateTableAction(tableName);<a name="line.267"></a>
 <span class="sourceLineNo">268</span>          return null;<a name="line.268"></a>
 <span class="sourceLineNo">269</span>        }<a name="line.269"></a>
 <span class="sourceLineNo">270</span>      });<a name="line.270"></a>
@@ -288,7 +288,7 @@
 <span class="sourceLineNo">280</span>      user.doAs(new PrivilegedExceptionAction&lt;Void&gt;() {<a name="line.280"></a>
 <span class="sourceLineNo">281</span>        @Override<a name="line.281"></a>
 <span class="sourceLineNo">282</span>        public Void run() throws Exception {<a name="line.282"></a>
-<span class="sourceLineNo">283</span>          cpHost.postTruncateTableHandler(tableName);<a name="line.283"></a>
+<span class="sourceLineNo">283</span>          cpHost.postCompletedTruncateTableAction(tableName);<a name="line.283"></a>
 <span class="sourceLineNo">284</span>          return null;<a name="line.284"></a>
 <span class="sourceLineNo">285</span>        }<a name="line.285"></a>
 <span class="sourceLineNo">286</span>      });<a name="line.286"></a>

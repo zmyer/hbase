@@ -42,41 +42,41 @@
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> org.apache.commons.logging.Log;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> org.apache.commons.logging.LogFactory;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.HConstants;
-<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Connection;
-<a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
-<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Result;
-<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ResultScanner;
-<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Scan;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Table;
-<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.ProtobufUtil;
-<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult;
-<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair;
-<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.ListLabelsResponse;
-<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsResponse;
-<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.security.User;
-<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.MediumTests;
-<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.SecurityTests;
-<a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Bytes;
-<a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.JVMClusterUtil.RegionServerThread;
-<a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Threads;
-<a class="jxr_linenumber" name="52" href="#52">52</a>  <strong class="jxr_keyword">import</strong> org.junit.Assert;
-<a class="jxr_linenumber" name="53" href="#53">53</a>  <strong class="jxr_keyword">import</strong> org.junit.BeforeClass;
-<a class="jxr_linenumber" name="54" href="#54">54</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
-<a class="jxr_linenumber" name="55" href="#55">55</a>  <strong class="jxr_keyword">import</strong> org.junit.experimental.categories.Category;
-<a class="jxr_linenumber" name="56" href="#56">56</a>  
-<a class="jxr_linenumber" name="57" href="#57">57</a>  <strong class="jxr_keyword">import</strong> com.google.protobuf.ByteString;
-<a class="jxr_linenumber" name="58" href="#58">58</a>  
-<a class="jxr_linenumber" name="59" href="#59">59</a>  @Category({SecurityTests.<strong class="jxr_keyword">class</strong>, MediumTests.<strong class="jxr_keyword">class</strong>})
-<a class="jxr_linenumber" name="60" href="#60">60</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/TestVisibilityLabelsWithDefaultVisLabelService.html">TestVisibilityLabelsWithDefaultVisLabelService</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/TestVisibilityLabels.html">TestVisibilityLabels</a> {
-<a class="jxr_linenumber" name="61" href="#61">61</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Log LOG = LogFactory.getLog(
-<a class="jxr_linenumber" name="62" href="#62">62</a>      TestVisibilityLabelsWithDefaultVisLabelService.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="63" href="#63">63</a>  
-<a class="jxr_linenumber" name="64" href="#64">64</a>    @BeforeClass
-<a class="jxr_linenumber" name="65" href="#65">65</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setupBeforeClass() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="66" href="#66">66</a>      <em class="jxr_comment">// setup configuration</em>
-<a class="jxr_linenumber" name="67" href="#67">67</a>      conf = TEST_UTIL.getConfiguration();
-<a class="jxr_linenumber" name="68" href="#68">68</a>      conf.setBoolean(HConstants.DISTRIBUTED_LOG_REPLAY_KEY, false);
-<a class="jxr_linenumber" name="69" href="#69">69</a>      conf.setBoolean(<span class="jxr_string">"hbase.online.schema.update.enable"</span>, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.TableName;
+<a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Connection;
+<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ConnectionFactory;
+<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Result;
+<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.ResultScanner;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Scan;
+<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Table;
+<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.ProtobufUtil;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult;
+<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair;
+<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.ListLabelsResponse;
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.VisibilityLabelsProtos.VisibilityLabelsResponse;
+<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.security.User;
+<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.MediumTests;
+<a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.SecurityTests;
+<a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Bytes;
+<a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.JVMClusterUtil.RegionServerThread;
+<a class="jxr_linenumber" name="52" href="#52">52</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Threads;
+<a class="jxr_linenumber" name="53" href="#53">53</a>  <strong class="jxr_keyword">import</strong> org.junit.Assert;
+<a class="jxr_linenumber" name="54" href="#54">54</a>  <strong class="jxr_keyword">import</strong> org.junit.BeforeClass;
+<a class="jxr_linenumber" name="55" href="#55">55</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="56" href="#56">56</a>  <strong class="jxr_keyword">import</strong> org.junit.experimental.categories.Category;
+<a class="jxr_linenumber" name="57" href="#57">57</a>  
+<a class="jxr_linenumber" name="58" href="#58">58</a>  <strong class="jxr_keyword">import</strong> com.google.protobuf.ByteString;
+<a class="jxr_linenumber" name="59" href="#59">59</a>  
+<a class="jxr_linenumber" name="60" href="#60">60</a>  @Category({SecurityTests.<strong class="jxr_keyword">class</strong>, MediumTests.<strong class="jxr_keyword">class</strong>})
+<a class="jxr_linenumber" name="61" href="#61">61</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/TestVisibilityLabelsWithDefaultVisLabelService.html">TestVisibilityLabelsWithDefaultVisLabelService</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../../org/apache/hadoop/hbase/security/visibility/TestVisibilityLabels.html">TestVisibilityLabels</a> {
+<a class="jxr_linenumber" name="62" href="#62">62</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Log LOG = LogFactory.getLog(
+<a class="jxr_linenumber" name="63" href="#63">63</a>      TestVisibilityLabelsWithDefaultVisLabelService.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="64" href="#64">64</a>  
+<a class="jxr_linenumber" name="65" href="#65">65</a>    @BeforeClass
+<a class="jxr_linenumber" name="66" href="#66">66</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setupBeforeClass() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="67" href="#67">67</a>      <em class="jxr_comment">// setup configuration</em>
+<a class="jxr_linenumber" name="68" href="#68">68</a>      conf = TEST_UTIL.getConfiguration();
+<a class="jxr_linenumber" name="69" href="#69">69</a>      conf.setBoolean(HConstants.DISTRIBUTED_LOG_REPLAY_KEY, false);
 <a class="jxr_linenumber" name="70" href="#70">70</a>      VisibilityTestUtil.enableVisiblityLabels(conf);
 <a class="jxr_linenumber" name="71" href="#71">71</a>      conf.setClass(VisibilityUtils.VISIBILITY_LABEL_GENERATOR_CLASS, SimpleScanLabelGenerator.<strong class="jxr_keyword">class</strong>,
 <a class="jxr_linenumber" name="72" href="#72">72</a>          ScanLabelGenerator.<strong class="jxr_keyword">class</strong>);
@@ -229,7 +229,28 @@
 <a class="jxr_linenumber" name="219" href="#219">219</a>     };
 <a class="jxr_linenumber" name="220" href="#220">220</a>     SUPERUSER.runAs(action);
 <a class="jxr_linenumber" name="221" href="#221">221</a>   }
-<a class="jxr_linenumber" name="222" href="#222">222</a> }
+<a class="jxr_linenumber" name="222" href="#222">222</a> 
+<a class="jxr_linenumber" name="223" href="#223">223</a>   @Test(timeout = 60 * 1000)
+<a class="jxr_linenumber" name="224" href="#224">224</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testVisibilityLabelsOnWALReplay() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="225" href="#225">225</a>     <strong class="jxr_keyword">final</strong> TableName tableName = TableName.valueOf(TEST_NAME.getMethodName());
+<a class="jxr_linenumber" name="226" href="#226">226</a>     <strong class="jxr_keyword">try</strong> (Table table = createTableAndWriteDataWithLabels(tableName,
+<a class="jxr_linenumber" name="227" href="#227">227</a>         <span class="jxr_string">"("</span> + SECRET + <span class="jxr_string">"|"</span> + CONFIDENTIAL + <span class="jxr_string">")"</span>, PRIVATE);) {
+<a class="jxr_linenumber" name="228" href="#228">228</a>       List&lt;RegionServerThread&gt; regionServerThreads = TEST_UTIL.getHBaseCluster()
+<a class="jxr_linenumber" name="229" href="#229">229</a>           .getRegionServerThreads();
+<a class="jxr_linenumber" name="230" href="#230">230</a>       <strong class="jxr_keyword">for</strong> (RegionServerThread rsThread : regionServerThreads) {
+<a class="jxr_linenumber" name="231" href="#231">231</a>         rsThread.getRegionServer().abort(<span class="jxr_string">"Aborting "</span>);
+<a class="jxr_linenumber" name="232" href="#232">232</a>       }
+<a class="jxr_linenumber" name="233" href="#233">233</a>       <em class="jxr_comment">// Start one new RS</em>
+<a class="jxr_linenumber" name="234" href="#234">234</a>       RegionServerThread rs = TEST_UTIL.getHBaseCluster().startRegionServer();
+<a class="jxr_linenumber" name="235" href="#235">235</a>       waitForLabelsRegionAvailability(rs.getRegionServer());
+<a class="jxr_linenumber" name="236" href="#236">236</a>       Scan s = <strong class="jxr_keyword">new</strong> Scan();
+<a class="jxr_linenumber" name="237" href="#237">237</a>       s.setAuthorizations(<strong class="jxr_keyword">new</strong> Authorizations(SECRET));
+<a class="jxr_linenumber" name="238" href="#238">238</a>       ResultScanner scanner = table.getScanner(s);
+<a class="jxr_linenumber" name="239" href="#239">239</a>       Result[] next = scanner.next(3);
+<a class="jxr_linenumber" name="240" href="#240">240</a>       assertTrue(next.length == 1);
+<a class="jxr_linenumber" name="241" href="#241">241</a>     }
+<a class="jxr_linenumber" name="242" href="#242">242</a>   }
+<a class="jxr_linenumber" name="243" href="#243">243</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

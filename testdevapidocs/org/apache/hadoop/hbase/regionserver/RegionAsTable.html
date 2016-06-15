@@ -95,19 +95,19 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a>, org.apache.hadoop.hbase.client.Table</dd>
+<dd><a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.63">RegionAsTable</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements org.apache.hadoop.hbase.client.Table</pre>
-<div class="block">An implementation of <code>Table</code> that sits directly on a Region; it decorates the passed in
+implements <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></pre>
+<div class="block">An implementation of <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>Table</code></a> that sits directly on a Region; it decorates the passed in
  Region instance with the Table API. Some API is not implemented yet (throws
  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang"><code>UnsupportedOperationException</code></a>) mostly because no need as yet or it necessitates copying
  a load of code local from RegionServer.
  
- <p>Use as an instance of a <code>Table</code> in-the-small -- no networking or servers
+ <p>Use as an instance of a <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>Table</code></a> in-the-small -- no networking or servers
  necessary -- or to write a test that can run directly against the datastore and then
  over the network.</div>
 </li>
@@ -148,7 +148,7 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.Region</code></td>
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Region.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Region</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#region">region</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -166,7 +166,7 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#RegionAsTable(org.apache.hadoop.hbase.regionserver.Region)">RegionAsTable</a></strong>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#RegionAsTable(org.apache.hadoop.hbase.regionserver.Region)">RegionAsTable</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Region.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -184,36 +184,36 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.Result</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#append(org.apache.hadoop.hbase.client.Append)">append</a></strong>(org.apache.hadoop.hbase.client.Append&nbsp;append)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#append(org.apache.hadoop.hbase.client.Append)">append</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Append.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Append</a>&nbsp;append)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#batch(java.util.List,%20java.lang.Object[])">batch</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends org.apache.hadoop.hbase.client.Row&gt;&nbsp;actions,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#batch(java.util.List,%20java.lang.Object[])">batch</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Row.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Row</a>&gt;&nbsp;actions,
           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;results)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;R&gt;&nbsp;void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#batchCallback(java.util.List,%20java.lang.Object[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">batchCallback</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends org.apache.hadoop.hbase.client.Row&gt;&nbsp;actions,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#batchCallback(java.util.List,%20java.lang.Object[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">batchCallback</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Row.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Row</a>&gt;&nbsp;actions,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;results,
-                          org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)</code>&nbsp;</td>
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Callback.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Callback</a>&lt;R&gt;&nbsp;callback)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>&lt;R extends com.google.protobuf.Message&gt;&nbsp;<br><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],R&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#batchCoprocessorService(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20byte[],%20byte[],%20R)">batchCoprocessorService</a></strong>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;methodDescriptor,
-                                              com.google.protobuf.Message&nbsp;request,
+<td class="colFirst"><code>&lt;R extends <a href="../../../../../../apidocs/com/google/protobuf/Message.html?is-external=true" title="class or interface in com.google.protobuf">Message</a>&gt;&nbsp;<br><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],R&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#batchCoprocessorService(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20byte[],%20byte[],%20R)">batchCoprocessorService</a></strong>(<a href="../../../../../../apidocs/com/google/protobuf/Descriptors.MethodDescriptor.html?is-external=true" title="class or interface in com.google.protobuf">Descriptors.MethodDescriptor</a>&nbsp;methodDescriptor,
+                                              <a href="../../../../../../apidocs/com/google/protobuf/Message.html?is-external=true" title="class or interface in com.google.protobuf">Message</a>&nbsp;request,
                                               byte[]&nbsp;startKey,
                                               byte[]&nbsp;endKey,
                                               R&nbsp;responsePrototype)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>&lt;R extends com.google.protobuf.Message&gt;&nbsp;<br>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#batchCoprocessorService(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20byte[],%20byte[],%20R,%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">batchCoprocessorService</a></strong>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;methodDescriptor,
-                                              com.google.protobuf.Message&nbsp;request,
+<td class="colFirst"><code>&lt;R extends <a href="../../../../../../apidocs/com/google/protobuf/Message.html?is-external=true" title="class or interface in com.google.protobuf">Message</a>&gt;&nbsp;<br>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#batchCoprocessorService(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20byte[],%20byte[],%20R,%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">batchCoprocessorService</a></strong>(<a href="../../../../../../apidocs/com/google/protobuf/Descriptors.MethodDescriptor.html?is-external=true" title="class or interface in com.google.protobuf">Descriptors.MethodDescriptor</a>&nbsp;methodDescriptor,
+                                              <a href="../../../../../../apidocs/com/google/protobuf/Message.html?is-external=true" title="class or interface in com.google.protobuf">Message</a>&nbsp;request,
                                               byte[]&nbsp;startKey,
                                               byte[]&nbsp;endKey,
                                               R&nbsp;responsePrototype,
-                                              org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)</code>&nbsp;</td>
+                                              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Callback.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Callback</a>&lt;R&gt;&nbsp;callback)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -221,25 +221,25 @@ implements org.apache.hadoop.hbase.client.Table</pre>
                             byte[]&nbsp;family,
                             byte[]&nbsp;qualifier,
                             byte[]&nbsp;value,
-                            org.apache.hadoop.hbase.client.Delete&nbsp;delete)</code>&nbsp;</td>
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Delete.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#checkAndDelete(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20byte[],%20org.apache.hadoop.hbase.client.Delete)">checkAndDelete</a></strong>(byte[]&nbsp;row,
                             byte[]&nbsp;family,
                             byte[]&nbsp;qualifier,
-                            org.apache.hadoop.hbase.filter.CompareFilter.CompareOp&nbsp;compareOp,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
                             byte[]&nbsp;value,
-                            org.apache.hadoop.hbase.client.Delete&nbsp;delete)</code>&nbsp;</td>
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Delete.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#checkAndMutate(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20byte[],%20org.apache.hadoop.hbase.client.RowMutations)">checkAndMutate</a></strong>(byte[]&nbsp;row,
                             byte[]&nbsp;family,
                             byte[]&nbsp;qualifier,
-                            org.apache.hadoop.hbase.filter.CompareFilter.CompareOp&nbsp;compareOp,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
                             byte[]&nbsp;value,
-                            org.apache.hadoop.hbase.client.RowMutations&nbsp;mutation)</code>&nbsp;</td>
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RowMutations.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">RowMutations</a>&nbsp;mutation)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -247,16 +247,16 @@ implements org.apache.hadoop.hbase.client.Table</pre>
                       byte[]&nbsp;family,
                       byte[]&nbsp;qualifier,
                       byte[]&nbsp;value,
-                      org.apache.hadoop.hbase.client.Put&nbsp;put)</code>&nbsp;</td>
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#checkAndPut(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20byte[],%20org.apache.hadoop.hbase.client.Put)">checkAndPut</a></strong>(byte[]&nbsp;row,
                       byte[]&nbsp;family,
                       byte[]&nbsp;qualifier,
-                      org.apache.hadoop.hbase.filter.CompareFilter.CompareOp&nbsp;compareOp,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
                       byte[]&nbsp;value,
-                      org.apache.hadoop.hbase.client.Put&nbsp;put)</code>&nbsp;</td>
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -265,71 +265,79 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.ipc.CoprocessorRpcChannel</code></td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.ipc">CoprocessorRpcChannel</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#coprocessorService(byte[])">coprocessorService</a></strong>(byte[]&nbsp;row)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>&lt;T extends com.google.protobuf.Service,R&gt;&nbsp;<br><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],R&gt;</code></td>
+<td class="colFirst"><code>&lt;T extends <a href="../../../../../../apidocs/com/google/protobuf/Service.html?is-external=true" title="class or interface in com.google.protobuf">Service</a>,R&gt;&nbsp;<br><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],R&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call)">coprocessorService</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
                                     byte[]&nbsp;startKey,
                                     byte[]&nbsp;endKey,
-                                    org.apache.hadoop.hbase.client.coprocessor.Batch.Call&lt;T,R&gt;&nbsp;callable)</code>&nbsp;</td>
+                                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Call.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Call</a>&lt;T,R&gt;&nbsp;callable)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>&lt;T extends com.google.protobuf.Service,R&gt;&nbsp;<br>void</code></td>
+<td class="colFirst"><code>&lt;T extends <a href="../../../../../../apidocs/com/google/protobuf/Service.html?is-external=true" title="class or interface in com.google.protobuf">Service</a>,R&gt;&nbsp;<br>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call,%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)">coprocessorService</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
                                     byte[]&nbsp;startKey,
                                     byte[]&nbsp;endKey,
-                                    org.apache.hadoop.hbase.client.coprocessor.Batch.Call&lt;T,R&gt;&nbsp;callable,
-                                    org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)</code>&nbsp;</td>
+                                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Call.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Call</a>&lt;T,R&gt;&nbsp;callable,
+                                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Callback.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Callback</a>&lt;R&gt;&nbsp;callback)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#delete(org.apache.hadoop.hbase.client.Delete)">delete</a></strong>(org.apache.hadoop.hbase.client.Delete&nbsp;delete)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#delete(org.apache.hadoop.hbase.client.Delete)">delete</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Delete.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#delete(java.util.List)">delete</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Delete&gt;&nbsp;deletes)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#delete(java.util.List)">delete</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Delete.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Delete</a>&gt;&nbsp;deletes)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#exists(org.apache.hadoop.hbase.client.Get)">exists</a></strong>(org.apache.hadoop.hbase.client.Get&nbsp;get)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#exists(org.apache.hadoop.hbase.client.Get)">exists</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean[]</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#existsAll(java.util.List)">existsAll</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Get&gt;&nbsp;gets)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#existsAll(java.util.List)">existsAll</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.Result</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#get(org.apache.hadoop.hbase.client.Get)">get</a></strong>(org.apache.hadoop.hbase.client.Get&nbsp;get)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#get(org.apache.hadoop.hbase.client.Get)">get</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.Result[]</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#get(java.util.List)">get</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Get&gt;&nbsp;gets)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#get(java.util.List)">get</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>org.apache.hadoop.conf.Configuration</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getConfiguration()">getConfiguration</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.TableName</code></td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getName()">getName</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.ResultScanner</code></td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getOperationTimeout()">getOperationTimeout</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getRpcTimeout()">getRpcTimeout</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ResultScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ResultScanner</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getScanner(byte[])">getScanner</a></strong>(byte[]&nbsp;family)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.ResultScanner</code></td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ResultScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ResultScanner</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getScanner(byte[],%20byte[])">getScanner</a></strong>(byte[]&nbsp;family,
                     byte[]&nbsp;qualifier)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.ResultScanner</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getScanner(org.apache.hadoop.hbase.client.Scan)">getScanner</a></strong>(org.apache.hadoop.hbase.client.Scan&nbsp;scan)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ResultScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ResultScanner</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getScanner(org.apache.hadoop.hbase.client.Scan)">getScanner</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Scan.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/HTableDescriptor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getTableDescriptor()">getTableDescriptor</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -337,8 +345,8 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#getWriteBufferSize()">getWriteBufferSize</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.client.Result</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#increment(org.apache.hadoop.hbase.client.Increment)">increment</a></strong>(org.apache.hadoop.hbase.client.Increment&nbsp;increment)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#increment(org.apache.hadoop.hbase.client.Increment)">increment</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Increment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Increment</a>&nbsp;increment)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>long</code></td>
@@ -353,19 +361,27 @@ implements org.apache.hadoop.hbase.client.Table</pre>
                                         byte[]&nbsp;family,
                                         byte[]&nbsp;qualifier,
                                         long&nbsp;amount,
-                                        org.apache.hadoop.hbase.client.Durability&nbsp;durability)</code>&nbsp;</td>
+                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Durability.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#mutateRow(org.apache.hadoop.hbase.client.RowMutations)">mutateRow</a></strong>(org.apache.hadoop.hbase.client.RowMutations&nbsp;rm)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#mutateRow(org.apache.hadoop.hbase.client.RowMutations)">mutateRow</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RowMutations.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">RowMutations</a>&nbsp;rm)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#put(java.util.List)">put</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Put&gt;&nbsp;puts)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#put(java.util.List)">put</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&gt;&nbsp;puts)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#put(org.apache.hadoop.hbase.client.Put)">put</a></strong>(org.apache.hadoop.hbase.client.Put&nbsp;put)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#put(org.apache.hadoop.hbase.client.Put)">put</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#setOperationTimeout(int)">setOperationTimeout</a></strong>(int&nbsp;operationTimeout)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html#setRpcTimeout(int)">setRpcTimeout</a></strong>(int&nbsp;rpcTimeout)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -399,7 +415,7 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>region</h4>
-<pre>private final&nbsp;org.apache.hadoop.hbase.regionserver.Region <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.64">region</a></pre>
+<pre>private final&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Region.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Region</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.64">region</a></pre>
 </li>
 </ul>
 </li>
@@ -416,7 +432,7 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>RegionAsTable</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.69">RegionAsTable</a>(org.apache.hadoop.hbase.regionserver.Region&nbsp;region)</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.69">RegionAsTable</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Region.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Region</a>&nbsp;region)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>region</code> - Region to decorate with Table API.</dd></dl>
 </li>
 </ul>
@@ -434,10 +450,10 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getName</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.TableName&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.74">getName</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.74">getName</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getName</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#getName()" title="class or interface in org.apache.hadoop.hbase.client">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -450,7 +466,7 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <pre>public&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.79">getConfiguration</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getConfiguration</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#getConfiguration()" title="class or interface in org.apache.hadoop.hbase.client">getConfiguration</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -460,11 +476,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTableDescriptor</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.HTableDescriptor&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.84">getTableDescriptor</a>()
-                                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HTableDescriptor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.84">getTableDescriptor</a>()
+                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getTableDescriptor</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#getTableDescriptor()" title="class or interface in org.apache.hadoop.hbase.client">getTableDescriptor</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -475,11 +491,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>exists</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.89">exists</a>(org.apache.hadoop.hbase.client.Get&nbsp;get)
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.89">exists</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>exists</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#exists(org.apache.hadoop.hbase.client.Get)" title="class or interface in org.apache.hadoop.hbase.client">exists</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -490,11 +506,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>existsAll</h4>
-<pre>public&nbsp;boolean[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.95">existsAll</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Get&gt;&nbsp;gets)
+<pre>public&nbsp;boolean[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.95">existsAll</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>existsAll</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#existsAll(java.util.List)" title="class or interface in org.apache.hadoop.hbase.client">existsAll</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -505,13 +521,13 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>batch</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.105">batch</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends org.apache.hadoop.hbase.client.Row&gt;&nbsp;actions,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.105">batch</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Row.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Row</a>&gt;&nbsp;actions,
          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;results)
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>batch</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#batch(java.util.List,%20java.lang.Object[])" title="class or interface in org.apache.hadoop.hbase.client">batch</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
@@ -523,14 +539,14 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>batchCallback</h4>
-<pre>public&nbsp;&lt;R&gt;&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.111">batchCallback</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends org.apache.hadoop.hbase.client.Row&gt;&nbsp;actions,
+<pre>public&nbsp;&lt;R&gt;&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.111">batchCallback</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Row.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Row</a>&gt;&nbsp;actions,
                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;results,
-                     org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)
+                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Callback.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Callback</a>&lt;R&gt;&nbsp;callback)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>batchCallback</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#batchCallback(java.util.List,%20java.lang.Object[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)" title="class or interface in org.apache.hadoop.hbase.client">batchCallback</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
@@ -542,11 +558,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>get</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.client.Result&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.118">get</a>(org.apache.hadoop.hbase.client.Get&nbsp;get)
-                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.118">get</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&nbsp;get)
+           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>get</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#get(org.apache.hadoop.hbase.client.Get)" title="class or interface in org.apache.hadoop.hbase.client">get</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -557,11 +573,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>get</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.client.Result[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.123">get</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Get&gt;&nbsp;gets)
-                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.123">get</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Get.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Get</a>&gt;&nbsp;gets)
+             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>get</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#get(java.util.List)" title="class or interface in org.apache.hadoop.hbase.client">get</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -572,11 +588,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getScanner</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.client.ResultScanner&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.178">getScanner</a>(org.apache.hadoop.hbase.client.Scan&nbsp;scan)
-                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ResultScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ResultScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.178">getScanner</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Scan.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getScanner</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#getScanner(org.apache.hadoop.hbase.client.Scan)" title="class or interface in org.apache.hadoop.hbase.client">getScanner</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -587,11 +603,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getScanner</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.client.ResultScanner&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.183">getScanner</a>(byte[]&nbsp;family)
-                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ResultScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ResultScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.183">getScanner</a>(byte[]&nbsp;family)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getScanner</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#getScanner(byte[])" title="class or interface in org.apache.hadoop.hbase.client">getScanner</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -602,12 +618,12 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getScanner</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.client.ResultScanner&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.188">getScanner</a>(byte[]&nbsp;family,
-                                                      byte[]&nbsp;qualifier)
-                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ResultScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ResultScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.188">getScanner</a>(byte[]&nbsp;family,
+                       byte[]&nbsp;qualifier)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getScanner</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#getScanner(byte[],%20byte[])" title="class or interface in org.apache.hadoop.hbase.client">getScanner</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -618,11 +634,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>put</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.193">put</a>(org.apache.hadoop.hbase.client.Put&nbsp;put)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.193">put</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put)
          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>put</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#put(org.apache.hadoop.hbase.client.Put)" title="class or interface in org.apache.hadoop.hbase.client">put</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -633,11 +649,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>put</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.198">put</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Put&gt;&nbsp;puts)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.198">put</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&gt;&nbsp;puts)
          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>put</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#put(java.util.List)" title="class or interface in org.apache.hadoop.hbase.client">put</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -652,11 +668,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
                   byte[]&nbsp;family,
                   byte[]&nbsp;qualifier,
                   byte[]&nbsp;value,
-                  org.apache.hadoop.hbase.client.Put&nbsp;put)
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>checkAndPut</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#checkAndPut(byte[],%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.Put)" title="class or interface in org.apache.hadoop.hbase.client">checkAndPut</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -670,13 +686,13 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.209">checkAndPut</a>(byte[]&nbsp;row,
                   byte[]&nbsp;family,
                   byte[]&nbsp;qualifier,
-                  org.apache.hadoop.hbase.filter.CompareFilter.CompareOp&nbsp;compareOp,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
                   byte[]&nbsp;value,
-                  org.apache.hadoop.hbase.client.Put&nbsp;put)
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;put)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>checkAndPut</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#checkAndPut(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20byte[],%20org.apache.hadoop.hbase.client.Put)" title="class or interface in org.apache.hadoop.hbase.client">checkAndPut</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -687,11 +703,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>delete</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.216">delete</a>(org.apache.hadoop.hbase.client.Delete&nbsp;delete)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.216">delete</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Delete.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)
             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>delete</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#delete(org.apache.hadoop.hbase.client.Delete)" title="class or interface in org.apache.hadoop.hbase.client">delete</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -702,11 +718,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>delete</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.221">delete</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.client.Delete&gt;&nbsp;deletes)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.221">delete</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Delete.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Delete</a>&gt;&nbsp;deletes)
             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>delete</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#delete(java.util.List)" title="class or interface in org.apache.hadoop.hbase.client">delete</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -721,11 +737,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
                      byte[]&nbsp;family,
                      byte[]&nbsp;qualifier,
                      byte[]&nbsp;value,
-                     org.apache.hadoop.hbase.client.Delete&nbsp;delete)
+                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Delete.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>checkAndDelete</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#checkAndDelete(byte[],%20byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.Delete)" title="class or interface in org.apache.hadoop.hbase.client">checkAndDelete</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -739,13 +755,13 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.233">checkAndDelete</a>(byte[]&nbsp;row,
                      byte[]&nbsp;family,
                      byte[]&nbsp;qualifier,
-                     org.apache.hadoop.hbase.filter.CompareFilter.CompareOp&nbsp;compareOp,
+                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
                      byte[]&nbsp;value,
-                     org.apache.hadoop.hbase.client.Delete&nbsp;delete)
+                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Delete.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete)
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>checkAndDelete</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#checkAndDelete(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20byte[],%20org.apache.hadoop.hbase.client.Delete)" title="class or interface in org.apache.hadoop.hbase.client">checkAndDelete</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -756,11 +772,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>mutateRow</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.240">mutateRow</a>(org.apache.hadoop.hbase.client.RowMutations&nbsp;rm)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.240">mutateRow</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RowMutations.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">RowMutations</a>&nbsp;rm)
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>mutateRow</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#mutateRow(org.apache.hadoop.hbase.client.RowMutations)" title="class or interface in org.apache.hadoop.hbase.client">mutateRow</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -771,11 +787,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>append</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.client.Result&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.245">append</a>(org.apache.hadoop.hbase.client.Append&nbsp;append)
-                                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.245">append</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Append.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Append</a>&nbsp;append)
+              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>append</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#append(org.apache.hadoop.hbase.client.Append)" title="class or interface in org.apache.hadoop.hbase.client">append</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -786,11 +802,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>increment</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.client.Result&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.250">increment</a>(org.apache.hadoop.hbase.client.Increment&nbsp;increment)
-                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.250">increment</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Increment.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Increment</a>&nbsp;increment)
+                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>increment</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#increment(org.apache.hadoop.hbase.client.Increment)" title="class or interface in org.apache.hadoop.hbase.client">increment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -808,7 +824,7 @@ implements org.apache.hadoop.hbase.client.Table</pre>
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>incrementColumnValue</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#incrementColumnValue(byte[],%20byte[],%20byte[],%20long)" title="class or interface in org.apache.hadoop.hbase.client">incrementColumnValue</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -823,11 +839,11 @@ implements org.apache.hadoop.hbase.client.Table</pre>
                         byte[]&nbsp;family,
                         byte[]&nbsp;qualifier,
                         long&nbsp;amount,
-                        org.apache.hadoop.hbase.client.Durability&nbsp;durability)
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Durability.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>incrementColumnValue</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#incrementColumnValue(byte[],%20byte[],%20byte[],%20long,%20org.apache.hadoop.hbase.client.Durability)" title="class or interface in org.apache.hadoop.hbase.client">incrementColumnValue</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -847,7 +863,7 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true#close()" title="class or interface in java.lang">close</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></code></dd>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>close</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#close()" title="class or interface in org.apache.hadoop.hbase.client">close</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -858,10 +874,10 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>coprocessorService</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.ipc.CoprocessorRpcChannel&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.275">coprocessorService</a>(byte[]&nbsp;row)</pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.ipc">CoprocessorRpcChannel</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.275">coprocessorService</a>(byte[]&nbsp;row)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>coprocessorService</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#coprocessorService(byte[])" title="class or interface in org.apache.hadoop.hbase.client">coprocessorService</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -871,17 +887,17 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>coprocessorService</h4>
-<pre>public&nbsp;&lt;T extends com.google.protobuf.Service,R&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],R&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.280">coprocessorService</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
-                                                                         byte[]&nbsp;startKey,
-                                                                         byte[]&nbsp;endKey,
-                                                                         org.apache.hadoop.hbase.client.coprocessor.Batch.Call&lt;T,R&gt;&nbsp;callable)
-                                 throws com.google.protobuf.ServiceException,
+<pre>public&nbsp;&lt;T extends <a href="../../../../../../apidocs/com/google/protobuf/Service.html?is-external=true" title="class or interface in com.google.protobuf">Service</a>,R&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],R&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.280">coprocessorService</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
+                                                     byte[]&nbsp;startKey,
+                                                     byte[]&nbsp;endKey,
+                                                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Call.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Call</a>&lt;T,R&gt;&nbsp;callable)
+                                 throws <a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a>,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>coprocessorService</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call)" title="class or interface in org.apache.hadoop.hbase.client">coprocessorService</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code>com.google.protobuf.ServiceException</code></dd>
+<dd><code><a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd></dl>
 </li>
 </ul>
@@ -891,18 +907,18 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>coprocessorService</h4>
-<pre>public&nbsp;&lt;T extends com.google.protobuf.Service,R&gt;&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.287">coprocessorService</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
-                                                                byte[]&nbsp;startKey,
-                                                                byte[]&nbsp;endKey,
-                                                                org.apache.hadoop.hbase.client.coprocessor.Batch.Call&lt;T,R&gt;&nbsp;callable,
-                                                                org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)
-                        throws com.google.protobuf.ServiceException,
+<pre>public&nbsp;&lt;T extends <a href="../../../../../../apidocs/com/google/protobuf/Service.html?is-external=true" title="class or interface in com.google.protobuf">Service</a>,R&gt;&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.287">coprocessorService</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;service,
+                                            byte[]&nbsp;startKey,
+                                            byte[]&nbsp;endKey,
+                                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Call.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Call</a>&lt;T,R&gt;&nbsp;callable,
+                                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Callback.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Callback</a>&lt;R&gt;&nbsp;callback)
+                        throws <a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a>,
                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>coprocessorService</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#coprocessorService(java.lang.Class,%20byte[],%20byte[],%20org.apache.hadoop.hbase.client.coprocessor.Batch.Call,%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)" title="class or interface in org.apache.hadoop.hbase.client">coprocessorService</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code>com.google.protobuf.ServiceException</code></dd>
+<dd><code><a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd></dl>
 </li>
 </ul>
@@ -915,7 +931,7 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.294">getWriteBufferSize</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>getWriteBufferSize</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#getWriteBufferSize()" title="class or interface in org.apache.hadoop.hbase.client">getWriteBufferSize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -929,7 +945,7 @@ implements org.apache.hadoop.hbase.client.Table</pre>
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>setWriteBufferSize</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#setWriteBufferSize(long)" title="class or interface in org.apache.hadoop.hbase.client">setWriteBufferSize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -942,18 +958,18 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>batchCoprocessorService</h4>
-<pre>public&nbsp;&lt;R extends com.google.protobuf.Message&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],R&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.304">batchCoprocessorService</a>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;methodDescriptor,
-                                                                            com.google.protobuf.Message&nbsp;request,
-                                                                            byte[]&nbsp;startKey,
-                                                                            byte[]&nbsp;endKey,
-                                                                            R&nbsp;responsePrototype)
-                                                                          throws com.google.protobuf.ServiceException,
-                                                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
+<pre>public&nbsp;&lt;R extends <a href="../../../../../../apidocs/com/google/protobuf/Message.html?is-external=true" title="class or interface in com.google.protobuf">Message</a>&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],R&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.304">batchCoprocessorService</a>(<a href="../../../../../../apidocs/com/google/protobuf/Descriptors.MethodDescriptor.html?is-external=true" title="class or interface in com.google.protobuf">Descriptors.MethodDescriptor</a>&nbsp;methodDescriptor,
+                                                        <a href="../../../../../../apidocs/com/google/protobuf/Message.html?is-external=true" title="class or interface in com.google.protobuf">Message</a>&nbsp;request,
+                                                        byte[]&nbsp;startKey,
+                                                        byte[]&nbsp;endKey,
+                                                        R&nbsp;responsePrototype)
+                                                      throws <a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a>,
+                                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>batchCoprocessorService</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#batchCoprocessorService(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20byte[],%20byte[],%20R)" title="class or interface in org.apache.hadoop.hbase.client">batchCoprocessorService</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code>com.google.protobuf.ServiceException</code></dd>
+<dd><code><a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd></dl>
 </li>
 </ul>
@@ -965,40 +981,92 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>batchCoprocessorService</h4>
-<pre>public&nbsp;&lt;R extends com.google.protobuf.Message&gt;&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.312">batchCoprocessorService</a>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;methodDescriptor,
-                                                                   com.google.protobuf.Message&nbsp;request,
-                                                                   byte[]&nbsp;startKey,
-                                                                   byte[]&nbsp;endKey,
-                                                                   R&nbsp;responsePrototype,
-                                                                   org.apache.hadoop.hbase.client.coprocessor.Batch.Callback&lt;R&gt;&nbsp;callback)
-                             throws com.google.protobuf.ServiceException,
+<pre>public&nbsp;&lt;R extends <a href="../../../../../../apidocs/com/google/protobuf/Message.html?is-external=true" title="class or interface in com.google.protobuf">Message</a>&gt;&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.312">batchCoprocessorService</a>(<a href="../../../../../../apidocs/com/google/protobuf/Descriptors.MethodDescriptor.html?is-external=true" title="class or interface in com.google.protobuf">Descriptors.MethodDescriptor</a>&nbsp;methodDescriptor,
+                                               <a href="../../../../../../apidocs/com/google/protobuf/Message.html?is-external=true" title="class or interface in com.google.protobuf">Message</a>&nbsp;request,
+                                               byte[]&nbsp;startKey,
+                                               byte[]&nbsp;endKey,
+                                               R&nbsp;responsePrototype,
+                                               <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/coprocessor.Batch.Callback.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">org.apache.hadoop.hbase.client.coprocessor.Batch.Callback</a>&lt;R&gt;&nbsp;callback)
+                             throws <a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a>,
                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>batchCoprocessorService</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#batchCoprocessorService(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20byte[],%20byte[],%20R,%20org.apache.hadoop.hbase.client.coprocessor.Batch.Callback)" title="class or interface in org.apache.hadoop.hbase.client">batchCoprocessorService</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code>com.google.protobuf.ServiceException</code></dd>
+<dd><code><a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd></dl>
 </li>
 </ul>
 <a name="checkAndMutate(byte[], byte[], byte[], org.apache.hadoop.hbase.filter.CompareFilter.CompareOp, byte[], org.apache.hadoop.hbase.client.RowMutations)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>checkAndMutate</h4>
 <pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.319">checkAndMutate</a>(byte[]&nbsp;row,
                      byte[]&nbsp;family,
                      byte[]&nbsp;qualifier,
-                     org.apache.hadoop.hbase.filter.CompareFilter.CompareOp&nbsp;compareOp,
+                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/filter/CompareFilter.CompareOp.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.filter">CompareFilter.CompareOp</a>&nbsp;compareOp,
                      byte[]&nbsp;value,
-                     org.apache.hadoop.hbase.client.RowMutations&nbsp;mutation)
+                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RowMutations.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">RowMutations</a>&nbsp;mutation)
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>checkAndMutate</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.hbase.client.Table</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#checkAndMutate(byte[],%20byte[],%20byte[],%20org.apache.hadoop.hbase.filter.CompareFilter.CompareOp,%20byte[],%20org.apache.hadoop.hbase.client.RowMutations)" title="class or interface in org.apache.hadoop.hbase.client">checkAndMutate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setOperationTimeout(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOperationTimeout</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.326">setOperationTimeout</a>(int&nbsp;operationTimeout)</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#setOperationTimeout(int)" title="class or interface in org.apache.hadoop.hbase.client">setOperationTimeout</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getOperationTimeout()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOperationTimeout</h4>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.331">getOperationTimeout</a>()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#getOperationTimeout()" title="class or interface in org.apache.hadoop.hbase.client">getOperationTimeout</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setRpcTimeout(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRpcTimeout</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.336">setRpcTimeout</a>(int&nbsp;rpcTimeout)</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#setRpcTimeout(int)" title="class or interface in org.apache.hadoop.hbase.client">setRpcTimeout</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getRpcTimeout()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getRpcTimeout</h4>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/RegionAsTable.html#line.341">getRpcTimeout</a>()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true#getRpcTimeout()" title="class or interface in org.apache.hadoop.hbase.client">getRpcTimeout</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -1068,6 +1136,6 @@ implements org.apache.hadoop.hbase.client.Table</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

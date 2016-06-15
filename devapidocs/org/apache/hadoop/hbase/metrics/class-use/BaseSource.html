@@ -174,11 +174,17 @@ service.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMasterSource.html" title="interface in org.apache.hadoop.hbase.master">MetricsMasterSource</a></strong></code>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMasterProcSource.html" title="interface in org.apache.hadoop.hbase.master">MetricsMasterProcSource</a></strong></code>
 <div class="block">Interface that classes that expose metrics about the master will implement.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMasterSource.html" title="interface in org.apache.hadoop.hbase.master">MetricsMasterSource</a></strong></code>
+<div class="block">Interface that classes that expose metrics about the master will implement.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsSnapshotSource.html" title="interface in org.apache.hadoop.hbase.master">MetricsSnapshotSource</a></strong></code>&nbsp;</td>
 </tr>
@@ -201,11 +207,17 @@ service.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMasterSourceImpl.html" title="class in org.apache.hadoop.hbase.master">MetricsMasterSourceImpl</a></strong></code>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMasterProcSourceImpl.html" title="class in org.apache.hadoop.hbase.master">MetricsMasterProcSourceImpl</a></strong></code>
 <div class="block">Hadoop2 implementation of MetricsMasterSource.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMasterSourceImpl.html" title="class in org.apache.hadoop.hbase.master">MetricsMasterSourceImpl</a></strong></code>
+<div class="block">Hadoop2 implementation of MetricsMasterSource.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsSnapshotSourceImpl.html" title="class in org.apache.hadoop.hbase.master">MetricsSnapshotSourceImpl</a></strong></code>&nbsp;</td>
 </tr>
@@ -298,6 +310,13 @@ service.</div>
 <div class="block">Interface for classes that expose metrics about the regionserver.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableAggregateSource.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsTableAggregateSource</a></strong></code>
+<div class="block">This interface will be implemented by a MetricsSource that will export metrics from
+ multiple regions of a table into the hadoop metrics system.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
@@ -316,6 +335,10 @@ service.</div>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionServerSourceImpl</a></strong></code>
 <div class="block">Hadoop2 implementation of MetricsRegionServerSource.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableAggregateSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsTableAggregateSourceImpl</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -525,6 +548,6 @@ service.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

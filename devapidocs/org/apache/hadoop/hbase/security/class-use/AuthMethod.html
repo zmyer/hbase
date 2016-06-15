@@ -102,7 +102,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a></code></td>
-<td class="colLast"><span class="strong">AsyncRpcChannel.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannel.html#authMethod">authMethod</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">AsyncRpcChannelImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannelImpl.html#authMethod">authMethod</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a></code></td>
@@ -123,17 +123,25 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.RPCProtos.UserInformation</code></td>
-<td class="colLast"><span class="strong">AsyncRpcChannel.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannel.html#buildUserInfo(org.apache.hadoop.security.UserGroupInformation,%20org.apache.hadoop.hbase.security.AuthMethod)">buildUserInfo</a></strong>(org.apache.hadoop.security.UserGroupInformation&nbsp;ugi,
+<td class="colLast"><span class="strong">AsyncRpcChannelImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannelImpl.html#buildUserInfo(org.apache.hadoop.security.UserGroupInformation,%20org.apache.hadoop.hbase.security.AuthMethod)">buildUserInfo</a></strong>(org.apache.hadoop.security.UserGroupInformation&nbsp;ugi,
                           <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a>&nbsp;authMethod)</code>
 <div class="block">Build the user information</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><span class="strong">AsyncRpcChannel.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannel.html#createPreamble(io.netty.buffer.ByteBuf,%20org.apache.hadoop.hbase.security.AuthMethod)">createPreamble</a></strong>(io.netty.buffer.ByteBuf&nbsp;byteBuf,
+<td class="colLast"><span class="strong">AsyncRpcChannelImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannelImpl.html#createPreamble(io.netty.buffer.ByteBuf,%20org.apache.hadoop.hbase.security.AuthMethod)">createPreamble</a></strong>(io.netty.buffer.ByteBuf&nbsp;byteBuf,
                             <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a>&nbsp;authMethod)</code>
 <div class="block">Create connection preamble</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.RPCProtos.ConnectionHeader</code></td>
+<td class="colLast"><span class="strong">AsyncRpcChannelImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannelImpl.html#getChannelHeader(org.apache.hadoop.hbase.security.AuthMethod)">getChannelHeader</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a>&nbsp;authMethod)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private byte[]</code></td>
+<td class="colLast"><span class="strong">AsyncRpcChannelImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/AsyncRpcChannelImpl.html#getChannelHeaderBytes(org.apache.hadoop.hbase.security.AuthMethod)">getChannelHeaderBytes</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a>&nbsp;authMethod)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -200,16 +208,15 @@ the order they are declared.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/SaslClientHandler.html#SaslClientHandler(org.apache.hadoop.security.UserGroupInformation,%20org.apache.hadoop.hbase.security.AuthMethod,%20org.apache.hadoop.security.token.Token,%20java.lang.String,%20boolean,%20java.lang.String,%20org.apache.hadoop.hbase.security.SaslClientHandler.SaslExceptionHandler,%20org.apache.hadoop.hbase.security.SaslClientHandler.SaslSuccessfulConnectHandler)">SaslClientHandler</a></strong>(org.apache.hadoop.security.UserGroupInformation&nbsp;ticket,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/security/SaslClientHandler.html#SaslClientHandler(org.apache.hadoop.security.UserGroupInformation,%20org.apache.hadoop.hbase.security.AuthMethod,%20org.apache.hadoop.security.token.Token,%20java.lang.String,%20boolean,%20java.lang.String,%20byte[],%20org.apache.hadoop.hbase.security.SaslClientHandler.SaslExceptionHandler,%20org.apache.hadoop.hbase.security.SaslClientHandler.SaslSuccessfulConnectHandler)">SaslClientHandler</a></strong>(org.apache.hadoop.security.UserGroupInformation&nbsp;ticket,
                                   <a href="../../../../../../org/apache/hadoop/hbase/security/AuthMethod.html" title="enum in org.apache.hadoop.hbase.security">AuthMethod</a>&nbsp;method,
                                   org.apache.hadoop.security.token.Token&lt;? extends org.apache.hadoop.security.token.TokenIdentifier&gt;&nbsp;token,
                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serverPrincipal,
                                   boolean&nbsp;fallbackAllowed,
                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;rpcProtection,
+                                  byte[]&nbsp;connectionHeader,
                                   <a href="../../../../../../org/apache/hadoop/hbase/security/SaslClientHandler.SaslExceptionHandler.html" title="interface in org.apache.hadoop.hbase.security">SaslClientHandler.SaslExceptionHandler</a>&nbsp;exceptionHandler,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/security/SaslClientHandler.SaslSuccessfulConnectHandler.html" title="interface in org.apache.hadoop.hbase.security">SaslClientHandler.SaslSuccessfulConnectHandler</a>&nbsp;successfulConnectHandler)</code>
-<div class="block">Constructor</div>
-</td>
+                                  <a href="../../../../../../org/apache/hadoop/hbase/security/SaslClientHandler.SaslSuccessfulConnectHandler.html" title="interface in org.apache.hadoop.hbase.security">SaslClientHandler.SaslSuccessfulConnectHandler</a>&nbsp;successfulConnectHandler)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -263,6 +270,6 @@ the order they are declared.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

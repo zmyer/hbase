@@ -97,7 +97,7 @@
 <br>
 <pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#line.37">HConnectionTestingUtility</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block"><code>ClusterConnection</code> testing utility.</div>
+<div class="block"><a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection</code></a> testing utility.</div>
 </li>
 </ul>
 </div>
@@ -134,28 +134,28 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static org.apache.hadoop.hbase.client.ClusterConnection</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ClusterConnection</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#getMockedConnection(org.apache.hadoop.conf.Configuration)">getMockedConnection</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
-<div class="block">Get a Mocked <code>HConnection</code> that goes with the passed <code>conf</code>
+<div class="block">Get a Mocked <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection</code></a> that goes with the passed <code>conf</code>
  configuration instance.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static org.apache.hadoop.hbase.client.ClusterConnection</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ClusterConnection</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#getMockedConnectionAndDecorate(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface,%20org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface,%20org.apache.hadoop.hbase.ServerName,%20org.apache.hadoop.hbase.HRegionInfo)">getMockedConnectionAndDecorate</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-                                                            org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface&nbsp;admin,
-                                                            org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface&nbsp;client,
-                                                            org.apache.hadoop.hbase.ServerName&nbsp;sn,
-                                                            org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)</code>
+                                                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.AdminProtos.AdminService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface</a>&nbsp;admin,
+                                                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.ClientProtos.ClientService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface</a>&nbsp;client,
+                                                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn,
+                                                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)</code>
 <div class="block">Calls <a href="../../../../../org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#getMockedConnection(org.apache.hadoop.conf.Configuration)"><code>getMockedConnection(Configuration)</code></a> and then mocks a few
- more of the popular <code>ClusterConnection</code> methods so they do 'normal'
+ more of the popular <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection</code></a> methods so they do 'normal'
  operation (see return doc below for list).</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static org.apache.hadoop.hbase.client.ClusterConnection</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ClusterConnection</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#getSpiedConnection(org.apache.hadoop.conf.Configuration)">getSpiedConnection</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
-<div class="block">Get a Mockito spied-upon <code>ClusterConnection</code> that goes with the passed
+<div class="block">Get a Mockito spied-upon <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection</code></a> that goes with the passed
  <code>conf</code> configuration instance.</div>
 </td>
 </tr>
@@ -204,17 +204,17 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getMockedConnection</h4>
-<pre>public static&nbsp;org.apache.hadoop.hbase.client.ClusterConnection&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#line.53">getMockedConnection</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
-                                                                            throws org.apache.hadoop.hbase.ZooKeeperConnectionException</pre>
-<div class="block">Get a Mocked <code>HConnection</code> that goes with the passed <code>conf</code>
+<pre>public static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#line.53">getMockedConnection</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+                                             throws <a href="../../../../../../apidocs/org/apache/hadoop/hbase/ZooKeeperConnectionException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ZooKeeperConnectionException</a></pre>
+<div class="block">Get a Mocked <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection</code></a> that goes with the passed <code>conf</code>
  configuration instance.  Minimally the mock will return
- <code>conf</conf> when <code>HConnection.getConfiguration()</code> is invoked.
+ <code>conf</conf> when <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true#getConfiguration()" title="class or interface in org.apache.hadoop.hbase.client"><code>Connection.getConfiguration()</code></a> is invoked.
  Be sure to shutdown the connection when done by calling
- <code>Connection.close()</code> else it will stick around; this is probably not what you want.</div>
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true#close()" title="class or interface in org.apache.hadoop.hbase.client"><code>Connection.close()</code></a> else it will stick around; this is probably not what you want.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - configuration</dd>
-<dt><span class="strong">Returns:</span></dt><dd>HConnection object for <code>conf</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>ClusterConnection object for <code>conf</code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.ZooKeeperConnectionException</code></dd></dl>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/ZooKeeperConnectionException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ZooKeeperConnectionException</a></code></dd></dl>
 </li>
 </ul>
 <a name="getMockedConnectionAndDecorate(org.apache.hadoop.conf.Configuration, org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface, org.apache.hadoop.hbase.ServerName, org.apache.hadoop.hbase.HRegionInfo)">
@@ -223,16 +223,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getMockedConnectionAndDecorate</h4>
-<pre>public static&nbsp;org.apache.hadoop.hbase.client.ClusterConnection&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#line.87">getMockedConnectionAndDecorate</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-                                                                              org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface&nbsp;admin,
-                                                                              org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface&nbsp;client,
-                                                                              org.apache.hadoop.hbase.ServerName&nbsp;sn,
-                                                                              org.apache.hadoop.hbase.HRegionInfo&nbsp;hri)
-                                                                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#line.92">getMockedConnectionAndDecorate</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                               <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.AdminProtos.AdminService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface</a>&nbsp;admin,
+                                               <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.ClientProtos.ClientService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface</a>&nbsp;client,
+                                               <a href="../../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn,
+                                               <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HRegionInfo.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;hri)
+                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Calls <a href="../../../../../org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#getMockedConnection(org.apache.hadoop.conf.Configuration)"><code>getMockedConnection(Configuration)</code></a> and then mocks a few
- more of the popular <code>ClusterConnection</code> methods so they do 'normal'
+ more of the popular <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection</code></a> methods so they do 'normal'
  operation (see return doc below for list). Be sure to shutdown the
- connection when done by calling <code>Connection.close()</code> else it will stick around;
+ connection when done by calling <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true#close()" title="class or interface in org.apache.hadoop.hbase.client"><code>Connection.close()</code></a> else it will stick around;
  this is probably not what you want.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - Configuration to use</dd><dd><code>admin</code> - An AdminProtocol; can be null but is usually
  itself a mock.</dd><dd><code>client</code> - A ClientProtocol; can be null but is usually
@@ -240,14 +240,14 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
  <code>connection</code></dd><dd><code>hri</code> - HRegionInfo to include in the location returned when
  getRegionLocator is called on the mocked connection</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Mock up a connection that returns a <code>Configuration</code> when
- <code>HConnection.getConfiguration()</code> is called, a 'location' when
- <code>ClusterConnection.getRegionLocation(org.apache.hadoop.hbase.TableName, byte[], boolean)</code>
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true#getConfiguration()" title="class or interface in org.apache.hadoop.hbase.client"><code>Connection.getConfiguration()</code></a> is called, a 'location' when
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true#getRegionLocation(org.apache.hadoop.hbase.TableName,%20byte[],%20boolean)" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection.getRegionLocation(org.apache.hadoop.hbase.TableName, byte[], boolean)</code></a>
  is called,
  and that returns the passed <code>AdminProtos.AdminService.BlockingInterface</code> instance when
- <code>ClusterConnection.getAdmin(ServerName)</code> is called, returns the passed
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true#getAdmin(org.apache.hadoop.hbase.ServerName)" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection.getAdmin(ServerName)</code></a> is called, returns the passed
  <code>ClientProtos.ClientService.BlockingInterface</code> instance when
- <code>ClusterConnection.getClient(ServerName)</code> is called (Be sure to call
- <code>Connection.close()</code> when done with this mocked Connection.</dd>
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true#getClient(org.apache.hadoop.hbase.ServerName)" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection.getClient(ServerName)</code></a> is called (Be sure to call
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true#close()" title="class or interface in org.apache.hadoop.hbase.client"><code>Connection.close()</code></a> when done with this mocked Connection.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -258,16 +258,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getSpiedConnection</h4>
-<pre>public static&nbsp;org.apache.hadoop.hbase.client.ClusterConnection&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#line.141">getSpiedConnection</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
-                                                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Get a Mockito spied-upon <code>ClusterConnection</code> that goes with the passed
+<pre>public static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/HConnectionTestingUtility.html#line.147">getSpiedConnection</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Get a Mockito spied-upon <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ClusterConnection.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>ClusterConnection</code></a> that goes with the passed
  <code>conf</code> configuration instance.
  Be sure to shutdown the connection when done by calling
- <code>Connection.close()</code> else it will stick around; this is probably not what you want.</div>
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Connection.html?is-external=true#close()" title="class or interface in org.apache.hadoop.hbase.client"><code>Connection.close()</code></a> else it will stick around; this is probably not what you want.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>conf</code> - configuration</dd>
-<dt><span class="strong">Returns:</span></dt><dd>HConnection object for <code>conf</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>ClusterConnection object for <code>conf</code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code>org.apache.hadoop.hbase.ZooKeeperConnectionException</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/ZooKeeperConnectionException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ZooKeeperConnectionException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><code>{http://mockito.googlecode.com/svn/branches/1.6/javadoc/org/mockito/Mockito.html#spy(T)}</code></dd></dl>
 </li>
 </ul>
@@ -338,6 +338,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

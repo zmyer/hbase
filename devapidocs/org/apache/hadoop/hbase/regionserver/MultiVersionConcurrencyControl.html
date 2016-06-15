@@ -459,13 +459,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>complete</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.html#line.166">complete</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.WriteEntry.html" title="class in org.apache.hadoop.hbase.regionserver">MultiVersionConcurrencyControl.WriteEntry</a>&nbsp;writeEntry)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.html#line.167">complete</a>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.WriteEntry.html" title="class in org.apache.hadoop.hbase.regionserver">MultiVersionConcurrencyControl.WriteEntry</a>&nbsp;writeEntry)</pre>
 <div class="block">Mark the <a href="../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.WriteEntry.html" title="class in org.apache.hadoop.hbase.regionserver"><code>MultiVersionConcurrencyControl.WriteEntry</code></a> as complete and advance the read point as much as possible.
  Call this even if the write has FAILED (AFTER backing out the write transaction
  changes completely) so we can clean up the outstanding transaction.
 
  How much is the read point advanced?
- 
+
  Let S be the set of all write numbers that are completed. Set the read point to the highest
  numbered write of S.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>writeEntry</code> - </dd>
@@ -580,6 +580,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

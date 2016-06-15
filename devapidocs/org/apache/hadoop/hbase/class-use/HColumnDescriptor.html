@@ -129,25 +129,39 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.replication">org.apache.hadoop.hbase.replication</a></td>
+<td class="colLast">
+<div class="block">Multi Cluster Replication</div>
+</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.rsgroup">org.apache.hadoop.hbase.rsgroup</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.snapshot">org.apache.hadoop.hbase.snapshot</a></td>
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security">org.apache.hadoop.hbase.security</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.snapshot">org.apache.hadoop.hbase.snapshot</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.thrift">org.apache.hadoop.hbase.thrift</a></td>
 <td class="colLast">
 <div class="block">Provides an HBase <a href="http://incubator.apache.org/thrift/">Thrift</a>
 service.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.tool">org.apache.hadoop.hbase.tool</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -183,118 +197,118 @@ service.</div>
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
-<td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#convert(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.ColumnFamilySchema)">convert</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.ColumnFamilySchema&nbsp;cfs)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>[]</code></td>
 <td class="colLast"><span class="strong">HTableDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html#getColumnFamilies()">getColumnFamilies</a></strong>()</code>
 <div class="block">Returns an array all the <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase"><code>HColumnDescriptor</code></a> of the column families
  of the table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HTableDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html#getFamily(byte[])">getFamily</a></strong>(byte[]&nbsp;column)</code>
 <div class="block">Returns the HColumnDescriptor for a specific column family with name as
  specified by the parameter column.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#parseFrom(byte[])">parseFrom</a></strong>(byte[]&nbsp;bytes)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HTableDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html#removeFamily(byte[])">removeFamily</a></strong>(byte[]&nbsp;column)</code>
 <div class="block">Removes the HColumnDescriptor with name specified by the parameter column
  from the table descriptor</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setBlockCacheEnabled(boolean)">setBlockCacheEnabled</a></strong>(boolean&nbsp;blockCacheEnabled)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setBlocksize(int)">setBlocksize</a></strong>(int&nbsp;s)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setBloomFilterType(org.apache.hadoop.hbase.regionserver.BloomType)">setBloomFilterType</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/regionserver/BloomType.html" title="enum in org.apache.hadoop.hbase.regionserver">BloomType</a>&nbsp;bt)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setCacheBloomsOnWrite(boolean)">setCacheBloomsOnWrite</a></strong>(boolean&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setCacheDataInL1(boolean)">setCacheDataInL1</a></strong>(boolean&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setCacheDataOnWrite(boolean)">setCacheDataOnWrite</a></strong>(boolean&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setCacheIndexesOnWrite(boolean)">setCacheIndexesOnWrite</a></strong>(boolean&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setCompactionCompressionType(org.apache.hadoop.hbase.io.compress.Compression.Algorithm)">setCompactionCompressionType</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/io/compress/Compression.Algorithm.html" title="enum in org.apache.hadoop.hbase.io.compress">Compression.Algorithm</a>&nbsp;type)</code>
 <div class="block">Compression types supported in hbase.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setCompressionType(org.apache.hadoop.hbase.io.compress.Compression.Algorithm)">setCompressionType</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/io/compress/Compression.Algorithm.html" title="enum in org.apache.hadoop.hbase.io.compress">Compression.Algorithm</a>&nbsp;type)</code>
 <div class="block">Compression types supported in hbase.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setCompressTags(boolean)">setCompressTags</a></strong>(boolean&nbsp;compressTags)</code>
 <div class="block">Set whether the tags should be compressed along with DataBlockEncoding.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setConfiguration(java.lang.String,%20java.lang.String)">setConfiguration</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
 <div class="block">Setter for storing a configuration setting in <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#configuration"><code>configuration</code></a> map.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setDataBlockEncoding(org.apache.hadoop.hbase.io.encoding.DataBlockEncoding)">setDataBlockEncoding</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/io/encoding/DataBlockEncoding.html" title="enum in org.apache.hadoop.hbase.io.encoding">DataBlockEncoding</a>&nbsp;type)</code>
 <div class="block">Set data block encoding algorithm used in block cache.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setDFSReplication(short)">setDFSReplication</a></strong>(short&nbsp;replication)</code>
 <div class="block">Set the replication factor to hfile(s) belonging to this family</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setEncryptionKey(byte[])">setEncryptionKey</a></strong>(byte[]&nbsp;keyBytes)</code>
 <div class="block">Set the raw crypto key attribute for the family</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setEncryptionType(java.lang.String)">setEncryptionType</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;algorithm)</code>
 <div class="block">Set the encryption algorithm for use with this family</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setEvictBlocksOnClose(boolean)">setEvictBlocksOnClose</a></strong>(boolean&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
 <td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setInMemory(boolean)">setInMemory</a></strong>(boolean&nbsp;inMemory)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
+<td class="colLast"><span class="strong">HColumnDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html#setInMemoryCompaction(boolean)">setInMemoryCompaction</a></strong>(boolean&nbsp;inMemoryCompaction)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
@@ -455,37 +469,11 @@ service.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#addColumn(byte[],%20org.apache.hadoop.hbase.HColumnDescriptor)">addColumn</a></strong>(byte[]&nbsp;tableName,
-                  <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>As of release 2.0.0.
-             (<a href="https://issues.apache.org/jira/browse/HBASE-1989">HBASE-1989</a>).
-             This will be removed in HBase 3.0.0.
-             Use <a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#addColumnFamily(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>HBaseAdmin.addColumnFamily(TableName, HColumnDescriptor)</code></a>.</i></div>
-</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#addColumn(java.lang.String,%20org.apache.hadoop.hbase.HColumnDescriptor)">addColumn</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
-                  <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>As of release 2.0.0.
-             (<a href="https://issues.apache.org/jira/browse/HBASE-1989">HBASE-1989</a>).
-             This will be removed in HBase 3.0.0.
-             Use <a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#addColumnFamily(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>HBaseAdmin.addColumnFamily(TableName, HColumnDescriptor)</code></a>.</i></div>
-</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#addColumn(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">addColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                   <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>As of release 2.0.0.
-             (<a href="https://issues.apache.org/jira/browse/HBASE-1989">HBASE-1989</a>).
-             This will be removed in HBase 3.0.0.
-             Use <a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#addColumnFamily(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>HBaseAdmin.addColumnFamily(TableName, HColumnDescriptor)</code></a>.</i></div>
+<div class="block"><i>Since 2.0. Will be removed in 3.0. Use
+     <a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#addColumnFamily(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>HBaseAdmin.addColumnFamily(TableName, HColumnDescriptor)</code></a> instead.</i></div>
 </div>
 </td>
 </tr>
@@ -514,33 +502,9 @@ service.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html" title="class in org.apache.hadoop.hbase.client">UnmodifyableHTableDescriptor</a></code></td>
 <td class="colLast"><span class="strong">UnmodifyableHTableDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#addFamily(org.apache.hadoop.hbase.HColumnDescriptor)">addFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>
 <div class="block">Does NOT add a column family.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#modifyColumn(byte[],%20org.apache.hadoop.hbase.HColumnDescriptor)">modifyColumn</a></strong>(byte[]&nbsp;tableName,
-                        <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>As of release 2.0.0.
-             (<a href="https://issues.apache.org/jira/browse/HBASE-1989">HBASE-1989</a>).
-             This will be removed in HBase 3.0.0.
-             Use <a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#modifyColumnFamily(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>HBaseAdmin.modifyColumnFamily(TableName, HColumnDescriptor)</code></a>.</i></div>
-</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#modifyColumn(java.lang.String,%20org.apache.hadoop.hbase.HColumnDescriptor)">modifyColumn</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
-                        <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>As of release 2.0.0.
-             (<a href="https://issues.apache.org/jira/browse/HBASE-1989">HBASE-1989</a>).
-             This will be removed in HBase 3.0.0.
-             Use <a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#modifyColumnFamily(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>HBaseAdmin.modifyColumnFamily(TableName, HColumnDescriptor)</code></a>.</i></div>
-</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -548,10 +512,8 @@ service.</div>
 <td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#modifyColumn(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">modifyColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                         <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>As of release 2.0.0.
-             (<a href="https://issues.apache.org/jira/browse/HBASE-1989">HBASE-1989</a>).
-             This will be removed in HBase 3.0.0.
-             Use <a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#modifyColumnFamily(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>HBaseAdmin.modifyColumnFamily(TableName, HColumnDescriptor)</code></a>.</i></div>
+<div class="block"><i>As of 2.0. Will be removed in 3.0. Use
+     <a href="../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#modifyColumnFamily(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>HBaseAdmin.modifyColumnFamily(TableName, HColumnDescriptor)</code></a> instead.</i></div>
 </div>
 </td>
 </tr>
@@ -580,7 +542,7 @@ service.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html" title="class in org.apache.hadoop.hbase.client">UnmodifyableHTableDescriptor</a></code></td>
 <td class="colLast"><span class="strong">UnmodifyableHTableDescriptor.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/UnmodifyableHTableDescriptor.html#modifyFamily(org.apache.hadoop.hbase.HColumnDescriptor)">modifyFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>&nbsp;</td>
 </tr>
 </tbody>
@@ -610,7 +572,11 @@ service.</div>
 <td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postAddColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                           <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                           <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
+             (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>).
+             Use <a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postAddColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>BaseMasterObserver.postAddColumnFamily(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -647,53 +613,77 @@ service.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#postAddColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                    <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                    <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postAddColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                    <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                    <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postAddColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                    <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                    <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block">Called after the new column family has been created.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#postAddColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                         <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                         <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postAddColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                         <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                         <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
+     (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>). Use
+     <a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postCompletedAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>BaseMasterObserver.postCompletedAddColumnFamilyAction(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postAddColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                         <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                         <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
-             (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>). Use
-             <a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postAddColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>MasterObserver.postAddColumnFamilyHandler(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+     (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>). Use
+     <a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postCompletedAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>MasterObserver.postCompletedAddColumnFamilyAction(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
 </div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#postCompletedAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postCompletedAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postCompletedAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
+<div class="block">Called after the new column family has been created.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#postCompletedModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                                          <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postCompletedModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                                          <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postCompletedModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                                          <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
+<div class="block">Called after the column family has been updated.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#postModifyColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                 <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
@@ -701,15 +691,19 @@ service.</div>
 <div class="block"><strong>Deprecated.</strong>&nbsp;</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postModifyColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                 <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                 <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
+             (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>).
+             Use <a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postModifyColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>BaseMasterObserver.postModifyColumnFamily(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postModifyColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                 <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
@@ -721,43 +715,23 @@ service.</div>
 </div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#postModifyColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                             <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                             <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postModifyColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                             <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                             <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postModifyColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                             <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                             <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block">Called after the column family has been updated.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#postModifyColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                          <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postModifyColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                          <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postModifyColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                          <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block">Called after the column family has been updated.</div>
 </td>
 </tr>
@@ -774,7 +748,11 @@ service.</div>
 <td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postModifyColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                               <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                               <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
+   (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>). Use
+   <a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#postCompletedModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>BaseMasterObserver.postCompletedModifyColumnFamilyAction(ObserverContext,TableName,HColumnDescriptor)</code></a>.</i></div>
+</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -784,8 +762,8 @@ service.</div>
                                               <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
-      (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>).
-      Use <a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postModifyColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>MasterObserver.postModifyColumnFamilyHandler(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+   (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>). Use
+   <a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#postCompletedModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>MasterObserver.postCompletedModifyColumnFamilyAction(ObserverContext,TableName,HColumnDescriptor)</code></a>.</i></div>
 </div>
 </td>
 </tr>
@@ -802,7 +780,11 @@ service.</div>
 <td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preAddColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                         <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                         <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
+             (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>).
+             Use <a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preAddColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>BaseMasterObserver.preAddColumnFamily(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -839,21 +821,21 @@ service.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#preAddColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                  <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                  <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#preAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preAddColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                  <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                  <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#preAddColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                  <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                  <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
+<td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#preAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block">Called prior to adding a new column family to the table.</div>
 </td>
 </tr>
@@ -870,7 +852,11 @@ service.</div>
 <td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preAddColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                       <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                       <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
+          (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>). Use
+          <a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>BaseMasterObserver.preAddColumnFamilyAction(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -880,8 +866,8 @@ service.</div>
                                       <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
-             (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>). Use
-             <a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#preAddColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>MasterObserver.preAddColumnFamilyHandler(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+          (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>). Use
+          <a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#preAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>MasterObserver.preAddColumnFamilyAction(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
 </div>
 </td>
 </tr>
@@ -898,7 +884,11 @@ service.</div>
 <td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preModifyColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                               <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                               <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
+             (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>).
+             Use <a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preModifyColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>BaseMasterObserver.preModifyColumnFamily(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -935,21 +925,21 @@ service.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#preModifyColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                        <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                        <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">BaseMasterAndRegionObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterAndRegionObserver.html#preModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                      <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                      <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preModifyColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                        <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                        <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                      <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                      <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#preModifyColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnFamilyHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
-                                                        <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                                        <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
+<td class="colLast"><span class="strong">MasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#preModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                      <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                      <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block">Called prior to modifying a column family's attributes.</div>
 </td>
 </tr>
@@ -966,7 +956,11 @@ service.</div>
 <td class="colLast"><span class="strong">BaseMasterObserver.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preModifyColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
                                             <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                             <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
+     (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>).
+     Use <a href="../../../../../org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.html#preModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>BaseMasterObserver.preModifyColumnFamilyAction(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -976,8 +970,8 @@ service.</div>
                                             <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
 <div class="block"><i>As of release 2.0.0, this will be removed in HBase 3.0.0
-       (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>).
-       Use <a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#preModifyColumnFamilyHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>MasterObserver.preModifyColumnFamilyHandler(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
+     (<a href="https://issues.apache.org/jira/browse/HBASE-13645">HBASE-13645</a>).
+     Use <a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterObserver.html#preModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)"><code>MasterObserver.preModifyColumnFamilyAction(ObserverContext, TableName, HColumnDescriptor)</code></a>.</i></div>
 </div>
 </td>
 </tr>
@@ -1112,18 +1106,18 @@ service.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postAddColumnHandler(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                        <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postCompletedAddColumnFamilyAction(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postModifyColumn(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postCompletedModifyColumnFamilyAction(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postModifyColumnHandler(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                              <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#postModifyColumn(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -1132,8 +1126,8 @@ service.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preAddColumnHandler(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                      <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preAddColumnFamilyAction(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -1142,8 +1136,8 @@ service.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preModifyColumnHandler(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                            <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">MasterCoprocessorHost.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#preModifyColumnFamilyAction(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                      <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -1262,7 +1256,7 @@ service.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></code></td>
+<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a></code></td>
 <td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#createDelFileWriter(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.HColumnDescriptor,%20java.lang.String,%20org.apache.hadoop.fs.Path,%20long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20byte[],%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context)">createDelFileWriter</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                       org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                       <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family,
@@ -1277,14 +1271,7 @@ service.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/io/crypto/Encryption.Context.html" title="class in org.apache.hadoop.hbase.io.crypto">Encryption.Context</a></code></td>
-<td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#createEncryptionContext(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HColumnDescriptor)">createEncryptionContext</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
-                                              <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>
-<div class="block">Creates the encyption context.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></code></td>
+<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a></code></td>
 <td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#createRefFileWriter(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.HColumnDescriptor,%20org.apache.hadoop.fs.Path,%20long,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context)">createRefFileWriter</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                       org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                       <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family,
@@ -1295,8 +1282,8 @@ service.</div>
 <div class="block">Creates a writer for the ref file in temp directory.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></code></td>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a></code></td>
 <td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#createWriter(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.HColumnDescriptor,%20org.apache.hadoop.hbase.mob.MobFileName,%20org.apache.hadoop.fs.Path,%20long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context)">createWriter</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                         org.apache.hadoop.fs.FileSystem&nbsp;fs,
                         <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family,
@@ -1309,8 +1296,8 @@ service.</div>
 <div class="block">Creates a writer for the mob file in temp directory.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></code></td>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a></code></td>
 <td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#createWriter(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.HColumnDescriptor,%20java.lang.String,%20org.apache.hadoop.fs.Path,%20long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20byte[],%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context)">createWriter</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                         org.apache.hadoop.fs.FileSystem&nbsp;fs,
                         <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family,
@@ -1324,8 +1311,8 @@ service.</div>
 <div class="block">Creates a writer for the mob file in temp directory.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></code></td>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a></code></td>
 <td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#createWriter(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.HColumnDescriptor,%20java.lang.String,%20org.apache.hadoop.fs.Path,%20long,%20org.apache.hadoop.hbase.io.compress.Compression.Algorithm,%20java.lang.String,%20org.apache.hadoop.hbase.io.hfile.CacheConfig,%20org.apache.hadoop.hbase.io.crypto.Encryption.Context)">createWriter</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                         org.apache.hadoop.fs.FileSystem&nbsp;fs,
                         <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family,
@@ -1339,7 +1326,7 @@ service.</div>
 <div class="block">Creates a writer for the mob file in temp directory.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><span class="strong">MobUtils.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobUtils.html#doMobCompaction(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor,%20java.util.concurrent.ExecutorService,%20org.apache.hadoop.hbase.master.TableLockManager,%20boolean)">doMobCompaction</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                               org.apache.hadoop.fs.FileSystem&nbsp;fs,
@@ -1481,11 +1468,11 @@ service.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
-<td class="colLast"><span class="strong">HMobStore.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#family">family</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">HStore.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#family">family</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
-<td class="colLast"><span class="strong">HStore.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#family">family</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">HMobStore.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#family">family</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -1515,14 +1502,14 @@ service.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><span class="strong">HMobStore.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#createCacheConf(org.apache.hadoop.hbase.HColumnDescriptor)">createCacheConf</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>
-<div class="block">Creates the mob cache config.</div>
+<td class="colLast"><span class="strong">HStore.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#createCacheConf(org.apache.hadoop.hbase.HColumnDescriptor)">createCacheConf</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>
+<div class="block">Creates the cache config.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><span class="strong">HStore.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HStore.html#createCacheConf(org.apache.hadoop.hbase.HColumnDescriptor)">createCacheConf</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>
-<div class="block">Creates the cache config.</div>
+<td class="colLast"><span class="strong">HMobStore.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/HMobStore.html#createCacheConf(org.apache.hadoop.hbase.HColumnDescriptor)">createCacheConf</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>
+<div class="block">Creates the mob cache config.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1559,6 +1546,163 @@ service.</div>
                 long&nbsp;ttl,
                 long&nbsp;timeToPurgeDeletes,
                 <a href="../../../../../org/apache/hadoop/hbase/CellComparator.html" title="class in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.replication">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a> in <a href="../../../../../org/apache/hadoop/hbase/replication/package-summary.html">org.apache.hadoop.hbase.replication</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/hadoop/hbase/replication/package-summary.html">org.apache.hadoop.hbase.replication</a> declared as <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></code></td>
+<td class="colLast"><span class="strong">ReplicationTableBase.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/ReplicationTableBase.html#REPLICATION_COL_DESCRIPTOR">REPLICATION_COL_DESCRIPTOR</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.rsgroup">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a> in <a href="../../../../../org/apache/hadoop/hbase/rsgroup/package-summary.html">org.apache.hadoop.hbase.rsgroup</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/rsgroup/package-summary.html">org.apache.hadoop.hbase.rsgroup</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#postAddColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                          <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#postAddColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumnFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                      <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                      <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#postAddColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postAddColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                        <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                        <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#postCompletedAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                    <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#postCompletedModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postCompletedModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                                          <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#postModifyColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#postModifyColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                            <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                            <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#postModifyColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">postModifyColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                              <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                              <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#preAddColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                        <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                        <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#preAddColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                    <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                    <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#preAddColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#preAddColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preAddColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                      <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                      <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#preModifyColumn(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumn</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                              <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                              <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#preModifyColumnFamily(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnFamily</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                          <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                          <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#preModifyColumnFamilyAction(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnFamilyAction</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                                      <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                      <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#preModifyColumnHandler(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.HColumnDescriptor)">preModifyColumnHandler</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">MasterCoprocessorEnvironment</a>&gt;&nbsp;ctx,
+                                            <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                            <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;columnFamily)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.security">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a> in <a href="../../../../../org/apache/hadoop/hbase/security/package-summary.html">org.apache.hadoop.hbase.security</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/security/package-summary.html">org.apache.hadoop.hbase.security</a> with parameters of type <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/hadoop/hbase/io/crypto/Encryption.Context.html" title="class in org.apache.hadoop.hbase.io.crypto">Encryption.Context</a></code></td>
+<td class="colLast"><span class="strong">EncryptionUtil.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/security/EncryptionUtil.html#createEncryptionContext(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HColumnDescriptor)">createEncryptionContext</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                              <a href="../../../../../org/apache/hadoop/hbase/HColumnDescriptor.html" title="class in org.apache.hadoop.hbase">HColumnDescriptor</a>&nbsp;family)</code>
+<div class="block">Helper to create an encyption context.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1782,6 +1926,6 @@ service.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -110,7 +110,7 @@
 <hr>
 <br>
 <pre><a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ReplayHLogKey.html#line.33">ReplayHLogKey</a>
+public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ReplayHLogKey.html#line.32">ReplayHLogKey</a>
 extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/HLogKey.html" title="class in org.apache.hadoop.hbase.regionserver.wal">HLogKey</a></pre>
 <div class="block">An HLogKey specific to WalEdits coming from replay.</div>
 </li>
@@ -145,7 +145,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/HLog
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.wal.<a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a></h3>
-<code><a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#clusterIds">clusterIds</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#compressionContext">compressionContext</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#EMPTY_UUIDS">EMPTY_UUIDS</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#encodedRegionName">encodedRegionName</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#logSeqNum">logSeqNum</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#NO_SEQUENCE_ID">NO_SEQUENCE_ID</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#tablename">tablename</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#VERSION">VERSION</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#writeTime">writeTime</a></code></li>
+<code><a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#clusterIds">clusterIds</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#compressionContext">compressionContext</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#EMPTY_UUIDS">EMPTY_UUIDS</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#encodedRegionName">encodedRegionName</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#NO_SEQUENCE_ID">NO_SEQUENCE_ID</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#tablename">tablename</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#VERSION">VERSION</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#writeTime">writeTime</a></code></li>
 </ul>
 </li>
 </ul>
@@ -213,7 +213,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/HLog
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.wal.<a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a></h3>
-<code><a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#addClusterId(java.util.UUID)">addClusterId</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#compareTo(org.apache.hadoop.hbase.wal.WALKey)">compareTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#equals(java.lang.Object)">equals</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getBuilder(org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.ByteStringCompressor)">getBuilder</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getClusterIds()">getClusterIds</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getEncodedRegionName()">getEncodedRegionName</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getLogSeqNum()">getLogSeqNum</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getMvcc()">getMvcc</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getNonce()">getNonce</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getNonceGroup()">getNonceGroup</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getOriginatingClusterId()">getOriginatingClusterId</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getOrigLogSeqNum()">getOrigLogSeqNum</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getScopes()">getScopes</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getSequenceId(long)">getSequenceId</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getTablename()">getTablename</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getWriteEntry()">getWriteEntry</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getWriteTime()">getWriteTime</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#hashCode()">hashCode</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#init(byte[],%20org.apache.hadoop.hbase.TableName,%20long,%20long,%20java.util.List,%20long,%20long,%20org.apache.hadoop.hbase.regionserver.MultiVersionConcurrencyControl)">init</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#readFieldsFromPb(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.ByteStringUncompressor)">readFieldsFromPb</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#readOlderScopes(java.util.NavigableMap)">readOlderScopes</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#setCompressionContext(org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">setCompressionContext</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#setLogSeqNum(long)">setLogSeqNum</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#setOrigLogSeqNum(long)">setOrigLogSeqNum</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#setScopes(java.util.NavigableMap)">setScopes</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#setWriteEntry(org.apache.hadoop.hbase.regionserver.MultiVersionConcurrencyControl.WriteEntry)">setWriteEntry</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#toString()">toString</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#toStringMap()">toStringMap</a></code></li>
+<code><a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#addClusterId(java.util.UUID)">addClusterId</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#compareTo(org.apache.hadoop.hbase.wal.WALKey)">compareTo</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#equals(java.lang.Object)">equals</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getBuilder(org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.ByteStringCompressor)">getBuilder</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getClusterIds()">getClusterIds</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getEncodedRegionName()">getEncodedRegionName</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getLogSeqNum()">getLogSeqNum</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getMvcc()">getMvcc</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getNonce()">getNonce</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getNonceGroup()">getNonceGroup</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getOriginatingClusterId()">getOriginatingClusterId</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getOrigLogSeqNum()">getOrigLogSeqNum</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getReplicationScopes()">getReplicationScopes</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getTablename()">getTablename</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getWriteEntry()">getWriteEntry</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getWriteTime()">getWriteTime</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#hashCode()">hashCode</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#init(byte[],%20org.apache.hadoop.hbase.TableName,%20long,%20long,%20java.util.List,%20long,%20long,%20org.apache.hadoop.hbase.regionserver.MultiVersionConcurrencyControl,%20java.util.NavigableMap)">init</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#readFieldsFromPb(org.apache.hadoop.hbase.protobuf.generated.WALProtos.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALCellCodec.ByteStringUncompressor)">readFieldsFromPb</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#readOlderScopes(java.util.NavigableMap)">readOlderScopes</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#serializeReplicationScope(boolean)">serializeReplicationScope</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#setCompressionContext(org.apache.hadoop.hbase.regionserver.wal.CompressionContext)">setCompressionContext</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#setOrigLogSeqNum(long)">setOrigLogSeqNum</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#setSequenceId(long)">setSequenceId</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#setWriteEntry(org.apache.hadoop.hbase.regionserver.MultiVersionConcurrencyControl.WriteEntry)">setWriteEntry</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#toString()">toString</a>, <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#toStringMap()">toStringMap</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -242,7 +242,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/HLog
 <ul class="blockList">
 <li class="blockList">
 <h4>ReplayHLogKey</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ReplayHLogKey.html#line.35">ReplayHLogKey</a>(byte[]&nbsp;encodedRegionName,
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ReplayHLogKey.html#line.34">ReplayHLogKey</a>(byte[]&nbsp;encodedRegionName,
              <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tablename,
              long&nbsp;now,
              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&gt;&nbsp;clusterIds,
@@ -257,7 +257,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/HLog
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ReplayHLogKey</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ReplayHLogKey.html#line.41">ReplayHLogKey</a>(byte[]&nbsp;encodedRegionName,
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ReplayHLogKey.html#line.40">ReplayHLogKey</a>(byte[]&nbsp;encodedRegionName,
              <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tablename,
              long&nbsp;logSeqNum,
              long&nbsp;now,
@@ -281,17 +281,14 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/HLog
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getSequenceId</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ReplayHLogKey.html#line.52">getSequenceId</a>()
-                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/ReplayHLogKey.html#line.51">getSequenceId</a>()</pre>
 <div class="block">Returns the original sequence id</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SequenceId.html#getSequenceId()">getSequenceId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SequenceId.html" title="interface in org.apache.hadoop.hbase.regionserver">SequenceId</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html#getSequenceId()">getSequenceId</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a></code></dd>
-<dt><span class="strong">Returns:</span></dt><dd>long the new assigned sequence number</dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dt><span class="strong">Returns:</span></dt><dd>long the new assigned sequence number</dd></dl>
 </li>
 </ul>
 </li>
@@ -361,6 +358,6 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/HLog
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

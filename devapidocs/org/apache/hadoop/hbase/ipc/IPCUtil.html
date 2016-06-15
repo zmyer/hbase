@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/ipc/HBaseRPCErrorHandler.html" title="interface in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/ipc/IOExceptionConverter.html" title="interface in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.CellScannerButNoCodecException.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -96,7 +96,7 @@
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public class <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.57">IPCUtil</a>
+public class <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.53">IPCUtil</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Utility to help ipc'ing.</div>
 </li>
@@ -198,11 +198,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#buildCellBlock(org.apache.hadoop.hbase.codec.Codec,%20org.apache.hadoop.io.compress.CompressionCodec,%20org.apache.hadoop.hbase.CellScanner,%20org.apache.hadoop.hbase.io.BoundedByteBufferPool)">buildCellBlock</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
-                            org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
-                            <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
-                            <a href="../../../../../org/apache/hadoop/hbase/io/BoundedByteBufferPool.html" title="class in org.apache.hadoop.hbase.io">BoundedByteBufferPool</a>&nbsp;pool)</code>
+<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/io/ByteBufferListOutputStream.html" title="class in org.apache.hadoop.hbase.io">ByteBufferListOutputStream</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#buildCellBlockStream(org.apache.hadoop.hbase.codec.Codec,%20org.apache.hadoop.io.compress.CompressionCodec,%20org.apache.hadoop.hbase.CellScanner,%20org.apache.hadoop.hbase.io.ByteBufferPool)">buildCellBlockStream</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
+                                        org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
+                                        <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+                                        <a href="../../../../../org/apache/hadoop/hbase/io/ByteBufferPool.html" title="class in org.apache.hadoop.hbase.io">ByteBufferPool</a>&nbsp;pool)</code>
 <div class="block">Puts CellScanner Cells into a cell block using passed in <code>codec</code> and/or
  <code>compressor</code>.</div>
 </td>
@@ -215,28 +215,25 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#createCellScanner(org.apache.hadoop.hbase.codec.Codec,%20org.apache.hadoop.io.compress.CompressionCodec,%20byte[],%20int,%20int)">createCellScanner</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
-                                  org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
-                                  byte[]&nbsp;cellBlock,
-                                  int&nbsp;offset,
-                                  int&nbsp;length)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#createCellScannerReusingBuffers(org.apache.hadoop.hbase.codec.Codec,%20org.apache.hadoop.io.compress.CompressionCodec,%20java.nio.ByteBuffer)">createCellScannerReusingBuffers</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
+                                                              org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
+                                                              <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;cellBlock)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#getDelimitedMessageAsByteBuffer(com.google.protobuf.Message)">getDelimitedMessageAsByteBuffer</a></strong>(com.google.protobuf.Message&nbsp;m)</code>&nbsp;</td>
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#decompress(org.apache.hadoop.io.compress.CompressionCodec,%20java.nio.ByteBuffer)">decompress</a></strong>(org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;cellBlock)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#getTotalSizeWhenWrittenDelimited(com.google.protobuf.Message...)">getTotalSizeWhenWrittenDelimited</a></strong>(com.google.protobuf.Message...&nbsp;messages)</code>&nbsp;</td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#encodeCellsTo(org.apache.hadoop.hbase.io.ByteBufferOutputStream,%20org.apache.hadoop.hbase.CellScanner,%20org.apache.hadoop.hbase.codec.Codec,%20org.apache.hadoop.io.compress.CompressionCodec)">encodeCellsTo</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/io/ByteBufferOutputStream.html" title="class in org.apache.hadoop.hbase.io">ByteBufferOutputStream</a>&nbsp;bbos,
+                          <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+                          <a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
+                          org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#readChunked(java.io.DataInput,%20byte[],%20int,%20int)">readChunked</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in,
-                      byte[]&nbsp;dest,
-                      int&nbsp;offset,
-                      int&nbsp;len)</code>
-<div class="block">Read in chunks of 8K (HBASE-7239)</div>
-</td>
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.html#getTotalSizeWhenWrittenDelimited(com.google.protobuf.Message...)">getTotalSizeWhenWrittenDelimited</a></strong>(com.google.protobuf.Message...&nbsp;messages)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
@@ -283,7 +280,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>public static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.59">LOG</a></pre>
+<pre>public static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.55">LOG</a></pre>
 </li>
 </ul>
 <a name="cellBlockDecompressionMultiplier">
@@ -292,7 +289,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cellBlockDecompressionMultiplier</h4>
-<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.63">cellBlockDecompressionMultiplier</a></pre>
+<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.59">cellBlockDecompressionMultiplier</a></pre>
 <div class="block">How much we think the decompressor will expand the original compressed content.</div>
 </li>
 </ul>
@@ -302,7 +299,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cellBlockBuildingInitialBufferSize</h4>
-<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.64">cellBlockBuildingInitialBufferSize</a></pre>
+<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.60">cellBlockBuildingInitialBufferSize</a></pre>
 </li>
 </ul>
 <a name="conf">
@@ -311,7 +308,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>conf</h4>
-<pre>private final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.65">conf</a></pre>
+<pre>private final&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.61">conf</a></pre>
 </li>
 </ul>
 </li>
@@ -328,7 +325,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>IPCUtil</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.67">IPCUtil</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.63">IPCUtil</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 </li>
 </ul>
 </li>
@@ -345,42 +342,56 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>buildCellBlock</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.96">buildCellBlock</a>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.92">buildCellBlock</a>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
                         org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
                         <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner)
                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Puts CellScanner Cells into a cell block using passed in <code>codec</code> and/or
  <code>compressor</code>.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>codec</code> - </dd><dd><code>compressor</code> - </dd><dd><code>cellScanner</code> - </dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>codec</code> - to use for encoding</dd><dd><code>compressor</code> - to use for encoding</dd><dd><code>cellScanner</code> - to encode</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Null or byte buffer filled with a cellblock filled with passed-in Cells encoded using
- passed in <code>codec</code> and/or <code>compressor</code>; the returned buffer has been
- flipped and is ready for reading.  Use limit to find total size.</dd>
+   passed in <code>codec</code> and/or <code>compressor</code>; the returned buffer has been
+   flipped and is ready for reading.  Use limit to find total size.</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if encoding the cells fail</dd></dl>
 </li>
 </ul>
-<a name="buildCellBlock(org.apache.hadoop.hbase.codec.Codec, org.apache.hadoop.io.compress.CompressionCodec, org.apache.hadoop.hbase.CellScanner, org.apache.hadoop.hbase.io.BoundedByteBufferPool)">
+<a name="encodeCellsTo(org.apache.hadoop.hbase.io.ByteBufferOutputStream, org.apache.hadoop.hbase.CellScanner, org.apache.hadoop.hbase.codec.Codec, org.apache.hadoop.io.compress.CompressionCodec)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>buildCellBlock</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.118">buildCellBlock</a>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
-                        org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
-                        <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
-                        <a href="../../../../../org/apache/hadoop/hbase/io/BoundedByteBufferPool.html" title="class in org.apache.hadoop.hbase.io">BoundedByteBufferPool</a>&nbsp;pool)
-                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<h4>encodeCellsTo</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.116">encodeCellsTo</a>(<a href="../../../../../org/apache/hadoop/hbase/io/ByteBufferOutputStream.html" title="class in org.apache.hadoop.hbase.io">ByteBufferOutputStream</a>&nbsp;bbos,
+                 <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+                 <a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
+                 org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor)
+                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="buildCellBlockStream(org.apache.hadoop.hbase.codec.Codec, org.apache.hadoop.io.compress.CompressionCodec, org.apache.hadoop.hbase.CellScanner, org.apache.hadoop.hbase.io.ByteBufferPool)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildCellBlockStream</h4>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/io/ByteBufferListOutputStream.html" title="class in org.apache.hadoop.hbase.io">ByteBufferListOutputStream</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.158">buildCellBlockStream</a>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
+                                              org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
+                                              <a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;cellScanner,
+                                              <a href="../../../../../org/apache/hadoop/hbase/io/ByteBufferPool.html" title="class in org.apache.hadoop.hbase.io">ByteBufferPool</a>&nbsp;pool)
+                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Puts CellScanner Cells into a cell block using passed in <code>codec</code> and/or
  <code>compressor</code>.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>codec</code> - </dd><dd><code>compressor</code> - </dd><dd><code>cellScanner</code> - </dd><dd><code>pool</code> - Pool of ByteBuffers to make use of. Can be null and then we'll allocate
- our own ByteBuffer.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>codec</code> - to use for encoding</dd><dd><code>compressor</code> - to use for encoding</dd><dd><code>cellScanner</code> - to encode</dd><dd><code>pool</code> - Pool of ByteBuffers to make use of.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Null or byte buffer filled with a cellblock filled with passed-in Cells encoded using
- passed in <code>codec</code> and/or <code>compressor</code>; the returned buffer has been
- flipped and is ready for reading.  Use limit to find total size. If <code>pool</code> was not
- null, then this returned ByteBuffer came from there and should be returned to the pool when
- done.</dd>
+   passed in <code>codec</code> and/or <code>compressor</code>; the returned buffer has been
+   flipped and is ready for reading.  Use limit to find total size. If <code>pool</code> was not
+   null, then this returned ByteBuffer came from there and should be returned to the pool when
+   done.</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if encoding the cells fail</dd></dl>
 </li>
 </ul>
 <a name="createCellScanner(org.apache.hadoop.hbase.codec.Codec, org.apache.hadoop.io.compress.CompressionCodec, byte[])">
@@ -389,46 +400,44 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createCellScanner</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.180">createCellScanner</a>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.182">createCellScanner</a>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
                             org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
                             byte[]&nbsp;cellBlock)
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>codec</code> - </dd><dd><code>cellBlock</code> - </dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>codec</code> - to use for cellblock</dd><dd><code>cellBlock</code> - to encode</dd>
 <dt><span class="strong">Returns:</span></dt><dd>CellScanner to work against the content of <code>cellBlock</code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if encoding fails</dd></dl>
 </li>
 </ul>
-<a name="createCellScanner(org.apache.hadoop.hbase.codec.Codec, org.apache.hadoop.io.compress.CompressionCodec, byte[], int, int)">
+<a name="createCellScannerReusingBuffers(org.apache.hadoop.hbase.codec.Codec, org.apache.hadoop.io.compress.CompressionCodec, java.nio.ByteBuffer)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>createCellScanner</h4>
-<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.194">createCellScanner</a>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
-                            org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
-                            byte[]&nbsp;cellBlock,
-                            int&nbsp;offset,
-                            int&nbsp;length)
-                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>codec</code> - </dd><dd><code>cellBlock</code> - </dd><dd><code>offset</code> - </dd><dd><code>length</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd>CellScanner to work against the content of <code>cellBlock</code></dd>
+<h4>createCellScannerReusingBuffers</h4>
+<pre>public&nbsp;<a href="../../../../../org/apache/hadoop/hbase/CellScanner.html" title="interface in org.apache.hadoop.hbase">CellScanner</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.204">createCellScannerReusingBuffers</a>(<a href="../../../../../org/apache/hadoop/hbase/codec/Codec.html" title="interface in org.apache.hadoop.hbase.codec">Codec</a>&nbsp;codec,
+                                          org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
+                                          <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;cellBlock)
+                                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>codec</code> - to use for cellblock</dd><dd><code>cellBlock</code> - ByteBuffer containing the cells written by the Codec. The buffer should be
+   position()'ed at the start of the cell block and limit()'ed at the end.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>CellScanner to work against the content of <code>cellBlock</code>.
+   All cells created out of the CellScanner will share the same ByteBuffer being passed.</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if cell encoding fails</dd></dl>
 </li>
 </ul>
-<a name="getDelimitedMessageAsByteBuffer(com.google.protobuf.Message)">
+<a name="decompress(org.apache.hadoop.io.compress.CompressionCodec, java.nio.ByteBuffer)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getDelimitedMessageAsByteBuffer</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.235">getDelimitedMessageAsByteBuffer</a>(com.google.protobuf.Message&nbsp;m)
-                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>m</code> - Message to serialize delimited; i.e. w/ a vint of its size preceeding its
- serialization.</dd>
-<dt><span class="strong">Returns:</span></dt><dd>The passed in Message serialized with delimiter.  Return null if <code>m</code> is null</dd>
-<dt><span class="strong">Throws:</span></dt>
+<h4>decompress</h4>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.215">decompress</a>(org.apache.hadoop.io.compress.CompressionCodec&nbsp;compressor,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;cellBlock)
+                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -438,16 +447,16 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>write</h4>
-<pre>public static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.258">write</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;dos,
+<pre>public static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.248">write</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;dos,
         com.google.protobuf.Message&nbsp;header,
         com.google.protobuf.Message&nbsp;param,
         <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;cellBlock)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Write out header, param, and cell block if there is one.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>dos</code> - </dd><dd><code>header</code> - </dd><dd><code>param</code> - </dd><dd><code>cellBlock</code> - </dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>dos</code> - Stream to write into</dd><dd><code>header</code> - to write</dd><dd><code>param</code> - to write</dd><dd><code>cellBlock</code> - to write</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Total number of bytes written.</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if write action fails</dd></dl>
 </li>
 </ul>
 <a name="write(java.io.OutputStream, com.google.protobuf.Message, com.google.protobuf.Message, java.nio.ByteBuffer, int)">
@@ -456,7 +465,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>write</h4>
-<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.269">write</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;dos,
+<pre>private static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.261">write</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;dos,
         com.google.protobuf.Message&nbsp;header,
         com.google.protobuf.Message&nbsp;param,
         <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;cellBlock,
@@ -466,30 +475,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
-<a name="readChunked(java.io.DataInput, byte[], int, int)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>readChunked</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.290">readChunked</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in,
-               byte[]&nbsp;dest,
-               int&nbsp;offset,
-               int&nbsp;len)
-                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Read in chunks of 8K (HBASE-7239)</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>in</code> - </dd><dd><code>dest</code> - </dd><dd><code>offset</code> - </dd><dd><code>len</code> - </dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
-</li>
-</ul>
 <a name="getTotalSizeWhenWrittenDelimited(com.google.protobuf.Message...)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getTotalSizeWhenWrittenDelimited</h4>
-<pre>public static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.302">getTotalSizeWhenWrittenDelimited</a>(com.google.protobuf.Message...&nbsp;messages)</pre>
+<pre>public static&nbsp;int&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/IPCUtil.html#line.281">getTotalSizeWhenWrittenDelimited</a>(com.google.protobuf.Message...&nbsp;messages)</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>Size on the wire when the two messages are written with writeDelimitedTo</dd></dl>
 </li>
 </ul>
@@ -519,7 +511,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/ipc/HBaseRPCErrorHandler.html" title="interface in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/ipc/IOExceptionConverter.html" title="interface in org.apache.hadoop.hbase.ipc"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/ipc/IPCUtil.CellScannerButNoCodecException.html" title="class in org.apache.hadoop.hbase.ipc"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -560,6 +552,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

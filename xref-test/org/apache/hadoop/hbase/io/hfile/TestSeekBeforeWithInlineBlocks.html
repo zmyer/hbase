@@ -47,7 +47,7 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.KeyValue;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.fs.HFileSystem;
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.regionserver.BloomType;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.regionserver.StoreFile;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.regionserver.StoreFileWriter;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.IOTests;
 <a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.MediumTests;
 <a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.BloomFilterFactory;
@@ -125,17 +125,17 @@
 <a class="jxr_linenumber" name="115" href="#115">115</a>                                 .withBlockSize(DATA_BLOCK_SIZE)
 <a class="jxr_linenumber" name="116" href="#116">116</a>                                 .build();
 <a class="jxr_linenumber" name="117" href="#117">117</a>             
-<a class="jxr_linenumber" name="118" href="#118">118</a>             StoreFile.Writer storeFileWriter = 
-<a class="jxr_linenumber" name="119" href="#119">119</a>                 <strong class="jxr_keyword">new</strong> StoreFile.WriterBuilder(conf, cacheConf, fs)
+<a class="jxr_linenumber" name="118" href="#118">118</a>             StoreFileWriter storeFileWriter =
+<a class="jxr_linenumber" name="119" href="#119">119</a>                 <strong class="jxr_keyword">new</strong> StoreFileWriter.Builder(conf, cacheConf, fs)
 <a class="jxr_linenumber" name="120" href="#120">120</a>               .withFilePath(hfilePath)
 <a class="jxr_linenumber" name="121" href="#121">121</a>               .withFileContext(meta)
 <a class="jxr_linenumber" name="122" href="#122">122</a>               .withBloomType(bloomType)
 <a class="jxr_linenumber" name="123" href="#123">123</a>               .build();
 <a class="jxr_linenumber" name="124" href="#124">124</a>             
 <a class="jxr_linenumber" name="125" href="#125">125</a>             <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; NUM_KV; i++) {
-<a class="jxr_linenumber" name="126" href="#126">126</a>               byte[] row = TestHFileWriterV2.randomOrderedKey(RAND, i);
-<a class="jxr_linenumber" name="127" href="#127">127</a>               byte[] qual = TestHFileWriterV2.randomRowOrQualifier(RAND);
-<a class="jxr_linenumber" name="128" href="#128">128</a>               byte[] value = TestHFileWriterV2.randomValue(RAND);
+<a class="jxr_linenumber" name="126" href="#126">126</a>               byte[] row = RandomKeyValueUtil.randomOrderedKey(RAND, i);
+<a class="jxr_linenumber" name="127" href="#127">127</a>               byte[] qual = RandomKeyValueUtil.randomRowOrQualifier(RAND);
+<a class="jxr_linenumber" name="128" href="#128">128</a>               byte[] value = RandomKeyValueUtil.randomValue(RAND);
 <a class="jxr_linenumber" name="129" href="#129">129</a>               KeyValue kv = <strong class="jxr_keyword">new</strong> KeyValue(row, FAM, qual, value);
 <a class="jxr_linenumber" name="130" href="#130">130</a>   
 <a class="jxr_linenumber" name="131" href="#131">131</a>               storeFileWriter.append(kv);

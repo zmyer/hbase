@@ -86,10 +86,10 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.BaseConfigurable</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/BaseConfigurable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.BaseConfigurable</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.security.UserProvider</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">org.apache.hadoop.hbase.security.UserProvider</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.mapreduce.HadoopSecurityEnabledUserProviderForTesting</li>
@@ -110,8 +110,8 @@
 <hr>
 <br>
 <pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/HadoopSecurityEnabledUserProviderForTesting.html#line.30">HadoopSecurityEnabledUserProviderForTesting</a>
-extends org.apache.hadoop.hbase.security.UserProvider</pre>
-<div class="block">A <code>UserProvider</code> that always says hadoop security is enabled, regardless of the underlying
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">UserProvider</a></pre>
+<div class="block">A <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security"><code>UserProvider</code></a> that always says hadoop security is enabled, regardless of the underlying
  configuration. HBase security is <i>not enabled</i> as this is used to determine if SASL is used
  to do the authentication, which requires a Kerberos ticket (which we currently don't have in
  tests).
@@ -165,15 +165,15 @@ extends org.apache.hadoop.hbase.security.UserProvider</pre>
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.security.UserProvider">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.security.UserProvider</h3>
-<code>create, getCurrent, getCurrentUserName, instantiate, login, setConf, setUserProviderForTesting</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.security.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">UserProvider</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true#create(org.apache.hadoop.security.UserGroupInformation)" title="class or interface in org.apache.hadoop.hbase.security">create</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true#getCurrent()" title="class or interface in org.apache.hadoop.hbase.security">getCurrent</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true#getCurrentUserName()" title="class or interface in org.apache.hadoop.hbase.security">getCurrentUserName</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true#instantiate(org.apache.hadoop.conf.Configuration)" title="class or interface in org.apache.hadoop.hbase.security">instantiate</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true#login(java.lang.String,%20java.lang.String,%20java.lang.String)" title="class or interface in org.apache.hadoop.hbase.security">login</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true#setConf(org.apache.hadoop.conf.Configuration)" title="class or interface in org.apache.hadoop.hbase.security">setConf</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true#setUserProviderForTesting(org.apache.hadoop.conf.Configuration,%20java.lang.Class)" title="class or interface in org.apache.hadoop.hbase.security">setUserProviderForTesting</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.BaseConfigurable">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.BaseConfigurable</h3>
-<code>getConf</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/BaseConfigurable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">BaseConfigurable</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/BaseConfigurable.html?is-external=true#getConf()" title="class or interface in org.apache.hadoop.hbase">getConf</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -222,7 +222,7 @@ extends org.apache.hadoop.hbase.security.UserProvider</pre>
 <pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/HadoopSecurityEnabledUserProviderForTesting.html#line.33">isHBaseSecurityEnabled</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>isHBaseSecurityEnabled</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.security.UserProvider</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true#isHBaseSecurityEnabled()" title="class or interface in org.apache.hadoop.hbase.security">isHBaseSecurityEnabled</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">UserProvider</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -235,7 +235,7 @@ extends org.apache.hadoop.hbase.security.UserProvider</pre>
 <pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/HadoopSecurityEnabledUserProviderForTesting.html#line.38">isHadoopSecurityEnabled</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>isHadoopSecurityEnabled</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.security.UserProvider</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true#isHadoopSecurityEnabled()" title="class or interface in org.apache.hadoop.hbase.security">isHadoopSecurityEnabled</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/UserProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">UserProvider</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -306,6 +306,6 @@ extends org.apache.hadoop.hbase.security.UserProvider</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

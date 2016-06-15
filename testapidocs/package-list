@@ -6,9 +6,11 @@ org.apache.hadoop.hbase.chaos.policies
 org.apache.hadoop.hbase.chaos.util
 org.apache.hadoop.hbase.client
 org.apache.hadoop.hbase.client.replication
+org.apache.hadoop.hbase.client.rsgroup
 org.apache.hadoop.hbase.conf
 org.apache.hadoop.hbase.coprocessor
 org.apache.hadoop.hbase.errorhandling
+org.apache.hadoop.hbase.exceptions
 org.apache.hadoop.hbase.filter
 org.apache.hadoop.hbase.http
 org.apache.hadoop.hbase.http.conf
@@ -17,6 +19,7 @@ org.apache.hadoop.hbase.http.log
 org.apache.hadoop.hbase.http.resource
 org.apache.hadoop.hbase.http.ssl
 org.apache.hadoop.hbase.io
+org.apache.hadoop.hbase.io.asyncfs
 org.apache.hadoop.hbase.io.crypto
 org.apache.hadoop.hbase.io.crypto.aes
 org.apache.hadoop.hbase.io.encoding
@@ -34,10 +37,12 @@ org.apache.hadoop.hbase.namespace
 org.apache.hadoop.hbase.nio
 org.apache.hadoop.hbase.quotas
 org.apache.hadoop.hbase.regionserver
+org.apache.hadoop.hbase.regionserver.throttle
 org.apache.hadoop.hbase.regionserver.wal
 org.apache.hadoop.hbase.replication
 org.apache.hadoop.hbase.rest
 org.apache.hadoop.hbase.rest.client
+org.apache.hadoop.hbase.rsgroup
 org.apache.hadoop.hbase.security
 org.apache.hadoop.hbase.snapshot
 org.apache.hadoop.hbase.spark
@@ -51,3 +56,5 @@ org.apache.hadoop.hbase.util.hbck
 org.apache.hadoop.hbase.util.number
 org.apache.hadoop.hbase.wal
 org.apache.hadoop.hbase.zookeeper
+org.apache.hbase.archetypes.exemplars.client
+org.apache.hbase.archetypes.exemplars.shaded_client

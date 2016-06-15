@@ -125,6 +125,10 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.rsgroup">org.apache.hadoop.hbase.rsgroup</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -249,16 +253,16 @@
 <td class="colLast"><span class="strong">TableNamespaceManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/TableNamespaceManager.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
-<td class="colLast"><span class="strong">AssignmentManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html#server">server</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">ClusterSchemaServiceImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/ClusterSchemaServiceImpl.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
 <td class="colLast"><span class="strong">RegionStates.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionStates.html#server">server</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
-<td class="colLast"><span class="strong">CatalogJanitor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/CatalogJanitor.html#services">services</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">AssignmentManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html#server">server</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
@@ -266,7 +270,15 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">MasterWalManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterWalManager.html#services">services</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
 <td class="colLast"><span class="strong">MasterFileSystem.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterFileSystem.html#services">services</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">CatalogJanitor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/CatalogJanitor.html#services">services</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -291,17 +303,24 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>private static void</code></td>
+<td class="colLast"><span class="strong">TableNamespaceManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/TableNamespaceManager.html#block(org.apache.hadoop.hbase.master.MasterServices,%20long)">block</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services,
+          long&nbsp;procId)</code>
+<div class="block">An ugly utility to be removed when refactor TableNamespaceManager.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><span class="strong">TableNamespaceManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/TableNamespaceManager.html#createNamespaceTable(org.apache.hadoop.hbase.master.MasterServices)">createNamespaceTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>(package private) <a href="../../../../../../org/apache/hadoop/hbase/master/ServerManager.html" title="class in org.apache.hadoop.hbase.master">ServerManager</a></code></td>
 <td class="colLast"><span class="strong">HMaster.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html#createServerManager(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices)">createServerManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;master,
                                       <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>
 <div class="block">Create a <a href="../../../../../../org/apache/hadoop/hbase/master/ServerManager.html" title="class in org.apache.hadoop.hbase.master"><code>ServerManager</code></a> instance.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;</code></td>
 <td class="colLast"><span class="strong">AssignmentManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html#replicaRegionsNotRecordedInMeta(java.util.Set,%20org.apache.hadoop.hbase.master.MasterServices)">replicaRegionsNotRecordedInMeta</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regionsRecordedInMeta,
                                                               <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master)</code>
@@ -309,7 +328,7 @@
  not recorded in meta yet.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">LoadBalancer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#setMasterServices(org.apache.hadoop.hbase.master.MasterServices)">setMasterServices</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>
 <div class="block">Set the master service.</div>
@@ -339,6 +358,9 @@
                             <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/ClusterSchemaServiceImpl.html#ClusterSchemaServiceImpl(org.apache.hadoop.hbase.master.MasterServices)">ClusterSchemaServiceImpl</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.MasterEnvironment.html#MasterCoprocessorHost.MasterEnvironment(java.lang.Class,%20org.apache.hadoop.hbase.Coprocessor,%20int,%20int,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.master.MasterServices)">MasterCoprocessorHost.MasterEnvironment</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;implClass,
                                                                               <a href="../../../../../../org/apache/hadoop/hbase/Coprocessor.html" title="interface in org.apache.hadoop.hbase">Coprocessor</a>&nbsp;impl,
                                                                               int&nbsp;priority,
@@ -346,32 +368,40 @@
                                                                               org.apache.hadoop.conf.Configuration&nbsp;conf,
                                                                               <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterCoprocessorHost.html#MasterCoprocessorHost(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.conf.Configuration)">MasterCoprocessorHost</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services,
                                           org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterFileSystem.html#MasterFileSystem(org.apache.hadoop.hbase.master.MasterServices)">MasterFileSystem</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterFileSystem.html#MasterFileSystem(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices)">MasterFileSystem</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;master,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterWalManager.html#MasterWalManager(org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.master.MasterServices)">MasterWalManager</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+                                org.apache.hadoop.fs.FileSystem&nbsp;fs,
+                                org.apache.hadoop.fs.Path&nbsp;rootDir,
                                 <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterWalManager.html#MasterWalManager(org.apache.hadoop.hbase.master.MasterServices)">MasterWalManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/RegionStates.html#RegionStates(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.master.TableStateManager,%20org.apache.hadoop.hbase.master.ServerManager,%20org.apache.hadoop.hbase.master.RegionStateStore)">RegionStates</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master,
                         <a href="../../../../../../org/apache/hadoop/hbase/master/TableStateManager.html" title="class in org.apache.hadoop.hbase.master">TableStateManager</a>&nbsp;tableStateManager,
                         <a href="../../../../../../org/apache/hadoop/hbase/master/ServerManager.html" title="class in org.apache.hadoop.hbase.master">ServerManager</a>&nbsp;serverManager,
                         <a href="../../../../../../org/apache/hadoop/hbase/master/RegionStateStore.html" title="class in org.apache.hadoop.hbase.master">RegionStateStore</a>&nbsp;regionStateStore)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/ServerManager.html#ServerManager(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices)">ServerManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;master,
                           <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services)</code>
 <div class="block">Constructor.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/ServerManager.html#ServerManager(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices,%20boolean)">ServerManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;master,
                           <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services,
                           boolean&nbsp;connect)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/SplitLogManager.html#SplitLogManager(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.Stoppable,%20org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.ServerName)">SplitLogManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
                               org.apache.hadoop.conf.Configuration&nbsp;conf,
                               <a href="../../../../../../org/apache/hadoop/hbase/Stoppable.html" title="interface in org.apache.hadoop.hbase">Stoppable</a>&nbsp;stopper,
@@ -380,10 +410,10 @@
 <div class="block">Its OK to construct this object even when region-servers are not online.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/TableNamespaceManager.html#TableNamespaceManager(org.apache.hadoop.hbase.master.MasterServices)">TableNamespaceManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/TableStateManager.html#TableStateManager(org.apache.hadoop.hbase.master.MasterServices)">TableStateManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master)</code>&nbsp;</td>
 </tr>
 </tbody>
@@ -405,12 +435,12 @@
 <td class="colLast"><span class="strong">StochasticLoadBalancer.LocalityBasedCandidateGenerator.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/StochasticLoadBalancer.LocalityBasedCandidateGenerator.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
-<td class="colLast"><span class="strong">RegionLocationFinder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/RegionLocationFinder.html#services">services</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
 <td class="colLast"><span class="strong">BaseLoadBalancer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#services">services</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">RegionLocationFinder.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/RegionLocationFinder.html#services">services</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
@@ -480,14 +510,6 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
-<td class="colLast"><span class="strong">CreateTableHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/CreateTableHandler.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
-<td class="colLast"><span class="strong">TableEventHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
 <td class="colLast"><span class="strong">EnableTableHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/EnableTableHandler.html#services">services</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
@@ -499,32 +521,19 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/CreateTableHandler.html#CreateTableHandler(org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterFileSystem,%20org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.conf.Configuration,%20org.apache.hadoop.hbase.HRegionInfo[],%20org.apache.hadoop.hbase.master.MasterServices)">CreateTableHandler</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/master/MasterFileSystem.html" title="class in org.apache.hadoop.hbase.master">MasterFileSystem</a>&nbsp;fileSystemManager,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor,
-                                    org.apache.hadoop.conf.Configuration&nbsp;conf,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>[]&nbsp;newRegions,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/DispatchMergingRegionHandler.html#DispatchMergingRegionHandler(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.master.CatalogJanitor,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.HRegionInfo,%20boolean)">DispatchMergingRegionHandler</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/DispatchMergingRegionHandler.html#DispatchMergingRegionHandler(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.master.CatalogJanitor,%20org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.HRegionInfo,%20boolean,%20org.apache.hadoop.hbase.security.User)">DispatchMergingRegionHandler</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services,
                                                         <a href="../../../../../../org/apache/hadoop/hbase/master/CatalogJanitor.html" title="class in org.apache.hadoop.hbase.master">CatalogJanitor</a>&nbsp;catalogJanitor,
                                                         <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region_a,
                                                         <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region_b,
-                                                        boolean&nbsp;forcible)</code>&nbsp;</td>
+                                                        boolean&nbsp;forcible,
+                                                        <a href="../../../../../../org/apache/hadoop/hbase/security/User.html" title="class in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/EnableTableHandler.html#EnableTableHandler(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.master.AssignmentManager,%20org.apache.hadoop.hbase.master.TableLockManager,%20boolean)">EnableTableHandler</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services,
                                     <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                     <a href="../../../../../../org/apache/hadoop/hbase/master/AssignmentManager.html" title="class in org.apache.hadoop.hbase.master">AssignmentManager</a>&nbsp;assignmentManager,
                                     <a href="../../../../../../org/apache/hadoop/hbase/master/TableLockManager.html" title="class in org.apache.hadoop.hbase.master">TableLockManager</a>&nbsp;tableLockManager,
                                     boolean&nbsp;skipTableStateCheck)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/handler/TableEventHandler.html#TableEventHandler(org.apache.hadoop.hbase.executor.EventType,%20org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.Server,%20org.apache.hadoop.hbase.master.MasterServices)">TableEventHandler</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/executor/EventType.html" title="enum in org.apache.hadoop.hbase.executor">EventType</a>&nbsp;eventType,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/Server.html" title="interface in org.apache.hadoop.hbase">Server</a>&nbsp;server,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -583,6 +592,14 @@
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
 <td class="colLast"><span class="strong">MasterProcedureEnv.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html#master">master</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">MasterProcedureEnv.WALStoreLeaseRecovery.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.WALStoreLeaseRecovery.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">MasterProcedureEnv.MasterProcedureStoreListener.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.MasterProcedureStoreListener.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -605,6 +622,12 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.MasterProcedureStoreListener.html#MasterProcedureEnv.MasterProcedureStoreListener(org.apache.hadoop.hbase.master.MasterServices)">MasterProcedureEnv.MasterProcedureStoreListener</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.WALStoreLeaseRecovery.html#MasterProcedureEnv.WALStoreLeaseRecovery(org.apache.hadoop.hbase.master.MasterServices)">MasterProcedureEnv.WALStoreLeaseRecovery</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.html#MasterProcedureEnv(org.apache.hadoop.hbase.master.MasterServices)">MasterProcedureEnv</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master)</code>&nbsp;</td>
 </tr>
 </tbody>
@@ -622,12 +645,12 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
-<td class="colLast"><span class="strong">TakeSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TakeSnapshotHandler.html#master">master</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
 <td class="colLast"><span class="strong">SnapshotManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotManager.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">TakeSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TakeSnapshotHandler.html#master">master</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
@@ -656,28 +679,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/CloneSnapshotHandler.html#CloneSnapshotHandler(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">CloneSnapshotHandler</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices,
-                                        org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
-                                        <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;hTableDescriptor)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/DisabledTableSnapshotHandler.html#DisabledTableSnapshotHandler(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.master.MasterServices)">DisabledTableSnapshotHandler</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
                                                         <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/EnabledTableSnapshotHandler.html#EnabledTableSnapshotHandler(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.master.snapshot.SnapshotManager)">EnabledTableSnapshotHandler</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
                                                       <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master,
                                                       <a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotManager.html" title="class in org.apache.hadoop.hbase.master.snapshot">SnapshotManager</a>&nbsp;manager)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/MasterSnapshotVerifier.html#MasterSnapshotVerifier(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.fs.Path)">MasterSnapshotVerifier</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;services,
                                             org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
                                             org.apache.hadoop.fs.Path&nbsp;rootDir)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/RestoreSnapshotHandler.html#RestoreSnapshotHandler(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.HTableDescriptor)">RestoreSnapshotHandler</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices,
-                                            org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
-                                            <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/SnapshotManager.html#SnapshotManager(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.master.MetricsMaster,%20org.apache.hadoop.hbase.procedure.ProcedureCoordinator,%20org.apache.hadoop.hbase.executor.ExecutorService)">SnapshotManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master,
@@ -742,16 +755,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">MasterProcedureManagerHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/MasterProcedureManagerHost.html#initialize(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.master.MetricsMaster)">initialize</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master,
-                    <a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMaster.html" title="class in org.apache.hadoop.hbase.master">MetricsMaster</a>&nbsp;metricsMaster)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><span class="strong">MasterProcedureManager.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/MasterProcedureManager.html#initialize(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.master.MetricsMaster)">initialize</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master,
                     <a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMaster.html" title="class in org.apache.hadoop.hbase.master">MetricsMaster</a>&nbsp;metricsMaster)</code>
 <div class="block">Initialize a globally barriered procedure for master.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">MasterProcedureManagerHost.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/MasterProcedureManagerHost.html#initialize(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.master.MetricsMaster)">initialize</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master,
+                    <a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMaster.html" title="class in org.apache.hadoop.hbase.master">MetricsMaster</a>&nbsp;metricsMaster)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -813,6 +826,77 @@
 <tbody>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/quotas/MasterQuotaManager.html#MasterQuotaManager(org.apache.hadoop.hbase.master.MasterServices)">MasterQuotaManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.rsgroup">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a> in <a href="../../../../../../org/apache/hadoop/hbase/rsgroup/package-summary.html">org.apache.hadoop.hbase.rsgroup</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/rsgroup/package-summary.html">org.apache.hadoop.hbase.rsgroup</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">RSGroupAdminEndpoint.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminEndpoint.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">RSGroupAdminServer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminServer.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">RSGroupInfoManagerImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupInfoManagerImpl.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">RSGroupBasedLoadBalancer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupBasedLoadBalancer.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></code></td>
+<td class="colLast"><span class="strong">RSGroupInfoManagerImpl.RSGroupStartupWorker.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupInfoManagerImpl.RSGroupStartupWorker.html#masterServices">masterServices</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/hadoop/hbase/rsgroup/package-summary.html">org.apache.hadoop.hbase.rsgroup</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><span class="strong">RSGroupInfoManagerImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupInfoManagerImpl.html#createGroupTable(org.apache.hadoop.hbase.master.MasterServices)">createGroupTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">RSGroupBasedLoadBalancer.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupBasedLoadBalancer.html#setMasterServices(org.apache.hadoop.hbase.master.MasterServices)">setMasterServices</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/rsgroup/package-summary.html">org.apache.hadoop.hbase.rsgroup</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminServer.html#RSGroupAdminServer(org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.rsgroup.RSGroupInfoManager)">RSGroupAdminServer</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupInfoManager.html" title="interface in org.apache.hadoop.hbase.rsgroup">RSGroupInfoManager</a>&nbsp;RSGroupInfoManager)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupInfoManagerImpl.RSGroupStartupWorker.html#RSGroupInfoManagerImpl.RSGroupStartupWorker(org.apache.hadoop.hbase.rsgroup.RSGroupInfoManagerImpl,%20org.apache.hadoop.hbase.master.MasterServices,%20org.apache.hadoop.hbase.client.ClusterConnection)">RSGroupInfoManagerImpl.RSGroupStartupWorker</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupInfoManagerImpl.html" title="class in org.apache.hadoop.hbase.rsgroup">RSGroupInfoManagerImpl</a>&nbsp;groupInfoManager,
+                                                                                      <a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices,
+                                                                                      <a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;conn)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupInfoManagerImpl.html#RSGroupInfoManagerImpl(org.apache.hadoop.hbase.master.MasterServices)">RSGroupInfoManagerImpl</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;master)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -886,6 +970,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

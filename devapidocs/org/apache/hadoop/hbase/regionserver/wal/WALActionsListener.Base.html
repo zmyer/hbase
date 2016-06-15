@@ -174,8 +174,10 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/W
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#postAppend(long,%20long)">postAppend</a></strong>(long&nbsp;entryLen,
-                    long&nbsp;elapsedTimeMillis)</code>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#postAppend(long,%20long,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postAppend</a></strong>(long&nbsp;entryLen,
+                    long&nbsp;elapsedTimeMillis,
+                    <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                    <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>
 <div class="block">For notification post append to the writer.</div>
 </td>
 </tr>
@@ -224,8 +226,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/W
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">visitLogEntryBeforeWrite</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
-                                                <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">visitLogEntryBeforeWrite</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
                                                 <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</code>&nbsp;</td>
 </tr>
 </table>
@@ -392,38 +393,46 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/W
 </dl>
 </li>
 </ul>
-<a name="visitLogEntryBeforeWrite(org.apache.hadoop.hbase.HTableDescriptor, org.apache.hadoop.hbase.wal.WALKey, org.apache.hadoop.hbase.regionserver.wal.WALEdit)">
+<a name="visitLogEntryBeforeWrite(org.apache.hadoop.hbase.wal.WALKey, org.apache.hadoop.hbase.regionserver.wal.WALEdit)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>visitLogEntryBeforeWrite</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#line.139">visitLogEntryBeforeWrite</a>(<a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a>&nbsp;htd,
-                            <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
-                            <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#line.139">visitLogEntryBeforeWrite</a>(<a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+                            <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
+                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.HTableDescriptor,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">visitLogEntryBeforeWrite</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a></code></dd>
-<dd><code>logEdit</code> - TODO: Retire this in favor of <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>WALActionsListener.visitLogEntryBeforeWrite(HRegionInfo, WALKey, WALEdit)</code></a>
- It only exists to get scope when replicating.  Scope should be in the WALKey and not need
- us passing in a <code>htd</code>.</dd></dl>
+<dd><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">visitLogEntryBeforeWrite</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a></code></dd>
+<dd><code>logEdit</code> - TODO: Retire this in favor of
+          <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html#visitLogEntryBeforeWrite(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)"><code>WALActionsListener.visitLogEntryBeforeWrite(HRegionInfo, WALKey, WALEdit)</code></a> It only exists to get
+          scope when replicating. Scope should be in the WALKey and not need us passing in a
+          <code>htd</code>.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If failed to parse the WALEdit</dd></dl>
 </li>
 </ul>
-<a name="postAppend(long, long)">
+<a name="postAppend(long, long, org.apache.hadoop.hbase.wal.WALKey, org.apache.hadoop.hbase.regionserver.wal.WALEdit)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>postAppend</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#line.142">postAppend</a>(long&nbsp;entryLen,
-              long&nbsp;elapsedTimeMillis)</pre>
-<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html#postAppend(long,%20long)">WALActionsListener</a></code></strong></div>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#line.143">postAppend</a>(long&nbsp;entryLen,
+              long&nbsp;elapsedTimeMillis,
+              <a href="../../../../../../org/apache/hadoop/hbase/wal/WALKey.html" title="class in org.apache.hadoop.hbase.wal">WALKey</a>&nbsp;logKey,
+              <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;logEdit)
+                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html#postAppend(long,%20long,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">WALActionsListener</a></code></strong></div>
 <div class="block">For notification post append to the writer.  Used by metrics system at least.
  TODO: Combine this with above.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html#postAppend(long,%20long)">postAppend</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>entryLen</code> - approx length of cells in this append.</dd><dd><code>elapsedTimeMillis</code> - elapsed time in milliseconds.</dd></dl>
+<dd><code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html#postAppend(long,%20long,%20org.apache.hadoop.hbase.wal.WALKey,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit)">postAppend</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html" title="interface in org.apache.hadoop.hbase.regionserver.wal">WALActionsListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>entryLen</code> - approx length of cells in this append.</dd><dd><code>elapsedTimeMillis</code> - elapsed time in milliseconds.</dd><dd><code>logKey</code> - A WAL key</dd><dd><code>logEdit</code> - A WAL edit containing list of cells.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if any network or I/O error occurred</dd></dl>
 </li>
 </ul>
 <a name="postSync(long, int)">
@@ -432,7 +441,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/W
 <ul class="blockListLast">
 <li class="blockList">
 <h4>postSync</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#line.145">postSync</a>(long&nbsp;timeInNanos,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.Base.html#line.148">postSync</a>(long&nbsp;timeInNanos,
             int&nbsp;handlerSyncs)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALActionsListener.html#postSync(long,%20int)">WALActionsListener</a></code></strong></div>
 <div class="block">For notification post writer sync.  Used by metrics system at least.</div>
@@ -510,6 +519,6 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/W
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

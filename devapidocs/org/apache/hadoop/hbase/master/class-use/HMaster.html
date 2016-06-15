@@ -91,14 +91,10 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.procedure">org.apache.hadoop.hbase.master.procedure</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.tmpl.master">org.apache.hadoop.hbase.tmpl.master</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -200,7 +196,15 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
-<td class="colLast"><span class="strong">MetricsMasterWrapperImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMasterWrapperImpl.html#master">master</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">ClusterStatusPublisher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/ClusterStatusPublisher.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
+<td class="colLast"><span class="strong">ExpiredMobFileCleanerChore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/ExpiredMobFileCleanerChore.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
+<td class="colLast"><span class="strong">MasterMobCompactionThread.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterMobCompactionThread.html#master">master</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
@@ -208,15 +212,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
-<td class="colLast"><span class="strong">ClusterStatusPublisher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/ClusterStatusPublisher.html#master">master</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
-<td class="colLast"><span class="strong">MobCompactionChore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MobCompactionChore.html#master">master</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
-<td class="colLast"><span class="strong">ExpiredMobFileCleanerChore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/ExpiredMobFileCleanerChore.html#master">master</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">MetricsMasterWrapperImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMasterWrapperImpl.html#master">master</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
@@ -224,7 +220,11 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
-<td class="colLast"><span class="strong">MasterMobCompactionThread.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterMobCompactionThread.html#master">master</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">MobCompactionChore.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MobCompactionChore.html#master">master</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
+<td class="colLast"><span class="strong">HMaster.PeriodicDoMetrics.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.PeriodicDoMetrics.html#server">server</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -323,15 +323,19 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.PeriodicDoMetrics.html#HMaster.PeriodicDoMetrics(int,%20org.apache.hadoop.hbase.master.HMaster)">HMaster.PeriodicDoMetrics</a></strong>(int&nbsp;doMetricsInterval,
+                                                  <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;server)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterMobCompactionThread.html#MasterMobCompactionThread(org.apache.hadoop.hbase.master.HMaster)">MasterMobCompactionThread</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MasterRpcServices.html#MasterRpcServices(org.apache.hadoop.hbase.master.HMaster)">MasterRpcServices</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;m)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MetricsMasterWrapperImpl.html#MetricsMasterWrapperImpl(org.apache.hadoop.hbase.master.HMaster)">MetricsMasterWrapperImpl</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/MobCompactionChore.html#MobCompactionChore(org.apache.hadoop.hbase.master.HMaster,%20int)">MobCompactionChore</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master,
                                     int&nbsp;period)</code>&nbsp;</td>
 </tr>
@@ -415,42 +419,6 @@
 </tbody>
 </table>
 </li>
-<li class="blockList"><a name="org.apache.hadoop.hbase.master.procedure">
-<!--   -->
-</a>
-<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a> in <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/package-summary.html">org.apache.hadoop.hbase.master.procedure</a></h3>
-<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
-<caption><span>Fields in <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/package-summary.html">org.apache.hadoop.hbase.master.procedure</a> declared as <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Field and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
-<td class="colLast"><span class="strong">MasterProcedureEnv.WALStoreLeaseRecovery.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.WALStoreLeaseRecovery.html#master">master</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
-<td class="colLast"><span class="strong">MasterProcedureEnv.MasterProcedureStoreListener.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.MasterProcedureStoreListener.html#master">master</a></strong></code>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
-<caption><span>Constructors in <a href="../../../../../../org/apache/hadoop/hbase/master/procedure/package-summary.html">org.apache.hadoop.hbase.master.procedure</a> with parameters of type <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colOne" scope="col">Constructor and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.MasterProcedureStoreListener.html#MasterProcedureEnv.MasterProcedureStoreListener(org.apache.hadoop.hbase.master.HMaster)">MasterProcedureEnv.MasterProcedureStoreListener</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/procedure/MasterProcedureEnv.WALStoreLeaseRecovery.html#MasterProcedureEnv.WALStoreLeaseRecovery(org.apache.hadoop.hbase.master.HMaster)">MasterProcedureEnv.WALStoreLeaseRecovery</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master)</code>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.tmpl.master">
 <!--   -->
 </a>
@@ -476,11 +444,11 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
-<td class="colLast"><span class="strong">BackupMasterStatusTmplImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/tmpl/master/BackupMasterStatusTmplImpl.html#master">master</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">MasterStatusTmplImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/tmpl/master/MasterStatusTmplImpl.html#master">master</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
-<td class="colLast"><span class="strong">MasterStatusTmplImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/tmpl/master/MasterStatusTmplImpl.html#master">master</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">BackupMasterStatusTmplImpl.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/tmpl/master/BackupMasterStatusTmplImpl.html#master">master</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/master/HMaster.html" title="class in org.apache.hadoop.hbase.master">HMaster</a></code></td>
@@ -705,6 +673,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

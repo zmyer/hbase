@@ -36,7 +36,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultCompactSelection.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDateTieredCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html" target="_top">Frames</a></li>
@@ -99,7 +99,7 @@
 </dl>
 <hr>
 <br>
-<pre>private class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.html#line.244">TestCorruptedRegionStoreFile.ScanInjector</a>
+<pre>private class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.html#line.241">TestCorruptedRegionStoreFile.ScanInjector</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 </li>
 </ul>
@@ -140,21 +140,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#afterScan(org.apache.hadoop.hbase.client.Table)">afterScan</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#afterScan(org.apache.hadoop.hbase.client.Table)">afterScan</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#afterScanNext(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Result)">afterScanNext</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-                          org.apache.hadoop.hbase.client.Result&nbsp;result)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#afterScanNext(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Result)">afterScanNext</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;result)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#beforeScan(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Scan)">beforeScan</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-                    org.apache.hadoop.hbase.client.Scan&nbsp;scan)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#beforeScan(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Scan)">beforeScan</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Scan.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#beforeScanNext(org.apache.hadoop.hbase.client.Table)">beforeScanNext</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#beforeScanNext(org.apache.hadoop.hbase.client.Table)">beforeScanNext</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -184,7 +184,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestCorruptedRegionStoreFile.ScanInjector</h4>
-<pre>private&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.244">TestCorruptedRegionStoreFile.ScanInjector</a>()</pre>
+<pre>private&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.241">TestCorruptedRegionStoreFile.ScanInjector</a>()</pre>
 </li>
 </ul>
 </li>
@@ -201,8 +201,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>beforeScan</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.245">beforeScan</a>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-              org.apache.hadoop.hbase.client.Scan&nbsp;scan)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.242">beforeScan</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Scan.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -214,7 +214,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>beforeScanNext</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.246">beforeScanNext</a>(org.apache.hadoop.hbase.client.Table&nbsp;table)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.243">beforeScanNext</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -226,8 +226,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>afterScanNext</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.247">afterScanNext</a>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-                 org.apache.hadoop.hbase.client.Result&nbsp;result)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.244">afterScanNext</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+                 <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;result)
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -239,7 +239,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>afterScan</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.248">afterScan</a>(org.apache.hadoop.hbase.client.Table&nbsp;table)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html#line.245">afterScan</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)
                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -272,7 +272,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDefaultCompactSelection.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDateTieredCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.ScanInjector.html" target="_top">Frames</a></li>
@@ -312,6 +312,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

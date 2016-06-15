@@ -88,6 +88,10 @@
   the assignment znode is deleted and the new assignment
   is recorded in master.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#assignRegion(org.apache.hadoop.hbase.HRegionInfo)">assignRegion(HRegionInfo)</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
+<dd>
+<div class="block">Uses directly the assignment manager to assign the region.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#available(int)">available(int)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
 <dd>
 <div class="block">Checks to see if a specific port is available.</div>
@@ -221,6 +225,8 @@
 </div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#createLocalHRegion(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean,%20org.apache.hadoop.hbase.client.Durability,%20org.apache.hadoop.hbase.wal.WAL,%20byte[]...)">createLocalHRegion(TableName, byte[], byte[], boolean, Durability, WAL, byte[]...)</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#createLocalHRegionWithInMemoryFlags(org.apache.hadoop.hbase.TableName,%20byte[],%20byte[],%20boolean,%20org.apache.hadoop.hbase.client.Durability,%20org.apache.hadoop.hbase.wal.WAL,%20boolean[],%20byte[]...)">createLocalHRegionWithInMemoryFlags(TableName, byte[], byte[], boolean, Durability, WAL, boolean[], byte[]...)</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#createLocalHTU()">createLocalHTU()</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
 <dd>
@@ -515,6 +521,10 @@
 <div class="block">Create a set of column descriptors with the combination of compression,
  encoding, bloom codecs available.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#getAdmin()">getAdmin()</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
+<dd>
+<div class="block">Returns an Admin instance which is shared between HBaseTestingUtility instance users.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/MiniHBaseCluster.html#getAdminProtocol(org.apache.hadoop.hbase.ServerName)">getAdminProtocol(ServerName)</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/MiniHBaseCluster.html" title="class in org.apache.hadoop.hbase">MiniHBaseCluster</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#getAllOnlineRegions(org.apache.hadoop.hbase.MiniHBaseCluster)">getAllOnlineRegions(MiniHBaseCluster)</a></span> - Static method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
@@ -581,7 +591,9 @@
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#getHBaseAdmin()">getHBaseAdmin()</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
 <dd>
-<div class="block">Returns a Admin instance.</div>
+<div class="block"><span class="strong">Deprecated.</span>
+<div class="block"><i>Since 2.0. Will be removed in 3.0. Use <a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#getAdmin()"><code>HBaseTestingUtility.getAdmin()</code></a> instead.</i></div>
+</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#getHBaseCluster()">getHBaseCluster()</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
 <dd>
@@ -834,11 +846,15 @@
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/client/replication/package-summary.html">org.apache.hadoop.hbase.client.replication</a> - package org.apache.hadoop.hbase.client.replication</dt>
 <dd>&nbsp;</dd>
+<dt><a href="./org/apache/hadoop/hbase/client/rsgroup/package-summary.html">org.apache.hadoop.hbase.client.rsgroup</a> - package org.apache.hadoop.hbase.client.rsgroup</dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/conf/package-summary.html">org.apache.hadoop.hbase.conf</a> - package org.apache.hadoop.hbase.conf</dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/coprocessor/package-summary.html">org.apache.hadoop.hbase.coprocessor</a> - package org.apache.hadoop.hbase.coprocessor</dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/errorhandling/package-summary.html">org.apache.hadoop.hbase.errorhandling</a> - package org.apache.hadoop.hbase.errorhandling</dt>
+<dd>&nbsp;</dd>
+<dt><a href="./org/apache/hadoop/hbase/exceptions/package-summary.html">org.apache.hadoop.hbase.exceptions</a> - package org.apache.hadoop.hbase.exceptions</dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/filter/package-summary.html">org.apache.hadoop.hbase.filter</a> - package org.apache.hadoop.hbase.filter</dt>
 <dd>&nbsp;</dd>
@@ -855,6 +871,8 @@
 <dt><a href="./org/apache/hadoop/hbase/http/ssl/package-summary.html">org.apache.hadoop.hbase.http.ssl</a> - package org.apache.hadoop.hbase.http.ssl</dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/io/package-summary.html">org.apache.hadoop.hbase.io</a> - package org.apache.hadoop.hbase.io</dt>
+<dd>&nbsp;</dd>
+<dt><a href="./org/apache/hadoop/hbase/io/asyncfs/package-summary.html">org.apache.hadoop.hbase.io.asyncfs</a> - package org.apache.hadoop.hbase.io.asyncfs</dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/io/crypto/package-summary.html">org.apache.hadoop.hbase.io.crypto</a> - package org.apache.hadoop.hbase.io.crypto</dt>
 <dd>&nbsp;</dd>
@@ -890,6 +908,8 @@
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/regionserver/package-summary.html">org.apache.hadoop.hbase.regionserver</a> - package org.apache.hadoop.hbase.regionserver</dt>
 <dd>&nbsp;</dd>
+<dt><a href="./org/apache/hadoop/hbase/regionserver/throttle/package-summary.html">org.apache.hadoop.hbase.regionserver.throttle</a> - package org.apache.hadoop.hbase.regionserver.throttle</dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/regionserver/wal/package-summary.html">org.apache.hadoop.hbase.regionserver.wal</a> - package org.apache.hadoop.hbase.regionserver.wal</dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/replication/package-summary.html">org.apache.hadoop.hbase.replication</a> - package org.apache.hadoop.hbase.replication</dt>
@@ -897,6 +917,8 @@
 <dt><a href="./org/apache/hadoop/hbase/rest/package-summary.html">org.apache.hadoop.hbase.rest</a> - package org.apache.hadoop.hbase.rest</dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/rest/client/package-summary.html">org.apache.hadoop.hbase.rest.client</a> - package org.apache.hadoop.hbase.rest.client</dt>
+<dd>&nbsp;</dd>
+<dt><a href="./org/apache/hadoop/hbase/rsgroup/package-summary.html">org.apache.hadoop.hbase.rsgroup</a> - package org.apache.hadoop.hbase.rsgroup</dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/security/package-summary.html">org.apache.hadoop.hbase.security</a> - package org.apache.hadoop.hbase.security</dt>
 <dd>&nbsp;</dd>
@@ -923,6 +945,10 @@
 <dt><a href="./org/apache/hadoop/hbase/wal/package-summary.html">org.apache.hadoop.hbase.wal</a> - package org.apache.hadoop.hbase.wal</dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/hadoop/hbase/zookeeper/package-summary.html">org.apache.hadoop.hbase.zookeeper</a> - package org.apache.hadoop.hbase.zookeeper</dt>
+<dd>&nbsp;</dd>
+<dt><a href="./org/apache/hbase/archetypes/exemplars/client/package-summary.html">org.apache.hbase.archetypes.exemplars.client</a> - package org.apache.hbase.archetypes.exemplars.client</dt>
+<dd>&nbsp;</dd>
+<dt><a href="./org/apache/hbase/archetypes/exemplars/shaded_client/package-summary.html">org.apache.hbase.archetypes.exemplars.shaded_client</a> - package org.apache.hbase.archetypes.exemplars.shaded_client</dt>
 <dd>&nbsp;</dd>
 </dl>
 <a name="_P_">
@@ -1265,7 +1291,10 @@
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#waitUntilAllRegionsAssigned(org.apache.hadoop.hbase.TableName)">waitUntilAllRegionsAssigned(TableName)</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
 <dd>
 <div class="block">Wait until all regions for a table in hbase:meta have a non-empty
- info:server, up to 60 seconds.</div>
+ info:server, up to a configuable timeout value (default is 60 seconds)
+ This means all regions have been deployed,
+ master has been informed and updated hbase:meta with the regions deployed
+ server.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#waitUntilAllRegionsAssigned(org.apache.hadoop.hbase.TableName,%20long)">waitUntilAllRegionsAssigned(TableName, long)</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
 <dd>
@@ -1273,6 +1302,10 @@
  info:server, or until timeout.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#waitUntilNoRegionsInTransition(long)">waitUntilNoRegionsInTransition(long)</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
+<dd>
+<div class="block">Wait until no regions in transition.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html#waitUntilNoRegionsInTransition()">waitUntilNoRegionsInTransition()</a></span> - Method in class org.apache.hadoop.hbase.<a href="./org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a></dt>
 <dd>
 <div class="block">Wait until no regions in transition.</div>
 </dd>
@@ -1325,6 +1358,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

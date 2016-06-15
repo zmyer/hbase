@@ -120,19 +120,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#conf">conf</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.HTableDescriptor</code></td>
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HTableDescriptor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#htd">htd</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.regionserver.HRegion</code></td>
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">HRegion</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#mockRegion">mockRegion</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.Store&gt;</code></td>
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Store.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Store</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#stores">stores</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#TABLENAME">TABLENAME</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -174,7 +174,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#doConstantSizePolicyTests(org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy)">doConstantSizePolicyTests</a></strong>(org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy&nbsp;policy)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#doConstantSizePolicyTests(org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy)">doConstantSizePolicyTests</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ConstantSizeRegionSplitPolicy</a>&nbsp;policy)</code>
 <div class="block">Run through tests for a ConstantSizeRegionSplitPolicy</div>
 </td>
 </tr>
@@ -188,27 +188,31 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#testCreateDefault()">testCreateDefault</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#testConstantSizePolicyWithJitter()">testConstantSizePolicyWithJitter</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#testCreateDefault()">testCreateDefault</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#testCustomPolicy()">testCustomPolicy</a></strong>()</code>
 <div class="block">Test setting up a customized split policy</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#testDelimitedKeyPrefixRegionSplitPolicy()">testDelimitedKeyPrefixRegionSplitPolicy</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#testForceSplitRegionWithReference()">testForceSplitRegionWithReference</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#testGetSplitPoint()">testGetSplitPoint</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#testIncreasingToUpperBoundRegionSplitPolicy()">testIncreasingToUpperBoundRegionSplitPolicy</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -249,7 +253,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>htd</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.HTableDescriptor <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.47">htd</a></pre>
+<pre>private&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HTableDescriptor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HTableDescriptor</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.47">htd</a></pre>
 </li>
 </ul>
 <a name="mockRegion">
@@ -258,7 +262,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>mockRegion</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.regionserver.HRegion <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.48">mockRegion</a></pre>
+<pre>private&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">HRegion</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.48">mockRegion</a></pre>
 </li>
 </ul>
 <a name="stores">
@@ -267,7 +271,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>stores</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.Store&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.49">stores</a></pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/Store.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">Store</a>&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.49">stores</a></pre>
 </li>
 </ul>
 <a name="TABLENAME">
@@ -276,7 +280,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TABLENAME</h4>
-<pre>private static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.50">TABLENAME</a></pre>
+<pre>private static final&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.50">TABLENAME</a></pre>
 </li>
 </ul>
 </li>
@@ -390,7 +394,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>doConstantSizePolicyTests</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.223">doConstantSizePolicyTests</a>(org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy&nbsp;policy)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.223">doConstantSizePolicyTests</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">ConstantSizeRegionSplitPolicy</a>&nbsp;policy)</pre>
 <div class="block">Run through tests for a ConstantSizeRegionSplitPolicy</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>policy</code> - </dd></dl>
 </li>
@@ -410,11 +414,23 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <a name="testDelimitedKeyPrefixRegionSplitPolicy()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testDelimitedKeyPrefixRegionSplitPolicy</h4>
 <pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.289">testDelimitedKeyPrefixRegionSplitPolicy</a>()
                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="testConstantSizePolicyWithJitter()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>testConstantSizePolicyWithJitter</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestRegionSplitPolicy.html#line.325">testConstantSizePolicyWithJitter</a>()
+                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -486,6 +502,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

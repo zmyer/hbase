@@ -95,7 +95,7 @@
 <li class="blockList">
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduce.html" title="class in org.apache.hadoop.hbase.mapreduce">TestTableMapReduce</a>, <a href="../../../../../org/apache/hadoop/hbase/mapred/TestTableMapReduce.html" title="class in org.apache.hadoop.hbase.mapred">TestTableMapReduce</a></dd>
+<dd><a href="../../../../../org/apache/hadoop/hbase/mapred/TestTableMapReduce.html" title="class in org.apache.hadoop.hbase.mapred">TestTableMapReduce</a>, <a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduce.html" title="class in org.apache.hadoop.hbase.mapreduce">TestTableMapReduce</a></dd>
 </dl>
 <hr>
 <br>
@@ -132,7 +132,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#INPUT_FAMILY">INPUT_FAMILY</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected static org.apache.hadoop.hbase.TableName</code></td>
+<td class="colFirst"><code>protected static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#MULTI_REGION_TABLE_NAME">MULTI_REGION_TABLE_NAME</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -194,15 +194,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected static org.apache.hadoop.hbase.client.Put</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#map(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result)">map</a></strong>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
-      org.apache.hadoop.hbase.client.Result&nbsp;value)</code>
+<td class="colFirst"><code>protected static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#map(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result)">map</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
+      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;value)</code>
 <div class="block">Implements mapper logic for use across APIs.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#runTestOnTable(org.apache.hadoop.hbase.client.Table)">runTestOnTable</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#runTestOnTable(org.apache.hadoop.hbase.client.Table)">runTestOnTable</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)</code>
 <div class="block">Handles API-specifics for setting up and executing the job.</div>
 </td>
 </tr>
@@ -218,11 +218,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#verify(org.apache.hadoop.hbase.TableName)">verify</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#verify(org.apache.hadoop.hbase.TableName)">verify</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#verifyAttempt(org.apache.hadoop.hbase.client.Table)">verifyAttempt</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#verifyAttempt(org.apache.hadoop.hbase.client.Table)">verifyAttempt</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)</code>
 <div class="block">Looks at every value of the mapreduce output and verifies that indeed
  the values have been reversed.</div>
 </td>
@@ -273,7 +273,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>MULTI_REGION_TABLE_NAME</h4>
-<pre>protected static final&nbsp;org.apache.hadoop.hbase.TableName <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.60">MULTI_REGION_TABLE_NAME</a></pre>
+<pre>protected static final&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.60">MULTI_REGION_TABLE_NAME</a></pre>
 </li>
 </ul>
 <a name="INPUT_FAMILY">
@@ -344,7 +344,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>runTestOnTable</h4>
-<pre>protected abstract&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.77">runTestOnTable</a>(org.apache.hadoop.hbase.client.Table&nbsp;table)
+<pre>protected abstract&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.77">runTestOnTable</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Handles API-specifics for setting up and executing the job.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -406,9 +406,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>map</h4>
-<pre>protected static&nbsp;org.apache.hadoop.hbase.client.Put&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.113">map</a>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
-                                     org.apache.hadoop.hbase.client.Result&nbsp;value)
-                                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>protected static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.113">map</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
+      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;value)
+                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Implements mapper logic for use across APIs.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -420,7 +420,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verify</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.137">verify</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName)
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.137">verify</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -432,7 +432,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>verifyAttempt</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.169">verifyAttempt</a>(org.apache.hadoop.hbase.client.Table&nbsp;table)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/TestTableMapReduceBase.html#line.169">verifyAttempt</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></pre>
 <div class="block">Looks at every value of the mapreduce output and verifies that indeed
@@ -510,6 +510,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

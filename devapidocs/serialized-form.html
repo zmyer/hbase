@@ -69,6 +69,16 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;org.apache.hadoop.hbase</h2>
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.CallDroppedException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/CallDroppedException.html" title="class in org.apache.hadoop.hbase">org.apache.hadoop.hbase.CallDroppedException</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a> implements Serializable</h3>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.CallQueueTooBigException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/CallQueueTooBigException.html" title="class in org.apache.hadoop.hbase">org.apache.hadoop.hbase.CallQueueTooBigException</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a> implements Serializable</h3>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.CellComparator">
 <!--   -->
 </a>
@@ -143,6 +153,11 @@
 <dd>4194304L</dd>
 </dl>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.MultiActionResultTooLarge">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/MultiActionResultTooLarge.html" title="class in org.apache.hadoop.hbase">org.apache.hadoop.hbase.MultiActionResultTooLarge</a> extends <a href="org/apache/hadoop/hbase/RetryImmediatelyException.html" title="class in org.apache.hadoop.hbase">RetryImmediatelyException</a> implements Serializable</h3>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.NamespaceExistException">
 <!--   -->
 </a>
@@ -202,6 +217,11 @@
 <dd>1728345723728342L</dd>
 </dl>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.RetryImmediatelyException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/RetryImmediatelyException.html" title="class in org.apache.hadoop.hbase">org.apache.hadoop.hbase.RetryImmediatelyException</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a> implements Serializable</h3>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.ServerName">
 <!--   -->
 </a>
@@ -241,6 +261,11 @@
 </ul>
 </li>
 </ul>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.ServiceNotRunningException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/ServiceNotRunningException.html" title="class in org.apache.hadoop.hbase">org.apache.hadoop.hbase.ServiceNotRunningException</a> extends <a href="org/apache/hadoop/hbase/HBaseIOException.html" title="class in org.apache.hadoop.hbase">HBaseIOException</a> implements Serializable</h3>
 </li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.TableExistsException">
 <!--   -->
@@ -434,6 +459,15 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;org.apache.hadoop.hbase.coprocessor</h2>
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.coprocessor.BypassCoprocessorException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/coprocessor/BypassCoprocessorException.html" title="class in org.apache.hadoop.hbase.coprocessor">org.apache.hadoop.hbase.coprocessor.BypassCoprocessorException</a> extends <a href="org/apache/hadoop/hbase/coprocessor/CoprocessorException.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorException</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>5943889011582357043L</dd>
+</dl>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.coprocessor.CoprocessorException">
 <!--   -->
 </a>
@@ -593,9 +627,13 @@
 <h4>timeOfFirstFailureMilliSec</h4>
 <pre>long timeOfFirstFailureMilliSec</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>timeOfLatestAttemptMilliSec</h4>
 <pre>long timeOfLatestAttemptMilliSec</pre>
+</li>
+<li class="blockListLast">
+<h4>guaranteedClientSideOnly</h4>
+<pre>boolean guaranteedClientSideOnly</pre>
 </li>
 </ul>
 </li>
@@ -796,6 +834,20 @@
 </ul>
 </li>
 <li class="blockList">
+<h2 title="Package">Package&nbsp;org.apache.hadoop.hbase.io.asyncfs</h2>
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.io.asyncfs.FanOutOneBlockAsyncDFSOutputHelper.NameNodeException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/io/asyncfs/FanOutOneBlockAsyncDFSOutputHelper.NameNodeException.html" title="class in org.apache.hadoop.hbase.io.asyncfs">org.apache.hadoop.hbase.io.asyncfs.FanOutOneBlockAsyncDFSOutputHelper.NameNodeException</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>3143237406477095390L</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li class="blockList">
 <h2 title="Package">Package&nbsp;org.apache.hadoop.hbase.io.crypto.aes</h2>
 <ul class="blockList">
 <li class="blockList"><a name="org.apache.hadoop.hbase.io.crypto.aes.TestAES.TestRNG">
@@ -860,6 +912,10 @@
 <li class="blockList">
 <h4>offset</h4>
 <pre>long offset</pre>
+</li>
+<li class="blockList">
+<h4>blockType</h4>
+<pre><a href="org/apache/hadoop/hbase/io/hfile/BlockType.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockType</a> blockType</pre>
 </li>
 <li class="blockListLast">
 <h4>isPrimaryReplicaBlock</h4>
@@ -1037,11 +1093,6 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.apache.hadoop.hbase.ipc.RpcServer.CallQueueTooBigException">
-<!--   -->
-</a>
-<h3>Class <a href="org/apache/hadoop/hbase/ipc/RpcServer.CallQueueTooBigException.html" title="class in org.apache.hadoop.hbase.ipc">org.apache.hadoop.hbase.ipc.RpcServer.CallQueueTooBigException</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a> implements Serializable</h3>
-</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.ipc.ServerNotRunningYetException">
 <!--   -->
 </a>
@@ -1091,6 +1142,11 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;org.apache.hadoop.hbase.master</h2>
 <ul class="blockList">
+<li class="blockList"><a name="org.apache.hadoop.hbase.master.ClusterSchemaException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/master/ClusterSchemaException.html" title="class in org.apache.hadoop.hbase.master">org.apache.hadoop.hbase.master.ClusterSchemaException</a> extends <a href="org/apache/hadoop/hbase/HBaseIOException.html" title="class in org.apache.hadoop.hbase">HBaseIOException</a> implements Serializable</h3>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.master.HMaster.RedirectServlet">
 <!--   -->
 </a>
@@ -1155,6 +1211,11 @@
 <!--   -->
 </a>
 <h3>Class <a href="org/apache/hadoop/hbase/procedure2/ProcedureException.html" title="class in org.apache.hadoop.hbase.procedure2">org.apache.hadoop.hbase.procedure2.ProcedureException</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a> implements Serializable</h3>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.procedure2.ProcedureSuspendedException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/procedure2/ProcedureSuspendedException.html" title="class in org.apache.hadoop.hbase.procedure2">org.apache.hadoop.hbase.procedure2.ProcedureSuspendedException</a> extends <a href="org/apache/hadoop/hbase/procedure2/ProcedureException.html" title="class in org.apache.hadoop.hbase.procedure2">ProcedureException</a> implements Serializable</h3>
 </li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.procedure2.ProcedureYieldException">
 <!--   -->
@@ -2042,7 +2103,7 @@
 <ul class="blockList">
 <li class="blockListLast">
 <h4>description</h4>
-<pre>org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription description</pre>
+<pre><a href="org/apache/hadoop/hbase/client/SnapshotDescription.html" title="class in org.apache.hadoop.hbase.client">SnapshotDescription</a> description</pre>
 </li>
 </ul>
 </li>
@@ -2131,32 +2192,6 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;org.apache.hadoop.hbase.util</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.apache.hadoop.hbase.util.BoundedConcurrentLinkedQueue">
-<!--   -->
-</a>
-<h3>Class <a href="org/apache/hadoop/hbase/util/BoundedConcurrentLinkedQueue.html" title="class in org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util.BoundedConcurrentLinkedQueue</a> extends <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentLinkedQueue.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentLinkedQueue</a>&lt;<a href="org/apache/hadoop/hbase/util/BoundedConcurrentLinkedQueue.html" title="type parameter in BoundedConcurrentLinkedQueue">T</a>&gt; implements Serializable</h3>
-<dl class="nameValue">
-<dt>serialVersionUID:</dt>
-<dd>1L</dd>
-</dl>
-<ul class="blockList">
-<li class="blockList"><a name="serializedForm">
-<!--   -->
-</a>
-<h3>Serialized Fields</h3>
-<ul class="blockList">
-<li class="blockList">
-<h4>size</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> size</pre>
-</li>
-<li class="blockListLast">
-<h4>maxSize</h4>
-<pre>long maxSize</pre>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.util.FileSystemVersionException">
 <!--   -->
 </a>
@@ -2187,6 +2222,11 @@
 </ul>
 </li>
 </ul>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.util.LeaseNotRecoveredException">
+<!--   -->
+</a>
+<h3>Class <a href="org/apache/hadoop/hbase/util/LeaseNotRecoveredException.html" title="class in org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util.LeaseNotRecoveredException</a> extends <a href="org/apache/hadoop/hbase/HBaseIOException.html" title="class in org.apache.hadoop.hbase">HBaseIOException</a> implements Serializable</h3>
 </li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.util.Pair">
 <!--   -->
@@ -2353,6 +2393,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

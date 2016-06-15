@@ -223,7 +223,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                                                                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;cohort)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private org.apache.hadoop.hbase.procedure.ProcedureCoordinator</code></td>
+<td class="colFirst"><code>private <a href="../../../../../../apidocs/org/apache/hadoop/hbase/procedure.ProcedureCoordinator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.procedure.ProcedureCoordinator</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#setupMockCoordinator(java.lang.String,%20java.util.concurrent.CountDownLatch,%20java.util.concurrent.CountDownLatch,%20java.util.ArrayList)">setupMockCoordinator</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;operationName,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;prepared,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;committed,
@@ -253,7 +253,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#verifyCohort(org.apache.hadoop.hbase.procedure.ProcedureMember,%20int,%20java.lang.String,%20byte[])">verifyCohort</a></strong>(org.apache.hadoop.hbase.procedure.ProcedureMember&nbsp;member,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#verifyCohort(org.apache.hadoop.hbase.procedure.ProcedureMember,%20int,%20java.lang.String,%20byte[])">verifyCohort</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/procedure.ProcedureMember.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.procedure.ProcedureMember</a>&nbsp;member,
                         int&nbsp;cohortSize,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;operationName,
                         byte[]&nbsp;data)</code>
@@ -263,7 +263,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#verifyCoordinator(java.lang.String,%20org.apache.hadoop.hbase.procedure.ProcedureCoordinator,%20java.util.List)">verifyCoordinator</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;operationName,
-                                  org.apache.hadoop.hbase.procedure.ProcedureCoordinator&nbsp;coordinator,
+                                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/procedure.ProcedureCoordinator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.procedure.ProcedureCoordinator</a>&nbsp;coordinator,
                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;expected)</code>
 <div class="block">Verify that the coordinator only got called once for each expected node</div>
 </td>
@@ -271,8 +271,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#verifyZooKeeperClean(java.lang.String,%20org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20org.apache.hadoop.hbase.procedure.ZKProcedureUtil)">verifyZooKeeperClean</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;operationName,
-                                        org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;watcher,
-                                        org.apache.hadoop.hbase.procedure.ZKProcedureUtil&nbsp;controller)</code>
+                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;watcher,
+                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/procedure.ZKProcedureUtil.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.procedure.ZKProcedureUtil</a>&nbsp;controller)</code>
 <div class="block">Verify that the prepare, commit and abort nodes for the operation are removed from zookeeper</div>
 </td>
 </tr>
@@ -508,12 +508,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setupMockCoordinator</h4>
-<pre>private&nbsp;org.apache.hadoop.hbase.procedure.ProcedureCoordinator&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#line.320">setupMockCoordinator</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;operationName,
+<pre>private&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/procedure.ProcedureCoordinator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.procedure.ProcedureCoordinator</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#line.320">setupMockCoordinator</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;operationName,
                                                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;prepared,
                                                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html?is-external=true" title="class or interface in java.util.concurrent">CountDownLatch</a>&nbsp;committed,
                                                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;byte[]&gt;&nbsp;dataFromMembers)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>dataFromMembers</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd>a mock <code>ProcedureCoordinator</code> that just counts down the
+<dt><span class="strong">Returns:</span></dt><dd>a mock <a href="../../../../../../apidocs/org/apache/hadoop/hbase/procedure.ProcedureCoordinator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase"><code>ProcedureCoordinator</code></a> that just counts down the
          prepared and committed latch for called to the respective method</dd></dl>
 </li>
 </ul>
@@ -524,8 +524,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>verifyZooKeeperClean</h4>
 <pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#line.348">verifyZooKeeperClean</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;operationName,
-                        org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher&nbsp;watcher,
-                        org.apache.hadoop.hbase.procedure.ZKProcedureUtil&nbsp;controller)
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;watcher,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/procedure.ZKProcedureUtil.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.procedure.ZKProcedureUtil</a>&nbsp;controller)
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Verify that the prepare, commit and abort nodes for the operation are removed from zookeeper</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -538,7 +538,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyCohort</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#line.361">verifyCohort</a>(org.apache.hadoop.hbase.procedure.ProcedureMember&nbsp;member,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#line.361">verifyCohort</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/procedure.ProcedureMember.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.procedure.ProcedureMember</a>&nbsp;member,
                 int&nbsp;cohortSize,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;operationName,
                 byte[]&nbsp;data)</pre>
@@ -552,7 +552,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>verifyCoordinator</h4>
 <pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.html#line.373">verifyCoordinator</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;operationName,
-                     org.apache.hadoop.hbase.procedure.ProcedureCoordinator&nbsp;coordinator,
+                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/procedure.ProcedureCoordinator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.procedure.ProcedureCoordinator</a>&nbsp;coordinator,
                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;expected)</pre>
 <div class="block">Verify that the coordinator only got called once for each expected node</div>
 </li>
@@ -624,6 +624,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

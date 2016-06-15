@@ -206,26 +206,38 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#updateGet(long)">updateGet</a></strong>(long&nbsp;getSize)</code>
-<div class="block">Update count and sizes of gets.</div>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#updateGet(long)">updateGet</a></strong>(long&nbsp;mills)</code>
+<div class="block">Update time of gets</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#updateGetSize(long)">updateGetSize</a></strong>(long&nbsp;getSize)</code>
+<div class="block">Update count and sizes of gets.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#updateIncrement()">updateIncrement</a></strong>()</code>
 <div class="block">Update related counts of increments.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#updatePut()">updatePut</a></strong>()</code>
 <div class="block">Update related counts of puts.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#updateScanSize(long)">updateScanSize</a></strong>(long&nbsp;scanSize)</code>
+<div class="block">Update the count and sizes of resultScanner.next()</div>
+</td>
+</tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#updateScan(long)">updateScan</a></strong>(long&nbsp;scanSize)</code>
-<div class="block">Update the count and sizes of resultScanner.next()</div>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#updateScanTime(long)">updateScanTime</a></strong>(long&nbsp;mills)</code>
+<div class="block">Update time used of resultScanner.next().</div>
 </td>
 </tr>
 </table>
@@ -408,26 +420,47 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.h
 <div class="block">Update related counts of deletes.</div>
 </li>
 </ul>
+<a name="updateGetSize(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateGetSize</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.62">updateGetSize</a>(long&nbsp;getSize)</pre>
+<div class="block">Update count and sizes of gets.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>getSize</code> - size in bytes of the resulting key values for a get</dd></dl>
+</li>
+</ul>
 <a name="updateGet(long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>updateGet</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.62">updateGet</a>(long&nbsp;getSize)</pre>
-<div class="block">Update count and sizes of gets.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>getSize</code> - size in bytes of the resulting key values for a get</dd></dl>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.68">updateGet</a>(long&nbsp;mills)</pre>
+<div class="block">Update time of gets</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>mills</code> - time for this get operation.</dd></dl>
 </li>
 </ul>
-<a name="updateScan(long)">
+<a name="updateScanSize(long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>updateScan</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.68">updateScan</a>(long&nbsp;scanSize)</pre>
+<h4>updateScanSize</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.74">updateScanSize</a>(long&nbsp;scanSize)</pre>
 <div class="block">Update the count and sizes of resultScanner.next()</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>scanSize</code> - Size in bytes of the resulting key values for a next()</dd></dl>
+</li>
+</ul>
+<a name="updateScanTime(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateScanTime</h4>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.79">updateScanTime</a>(long&nbsp;mills)</pre>
+<div class="block">Update time used of resultScanner.next().</div>
 </li>
 </ul>
 <a name="updateIncrement()">
@@ -436,7 +469,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>updateIncrement</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.72">updateIncrement</a>()</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.84">updateIncrement</a>()</pre>
 <div class="block">Update related counts of increments.</div>
 </li>
 </ul>
@@ -446,7 +479,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>updateAppend</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.77">updateAppend</a>()</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.89">updateAppend</a>()</pre>
 <div class="block">Update related counts of appends.</div>
 </li>
 </ul>
@@ -456,7 +489,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.h
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getAggregateSource</h4>
-<pre><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionAggregateSource.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsRegionAggregateSource</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.82">getAggregateSource</a>()</pre>
+<pre><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionAggregateSource.html" title="interface in org.apache.hadoop.hbase.regionserver">MetricsRegionAggregateSource</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MetricsRegionSource.html#line.94">getAggregateSource</a>()</pre>
 <div class="block">Get the aggregate source to which this reports.</div>
 </li>
 </ul>
@@ -527,6 +560,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.h
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

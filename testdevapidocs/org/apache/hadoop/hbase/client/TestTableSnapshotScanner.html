@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestSnapshotMetadata.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestSplitOrMergeStatus.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -182,7 +182,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#createTableAndSnapshot(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.TableName,%20java.lang.String,%20int)">createTableAndSnapshot</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                                            org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
                                             int&nbsp;numRegions)</code>&nbsp;</td>
 </tr>
@@ -223,11 +223,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#verifyRow(org.apache.hadoop.hbase.client.Result)">verifyRow</a></strong>(org.apache.hadoop.hbase.client.Result&nbsp;result)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#verifyRow(org.apache.hadoop.hbase.client.Result)">verifyRow</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;result)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#verifyScanner(org.apache.hadoop.hbase.client.ResultScanner,%20byte[],%20byte[])">verifyScanner</a></strong>(org.apache.hadoop.hbase.client.ResultScanner&nbsp;scanner,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#verifyScanner(org.apache.hadoop.hbase.client.ResultScanner,%20byte[],%20byte[])">verifyScanner</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ResultScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ResultScanner</a>&nbsp;scanner,
                           byte[]&nbsp;startRow,
                           byte[]&nbsp;stopRow)</code>&nbsp;</td>
 </tr>
@@ -403,7 +403,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>createTableAndSnapshot</h4>
 <pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#line.78">createTableAndSnapshot</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                          org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
                           int&nbsp;numRegions)
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
@@ -468,7 +468,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyScanner</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#line.156">verifyScanner</a>(org.apache.hadoop.hbase.client.ResultScanner&nbsp;scanner,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#line.156">verifyScanner</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/ResultScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">ResultScanner</a>&nbsp;scanner,
                  byte[]&nbsp;startRow,
                  byte[]&nbsp;stopRow)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
@@ -484,7 +484,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>verifyRow</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#line.175">verifyRow</a>(org.apache.hadoop.hbase.client.Result&nbsp;result)
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/client/TestTableSnapshotScanner.html#line.175">verifyRow</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;result)
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -516,7 +516,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/client/TestSnapshotMetadata.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/client/TestSplitOrMergeStatus.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/client/TestTimestampsFilter.html" title="class in org.apache.hadoop.hbase.client"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -557,6 +557,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

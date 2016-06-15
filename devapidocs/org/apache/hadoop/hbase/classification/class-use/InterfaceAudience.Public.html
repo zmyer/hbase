@@ -209,26 +209,30 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.rsgroup">org.apache.hadoop.hbase.rsgroup</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security">org.apache.hadoop.hbase.security</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.access">org.apache.hadoop.hbase.security.access</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.token">org.apache.hadoop.hbase.security.token</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security.visibility">org.apache.hadoop.hbase.security.visibility</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.snapshot">org.apache.hadoop.hbase.snapshot</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.types">org.apache.hadoop.hbase.types</a></td>
 <td class="colLast">
 <div class="block">
@@ -236,11 +240,11 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
  extensible data type API.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.util">org.apache.hadoop.hbase.util</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.zookeeper">org.apache.hadoop.hbase.zookeeper</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -257,20 +261,43 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/package-summary.html">org.apache.hadoop.hbase</a> with annotations of type <a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Public.html" title="annotation in org.apache.hadoop.hbase.classification">InterfaceAudience.Public</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Interface and Description</th>
+<th class="colLast" scope="col">Class and Description</th>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/AuthUtil.html" title="class in org.apache.hadoop.hbase">AuthUtil</a></strong></code>
+<div class="block">Utility methods for helping with security tasks.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/CallDroppedException.html" title="class in org.apache.hadoop.hbase">CallDroppedException</a></strong></code>
+<div class="block">Returned to the clients when their request was discarded due to server being overloaded.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/CallQueueTooBigException.html" title="class in org.apache.hadoop.hbase">CallQueueTooBigException</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a></strong></code>
 <div class="block">The unit of storage in HBase consisting of the following fields:
  <br></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/CellUtil.html" title="class in org.apache.hadoop.hbase">CellUtil</a></strong></code>
 <div class="block">Utility methods helpful slinging <a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase"><code>Cell</code></a> instances.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ChoreService.html" title="class in org.apache.hadoop.hbase">ChoreService</a></strong></code>
+<div class="block">ChoreService is a service that can be used to schedule instances of <a href="../../../../../../org/apache/hadoop/hbase/ScheduledChore.html" title="class in org.apache.hadoop.hbase"><code>ScheduledChore</code></a> to run
+ periodically while sharing threads.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -379,40 +406,46 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/MultiActionResultTooLarge.html" title="class in org.apache.hadoop.hbase">MultiActionResultTooLarge</a></strong></code>
+<div class="block">Exception thrown when the result needs to be chunked on the server side.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/NamespaceDescriptor.html" title="class in org.apache.hadoop.hbase">NamespaceDescriptor</a></strong></code>
 <div class="block">Namespace POJO class.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/NamespaceDescriptor.Builder.html" title="class in org.apache.hadoop.hbase">NamespaceDescriptor.Builder</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/NamespaceExistException.html" title="class in org.apache.hadoop.hbase">NamespaceExistException</a></strong></code>
 <div class="block">Thrown when a namespace exists but should not</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/NamespaceNotFoundException.html" title="class in org.apache.hadoop.hbase">NamespaceNotFoundException</a></strong></code>
 <div class="block">Thrown when a namespace can not be located</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/NotAllMetaRegionsOnlineException.html" title="class in org.apache.hadoop.hbase">NotAllMetaRegionsOnlineException</a></strong></code>
 <div class="block">Thrown when an operation requires the root and all meta regions to be online</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/NotServingRegionException.html" title="class in org.apache.hadoop.hbase">NotServingRegionException</a></strong></code>
 <div class="block">Thrown by a region server if it is sent a request for a region it is not
  serving.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/PleaseHoldException.html" title="class in org.apache.hadoop.hbase">PleaseHoldException</a></strong></code>
 <div class="block">This exception is thrown by the master when a region server was shut down and
@@ -421,10 +454,16 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
  operations, or when an operation is performed on a region server that is still starting.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ProcedureInfo.html" title="class in org.apache.hadoop.hbase">ProcedureInfo</a></strong></code>
 <div class="block">Procedure information</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ProcedureState.html" title="enum in org.apache.hadoop.hbase">ProcedureState</a></strong></code>
+<div class="block">POJO representing Procedure State</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -447,6 +486,16 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/RetryImmediatelyException.html" title="class in org.apache.hadoop.hbase">RetryImmediatelyException</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ScheduledChore.html" title="class in org.apache.hadoop.hbase">ScheduledChore</a></strong></code>
+<div class="block">ScheduledChore is a task performed on a period in hbase.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ServerLoad.html" title="class in org.apache.hadoop.hbase">ServerLoad</a></strong></code>
 <div class="block">This class is used for exporting current state of load on a RegionServer.</div>
 </td>
@@ -458,54 +507,60 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/Stoppable.html" title="interface in org.apache.hadoop.hbase">Stoppable</a></strong></code>
+<div class="block">Implementers are Stoppable.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TableExistsException.html" title="class in org.apache.hadoop.hbase">TableExistsException</a></strong></code>
 <div class="block">Thrown when a table exists but should not</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TableInfoMissingException.html" title="class in org.apache.hadoop.hbase">TableInfoMissingException</a></strong></code>
 <div class="block">Failed to find .tableinfo file under table dir</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></strong></code>
 <div class="block">Immutable POJO class for representing a table name.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TableNotDisabledException.html" title="class in org.apache.hadoop.hbase">TableNotDisabledException</a></strong></code>
 <div class="block">Thrown if a table should be offline but is not</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TableNotEnabledException.html" title="class in org.apache.hadoop.hbase">TableNotEnabledException</a></strong></code>
 <div class="block">Thrown if a table should be enabled but is not</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/TableNotFoundException.html" title="class in org.apache.hadoop.hbase">TableNotFoundException</a></strong></code>
 <div class="block">Thrown when a table can not be located</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/UnknownRegionException.html" title="class in org.apache.hadoop.hbase">UnknownRegionException</a></strong></code>
 <div class="block">Thrown when we are asked to operate on a region we know nothing about.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/UnknownScannerException.html" title="class in org.apache.hadoop.hbase">UnknownScannerException</a></strong></code>
 <div class="block">Thrown if a region server is passed an unknown scanner id.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ZooKeeperConnectionException.html" title="class in org.apache.hadoop.hbase">ZooKeeperConnectionException</a></strong></code>
 <div class="block">Thrown if the client can't connect to zookeeper</div>
@@ -559,78 +614,90 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Admin.CompactType.html" title="enum in org.apache.hadoop.hbase.client">Admin.CompactType</a></strong></code>
-<div class="block">Currently, there are only two compact types:
- <code>NORMAL</code> means do store files compaction;
- <code>MOB</code> means do mob files compaction.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a></strong></code>
 <div class="block">Performs Append operations on a single row.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Attributes.html" title="interface in org.apache.hadoop.hbase.client">Attributes</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client">BufferedMutator</a></strong></code>
 <div class="block">Used to communicate with a single HBase table similar to <a href="../../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client"><code>Table</code></a> but meant for
  batched, asynchronous puts.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutator.ExceptionListener.html" title="interface in org.apache.hadoop.hbase.client">BufferedMutator.ExceptionListener</a></strong></code>
 <div class="block">Listens for asynchronous exceptions on a <a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client"><code>BufferedMutator</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutatorParams.html" title="class in org.apache.hadoop.hbase.client">BufferedMutatorParams</a></strong></code>
 <div class="block">Parameters for instantiating a <a href="../../../../../../org/apache/hadoop/hbase/client/BufferedMutator.html" title="interface in org.apache.hadoop.hbase.client"><code>BufferedMutator</code></a>.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/CompactionState.html" title="enum in org.apache.hadoop.hbase.client">CompactionState</a></strong></code>
+<div class="block">POJO representing the compaction state</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/CompactType.html" title="enum in org.apache.hadoop.hbase.client">CompactType</a></strong></code>
+<div class="block">Currently, there are only two compact types:
+ <code>NORMAL</code> means do store files compaction;
+ <code>MOB</code> means do mob files compaction.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a></strong></code>
 <div class="block">A cluster connection encapsulating lower level individual connections to actual servers and
  a connection to zookeeper.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionFactory.html" title="class in org.apache.hadoop.hbase.client">ConnectionFactory</a></strong></code>
 <div class="block">A non-instantiable class that manages creation of <a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client"><code>Connection</code></a>s.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Consistency.html" title="enum in org.apache.hadoop.hbase.client">Consistency</a></strong></code>
 <div class="block">Consistency defines the expected consistency level for an operation.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a></strong></code>
 <div class="block">Used to perform Delete operations on a single row.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/DoNotRetryRegionException.html" title="class in org.apache.hadoop.hbase.client">DoNotRetryRegionException</a></strong></code>
 <div class="block">Similar to RegionException, but disables retries.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></strong></code>
 <div class="block">Enum describing the durability guarantees for tables and <a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client"><code>Mutation</code></a>s
  Note that the items must be sorted in order of increasing durability</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Future.html" title="interface in org.apache.hadoop.hbase.client">Future</a>&lt;V&gt;</strong></code>
+<div class="block">Promise for responses</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -640,35 +707,33 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>interface&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a></strong></code>
-<div class="block"><strong>Deprecated.</strong>&nbsp;
-<div class="block"><i>in favor of <a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client"><code>Connection</code></a> and <a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionFactory.html" title="class in org.apache.hadoop.hbase.client"><code>ConnectionFactory</code></a></i></div>
-</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTableMultiplexer.html" title="class in org.apache.hadoop.hbase.client">HTableMultiplexer</a></strong></code>
 <div class="block">HTableMultiplexer provides a thread-safe non blocking PUT API across all the tables.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTableMultiplexer.HTableMultiplexerStatus.html" title="class in org.apache.hadoop.hbase.client">HTableMultiplexer.HTableMultiplexerStatus</a></strong></code>
 <div class="block">HTableMultiplexerStatus keeps track of the current status of the HTableMultiplexer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a></strong></code>
 <div class="block">Used to perform Increment operations on a single row.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/IsolationLevel.html" title="enum in org.apache.hadoop.hbase.client">IsolationLevel</a></strong></code>
 <div class="block">Specify Isolation levels in Scan operations.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/MasterSwitchType.html" title="enum in org.apache.hadoop.hbase.client">MasterSwitchType</a></strong></code>
+<div class="block">Represents the master switch type</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -702,37 +767,43 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Query.html" title="class in org.apache.hadoop.hbase.client">Query</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RegionLoadStats.html" title="class in org.apache.hadoop.hbase.client">RegionLoadStats</a></strong></code>
+<div class="block">POJO representing region server load</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RegionLocator.html" title="interface in org.apache.hadoop.hbase.client">RegionLocator</a></strong></code>
 <div class="block">Used to view region location information for a single HBase table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RegionOfflineException.html" title="class in org.apache.hadoop.hbase.client">RegionOfflineException</a></strong></code>
 <div class="block">Thrown when a table can not be located</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Result.html" title="class in org.apache.hadoop.hbase.client">Result</a></strong></code>
 <div class="block">Single row result of a <a href="../../../../../../org/apache/hadoop/hbase/client/Get.html" title="class in org.apache.hadoop.hbase.client"><code>Get</code></a> or <a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client"><code>Scan</code></a> query.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ResultScanner.html" title="interface in org.apache.hadoop.hbase.client">ResultScanner</a></strong></code>
 <div class="block">Interface for client-side scanning.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RetriesExhaustedException.html" title="class in org.apache.hadoop.hbase.client">RetriesExhaustedException</a></strong></code>
 <div class="block">Exception thrown by HTable methods when an attempt to do something (like
  commit changes) fails after a bunch of retries.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RetriesExhaustedWithDetailsException.html" title="class in org.apache.hadoop.hbase.client">RetriesExhaustedWithDetailsException</a></strong></code>
 <div class="block">This subclass of <a href="../../../../../../org/apache/hadoop/hbase/client/RetriesExhaustedException.html" title="class in org.apache.hadoop.hbase.client"><code>RetriesExhaustedException</code></a>
@@ -740,19 +811,19 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
  exceptions on what servers.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Row.html" title="interface in org.apache.hadoop.hbase.client">Row</a></strong></code>
 <div class="block">Has a row.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RowMutations.html" title="class in org.apache.hadoop.hbase.client">RowMutations</a></strong></code>
 <div class="block">Performs multiple mutations atomically on a single row.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RowTooBigException.html" title="class in org.apache.hadoop.hbase.client">RowTooBigException</a></strong></code>
 <div class="block">Gets or Scans throw this exception if running without in-row scan flag
@@ -760,37 +831,45 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
  hbase.table.max.rowsize).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCaller.html" title="interface in org.apache.hadoop.hbase.client">RpcRetryingCaller</a>&lt;T&gt;</strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Scan.html" title="class in org.apache.hadoop.hbase.client">Scan</a></strong></code>
 <div class="block">Used to perform Scan operations.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ScannerTimeoutException.html" title="class in org.apache.hadoop.hbase.client">ScannerTimeoutException</a></strong></code>
 <div class="block">Thrown when a scanner has timed out.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/SnapshotDescription.html" title="class in org.apache.hadoop.hbase.client">SnapshotDescription</a></strong></code>
+<div class="block">The POJO equivalent of HBaseProtos.SnapshotDescription</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/SnapshotType.html" title="enum in org.apache.hadoop.hbase.client">SnapshotType</a></strong></code>
+<div class="block">POJO representing the snapshot type</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html" title="interface in org.apache.hadoop.hbase.client">Table</a></strong></code>
 <div class="block">Used to communicate with a single HBase table.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/TableSnapshotScanner.html" title="class in org.apache.hadoop.hbase.client">TableSnapshotScanner</a></strong></code>
 <div class="block">A Scanner which performs a scan over snapshot files.</div>
 </td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/TableState.State.html" title="enum in org.apache.hadoop.hbase.client">TableState.State</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>(package private) class&nbsp;</code></td>
@@ -866,12 +945,6 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Callback.html" title="interface in org.apache.hadoop.hbase.client.coprocessor">Batch.Callback</a>&lt;R&gt;</strong></code>
 <div class="block">Defines a generic callback to be triggered for each <a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/Batch.Call.html#call(T)"><code>Batch.Call.call(Object)</code></a>
  result.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/coprocessor/DoubleColumnInterpreter.html" title="class in org.apache.hadoop.hbase.client.coprocessor">DoubleColumnInterpreter</a></strong></code>
-<div class="block">a concrete column interpreter implementation.</div>
 </td>
 </tr>
 </tbody>
@@ -957,6 +1030,12 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BypassCoprocessorException.html" title="class in org.apache.hadoop.hbase.coprocessor">BypassCoprocessorException</a></strong></code>
+<div class="block">Thrown if a coprocessor rules we should bypass an operation</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/CoprocessorException.html" title="class in org.apache.hadoop.hbase.coprocessor">CoprocessorException</a></strong></code>
 <div class="block">Thrown if a coprocessor encounters any exception.</div>
@@ -1553,9 +1632,9 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">CoprocessorRpcChannel</a></strong></code>
-<div class="block">Base class which provides clients with an RPC connection to
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html" title="interface in org.apache.hadoop.hbase.ipc">CoprocessorRpcChannel</a></strong></code>
+<div class="block">Base interface which provides clients with an RPC connection to
  call coprocessor endpoint <code>Service</code>s.</div>
 </td>
 </tr>
@@ -1587,13 +1666,20 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/UnsupportedCellCodecException.html" title="class in org.apache.hadoop.hbase.ipc">UnsupportedCellCodecException</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/SyncCoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">SyncCoprocessorRpcChannel</a></strong></code>
+<div class="block">Base class which provides clients with an RPC connection to
+ call coprocessor endpoint <code>Service</code>s.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/UnsupportedCompressionCodecException.html" title="class in org.apache.hadoop.hbase.ipc">UnsupportedCompressionCodecException</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/UnsupportedCellCodecException.html" title="class in org.apache.hadoop.hbase.ipc">UnsupportedCellCodecException</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/UnsupportedCompressionCodecException.html" title="class in org.apache.hadoop.hbase.ipc">UnsupportedCompressionCodecException</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/WrongVersionException.html" title="class in org.apache.hadoop.hbase.ipc">WrongVersionException</a></strong></code>&nbsp;</td>
 </tr>
@@ -2262,6 +2348,32 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.rsgroup">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Public.html" title="annotation in org.apache.hadoop.hbase.classification">InterfaceAudience.Public</a> in <a href="../../../../../../org/apache/hadoop/hbase/rsgroup/package-summary.html">org.apache.hadoop.hbase.rsgroup</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../org/apache/hadoop/hbase/rsgroup/package-summary.html">org.apache.hadoop.hbase.rsgroup</a> with annotations of type <a href="../../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Public.html" title="annotation in org.apache.hadoop.hbase.classification">InterfaceAudience.Public</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupAdminClient.html" title="class in org.apache.hadoop.hbase.rsgroup">RSGroupAdminClient</a></strong></code>
+<div class="block">Client used for managing region server group information.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/rsgroup/RSGroupInfo.html" title="class in org.apache.hadoop.hbase.rsgroup">RSGroupInfo</a></strong></code>
+<div class="block">Stores the group information of region server groups.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.security">
 <!--   -->
 </a>
@@ -2834,37 +2946,44 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/LeaseNotRecoveredException.html" title="class in org.apache.hadoop.hbase.util">LeaseNotRecoveredException</a></strong></code>
+<div class="block">Thrown when the lease was expected to be recovered,
+ but the file can't be opened.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/MD5Hash.html" title="class in org.apache.hadoop.hbase.util">MD5Hash</a></strong></code>
 <div class="block">Utility class for MD5
  MD5 hash produces a 128-bit digest.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/Order.html" title="enum in org.apache.hadoop.hbase.util">Order</a></strong></code>
 <div class="block">Used to describe or modify the lexicographical sort order of a
  <code>byte[]</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/OrderedBytes.html" title="class in org.apache.hadoop.hbase.util">OrderedBytes</a></strong></code>
 <div class="block">Utility class that handles ordered byte arrays.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/Pair.html" title="class in org.apache.hadoop.hbase.util">Pair</a>&lt;T1,T2&gt;</strong></code>
 <div class="block">A generic class for pairs.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/PairOfSameType.html" title="class in org.apache.hadoop.hbase.util">PairOfSameType</a>&lt;T&gt;</strong></code>
 <div class="block">A generic, immutable class for pairs of objects both of type <code>T</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/PositionedByteRange.html" title="interface in org.apache.hadoop.hbase.util">PositionedByteRange</a></strong></code>
 <div class="block">
@@ -2872,46 +2991,46 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
  consumers position within the viewport.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/ReadOnlyByteRangeException.html" title="class in org.apache.hadoop.hbase.util">ReadOnlyByteRangeException</a></strong></code>
 <div class="block">Exception thrown when a read only byte range is modified</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/RegionMover.html" title="class in org.apache.hadoop.hbase.util">RegionMover</a></strong></code>
 <div class="block">Tool for loading/unloading regions to/from given regionserver This tool can be run from Command
  line directly as a utility.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/SimpleByteRange.html" title="class in org.apache.hadoop.hbase.util">SimpleByteRange</a></strong></code>
 <div class="block">A read only version of the <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util"><code>ByteRange</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/SimpleMutableByteRange.html" title="class in org.apache.hadoop.hbase.util">SimpleMutableByteRange</a></strong></code>
 <div class="block">A basic mutable <a href="../../../../../../org/apache/hadoop/hbase/util/ByteRange.html" title="interface in org.apache.hadoop.hbase.util"><code>ByteRange</code></a> implementation.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/SimplePositionedByteRange.html" title="class in org.apache.hadoop.hbase.util">SimplePositionedByteRange</a></strong></code>
 <div class="block">Extends the basic <a href="../../../../../../org/apache/hadoop/hbase/util/SimpleMutableByteRange.html" title="class in org.apache.hadoop.hbase.util"><code>SimpleMutableByteRange</code></a> implementation with position
  support and it is a readonly version.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/SimplePositionedMutableByteRange.html" title="class in org.apache.hadoop.hbase.util">SimplePositionedMutableByteRange</a></strong></code>
 <div class="block">Extends the basic <a href="../../../../../../org/apache/hadoop/hbase/util/AbstractPositionedByteRange.html" title="class in org.apache.hadoop.hbase.util"><code>AbstractPositionedByteRange</code></a> implementation with
  position support and it is a mutable version.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/VersionInfo.html" title="class in org.apache.hadoop.hbase.util">VersionInfo</a></strong></code>
 <div class="block">This class finds the package info for hbase and the VersionAnnotation
@@ -3004,6 +3123,6 @@ Input/OutputFormats, a table indexing MapReduce job, and utility methods.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

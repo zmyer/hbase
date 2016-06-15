@@ -86,10 +86,10 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.client.Result,KEYOUT,VALUEOUT&gt;</li>
+<li>org.apache.hadoop.mapreduce.Mapper&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>,KEYOUT,VALUEOUT&gt;</li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.mapreduce.TableMapper&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.io.ImmutableBytesWritable&gt;</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TableMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">org.apache.hadoop.hbase.mapreduce.TableMapper</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.mapreduce.MultiTableInputFormatTestBase.ScanMapper</li>
@@ -113,8 +113,8 @@
 </dl>
 <hr>
 <br>
-<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.html#line.107">MultiTableInputFormatTestBase.ScanMapper</a>
-extends org.apache.hadoop.hbase.mapreduce.TableMapper&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.io.ImmutableBytesWritable&gt;</pre>
+<pre>public static class <a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.html#line.108">MultiTableInputFormatTestBase.ScanMapper</a>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/mapreduce/TableMapper.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.mapreduce">TableMapper</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&gt;</pre>
 <div class="block">Pass the key and value to reducer.</div>
 </li>
 </ul>
@@ -168,13 +168,13 @@ extends org.apache.hadoop.hbase.mapreduce.TableMapper&lt;org.apache.hadoop.hbase
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#makeAssertions(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result)">makeAssertions</a></strong>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
-                            org.apache.hadoop.hbase.client.Result&nbsp;value)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#makeAssertions(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result)">makeAssertions</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#map(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.mapreduce.Mapper.Context)">map</a></strong>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
-      org.apache.hadoop.hbase.client.Result&nbsp;value,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#map(org.apache.hadoop.hbase.io.ImmutableBytesWritable,%20org.apache.hadoop.hbase.client.Result,%20org.apache.hadoop.mapreduce.Mapper.Context)">map</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
+      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;value,
       org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context)</code>
 <div class="block">Pass the key and value to reduce.</div>
 </td>
@@ -214,7 +214,7 @@ extends org.apache.hadoop.hbase.mapreduce.TableMapper&lt;org.apache.hadoop.hbase
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MultiTableInputFormatTestBase.ScanMapper</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#line.107">MultiTableInputFormatTestBase.ScanMapper</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#line.108">MultiTableInputFormatTestBase.ScanMapper</a>()</pre>
 </li>
 </ul>
 </li>
@@ -231,15 +231,15 @@ extends org.apache.hadoop.hbase.mapreduce.TableMapper&lt;org.apache.hadoop.hbase
 <ul class="blockList">
 <li class="blockList">
 <h4>map</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#line.118">map</a>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
-       org.apache.hadoop.hbase.client.Result&nbsp;value,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#line.119">map</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
+       <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;value,
        org.apache.hadoop.mapreduce.Mapper.Context&nbsp;context)
          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Pass the key and value to reduce.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>map</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.mapreduce.Mapper&lt;org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.client.Result,org.apache.hadoop.hbase.io.ImmutableBytesWritable,org.apache.hadoop.hbase.io.ImmutableBytesWritable&gt;</code></dd>
+<dd><code>map</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.mapreduce.Mapper&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>,<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&gt;</code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - The key, here "aaa", "aab" etc.</dd><dd><code>value</code> - The value is the same as the key.</dd><dd><code>context</code> - The task context.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - When reading the rows fails.</dd>
@@ -252,8 +252,8 @@ extends org.apache.hadoop.hbase.mapreduce.TableMapper&lt;org.apache.hadoop.hbase
 <ul class="blockListLast">
 <li class="blockList">
 <h4>makeAssertions</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#line.124">makeAssertions</a>(org.apache.hadoop.hbase.io.ImmutableBytesWritable&nbsp;key,
-                  org.apache.hadoop.hbase.client.Result&nbsp;value)
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mapreduce/MultiTableInputFormatTestBase.ScanMapper.html#line.125">makeAssertions</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/ImmutableBytesWritable.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io">ImmutableBytesWritable</a>&nbsp;key,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Result.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Result</a>&nbsp;value)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -326,6 +326,6 @@ extends org.apache.hadoop.hbase.mapreduce.TableMapper&lt;org.apache.hadoop.hbase
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -75,35 +75,43 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/AbstractTestDateTieredCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">AbstractTestDateTieredCompactionPolicy</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/CreateRandomStoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">CreateRandomStoreFile</a></td>
 <td class="colLast">
 <div class="block">Creates an HFile with random key/value pairs.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/DataBlockEncodingTool.html" title="class in org.apache.hadoop.hbase.regionserver">DataBlockEncodingTool</a></td>
 <td class="colLast">
 <div class="block">Tests various algorithms for key compression on an existing HFile.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/EncodedSeekPerformanceTest.html" title="class in org.apache.hadoop.hbase.regionserver">EncodedSeekPerformanceTest</a></td>
 <td class="colLast">
 <div class="block">Test seek performance for encoded data blocks.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/KeyValueScanFixture.html" title="class in org.apache.hadoop.hbase.regionserver">KeyValueScanFixture</a></td>
 <td class="colLast">
 <div class="block">A fixture that implements and presents a KeyValueScanner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionServerWrapperStub.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionServerWrapperStub</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionWrapperStub.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsRegionWrapperStub</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableWrapperStub.html" title="class in org.apache.hadoop.hbase.regionserver">MetricsTableWrapperStub</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -131,7 +139,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/RegionAsTable.html" title="class in org.apache.hadoop.hbase.regionserver">RegionAsTable</a></td>
 <td class="colLast">
-<div class="block">An implementation of <code>Table</code> that sits directly on a Region; it decorates the passed in
+<div class="block">An implementation of <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>Table</code></a> that sits directly on a Region; it decorates the passed in
  Region instance with the Table API.</div>
 </td>
 </tr>
@@ -160,7 +168,8 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestAtomicOperation.Incrementer.html" title="class in org.apache.hadoop.hbase.regionserver">TestAtomicOperation.Incrementer</a></td>
 <td class="colLast">
-<div class="block">A thread that makes a few increment calls</div>
+<div class="block">A thread that makes increment calls always on the same row, this.row against two column
+ families on this row.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -188,7 +197,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCacheOnWriteInSchema.html" title="class in org.apache.hadoop.hbase.regionserver">TestCacheOnWriteInSchema</a></td>
 <td class="colLast">
-<div class="block">Tests <code>HFile</code> cache-on-write functionality for data blocks, non-root
+<div class="block">Tests <a href="../../../../../../apidocs/org/apache/hadoop/hbase/io/hfile/HFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.io.hfile"><code>HFile</code></a> cache-on-write functionality for data blocks, non-root
  index blocks, and Bloom filter blocks, as specified by the column family.</div>
 </td>
 </tr>
@@ -207,6 +216,12 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactingMemStore.html" title="class in org.apache.hadoop.hbase.regionserver">TestCompactingMemStore</a></td>
+<td class="colLast">
+<div class="block">compacted memstore test case</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.html" title="class in org.apache.hadoop.hbase.regionserver">TestCompaction</a></td>
 <td class="colLast">
 <div class="block">Test compaction framework and common functions</div>
@@ -215,21 +230,29 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.TrackableCompactionRequest.html" title="class in org.apache.hadoop.hbase.regionserver">TestCompaction.TrackableCompactionRequest</a></td>
 <td class="colLast">
-<div class="block">Simple <code>CompactionRequest</code> on which you can wait until the requested compaction finishes.</div>
+<div class="block">Simple <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionRequest.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>CompactionRequest</code></a> on which you can wait until the requested compaction finishes.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">TestCompactionPolicy</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionState.html" title="class in org.apache.hadoop.hbase.regionserver">TestCompactionState</a></td>
 <td class="colLast">
 <div class="block">Unit tests to test retrieving table/region compaction state</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactionWithCoprocessor.html" title="class in org.apache.hadoop.hbase.regionserver">TestCompactionWithCoprocessor</a></td>
 <td class="colLast">
 <div class="block">Make sure compaction tests still pass with the preFlush and preCompact
  overridden to implement the default behavior</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompactSplitThread.html" title="class in org.apache.hadoop.hbase.regionserver">TestCompactSplitThread</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompoundBloomFilter.html" title="class in org.apache.hadoop.hbase.regionserver">TestCompoundBloomFilter</a></td>
@@ -240,6 +263,14 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCorruptedRegionStoreFile.html" title="class in org.apache.hadoop.hbase.regionserver">TestCorruptedRegionStoreFile</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDateTieredCompactionPolicy.html" title="class in org.apache.hadoop.hbase.regionserver">TestDateTieredCompactionPolicy</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestDateTieredCompactionPolicyOverflow.html" title="class in org.apache.hadoop.hbase.regionserver">TestDateTieredCompactionPolicyOverflow</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -405,7 +436,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestHRegionOnCluster.html" title="class in org.apache.hadoop.hbase.regionserver">TestHRegionOnCluster</a></td>
 <td class="colLast">
-<div class="block">Tests that need to spin up a cluster testing an <code>HRegion</code>.</div>
+<div class="block">Tests that need to spin up a cluster testing an <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>HRegion</code></a>.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -445,88 +476,108 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestHRegionWithInMemoryFlush.html" title="class in org.apache.hadoop.hbase.regionserver">TestHRegionWithInMemoryFlush</a></td>
+<td class="colLast">
+<div class="block">A test similar to TestHRegion, but with in-memory flush families.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestJoinedScanners.html" title="class in org.apache.hadoop.hbase.regionserver">TestJoinedScanners</a></td>
 <td class="colLast">
 <div class="block">Test performance improvement of joined scanners optimization:
  https://issues.apache.org/jira/browse/HBASE-5416</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeepDeletes.html" title="class in org.apache.hadoop.hbase.regionserver">TestKeepDeletes</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeyValueHeap.html" title="class in org.apache.hadoop.hbase.regionserver">TestKeyValueHeap</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeyValueHeap.SeekTestScanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestKeyValueHeap.SeekTestScanner</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeyValueHeap.Scanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestKeyValueHeap.Scanner</a></td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeyValueHeap.TestScanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestKeyValueHeap.TestScanner</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeyValueHeap.SeekScanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestKeyValueHeap.SeekScanner</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestKeyValueScanFixture.html" title="class in org.apache.hadoop.hbase.regionserver">TestKeyValueScanFixture</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMajorCompaction.html" title="class in org.apache.hadoop.hbase.regionserver">TestMajorCompaction</a></td>
 <td class="colLast">
 <div class="block">Test major compactions</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TestMasterAddressTracker</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMasterAddressTracker.NodeCreationListener.html" title="class in org.apache.hadoop.hbase.regionserver">TestMasterAddressTracker.NodeCreationListener</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMemStoreChunkPool.html" title="class in org.apache.hadoop.hbase.regionserver">TestMemStoreChunkPool</a></td>
 <td class="colLast">
-<div class="block">Test the <code>MemStoreChunkPool</code> class</div>
+<div class="block">Test the <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/MemStoreChunkPool.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>MemStoreChunkPool</code></a> class</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMemStoreLAB.html" title="class in org.apache.hadoop.hbase.regionserver">TestMemStoreLAB</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMemStoreLAB.AllocRecord.html" title="class in org.apache.hadoop.hbase.regionserver">TestMemStoreLAB.AllocRecord</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMetricsRegion.html" title="class in org.apache.hadoop.hbase.regionserver">TestMetricsRegion</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMetricsRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">TestMetricsRegionServer</a></td>
 <td class="colLast">
 <div class="block">Unit test version of rs metrics tests.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMetricsRegionServerSourceFactory.html" title="class in org.apache.hadoop.hbase.regionserver">TestMetricsRegionServerSourceFactory</a></td>
 <td class="colLast">
 <div class="block">Test for the CompatibilitySingletonFactory and building MetricsRegionServerSource</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMetricsRegionServerSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">TestMetricsRegionServerSourceImpl</a></td>
 <td class="colLast">
 <div class="block">Test for MetricsRegionServerSourceImpl</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMetricsRegionSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">TestMetricsRegionSourceImpl</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMetricsRegionSourceImpl.RegionWrapperStub.html" title="class in org.apache.hadoop.hbase.regionserver">TestMetricsRegionSourceImpl.RegionWrapperStub</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMetricsTableAggregate.html" title="class in org.apache.hadoop.hbase.regionserver">TestMetricsTableAggregate</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMetricsTableSourceImpl.html" title="class in org.apache.hadoop.hbase.regionserver">TestMetricsTableSourceImpl</a></td>
+<td class="colLast">
+<div class="block">Test for MetricsTableSourceImpl</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestMetricsTableSourceImpl.TableWrapperStub.html" title="class in org.apache.hadoop.hbase.regionserver">TestMetricsTableSourceImpl.TableWrapperStub</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -625,63 +676,85 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionIncrement.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionIncrement</a></td>
+<td class="colLast">
+<div class="block">Increments with some concurrency against a region to ensure we get the right answer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionIncrement.CrossRowCellIncrementer.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionIncrement.CrossRowCellIncrementer</a></td>
+<td class="colLast">
+<div class="block">Increments a random row's Cell <code>count</code> times.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionIncrement.SingleCellIncrementer.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionIncrement.SingleCellIncrementer</a></td>
+<td class="colLast">
+<div class="block">Increments a single cell a bunch of times.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionMergeTransaction</a></td>
 <td class="colLast">
-<div class="block">Test the <code>RegionMergeTransactionImpl</code> class against two HRegions (as
+<div class="block">Test the <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>RegionMergeTransactionImpl</code></a> class against two HRegions (as
  opposed to running cluster).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransactionOnCluster.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionMergeTransactionOnCluster</a></td>
 <td class="colLast">
 <div class="block">Like <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html" title="class in org.apache.hadoop.hbase.regionserver"><code>TestRegionMergeTransaction</code></a> in that we're testing
- <code>RegionMergeTransactionImpl</code> only the below tests are against a running
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionMergeTransactionImpl.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>RegionMergeTransactionImpl</code></a> only the below tests are against a running
  cluster where <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransaction.html" title="class in org.apache.hadoop.hbase.regionserver"><code>TestRegionMergeTransaction</code></a> is tests against bare
- <code>HRegion</code>.</div>
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>HRegion</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransactionOnCluster.MyMaster.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionMergeTransactionOnCluster.MyMaster</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionMergeTransactionOnCluster.MyMasterRpcServices.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionMergeTransactionOnCluster.MyMasterRpcServices</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionReplicaFailover.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionReplicaFailover</a></td>
 <td class="colLast">
 <div class="block">Tests failover of secondary region replicas.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionReplicas.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionReplicas</a></td>
 <td class="colLast">
 <div class="block">Tests for region replicas.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerHostname.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionServerHostname</a></td>
 <td class="colLast">
 <div class="block">Tests for the hostname specification by region server</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerMetrics.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionServerMetrics</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerNoMaster.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionServerNoMaster</a></td>
 <td class="colLast">
 <div class="block">Tests on the region server, without the master.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerOnlineConfigChange.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionServerOnlineConfigChange</a></td>
 <td class="colLast">
 <div class="block">Verify that the Online config Changes on the HRegionServer side are actually
  happening.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReadRequestMetrics.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionServerReadRequestMetrics</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReportForDuty.html" title="class in org.apache.hadoop.hbase.regionserver">TestRegionServerReportForDuty</a></td>
@@ -712,90 +785,101 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRowTooBig.html" title="class in org.apache.hadoop.hbase.regionserver">TestRowTooBig</a></td>
 <td class="colLast">
-<div class="block">Test case to check HRS throws <code>RowTooBigException</code>
+<div class="block">Test case to check HRS throws <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/RowTooBigException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>RowTooBigException</code></a>
  when row size exceeds configured limits.</div>
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRpcSchedulerFactory.html" title="class in org.apache.hadoop.hbase.regionserver">TestRpcSchedulerFactory</a></td>
+<td class="colLast">
+<div class="block">A silly test that does nothing but make sure an rpcscheduler factory makes what it says
+ it is going to make.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRSKilledWhenInitializing.html" title="class in org.apache.hadoop.hbase.regionserver">TestRSKilledWhenInitializing</a></td>
 <td class="colLast">
 <div class="block">Tests region server termination during startup.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRSKilledWhenInitializing.MockedRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">TestRSKilledWhenInitializing.MockedRegionServer</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRSStatusServlet.html" title="class in org.apache.hadoop.hbase.regionserver">TestRSStatusServlet</a></td>
 <td class="colLast">
 <div class="block">Tests for the region server status page and its template.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanDeleteTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TestScanDeleteTracker</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestScanner</a></td>
 <td class="colLast">
 <div class="block">Test of a long-lived scanner validating as we go.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerHeartbeatMessages</a></td>
 <td class="colLast">
 <div class="block">Here we test to make sure that scans return the expected Results when the server is sending the
  Client heartbeat messages.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatHRegion.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerHeartbeatMessages.HeartbeatHRegion</a></td>
 <td class="colLast">
-<div class="block">Custom HRegion class that instantiates <code>RegionScanner</code>s with configurable sleep times
+<div class="block">Custom HRegion class that instantiates <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RegionScanner.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>RegionScanner</code></a>s with configurable sleep times
  between fetches of row Results and/or column family cells.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatHRegionServer.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerHeartbeatMessages.HeartbeatHRegionServer</a></td>
 <td class="colLast">
 <div class="block">Custom HRegionServer instance that instantiates <a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatRPCServices.html" title="class in org.apache.hadoop.hbase.regionserver"><code>TestScannerHeartbeatMessages.HeartbeatRPCServices</code></a> in place of
- <code>RSRpcServices</code> to allow us to toggle support for heartbeat messages</div>
+ <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/RSRpcServices.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>RSRpcServices</code></a> to allow us to toggle support for heartbeat messages</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatKVHeap.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerHeartbeatMessages.HeartbeatKVHeap</a></td>
 <td class="colLast">
 <div class="block">Custom KV Heap that can be configured to sleep/wait in between retrievals of column family
  cells.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatRegionScanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerHeartbeatMessages.HeartbeatRegionScanner</a></td>
 <td class="colLast">
 <div class="block">Custom RegionScanner that can be configured to sleep between retrievals of row Results and/or
  column family cells</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedKVHeap.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerHeartbeatMessages.HeartbeatReversedKVHeap</a></td>
 <td class="colLast">
 <div class="block">Custom reversed KV Heap that can be configured to sleep in between retrievals of column family
  cells.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerHeartbeatMessages.HeartbeatReversedRegionScanner</a></td>
 <td class="colLast">
 <div class="block">Custom ReversedRegionScanner that can be configured to sleep between retrievals of row Results
  and/or column family cells</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.HeartbeatRPCServices.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerHeartbeatMessages.HeartbeatRPCServices</a></td>
 <td class="colLast">
 <div class="block">Custom RSRpcServices instance that allows heartbeat support to be toggled</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerHeartbeatMessages.SparseFilter.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerHeartbeatMessages.SparseFilter</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestScannerRetriableFailure.html" title="class in org.apache.hadoop.hbase.regionserver">TestScannerRetriableFailure</a></td>
@@ -853,7 +937,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransaction.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransaction</a></td>
 <td class="colLast">
-<div class="block">Test the <code>SplitTransactionImpl</code> class against an HRegion (as opposed to
+<div class="block">Test the <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>SplitTransactionImpl</code></a> class against an HRegion (as opposed to
  running cluster).</div>
 </td>
 </tr>
@@ -864,9 +948,9 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestSplitTransactionOnCluster.html" title="class in org.apache.hadoop.hbase.regionserver">TestSplitTransactionOnCluster</a></td>
 <td class="colLast">
-<div class="block">Like TestSplitTransaction in that we're testing <code>SplitTransactionImpl</code>
+<div class="block">Like TestSplitTransaction in that we're testing <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/SplitTransactionImpl.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>SplitTransactionImpl</code></a>
  only the below tests are against a running cluster where TestSplitTransaction
- is tests against a bare <code>HRegion</code>.</div>
+ is tests against a bare <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/HRegion.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver"><code>HRegion</code></a>.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -963,54 +1047,55 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStripeCompactor.html" title="class in org.apache.hadoop.hbase.regionserver">TestStripeCompactor</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStoreScanner.CellGridStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestStoreScanner.CellGridStoreScanner</a></td>
+<td class="colLast">
+<div class="block">A StoreScanner for our CELL_GRID above.</div>
+</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStripeCompactor.Scanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestStripeCompactor.Scanner</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStripeCompactor.StoreFileWritersCapture.html" title="class in org.apache.hadoop.hbase.regionserver">TestStripeCompactor.StoreFileWritersCapture</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStripeCompactor.StoreFileWritersCapture.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">TestStripeCompactor.StoreFileWritersCapture.Writer</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStripeStoreEngine.html" title="class in org.apache.hadoop.hbase.regionserver">TestStripeStoreEngine</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStripeStoreEngine.TestStoreEngine.html" title="class in org.apache.hadoop.hbase.regionserver">TestStripeStoreEngine.TestStoreEngine</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestStripeStoreFileManager.html" title="class in org.apache.hadoop.hbase.regionserver">TestStripeStoreFileManager</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestTags.html" title="class in org.apache.hadoop.hbase.regionserver">TestTags</a></td>
 <td class="colLast">
 <div class="block">Class that test tags</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestTags.TestCoprocessorForTags.html" title="class in org.apache.hadoop.hbase.regionserver">TestTags.TestCoprocessorForTags</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestTimeRangeTracker.html" title="class in org.apache.hadoop.hbase.regionserver">TestTimeRangeTracker</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestTimestampFilterSeekHint.html" title="class in org.apache.hadoop.hbase.regionserver">TestTimestampFilterSeekHint</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestWalAndCompactingMemStoreFlush.html" title="class in org.apache.hadoop.hbase.regionserver">TestWalAndCompactingMemStoreFlush</a></td>
+<td class="colLast">
+<div class="block">This test verifies the correctness of the Per Column Family flushing strategy
+ when part of the memstores are compacted memstores</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestWALLockup.html" title="class in org.apache.hadoop.hbase.regionserver">TestWALLockup</a></td>
 <td class="colLast">
 <div class="block">Testing for lock up of WAL subsystem.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestWideScanner.html" title="class in org.apache.hadoop.hbase.regionserver">TestWideScanner</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -1035,6 +1120,10 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCacheOnWriteInSchema.CacheOnWriteType.html" title="enum in org.apache.hadoop.hbase.regionserver">TestCacheOnWriteInSchema.CacheOnWriteType</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestRegionServerReadRequestMetrics.Metric.html" title="enum in org.apache.hadoop.hbase.regionserver">TestRegionServerReadRequestMetrics.Metric</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
@@ -1102,6 +1191,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

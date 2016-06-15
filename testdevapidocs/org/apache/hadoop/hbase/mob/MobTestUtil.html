@@ -157,15 +157,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobTestUtil.html#assertCellEquals(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell)">assertCellEquals</a></strong>(org.apache.hadoop.hbase.Cell&nbsp;firstKeyValue,
-                                org.apache.hadoop.hbase.Cell&nbsp;secondKeyValue)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobTestUtil.html#assertCellEquals(org.apache.hadoop.hbase.Cell,%20org.apache.hadoop.hbase.Cell)">assertCellEquals</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;firstKeyValue,
+                                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;secondKeyValue)</code>
 <div class="block">Compare two Cells only for their row family qualifier value</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobTestUtil.html#assertCellsValue(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Scan,%20byte[],%20int)">assertCellsValue</a></strong>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-                                org.apache.hadoop.hbase.client.Scan&nbsp;scan,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobTestUtil.html#assertCellsValue(org.apache.hadoop.hbase.client.Table,%20org.apache.hadoop.hbase.client.Scan,%20byte[],%20int)">assertCellsValue</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+                                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Scan.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                                 byte[]&nbsp;expectedValue,
                                 int&nbsp;expectedCount)</code>&nbsp;</td>
 </tr>
@@ -175,13 +175,13 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobTestUtil.html#writeStoreFile(org.apache.hadoop.hbase.regionserver.StoreFile.Writer,%20byte[],%20byte[])">writeStoreFile</a></strong>(org.apache.hadoop.hbase.regionserver.StoreFile.Writer&nbsp;writer,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobTestUtil.html#writeStoreFile(org.apache.hadoop.hbase.regionserver.StoreFileWriter,%20byte[],%20byte[])">writeStoreFile</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFileWriter.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a>&nbsp;writer,
                             byte[]&nbsp;fam,
                             byte[]&nbsp;qualifier)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobTestUtil.html#writeStoreFile(org.apache.hadoop.hbase.regionserver.StoreFile.Writer,%20java.lang.String)">writeStoreFile</a></strong>(org.apache.hadoop.hbase.regionserver.StoreFile.Writer&nbsp;writer,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/mob/MobTestUtil.html#writeStoreFile(org.apache.hadoop.hbase.regionserver.StoreFileWriter,%20java.lang.String)">writeStoreFile</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFileWriter.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a>&nbsp;writer,
                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;caseName)</code>&nbsp;</td>
 </tr>
 </table>
@@ -260,26 +260,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <pre>protected static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/MobTestUtil.html#line.40">generateRandomString</a>(int&nbsp;demoLength)</pre>
 </li>
 </ul>
-<a name="writeStoreFile(org.apache.hadoop.hbase.regionserver.StoreFile.Writer, java.lang.String)">
+<a name="writeStoreFile(org.apache.hadoop.hbase.regionserver.StoreFileWriter, java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>writeStoreFile</h4>
-<pre>protected static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/MobTestUtil.html#line.50">writeStoreFile</a>(org.apache.hadoop.hbase.regionserver.StoreFile.Writer&nbsp;writer,
+<pre>protected static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/MobTestUtil.html#line.50">writeStoreFile</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFileWriter.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a>&nbsp;writer,
                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;caseName)
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
-<a name="writeStoreFile(org.apache.hadoop.hbase.regionserver.StoreFile.Writer, byte[], byte[])">
+<a name="writeStoreFile(org.apache.hadoop.hbase.regionserver.StoreFileWriter, byte[], byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>writeStoreFile</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/MobTestUtil.html#line.63">writeStoreFile</a>(org.apache.hadoop.hbase.regionserver.StoreFile.Writer&nbsp;writer,
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/MobTestUtil.html#line.63">writeStoreFile</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFileWriter.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a>&nbsp;writer,
                   byte[]&nbsp;fam,
                   byte[]&nbsp;qualifier)
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -293,8 +293,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>assertCellEquals</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/MobTestUtil.html#line.81">assertCellEquals</a>(org.apache.hadoop.hbase.Cell&nbsp;firstKeyValue,
-                    org.apache.hadoop.hbase.Cell&nbsp;secondKeyValue)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/MobTestUtil.html#line.81">assertCellEquals</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;firstKeyValue,
+                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/Cell.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">Cell</a>&nbsp;secondKeyValue)</pre>
 <div class="block">Compare two Cells only for their row family qualifier value</div>
 </li>
 </ul>
@@ -304,8 +304,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>assertCellsValue</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/MobTestUtil.html#line.92">assertCellsValue</a>(org.apache.hadoop.hbase.client.Table&nbsp;table,
-                    org.apache.hadoop.hbase.client.Scan&nbsp;scan,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/mob/MobTestUtil.html#line.92">assertCellsValue</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Table.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Table</a>&nbsp;table,
+                    <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Scan.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Scan</a>&nbsp;scan,
                     byte[]&nbsp;expectedValue,
                     int&nbsp;expectedCount)
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -380,6 +380,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

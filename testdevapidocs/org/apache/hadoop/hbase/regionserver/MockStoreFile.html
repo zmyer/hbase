@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionWrapperStub.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableWrapperStub.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/NoOpScanPolicyObserver.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -86,7 +86,7 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.regionserver.StoreFile</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.StoreFile</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.regionserver.MockStoreFile</li>
@@ -100,8 +100,8 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.32">MockStoreFile</a>
-extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.34">MockStoreFile</a>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></pre>
 <div class="block">A mock used so our tests don't deal with actual StoreFiles</div>
 </li>
 </ul>
@@ -119,8 +119,8 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <li class="blockList"><a name="nested_classes_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFile">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile</h3>
-<code>org.apache.hadoop.hbase.regionserver.StoreFile.Comparators, org.apache.hadoop.hbase.regionserver.StoreFile.Reader, org.apache.hadoop.hbase.regionserver.StoreFile.Writer, org.apache.hadoop.hbase.regionserver.StoreFile.WriterBuilder</code></li>
+<h3>Nested classes/interfaces inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.Comparators.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile.Comparators</a></code></li>
 </ul>
 </li>
 </ul>
@@ -145,6 +145,14 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#entryCount">entryCount</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../apidocs/org/apache/hadoop/hbase/HDFSBlocksDistribution.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#hdfsBlocksDistribution">hdfsBlocksDistribution</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isMajor">isMajor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>(package private) boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isRef">isRef</a></strong></code>&nbsp;</td>
 </tr>
@@ -158,14 +166,18 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) long</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#sequenceid">sequenceid</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#modificationTime">modificationTime</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>(package private) long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#sequenceid">sequenceid</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#splitPoint">splitPoint</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>(package private) org.apache.hadoop.hbase.regionserver.TimeRangeTracker</code></td>
+<tr class="altColor">
+<td class="colFirst"><code>(package private) <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#timeRangeTracker">timeRangeTracker</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -173,8 +185,8 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFile">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile</h3>
-<code>BLOOM_FILTER_TYPE_KEY, BULKLOAD_TASK_KEY, BULKLOAD_TIME_KEY, DELETE_FAMILY_COUNT, EARLIEST_PUT_TS, EXCLUDE_FROM_MINOR_COMPACTION_KEY, MAJOR_COMPACTION_KEY, MAX_SEQ_ID_KEY, MOB_CELLS_COUNT, SKIP_RESET_SEQ_ID, TIMERANGE_KEY</code></li>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#BLOOM_FILTER_TYPE_KEY" title="class or interface in org.apache.hadoop.hbase.regionserver">BLOOM_FILTER_TYPE_KEY</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#BULKLOAD_TASK_KEY" title="class or interface in org.apache.hadoop.hbase.regionserver">BULKLOAD_TASK_KEY</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#BULKLOAD_TIME_KEY" title="class or interface in org.apache.hadoop.hbase.regionserver">BULKLOAD_TIME_KEY</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#DELETE_FAMILY_COUNT" title="class or interface in org.apache.hadoop.hbase.regionserver">DELETE_FAMILY_COUNT</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#EARLIEST_PUT_TS" title="class or interface in org.apache.hadoop.hbase.regionserver">EARLIEST_PUT_TS</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#EXCLUDE_FROM_MINOR_COMPACTION_KEY" title="class or interface in org.apache.hadoop.hbase.regionserver">EXCLUDE_FROM_MINOR_COMPACTION_KEY</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#LAST_BLOOM_KEY" title="class or interface in org.apache.hadoop.hbase.regionserver">LAST_BLOOM_KEY</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#MAJOR_COMPACTION_KEY" title="class or interface in org.apache.hadoop.hbase.regionserver">MAJOR_COMPACTION_KEY</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#MAX_SEQ_ID_KEY" title="class or interface in org.apache.hadoop.hbase.regionserver">MAX_SEQ_ID_KEY</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#MOB_CELLS_COUNT" title="class or interface in org.apache.hadoop.hbase.regionserver">MOB_CELLS_COUNT</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#SKIP_RESET_SEQ_ID" title="class or interface in org.apache.hadoop.hbase.regionserver">SKIP_RESET_SEQ_ID</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#TIMERANGE_KEY" title="class or interface in org.apache.hadoop.hbase.regionserver">TIMERANGE_KEY</a></code></li>
 </ul>
 </li>
 </ul>
@@ -214,7 +226,15 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>(package private) byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getFileSplitPoint(org.apache.hadoop.hbase.CellComparator)">getFileSplitPoint</a></strong>(org.apache.hadoop.hbase.CellComparator&nbsp;comparator)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getFileSplitPoint(org.apache.hadoop.hbase.CellComparator)">getFileSplitPoint</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/CellComparator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/HDFSBlocksDistribution.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HDFSBlocksDistribution</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getHDFSBlockDistribution()">getHDFSBlockDistribution</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getMaximumTimestamp()">getMaximumTimestamp</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
@@ -225,28 +245,36 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getMetadataValue(byte[])">getMetadataValue</a></strong>(byte[]&nbsp;key)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.regionserver.StoreFile.Reader</code></td>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getMinimumTimestamp()">getMinimumTimestamp</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getModificationTimeStamp()">getModificationTimeStamp</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFileReader.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFileReader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#getReader()">getReader</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>(package private) boolean</code></td>
+<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isBulkLoadResult()">isBulkLoadResult</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isCompactedAway()">isCompactedAway</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isMajorCompaction()">isMajorCompaction</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#isReference()">isReference</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>(package private) void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setEntries(long)">setEntries</a></strong>(long&nbsp;entryCount)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setIsMajor(boolean)">setIsMajor</a></strong>(boolean&nbsp;isMajor)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) void</code></td>
@@ -259,15 +287,15 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setTimeRangeTracker(org.apache.hadoop.hbase.regionserver.TimeRangeTracker)">setTimeRangeTracker</a></strong>(org.apache.hadoop.hbase.regionserver.TimeRangeTracker&nbsp;timeRangeTracker)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/MockStoreFile.html#setTimeRangeTracker(org.apache.hadoop.hbase.regionserver.TimeRangeTracker)">setTimeRangeTracker</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a>&nbsp;timeRangeTracker)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.StoreFile">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile</h3>
-<code><clinit>, closeReader, createReader, createReader, deleteReader, excludeFromMinorCompaction, getBulkLoadTimestamp, getCacheConf, getComparator, getFileInfo, getFirstKey, getHDFSBlockDistribution, getLastKey, getMaxMemstoreTS, getMaxMemstoreTSInList, getMaxSequenceIdInList, getMinimumTimestamp, getModificationTimeStamp, getPath, getQualifiedPath, getRefCount, getUniqueFile, markCompactedAway, setMaxMemstoreTS, toString, toStringDetailed</code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></h3>
+<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#%3Cclinit%3E()" title="class or interface in org.apache.hadoop.hbase.regionserver"><clinit></a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#cloneForReader()" title="class or interface in org.apache.hadoop.hbase.regionserver">cloneForReader</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#closeReader(boolean)" title="class or interface in org.apache.hadoop.hbase.regionserver">closeReader</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#createReader()" title="class or interface in org.apache.hadoop.hbase.regionserver">createReader</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#createReader(boolean)" title="class or interface in org.apache.hadoop.hbase.regionserver">createReader</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#deleteReader()" title="class or interface in org.apache.hadoop.hbase.regionserver">deleteReader</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#excludeFromMinorCompaction()" title="class or interface in org.apache.hadoop.hbase.regionserver">excludeFromMinorCompaction</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getBulkLoadTimestamp()" title="class or interface in org.apache.hadoop.hbase.regionserver">getBulkLoadTimestamp</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getCacheConf()" title="class or interface in org.apache.hadoop.hbase.regionserver">getCacheConf</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getComparator()" title="class or interface in org.apache.hadoop.hbase.regionserver">getComparator</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getFileInfo()" title="class or interface in org.apache.hadoop.hbase.regionserver">getFileInfo</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getFirstKey()" title="class or interface in org.apache.hadoop.hbase.regionserver">getFirstKey</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getLastKey()" title="class or interface in org.apache.hadoop.hbase.regionserver">getLastKey</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getMaxMemstoreTS()" title="class or interface in org.apache.hadoop.hbase.regionserver">getMaxMemstoreTS</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getMaxMemstoreTSInList(java.util.Collection)" title="class or interface in org.apache.hadoop.hbase.regionserver">getMaxMemstoreTSInList</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getMaxSequenceIdInList(java.util.Collection)" title="class or interface in org.apache.hadoop.hbase.regionserver">getMaxSequenceIdInList</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getPath()" title="class or interface in org.apache.hadoop.hbase.regionserver">getPath</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getQualifiedPath()" title="class or interface in org.apache.hadoop.hbase.regionserver">getQualifiedPath</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getRefCount()" title="class or interface in org.apache.hadoop.hbase.regionserver">getRefCount</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getUniqueFile(org.apache.hadoop.fs.FileSystem,%20org.apache.hadoop.fs.Path)" title="class or interface in org.apache.hadoop.hbase.regionserver">getUniqueFile</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#isCompactedAway()" title="class or interface in org.apache.hadoop.hbase.regionserver">isCompactedAway</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#isHFile()" title="class or interface in org.apache.hadoop.hbase.regionserver">isHFile</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#markCompactedAway()" title="class or interface in org.apache.hadoop.hbase.regionserver">markCompactedAway</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#setMaxMemstoreTS(long)" title="class or interface in org.apache.hadoop.hbase.regionserver">setMaxMemstoreTS</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#toString()" title="class or interface in org.apache.hadoop.hbase.regionserver">toString</a>, <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#toStringDetailed()" title="class or interface in org.apache.hadoop.hbase.regionserver">toStringDetailed</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -296,7 +324,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>length</h4>
-<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.33">length</a></pre>
+<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.35">length</a></pre>
 </li>
 </ul>
 <a name="isRef">
@@ -305,7 +333,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isRef</h4>
-<pre>boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.34">isRef</a></pre>
+<pre>boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.36">isRef</a></pre>
 </li>
 </ul>
 <a name="ageInDisk">
@@ -314,7 +342,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>ageInDisk</h4>
-<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.35">ageInDisk</a></pre>
+<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.37">ageInDisk</a></pre>
 </li>
 </ul>
 <a name="sequenceid">
@@ -323,7 +351,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>sequenceid</h4>
-<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.36">sequenceid</a></pre>
+<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.38">sequenceid</a></pre>
 </li>
 </ul>
 <a name="metadata">
@@ -332,7 +360,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>metadata</h4>
-<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.37">metadata</a></pre>
+<pre>private&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;byte[],byte[]&gt; <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.39">metadata</a></pre>
 </li>
 </ul>
 <a name="splitPoint">
@@ -341,7 +369,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>splitPoint</h4>
-<pre>byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.38">splitPoint</a></pre>
+<pre>byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.40">splitPoint</a></pre>
 </li>
 </ul>
 <a name="timeRangeTracker">
@@ -350,16 +378,43 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>timeRangeTracker</h4>
-<pre>org.apache.hadoop.hbase.regionserver.TimeRangeTracker <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.39">timeRangeTracker</a></pre>
+<pre><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.41">timeRangeTracker</a></pre>
 </li>
 </ul>
 <a name="entryCount">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>entryCount</h4>
-<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.40">entryCount</a></pre>
+<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.42">entryCount</a></pre>
+</li>
+</ul>
+<a name="isMajor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMajor</h4>
+<pre>boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.43">isMajor</a></pre>
+</li>
+</ul>
+<a name="hdfsBlocksDistribution">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hdfsBlocksDistribution</h4>
+<pre><a href="../../../../../../apidocs/org/apache/hadoop/hbase/HDFSBlocksDistribution.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HDFSBlocksDistribution</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.44">hdfsBlocksDistribution</a></pre>
+</li>
+</ul>
+<a name="modificationTime">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>modificationTime</h4>
+<pre>long <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.45">modificationTime</a></pre>
 </li>
 </ul>
 </li>
@@ -376,7 +431,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MockStoreFile</h4>
-<pre><a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.42">MockStoreFile</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;testUtil,
+<pre><a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.47">MockStoreFile</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;testUtil,
              org.apache.hadoop.fs.Path&nbsp;testPath,
              long&nbsp;length,
              long&nbsp;ageInDisk,
@@ -401,7 +456,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setLength</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.52">setLength</a>(long&nbsp;newLen)</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.62">setLength</a>(long&nbsp;newLen)</pre>
 </li>
 </ul>
 <a name="getFileSplitPoint(org.apache.hadoop.hbase.CellComparator)">
@@ -410,11 +465,11 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getFileSplitPoint</h4>
-<pre>byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.57">getFileSplitPoint</a>(org.apache.hadoop.hbase.CellComparator&nbsp;comparator)
+<pre>byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.67">getFileSplitPoint</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/CellComparator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">CellComparator</a>&nbsp;comparator)
                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>getFileSplitPoint</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getFileSplitPoint(org.apache.hadoop.hbase.CellComparator)" title="class or interface in org.apache.hadoop.hbase.regionserver">getFileSplitPoint</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -425,10 +480,10 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getMaxSequenceId</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.62">getMaxSequenceId</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.72">getMaxSequenceId</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>getMaxSequenceId</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getMaxSequenceId()" title="class or interface in org.apache.hadoop.hbase.regionserver">getMaxSequenceId</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -438,11 +493,20 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isMajorCompaction</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.67">isMajorCompaction</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.77">isMajorCompaction</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>isMajorCompaction</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#isMajorCompaction()" title="class or interface in org.apache.hadoop.hbase.regionserver">isMajorCompaction</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="setIsMajor(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIsMajor</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.81">setIsMajor</a>(boolean&nbsp;isMajor)</pre>
 </li>
 </ul>
 <a name="isReference()">
@@ -451,10 +515,10 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isReference</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.72">isReference</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.86">isReference</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>isReference</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#isReference()" title="class or interface in org.apache.hadoop.hbase.regionserver">isReference</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -464,23 +528,10 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isBulkLoadResult</h4>
-<pre>boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.77">isBulkLoadResult</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.91">isBulkLoadResult</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>isBulkLoadResult</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
-</dl>
-</li>
-</ul>
-<a name="isCompactedAway()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isCompactedAway</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.82">isCompactedAway</a>()</pre>
-<dl>
-<dt><strong>Overrides:</strong></dt>
-<dd><code>isCompactedAway</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#isBulkLoadResult()" title="class or interface in org.apache.hadoop.hbase.regionserver">isBulkLoadResult</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -490,10 +541,10 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getMetadataValue</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.87">getMetadataValue</a>(byte[]&nbsp;key)</pre>
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.96">getMetadataValue</a>(byte[]&nbsp;key)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>getMetadataValue</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getMetadataValue(byte[])" title="class or interface in org.apache.hadoop.hbase.regionserver">getMetadataValue</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -503,7 +554,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setMetadataValue</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.91">setMetadataValue</a>(byte[]&nbsp;key,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.100">setMetadataValue</a>(byte[]&nbsp;key,
                     byte[]&nbsp;value)</pre>
 </li>
 </ul>
@@ -513,7 +564,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setTimeRangeTracker</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.95">setTimeRangeTracker</a>(org.apache.hadoop.hbase.regionserver.TimeRangeTracker&nbsp;timeRangeTracker)</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.104">setTimeRangeTracker</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/TimeRangeTracker.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">TimeRangeTracker</a>&nbsp;timeRangeTracker)</pre>
 </li>
 </ul>
 <a name="setEntries(long)">
@@ -522,7 +573,59 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setEntries</h4>
-<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.99">setEntries</a>(long&nbsp;entryCount)</pre>
+<pre>void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.108">setEntries</a>(long&nbsp;entryCount)</pre>
+</li>
+</ul>
+<a name="getMinimumTimestamp()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMinimumTimestamp</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.112">getMinimumTimestamp</a>()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getMinimumTimestamp()" title="class or interface in org.apache.hadoop.hbase.regionserver">getMinimumTimestamp</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getMaximumTimestamp()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaximumTimestamp</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.117">getMaximumTimestamp</a>()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getMaximumTimestamp()" title="class or interface in org.apache.hadoop.hbase.regionserver">getMaximumTimestamp</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getModificationTimeStamp()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getModificationTimeStamp</h4>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.123">getModificationTimeStamp</a>()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getModificationTimeStamp()" title="class or interface in org.apache.hadoop.hbase.regionserver">getModificationTimeStamp</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getHDFSBlockDistribution()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHDFSBlockDistribution</h4>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/HDFSBlocksDistribution.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">HDFSBlocksDistribution</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.128">getHDFSBlockDistribution</a>()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getHDFSBlockDistribution()" title="class or interface in org.apache.hadoop.hbase.regionserver">getHDFSBlockDistribution</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
+</dl>
 </li>
 </ul>
 <a name="getReader()">
@@ -531,10 +634,10 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getReader</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile.Reader&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.104">getReader</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFileReader.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFileReader</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/MockStoreFile.html#line.133">getReader</a>()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code>getReader</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.StoreFile</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true#getReader()" title="class or interface in org.apache.hadoop.hbase.regionserver">getReader</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -564,7 +667,7 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsRegionWrapperStub.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/regionserver/MetricsTableWrapperStub.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/regionserver/NoOpScanPolicyObserver.html" title="class in org.apache.hadoop.hbase.regionserver"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -605,6 +708,6 @@ extends org.apache.hadoop.hbase.regionserver.StoreFile</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

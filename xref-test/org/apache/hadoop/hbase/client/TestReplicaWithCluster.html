@@ -49,49 +49,49 @@
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.RequestConverter;
 <a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.regionserver.StorefileRefresherChore;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.regionserver.TestHRegionServerBulkLoad;
-<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.ClientTests;
-<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.MediumTests;
-<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Bytes;
-<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Pair;
-<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.zookeeper.MiniZooKeeperCluster;
-<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.junit.AfterClass;
-<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.junit.Assert;
-<a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> org.junit.BeforeClass;
-<a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
-<a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.junit.experimental.categories.Category;
-<a class="jxr_linenumber" name="52" href="#52">52</a>  
-<a class="jxr_linenumber" name="53" href="#53">53</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
-<a class="jxr_linenumber" name="54" href="#54">54</a>  <strong class="jxr_keyword">import</strong> java.util.ArrayList;
-<a class="jxr_linenumber" name="55" href="#55">55</a>  <strong class="jxr_keyword">import</strong> java.util.Arrays;
-<a class="jxr_linenumber" name="56" href="#56">56</a>  <strong class="jxr_keyword">import</strong> java.util.List;
-<a class="jxr_linenumber" name="57" href="#57">57</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.CountDownLatch;
-<a class="jxr_linenumber" name="58" href="#58">58</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.TimeUnit;
-<a class="jxr_linenumber" name="59" href="#59">59</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.atomic.AtomicLong;
-<a class="jxr_linenumber" name="60" href="#60">60</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.atomic.AtomicReference;
-<a class="jxr_linenumber" name="61" href="#61">61</a>  
-<a class="jxr_linenumber" name="62" href="#62">62</a>  @Category({MediumTests.<strong class="jxr_keyword">class</strong>, ClientTests.<strong class="jxr_keyword">class</strong>})
-<a class="jxr_linenumber" name="63" href="#63">63</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/client/TestReplicaWithCluster.html">TestReplicaWithCluster</a> {
-<a class="jxr_linenumber" name="64" href="#64">64</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Log LOG = LogFactory.getLog(TestReplicaWithCluster.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="65" href="#65">65</a>  
-<a class="jxr_linenumber" name="66" href="#66">66</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> NB_SERVERS = 2;
-<a class="jxr_linenumber" name="67" href="#67">67</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> byte[] row = TestReplicaWithCluster.<strong class="jxr_keyword">class</strong>.getName().getBytes();
-<a class="jxr_linenumber" name="68" href="#68">68</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> HTU = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a>();
-<a class="jxr_linenumber" name="69" href="#69">69</a>  
-<a class="jxr_linenumber" name="70" href="#70">70</a>    <em class="jxr_comment">// second minicluster used in testing of replication</em>
-<a class="jxr_linenumber" name="71" href="#71">71</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> HTU2;
-<a class="jxr_linenumber" name="72" href="#72">72</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> byte[] f = HConstants.CATALOG_FAMILY;
-<a class="jxr_linenumber" name="73" href="#73">73</a>  
-<a class="jxr_linenumber" name="74" href="#74">74</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> REFRESH_PERIOD = 1000;
-<a class="jxr_linenumber" name="75" href="#75">75</a>  
-<a class="jxr_linenumber" name="76" href="#76">76</a>    <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="77" href="#77">77</a>  <em class="jxr_javadoccomment">   * This copro is used to synchronize the tests.</em>
-<a class="jxr_linenumber" name="78" href="#78">78</a>  <em class="jxr_javadoccomment">   */</em>
-<a class="jxr_linenumber" name="79" href="#79">79</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/client/TestReplicaWithCluster.html">SlowMeCopro</a> <strong class="jxr_keyword">extends</strong> BaseRegionObserver {
-<a class="jxr_linenumber" name="80" href="#80">80</a>      <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> AtomicLong sleepTime = <strong class="jxr_keyword">new</strong> AtomicLong(0);
-<a class="jxr_linenumber" name="81" href="#81">81</a>      <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> AtomicReference&lt;CountDownLatch&gt; cdl =
-<a class="jxr_linenumber" name="82" href="#82">82</a>          <strong class="jxr_keyword">new</strong> AtomicReference&lt;CountDownLatch&gt;(<strong class="jxr_keyword">new</strong> CountDownLatch(0));
+<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.replication.ReplicationPeerConfig;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.ClientTests;
+<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.MediumTests;
+<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Bytes;
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Pair;
+<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.zookeeper.MiniZooKeeperCluster;
+<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.junit.AfterClass;
+<a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> org.junit.Assert;
+<a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.junit.BeforeClass;
+<a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="52" href="#52">52</a>  <strong class="jxr_keyword">import</strong> org.junit.experimental.categories.Category;
+<a class="jxr_linenumber" name="53" href="#53">53</a>  
+<a class="jxr_linenumber" name="54" href="#54">54</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="55" href="#55">55</a>  <strong class="jxr_keyword">import</strong> java.util.ArrayList;
+<a class="jxr_linenumber" name="56" href="#56">56</a>  <strong class="jxr_keyword">import</strong> java.util.Arrays;
+<a class="jxr_linenumber" name="57" href="#57">57</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="58" href="#58">58</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.CountDownLatch;
+<a class="jxr_linenumber" name="59" href="#59">59</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.TimeUnit;
+<a class="jxr_linenumber" name="60" href="#60">60</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.atomic.AtomicLong;
+<a class="jxr_linenumber" name="61" href="#61">61</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.atomic.AtomicReference;
+<a class="jxr_linenumber" name="62" href="#62">62</a>  
+<a class="jxr_linenumber" name="63" href="#63">63</a>  @Category({MediumTests.<strong class="jxr_keyword">class</strong>, ClientTests.<strong class="jxr_keyword">class</strong>})
+<a class="jxr_linenumber" name="64" href="#64">64</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/client/TestReplicaWithCluster.html">TestReplicaWithCluster</a> {
+<a class="jxr_linenumber" name="65" href="#65">65</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Log LOG = LogFactory.getLog(TestReplicaWithCluster.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="66" href="#66">66</a>  
+<a class="jxr_linenumber" name="67" href="#67">67</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> NB_SERVERS = 2;
+<a class="jxr_linenumber" name="68" href="#68">68</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> byte[] row = TestReplicaWithCluster.<strong class="jxr_keyword">class</strong>.getName().getBytes();
+<a class="jxr_linenumber" name="69" href="#69">69</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> HTU = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a>();
+<a class="jxr_linenumber" name="70" href="#70">70</a>  
+<a class="jxr_linenumber" name="71" href="#71">71</a>    <em class="jxr_comment">// second minicluster used in testing of replication</em>
+<a class="jxr_linenumber" name="72" href="#72">72</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> HTU2;
+<a class="jxr_linenumber" name="73" href="#73">73</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> byte[] f = HConstants.CATALOG_FAMILY;
+<a class="jxr_linenumber" name="74" href="#74">74</a>  
+<a class="jxr_linenumber" name="75" href="#75">75</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> REFRESH_PERIOD = 1000;
+<a class="jxr_linenumber" name="76" href="#76">76</a>  
+<a class="jxr_linenumber" name="77" href="#77">77</a>    <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="78" href="#78">78</a>  <em class="jxr_javadoccomment">   * This copro is used to synchronize the tests.</em>
+<a class="jxr_linenumber" name="79" href="#79">79</a>  <em class="jxr_javadoccomment">   */</em>
+<a class="jxr_linenumber" name="80" href="#80">80</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html">SlowMeCopro</a> <strong class="jxr_keyword">extends</strong> BaseRegionObserver {
+<a class="jxr_linenumber" name="81" href="#81">81</a>      <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> AtomicLong sleepTime = <strong class="jxr_keyword">new</strong> AtomicLong(0);
+<a class="jxr_linenumber" name="82" href="#82">82</a>      <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> AtomicReference&lt;CountDownLatch&gt; cdl = <strong class="jxr_keyword">new</strong> AtomicReference&lt;&gt;(<strong class="jxr_keyword">new</strong> CountDownLatch(0));
 <a class="jxr_linenumber" name="83" href="#83">83</a>  
-<a class="jxr_linenumber" name="84" href="#84">84</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/client/TestReplicaWithCluster.html">SlowMeCopro</a>() {
+<a class="jxr_linenumber" name="84" href="#84">84</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/hadoop/hbase/client/TestReplicasClient.html">SlowMeCopro</a>() {
 <a class="jxr_linenumber" name="85" href="#85">85</a>      }
 <a class="jxr_linenumber" name="86" href="#86">86</a>  
 <a class="jxr_linenumber" name="87" href="#87">87</a>      @Override
@@ -259,137 +259,140 @@
 <a class="jxr_linenumber" name="249" href="#249">249</a>     HTU2.getHBaseAdmin().createTable(hdt, HBaseTestingUtility.KEYS_FOR_HBA_CREATE_TABLE);
 <a class="jxr_linenumber" name="250" href="#250">250</a> 
 <a class="jxr_linenumber" name="251" href="#251">251</a>     ReplicationAdmin admin = <strong class="jxr_keyword">new</strong> ReplicationAdmin(HTU.getConfiguration());
-<a class="jxr_linenumber" name="252" href="#252">252</a>     admin.addPeer(<span class="jxr_string">"2"</span>, HTU2.getClusterKey());
-<a class="jxr_linenumber" name="253" href="#253">253</a>     admin.close();
-<a class="jxr_linenumber" name="254" href="#254">254</a> 
-<a class="jxr_linenumber" name="255" href="#255">255</a>     Put p = <strong class="jxr_keyword">new</strong> Put(row);
-<a class="jxr_linenumber" name="256" href="#256">256</a>     p.addColumn(row, row, row);
-<a class="jxr_linenumber" name="257" href="#257">257</a>     <strong class="jxr_keyword">final</strong> Table table = HTU.getConnection().getTable(hdt.getTableName());
-<a class="jxr_linenumber" name="258" href="#258">258</a>     table.put(p);
-<a class="jxr_linenumber" name="259" href="#259">259</a> 
-<a class="jxr_linenumber" name="260" href="#260">260</a>     HTU.getHBaseAdmin().flush(table.getName());
-<a class="jxr_linenumber" name="261" href="#261">261</a>     LOG.info(<span class="jxr_string">"Put &amp; flush done on the first cluster. Now doing a get on the same cluster."</span>);
+<a class="jxr_linenumber" name="252" href="#252">252</a> 
+<a class="jxr_linenumber" name="253" href="#253">253</a>     ReplicationPeerConfig rpc = <strong class="jxr_keyword">new</strong> ReplicationPeerConfig();
+<a class="jxr_linenumber" name="254" href="#254">254</a>     rpc.setClusterKey(HTU2.getClusterKey());
+<a class="jxr_linenumber" name="255" href="#255">255</a>     admin.addPeer(<span class="jxr_string">"2"</span>, rpc, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="256" href="#256">256</a>     admin.close();
+<a class="jxr_linenumber" name="257" href="#257">257</a> 
+<a class="jxr_linenumber" name="258" href="#258">258</a>     Put p = <strong class="jxr_keyword">new</strong> Put(row);
+<a class="jxr_linenumber" name="259" href="#259">259</a>     p.addColumn(row, row, row);
+<a class="jxr_linenumber" name="260" href="#260">260</a>     <strong class="jxr_keyword">final</strong> Table table = HTU.getConnection().getTable(hdt.getTableName());
+<a class="jxr_linenumber" name="261" href="#261">261</a>     table.put(p);
 <a class="jxr_linenumber" name="262" href="#262">262</a> 
-<a class="jxr_linenumber" name="263" href="#263">263</a>     Waiter.waitFor(HTU.getConfiguration(), 1000, <strong class="jxr_keyword">new</strong> Waiter.Predicate&lt;Exception&gt;() {
-<a class="jxr_linenumber" name="264" href="#264">264</a>       @Override
-<a class="jxr_linenumber" name="265" href="#265">265</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> evaluate() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="266" href="#266">266</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="267" href="#267">267</a>           SlowMeCopro.cdl.set(<strong class="jxr_keyword">new</strong> CountDownLatch(1));
-<a class="jxr_linenumber" name="268" href="#268">268</a>           Get g = <strong class="jxr_keyword">new</strong> Get(row);
-<a class="jxr_linenumber" name="269" href="#269">269</a>           g.setConsistency(Consistency.TIMELINE);
-<a class="jxr_linenumber" name="270" href="#270">270</a>           Result r = table.get(g);
-<a class="jxr_linenumber" name="271" href="#271">271</a>           Assert.assertTrue(r.isStale());
-<a class="jxr_linenumber" name="272" href="#272">272</a>           <strong class="jxr_keyword">return</strong>  !r.isEmpty();
-<a class="jxr_linenumber" name="273" href="#273">273</a>         } <strong class="jxr_keyword">finally</strong> {
-<a class="jxr_linenumber" name="274" href="#274">274</a>           SlowMeCopro.cdl.get().countDown();
-<a class="jxr_linenumber" name="275" href="#275">275</a>           SlowMeCopro.sleepTime.set(0);
-<a class="jxr_linenumber" name="276" href="#276">276</a>         }
-<a class="jxr_linenumber" name="277" href="#277">277</a>       }});
-<a class="jxr_linenumber" name="278" href="#278">278</a>     table.close();
-<a class="jxr_linenumber" name="279" href="#279">279</a>     LOG.info(<span class="jxr_string">"stale get on the first cluster done. Now for the second."</span>);
-<a class="jxr_linenumber" name="280" href="#280">280</a> 
-<a class="jxr_linenumber" name="281" href="#281">281</a>     <strong class="jxr_keyword">final</strong> Table table2 = HTU.getConnection().getTable(hdt.getTableName());
-<a class="jxr_linenumber" name="282" href="#282">282</a>     Waiter.waitFor(HTU.getConfiguration(), 1000, <strong class="jxr_keyword">new</strong> Waiter.Predicate&lt;Exception&gt;() {
-<a class="jxr_linenumber" name="283" href="#283">283</a>       @Override
-<a class="jxr_linenumber" name="284" href="#284">284</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> evaluate() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="285" href="#285">285</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="286" href="#286">286</a>           SlowMeCopro.cdl.set(<strong class="jxr_keyword">new</strong> CountDownLatch(1));
-<a class="jxr_linenumber" name="287" href="#287">287</a>           Get g = <strong class="jxr_keyword">new</strong> Get(row);
-<a class="jxr_linenumber" name="288" href="#288">288</a>           g.setConsistency(Consistency.TIMELINE);
-<a class="jxr_linenumber" name="289" href="#289">289</a>           Result r = table2.get(g);
-<a class="jxr_linenumber" name="290" href="#290">290</a>           Assert.assertTrue(r.isStale());
-<a class="jxr_linenumber" name="291" href="#291">291</a>           <strong class="jxr_keyword">return</strong>  !r.isEmpty();
-<a class="jxr_linenumber" name="292" href="#292">292</a>         } <strong class="jxr_keyword">finally</strong> {
-<a class="jxr_linenumber" name="293" href="#293">293</a>           SlowMeCopro.cdl.get().countDown();
-<a class="jxr_linenumber" name="294" href="#294">294</a>           SlowMeCopro.sleepTime.set(0);
-<a class="jxr_linenumber" name="295" href="#295">295</a>         }
-<a class="jxr_linenumber" name="296" href="#296">296</a>       }});
-<a class="jxr_linenumber" name="297" href="#297">297</a>     table2.close();
-<a class="jxr_linenumber" name="298" href="#298">298</a> 
-<a class="jxr_linenumber" name="299" href="#299">299</a>     HTU.getHBaseAdmin().disableTable(hdt.getTableName());
-<a class="jxr_linenumber" name="300" href="#300">300</a>     HTU.deleteTable(hdt.getTableName());
+<a class="jxr_linenumber" name="263" href="#263">263</a>     HTU.getHBaseAdmin().flush(table.getName());
+<a class="jxr_linenumber" name="264" href="#264">264</a>     LOG.info(<span class="jxr_string">"Put &amp; flush done on the first cluster. Now doing a get on the same cluster."</span>);
+<a class="jxr_linenumber" name="265" href="#265">265</a> 
+<a class="jxr_linenumber" name="266" href="#266">266</a>     Waiter.waitFor(HTU.getConfiguration(), 1000, <strong class="jxr_keyword">new</strong> Waiter.Predicate&lt;Exception&gt;() {
+<a class="jxr_linenumber" name="267" href="#267">267</a>       @Override
+<a class="jxr_linenumber" name="268" href="#268">268</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> evaluate() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="269" href="#269">269</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="270" href="#270">270</a>           SlowMeCopro.cdl.set(<strong class="jxr_keyword">new</strong> CountDownLatch(1));
+<a class="jxr_linenumber" name="271" href="#271">271</a>           Get g = <strong class="jxr_keyword">new</strong> Get(row);
+<a class="jxr_linenumber" name="272" href="#272">272</a>           g.setConsistency(Consistency.TIMELINE);
+<a class="jxr_linenumber" name="273" href="#273">273</a>           Result r = table.get(g);
+<a class="jxr_linenumber" name="274" href="#274">274</a>           Assert.assertTrue(r.isStale());
+<a class="jxr_linenumber" name="275" href="#275">275</a>           <strong class="jxr_keyword">return</strong>  !r.isEmpty();
+<a class="jxr_linenumber" name="276" href="#276">276</a>         } <strong class="jxr_keyword">finally</strong> {
+<a class="jxr_linenumber" name="277" href="#277">277</a>           SlowMeCopro.cdl.get().countDown();
+<a class="jxr_linenumber" name="278" href="#278">278</a>           SlowMeCopro.sleepTime.set(0);
+<a class="jxr_linenumber" name="279" href="#279">279</a>         }
+<a class="jxr_linenumber" name="280" href="#280">280</a>       }});
+<a class="jxr_linenumber" name="281" href="#281">281</a>     table.close();
+<a class="jxr_linenumber" name="282" href="#282">282</a>     LOG.info(<span class="jxr_string">"stale get on the first cluster done. Now for the second."</span>);
+<a class="jxr_linenumber" name="283" href="#283">283</a> 
+<a class="jxr_linenumber" name="284" href="#284">284</a>     <strong class="jxr_keyword">final</strong> Table table2 = HTU.getConnection().getTable(hdt.getTableName());
+<a class="jxr_linenumber" name="285" href="#285">285</a>     Waiter.waitFor(HTU.getConfiguration(), 1000, <strong class="jxr_keyword">new</strong> Waiter.Predicate&lt;Exception&gt;() {
+<a class="jxr_linenumber" name="286" href="#286">286</a>       @Override
+<a class="jxr_linenumber" name="287" href="#287">287</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> evaluate() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="288" href="#288">288</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="289" href="#289">289</a>           SlowMeCopro.cdl.set(<strong class="jxr_keyword">new</strong> CountDownLatch(1));
+<a class="jxr_linenumber" name="290" href="#290">290</a>           Get g = <strong class="jxr_keyword">new</strong> Get(row);
+<a class="jxr_linenumber" name="291" href="#291">291</a>           g.setConsistency(Consistency.TIMELINE);
+<a class="jxr_linenumber" name="292" href="#292">292</a>           Result r = table2.get(g);
+<a class="jxr_linenumber" name="293" href="#293">293</a>           Assert.assertTrue(r.isStale());
+<a class="jxr_linenumber" name="294" href="#294">294</a>           <strong class="jxr_keyword">return</strong>  !r.isEmpty();
+<a class="jxr_linenumber" name="295" href="#295">295</a>         } <strong class="jxr_keyword">finally</strong> {
+<a class="jxr_linenumber" name="296" href="#296">296</a>           SlowMeCopro.cdl.get().countDown();
+<a class="jxr_linenumber" name="297" href="#297">297</a>           SlowMeCopro.sleepTime.set(0);
+<a class="jxr_linenumber" name="298" href="#298">298</a>         }
+<a class="jxr_linenumber" name="299" href="#299">299</a>       }});
+<a class="jxr_linenumber" name="300" href="#300">300</a>     table2.close();
 <a class="jxr_linenumber" name="301" href="#301">301</a> 
-<a class="jxr_linenumber" name="302" href="#302">302</a>     HTU2.getHBaseAdmin().disableTable(hdt.getTableName());
-<a class="jxr_linenumber" name="303" href="#303">303</a>     HTU2.deleteTable(hdt.getTableName());
+<a class="jxr_linenumber" name="302" href="#302">302</a>     HTU.getHBaseAdmin().disableTable(hdt.getTableName());
+<a class="jxr_linenumber" name="303" href="#303">303</a>     HTU.deleteTable(hdt.getTableName());
 <a class="jxr_linenumber" name="304" href="#304">304</a> 
-<a class="jxr_linenumber" name="305" href="#305">305</a>     <em class="jxr_comment">// We shutdown HTU2 minicluster later, in afterClass(), as shutting down</em>
-<a class="jxr_linenumber" name="306" href="#306">306</a>     <em class="jxr_comment">// the minicluster has negative impact of deleting all HConnections in JVM.</em>
-<a class="jxr_linenumber" name="307" href="#307">307</a>   }
-<a class="jxr_linenumber" name="308" href="#308">308</a> 
-<a class="jxr_linenumber" name="309" href="#309">309</a>   @Test (timeout=30000)
-<a class="jxr_linenumber" name="310" href="#310">310</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testBulkLoad() <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="311" href="#311">311</a>     <em class="jxr_comment">// Create table then get the single region for our new table.</em>
-<a class="jxr_linenumber" name="312" href="#312">312</a>     LOG.debug(<span class="jxr_string">"Creating test table"</span>);
-<a class="jxr_linenumber" name="313" href="#313">313</a>     HTableDescriptor hdt = HTU.createTableDescriptor(<span class="jxr_string">"testBulkLoad"</span>);
-<a class="jxr_linenumber" name="314" href="#314">314</a>     hdt.setRegionReplication(NB_SERVERS);
-<a class="jxr_linenumber" name="315" href="#315">315</a>     hdt.addCoprocessor(SlowMeCopro.<strong class="jxr_keyword">class</strong>.getName());
-<a class="jxr_linenumber" name="316" href="#316">316</a>     Table table = HTU.createTable(hdt, <strong class="jxr_keyword">new</strong> byte[][]{f}, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="317" href="#317">317</a> 
-<a class="jxr_linenumber" name="318" href="#318">318</a>     <em class="jxr_comment">// create hfiles to load.</em>
-<a class="jxr_linenumber" name="319" href="#319">319</a>     LOG.debug(<span class="jxr_string">"Creating test data"</span>);
-<a class="jxr_linenumber" name="320" href="#320">320</a>     Path dir = HTU.getDataTestDirOnTestFS(<span class="jxr_string">"testBulkLoad"</span>);
-<a class="jxr_linenumber" name="321" href="#321">321</a>     <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> numRows = 10;
-<a class="jxr_linenumber" name="322" href="#322">322</a>     <strong class="jxr_keyword">final</strong> byte[] qual = Bytes.toBytes(<span class="jxr_string">"qual"</span>);
-<a class="jxr_linenumber" name="323" href="#323">323</a>     <strong class="jxr_keyword">final</strong> byte[] val  = Bytes.toBytes(<span class="jxr_string">"val"</span>);
-<a class="jxr_linenumber" name="324" href="#324">324</a>     <strong class="jxr_keyword">final</strong> List&lt;Pair&lt;byte[], String&gt;&gt; famPaths = <strong class="jxr_keyword">new</strong> ArrayList&lt;Pair&lt;byte[], String&gt;&gt;();
-<a class="jxr_linenumber" name="325" href="#325">325</a>     <strong class="jxr_keyword">for</strong> (HColumnDescriptor col : hdt.getColumnFamilies()) {
-<a class="jxr_linenumber" name="326" href="#326">326</a>       Path hfile = <strong class="jxr_keyword">new</strong> Path(dir, col.getNameAsString());
-<a class="jxr_linenumber" name="327" href="#327">327</a>       TestHRegionServerBulkLoad.createHFile(HTU.getTestFileSystem(), hfile, col.getName(),
-<a class="jxr_linenumber" name="328" href="#328">328</a>         qual, val, numRows);
-<a class="jxr_linenumber" name="329" href="#329">329</a>       famPaths.add(<strong class="jxr_keyword">new</strong> Pair&lt;byte[], String&gt;(col.getName(), hfile.toString()));
-<a class="jxr_linenumber" name="330" href="#330">330</a>     }
-<a class="jxr_linenumber" name="331" href="#331">331</a> 
-<a class="jxr_linenumber" name="332" href="#332">332</a>     <em class="jxr_comment">// bulk load HFiles</em>
-<a class="jxr_linenumber" name="333" href="#333">333</a>     LOG.debug(<span class="jxr_string">"Loading test data"</span>);
-<a class="jxr_linenumber" name="334" href="#334">334</a>     @SuppressWarnings(<span class="jxr_string">"deprecation"</span>)
-<a class="jxr_linenumber" name="335" href="#335">335</a>     <strong class="jxr_keyword">final</strong> HConnection conn = HTU.getHBaseAdmin().getConnection();
-<a class="jxr_linenumber" name="336" href="#336">336</a>     RegionServerCallable&lt;Void&gt; callable = <strong class="jxr_keyword">new</strong> RegionServerCallable&lt;Void&gt;(
-<a class="jxr_linenumber" name="337" href="#337">337</a>       conn, hdt.getTableName(), TestHRegionServerBulkLoad.rowkey(0)) {
-<a class="jxr_linenumber" name="338" href="#338">338</a>         @Override
-<a class="jxr_linenumber" name="339" href="#339">339</a>         <strong class="jxr_keyword">public</strong> Void call(<strong class="jxr_keyword">int</strong> timeout) <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="340" href="#340">340</a>           LOG.debug(<span class="jxr_string">"Going to connect to server "</span> + getLocation() + <span class="jxr_string">" for row "</span>
-<a class="jxr_linenumber" name="341" href="#341">341</a>             + Bytes.toStringBinary(getRow()));
-<a class="jxr_linenumber" name="342" href="#342">342</a>           byte[] regionName = getLocation().getRegionInfo().getRegionName();
-<a class="jxr_linenumber" name="343" href="#343">343</a>           BulkLoadHFileRequest request =
-<a class="jxr_linenumber" name="344" href="#344">344</a>             RequestConverter.buildBulkLoadHFileRequest(famPaths, regionName, <strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="345" href="#345">345</a>           getStub().bulkLoadHFile(<strong class="jxr_keyword">null</strong>, request);
-<a class="jxr_linenumber" name="346" href="#346">346</a>           <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="347" href="#347">347</a>         }
-<a class="jxr_linenumber" name="348" href="#348">348</a>       };
-<a class="jxr_linenumber" name="349" href="#349">349</a>     RpcRetryingCallerFactory factory = <strong class="jxr_keyword">new</strong> RpcRetryingCallerFactory(HTU.getConfiguration());
-<a class="jxr_linenumber" name="350" href="#350">350</a>     RpcRetryingCaller&lt;Void&gt; caller = factory.&lt;Void&gt; newCaller();
-<a class="jxr_linenumber" name="351" href="#351">351</a>     caller.callWithRetries(callable, 10000);
-<a class="jxr_linenumber" name="352" href="#352">352</a> 
-<a class="jxr_linenumber" name="353" href="#353">353</a>     <em class="jxr_comment">// verify we can read them from the primary</em>
-<a class="jxr_linenumber" name="354" href="#354">354</a>     LOG.debug(<span class="jxr_string">"Verifying data load"</span>);
-<a class="jxr_linenumber" name="355" href="#355">355</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; numRows; i++) {
-<a class="jxr_linenumber" name="356" href="#356">356</a>       byte[] row = TestHRegionServerBulkLoad.rowkey(i);
-<a class="jxr_linenumber" name="357" href="#357">357</a>       Get g = <strong class="jxr_keyword">new</strong> Get(row);
-<a class="jxr_linenumber" name="358" href="#358">358</a>       Result r = table.get(g);
-<a class="jxr_linenumber" name="359" href="#359">359</a>       Assert.assertFalse(r.isStale());
-<a class="jxr_linenumber" name="360" href="#360">360</a>     }
-<a class="jxr_linenumber" name="361" href="#361">361</a> 
-<a class="jxr_linenumber" name="362" href="#362">362</a>     <em class="jxr_comment">// verify we can read them from the replica</em>
-<a class="jxr_linenumber" name="363" href="#363">363</a>     LOG.debug(<span class="jxr_string">"Verifying replica queries"</span>);
-<a class="jxr_linenumber" name="364" href="#364">364</a>     <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="365" href="#365">365</a>       SlowMeCopro.cdl.set(<strong class="jxr_keyword">new</strong> CountDownLatch(1));
-<a class="jxr_linenumber" name="366" href="#366">366</a>       <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; numRows; i++) {
-<a class="jxr_linenumber" name="367" href="#367">367</a>         byte[] row = TestHRegionServerBulkLoad.rowkey(i);
-<a class="jxr_linenumber" name="368" href="#368">368</a>         Get g = <strong class="jxr_keyword">new</strong> Get(row);
-<a class="jxr_linenumber" name="369" href="#369">369</a>         g.setConsistency(Consistency.TIMELINE);
-<a class="jxr_linenumber" name="370" href="#370">370</a>         Result r = table.get(g);
-<a class="jxr_linenumber" name="371" href="#371">371</a>         Assert.assertTrue(r.isStale());
-<a class="jxr_linenumber" name="372" href="#372">372</a>       }
-<a class="jxr_linenumber" name="373" href="#373">373</a>       SlowMeCopro.cdl.get().countDown();
-<a class="jxr_linenumber" name="374" href="#374">374</a>     } <strong class="jxr_keyword">finally</strong> {
-<a class="jxr_linenumber" name="375" href="#375">375</a>       SlowMeCopro.cdl.get().countDown();
-<a class="jxr_linenumber" name="376" href="#376">376</a>       SlowMeCopro.sleepTime.set(0);
-<a class="jxr_linenumber" name="377" href="#377">377</a>     }
-<a class="jxr_linenumber" name="378" href="#378">378</a> 
-<a class="jxr_linenumber" name="379" href="#379">379</a>     HTU.getHBaseAdmin().disableTable(hdt.getTableName());
-<a class="jxr_linenumber" name="380" href="#380">380</a>     HTU.deleteTable(hdt.getTableName());
-<a class="jxr_linenumber" name="381" href="#381">381</a>   }
-<a class="jxr_linenumber" name="382" href="#382">382</a> }
+<a class="jxr_linenumber" name="305" href="#305">305</a>     HTU2.getHBaseAdmin().disableTable(hdt.getTableName());
+<a class="jxr_linenumber" name="306" href="#306">306</a>     HTU2.deleteTable(hdt.getTableName());
+<a class="jxr_linenumber" name="307" href="#307">307</a> 
+<a class="jxr_linenumber" name="308" href="#308">308</a>     <em class="jxr_comment">// We shutdown HTU2 minicluster later, in afterClass(), as shutting down</em>
+<a class="jxr_linenumber" name="309" href="#309">309</a>     <em class="jxr_comment">// the minicluster has negative impact of deleting all HConnections in JVM.</em>
+<a class="jxr_linenumber" name="310" href="#310">310</a>   }
+<a class="jxr_linenumber" name="311" href="#311">311</a> 
+<a class="jxr_linenumber" name="312" href="#312">312</a>   @Test (timeout=30000)
+<a class="jxr_linenumber" name="313" href="#313">313</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testBulkLoad() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="314" href="#314">314</a>     <em class="jxr_comment">// Create table then get the single region for our new table.</em>
+<a class="jxr_linenumber" name="315" href="#315">315</a>     LOG.debug(<span class="jxr_string">"Creating test table"</span>);
+<a class="jxr_linenumber" name="316" href="#316">316</a>     HTableDescriptor hdt = HTU.createTableDescriptor(<span class="jxr_string">"testBulkLoad"</span>);
+<a class="jxr_linenumber" name="317" href="#317">317</a>     hdt.setRegionReplication(NB_SERVERS);
+<a class="jxr_linenumber" name="318" href="#318">318</a>     hdt.addCoprocessor(SlowMeCopro.<strong class="jxr_keyword">class</strong>.getName());
+<a class="jxr_linenumber" name="319" href="#319">319</a>     Table table = HTU.createTable(hdt, <strong class="jxr_keyword">new</strong> byte[][]{f}, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="320" href="#320">320</a> 
+<a class="jxr_linenumber" name="321" href="#321">321</a>     <em class="jxr_comment">// create hfiles to load.</em>
+<a class="jxr_linenumber" name="322" href="#322">322</a>     LOG.debug(<span class="jxr_string">"Creating test data"</span>);
+<a class="jxr_linenumber" name="323" href="#323">323</a>     Path dir = HTU.getDataTestDirOnTestFS(<span class="jxr_string">"testBulkLoad"</span>);
+<a class="jxr_linenumber" name="324" href="#324">324</a>     <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> numRows = 10;
+<a class="jxr_linenumber" name="325" href="#325">325</a>     <strong class="jxr_keyword">final</strong> byte[] qual = Bytes.toBytes(<span class="jxr_string">"qual"</span>);
+<a class="jxr_linenumber" name="326" href="#326">326</a>     <strong class="jxr_keyword">final</strong> byte[] val  = Bytes.toBytes(<span class="jxr_string">"val"</span>);
+<a class="jxr_linenumber" name="327" href="#327">327</a>     <strong class="jxr_keyword">final</strong> List&lt;Pair&lt;byte[], String&gt;&gt; famPaths = <strong class="jxr_keyword">new</strong> ArrayList&lt;Pair&lt;byte[], String&gt;&gt;();
+<a class="jxr_linenumber" name="328" href="#328">328</a>     <strong class="jxr_keyword">for</strong> (HColumnDescriptor col : hdt.getColumnFamilies()) {
+<a class="jxr_linenumber" name="329" href="#329">329</a>       Path hfile = <strong class="jxr_keyword">new</strong> Path(dir, col.getNameAsString());
+<a class="jxr_linenumber" name="330" href="#330">330</a>       TestHRegionServerBulkLoad.createHFile(HTU.getTestFileSystem(), hfile, col.getName(),
+<a class="jxr_linenumber" name="331" href="#331">331</a>         qual, val, numRows);
+<a class="jxr_linenumber" name="332" href="#332">332</a>       famPaths.add(<strong class="jxr_keyword">new</strong> Pair&lt;byte[], String&gt;(col.getName(), hfile.toString()));
+<a class="jxr_linenumber" name="333" href="#333">333</a>     }
+<a class="jxr_linenumber" name="334" href="#334">334</a> 
+<a class="jxr_linenumber" name="335" href="#335">335</a>     <em class="jxr_comment">// bulk load HFiles</em>
+<a class="jxr_linenumber" name="336" href="#336">336</a>     LOG.debug(<span class="jxr_string">"Loading test data"</span>);
+<a class="jxr_linenumber" name="337" href="#337">337</a>     @SuppressWarnings(<span class="jxr_string">"deprecation"</span>)
+<a class="jxr_linenumber" name="338" href="#338">338</a>     <strong class="jxr_keyword">final</strong> ClusterConnection conn = (ClusterConnection) HTU.getAdmin().getConnection();
+<a class="jxr_linenumber" name="339" href="#339">339</a>     RegionServerCallable&lt;Void&gt; callable = <strong class="jxr_keyword">new</strong> RegionServerCallable&lt;Void&gt;(
+<a class="jxr_linenumber" name="340" href="#340">340</a>       conn, hdt.getTableName(), TestHRegionServerBulkLoad.rowkey(0)) {
+<a class="jxr_linenumber" name="341" href="#341">341</a>         @Override
+<a class="jxr_linenumber" name="342" href="#342">342</a>         <strong class="jxr_keyword">public</strong> Void call(<strong class="jxr_keyword">int</strong> timeout) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="343" href="#343">343</a>           LOG.debug(<span class="jxr_string">"Going to connect to server "</span> + getLocation() + <span class="jxr_string">" for row "</span>
+<a class="jxr_linenumber" name="344" href="#344">344</a>             + Bytes.toStringBinary(getRow()));
+<a class="jxr_linenumber" name="345" href="#345">345</a>           byte[] regionName = getLocation().getRegionInfo().getRegionName();
+<a class="jxr_linenumber" name="346" href="#346">346</a>           BulkLoadHFileRequest request =
+<a class="jxr_linenumber" name="347" href="#347">347</a>             RequestConverter.buildBulkLoadHFileRequest(famPaths, regionName, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="348" href="#348">348</a>           getStub().bulkLoadHFile(<strong class="jxr_keyword">null</strong>, request);
+<a class="jxr_linenumber" name="349" href="#349">349</a>           <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="350" href="#350">350</a>         }
+<a class="jxr_linenumber" name="351" href="#351">351</a>       };
+<a class="jxr_linenumber" name="352" href="#352">352</a>     RpcRetryingCallerFactory factory = <strong class="jxr_keyword">new</strong> RpcRetryingCallerFactory(HTU.getConfiguration());
+<a class="jxr_linenumber" name="353" href="#353">353</a>     RpcRetryingCaller&lt;Void&gt; caller = factory.newCaller();
+<a class="jxr_linenumber" name="354" href="#354">354</a>     caller.callWithRetries(callable, 10000);
+<a class="jxr_linenumber" name="355" href="#355">355</a> 
+<a class="jxr_linenumber" name="356" href="#356">356</a>     <em class="jxr_comment">// verify we can read them from the primary</em>
+<a class="jxr_linenumber" name="357" href="#357">357</a>     LOG.debug(<span class="jxr_string">"Verifying data load"</span>);
+<a class="jxr_linenumber" name="358" href="#358">358</a>     <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; numRows; i++) {
+<a class="jxr_linenumber" name="359" href="#359">359</a>       byte[] row = TestHRegionServerBulkLoad.rowkey(i);
+<a class="jxr_linenumber" name="360" href="#360">360</a>       Get g = <strong class="jxr_keyword">new</strong> Get(row);
+<a class="jxr_linenumber" name="361" href="#361">361</a>       Result r = table.get(g);
+<a class="jxr_linenumber" name="362" href="#362">362</a>       Assert.assertFalse(r.isStale());
+<a class="jxr_linenumber" name="363" href="#363">363</a>     }
+<a class="jxr_linenumber" name="364" href="#364">364</a> 
+<a class="jxr_linenumber" name="365" href="#365">365</a>     <em class="jxr_comment">// verify we can read them from the replica</em>
+<a class="jxr_linenumber" name="366" href="#366">366</a>     LOG.debug(<span class="jxr_string">"Verifying replica queries"</span>);
+<a class="jxr_linenumber" name="367" href="#367">367</a>     <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="368" href="#368">368</a>       SlowMeCopro.cdl.set(<strong class="jxr_keyword">new</strong> CountDownLatch(1));
+<a class="jxr_linenumber" name="369" href="#369">369</a>       <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; numRows; i++) {
+<a class="jxr_linenumber" name="370" href="#370">370</a>         byte[] row = TestHRegionServerBulkLoad.rowkey(i);
+<a class="jxr_linenumber" name="371" href="#371">371</a>         Get g = <strong class="jxr_keyword">new</strong> Get(row);
+<a class="jxr_linenumber" name="372" href="#372">372</a>         g.setConsistency(Consistency.TIMELINE);
+<a class="jxr_linenumber" name="373" href="#373">373</a>         Result r = table.get(g);
+<a class="jxr_linenumber" name="374" href="#374">374</a>         Assert.assertTrue(r.isStale());
+<a class="jxr_linenumber" name="375" href="#375">375</a>       }
+<a class="jxr_linenumber" name="376" href="#376">376</a>       SlowMeCopro.cdl.get().countDown();
+<a class="jxr_linenumber" name="377" href="#377">377</a>     } <strong class="jxr_keyword">finally</strong> {
+<a class="jxr_linenumber" name="378" href="#378">378</a>       SlowMeCopro.cdl.get().countDown();
+<a class="jxr_linenumber" name="379" href="#379">379</a>       SlowMeCopro.sleepTime.set(0);
+<a class="jxr_linenumber" name="380" href="#380">380</a>     }
+<a class="jxr_linenumber" name="381" href="#381">381</a> 
+<a class="jxr_linenumber" name="382" href="#382">382</a>     HTU.getHBaseAdmin().disableTable(hdt.getTableName());
+<a class="jxr_linenumber" name="383" href="#383">383</a>     HTU.deleteTable(hdt.getTableName());
+<a class="jxr_linenumber" name="384" href="#384">384</a>   }
+<a class="jxr_linenumber" name="385" href="#385">385</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

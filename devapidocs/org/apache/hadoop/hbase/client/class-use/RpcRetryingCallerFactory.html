@@ -119,20 +119,20 @@
 <td class="colLast"><span class="strong">ResultBoundedCompletionService.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ResultBoundedCompletionService.html#retryingCallerFactory">retryingCallerFactory</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
-<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#rpcCallerFactory">rpcCallerFactory</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
-<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#rpcCallerFactory">rpcCallerFactory</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
 <td class="colLast"><span class="strong">AsyncProcess.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/AsyncProcess.html#rpcCallerFactory">rpcCallerFactory</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
 <td class="colLast"><span class="strong">HTable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTable.html#rpcCallerFactory">rpcCallerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#rpcCallerFactory">rpcCallerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
+<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#rpcCallerFactory">rpcCallerFactory</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
@@ -156,6 +156,14 @@
 <td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#getNewRpcRetryingCallerFactory(org.apache.hadoop.conf.Configuration)">getNewRpcRetryingCallerFactory</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Returns a new RpcRetryingCallerFactory from the given <code>Configuration</code>.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
+<td class="colLast"><span class="strong">ConnectionImplementation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionImplementation.html#getRpcRetryingCallerFactory()">getRpcRetryingCallerFactory</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
+<td class="colLast"><span class="strong">ClusterConnection.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html#getRpcRetryingCallerFactory()">getRpcRetryingCallerFactory</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
@@ -183,16 +191,19 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>private static &lt;C extends <a href="../../../../../../org/apache/hadoop/hbase/client/RetryingCallable.html" title="interface in org.apache.hadoop.hbase.client">RetryingCallable</a>&lt;V&gt; & <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>,V&gt;&nbsp;<br>V</code></td>
-<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#executeCallable(C,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20int)">executeCallable</a></strong>(C&nbsp;callable,
+<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#executeCallable(C,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20int,%20int)">executeCallable</a></strong>(C&nbsp;callable,
                               <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a>&nbsp;rpcCallerFactory,
-                              int&nbsp;operationTimeout)</code>&nbsp;</td>
+                              int&nbsp;operationTimeout,
+                              int&nbsp;rpcTimeout)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>(package private) static <a href="../../../../../../org/apache/hadoop/hbase/HTableDescriptor.html" title="class in org.apache.hadoop.hbase">HTableDescriptor</a></code></td>
-<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#getTableDescriptor(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.HConnection,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20int)">getTableDescriptor</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
-                                    <a href="../../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a>&nbsp;connection,
+<td class="colLast"><span class="strong">HBaseAdmin.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HBaseAdmin.html#getTableDescriptor(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.Connection,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20int,%20int)">getTableDescriptor</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                    <a href="../../../../../../org/apache/hadoop/hbase/client/Connection.html" title="interface in org.apache.hadoop.hbase.client">Connection</a>&nbsp;connection,
                                     <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a>&nbsp;rpcCallerFactory,
-                                    int&nbsp;operationTimeout)</code>&nbsp;</td>
+                                    <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;rpcControllerFactory,
+                                    int&nbsp;operationTimeout,
+                                    int&nbsp;rpcTimeout)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -300,9 +311,9 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTable.html#HTable(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.TableConfiguration,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20java.util.concurrent.ExecutorService)">HTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTable.html#HTable(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.client.ConnectionConfiguration,%20org.apache.hadoop.hbase.client.RpcRetryingCallerFactory,%20org.apache.hadoop.hbase.ipc.RpcControllerFactory,%20java.util.concurrent.ExecutorService)">HTable</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
             <a href="../../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
-            <a href="../../../../../../org/apache/hadoop/hbase/client/TableConfiguration.html" title="class in org.apache.hadoop.hbase.client">TableConfiguration</a>&nbsp;tableConfig,
+            <a href="../../../../../../org/apache/hadoop/hbase/client/ConnectionConfiguration.html" title="class in org.apache.hadoop.hbase.client">ConnectionConfiguration</a>&nbsp;tableConfig,
             <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a>&nbsp;rpcCallerFactory,
             <a href="../../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>&nbsp;rpcControllerFactory,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html?is-external=true" title="class or interface in java.util.concurrent">ExecutorService</a>&nbsp;pool)</code>
@@ -343,7 +354,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
-<td class="colLast"><span class="strong">RegionCoprocessorRpcChannel.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#rpcFactory">rpcFactory</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">RegionCoprocessorRpcChannel.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#rpcCallerFactory">rpcCallerFactory</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -484,6 +495,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

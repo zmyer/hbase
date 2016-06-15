@@ -86,7 +86,7 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">org.apache.hadoop.hbase.ipc.CoprocessorRpcChannel</a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/ipc/SyncCoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">org.apache.hadoop.hbase.ipc.SyncCoprocessorRpcChannel</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.ipc.RegionCoprocessorRpcChannel</li>
@@ -100,13 +100,13 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd>com.google.protobuf.BlockingRpcChannel, com.google.protobuf.RpcChannel</dd>
+<dd>com.google.protobuf.BlockingRpcChannel, com.google.protobuf.RpcChannel, <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html" title="interface in org.apache.hadoop.hbase.ipc">CoprocessorRpcChannel</a></dd>
 </dl>
 <hr>
 <br>
 <pre><a href="../../../../../org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html" title="annotation in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
-public class <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.49">RegionCoprocessorRpcChannel</a>
-extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">CoprocessorRpcChannel</a></pre>
+public class <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.47">RegionCoprocessorRpcChannel</a>
+extends <a href="../../../../../org/apache/hadoop/hbase/ipc/SyncCoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">SyncCoprocessorRpcChannel</a></pre>
 <div class="block">Provides clients with an RPC connection to call coprocessor endpoint <code>Service</code>s
  against a given table region.  An instance of this class may be obtained
  by calling <a href="../../../../../org/apache/hadoop/hbase/client/Table.html#coprocessorService(byte[])"><code>Table.coprocessorService(byte[])</code></a>,
@@ -132,7 +132,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a></code></td>
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#connection">connection</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -153,9 +153,13 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#rpcFactory">rpcFactory</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#rpcCallerFactory">rpcCallerFactory</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#rpcControllerFactory">rpcControllerFactory</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#table">table</a></strong></code>&nbsp;</td>
 </tr>
@@ -174,9 +178,11 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#RegionCoprocessorRpcChannel(org.apache.hadoop.hbase.client.HConnection,%20org.apache.hadoop.hbase.TableName,%20byte[])">RegionCoprocessorRpcChannel</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a>&nbsp;conn,
+<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#RegionCoprocessorRpcChannel(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.TableName,%20byte[])">RegionCoprocessorRpcChannel</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;conn,
                                                       <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table,
-                                                      byte[]&nbsp;row)</code>&nbsp;</td>
+                                                      byte[]&nbsp;row)</code>
+<div class="block">Constructor</div>
+</td>
 </tr>
 </table>
 </li>
@@ -195,21 +201,24 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected com.google.protobuf.Message</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#callExecService(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20com.google.protobuf.Message)">callExecService</a></strong>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#callExecService(com.google.protobuf.RpcController,%20com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20com.google.protobuf.Message)">callExecService</a></strong>(com.google.protobuf.RpcController&nbsp;controller,
+                              com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
                               com.google.protobuf.Message&nbsp;request,
                               com.google.protobuf.Message&nbsp;responsePrototype)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#getLastRegion()">getLastRegion</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#getLastRegion()">getLastRegion</a></strong>()</code>
+<div class="block">Get last region this RpcChannel communicated with</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.ipc.CoprocessorRpcChannel">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.ipc.SyncCoprocessorRpcChannel">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.ipc.<a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">CoprocessorRpcChannel</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html#callBlockingMethod(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.RpcController,%20com.google.protobuf.Message,%20com.google.protobuf.Message)">callBlockingMethod</a>, <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html#callMethod(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.RpcController,%20com.google.protobuf.Message,%20com.google.protobuf.Message,%20com.google.protobuf.RpcCallback)">callMethod</a></code></li>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.ipc.<a href="../../../../../org/apache/hadoop/hbase/ipc/SyncCoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">SyncCoprocessorRpcChannel</a></h3>
+<code><a href="../../../../../org/apache/hadoop/hbase/ipc/SyncCoprocessorRpcChannel.html#callBlockingMethod(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.RpcController,%20com.google.protobuf.Message,%20com.google.protobuf.Message)">callBlockingMethod</a>, <a href="../../../../../org/apache/hadoop/hbase/ipc/SyncCoprocessorRpcChannel.html#callMethod(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.RpcController,%20com.google.protobuf.Message,%20com.google.protobuf.Message,%20com.google.protobuf.RpcCallback)">callMethod</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -238,7 +247,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.50">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.48">LOG</a></pre>
 </li>
 </ul>
 <a name="connection">
@@ -247,7 +256,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <ul class="blockList">
 <li class="blockList">
 <h4>connection</h4>
-<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.52">connection</a></pre>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.50">connection</a></pre>
 </li>
 </ul>
 <a name="table">
@@ -256,7 +265,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <ul class="blockList">
 <li class="blockList">
 <h4>table</h4>
-<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.53">table</a></pre>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.51">table</a></pre>
 </li>
 </ul>
 <a name="row">
@@ -265,7 +274,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <ul class="blockList">
 <li class="blockList">
 <h4>row</h4>
-<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.54">row</a></pre>
+<pre>private final&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.52">row</a></pre>
 </li>
 </ul>
 <a name="lastRegion">
@@ -274,7 +283,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <ul class="blockList">
 <li class="blockList">
 <h4>lastRegion</h4>
-<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.55">lastRegion</a></pre>
+<pre>private&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.53">lastRegion</a></pre>
 </li>
 </ul>
 <a name="operationTimeout">
@@ -283,16 +292,25 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <ul class="blockList">
 <li class="blockList">
 <h4>operationTimeout</h4>
-<pre>private&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.56">operationTimeout</a></pre>
+<pre>private final&nbsp;int <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.54">operationTimeout</a></pre>
 </li>
 </ul>
-<a name="rpcFactory">
+<a name="rpcCallerFactory">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rpcCallerFactory</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.56">rpcCallerFactory</a></pre>
+</li>
+</ul>
+<a name="rpcControllerFactory">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>rpcFactory</h4>
-<pre>private&nbsp;<a href="../../../../../org/apache/hadoop/hbase/client/RpcRetryingCallerFactory.html" title="class in org.apache.hadoop.hbase.client">RpcRetryingCallerFactory</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.58">rpcFactory</a></pre>
+<h4>rpcControllerFactory</h4>
+<pre>private final&nbsp;<a href="../../../../../org/apache/hadoop/hbase/ipc/RpcControllerFactory.html" title="class in org.apache.hadoop.hbase.ipc">RpcControllerFactory</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.57">rpcControllerFactory</a></pre>
 </li>
 </ul>
 </li>
@@ -303,15 +321,17 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="RegionCoprocessorRpcChannel(org.apache.hadoop.hbase.client.HConnection, org.apache.hadoop.hbase.TableName, byte[])">
+<a name="RegionCoprocessorRpcChannel(org.apache.hadoop.hbase.client.ClusterConnection, org.apache.hadoop.hbase.TableName, byte[])">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>RegionCoprocessorRpcChannel</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.60">RegionCoprocessorRpcChannel</a>(<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a>&nbsp;conn,
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.65">RegionCoprocessorRpcChannel</a>(<a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;conn,
                            <a href="../../../../../org/apache/hadoop/hbase/TableName.html" title="class in org.apache.hadoop.hbase">TableName</a>&nbsp;table,
                            byte[]&nbsp;row)</pre>
+<div class="block">Constructor</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>conn</code> - connection to use</dd><dd><code>table</code> - to connect to</dd><dd><code>row</code> - to locate region with</dd></dl>
 </li>
 </ul>
 </li>
@@ -322,19 +342,20 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="callExecService(com.google.protobuf.Descriptors.MethodDescriptor, com.google.protobuf.Message, com.google.protobuf.Message)">
+<a name="callExecService(com.google.protobuf.RpcController, com.google.protobuf.Descriptors.MethodDescriptor, com.google.protobuf.Message, com.google.protobuf.Message)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>callExecService</h4>
-<pre>protected&nbsp;com.google.protobuf.Message&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.71">callExecService</a>(com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
+<pre>protected&nbsp;com.google.protobuf.Message&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.75">callExecService</a>(com.google.protobuf.RpcController&nbsp;controller,
+                                          com.google.protobuf.Descriptors.MethodDescriptor&nbsp;method,
                                           com.google.protobuf.Message&nbsp;request,
                                           com.google.protobuf.Message&nbsp;responsePrototype)
                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html#callExecService(com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20com.google.protobuf.Message)">callExecService</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">CoprocessorRpcChannel</a></code></dd>
+<dd><code><a href="../../../../../org/apache/hadoop/hbase/ipc/SyncCoprocessorRpcChannel.html#callExecService(com.google.protobuf.RpcController,%20com.google.protobuf.Descriptors.MethodDescriptor,%20com.google.protobuf.Message,%20com.google.protobuf.Message)">callExecService</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/hadoop/hbase/ipc/SyncCoprocessorRpcChannel.html" title="class in org.apache.hadoop.hbase.ipc">SyncCoprocessorRpcChannel</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -345,7 +366,9 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getLastRegion</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.112">getLastRegion</a>()</pre>
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/ipc/RegionCoprocessorRpcChannel.html#line.126">getLastRegion</a>()</pre>
+<div class="block">Get last region this RpcChannel communicated with</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>region name as byte array</dd></dl>
 </li>
 </ul>
 </li>
@@ -415,6 +438,6 @@ extends <a href="../../../../../org/apache/hadoop/hbase/ipc/CoprocessorRpcChanne
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

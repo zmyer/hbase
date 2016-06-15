@@ -167,19 +167,21 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.MemStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">DefaultMemStore.MemStoreScanner</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>(package private) class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.RegionScannerImpl.html" title="class in org.apache.hadoop.hbase.regionserver">HRegion.RegionScannerImpl</a></strong></code>
 <div class="block">RegionScannerImpl is used to combine scanners from multiple Stores (aka column families).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/KeyValueHeap.html" title="class in org.apache.hadoop.hbase.regionserver">KeyValueHeap</a></strong></code>
 <div class="block">Implements a heap merge across any number of KeyValueScanners.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MemStoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">MemStoreScanner</a></strong></code>
+<div class="block">This is the scanner for any MemStore implementation, derived from MemStore.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -236,11 +238,17 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/SegmentScanner.html" title="class in org.apache.hadoop.hbase.regionserver">SegmentScanner</a></strong></code>
+<div class="block">A scanner of a single memstore segment.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileScanner</a></strong></code>
 <div class="block">KeyValueScanner adaptor over the Reader.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/StoreScanner.html" title="class in org.apache.hadoop.hbase.regionserver">StoreScanner</a></strong></code>
 <div class="block">Scanner scans both the memstore and the Store.</div>
@@ -263,8 +271,7 @@
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/util/CollectionBackedScanner.html" title="class in org.apache.hadoop.hbase.util">CollectionBackedScanner</a></strong></code>
-<div class="block">Utility scanner that wraps a sortable collection and serves
- as a KeyValueScanner.</div>
+<div class="block">Utility scanner that wraps a sortable collection and serves as a KeyValueScanner.</div>
 </td>
 </tr>
 </tbody>
@@ -319,6 +326,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

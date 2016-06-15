@@ -86,7 +86,7 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</li>
+<li><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</a></li>
 <li>
 <ul class="inheritance">
 <li>org.apache.hadoop.hbase.regionserver.TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext</li>
@@ -104,8 +104,8 @@
 </dl>
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.html#line.416">TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext</a>
-extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.html#line.411">TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext</a>
+extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</a></pre>
 </li>
 </ul>
 </div>
@@ -133,7 +133,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.CompactionContext">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</h3>
+<h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">CompactionContext</a></h3>
 <code>request</code></li>
 </ul>
 </li>
@@ -169,25 +169,21 @@ extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#compact(org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController)">compact</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController&nbsp;throughputController)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#compact(org.apache.hadoop.hbase.regionserver.throttle.ThroughputController,%20org.apache.hadoop.hbase.security.User)">compact</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/throttle/ThroughputController.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.throttle">ThroughputController</a>&nbsp;throughputController,
+              <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/User.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">User</a>&nbsp;user)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#compact(org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController,%20org.apache.hadoop.hbase.security.User)">compact</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController&nbsp;throughputController,
-              org.apache.hadoop.hbase.security.User&nbsp;user)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#preSelect(java.util.List)">preSelect</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#preSelect(java.util.List)">preSelect</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;filesCompacting)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#select(java.util.List,%20boolean,%20boolean,%20boolean)">select</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;f,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#select(java.util.List,%20boolean,%20boolean,%20boolean)">select</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;f,
             boolean&nbsp;i,
             boolean&nbsp;m,
             boolean&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#unblock()">unblock</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -196,7 +192,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
 <li class="blockList"><a name="methods_inherited_from_class_org.apache.hadoop.hbase.regionserver.compactions.CompactionContext">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</h3>
+<h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.regionserver.compactions.<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">CompactionContext</a></h3>
 <code>forceSelect, getRequest, hasSelection</code></li>
 </ul>
 <ul class="blockList">
@@ -226,7 +222,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>isInCompact</h4>
-<pre>public volatile&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.417">isInCompact</a></pre>
+<pre>public volatile&nbsp;boolean <a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.412">isInCompact</a></pre>
 </li>
 </ul>
 </li>
@@ -243,7 +239,7 @@ extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.416">TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.411">TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext</a>()</pre>
 </li>
 </ul>
 </li>
@@ -260,36 +256,21 @@ extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>unblock</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.419">unblock</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.414">unblock</a>()</pre>
 </li>
 </ul>
-<a name="compact(org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController)">
+<a name="compact(org.apache.hadoop.hbase.regionserver.throttle.ThroughputController, org.apache.hadoop.hbase.security.User)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>compact</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.424">compact</a>(org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController&nbsp;throughputController)
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.419">compact</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/throttle/ThroughputController.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver.throttle">ThroughputController</a>&nbsp;throughputController,
+                                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/security/User.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.security">User</a>&nbsp;user)
                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>compact</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</code></dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
-</li>
-</ul>
-<a name="compact(org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController, org.apache.hadoop.hbase.security.User)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>compact</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.fs.Path&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.430">compact</a>(org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController&nbsp;throughputController,
-                                      org.apache.hadoop.hbase.security.User&nbsp;user)
-                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code>compact</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true#compact(org.apache.hadoop.hbase.regionserver.throttle.ThroughputController,%20org.apache.hadoop.hbase.security.User)" title="class or interface in org.apache.hadoop.hbase.regionserver">compact</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -300,10 +281,10 @@ extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>preSelect</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.444">preSelect</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;filesCompacting)</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.433">preSelect</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;filesCompacting)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>preSelect</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true#preSelect(java.util.List)" title="class or interface in org.apache.hadoop.hbase.regionserver">preSelect</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -313,14 +294,14 @@ extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>select</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.449">select</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;f,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/regionserver/TestCompaction.BlockingStoreMockMaker.BlockingCompactionContext.html#line.438">select</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;f,
              boolean&nbsp;i,
              boolean&nbsp;m,
              boolean&nbsp;e)
                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code>select</code>&nbsp;in class&nbsp;<code>org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</code></dd>
+<dd><code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true#select(java.util.List,%20boolean,%20boolean,%20boolean)" title="class or interface in org.apache.hadoop.hbase.regionserver">select</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.CompactionContext.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</a></code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
@@ -392,6 +373,6 @@ extends org.apache.hadoop.hbase.regionserver.compactions.CompactionContext</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

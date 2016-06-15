@@ -139,7 +139,7 @@
 <td class="colLast"><span class="strong">MemcachedBlockCache.HFileBlockTranscoder.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.HFileBlockTranscoder.html#decode(net.spy.memcached.CachedData)">decode</a></strong>(net.spy.memcached.CachedData&nbsp;d)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
+<td class="colFirst"><code>(package private) <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
 <td class="colLast"><span class="strong">HFileBlock.Writer.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.Writer.html#getBlockForCaching(org.apache.hadoop.hbase.io.hfile.CacheConfig)">getBlockForCaching</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/CacheConfig.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheConfig</a>&nbsp;cacheConf)</code>
 <div class="block">Creates a new HFileBlock.</div>
 </td>
@@ -209,9 +209,8 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
-<td class="colLast"><span class="strong">HFileBlock.FSReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html#readBlockData(long,%20long,%20int,%20boolean)">readBlockData</a></strong>(long&nbsp;offset,
+<td class="colLast"><span class="strong">HFileBlock.FSReader.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReader.html#readBlockData(long,%20long,%20boolean)">readBlockData</a></strong>(long&nbsp;offset,
                           long&nbsp;onDiskSize,
-                          int&nbsp;uncompressedSize,
                           boolean&nbsp;pread)</code>
 <div class="block">Reads the block at the given offset in the file with the given on-disk
  size and uncompressed size.</div>
@@ -219,19 +218,17 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
-<td class="colLast"><span class="strong">HFileBlock.FSReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReaderImpl.html#readBlockData(long,%20long,%20int,%20boolean)">readBlockData</a></strong>(long&nbsp;offset,
+<td class="colLast"><span class="strong">HFileBlock.FSReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReaderImpl.html#readBlockData(long,%20long,%20boolean)">readBlockData</a></strong>(long&nbsp;offset,
                           long&nbsp;onDiskSizeWithHeaderL,
-                          int&nbsp;uncompressedSize,
                           boolean&nbsp;pread)</code>
 <div class="block">Reads a version 2 block (version 1 blocks not supported and not expected).</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
-<td class="colLast"><span class="strong">HFileBlock.FSReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReaderImpl.html#readBlockDataInternal(org.apache.hadoop.fs.FSDataInputStream,%20long,%20long,%20int,%20boolean,%20boolean)">readBlockDataInternal</a></strong>(org.apache.hadoop.fs.FSDataInputStream&nbsp;is,
+<td class="colFirst"><code>protected <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></code></td>
+<td class="colLast"><span class="strong">HFileBlock.FSReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReaderImpl.html#readBlockDataInternal(org.apache.hadoop.fs.FSDataInputStream,%20long,%20long,%20boolean,%20boolean)">readBlockDataInternal</a></strong>(org.apache.hadoop.fs.FSDataInputStream&nbsp;is,
                                           long&nbsp;offset,
                                           long&nbsp;onDiskSizeWithHeaderL,
-                                          int&nbsp;uncompressedSize,
                                           boolean&nbsp;pread,
                                           boolean&nbsp;verifyChecksum)</code>
 <div class="block">Reads a version 2 block.</div>
@@ -389,25 +386,6 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><span class="strong">HFileBlock.FSReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.FSReaderImpl.html#validateBlockChecksum(org.apache.hadoop.hbase.io.hfile.HFileBlock,%20byte[],%20int)">validateBlockChecksum</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;block,
-                                          byte[]&nbsp;data,
-                                          int&nbsp;hdrSize)</code>
-<div class="block">Generates the checksum for the header as well as the data and
- then validates that it matches the value stored in the header.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>(package private) static boolean</code></td>
-<td class="colLast"><span class="strong">ChecksumUtil.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/ChecksumUtil.html#validateBlockChecksum(org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.io.hfile.HFileBlock,%20byte[],%20int)">validateBlockChecksum</a></strong>(org.apache.hadoop.fs.Path&nbsp;path,
-                                          <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;block,
-                                          byte[]&nbsp;data,
-                                          int&nbsp;hdrSize)</code>
-<div class="block">Validates that the data in the specified HFileBlock matches the
- checksum.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><span class="strong">HFileReaderImpl.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.html#validateBlockType(org.apache.hadoop.hbase.io.hfile.HFileBlock,%20org.apache.hadoop.hbase.io.hfile.BlockType)">validateBlockType</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a>&nbsp;block,
                                   <a href="../../../../../../../org/apache/hadoop/hbase/io/hfile/BlockType.html" title="enum in org.apache.hadoop.hbase.io.hfile">BlockType</a>&nbsp;expectedBlockType)</code>
@@ -484,6 +462,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

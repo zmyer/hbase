@@ -95,7 +95,8 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.78">SnapshotTestingUtils</a>
+<pre><a href="../../../../../../apidocs/org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
+public final class <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.85">SnapshotTestingUtils</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Utilities class for snapshots</div>
 </li>
@@ -155,10 +156,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#SnapshotTestingUtils()">SnapshotTestingUtils</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>private </code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#SnapshotTestingUtils()">SnapshotTestingUtils</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -176,73 +179,73 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertExistsMatchingSnapshot(org.apache.hadoop.hbase.client.Admin,%20java.lang.String,%20org.apache.hadoop.hbase.TableName)">assertExistsMatchingSnapshot</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">SnapshotDescription</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertExistsMatchingSnapshot(org.apache.hadoop.hbase.client.Admin,%20java.lang.String,%20org.apache.hadoop.hbase.TableName)">assertExistsMatchingSnapshot</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
-                                                        org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>
+                                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>
 <div class="block">Make sure that there is only one snapshot returned from the master and its
  name and table match the passed in parameters.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertNoSnapshots(org.apache.hadoop.hbase.client.Admin)">assertNoSnapshots</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertNoSnapshots(org.apache.hadoop.hbase.client.Admin)">assertNoSnapshots</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>
 <div class="block">Assert that we don't have any snapshots lists</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertOneSnapshotThatMatches(org.apache.hadoop.hbase.client.Admin,%20byte[],%20org.apache.hadoop.hbase.TableName)">assertOneSnapshotThatMatches</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">SnapshotDescription</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertOneSnapshotThatMatches(org.apache.hadoop.hbase.client.Admin,%20byte[],%20org.apache.hadoop.hbase.TableName)">assertOneSnapshotThatMatches</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                                                         byte[]&nbsp;snapshot,
-                                                        org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>
+                                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>
 <div class="block">Make sure that there is only one snapshot returned from the master and its
  name and table match the passed in parameters.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertOneSnapshotThatMatches(org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription)">assertOneSnapshotThatMatches</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
-                                                        org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertOneSnapshotThatMatches(org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription)">assertOneSnapshotThatMatches</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshot)</code>
 <div class="block">Make sure that there is only one snapshot returned from the master</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertOneSnapshotThatMatches(org.apache.hadoop.hbase.client.Admin,%20java.lang.String,%20org.apache.hadoop.hbase.TableName)">assertOneSnapshotThatMatches</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">SnapshotDescription</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#assertOneSnapshotThatMatches(org.apache.hadoop.hbase.client.Admin,%20java.lang.String,%20org.apache.hadoop.hbase.TableName)">assertOneSnapshotThatMatches</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
-                                                        org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>
+                                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>
 <div class="block">Make sure that there is only one snapshot returned from the master and its
  name and table match the passed in parameters.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#cleanupSnapshot(org.apache.hadoop.hbase.client.Admin,%20byte[])">cleanupSnapshot</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#cleanupSnapshot(org.apache.hadoop.hbase.client.Admin,%20byte[])">cleanupSnapshot</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                               byte[]&nbsp;tableName)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#cleanupSnapshot(org.apache.hadoop.hbase.client.Admin,%20java.lang.String)">cleanupSnapshot</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#cleanupSnapshot(org.apache.hadoop.hbase.client.Admin,%20java.lang.String)">cleanupSnapshot</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#confirmEmptySnapshotValid(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.TableName,%20byte[],%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.fs.FileSystem)">confirmEmptySnapshotValid</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshotDescriptor,
-                                                  org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#confirmEmptySnapshotValid(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.TableName,%20byte[],%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.fs.FileSystem)">confirmEmptySnapshotValid</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshotDescriptor,
+                                                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                                   byte[]&nbsp;testFamily,
                                                   org.apache.hadoop.fs.Path&nbsp;rootDir,
-                                                  org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+                                                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                                                   org.apache.hadoop.fs.FileSystem&nbsp;fs)</code>
 <div class="block">Confirm that the snapshot has no references files but only metadata.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#confirmSnapshotValid(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.TableName,%20byte[],%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.fs.FileSystem)">confirmSnapshotValid</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshotDescriptor,
-                                        org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#confirmSnapshotValid(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.TableName,%20byte[],%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.fs.FileSystem)">confirmSnapshotValid</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshotDescriptor,
+                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                         byte[]&nbsp;testFamily,
                                         org.apache.hadoop.fs.Path&nbsp;rootDir,
-                                        org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                                         org.apache.hadoop.fs.FileSystem&nbsp;fs)</code>
 <div class="block">Confirm that the snapshot contains references to all the files that should
  be in the snapshot.</div>
@@ -250,12 +253,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#confirmSnapshotValid(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.TableName,%20java.util.List,%20java.util.List,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.fs.FileSystem)">confirmSnapshotValid</a></strong>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshotDescriptor,
-                                        org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#confirmSnapshotValid(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.TableName,%20java.util.List,%20java.util.List,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.fs.FileSystem)">confirmSnapshotValid</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshotDescriptor,
+                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;nonEmptyTestFamilies,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;emptyTestFamilies,
                                         org.apache.hadoop.fs.Path&nbsp;rootDir,
-                                        org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                                         org.apache.hadoop.fs.FileSystem&nbsp;fs)</code>
 <div class="block">Confirm that the snapshot contains references to all the files that should
  be in the snapshot.</div>
@@ -264,8 +267,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#confirmSnapshotValid(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20org.apache.hadoop.hbase.TableName,%20byte[])">confirmSnapshotValid</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;testUtil,
-                                        org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshotDescriptor,
-                                        org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshotDescriptor,
+                                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                         byte[]&nbsp;family)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -276,15 +279,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.client.Put</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#createPut(byte[][],%20byte[],%20byte[])">createPut</a></strong>(byte[][]&nbsp;families,
                   byte[]&nbsp;key,
                   byte[]&nbsp;value)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#createSnapshotAndValidate(org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.TableName,%20java.util.List,%20java.util.List,%20java.lang.String,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FileSystem,%20boolean)">createSnapshotAndValidate</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
-                                                  org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#createSnapshotAndValidate(org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.TableName,%20java.util.List,%20java.util.List,%20java.lang.String,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FileSystem,%20boolean)">createSnapshotAndValidate</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                                                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;nonEmptyFamilyNames,
                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;emptyFamilyNames,
                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotNameString,
@@ -296,8 +299,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#createSnapshotAndValidate(org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.TableName,%20java.lang.String,%20java.lang.String,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FileSystem,%20boolean)">createSnapshotAndValidate</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
-                                                  org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#createSnapshotAndValidate(org.apache.hadoop.hbase.client.Admin,%20org.apache.hadoop.hbase.TableName,%20java.lang.String,%20java.lang.String,%20org.apache.hadoop.fs.Path,%20org.apache.hadoop.fs.FileSystem,%20boolean)">createSnapshotAndValidate</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                                                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName,
                                                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotNameString,
                                                   org.apache.hadoop.fs.Path&nbsp;rootDir,
@@ -310,19 +313,19 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#createTable(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.TableName,%20byte[]...)">createTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                      org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                       byte[]...&nbsp;families)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#createTable(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.TableName,%20int,%20byte[]...)">createTable</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                      org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                       int&nbsp;regionReplication,
                       byte[]...&nbsp;families)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#deleteAllSnapshots(org.apache.hadoop.hbase.client.Admin)">deleteAllSnapshots</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#deleteAllSnapshots(org.apache.hadoop.hbase.client.Admin)">deleteAllSnapshots</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
@@ -330,9 +333,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#expectSnapshotDoneException(org.apache.hadoop.hbase.master.HMaster,%20org.apache.hadoop.hbase.protobuf.generated.MasterProtos.IsSnapshotDoneRequest,%20java.lang.Class)">expectSnapshotDoneException</a></strong>(org.apache.hadoop.hbase.master.HMaster&nbsp;master,
-                                                      org.apache.hadoop.hbase.protobuf.generated.MasterProtos.IsSnapshotDoneRequest&nbsp;snapshot,
-                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends org.apache.hadoop.hbase.snapshot.HBaseSnapshotException&gt;&nbsp;clazz)</code>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#expectSnapshotDoneException(org.apache.hadoop.hbase.master.HMaster,%20org.apache.hadoop.hbase.protobuf.generated.MasterProtos.IsSnapshotDoneRequest,%20java.lang.Class)">expectSnapshotDoneException</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/master/HMaster.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master,
+                                                      <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.MasterProtos.IsSnapshotDoneRequest.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.MasterProtos.IsSnapshotDoneRequest</a>&nbsp;snapshot,
+                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/snapshot/HBaseSnapshotException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.snapshot">HBaseSnapshotException</a>&gt;&nbsp;clazz)</code>
 <div class="block">Expect the snapshot to throw an error when checking if the snapshot is
  complete</div>
 </td>
@@ -351,41 +354,41 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#loadData(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.client.BufferedMutator,%20int,%20byte[]...)">loadData</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                org.apache.hadoop.hbase.client.BufferedMutator&nbsp;mutator,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/BufferedMutator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">BufferedMutator</a>&nbsp;mutator,
                 int&nbsp;rows,
                 byte[]...&nbsp;families)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#loadData(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.TableName,%20int,%20byte[]...)">loadData</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                 int&nbsp;rows,
                 byte[]...&nbsp;families)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#snapshot(org.apache.hadoop.hbase.client.Admin,%20java.lang.String,%20java.lang.String,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription.Type,%20int)">snapshot</a></strong>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#snapshot(org.apache.hadoop.hbase.client.Admin,%20java.lang.String,%20java.lang.String,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription.Type,%20int)">snapshot</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
-                org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription.Type&nbsp;type,
+                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.Type.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription.Type</a>&nbsp;type,
                 int&nbsp;numTries)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#verifyReplicasCameOnline(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.Admin,%20int)">verifyReplicasCameOnline</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
-                                                org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#verifyReplicasCameOnline(org.apache.hadoop.hbase.TableName,%20org.apache.hadoop.hbase.client.Admin,%20int)">verifyReplicasCameOnline</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                                                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                                                 int&nbsp;regionReplication)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#verifyRowCount(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.TableName,%20long)">verifyRowCount</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                            org.apache.hadoop.hbase.TableName&nbsp;tableName,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                             long&nbsp;expectedRows)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#waitForSnapshotToComplete(org.apache.hadoop.hbase.master.HMaster,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20long)">waitForSnapshotToComplete</a></strong>(org.apache.hadoop.hbase.master.HMaster&nbsp;master,
-                                                  org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#waitForSnapshotToComplete(org.apache.hadoop.hbase.master.HMaster,%20org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription,%20long)">waitForSnapshotToComplete</a></strong>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/master/HMaster.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master,
+                                                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshot,
                                                   long&nbsp;sleep)</code>
 <div class="block">Helper method for testing async snapshot operations.</div>
 </td>
@@ -393,7 +396,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#waitForTableToBeOnline(org.apache.hadoop.hbase.HBaseTestingUtility,%20org.apache.hadoop.hbase.TableName)">waitForTableToBeOnline</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                                            org.apache.hadoop.hbase.TableName&nbsp;tableName)</code>&nbsp;</td>
+                                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -423,7 +426,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.80">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.87">LOG</a></pre>
 </li>
 </ul>
 <a name="KEYS">
@@ -432,7 +435,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>KEYS</h4>
-<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.81">KEYS</a></pre>
+<pre>private static&nbsp;byte[] <a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.88">KEYS</a></pre>
 </li>
 </ul>
 </li>
@@ -449,7 +452,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>SnapshotTestingUtils</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.78">SnapshotTestingUtils</a>()</pre>
+<pre>private&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.90">SnapshotTestingUtils</a>()</pre>
 </li>
 </ul>
 </li>
@@ -466,7 +469,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>assertNoSnapshots</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.89">assertNoSnapshots</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin)
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.100">assertNoSnapshots</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Assert that we don't have any snapshots lists</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -479,10 +482,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>assertExistsMatchingSnapshot</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.98">assertExistsMatchingSnapshot</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
-                                                                                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
-                                                                                                            org.apache.hadoop.hbase.TableName&nbsp;tableName)
-                                                                                                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">SnapshotDescription</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.109">assertExistsMatchingSnapshot</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
+                                                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)
+                                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Make sure that there is only one snapshot returned from the master and its
  name and table match the passed in parameters.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -495,8 +498,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>assertOneSnapshotThatMatches</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.119">assertOneSnapshotThatMatches</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
-                                org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot)
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.130">assertOneSnapshotThatMatches</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                                <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshot)
                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Make sure that there is only one snapshot returned from the master</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -509,10 +512,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>assertOneSnapshotThatMatches</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.129">assertOneSnapshotThatMatches</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
-                                                                                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
-                                                                                                            org.apache.hadoop.hbase.TableName&nbsp;tableName)
-                                                                                                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">SnapshotDescription</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.140">assertOneSnapshotThatMatches</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
+                                                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)
+                                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Make sure that there is only one snapshot returned from the master and its
  name and table match the passed in parameters.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -525,10 +528,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>assertOneSnapshotThatMatches</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.146">assertOneSnapshotThatMatches</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
-                                                                                                            byte[]&nbsp;snapshot,
-                                                                                                            org.apache.hadoop.hbase.TableName&nbsp;tableName)
-                                                                                                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">SnapshotDescription</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.157">assertOneSnapshotThatMatches</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                                                     byte[]&nbsp;snapshot,
+                                                     <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)
+                                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Make sure that there is only one snapshot returned from the master and its
  name and table match the passed in parameters.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -541,9 +544,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>confirmSnapshotValid</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.152">confirmSnapshotValid</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;testUtil,
-                        org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshotDescriptor,
-                        org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.163">confirmSnapshotValid</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;testUtil,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshotDescriptor,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                         byte[]&nbsp;family)
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -556,11 +559,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>confirmSnapshotValid</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.164">confirmSnapshotValid</a>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshotDescriptor,
-                        org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.175">confirmSnapshotValid</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshotDescriptor,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                         byte[]&nbsp;testFamily,
                         org.apache.hadoop.fs.Path&nbsp;rootDir,
-                        org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                         org.apache.hadoop.fs.FileSystem&nbsp;fs)
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Confirm that the snapshot contains references to all the files that should
@@ -575,11 +578,11 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>confirmEmptySnapshotValid</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.177">confirmEmptySnapshotValid</a>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshotDescriptor,
-                             org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.188">confirmEmptySnapshotValid</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshotDescriptor,
+                             <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                              byte[]&nbsp;testFamily,
                              org.apache.hadoop.fs.Path&nbsp;rootDir,
-                             org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+                             <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                              org.apache.hadoop.fs.FileSystem&nbsp;fs)
                                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Confirm that the snapshot has no references files but only metadata.</div>
@@ -593,12 +596,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>confirmSnapshotValid</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.193">confirmSnapshotValid</a>(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshotDescriptor,
-                        org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.204">confirmSnapshotValid</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshotDescriptor,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;nonEmptyTestFamilies,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;emptyTestFamilies,
                         org.apache.hadoop.fs.Path&nbsp;rootDir,
-                        org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+                        <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                         org.apache.hadoop.fs.FileSystem&nbsp;fs)
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Confirm that the snapshot contains references to all the files that should
@@ -615,15 +618,15 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>waitForSnapshotToComplete</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.264">waitForSnapshotToComplete</a>(org.apache.hadoop.hbase.master.HMaster&nbsp;master,
-                             org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription&nbsp;snapshot,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.275">waitForSnapshotToComplete</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/master/HMaster.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master,
+                             <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription</a>&nbsp;snapshot,
                              long&nbsp;sleep)
-                                      throws com.google.protobuf.ServiceException</pre>
+                                      throws <a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a></pre>
 <div class="block">Helper method for testing async snapshot operations. Just waits for the
  given snapshot to complete on the server by repeatedly checking the master.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>master:</code> - the master running the snapshot</dd><dd><code>snapshot:</code> - the snapshot to check</dd><dd><code>sleep:</code> - amount to sleep between checks to see if the snapshot is done</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code>com.google.protobuf.ServiceException</code> - if the snapshot fails</dd></dl>
+<dd><code><a href="../../../../../../apidocs/com/google/protobuf/ServiceException.html?is-external=true" title="class or interface in com.google.protobuf">ServiceException</a></code> - if the snapshot fails</dd></dl>
 </li>
 </ul>
 <a name="snapshot(org.apache.hadoop.hbase.client.Admin, java.lang.String, java.lang.String, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription.Type, int)">
@@ -632,10 +635,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>snapshot</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.284">snapshot</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.295">snapshot</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName,
             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tableName,
-            org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription.Type&nbsp;type,
+            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.HBaseProtos.SnapshotDescription.Type.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription.Type</a>&nbsp;type,
             int&nbsp;numTries)
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -648,7 +651,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cleanupSnapshot</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.301">cleanupSnapshot</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.313">cleanupSnapshot</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                    byte[]&nbsp;tableName)
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -661,7 +664,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cleanupSnapshot</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.306">cleanupSnapshot</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.318">cleanupSnapshot</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName)
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -674,12 +677,12 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>expectSnapshotDoneException</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.321">expectSnapshotDoneException</a>(org.apache.hadoop.hbase.master.HMaster&nbsp;master,
-                               org.apache.hadoop.hbase.protobuf.generated.MasterProtos.IsSnapshotDoneRequest&nbsp;snapshot,
-                               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends org.apache.hadoop.hbase.snapshot.HBaseSnapshotException&gt;&nbsp;clazz)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.333">expectSnapshotDoneException</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/master/HMaster.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.master">HMaster</a>&nbsp;master,
+                               <a href="../../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.MasterProtos.IsSnapshotDoneRequest.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.MasterProtos.IsSnapshotDoneRequest</a>&nbsp;snapshot,
+                               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../../apidocs/org/apache/hadoop/hbase/snapshot/HBaseSnapshotException.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.snapshot">HBaseSnapshotException</a>&gt;&nbsp;clazz)</pre>
 <div class="block">Expect the snapshot to throw an error when checking if the snapshot is
  complete</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>master</code> - master to check</dd><dd><code>snapshot</code> - the <code>HBaseProtos.SnapshotDescription</code> request to pass to the master</dd><dd><code>clazz</code> - expected exception from the master</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>master</code> - master to check</dd><dd><code>snapshot</code> - the <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/SnapshotDescription.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client"><code>SnapshotDescription</code></a> request to pass to the master</dd><dd><code>clazz</code> - expected exception from the master</dd></dl>
 </li>
 </ul>
 <a name="listHFileNames(org.apache.hadoop.fs.FileSystem, org.apache.hadoop.fs.Path)">
@@ -688,7 +691,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>listHFileNames</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.346">listHFileNames</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.358">listHFileNames</a>(org.apache.hadoop.fs.FileSystem&nbsp;fs,
                                org.apache.hadoop.fs.Path&nbsp;tableDir)
                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">List all the HFiles in the given table</div>
@@ -704,8 +707,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createSnapshotAndValidate</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.365">createSnapshotAndValidate</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
-                             org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.377">createSnapshotAndValidate</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                             <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName,
                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotNameString,
                              org.apache.hadoop.fs.Path&nbsp;rootDir,
@@ -725,8 +728,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createSnapshotAndValidate</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.379">createSnapshotAndValidate</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin,
-                             org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.391">createSnapshotAndValidate</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
+                             <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;nonEmptyFamilyNames,
                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;emptyFamilyNames,
                              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotNameString,
@@ -746,7 +749,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>corruptSnapshot</h4>
-<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.411">corruptSnapshot</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.424">corruptSnapshot</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;snapshotName)
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Corrupt the specified snapshot by deleting some files.</div>
@@ -762,8 +765,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>waitForTableToBeOnline</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.632">waitForTableToBeOnline</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                          org.apache.hadoop.hbase.TableName&nbsp;tableName)
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.731">waitForTableToBeOnline</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
+                          <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName)
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -777,8 +780,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createTable</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.644">createTable</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-               org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.743">createTable</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
+               <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                int&nbsp;regionReplication,
                byte[]...&nbsp;families)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
@@ -794,7 +797,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getSplitKeys</h4>
-<pre>public static&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.658">getSplitKeys</a>()</pre>
+<pre>public static&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.757">getSplitKeys</a>()</pre>
 </li>
 </ul>
 <a name="createTable(org.apache.hadoop.hbase.HBaseTestingUtility, org.apache.hadoop.hbase.TableName, byte[]...)">
@@ -803,8 +806,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createTable</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.666">createTable</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-               org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.765">createTable</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
+               <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                byte[]...&nbsp;families)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
@@ -819,8 +822,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>loadData</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.671">loadData</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-            org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.770">loadData</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
+            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
             int&nbsp;rows,
             byte[]...&nbsp;families)
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
@@ -836,8 +839,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>loadData</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.677">loadData</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-            org.apache.hadoop.hbase.client.BufferedMutator&nbsp;mutator,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.776">loadData</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
+            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/BufferedMutator.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">BufferedMutator</a>&nbsp;mutator,
             int&nbsp;rows,
             byte[]...&nbsp;families)
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
@@ -853,9 +856,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createPut</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.client.Put&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.706">createPut</a>(byte[][]&nbsp;families,
-                                           byte[]&nbsp;key,
-                                           byte[]&nbsp;value)</pre>
+<pre>private static&nbsp;<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Put.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Put</a>&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.805">createPut</a>(byte[][]&nbsp;families,
+            byte[]&nbsp;key,
+            byte[]&nbsp;value)</pre>
 </li>
 </ul>
 <a name="deleteAllSnapshots(org.apache.hadoop.hbase.client.Admin)">
@@ -864,7 +867,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteAllSnapshots</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.716">deleteAllSnapshots</a>(org.apache.hadoop.hbase.client.Admin&nbsp;admin)
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.815">deleteAllSnapshots</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin)
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -876,7 +879,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteArchiveDirectory</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.725">deleteArchiveDirectory</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util)
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.824">deleteArchiveDirectory</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util)
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -888,8 +891,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyRowCount</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.733">verifyRowCount</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
-                  org.apache.hadoop.hbase.TableName&nbsp;tableName,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.832">verifyRowCount</a>(<a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html" title="class in org.apache.hadoop.hbase">HBaseTestingUtility</a>&nbsp;util,
+                  <a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
                   long&nbsp;expectedRows)
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -902,8 +905,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>verifyReplicasCameOnline</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.743">verifyReplicasCameOnline</a>(org.apache.hadoop.hbase.TableName&nbsp;tableName,
-                            org.apache.hadoop.hbase.client.Admin&nbsp;admin,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.html#line.842">verifyReplicasCameOnline</a>(<a href="../../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tableName,
+                            <a href="../../../../../../apidocs/org/apache/hadoop/hbase/client/Admin.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.client">Admin</a>&nbsp;admin,
                             int&nbsp;regionReplication)
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -977,6 +980,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

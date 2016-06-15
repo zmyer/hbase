@@ -160,13 +160,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">ForeignExceptionDispatcher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html#receive(org.apache.hadoop.hbase.errorhandling.ForeignException)">receive</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;e)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ForeignExceptionListener.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionListener.html#receive(org.apache.hadoop.hbase.errorhandling.ForeignException)">receive</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;e)</code>
 <div class="block">Receive a ForeignException.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ForeignExceptionDispatcher.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.html#receive(org.apache.hadoop.hbase.errorhandling.ForeignException)">receive</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;e)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -242,14 +242,6 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a></code></td>
-<td class="colLast"><span class="strong">CloneSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/CloneSnapshotHandler.html#getExceptionIfFailed()">getExceptionIfFailed</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a></code></td>
-<td class="colLast"><span class="strong">RestoreSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/RestoreSnapshotHandler.html#getExceptionIfFailed()">getExceptionIfFailed</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a></code></td>
 <td class="colLast"><span class="strong">TakeSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TakeSnapshotHandler.html#getExceptionIfFailed()">getExceptionIfFailed</a></strong>()</code>&nbsp;</td>
 </tr>
 </tbody>
@@ -264,14 +256,6 @@
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">TakeSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/TakeSnapshotHandler.html#rethrowException()">rethrowException</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">CloneSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/CloneSnapshotHandler.html#rethrowExceptionIfFailed()">rethrowExceptionIfFailed</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">RestoreSnapshotHandler.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/snapshot/RestoreSnapshotHandler.html#rethrowExceptionIfFailed()">rethrowExceptionIfFailed</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -331,17 +315,17 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">ZKProcedureMemberRpcs.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/ZKProcedureMemberRpcs.html#sendMemberAborted(org.apache.hadoop.hbase.procedure.Subprocedure,%20org.apache.hadoop.hbase.errorhandling.ForeignException)">sendMemberAborted</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html" title="class in org.apache.hadoop.hbase.procedure">Subprocedure</a>&nbsp;sub,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;ee)</code>
-<div class="block">This should be called by the member and should write a serialized root cause exception as
- to the abort znode.</div>
+<td class="colLast"><span class="strong">ProcedureMemberRpcs.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html#sendMemberAborted(org.apache.hadoop.hbase.procedure.Subprocedure,%20org.apache.hadoop.hbase.errorhandling.ForeignException)">sendMemberAborted</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html" title="class in org.apache.hadoop.hbase.procedure">Subprocedure</a>&nbsp;sub,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;cause)</code>
+<div class="block">Notify the coordinator that we aborted the specified <a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html" title="class in org.apache.hadoop.hbase.procedure"><code>Subprocedure</code></a></div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">ProcedureMemberRpcs.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.html#sendMemberAborted(org.apache.hadoop.hbase.procedure.Subprocedure,%20org.apache.hadoop.hbase.errorhandling.ForeignException)">sendMemberAborted</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html" title="class in org.apache.hadoop.hbase.procedure">Subprocedure</a>&nbsp;sub,
-                                  <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;cause)</code>
-<div class="block">Notify the coordinator that we aborted the specified <a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html" title="class in org.apache.hadoop.hbase.procedure"><code>Subprocedure</code></a></div>
+<td class="colLast"><span class="strong">ZKProcedureMemberRpcs.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/procedure/ZKProcedureMemberRpcs.html#sendMemberAborted(org.apache.hadoop.hbase.procedure.Subprocedure,%20org.apache.hadoop.hbase.errorhandling.ForeignException)">sendMemberAborted</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/procedure/Subprocedure.html" title="class in org.apache.hadoop.hbase.procedure">Subprocedure</a>&nbsp;sub,
+                                  <a href="../../../../../../org/apache/hadoop/hbase/errorhandling/ForeignException.html" title="class in org.apache.hadoop.hbase.errorhandling">ForeignException</a>&nbsp;ee)</code>
+<div class="block">This should be called by the member and should write a serialized root cause exception as
+ to the abort znode.</div>
 </td>
 </tr>
 </tbody>
@@ -554,6 +538,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

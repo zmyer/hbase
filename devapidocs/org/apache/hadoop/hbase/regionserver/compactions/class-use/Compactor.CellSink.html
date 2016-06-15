@@ -104,12 +104,12 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><span class="strong">DefaultMobStoreCompactor.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreCompactor.html#performCompaction(org.apache.hadoop.hbase.regionserver.compactions.Compactor.FileDetails,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long,%20boolean,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController,%20boolean)">performCompaction</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.FileDetails.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">Compactor.FileDetails</a>&nbsp;fd,
+<td class="colLast"><span class="strong">DefaultMobStoreCompactor.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/mob/DefaultMobStoreCompactor.html#performCompaction(org.apache.hadoop.hbase.regionserver.compactions.Compactor.FileDetails,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long,%20boolean,%20org.apache.hadoop.hbase.regionserver.throttle.ThroughputController,%20boolean)">performCompaction</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.FileDetails.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">Compactor.FileDetails</a>&nbsp;fd,
                                   <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
                                   <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a>&nbsp;writer,
                                   long&nbsp;smallestReadPoint,
                                   boolean&nbsp;cleanSeqId,
-                                  <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionThroughputController.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">CompactionThroughputController</a>&nbsp;throughputController,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/throttle/ThroughputController.html" title="interface in org.apache.hadoop.hbase.regionserver.throttle">ThroughputController</a>&nbsp;throughputController,
                                   boolean&nbsp;major)</code>
 <div class="block">Performs compaction on a column family with the mob flag enabled.</div>
 </td>
@@ -129,15 +129,29 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFile.Writer.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFile.Writer</a></strong></code>
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/AbstractMultiFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">AbstractMultiFileWriter</a></strong></code>
+<div class="block">Base class for cell sink that separates the provided cells into multiple files.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/DateTieredMultiFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">DateTieredMultiFileWriter</a></strong></code>
+<div class="block">class for cell sink that separates the provided cells into multiple files for date tiered
+ compaction.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StoreFileWriter</a></strong></code>
 <div class="block">A StoreFile writer.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StripeMultiFileWriter.html" title="class in org.apache.hadoop.hbase.regionserver">StripeMultiFileWriter</a></strong></code>
-<div class="block">Base class for cell sink that separates the provided cells into multiple files.</div>
+<div class="block">Base class for cell sink that separates the provided cells into multiple files for stripe
+ compaction.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -163,9 +177,10 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><span class="strong">StoreFlusher.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#performFlush(org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long)">performFlush</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
+<td class="colLast"><span class="strong">StoreFlusher.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/StoreFlusher.html#performFlush(org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long,%20org.apache.hadoop.hbase.regionserver.throttle.ThroughputController)">performFlush</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
                         <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a>&nbsp;sink,
-                        long&nbsp;smallestReadPoint)</code>
+                        long&nbsp;smallestReadPoint,
+                        <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/throttle/ThroughputController.html" title="interface in org.apache.hadoop.hbase.regionserver.throttle">ThroughputController</a>&nbsp;throughputController)</code>
 <div class="block">Performs memstore flush, writing data from scanner into sink.</div>
 </td>
 </tr>
@@ -176,6 +191,21 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a> in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">org.apache.hadoop.hbase.regionserver.compactions</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">org.apache.hadoop.hbase.regionserver.compactions</a> with type parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">Compactor</a>&lt;T extends <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a>&gt;</strong></code>
+<div class="block">A compactor is a compaction algorithm associated a given policy.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/package-summary.html">org.apache.hadoop.hbase.regionserver.compactions</a> with parameters of type <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -185,12 +215,12 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><span class="strong">Compactor.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#performCompaction(org.apache.hadoop.hbase.regionserver.compactions.Compactor.FileDetails,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long,%20boolean,%20org.apache.hadoop.hbase.regionserver.compactions.CompactionThroughputController,%20boolean)">performCompaction</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.FileDetails.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">Compactor.FileDetails</a>&nbsp;fd,
+<td class="colLast"><span class="strong">Compactor.</span><code><strong><a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.html#performCompaction(org.apache.hadoop.hbase.regionserver.compactions.Compactor.FileDetails,%20org.apache.hadoop.hbase.regionserver.InternalScanner,%20org.apache.hadoop.hbase.regionserver.compactions.Compactor.CellSink,%20long,%20boolean,%20org.apache.hadoop.hbase.regionserver.throttle.ThroughputController,%20boolean)">performCompaction</a></strong>(<a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.FileDetails.html" title="class in org.apache.hadoop.hbase.regionserver.compactions">Compactor.FileDetails</a>&nbsp;fd,
                                   <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/InternalScanner.html" title="interface in org.apache.hadoop.hbase.regionserver">InternalScanner</a>&nbsp;scanner,
                                   <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/Compactor.CellSink.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">Compactor.CellSink</a>&nbsp;writer,
                                   long&nbsp;smallestReadPoint,
                                   boolean&nbsp;cleanSeqId,
-                                  <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/compactions/CompactionThroughputController.html" title="interface in org.apache.hadoop.hbase.regionserver.compactions">CompactionThroughputController</a>&nbsp;throughputController,
+                                  <a href="../../../../../../../org/apache/hadoop/hbase/regionserver/throttle/ThroughputController.html" title="interface in org.apache.hadoop.hbase.regionserver.throttle">ThroughputController</a>&nbsp;throughputController,
                                   boolean&nbsp;major)</code>
 <div class="block">Performs the compaction.</div>
 </td>
@@ -247,6 +277,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

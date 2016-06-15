@@ -241,7 +241,7 @@ the order they are declared.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><span class="strong">Table.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html#incrementColumnValue(byte[],%20byte[],%20byte[],%20long,%20org.apache.hadoop.hbase.client.Durability)">incrementColumnValue</a></strong>(byte[]&nbsp;row,
+<td class="colLast"><span class="strong">HTable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTable.html#incrementColumnValue(byte[],%20byte[],%20byte[],%20long,%20org.apache.hadoop.hbase.client.Durability)">incrementColumnValue</a></strong>(byte[]&nbsp;row,
                                         byte[]&nbsp;family,
                                         byte[]&nbsp;qualifier,
                                         long&nbsp;amount,
@@ -251,7 +251,7 @@ the order they are declared.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><span class="strong">HTable.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/HTable.html#incrementColumnValue(byte[],%20byte[],%20byte[],%20long,%20org.apache.hadoop.hbase.client.Durability)">incrementColumnValue</a></strong>(byte[]&nbsp;row,
+<td class="colLast"><span class="strong">Table.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Table.html#incrementColumnValue(byte[],%20byte[],%20byte[],%20long,%20org.apache.hadoop.hbase.client.Durability)">incrementColumnValue</a></strong>(byte[]&nbsp;row,
                                         byte[]&nbsp;family,
                                         byte[]&nbsp;qualifier,
                                         long&nbsp;amount,
@@ -268,22 +268,22 @@ the order they are declared.</div>
                                         <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a></code></td>
-<td class="colLast"><span class="strong">Mutation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html#setDurability(org.apache.hadoop.hbase.client.Durability)">setDurability</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;d)</code>
-<div class="block">Set the durability for this mutation</div>
-</td>
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a></code></td>
+<td class="colLast"><span class="strong">Delete.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html#setDurability(org.apache.hadoop.hbase.client.Durability)">setDurability</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;d)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html" title="class in org.apache.hadoop.hbase.client">Increment</a></code></td>
 <td class="colLast"><span class="strong">Increment.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Increment.html#setDurability(org.apache.hadoop.hbase.client.Durability)">setDurability</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;d)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
-<td class="colLast"><span class="strong">Put.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Put.html#setDurability(org.apache.hadoop.hbase.client.Durability)">setDurability</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;d)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a></code></td>
+<td class="colLast"><span class="strong">Mutation.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html#setDurability(org.apache.hadoop.hbase.client.Durability)">setDurability</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;d)</code>
+<div class="block">Set the durability for this mutation</div>
+</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a></code></td>
-<td class="colLast"><span class="strong">Delete.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html#setDurability(org.apache.hadoop.hbase.client.Durability)">setDurability</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;d)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a></code></td>
+<td class="colLast"><span class="strong">Put.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/client/Put.html#setDurability(org.apache.hadoop.hbase.client.Durability)">setDurability</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;d)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Append.html" title="class in org.apache.hadoop.hbase.client">Append</a></code></td>
@@ -326,6 +326,13 @@ the order they are declared.</div>
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#postDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+                    <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
+                    <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
+                    <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#postDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                     <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
                     <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
@@ -333,14 +340,14 @@ the order they are declared.</div>
 <div class="block">Called after the client deletes a value.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#postDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-                    <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
-                    <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
-                    <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#postPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+              <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
+              <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
+              <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#postPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
               <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
@@ -349,14 +356,14 @@ the order they are declared.</div>
 <div class="block">Called after the client stores a value.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#postPut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">postPut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-              <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
-              <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
-              <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">preDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+                  <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
+                  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
+                  <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#preDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">preDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
                   <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
@@ -365,14 +372,14 @@ the order they are declared.</div>
 <div class="block">Called before the client deletes a value.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#preDelete(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Delete,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">preDelete</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-                  <a href="../../../../../../org/apache/hadoop/hbase/client/Delete.html" title="class in org.apache.hadoop.hbase.client">Delete</a>&nbsp;delete,
-                  <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
-                  <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#prePut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">prePut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
+            <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
+            <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
+            <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">RegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionObserver.html#prePut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">prePut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;c,
             <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
@@ -380,13 +387,6 @@ the order they are declared.</div>
             <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>
 <div class="block">Called before the client stores a value.</div>
 </td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">BaseRegionObserver.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.html#prePut(org.apache.hadoop.hbase.coprocessor.ObserverContext,%20org.apache.hadoop.hbase.client.Put,%20org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability)">prePut</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/ObserverContext.html" title="class in org.apache.hadoop.hbase.coprocessor">ObserverContext</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.html" title="interface in org.apache.hadoop.hbase.coprocessor">RegionCoprocessorEnvironment</a>&gt;&nbsp;e,
-            <a href="../../../../../../org/apache/hadoop/hbase/client/Put.html" title="class in org.apache.hadoop.hbase.client">Put</a>&nbsp;put,
-            <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;edit,
-            <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -448,11 +448,11 @@ the order they are declared.</div>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
-<td class="colLast"><span class="strong">MultiRowMutationProcessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MultiRowMutationProcessor.html#useDurability()">useDurability</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><span class="strong">BaseRowProcessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/BaseRowProcessor.html#useDurability()">useDurability</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
-<td class="colLast"><span class="strong">BaseRowProcessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/BaseRowProcessor.html#useDurability()">useDurability</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><span class="strong">MultiRowMutationProcessor.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/MultiRowMutationProcessor.html#useDurability()">useDurability</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
@@ -473,6 +473,22 @@ the order they are declared.</div>
             <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>
 <div class="block">This is used only by unit tests.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.WriteEntry.html" title="class in org.apache.hadoop.hbase.regionserver">MultiVersionConcurrencyControl.WriteEntry</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#doWALAppend(org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability,%20java.util.List,%20long,%20long,%20long)">doWALAppend</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;walEdit,
+                      <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability,
+                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&gt;&nbsp;clusterIds,
+                      long&nbsp;now,
+                      long&nbsp;nonceGroup,
+                      long&nbsp;nonce)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/MultiVersionConcurrencyControl.WriteEntry.html" title="class in org.apache.hadoop.hbase.regionserver">MultiVersionConcurrencyControl.WriteEntry</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#doWALAppend(org.apache.hadoop.hbase.regionserver.wal.WALEdit,%20org.apache.hadoop.hbase.client.Durability,%20long,%20long)">doWALAppend</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a>&nbsp;walEdit,
+                      <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability,
+                      long&nbsp;nonceGroup,
+                      long&nbsp;nonce)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a></code></td>
@@ -506,11 +522,35 @@ the order they are declared.</div>
             <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/regionserver/wal/WALEdit.html" title="class in org.apache.hadoop.hbase.regionserver.wal">WALEdit</a></code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#reckonDeltas(org.apache.hadoop.hbase.regionserver.Region.Operation,%20org.apache.hadoop.hbase.client.Mutation,%20org.apache.hadoop.hbase.client.Durability,%20java.util.Map,%20java.util.List)">reckonDeltas</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.Operation.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.Operation</a>&nbsp;op,
+                        <a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;mutation,
+                        <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;effectiveDurability,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&gt;&nbsp;forMemStore,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;results)</code>
+<div class="block">Reckon the Cells to apply to WAL, memstore, and to return to the Client; these Sets are not
+ always the same dependent on whether to write WAL or if the amount to increment is zero (in
+ this case we write back nothing, just return latest Cell value to the client).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#reckonDeltasByStore(org.apache.hadoop.hbase.regionserver.Store,%20org.apache.hadoop.hbase.regionserver.Region.Operation,%20org.apache.hadoop.hbase.client.Mutation,%20org.apache.hadoop.hbase.client.Durability,%20long,%20java.util.List,%20java.util.List)">reckonDeltasByStore</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/regionserver/Store.html" title="interface in org.apache.hadoop.hbase.regionserver">Store</a>&nbsp;store,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/regionserver/Region.Operation.html" title="enum in org.apache.hadoop.hbase.regionserver">Region.Operation</a>&nbsp;op,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/client/Mutation.html" title="class in org.apache.hadoop.hbase.client">Mutation</a>&nbsp;mutation,
+                                      <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;effectiveDurability,
+                                      long&nbsp;now,
+                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;deltas,
+                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/Cell.html" title="interface in org.apache.hadoop.hbase">Cell</a>&gt;&nbsp;results)</code>
+<div class="block">Reckon the Cells to apply to WAL, memstore, and to return to the Client in passed
+ column family/Store.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#syncOrDefer(long,%20org.apache.hadoop.hbase.client.Durability)">syncOrDefer</a></strong>(long&nbsp;txid,
-                      <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>
-<div class="block">Calls sync with the given transaction ID if the region's table is not
- deferring it.</div>
+<td class="colLast"><span class="strong">HRegion.</span><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/HRegion.html#sync(long,%20org.apache.hadoop.hbase.client.Durability)">sync</a></strong>(long&nbsp;txid,
+        <a href="../../../../../../org/apache/hadoop/hbase/client/Durability.html" title="enum in org.apache.hadoop.hbase.client">Durability</a>&nbsp;durability)</code>
+<div class="block">Calls sync with the given transaction ID</div>
 </td>
 </tr>
 </tbody>
@@ -670,6 +710,6 @@ the order they are declared.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

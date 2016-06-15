@@ -183,7 +183,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#metricsBalancer">metricsBalancer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static int</code></td>
+<td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#MIN_SERVER_BALANCE">MIN_SERVER_BALANCE</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -219,6 +219,13 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#tablesOnMaster">tablesOnMaster</a></strong></code>&nbsp;</td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.master.LoadBalancer">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;org.apache.hadoop.hbase.master.<a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html" title="interface in org.apache.hadoop.hbase.master">LoadBalancer</a></h3>
+<code><a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#BOGUS_SERVER_NAME">BOGUS_SERVER_NAME</a></code></li>
+</ul>
 </li>
 </ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -242,7 +249,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <tr class="rowColor">
 <td class="colFirst"><code>protected </code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#BaseLoadBalancer(org.apache.hadoop.hbase.master.balancer.MetricsBalancer)">BaseLoadBalancer</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/MetricsBalancer.html" title="class in org.apache.hadoop.hbase.master.balancer">MetricsBalancer</a>&nbsp;metricsBalancer)</code>
-<div class="block">This Constructor accepts an instance of MetricsBalancer, 
+<div class="block">This Constructor accepts an instance of MetricsBalancer,
  which will be used instead of creating a new one</div>
 </td>
 </tr>
@@ -303,35 +310,27 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#immediateAssignment(java.util.List,%20java.util.List)">immediateAssignment</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
-                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</code>
-<div class="block">Generates an immediate assignment plan to be used by a new master for
- regions in transition that do not have an already known destination.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#initialize()">initialize</a></strong>()</code>
 <div class="block">Initialize the load balancer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#isStopped()">isStopped</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#needsBalance(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster)">needsBalance</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;c)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#onConfigurationChange(org.apache.hadoop.conf.Configuration)">onConfigurationChange</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">This method would be called by the <a href="../../../../../../org/apache/hadoop/hbase/conf/ConfigurationManager.html" title="class in org.apache.hadoop.hbase.conf"><code>ConfigurationManager</code></a>
  object when the <code>Configuration</code> object is reloaded from disk.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#randomAssignment(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster,%20org.apache.hadoop.hbase.HRegionInfo,%20java.util.List)">randomAssignment</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster,
                                 <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
@@ -339,27 +338,27 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <div class="block">Used to assign a single region to a random server.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#randomAssignment(org.apache.hadoop.hbase.HRegionInfo,%20java.util.List)">randomAssignment</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</code>
 <div class="block">Used to assign a single region to a random server.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#regionOffline(org.apache.hadoop.hbase.HRegionInfo)">regionOffline</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo)</code>
 <div class="block">Marks the region as offline at balancer.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#regionOnline(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.ServerName)">regionOnline</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
                         <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)</code>
 <div class="block">Marks the region as online at balancer.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#retainAssignment(java.util.Map,%20java.util.List)">retainAssignment</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;regions,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</code>
@@ -368,7 +367,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
  available/online servers available for assignment.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#roundRobinAssignment(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster,%20java.util.List,%20java.util.List,%20java.util.List,%20java.util.Map)">roundRobinAssignment</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
@@ -378,7 +377,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <div class="block">Round robin a list of regions to a list of servers</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#roundRobinAssignment(java.util.List,%20java.util.List)">roundRobinAssignment</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</code>
@@ -386,43 +385,43 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
  simple round-robin assignment.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#setClusterStatus(org.apache.hadoop.hbase.ClusterStatus)">setClusterStatus</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;st)</code>
 <div class="block">Set the current cluster status.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#setConf(org.apache.hadoop.conf.Configuration)">setConf</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#setMasterServices(org.apache.hadoop.hbase.master.MasterServices)">setMasterServices</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</code>
 <div class="block">Set the master service.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#setRackManager(org.apache.hadoop.hbase.master.RackManager)">setRackManager</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/master/RackManager.html" title="class in org.apache.hadoop.hbase.master">RackManager</a>&nbsp;rackManager)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#setSlop(org.apache.hadoop.conf.Configuration)">setSlop</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#shouldBeOnMaster(org.apache.hadoop.hbase.HRegionInfo)">shouldBeOnMaster</a></strong>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region)</code>
 <div class="block">Check if a region belongs to some small system table.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#stop(java.lang.String)">stop</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;why)</code>
 <div class="block">Stop this service.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#tablesOnMaster(org.apache.hadoop.conf.Configuration)">tablesOnMaster</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">Check if configured to put any tables on the active master</div>
@@ -463,7 +462,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>MIN_SERVER_BALANCE</h4>
-<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.71">MIN_SERVER_BALANCE</a></pre>
+<pre>protected static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.71">MIN_SERVER_BALANCE</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.MIN_SERVER_BALANCE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -500,7 +499,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>slop</h4>
-<pre>protected&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.946">slop</a></pre>
+<pre>protected&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.972">slop</a></pre>
 </li>
 </ul>
 <a name="config">
@@ -509,7 +508,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>config</h4>
-<pre>protected&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.947">config</a></pre>
+<pre>protected&nbsp;org.apache.hadoop.conf.Configuration <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.973">config</a></pre>
 </li>
 </ul>
 <a name="rackManager">
@@ -518,7 +517,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>rackManager</h4>
-<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/RackManager.html" title="class in org.apache.hadoop.hbase.master">RackManager</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.948">rackManager</a></pre>
+<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/RackManager.html" title="class in org.apache.hadoop.hbase.master">RackManager</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.974">rackManager</a></pre>
 </li>
 </ul>
 <a name="RANDOM">
@@ -527,7 +526,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>RANDOM</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.949">RANDOM</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.975">RANDOM</a></pre>
 </li>
 </ul>
 <a name="LOG">
@@ -536,7 +535,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.950">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.976">LOG</a></pre>
 </li>
 </ul>
 <a name="DEFAULT_TABLES_ON_MASTER">
@@ -545,7 +544,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>DEFAULT_TABLES_ON_MASTER</h4>
-<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.953">DEFAULT_TABLES_ON_MASTER</a></pre>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.979">DEFAULT_TABLES_ON_MASTER</a></pre>
 </li>
 </ul>
 <a name="TABLES_ON_MASTER">
@@ -554,7 +553,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>TABLES_ON_MASTER</h4>
-<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.958">TABLES_ON_MASTER</a></pre>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.984">TABLES_ON_MASTER</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.TABLES_ON_MASTER">Constant Field Values</a></dd></dl>
 </li>
 </ul>
@@ -564,7 +563,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>tablesOnMaster</h4>
-<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.961">tablesOnMaster</a></pre>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.987">tablesOnMaster</a></pre>
 </li>
 </ul>
 <a name="metricsBalancer">
@@ -573,7 +572,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>metricsBalancer</h4>
-<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/MetricsBalancer.html" title="class in org.apache.hadoop.hbase.master.balancer">MetricsBalancer</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.962">metricsBalancer</a></pre>
+<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/MetricsBalancer.html" title="class in org.apache.hadoop.hbase.master.balancer">MetricsBalancer</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.988">metricsBalancer</a></pre>
 </li>
 </ul>
 <a name="clusterStatus">
@@ -582,7 +581,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>clusterStatus</h4>
-<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.963">clusterStatus</a></pre>
+<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.989">clusterStatus</a></pre>
 </li>
 </ul>
 <a name="masterServerName">
@@ -591,7 +590,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>masterServerName</h4>
-<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.964">masterServerName</a></pre>
+<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.990">masterServerName</a></pre>
 </li>
 </ul>
 <a name="services">
@@ -600,7 +599,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockListLast">
 <li class="blockList">
 <h4>services</h4>
-<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.965">services</a></pre>
+<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.991">services</a></pre>
 </li>
 </ul>
 </li>
@@ -628,7 +627,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <li class="blockList">
 <h4>BaseLoadBalancer</h4>
 <pre>protected&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.96">BaseLoadBalancer</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/MetricsBalancer.html" title="class in org.apache.hadoop.hbase.master.balancer">MetricsBalancer</a>&nbsp;metricsBalancer)</pre>
-<div class="block">This Constructor accepts an instance of MetricsBalancer, 
+<div class="block">This Constructor accepts an instance of MetricsBalancer,
  which will be used instead of creating a new one</div>
 </li>
 </ul>
@@ -646,7 +645,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>getTablesOnMaster</h4>
-<pre>protected static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.973">getTablesOnMaster</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>protected static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.999">getTablesOnMaster</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <div class="block">By default, regions of some small system tables such as meta,
  namespace, and acl are assigned to the active master. If you don't
  want to assign any region to the active master, you need to
@@ -659,7 +658,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>tablesOnMaster</h4>
-<pre>public static&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.988">tablesOnMaster</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public static&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1014">tablesOnMaster</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <div class="block">Check if configured to put any tables on the active master</div>
 </li>
 </ul>
@@ -669,7 +668,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>setConf</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.994">setConf</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1020">setConf</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code>setConf</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.conf.Configurable</code></dd>
@@ -682,7 +681,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>setSlop</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1008">setSlop</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1034">setSlop</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 </li>
 </ul>
 <a name="shouldBeOnMaster(org.apache.hadoop.hbase.HRegionInfo)">
@@ -691,7 +690,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>shouldBeOnMaster</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1016">shouldBeOnMaster</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1042">shouldBeOnMaster</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;region)</pre>
 <div class="block">Check if a region belongs to some small system table.
  If so, the primary replica may be expected to be put on the master regionserver.</div>
 </li>
@@ -702,7 +701,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>balanceMasterRegions</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/master/RegionPlan.html" title="class in org.apache.hadoop.hbase.master">RegionPlan</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1024">balanceMasterRegions</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;clusterMap)</pre>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/master/RegionPlan.html" title="class in org.apache.hadoop.hbase.master">RegionPlan</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1050">balanceMasterRegions</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;clusterMap)</pre>
 <div class="block">Balance the regions that should be on master regionserver.</div>
 </li>
 </ul>
@@ -712,7 +711,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>assignMasterRegions</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1074">assignMasterRegions</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1100">assignMasterRegions</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
                                                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</pre>
 <div class="block">Assign the regions that should be on master regionserver.</div>
 </li>
@@ -723,7 +722,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>getConf</h4>
-<pre>public&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1093">getConf</a>()</pre>
+<pre>public&nbsp;org.apache.hadoop.conf.Configuration&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1119">getConf</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code>getConf</code>&nbsp;in interface&nbsp;<code>org.apache.hadoop.conf.Configurable</code></dd>
@@ -736,7 +735,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>setClusterStatus</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1098">setClusterStatus</a>(<a href="../../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;st)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1124">setClusterStatus</a>(<a href="../../../../../../org/apache/hadoop/hbase/ClusterStatus.html" title="class in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;st)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#setClusterStatus(org.apache.hadoop.hbase.ClusterStatus)">LoadBalancer</a></code></strong></div>
 <div class="block">Set the current cluster status.  This allows a LoadBalancer to map host name to a server</div>
 <dl>
@@ -751,7 +750,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>setMasterServices</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1104">setMasterServices</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1130">setMasterServices</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/MasterServices.html" title="interface in org.apache.hadoop.hbase.master">MasterServices</a>&nbsp;masterServices)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#setMasterServices(org.apache.hadoop.hbase.master.MasterServices)">LoadBalancer</a></code></strong></div>
 <div class="block">Set the master service.</div>
 <dl>
@@ -766,7 +765,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>setRackManager</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1110">setRackManager</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/RackManager.html" title="class in org.apache.hadoop.hbase.master">RackManager</a>&nbsp;rackManager)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1136">setRackManager</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/RackManager.html" title="class in org.apache.hadoop.hbase.master">RackManager</a>&nbsp;rackManager)</pre>
 </li>
 </ul>
 <a name="needsBalance(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster)">
@@ -775,7 +774,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>needsBalance</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1114">needsBalance</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;c)</pre>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1140">needsBalance</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;c)</pre>
 </li>
 </ul>
 <a name="areSomeRegionReplicasColocated(org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster)">
@@ -784,7 +783,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>areSomeRegionReplicasColocated</h4>
-<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1151">areSomeRegionReplicasColocated</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;c)</pre>
+<pre>protected&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1177">areSomeRegionReplicasColocated</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;c)</pre>
 <div class="block">Subclasses should implement this to return true if the cluster has nodes that hosts
  multiple replicas for the same region, or, if there are multiple racks and the same
  rack hosts replicas of the same region</div>
@@ -798,7 +797,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>roundRobinAssignment</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1173">roundRobinAssignment</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1199">roundRobinAssignment</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
                                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</pre>
 <div class="block">Generates a bulk assignment plan to be used on cluster startup using a
  simple round-robin assignment.
@@ -824,34 +823,8 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>createCluster</h4>
-<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1256">createCluster</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers,
+<pre>protected&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1282">createCluster</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers,
                                      <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions)</pre>
-</li>
-</ul>
-<a name="immediateAssignment(java.util.List, java.util.List)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>immediateAssignment</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1291">immediateAssignment</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
-                                              <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</pre>
-<div class="block">Generates an immediate assignment plan to be used by a new master for
- regions in transition that do not have an already known destination.
-
- Takes a list of regions that need immediate assignment and a list of all
- available servers. Returns a map of regions to the server they should be
- assigned to.
-
- This method will return quickly and does not do any intelligent balancing.
- The goal is to make a fast decision not the best decision possible.
-
- Currently this is random.</div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#immediateAssignment(java.util.List,%20java.util.List)">immediateAssignment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html" title="interface in org.apache.hadoop.hbase.master">LoadBalancer</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>regions</code> - </dd><dd><code>servers</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd>map of regions to the server it should be assigned to</dd></dl>
 </li>
 </ul>
 <a name="randomAssignment(org.apache.hadoop.hbase.HRegionInfo, java.util.List)">
@@ -860,7 +833,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>randomAssignment</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1310">randomAssignment</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1303">randomAssignment</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</pre>
 <div class="block">Used to assign a single region to a random server.</div>
 <dl>
@@ -876,7 +849,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>retainAssignment</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1353">retainAssignment</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;regions,
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1346">retainAssignment</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>,<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;regions,
                                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</pre>
 <div class="block">Generates a bulk assignment startup plan, attempting to reuse the existing
  assignment information from META, but adjusting for the specified list of
@@ -902,7 +875,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>initialize</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1465">initialize</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1458">initialize</a>()
                 throws <a href="../../../../../../org/apache/hadoop/hbase/HBaseIOException.html" title="class in org.apache.hadoop.hbase">HBaseIOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#initialize()">LoadBalancer</a></code></strong></div>
 <div class="block">Initialize the load balancer. Must be called after setters.</div>
@@ -919,7 +892,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>regionOnline</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1469">regionOnline</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1462">regionOnline</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
                 <a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;sn)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#regionOnline(org.apache.hadoop.hbase.HRegionInfo,%20org.apache.hadoop.hbase.ServerName)">LoadBalancer</a></code></strong></div>
 <div class="block">Marks the region as online at balancer.</div>
@@ -935,7 +908,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>regionOffline</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1473">regionOffline</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1466">regionOffline</a>(<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalancer.html#regionOffline(org.apache.hadoop.hbase.HRegionInfo)">LoadBalancer</a></code></strong></div>
 <div class="block">Marks the region as offline at balancer.</div>
 <dl>
@@ -950,7 +923,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>isStopped</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1477">isStopped</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1470">isStopped</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/Stoppable.html#isStopped()">isStopped</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/Stoppable.html" title="interface in org.apache.hadoop.hbase">Stoppable</a></code></dd>
@@ -963,9 +936,10 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>stop</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1482">stop</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;why)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1475">stop</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;why)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/Stoppable.html#stop(java.lang.String)">Stoppable</a></code></strong></div>
-<div class="block">Stop this service.</div>
+<div class="block">Stop this service.
+ Implementers should favor logging errors over throwing RuntimeExceptions.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/Stoppable.html#stop(java.lang.String)">stop</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/Stoppable.html" title="interface in org.apache.hadoop.hbase">Stoppable</a></code></dd>
@@ -978,7 +952,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>randomAssignment</h4>
-<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1490">randomAssignment</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster,
+<pre>private&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1483">randomAssignment</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster,
                           <a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&nbsp;regionInfo,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers)</pre>
 <div class="block">Used to assign a single region to a random server.</div>
@@ -990,7 +964,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>roundRobinAssignment</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1509">roundRobinAssignment</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1502">roundRobinAssignment</a>(<a href="../../../../../../org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.Cluster.html" title="class in org.apache.hadoop.hbase.master.balancer">BaseLoadBalancer.Cluster</a>&nbsp;cluster,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;unassignedRegions,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>&gt;&nbsp;servers,
@@ -1004,7 +978,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockList">
 <li class="blockList">
 <h4>getRegionAssignmentsByServer</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1539">getRegionAssignmentsByServer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions)</pre>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/ServerName.html" title="class in org.apache.hadoop.hbase">ServerName</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1532">getRegionAssignmentsByServer</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/HRegionInfo.html" title="class in org.apache.hadoop.hbase">HRegionInfo</a>&gt;&nbsp;regions)</pre>
 </li>
 </ul>
 <a name="onConfigurationChange(org.apache.hadoop.conf.Configuration)">
@@ -1013,7 +987,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <ul class="blockListLast">
 <li class="blockList">
 <h4>onConfigurationChange</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1549">onConfigurationChange</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/master/balancer/BaseLoadBalancer.html#line.1542">onConfigurationChange</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/conf/ConfigurationObserver.html#onConfigurationChange(org.apache.hadoop.conf.Configuration)">ConfigurationObserver</a></code></strong></div>
 <div class="block">This method would be called by the <a href="../../../../../../org/apache/hadoop/hbase/conf/ConfigurationManager.html" title="class in org.apache.hadoop.hbase.conf"><code>ConfigurationManager</code></a>
  object when the <code>Configuration</code> object is reloaded from disk.</div>
@@ -1092,6 +1066,6 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/master/LoadBalance
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

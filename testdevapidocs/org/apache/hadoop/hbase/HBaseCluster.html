@@ -103,7 +103,7 @@
 </dl>
 <hr>
 <br>
-<pre>@InterfaceAudience.Private
+<pre><a href="../../../../../apidocs/org/apache/hadoop/hbase/classification/InterfaceAudience.Private.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.classification">@InterfaceAudience.Private</a>
 public abstract class <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.58">HBaseCluster</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>, org.apache.hadoop.conf.Configurable</pre>
@@ -152,7 +152,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#conf">conf</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected org.apache.hadoop.hbase.ClusterStatus</code></td>
+<td class="colFirst"><code>protected <a href="../../../../../apidocs/org/apache/hadoop/hbase/ClusterStatus.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ClusterStatus</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#initialClusterStatus">initialClusterStatus</a></strong></code>
 <div class="block">the status of the cluster before we begin</div>
 </td>
@@ -202,19 +202,19 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>abstract org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getAdminProtocol(org.apache.hadoop.hbase.ServerName)">getAdminProtocol</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colFirst"><code>abstract <a href="../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.AdminProtos.AdminService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getAdminProtocol(org.apache.hadoop.hbase.ServerName)">getAdminProtocol</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Returns an AdminProtocol interface to the regionserver</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>abstract org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getClientProtocol(org.apache.hadoop.hbase.ServerName)">getClientProtocol</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colFirst"><code>abstract <a href="../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.ClientProtos.ClientService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getClientProtocol(org.apache.hadoop.hbase.ServerName)">getClientProtocol</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Returns a ClientProtocol interface to the regionserver</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>abstract org.apache.hadoop.hbase.ClusterStatus</code></td>
+<td class="colFirst"><code>abstract <a href="../../../../../apidocs/org/apache/hadoop/hbase/ClusterStatus.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ClusterStatus</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getClusterStatus()">getClusterStatus</a></strong>()</code>
 <div class="block">Returns a ClusterStatus for this HBase cluster.</div>
 </td>
@@ -224,27 +224,27 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getConf()">getConf</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.ClusterStatus</code></td>
+<td class="colFirst"><code><a href="../../../../../apidocs/org/apache/hadoop/hbase/ClusterStatus.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ClusterStatus</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getInitialClusterStatus()">getInitialClusterStatus</a></strong>()</code>
 <div class="block">Returns a ClusterStatus for this HBase cluster as observed at the
  starting of the HBaseCluster</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>abstract org.apache.hadoop.hbase.protobuf.generated.MasterProtos.MasterService.BlockingInterface</code></td>
+<td class="colFirst"><code>abstract <a href="../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.MasterProtos.MasterService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.MasterProtos.MasterService.BlockingInterface</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getMasterAdminService()">getMasterAdminService</a></strong>()</code>
 <div class="block">Returns an <code>MasterService.BlockingInterface</code> to the active master</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>org.apache.hadoop.hbase.ServerName</code></td>
+<td class="colFirst"><code><a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getServerHoldingMeta()">getServerHoldingMeta</a></strong>()</code>
 <div class="block">Get the ServerName of region server serving the first hbase:meta region</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>abstract org.apache.hadoop.hbase.ServerName</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getServerHoldingRegion(org.apache.hadoop.hbase.TableName,%20byte[])">getServerHoldingRegion</a></strong>(org.apache.hadoop.hbase.TableName&nbsp;tn,
+<td class="colFirst"><code>abstract <a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getServerHoldingRegion(org.apache.hadoop.hbase.TableName,%20byte[])">getServerHoldingRegion</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
                                             byte[]&nbsp;regionName)</code>
 <div class="block">Get the ServerName of region server serving the specified region</div>
 </td>
@@ -255,35 +255,35 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#killDataNode(org.apache.hadoop.hbase.ServerName)">killDataNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#killDataNode(org.apache.hadoop.hbase.ServerName)">killDataNode</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Kills the datanode process if this is a distributed cluster, otherwise,
  this causes master to exit doing basic clean up only.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#killMaster(org.apache.hadoop.hbase.ServerName)">killMaster</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#killMaster(org.apache.hadoop.hbase.ServerName)">killMaster</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Kills the master process if this is a distributed cluster, otherwise,
  this causes master to exit doing basic clean up only.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#killRegionServer(org.apache.hadoop.hbase.ServerName)">killRegionServer</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#killRegionServer(org.apache.hadoop.hbase.ServerName)">killRegionServer</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Kills the region server process if this is a distributed cluster, otherwise
  this causes the region server to exit doing basic clean up only.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#killZkNode(org.apache.hadoop.hbase.ServerName)">killZkNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#killZkNode(org.apache.hadoop.hbase.ServerName)">killZkNode</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Kills the zookeeper node process if this is a distributed cluster, otherwise,
  this causes master to exit doing basic clean up only.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#restoreClusterStatus(org.apache.hadoop.hbase.ClusterStatus)">restoreClusterStatus</a></strong>(org.apache.hadoop.hbase.ClusterStatus&nbsp;desiredStatus)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#restoreClusterStatus(org.apache.hadoop.hbase.ClusterStatus)">restoreClusterStatus</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ClusterStatus.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;desiredStatus)</code>
 <div class="block">Restores the cluster to given state if this is a real cluster,
  otherwise does nothing.</div>
 </td>
@@ -307,7 +307,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#startDataNode(org.apache.hadoop.hbase.ServerName)">startDataNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#startDataNode(org.apache.hadoop.hbase.ServerName)">startDataNode</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Starts a new datanode on the given hostname or if this is a mini/local cluster,
  silently logs warning message.</div>
 </td>
@@ -338,26 +338,26 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#stopDataNode(org.apache.hadoop.hbase.ServerName)">stopDataNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#stopDataNode(org.apache.hadoop.hbase.ServerName)">stopDataNode</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Stops the datanode if this is a distributed cluster, otherwise
  silently logs warning message.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#stopMaster(org.apache.hadoop.hbase.ServerName)">stopMaster</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#stopMaster(org.apache.hadoop.hbase.ServerName)">stopMaster</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Stops the given master, by attempting a gradual stop.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#stopRegionServer(org.apache.hadoop.hbase.ServerName)">stopRegionServer</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#stopRegionServer(org.apache.hadoop.hbase.ServerName)">stopRegionServer</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Stops the given region server, by attempting a gradual stop.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#stopZkNode(org.apache.hadoop.hbase.ServerName)">stopZkNode</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)</code>
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#stopZkNode(org.apache.hadoop.hbase.ServerName)">stopZkNode</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)</code>
 <div class="block">Stops the region zookeeper if this is a distributed cluster, otherwise
  silently logs warning message.</div>
 </td>
@@ -382,21 +382,21 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForDataNodeToStart(org.apache.hadoop.hbase.ServerName,%20long)">waitForDataNodeToStart</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForDataNodeToStart(org.apache.hadoop.hbase.ServerName,%20long)">waitForDataNodeToStart</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                                             long&nbsp;timeout)</code>
 <div class="block">Wait for the specified datanode to join the cluster</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForDataNodeToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForDataNodeToStop</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForDataNodeToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForDataNodeToStop</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                                           long&nbsp;timeout)</code>
 <div class="block">Wait for the specified datanode to stop the thread / process.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForMasterToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForMasterToStop</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForMasterToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForMasterToStop</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                                       long&nbsp;timeout)</code>
 <div class="block">Wait for the specified master to stop the thread / process.</div>
 </td>
@@ -417,21 +417,21 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForRegionServerToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForRegionServerToStop</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForRegionServerToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForRegionServerToStop</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                                                   long&nbsp;timeout)</code>
 <div class="block">Wait for the specified region server to stop the thread / process.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForZkNodeToStart(org.apache.hadoop.hbase.ServerName,%20long)">waitForZkNodeToStart</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForZkNodeToStart(org.apache.hadoop.hbase.ServerName,%20long)">waitForZkNodeToStart</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                                         long&nbsp;timeout)</code>
 <div class="block">Wait for the specified zookeeper node to join the cluster</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
-<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForZkNodeToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForZkNodeToStop</a></strong>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<td class="colLast"><code><strong><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#waitForZkNodeToStop(org.apache.hadoop.hbase.ServerName,%20long)">waitForZkNodeToStop</a></strong>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                                       long&nbsp;timeout)</code>
 <div class="block">Wait for the specified zookeeper node to stop the thread / process.</div>
 </td>
@@ -488,7 +488,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockListLast">
 <li class="blockList">
 <h4>initialClusterStatus</h4>
-<pre>protected&nbsp;org.apache.hadoop.hbase.ClusterStatus <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.64">initialClusterStatus</a></pre>
+<pre>protected&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/ClusterStatus.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ClusterStatus</a> <a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.64">initialClusterStatus</a></pre>
 <div class="block">the status of the cluster before we begin</div>
 </li>
 </ul>
@@ -551,8 +551,8 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getClusterStatus</h4>
-<pre>public abstract&nbsp;org.apache.hadoop.hbase.ClusterStatus&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.88">getClusterStatus</a>()
-                                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public abstract&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/ClusterStatus.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.88">getClusterStatus</a>()
+                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Returns a ClusterStatus for this HBase cluster.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../org/apache/hadoop/hbase/HBaseCluster.html#getInitialClusterStatus()"><code>getInitialClusterStatus()</code></a></dd></dl>
@@ -564,8 +564,8 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getInitialClusterStatus</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.ClusterStatus&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.94">getInitialClusterStatus</a>()
-                                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/ClusterStatus.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.94">getInitialClusterStatus</a>()
+                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Returns a ClusterStatus for this HBase cluster as observed at the
  starting of the HBaseCluster</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -578,7 +578,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getMasterAdminService</h4>
-<pre>public abstract&nbsp;org.apache.hadoop.hbase.protobuf.generated.MasterProtos.MasterService.BlockingInterface&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.101">getMasterAdminService</a>()
+<pre>public abstract&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.MasterProtos.MasterService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.MasterProtos.MasterService.BlockingInterface</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.101">getMasterAdminService</a>()
                                                                                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Returns an <code>MasterService.BlockingInterface</code> to the active master</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -591,7 +591,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getAdminProtocol</h4>
-<pre>public abstract&nbsp;org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.107">getAdminProtocol</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.AdminProtos.AdminService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.107">getAdminProtocol</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                                                                                                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Returns an AdminProtocol interface to the regionserver</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -604,7 +604,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getClientProtocol</h4>
-<pre>public abstract&nbsp;org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.113">getClientProtocol</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/protobuf.generated.ClientProtos.ClientService.BlockingInterface.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ClientService.BlockingInterface</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.113">getClientProtocol</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                                                                                                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Returns a ClientProtocol interface to the regionserver</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -633,7 +633,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>killRegionServer</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.129">killRegionServer</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.129">killRegionServer</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Kills the region server process if this is a distributed cluster, otherwise
  this causes the region server to exit doing basic clean up only.</div>
@@ -647,7 +647,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>stopRegionServer</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.136">stopRegionServer</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.136">stopRegionServer</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Stops the given region server, by attempting a gradual stop.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -675,7 +675,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>waitForRegionServerToStop</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.163">waitForRegionServerToStop</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.163">waitForRegionServerToStop</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                              long&nbsp;timeout)
                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Wait for the specified region server to stop the thread / process.</div>
@@ -705,7 +705,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>killZkNode</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.179">killZkNode</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.179">killZkNode</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Kills the zookeeper node process if this is a distributed cluster, otherwise,
  this causes master to exit doing basic clean up only.</div>
@@ -719,7 +719,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>stopZkNode</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.186">stopZkNode</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.186">stopZkNode</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Stops the region zookeeper if this is a distributed cluster, otherwise
  silently logs warning message.</div>
@@ -733,7 +733,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>waitForZkNodeToStart</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.193">waitForZkNodeToStart</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.193">waitForZkNodeToStart</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                         long&nbsp;timeout)
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Wait for the specified zookeeper node to join the cluster</div>
@@ -747,7 +747,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>waitForZkNodeToStop</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.201">waitForZkNodeToStop</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.201">waitForZkNodeToStop</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                        long&nbsp;timeout)
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Wait for the specified zookeeper node to stop the thread / process.</div>
@@ -761,7 +761,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>startDataNode</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.209">startDataNode</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.209">startDataNode</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Starts a new datanode on the given hostname or if this is a mini/local cluster,
  silently logs warning message.</div>
@@ -775,7 +775,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>killDataNode</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.216">killDataNode</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.216">killDataNode</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Kills the datanode process if this is a distributed cluster, otherwise,
  this causes master to exit doing basic clean up only.</div>
@@ -789,7 +789,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>stopDataNode</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.223">stopDataNode</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.223">stopDataNode</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Stops the datanode if this is a distributed cluster, otherwise
  silently logs warning message.</div>
@@ -803,7 +803,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>waitForDataNodeToStart</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.230">waitForDataNodeToStart</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.230">waitForDataNodeToStart</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                           long&nbsp;timeout)
                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Wait for the specified datanode to join the cluster</div>
@@ -817,7 +817,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>waitForDataNodeToStop</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.238">waitForDataNodeToStop</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.238">waitForDataNodeToStop</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                          long&nbsp;timeout)
                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Wait for the specified datanode to stop the thread / process.</div>
@@ -847,7 +847,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>killMaster</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.255">killMaster</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.255">killMaster</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Kills the master process if this is a distributed cluster, otherwise,
  this causes master to exit doing basic clean up only.</div>
@@ -861,7 +861,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>stopMaster</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.261">stopMaster</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName)
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.261">stopMaster</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName)
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Stops the given master, by attempting a gradual stop.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -874,7 +874,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>waitForMasterToStop</h4>
-<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.267">waitForMasterToStop</a>(org.apache.hadoop.hbase.ServerName&nbsp;serverName,
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.267">waitForMasterToStop</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;serverName,
                        long&nbsp;timeout)
                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Wait for the specified master to stop the thread / process.</div>
@@ -964,7 +964,7 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>restoreClusterStatus</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.321">restoreClusterStatus</a>(org.apache.hadoop.hbase.ClusterStatus&nbsp;desiredStatus)
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.321">restoreClusterStatus</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/ClusterStatus.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ClusterStatus</a>&nbsp;desiredStatus)
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Restores the cluster to given state if this is a real cluster,
  otherwise does nothing.
@@ -981,8 +981,8 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getServerHoldingMeta</h4>
-<pre>public&nbsp;org.apache.hadoop.hbase.ServerName&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.328">getServerHoldingMeta</a>()
-                                                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.328">getServerHoldingMeta</a>()
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Get the ServerName of region server serving the first hbase:meta region</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -994,9 +994,9 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getServerHoldingRegion</h4>
-<pre>public abstract&nbsp;org.apache.hadoop.hbase.ServerName&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.339">getServerHoldingRegion</a>(org.apache.hadoop.hbase.TableName&nbsp;tn,
-                                                        byte[]&nbsp;regionName)
-                                                                   throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public abstract&nbsp;<a href="../../../../../apidocs/org/apache/hadoop/hbase/ServerName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">ServerName</a>&nbsp;<a href="../../../../src-html/org/apache/hadoop/hbase/HBaseCluster.html#line.339">getServerHoldingRegion</a>(<a href="../../../../../apidocs/org/apache/hadoop/hbase/TableName.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">TableName</a>&nbsp;tn,
+                                byte[]&nbsp;regionName)
+                                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Get the ServerName of region server serving the specified region</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>regionName</code> - Name of the region in bytes</dd><dd><code>tn</code> - Table name that has the region.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>ServerName that hosts the region or null</dd>
@@ -1126,6 +1126,6 @@ implements <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.h
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

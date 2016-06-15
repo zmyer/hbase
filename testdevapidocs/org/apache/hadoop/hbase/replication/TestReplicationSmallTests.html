@@ -35,7 +35,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationKillSlaveRS.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSource.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -100,7 +100,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.70">TestReplicationSmallTests</a>
+<pre>public class <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.74">TestReplicationSmallTests</a>
 extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html" title="class in org.apache.hadoop.hbase.replication">TestReplicationBase</a></pre>
 </li>
 </ul>
@@ -124,13 +124,17 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <td class="colFirst"><code>private static org.apache.commons.logging.Log</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#LOG">LOG</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#PEER_ID">PEER_ID</a></strong></code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.apache.hadoop.hbase.replication.TestReplicationBase">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.replication.<a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html" title="class in org.apache.hadoop.hbase.replication">TestReplicationBase</a></h3>
-<code><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#admin">admin</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#CONF_WITH_LOCALFS">CONF_WITH_LOCALFS</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#conf1">conf1</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#conf2">conf2</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#famName">famName</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#htable1">htable1</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#htable2">htable2</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#NB_RETRIES">NB_RETRIES</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#NB_ROWS_IN_BATCH">NB_ROWS_IN_BATCH</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#NB_ROWS_IN_BIG_BATCH">NB_ROWS_IN_BIG_BATCH</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#noRepfamName">noRepfamName</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#row">row</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#SLEEP_TIME">SLEEP_TIME</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#tableName">tableName</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#utility1">utility1</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#utility2">utility2</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#zkw1">zkw1</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#zkw2">zkw2</a></code></li>
+<code><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#admin">admin</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#CONF_WITH_LOCALFS">CONF_WITH_LOCALFS</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#conf1">conf1</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#conf2">conf2</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#famName">famName</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#htable1">htable1</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#htable2">htable2</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#NB_RETRIES">NB_RETRIES</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#NB_ROWS_IN_BATCH">NB_ROWS_IN_BATCH</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#NB_ROWS_IN_BIG_BATCH">NB_ROWS_IN_BIG_BATCH</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#noRepfamName">noRepfamName</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#row">row</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#scopes">scopes</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#SLEEP_TIME">SLEEP_TIME</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#tableName">tableName</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#utility1">utility1</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#utility2">utility2</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#zkw1">zkw1</a>, <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationBase.html#zkw2">zkw2</a></code></li>
 </ul>
 </li>
 </ul>
@@ -162,6 +166,17 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#loadData(java.lang.String,%20byte[])">loadData</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix,
+                byte[]&nbsp;row)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#runVerifyReplication(java.lang.String[],%20int,%20int)">runVerifyReplication</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args,
+                                        int&nbsp;expectedGoodRows,
+                                        int&nbsp;expectedBadRows)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -208,6 +223,12 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#testReplicationInReplay()">testReplicationInReplay</a></strong>()</code>
+<div class="block">Test for HBase-15259 WALEdits under replay will also be replicated</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#testReplicationStatus()">testReplicationStatus</a></strong>()</code>
 <div class="block">Test for HBASE-9531
  put a few rows into htable1, which should be replicated to htable2
@@ -217,19 +238,19 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
  * @throws Exception</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#testSimplePutDelete()">testSimplePutDelete</a></strong>()</code>
 <div class="block">Add a row, check it's replicated, delete it, check's gone</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#testSmallBatch()">testSmallBatch</a></strong>()</code>
 <div class="block">Try a small batch upload using the write buffer, check it's replicated</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#testVerifyListReplicatedTable()">testVerifyListReplicatedTable</a></strong>()</code>
 <div class="block">Test for HBASE-8663
@@ -237,16 +258,25 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
  ReplicationAdmin.listReplicated().</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#testVerifyRepJob()">testVerifyRepJob</a></strong>()</code>
 <div class="block">Do a small loading into a table, make sure the data is really the same,
  then run the VerifyReplication job to check the results.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#testVerifyReplicationPrefixFiltering()">testVerifyReplicationPrefixFiltering</a></strong>()</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#testVersionMismatchHBase14905()">testVersionMismatchHBase14905</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#waitForReplication(int,%20int)">waitForReplication</a></strong>(int&nbsp;expectedRows,
+                                    int&nbsp;retries)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -280,10 +310,20 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <a name="LOG">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>LOG</h4>
-<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.72">LOG</a></pre>
+<pre>private static final&nbsp;org.apache.commons.logging.Log <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.76">LOG</a></pre>
+</li>
+</ul>
+<a name="PEER_ID">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PEER_ID</h4>
+<pre>private static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.77">PEER_ID</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#org.apache.hadoop.hbase.replication.TestReplicationSmallTests.PEER_ID">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>
@@ -300,7 +340,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestReplicationSmallTests</h4>
-<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.70">TestReplicationSmallTests</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.74">TestReplicationSmallTests</a>()</pre>
 </li>
 </ul>
 </li>
@@ -317,7 +357,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>setUp</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.78">setUp</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.83">setUp</a>()
            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -329,7 +369,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testDeleteTypes</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.119">testDeleteTypes</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.125">testDeleteTypes</a>()
                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Verify that version and column delete marker types are replicated
  correctly.</div>
@@ -343,7 +383,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testSimplePutDelete</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.206">testSimplePutDelete</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.212">testSimplePutDelete</a>()
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Add a row, check it's replicated, delete it, check's gone</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -356,11 +396,39 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testSmallBatch</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.252">testSmallBatch</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.258">testSmallBatch</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Try a small batch upload using the write buffer, check it's replicated</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="waitForReplication(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitForReplication</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.273">waitForReplication</a>(int&nbsp;expectedRows,
+                      int&nbsp;retries)
+                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+</li>
+</ul>
+<a name="loadData(java.lang.String, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loadData</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.292">loadData</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix,
+            byte[]&nbsp;row)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 <a name="testDisableEnable()">
@@ -369,7 +437,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testDisableEnable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.294">testDisableEnable</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.309">testDisableEnable</a>()
                        throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test disable/enable replication, trying to insert, make sure nothing's
  replicated, enable it, the insert should be replicated</div>
@@ -383,7 +451,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testAddAndRemoveClusters</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.338">testAddAndRemoveClusters</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.353">testAddAndRemoveClusters</a>()
                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Integration test for TestReplicationAdmin, removes and re-add a peer
  cluster</div>
@@ -397,7 +465,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testLoading</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.392">testLoading</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.408">testLoading</a>()
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Do a more intense version testSmallBatch, one  that will trigger
  wal rolling and other non-trivial code paths</div>
@@ -411,7 +479,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testVerifyRepJob</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.454">testVerifyRepJob</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.470">testVerifyRepJob</a>()
                       throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Do a small loading into a table, make sure the data is really the same,
  then run the VerifyReplication job to check the results. Do a second
@@ -420,13 +488,31 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
+<a name="runVerifyReplication(java.lang.String[], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runVerifyReplication</h4>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.493">runVerifyReplication</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args,
+                        int&nbsp;expectedGoodRows,
+                        int&nbsp;expectedBadRows)
+                           throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a>,
+                                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code></dd></dl>
+</li>
+</ul>
 <a name="testHBase14905()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>testHBase14905</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.499">testHBase14905</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.510">testHBase14905</a>()
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -438,7 +524,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testVersionMismatchHBase14905</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.572">testVersionMismatchHBase14905</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.573">testVersionMismatchHBase14905</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -450,7 +536,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testCompactionWALEdits</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.655">testCompactionWALEdits</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.646">testCompactionWALEdits</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test for HBASE-9038, Replication.scopeWALEdits would NPE if it wasn't filtering out
  the compaction WALEdit</div>
@@ -464,7 +550,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <ul class="blockList">
 <li class="blockList">
 <h4>testVerifyListReplicatedTable</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.672">testVerifyListReplicatedTable</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.664">testVerifyListReplicatedTable</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test for HBASE-8663
  Create two new Tables with colfamilies enabled for replication then run
@@ -477,10 +563,10 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <a name="testReplicationStatus()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>testReplicationStatus</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.727">testReplicationStatus</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.719">testReplicationStatus</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Test for HBASE-9531
  put a few rows into htable1, which should be replicated to htable2
@@ -488,6 +574,31 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
  test : status.getLoad(server).getReplicationLoadSourceList()
  test : status.getLoad(server).getReplicationLoadSink()
  * @throws Exception</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testReplicationInReplay()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>testReplicationInReplay</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.756">testReplicationInReplay</a>()
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Test for HBase-15259 WALEdits under replay will also be replicated</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+</li>
+</ul>
+<a name="testVerifyReplicationPrefixFiltering()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>testVerifyReplicationPrefixFiltering</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/org/apache/hadoop/hbase/replication/TestReplicationSmallTests.html#line.795">testVerifyReplicationPrefixFiltering</a>()
+                                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -518,7 +629,7 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationKillSlaveRS.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationPeerConfig.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicationSource.html" title="class in org.apache.hadoop.hbase.replication"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -559,6 +670,6 @@ extends <a href="../../../../../org/apache/hadoop/hbase/replication/TestReplicat
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

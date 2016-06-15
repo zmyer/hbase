@@ -175,6 +175,14 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#MEMCACHED_OPTIMEOUT_KEY">MEMCACHED_OPTIMEOUT_KEY</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#MEMCACHED_OPTIMIZE_DEFAULT">MEMCACHED_OPTIMIZE_DEFAULT</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#MEMCACHED_OPTIMIZE_KEY">MEMCACHED_OPTIMIZE_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#MEMCACHED_TIMEOUT_KEY">MEMCACHED_TIMEOUT_KEY</a></strong></code>&nbsp;</td>
 </tr>
@@ -374,14 +382,34 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.io.hfile.MemcachedBlockCache.MEMCACHED_OPTIMEOUT_KEY">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="MEMCACHED_OPTIMIZE_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MEMCACHED_OPTIMIZE_KEY</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.71">MEMCACHED_OPTIMIZE_KEY</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.io.hfile.MemcachedBlockCache.MEMCACHED_OPTIMIZE_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="MEMCACHED_DEFAULT_TIMEOUT">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>MEMCACHED_DEFAULT_TIMEOUT</h4>
-<pre>public static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.71">MEMCACHED_DEFAULT_TIMEOUT</a></pre>
+<pre>public static final&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.72">MEMCACHED_DEFAULT_TIMEOUT</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.io.hfile.MemcachedBlockCache.MEMCACHED_DEFAULT_TIMEOUT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MEMCACHED_OPTIMIZE_DEFAULT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MEMCACHED_OPTIMIZE_DEFAULT</h4>
+<pre>public static final&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.73">MEMCACHED_OPTIMIZE_DEFAULT</a></pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.io.hfile.MemcachedBlockCache.MEMCACHED_OPTIMIZE_DEFAULT">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="client">
@@ -390,7 +418,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>client</h4>
-<pre>private final&nbsp;net.spy.memcached.MemcachedClient <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.73">client</a></pre>
+<pre>private final&nbsp;net.spy.memcached.MemcachedClient <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.75">client</a></pre>
 </li>
 </ul>
 <a name="tc">
@@ -399,7 +427,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>tc</h4>
-<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.HFileBlockTranscoder.html" title="class in org.apache.hadoop.hbase.io.hfile">MemcachedBlockCache.HFileBlockTranscoder</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.74">tc</a></pre>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.HFileBlockTranscoder.html" title="class in org.apache.hadoop.hbase.io.hfile">MemcachedBlockCache.HFileBlockTranscoder</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.76">tc</a></pre>
 </li>
 </ul>
 <a name="cacheStats">
@@ -408,7 +436,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockListLast">
 <li class="blockList">
 <h4>cacheStats</h4>
-<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.75">cacheStats</a></pre>
+<pre>private final&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.77">cacheStats</a></pre>
 </li>
 </ul>
 </li>
@@ -425,7 +453,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MemcachedBlockCache</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.77">MemcachedBlockCache</a>(org.apache.hadoop.conf.Configuration&nbsp;c)
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.79">MemcachedBlockCache</a>(org.apache.hadoop.conf.Configuration&nbsp;c)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -501,7 +529,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>evictBlock</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.164">evictBlock</a>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;cacheKey)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.163">evictBlock</a>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;cacheKey)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#evictBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey)">BlockCache</a></code></strong></div>
 <div class="block">Evict block from cache.</div>
 <dl>
@@ -517,7 +545,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>evictBlocksByHfileName</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.183">evictBlocksByHfileName</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hfileName)</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.182">evictBlocksByHfileName</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hfileName)</pre>
 <div class="block">This method does nothing so that memcached can handle all evictions.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -531,7 +559,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>getStats</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.188">getStats</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CacheStats.html" title="class in org.apache.hadoop.hbase.io.hfile">CacheStats</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.187">getStats</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#getStats()">BlockCache</a></code></strong></div>
 <div class="block">Get the statistics for this block cache.</div>
 <dl>
@@ -546,7 +574,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>shutdown</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.193">shutdown</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.192">shutdown</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#shutdown()">BlockCache</a></code></strong></div>
 <div class="block">Shutdown the cache.</div>
 <dl>
@@ -561,7 +589,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>size</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.198">size</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.197">size</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#size()">BlockCache</a></code></strong></div>
 <div class="block">Returns the total size of the block cache, in bytes.</div>
 <dl>
@@ -576,7 +604,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>getFreeSize</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.203">getFreeSize</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.202">getFreeSize</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#getFreeSize()">BlockCache</a></code></strong></div>
 <div class="block">Returns the free size of the block cache, in bytes.</div>
 <dl>
@@ -591,7 +619,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>getCurrentSize</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.208">getCurrentSize</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.207">getCurrentSize</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#getCurrentSize()">BlockCache</a></code></strong></div>
 <div class="block">Returns the occupied size of the block cache, in bytes.</div>
 <dl>
@@ -606,7 +634,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockCount</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.213">getBlockCount</a>()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.212">getBlockCount</a>()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#getBlockCount()">BlockCache</a></code></strong></div>
 <div class="block">Returns the number of blocks currently cached in the block cache.</div>
 <dl>
@@ -621,7 +649,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>iterator</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CachedBlock.html" title="interface in org.apache.hadoop.hbase.io.hfile">CachedBlock</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.218">iterator</a>()</pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CachedBlock.html" title="interface in org.apache.hadoop.hbase.io.hfile">CachedBlock</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.217">iterator</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html?is-external=true#iterator()" title="class or interface in java.lang">iterator</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/CachedBlock.html" title="interface in org.apache.hadoop.hbase.io.hfile">CachedBlock</a>&gt;</code></dd>
@@ -636,7 +664,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockCaches</h4>
-<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">BlockCache</a>[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.238">getBlockCaches</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">BlockCache</a>[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.237">getBlockCaches</a>()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#getBlockCaches()">getBlockCaches</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html" title="interface in org.apache.hadoop.hbase.io.hfile">BlockCache</a></code></dd>
@@ -649,7 +677,7 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <ul class="blockListLast">
 <li class="blockList">
 <h4>returnBlock</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.278">returnBlock</a>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;cacheKey,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/io/hfile/MemcachedBlockCache.html#line.277">returnBlock</a>(<a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCacheKey.html" title="class in org.apache.hadoop.hbase.io.hfile">BlockCacheKey</a>&nbsp;cacheKey,
                <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile">Cacheable</a>&nbsp;block)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCache.html#returnBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20org.apache.hadoop.hbase.io.hfile.Cacheable)">BlockCache</a></code></strong></div>
 <div class="block">Called when the scanner using the block decides to return the block once its usage
@@ -731,6 +759,6 @@ implements <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/BlockCach
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

@@ -118,6 +118,10 @@
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.security">org.apache.hadoop.hbase.security</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.hadoop.hbase.tmpl.regionserver">org.apache.hadoop.hbase.tmpl.regionserver</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -132,7 +136,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/CoprocessorRpcChannel.html#org.apache.hadoop.hbase.client">CoprocessorRpcChannel</a>
-<div class="block">Base class which provides clients with an RPC connection to
+<div class="block">Base interface which provides clients with an RPC connection to
  call coprocessor endpoint <code>Service</code>s.</div>
 </td>
 </tr>
@@ -175,12 +179,23 @@
 </tr>
 <tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/AsyncRpcChannel.html#org.apache.hadoop.hbase.ipc">AsyncRpcChannel</a>
-<div class="block">Netty RPC channel</div>
+<div class="block">Interface for Async Rpc Channels</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/AsyncRpcChannelImpl.html#org.apache.hadoop.hbase.ipc">AsyncRpcChannelImpl</a>
+<div class="block">Netty RPC channel</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/AsyncRpcClient.html#org.apache.hadoop.hbase.ipc">AsyncRpcClient</a>
 <div class="block">Netty client for the requests and responses</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/BalancedQueueRpcExecutor.html#org.apache.hadoop.hbase.ipc">BalancedQueueRpcExecutor</a>
+<div class="block">An <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcExecutor.html" title="class in org.apache.hadoop.hbase.ipc"><code>RpcExecutor</code></a> that will balance requests evenly across all its queues, but still remains
+ efficient with a single queue via an inlinable queue balancing mechanism.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -206,29 +221,27 @@
 </tr>
 <tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/CoprocessorRpcChannel.html#org.apache.hadoop.hbase.ipc">CoprocessorRpcChannel</a>
-<div class="block">Base class which provides clients with an RPC connection to
+<div class="block">Base interface which provides clients with an RPC connection to
  call coprocessor endpoint <code>Service</code>s.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/Delayable.html#org.apache.hadoop.hbase.ipc">Delayable</a>
-<div class="block">A call whose response can be delayed by the server.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/FailedServerException.html#org.apache.hadoop.hbase.ipc">FailedServerException</a>
 <div class="block">Indicates that we're trying to connect to a already known as dead server.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/FailedServers.html#org.apache.hadoop.hbase.ipc">FailedServers</a>
 <div class="block">A class to manage a list of servers that failed recently.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/FatalConnectionException.html#org.apache.hadoop.hbase.ipc">FatalConnectionException</a>
 <div class="block">Thrown when server finds fatal issue w/ connection setup: e.g.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/FifoWithFastPathBalancedQueueRpcExecutor.FastPathHandler.html#org.apache.hadoop.hbase.ipc">FifoWithFastPathBalancedQueueRpcExecutor.FastPathHandler</a>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/HBaseRPCErrorHandler.html#org.apache.hadoop.hbase.ipc">HBaseRPCErrorHandler</a>
@@ -236,8 +249,18 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/IOExceptionConverter.html#org.apache.hadoop.hbase.ipc">IOExceptionConverter</a>
+<div class="block">Converts exceptions to other exceptions</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/IPCUtil.html#org.apache.hadoop.hbase.ipc">IPCUtil</a>
 <div class="block">Utility to help ipc'ing.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/MessageConverter.html#org.apache.hadoop.hbase.ipc">MessageConverter</a>
+<div class="block">Interface to convert Messages to specific types</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -266,40 +289,52 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/Promise.html#org.apache.hadoop.hbase.ipc">Promise</a>
+<div class="block">Abstract response promise</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcCallback.html#org.apache.hadoop.hbase.ipc">RpcCallback</a>
 <div class="block">Denotes a callback action that has to be executed at the end of an Rpc Call.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcCallContext.html#org.apache.hadoop.hbase.ipc">RpcCallContext</a>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcClient.html#org.apache.hadoop.hbase.ipc">RpcClient</a>
 <div class="block">Interface for RpcClient implementations so ConnectionManager can handle it.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcClientImpl.CallFuture.html#org.apache.hadoop.hbase.ipc">RpcClientImpl.CallFuture</a>
 <div class="block">see <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcClientImpl.Connection.CallSender.html" title="class in org.apache.hadoop.hbase.ipc"><code>RpcClientImpl.Connection.CallSender</code></a></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcClientImpl.Connection.html#org.apache.hadoop.hbase.ipc">RpcClientImpl.Connection</a>
 <div class="block">Thread that reads responses and notifies callers.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcClientImpl.Connection.CallSender.html#org.apache.hadoop.hbase.ipc">RpcClientImpl.Connection.CallSender</a>
 <div class="block">If the client wants to interrupt its calls easily (i.e.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcControllerFactory.html#org.apache.hadoop.hbase.ipc">RpcControllerFactory</a>
 <div class="block">Factory to create a <a href="../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc"><code>PayloadCarryingRpcController</code></a></div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcExecutor.html#org.apache.hadoop.hbase.ipc">RpcExecutor</a>
+<div class="block">Runs the CallRunners passed here via <a href="../../../../../org/apache/hadoop/hbase/ipc/RpcExecutor.html#dispatch(org.apache.hadoop.hbase.ipc.CallRunner)"><code>RpcExecutor.dispatch(CallRunner)</code></a>.</div>
+</td>
+</tr>
 <tr class="rowColor">
-<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcExecutor.html#org.apache.hadoop.hbase.ipc">RpcExecutor</a>&nbsp;</td>
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcExecutor.Handler.html#org.apache.hadoop.hbase.ipc">RpcExecutor.Handler</a>
+<div class="block">Handler thread run the <a href="../../../../../org/apache/hadoop/hbase/ipc/CallRunner.html#run()"><code>CallRunner.run()</code></a> in.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcExecutor.QueueBalancer.html#org.apache.hadoop.hbase.ipc">RpcExecutor.QueueBalancer</a>&nbsp;</td>
@@ -332,12 +367,12 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcServer.CallQueueTooBigException.html#org.apache.hadoop.hbase.ipc">RpcServer.CallQueueTooBigException</a>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcServer.Connection.html#org.apache.hadoop.hbase.ipc">RpcServer.Connection</a>
 <div class="block">Reads calls from a connection and queues them for handling.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcServer.ConnectionManager.html#org.apache.hadoop.hbase.ipc">RpcServer.ConnectionManager</a>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcServer.Listener.html#org.apache.hadoop.hbase.ipc">RpcServer.Listener</a>
@@ -357,6 +392,12 @@
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/StoppedRpcClientException.html#org.apache.hadoop.hbase.ipc">StoppedRpcClientException</a>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/SyncCoprocessorRpcChannel.html#org.apache.hadoop.hbase.ipc">SyncCoprocessorRpcChannel</a>
+<div class="block">Base class which provides clients with an RPC connection to
+ call coprocessor endpoint <code>Service</code>s.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/TimeLimitedRpcController.html#org.apache.hadoop.hbase.ipc">TimeLimitedRpcController</a>&nbsp;</td>
 </tr>
 </tbody>
@@ -377,14 +418,24 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/PayloadCarryingRpcController.html#org.apache.hadoop.hbase.master">PayloadCarryingRpcController</a>
+<div class="block">Optionally carries Cells across the proxy/service interface down into ipc.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/PriorityFunction.html#org.apache.hadoop.hbase.master">PriorityFunction</a>
 <div class="block">Function to figure priority of incoming request.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/QosPriority.html#org.apache.hadoop.hbase.master">QosPriority</a>
 <div class="block">Annotation which decorates RPC methods to denote the relative priority among other RPCs in the
  same server.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcControllerFactory.html#org.apache.hadoop.hbase.master">RpcControllerFactory</a>
+<div class="block">Factory to create a <a href="../../../../../org/apache/hadoop/hbase/ipc/PayloadCarryingRpcController.html" title="class in org.apache.hadoop.hbase.ipc"><code>PayloadCarryingRpcController</code></a></div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -543,7 +594,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/CoprocessorRpcChannel.html#org.apache.hadoop.hbase.rest.client">CoprocessorRpcChannel</a>
-<div class="block">Base class which provides clients with an RPC connection to
+<div class="block">Base interface which provides clients with an RPC connection to
  call coprocessor endpoint <code>Service</code>s.</div>
 </td>
 </tr>
@@ -563,6 +614,21 @@
 <td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/RpcServer.Connection.html#org.apache.hadoop.hbase.security">RpcServer.Connection</a>
 <div class="block">Reads calls from a connection and queues them for handling.</div>
 </td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.hadoop.hbase.tmpl.regionserver">
+<!--   -->
+</a>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/apache/hadoop/hbase/ipc/package-summary.html">org.apache.hadoop.hbase.ipc</a> used by <a href="../../../../../org/apache/hadoop/hbase/tmpl/regionserver/package-summary.html">org.apache.hadoop.hbase.tmpl.regionserver</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colOne"><a href="../../../../../org/apache/hadoop/hbase/ipc/class-use/MetricsHBaseServerWrapper.html#org.apache.hadoop.hbase.tmpl.regionserver">MetricsHBaseServerWrapper</a>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -614,6 +680,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

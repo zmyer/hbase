@@ -343,7 +343,7 @@
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileBlock</a></strong></code>
-<div class="block">Reading <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html" title="class in org.apache.hadoop.hbase.io.hfile"><code>HFile</code></a> version 1 and 2 blocks, and writing version 2 blocks.</div>
+<div class="block">Reads <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFile.html" title="class in org.apache.hadoop.hbase.io.hfile"><code>HFile</code></a> version 2 blocks to HFiles and via <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/Cacheable.html" title="interface in org.apache.hadoop.hbase.io.hfile"><code>Cacheable</code></a> Interface to caches.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -374,22 +374,10 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryKeyValue</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>private static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryNoTagsKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryNoTagsKeyValue</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>private static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/HFileReaderImpl.HFileScannerImpl.ShareableMemoryOffheapKeyValue.html" title="class in org.apache.hadoop.hbase.io.hfile">HFileReaderImpl.HFileScannerImpl.ShareableMemoryOffheapKeyValue</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/InclusiveCombinedBlockCache.html" title="class in org.apache.hadoop.hbase.io.hfile">InclusiveCombinedBlockCache</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html" title="class in org.apache.hadoop.hbase.io.hfile">LruBlockCache</a></strong></code>
 <div class="block">A block cache implementation that is memory-aware using <a href="../../../../../../org/apache/hadoop/hbase/io/HeapSize.html" title="interface in org.apache.hadoop.hbase.io"><code>HeapSize</code></a>,
@@ -398,13 +386,13 @@
  constant-time <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#cacheBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20org.apache.hadoop.hbase.io.hfile.Cacheable,%20boolean,%20boolean)"><code>LruBlockCache.cacheBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey, org.apache.hadoop.hbase.io.hfile.Cacheable, boolean, boolean)</code></a> and <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html#getBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey,%20boolean,%20boolean,%20boolean)"><code>LruBlockCache.getBlock(org.apache.hadoop.hbase.io.hfile.BlockCacheKey, boolean, boolean, boolean)</code></a> operations.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlock.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlock</a></strong></code>
 <div class="block">Represents an entry in the <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruBlockCache.html" title="class in org.apache.hadoop.hbase.io.hfile"><code>LruBlockCache</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/LruCachedBlockQueue.html" title="class in org.apache.hadoop.hbase.io.hfile">LruCachedBlockQueue</a></strong></code>
 <div class="block">A memory-bound queue that will grow until an element brings
@@ -429,7 +417,7 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket">BucketCache</a></strong></code>
 <div class="block">BucketCache uses <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketAllocator.html" title="class in org.apache.hadoop.hbase.io.hfile.bucket"><code>BucketAllocator</code></a> to allocate/free blocks, and uses
- <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html#ramCache"><code>BucketCache.ramCache</code></a> and <a href="../../../../../../org/apache/hadoop/hbase/io/hfile/bucket/BucketCache.html#backingMap"><code>BucketCache.backingMap</code></a> in order to
+ BucketCache#ramCache and BucketCache#backingMap in order to
  determine if a given element is in the cache.</div>
 </td>
 </tr>
@@ -503,6 +491,18 @@
 <th class="colLast" scope="col">Class and Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/AbstractMemStore.html" title="class in org.apache.hadoop.hbase.regionserver">AbstractMemStore</a></strong></code>
+<div class="block">An abstract class, which implements the behaviour shared by all concrete memstore instances.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/CompactingMemStore.html" title="class in org.apache.hadoop.hbase.regionserver">CompactingMemStore</a></strong></code>
+<div class="block">A memstore implementation which supports in-memory compaction.</div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/DefaultMemStore.html" title="class in org.apache.hadoop.hbase.regionserver">DefaultMemStore</a></strong></code>
@@ -671,6 +671,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

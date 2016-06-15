@@ -38,48 +38,48 @@
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Admin;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.client.Table;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.master.snapshot.SnapshotManager;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.regionserver.snapshot.RegionServerSnapshotManager;
-<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.LargeTests;
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.RegionServerTests;
-<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Bytes;
-<a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> org.junit.After;
-<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.junit.AfterClass;
-<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.junit.Before;
-<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.junit.BeforeClass;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
-<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.junit.experimental.categories.Category;
-<a class="jxr_linenumber" name="42" href="#42">42</a>  
-<a class="jxr_linenumber" name="43" href="#43">43</a>  <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="44" href="#44">44</a>  <em class="jxr_javadoccomment"> * Test clone/restore snapshots from the client</em>
-<a class="jxr_linenumber" name="45" href="#45">45</a>  <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="46" href="#46">46</a>  <em class="jxr_javadoccomment"> * TODO This is essentially a clone of TestRestoreSnapshotFromClient.  This is worth refactoring</em>
-<a class="jxr_linenumber" name="47" href="#47">47</a>  <em class="jxr_javadoccomment"> * this because there will be a few more flavors of snapshots that need to run these tests.</em>
-<a class="jxr_linenumber" name="48" href="#48">48</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="49" href="#49">49</a>  @Category({RegionServerTests.<strong class="jxr_keyword">class</strong>, LargeTests.<strong class="jxr_keyword">class</strong>})
-<a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreFlushSnapshotFromClient.html">TestRestoreFlushSnapshotFromClient</a> {
-<a class="jxr_linenumber" name="51" href="#51">51</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Log LOG = LogFactory.getLog(TestRestoreFlushSnapshotFromClient.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="52" href="#52">52</a>  
-<a class="jxr_linenumber" name="53" href="#53">53</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> UTIL = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a>();
-<a class="jxr_linenumber" name="54" href="#54">54</a>  
-<a class="jxr_linenumber" name="55" href="#55">55</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">final</strong> byte[] FAMILY = Bytes.toBytes(<span class="jxr_string">"cf"</span>);
-<a class="jxr_linenumber" name="56" href="#56">56</a>  
-<a class="jxr_linenumber" name="57" href="#57">57</a>    <strong class="jxr_keyword">protected</strong> byte[] snapshotName0;
-<a class="jxr_linenumber" name="58" href="#58">58</a>    <strong class="jxr_keyword">protected</strong> byte[] snapshotName1;
-<a class="jxr_linenumber" name="59" href="#59">59</a>    <strong class="jxr_keyword">protected</strong> byte[] snapshotName2;
-<a class="jxr_linenumber" name="60" href="#60">60</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> snapshot0Rows;
-<a class="jxr_linenumber" name="61" href="#61">61</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> snapshot1Rows;
-<a class="jxr_linenumber" name="62" href="#62">62</a>    <strong class="jxr_keyword">protected</strong> TableName tableName;
-<a class="jxr_linenumber" name="63" href="#63">63</a>    <strong class="jxr_keyword">protected</strong> Admin admin;
-<a class="jxr_linenumber" name="64" href="#64">64</a>  
-<a class="jxr_linenumber" name="65" href="#65">65</a>    @BeforeClass
-<a class="jxr_linenumber" name="66" href="#66">66</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setupCluster() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="67" href="#67">67</a>      setupConf(UTIL.getConfiguration());
-<a class="jxr_linenumber" name="68" href="#68">68</a>      UTIL.startMiniCluster(3);
-<a class="jxr_linenumber" name="69" href="#69">69</a>    }
-<a class="jxr_linenumber" name="70" href="#70">70</a>  
-<a class="jxr_linenumber" name="71" href="#71">71</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setupConf(Configuration conf) {
-<a class="jxr_linenumber" name="72" href="#72">72</a>      UTIL.getConfiguration().setBoolean(<span class="jxr_string">"hbase.online.schema.update.enable"</span>, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.ProtobufUtil;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.SnapshotDescription;
+<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.regionserver.snapshot.RegionServerSnapshotManager;
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.LargeTests;
+<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.testclassification.RegionServerTests;
+<a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> org.apache.hadoop.hbase.util.Bytes;
+<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> org.junit.After;
+<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> org.junit.AfterClass;
+<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.junit.Before;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.junit.BeforeClass;
+<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.junit.experimental.categories.Category;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  
+<a class="jxr_linenumber" name="44" href="#44">44</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="45" href="#45">45</a>  <em class="jxr_javadoccomment"> * Test clone/restore snapshots from the client</em>
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="47" href="#47">47</a>  <em class="jxr_javadoccomment"> * TODO This is essentially a clone of TestRestoreSnapshotFromClient.  This is worth refactoring</em>
+<a class="jxr_linenumber" name="48" href="#48">48</a>  <em class="jxr_javadoccomment"> * this because there will be a few more flavors of snapshots that need to run these tests.</em>
+<a class="jxr_linenumber" name="49" href="#49">49</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="50" href="#50">50</a>  @Category({RegionServerTests.<strong class="jxr_keyword">class</strong>, LargeTests.<strong class="jxr_keyword">class</strong>})
+<a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/apache/hadoop/hbase/snapshot/TestRestoreFlushSnapshotFromClient.html">TestRestoreFlushSnapshotFromClient</a> {
+<a class="jxr_linenumber" name="52" href="#52">52</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Log LOG = LogFactory.getLog(TestRestoreFlushSnapshotFromClient.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="53" href="#53">53</a>  
+<a class="jxr_linenumber" name="54" href="#54">54</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> UTIL = <strong class="jxr_keyword">new</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a>();
+<a class="jxr_linenumber" name="55" href="#55">55</a>  
+<a class="jxr_linenumber" name="56" href="#56">56</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">final</strong> byte[] FAMILY = Bytes.toBytes(<span class="jxr_string">"cf"</span>);
+<a class="jxr_linenumber" name="57" href="#57">57</a>  
+<a class="jxr_linenumber" name="58" href="#58">58</a>    <strong class="jxr_keyword">protected</strong> byte[] snapshotName0;
+<a class="jxr_linenumber" name="59" href="#59">59</a>    <strong class="jxr_keyword">protected</strong> byte[] snapshotName1;
+<a class="jxr_linenumber" name="60" href="#60">60</a>    <strong class="jxr_keyword">protected</strong> byte[] snapshotName2;
+<a class="jxr_linenumber" name="61" href="#61">61</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> snapshot0Rows;
+<a class="jxr_linenumber" name="62" href="#62">62</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> snapshot1Rows;
+<a class="jxr_linenumber" name="63" href="#63">63</a>    <strong class="jxr_keyword">protected</strong> TableName tableName;
+<a class="jxr_linenumber" name="64" href="#64">64</a>    <strong class="jxr_keyword">protected</strong> Admin admin;
+<a class="jxr_linenumber" name="65" href="#65">65</a>  
+<a class="jxr_linenumber" name="66" href="#66">66</a>    @BeforeClass
+<a class="jxr_linenumber" name="67" href="#67">67</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setupCluster() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="68" href="#68">68</a>      setupConf(UTIL.getConfiguration());
+<a class="jxr_linenumber" name="69" href="#69">69</a>      UTIL.startMiniCluster(3);
+<a class="jxr_linenumber" name="70" href="#70">70</a>    }
+<a class="jxr_linenumber" name="71" href="#71">71</a>  
+<a class="jxr_linenumber" name="72" href="#72">72</a>    <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setupConf(Configuration conf) {
 <a class="jxr_linenumber" name="73" href="#73">73</a>      UTIL.getConfiguration().setInt(<span class="jxr_string">"hbase.regionserver.msginterval"</span>, 100);
 <a class="jxr_linenumber" name="74" href="#74">74</a>      UTIL.getConfiguration().setInt(<span class="jxr_string">"hbase.client.pause"</span>, 250);
 <a class="jxr_linenumber" name="75" href="#75">75</a>      UTIL.getConfiguration().setInt(HConstants.HBASE_CLIENT_RETRIES_NUMBER, 6);
@@ -126,7 +126,7 @@
 <a class="jxr_linenumber" name="116" href="#116">116</a> 
 <a class="jxr_linenumber" name="117" href="#117">117</a>     <em class="jxr_comment">// take a snapshot</em>
 <a class="jxr_linenumber" name="118" href="#118">118</a>     admin.snapshot(Bytes.toString(snapshotName0), tableName,
-<a class="jxr_linenumber" name="119" href="#119">119</a>         SnapshotDescription.Type.FLUSH);
+<a class="jxr_linenumber" name="119" href="#119">119</a>       ProtobufUtil.createSnapshotType(SnapshotDescription.Type.FLUSH));
 <a class="jxr_linenumber" name="120" href="#120">120</a> 
 <a class="jxr_linenumber" name="121" href="#121">121</a>     LOG.info(<span class="jxr_string">"=== after snapshot with 500 rows"</span>);
 <a class="jxr_linenumber" name="122" href="#122">122</a>     logFSTree();
@@ -139,7 +139,7 @@
 <a class="jxr_linenumber" name="129" href="#129">129</a> 
 <a class="jxr_linenumber" name="130" href="#130">130</a>     <em class="jxr_comment">// take a snapshot of the updated table</em>
 <a class="jxr_linenumber" name="131" href="#131">131</a>     admin.snapshot(Bytes.toString(snapshotName1), tableName,
-<a class="jxr_linenumber" name="132" href="#132">132</a>         SnapshotDescription.Type.FLUSH);
+<a class="jxr_linenumber" name="132" href="#132">132</a>       ProtobufUtil.createSnapshotType(SnapshotDescription.Type.FLUSH));
 <a class="jxr_linenumber" name="133" href="#133">133</a>     LOG.info(<span class="jxr_string">"=== after snapshot with 1000 rows"</span>);
 <a class="jxr_linenumber" name="134" href="#134">134</a>     logFSTree();
 <a class="jxr_linenumber" name="135" href="#135">135</a>     table.close();
@@ -204,30 +204,31 @@
 <a class="jxr_linenumber" name="194" href="#194">194</a>     TableName clonedTableName = TableName.valueOf(<span class="jxr_string">"clonedtb-"</span> + System.currentTimeMillis());
 <a class="jxr_linenumber" name="195" href="#195">195</a>     admin.cloneSnapshot(snapshotName0, clonedTableName);
 <a class="jxr_linenumber" name="196" href="#196">196</a>     verifyRowCount(UTIL, clonedTableName, snapshot0Rows);
-<a class="jxr_linenumber" name="197" href="#197">197</a>     admin.snapshot(Bytes.toString(snapshotName2), clonedTableName, SnapshotDescription.Type.FLUSH);
-<a class="jxr_linenumber" name="198" href="#198">198</a>     UTIL.deleteTable(clonedTableName);
-<a class="jxr_linenumber" name="199" href="#199">199</a> 
-<a class="jxr_linenumber" name="200" href="#200">200</a>     admin.cloneSnapshot(snapshotName2, clonedTableName);
-<a class="jxr_linenumber" name="201" href="#201">201</a>     verifyRowCount(UTIL, clonedTableName, snapshot0Rows);
-<a class="jxr_linenumber" name="202" href="#202">202</a>     UTIL.deleteTable(clonedTableName);
-<a class="jxr_linenumber" name="203" href="#203">203</a>   }
-<a class="jxr_linenumber" name="204" href="#204">204</a> 
-<a class="jxr_linenumber" name="205" href="#205">205</a>   <em class="jxr_comment">// ==========================================================================</em>
-<a class="jxr_linenumber" name="206" href="#206">206</a>   <em class="jxr_comment">//  Helpers</em>
-<a class="jxr_linenumber" name="207" href="#207">207</a>   <em class="jxr_comment">// ==========================================================================</em>
-<a class="jxr_linenumber" name="208" href="#208">208</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> logFSTree() <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="209" href="#209">209</a>     UTIL.getMiniHBaseCluster().getMaster().getMasterFileSystem().logFileSystemState(LOG);
-<a class="jxr_linenumber" name="210" href="#210">210</a>   }
-<a class="jxr_linenumber" name="211" href="#211">211</a> 
-<a class="jxr_linenumber" name="212" href="#212">212</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> verifyRowCount(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> util, <strong class="jxr_keyword">final</strong> TableName tableName,
-<a class="jxr_linenumber" name="213" href="#213">213</a>       <strong class="jxr_keyword">long</strong> expectedRows) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="214" href="#214">214</a>     SnapshotTestingUtils.verifyRowCount(util, tableName, expectedRows);
-<a class="jxr_linenumber" name="215" href="#215">215</a>   }
-<a class="jxr_linenumber" name="216" href="#216">216</a> 
-<a class="jxr_linenumber" name="217" href="#217">217</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> countRows(<strong class="jxr_keyword">final</strong> Table table, <strong class="jxr_keyword">final</strong> byte[]... families) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="218" href="#218">218</a>     <strong class="jxr_keyword">return</strong> UTIL.countRows(table, families);
-<a class="jxr_linenumber" name="219" href="#219">219</a>   }
-<a class="jxr_linenumber" name="220" href="#220">220</a> }
+<a class="jxr_linenumber" name="197" href="#197">197</a>     admin.snapshot(Bytes.toString(snapshotName2), clonedTableName,
+<a class="jxr_linenumber" name="198" href="#198">198</a>       ProtobufUtil.createSnapshotType(SnapshotDescription.Type.FLUSH));
+<a class="jxr_linenumber" name="199" href="#199">199</a>     UTIL.deleteTable(clonedTableName);
+<a class="jxr_linenumber" name="200" href="#200">200</a> 
+<a class="jxr_linenumber" name="201" href="#201">201</a>     admin.cloneSnapshot(snapshotName2, clonedTableName);
+<a class="jxr_linenumber" name="202" href="#202">202</a>     verifyRowCount(UTIL, clonedTableName, snapshot0Rows);
+<a class="jxr_linenumber" name="203" href="#203">203</a>     UTIL.deleteTable(clonedTableName);
+<a class="jxr_linenumber" name="204" href="#204">204</a>   }
+<a class="jxr_linenumber" name="205" href="#205">205</a> 
+<a class="jxr_linenumber" name="206" href="#206">206</a>   <em class="jxr_comment">// ==========================================================================</em>
+<a class="jxr_linenumber" name="207" href="#207">207</a>   <em class="jxr_comment">//  Helpers</em>
+<a class="jxr_linenumber" name="208" href="#208">208</a>   <em class="jxr_comment">// ==========================================================================</em>
+<a class="jxr_linenumber" name="209" href="#209">209</a>   <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> logFSTree() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="210" href="#210">210</a>     UTIL.getMiniHBaseCluster().getMaster().getMasterFileSystem().logFileSystemState(LOG);
+<a class="jxr_linenumber" name="211" href="#211">211</a>   }
+<a class="jxr_linenumber" name="212" href="#212">212</a> 
+<a class="jxr_linenumber" name="213" href="#213">213</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> verifyRowCount(<strong class="jxr_keyword">final</strong> <a href="../../../../../org/apache/hadoop/hbase/HBaseTestingUtility.html">HBaseTestingUtility</a> util, <strong class="jxr_keyword">final</strong> TableName tableName,
+<a class="jxr_linenumber" name="214" href="#214">214</a>       <strong class="jxr_keyword">long</strong> expectedRows) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="215" href="#215">215</a>     SnapshotTestingUtils.verifyRowCount(util, tableName, expectedRows);
+<a class="jxr_linenumber" name="216" href="#216">216</a>   }
+<a class="jxr_linenumber" name="217" href="#217">217</a> 
+<a class="jxr_linenumber" name="218" href="#218">218</a>   <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> countRows(<strong class="jxr_keyword">final</strong> Table table, <strong class="jxr_keyword">final</strong> byte[]... families) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="219" href="#219">219</a>     <strong class="jxr_keyword">return</strong> UTIL.countRows(table, families);
+<a class="jxr_linenumber" name="220" href="#220">220</a>   }
+<a class="jxr_linenumber" name="221" href="#221">221</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

@@ -79,14 +79,6 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.handler">org.apache.hadoop.hbase.master.handler</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="#org.apache.hadoop.hbase.master.snapshot">org.apache.hadoop.hbase.master.snapshot</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="#org.apache.hadoop.hbase.zookeeper">org.apache.hadoop.hbase.zookeeper</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -118,42 +110,6 @@
 </tbody>
 </table>
 </li>
-<li class="blockList"><a name="org.apache.hadoop.hbase.master.handler">
-<!--   -->
-</a>
-<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/NotAllMetaRegionsOnlineException.html" title="class in org.apache.hadoop.hbase">NotAllMetaRegionsOnlineException</a> in <a href="../../../../../org/apache/hadoop/hbase/master/handler/package-summary.html">org.apache.hadoop.hbase.master.handler</a></h3>
-<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/master/handler/package-summary.html">org.apache.hadoop.hbase.master.handler</a> that throw <a href="../../../../../org/apache/hadoop/hbase/NotAllMetaRegionsOnlineException.html" title="class in org.apache.hadoop.hbase">NotAllMetaRegionsOnlineException</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/master/handler/CreateTableHandler.html" title="class in org.apache.hadoop.hbase.master.handler">CreateTableHandler</a></code></td>
-<td class="colLast"><span class="strong">CreateTableHandler.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/handler/CreateTableHandler.html#prepare()">prepare</a></strong>()</code>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList"><a name="org.apache.hadoop.hbase.master.snapshot">
-<!--   -->
-</a>
-<h3>Uses of <a href="../../../../../org/apache/hadoop/hbase/NotAllMetaRegionsOnlineException.html" title="class in org.apache.hadoop.hbase">NotAllMetaRegionsOnlineException</a> in <a href="../../../../../org/apache/hadoop/hbase/master/snapshot/package-summary.html">org.apache.hadoop.hbase.master.snapshot</a></h3>
-<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
-<caption><span>Methods in <a href="../../../../../org/apache/hadoop/hbase/master/snapshot/package-summary.html">org.apache.hadoop.hbase.master.snapshot</a> that throw <a href="../../../../../org/apache/hadoop/hbase/NotAllMetaRegionsOnlineException.html" title="class in org.apache.hadoop.hbase">NotAllMetaRegionsOnlineException</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../org/apache/hadoop/hbase/master/snapshot/CloneSnapshotHandler.html" title="class in org.apache.hadoop.hbase.master.snapshot">CloneSnapshotHandler</a></code></td>
-<td class="colLast"><span class="strong">CloneSnapshotHandler.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/master/snapshot/CloneSnapshotHandler.html#prepare()">prepare</a></strong>()</code>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</li>
 <li class="blockList"><a name="org.apache.hadoop.hbase.zookeeper">
 <!--   -->
 </a>
@@ -167,7 +123,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>private org.apache.hadoop.hbase.protobuf.generated.AdminProtos.AdminService.BlockingInterface</code></td>
-<td class="colLast"><span class="strong">MetaTableLocator.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/MetaTableLocator.html#getMetaServerConnection(org.apache.hadoop.hbase.client.HConnection,%20org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20long,%20int)">getMetaServerConnection</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/HConnection.html" title="interface in org.apache.hadoop.hbase.client">HConnection</a>&nbsp;hConnection,
+<td class="colLast"><span class="strong">MetaTableLocator.</span><code><strong><a href="../../../../../org/apache/hadoop/hbase/zookeeper/MetaTableLocator.html#getMetaServerConnection(org.apache.hadoop.hbase.client.ClusterConnection,%20org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher,%20long,%20int)">getMetaServerConnection</a></strong>(<a href="../../../../../org/apache/hadoop/hbase/client/ClusterConnection.html" title="interface in org.apache.hadoop.hbase.client">ClusterConnection</a>&nbsp;connection,
                                               <a href="../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;zkw,
                                               long&nbsp;timeout,
                                               int&nbsp;replicaId)</code>
@@ -244,6 +200,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

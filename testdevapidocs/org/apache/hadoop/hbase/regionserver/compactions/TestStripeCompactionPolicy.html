@@ -95,7 +95,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.85">TestStripeCompactionPolicy</a>
+<pre>public class <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.92">TestStripeCompactionPolicy</a>
 extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 </li>
 </ul>
@@ -171,24 +171,28 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#KEY_E">KEY_E</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.KeyValue</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#KV_A">KV_A</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.KeyValue</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#KV_B">KV_B</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.KeyValue</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#KV_C">KV_C</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.KeyValue</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#KV_D">KV_D</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.KeyValue</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#KV_E">KV_E</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#usePrivateReaders">usePrivateReaders</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -223,33 +227,33 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#al(org.apache.hadoop.hbase.regionserver.StoreFile...)">al</a></strong>(org.apache.hadoop.hbase.regionserver.StoreFile...&nbsp;sfs)</code>&nbsp;</td>
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#al(org.apache.hadoop.hbase.regionserver.StoreFile...)">al</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>...&nbsp;sfs)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createBoundaries(int)">createBoundaries</a></strong>(int&nbsp;stripeCount)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactor</code></td>
+<td class="colFirst"><code>private <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactor</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createCompactor()">createCompactor</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.StoreFile</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createFile()">createFile</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.StoreFile</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createFile(long)">createFile</a></strong>(long&nbsp;size)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createPolicy(org.apache.hadoop.conf.Configuration)">createPolicy</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf)</code>
 <div class="block">HELPER METHODS</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createPolicy(org.apache.hadoop.conf.Configuration,%20long,%20float,%20int,%20boolean)">createPolicy</a></strong>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                         long&nbsp;splitSize,
                         float&nbsp;splitCount,
@@ -257,132 +261,136 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                         boolean&nbsp;hasTtl)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createStripes(int,%20byte[]...)">createStripes</a></strong>(int&nbsp;l0Count,
                           byte[]...&nbsp;boundaries)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createStripes(java.util.List,%20java.util.List,%20java.util.List)">createStripes</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;boundaries,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&gt;&nbsp;stripeSizes,
                           <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;l0Sizes)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createStripesL0Only(int,%20long)">createStripesL0Only</a></strong>(int&nbsp;l0Count,
                                       long&nbsp;l0Size)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createStripesWithFiles(java.util.List,%20java.util.List,%20java.util.List)">createStripesWithFiles</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;boundaries,
-                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&gt;&nbsp;stripeFiles,
-                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;l0Files)</code>
+                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&gt;&nbsp;stripeFiles,
+                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;l0Files)</code>
 <div class="block">This method actually does all the work.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createStripesWithFiles(java.util.List...)">createStripesWithFiles</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;...&nbsp;stripeFiles)</code>&nbsp;</td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createStripesWithFiles(java.util.List...)">createStripesWithFiles</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;...&nbsp;stripeFiles)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createStripesWithSizes(int,%20long,%20java.util.List)">createStripesWithSizes</a></strong>(int&nbsp;l0Count,
                                             long&nbsp;l0Size,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&gt;&nbsp;sizes)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>private static org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</code></td>
+<td class="colFirst"><code>private static <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#createStripesWithSizes(int,%20long,%20java.lang.Long[]...)">createStripesWithSizes</a></strong>(int&nbsp;l0Count,
                                             long&nbsp;l0Size,
                                             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>[]...&nbsp;sizes)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#data()">data</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#dropDeletesMatcher(java.lang.Boolean,%20byte[])">dropDeletesMatcher</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes,
                                     byte[]&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#getAllFiles(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20int)">getAllFiles</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
+<tr class="altColor">
+<td class="colFirst"><code>private static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#getAllFiles(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20int)">getAllFiles</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                       int&nbsp;fromStripe,
                       int&nbsp;toStripe)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#setFileStripe(org.apache.hadoop.hbase.regionserver.StoreFile,%20byte[],%20byte[])">setFileStripe</a></strong>(org.apache.hadoop.hbase.regionserver.StoreFile&nbsp;sf,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#setFileStripe(org.apache.hadoop.hbase.regionserver.StoreFile,%20byte[],%20byte[])">setFileStripe</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&nbsp;sf,
                           byte[]&nbsp;startKey,
                           byte[]&nbsp;endKey)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testExistingStripesFromL0()">testExistingStripesFromL0</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testInitialCountFromL0()">testInitialCountFromL0</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testMergeExpiredFiles()">testMergeExpiredFiles</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testMergeExpiredStripes()">testMergeExpiredStripes</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testNewStripesFromFlush()">testNewStripesFromFlush</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testNoStripesFromFlush()">testNoStripesFromFlush</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testNothingToCompactFromL0()">testNothingToCompactFromL0</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testOldStripesFromFlush()">testOldStripesFromFlush</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testSingleStripeCompaction()">testSingleStripeCompaction</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testSingleStripeDropDeletes()">testSingleStripeDropDeletes</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testSplitOffStripe()">testSplitOffStripe</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testSplitOffStripeDropDeletes()">testSplitOffStripeDropDeletes</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testSplitOffStripeOffPeak()">testSplitOffStripeOffPeak</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testWithParallelCompaction()">testWithParallelCompaction</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#testWithReferences()">testWithReferences</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyCollectionsEqual(java.util.Collection,%20java.util.Collection)">verifyCollectionsEqual</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;sfs,
-                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;scr)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20java.util.Collection,%20java.lang.Boolean,%20java.lang.Integer,%20java.lang.Long,%20byte[],%20byte[],%20boolean)">verifyCompaction</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
-                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;sfs,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyCollectionsEqual(java.util.Collection,%20java.util.Collection)">verifyCollectionsEqual</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs,
+                                            <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;scr)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20java.util.Collection,%20java.lang.Boolean,%20java.lang.Integer,%20java.lang.Long,%20byte[],%20byte[],%20boolean)">verifyCompaction</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;count,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;size,
@@ -392,62 +400,62 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <div class="block">Verify arbitrary compaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20java.util.Collection,%20byte[],%20byte[],%20java.util.List)">verifyCompaction</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
-                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;sfs,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20java.util.Collection,%20byte[],%20byte[],%20java.util.List)">verifyCompaction</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
+                                <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs,
                                 byte[]&nbsp;dropDeletesFrom,
                                 byte[]&nbsp;dropDeletesTo,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;boundaries)</code>
 <div class="block">Verify arbitrary compaction.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyFlush(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20org.apache.hadoop.hbase.KeyValue[],%20org.apache.hadoop.hbase.KeyValue[][],%20byte[][])">verifyFlush</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                      org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
-                      org.apache.hadoop.hbase.KeyValue[]&nbsp;input,
-                      org.apache.hadoop.hbase.KeyValue[][]&nbsp;expected,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyFlush(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20org.apache.hadoop.hbase.KeyValue[],%20org.apache.hadoop.hbase.KeyValue[][],%20byte[][])">verifyFlush</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                      <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
+                      <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a>[]&nbsp;input,
+                      <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a>[][]&nbsp;expected,
                       byte[][]&nbsp;boundaries)</code>
 <div class="block">Verify arbitrary flush.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyMergeCompatcion(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20int)">verifyMergeCompatcion</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                          org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyMergeCompatcion(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20int)">verifyMergeCompatcion</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                          <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                                           int&nbsp;from,
                                           int&nbsp;to)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyNoCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider)">verifyNoCompaction</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                    org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si)</code>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyNoCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider)">verifyNoCompaction</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                    <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si)</code>
 <div class="block">Verify no compaction is needed or selected.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifySingleStripeCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20java.lang.Boolean)">verifySingleStripeCompaction</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                                        org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifySingleStripeCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20java.lang.Boolean)">verifySingleStripeCompaction</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                                        <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                                                         int&nbsp;index,
                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyWholeStripesCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20int,%20java.lang.Boolean,%20java.lang.Integer,%20java.lang.Long)">verifyWholeStripesCompaction</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                                        org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyWholeStripesCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20int,%20java.lang.Boolean,%20java.lang.Integer,%20java.lang.Long)">verifyWholeStripesCompaction</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                                        <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                                                         int&nbsp;from,
                                                         int&nbsp;to,
                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes,
                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;count,
                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;size)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyWholeStripesCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20int,%20java.lang.Boolean,%20java.lang.Integer,%20java.lang.Long,%20boolean)">verifyWholeStripesCompaction</a></strong>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                                        org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#verifyWholeStripesCompaction(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy,%20org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider,%20int,%20int,%20java.lang.Boolean,%20java.lang.Integer,%20java.lang.Long,%20boolean)">verifyWholeStripesCompaction</a></strong>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                                        <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                                                         int&nbsp;from,
                                                         int&nbsp;to,
                                                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes,
@@ -485,7 +493,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KEY_A</h4>
-<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.86">KEY_A</a></pre>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.93">KEY_A</a></pre>
 </li>
 </ul>
 <a name="KEY_B">
@@ -494,7 +502,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KEY_B</h4>
-<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.87">KEY_B</a></pre>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.94">KEY_B</a></pre>
 </li>
 </ul>
 <a name="KEY_C">
@@ -503,7 +511,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KEY_C</h4>
-<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.88">KEY_C</a></pre>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.95">KEY_C</a></pre>
 </li>
 </ul>
 <a name="KEY_D">
@@ -512,7 +520,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KEY_D</h4>
-<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.89">KEY_D</a></pre>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.96">KEY_D</a></pre>
 </li>
 </ul>
 <a name="KEY_E">
@@ -521,7 +529,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KEY_E</h4>
-<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.90">KEY_E</a></pre>
+<pre>private static final&nbsp;byte[] <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.97">KEY_E</a></pre>
 </li>
 </ul>
 <a name="KV_A">
@@ -530,7 +538,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KV_A</h4>
-<pre>private static final&nbsp;org.apache.hadoop.hbase.KeyValue <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.91">KV_A</a></pre>
+<pre>private static final&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.98">KV_A</a></pre>
 </li>
 </ul>
 <a name="KV_B">
@@ -539,7 +547,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KV_B</h4>
-<pre>private static final&nbsp;org.apache.hadoop.hbase.KeyValue <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.92">KV_B</a></pre>
+<pre>private static final&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.99">KV_B</a></pre>
 </li>
 </ul>
 <a name="KV_C">
@@ -548,7 +556,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KV_C</h4>
-<pre>private static final&nbsp;org.apache.hadoop.hbase.KeyValue <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.93">KV_C</a></pre>
+<pre>private static final&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.100">KV_C</a></pre>
 </li>
 </ul>
 <a name="KV_D">
@@ -557,7 +565,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KV_D</h4>
-<pre>private static final&nbsp;org.apache.hadoop.hbase.KeyValue <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.94">KV_D</a></pre>
+<pre>private static final&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.101">KV_D</a></pre>
 </li>
 </ul>
 <a name="KV_E">
@@ -566,7 +574,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>KV_E</h4>
-<pre>private static final&nbsp;org.apache.hadoop.hbase.KeyValue <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.95">KV_E</a></pre>
+<pre>private static final&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a> <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.102">KV_E</a></pre>
 </li>
 </ul>
 <a name="defaultSplitSize">
@@ -575,7 +583,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>defaultSplitSize</h4>
-<pre>private static&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.98">defaultSplitSize</a></pre>
+<pre>private static&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.105">defaultSplitSize</a></pre>
 </li>
 </ul>
 <a name="defaultSplitCount">
@@ -584,7 +592,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>defaultSplitCount</h4>
-<pre>private static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.99">defaultSplitCount</a></pre>
+<pre>private static&nbsp;float <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.106">defaultSplitCount</a></pre>
 </li>
 </ul>
 <a name="defaultInitialCount">
@@ -593,17 +601,26 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>defaultInitialCount</h4>
-<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.100">defaultInitialCount</a></pre>
+<pre>private static final&nbsp;int <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.107">defaultInitialCount</a></pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#org.apache.hadoop.hbase.regionserver.compactions.TestStripeCompactionPolicy.defaultInitialCount">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="defaultTtl">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>defaultTtl</h4>
-<pre>private static&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.101">defaultTtl</a></pre>
+<pre>private static&nbsp;long <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.108">defaultTtl</a></pre>
+</li>
+</ul>
+<a name="usePrivateReaders">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>usePrivateReaders</h4>
+<pre>public&nbsp;boolean <a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.116">usePrivateReaders</a></pre>
 </li>
 </ul>
 </li>
@@ -620,7 +637,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TestStripeCompactionPolicy</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.85">TestStripeCompactionPolicy</a>()</pre>
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.92">TestStripeCompactionPolicy</a>()</pre>
 </li>
 </ul>
 </li>
@@ -631,13 +648,22 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="data()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>data</h4>
+<pre>public static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.111">data</a>()</pre>
+</li>
+</ul>
 <a name="testNoStripesFromFlush()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>testNoStripesFromFlush</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.104">testNoStripesFromFlush</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.118">testNoStripesFromFlush</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -649,7 +675,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testOldStripesFromFlush</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.116">testOldStripesFromFlush</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.130">testOldStripesFromFlush</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -661,7 +687,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNewStripesFromFlush</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.127">testNewStripesFromFlush</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.141">testNewStripesFromFlush</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -673,7 +699,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSingleStripeCompaction</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.137">testSingleStripeCompaction</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.151">testSingleStripeCompaction</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -685,7 +711,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testWithParallelCompaction</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.199">testWithParallelCompaction</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.213">testWithParallelCompaction</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -697,7 +723,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testWithReferences</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.207">testWithReferences</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.221">testWithReferences</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -709,7 +735,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testInitialCountFromL0</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.226">testInitialCountFromL0</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.240">testInitialCountFromL0</a>()
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -721,7 +747,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testExistingStripesFromL0</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.240">testExistingStripesFromL0</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.254">testExistingStripesFromL0</a>()
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -733,7 +759,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testNothingToCompactFromL0</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.249">testNothingToCompactFromL0</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.263">testNothingToCompactFromL0</a>()
                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -745,7 +771,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitOffStripe</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.261">testSplitOffStripe</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.275">testSplitOffStripe</a>()
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -757,7 +783,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitOffStripeOffPeak</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.292">testSplitOffStripeOffPeak</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.306">testSplitOffStripeOffPeak</a>()
                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -769,7 +795,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSplitOffStripeDropDeletes</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.312">testSplitOffStripeDropDeletes</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.326">testSplitOffStripeDropDeletes</a>()
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -781,7 +807,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMergeExpiredFiles</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.331">testMergeExpiredFiles</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.345">testMergeExpiredFiles</a>()
                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -793,7 +819,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testMergeExpiredStripes</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.370">testMergeExpiredStripes</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.384">testMergeExpiredStripes</a>()
                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -805,7 +831,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createStripesWithFiles</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.400">createStripesWithFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;...&nbsp;stripeFiles)
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.415">createStripesWithFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;...&nbsp;stripeFiles)
                                                                                                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -817,7 +843,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>testSingleStripeDropDeletes</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.407">testSingleStripeDropDeletes</a>()
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.422">testSingleStripeDropDeletes</a>()
                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
@@ -829,7 +855,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createPolicy</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.443">createPolicy</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.458">createPolicy</a>(org.apache.hadoop.conf.Configuration&nbsp;conf)
                                                                                              throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">HELPER METHODS</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -842,7 +868,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createPolicy</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.448">createPolicy</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.463">createPolicy</a>(org.apache.hadoop.conf.Configuration&nbsp;conf,
                                                                                    long&nbsp;splitSize,
                                                                                    float&nbsp;splitCount,
                                                                                    int&nbsp;initialCount,
@@ -858,7 +884,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>al</h4>
-<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.459">al</a>(org.apache.hadoop.hbase.regionserver.StoreFile...&nbsp;sfs)</pre>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.474">al</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>...&nbsp;sfs)</pre>
 </li>
 </ul>
 <a name="verifyMergeCompatcion(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy, org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider, int, int)">
@@ -867,8 +893,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyMergeCompatcion</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.463">verifyMergeCompatcion</a>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                         org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.478">verifyMergeCompatcion</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                         <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                          int&nbsp;from,
                          int&nbsp;to)
                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
@@ -882,8 +908,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyWholeStripesCompaction</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.486">verifyWholeStripesCompaction</a>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.501">verifyWholeStripesCompaction</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                                 int&nbsp;from,
                                 int&nbsp;to,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes,
@@ -903,8 +929,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyWholeStripesCompaction</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.493">verifyWholeStripesCompaction</a>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.508">verifyWholeStripesCompaction</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                                 int&nbsp;from,
                                 int&nbsp;to,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes,
@@ -921,8 +947,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifySingleStripeCompaction</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.499">verifySingleStripeCompaction</a>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                                org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.514">verifySingleStripeCompaction</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                                <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
                                 int&nbsp;index,
                                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes)
                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -936,8 +962,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyNoCompaction</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.509">verifyNoCompaction</a>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                      org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si)
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.524">verifyNoCompaction</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                      <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si)
                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Verify no compaction is needed or selected.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>policy</code> - Policy to test.</dd><dd><code>si</code> - Stripe information pre-set with stripes to test.</dd>
@@ -951,9 +977,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyCompaction</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.524">verifyCompaction</a>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                    org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
-                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;sfs,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.539">verifyCompaction</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                    <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs,
                     byte[]&nbsp;dropDeletesFrom,
                     byte[]&nbsp;dropDeletesTo,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;boundaries)
@@ -970,9 +996,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyCompaction</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.559">verifyCompaction</a>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-                    org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
-                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;sfs,
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.574">verifyCompaction</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+                    <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;count,
                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&nbsp;size,
@@ -992,10 +1018,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyFlush</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.575">verifyFlush</a>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy&nbsp;policy,
-               org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
-               org.apache.hadoop.hbase.KeyValue[]&nbsp;input,
-               org.apache.hadoop.hbase.KeyValue[][]&nbsp;expected,
+<pre>protected&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.590">verifyFlush</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy</a>&nbsp;policy,
+               <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
+               <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a>[]&nbsp;input,
+               <a href="../../../../../../../apidocs/org/apache/hadoop/hbase/KeyValue.html?is-external=true" title="class or interface in org.apache.hadoop.hbase">KeyValue</a>[][]&nbsp;expected,
                byte[][]&nbsp;boundaries)
                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Verify arbitrary flush.</div>
@@ -1009,7 +1035,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>dropDeletesMatcher</h4>
-<pre>private&nbsp;byte[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.593">dropDeletesMatcher</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes,
+<pre>private&nbsp;byte[]&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.609">dropDeletesMatcher</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;dropDeletes,
                         byte[]&nbsp;value)</pre>
 </li>
 </ul>
@@ -1019,8 +1045,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>verifyCollectionsEqual</h4>
-<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.598">verifyCollectionsEqual</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;sfs,
-                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;scr)</pre>
+<pre>private&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.614">verifyCollectionsEqual</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;sfs,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;scr)</pre>
 </li>
 </ul>
 <a name="getAllFiles(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider, int, int)">
@@ -1029,9 +1055,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getAllFiles</h4>
-<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.604">getAllFiles</a>(org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;si,
-                                                               int&nbsp;fromStripe,
-                                                               int&nbsp;toStripe)</pre>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.620">getAllFiles</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;si,
+                          int&nbsp;fromStripe,
+                          int&nbsp;toStripe)</pre>
 </li>
 </ul>
 <a name="createStripes(int, byte[]...)">
@@ -1040,7 +1066,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createStripes</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.618">createStripes</a>(int&nbsp;l0Count,
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.634">createStripes</a>(int&nbsp;l0Count,
                                                                                                               byte[]...&nbsp;boundaries)
                                                                                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>l0Count</code> - Number of L0 files.</dd><dd><code>boundaries</code> - Target boundaries.</dd>
@@ -1055,7 +1081,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createStripesL0Only</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.636">createStripesL0Only</a>(int&nbsp;l0Count,
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.652">createStripesL0Only</a>(int&nbsp;l0Count,
                                                                                                                     long&nbsp;l0Size)
                                                                                                                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>l0Count</code> - Number of L0 files.</dd><dd><code>l0Size</code> - Size of each file.</dd>
@@ -1070,7 +1096,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createStripesWithSizes</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.651">createStripesWithSizes</a>(int&nbsp;l0Count,
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.667">createStripesWithSizes</a>(int&nbsp;l0Count,
                                                                                                                        long&nbsp;l0Size,
                                                                                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>[]...&nbsp;sizes)
                                                                                                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
@@ -1086,7 +1112,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createStripesWithSizes</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.660">createStripesWithSizes</a>(int&nbsp;l0Count,
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.676">createStripesWithSizes</a>(int&nbsp;l0Count,
                                                                                                                        long&nbsp;l0Size,
                                                                                                                        <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&gt;&nbsp;sizes)
                                                                                                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
@@ -1100,7 +1126,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createBoundaries</h4>
-<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.670">createBoundaries</a>(int&nbsp;stripeCount)</pre>
+<pre>private static&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.686">createBoundaries</a>(int&nbsp;stripeCount)</pre>
 </li>
 </ul>
 <a name="createStripes(java.util.List, java.util.List, java.util.List)">
@@ -1109,7 +1135,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createStripes</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.678">createStripes</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;boundaries,
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.694">createStripes</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;boundaries,
                                                                                                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&gt;&nbsp;stripeSizes,
                                                                                                               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;l0Sizes)
                                                                                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
@@ -1123,9 +1149,9 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createStripesWithFiles</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.698">createStripesWithFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;boundaries,
-                                                                                                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&gt;&nbsp;stripeFiles,
-                                                                                                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;org.apache.hadoop.hbase.regionserver.StoreFile&gt;&nbsp;l0Files)
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactionPolicy.StripeInformationProvider.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactionPolicy.StripeInformationProvider</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.714">createStripesWithFiles</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;boundaries,
+                                                                                                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&gt;&nbsp;stripeFiles,
+                                                                                                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&gt;&nbsp;l0Files)
                                                                                                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">This method actually does all the work.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -1138,8 +1164,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createFile</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.729">createFile</a>(long&nbsp;size)
-                                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.745">createFile</a>(long&nbsp;size)
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -1150,8 +1176,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>createFile</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.StoreFile&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.745">createFile</a>()
-                                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<pre>private static&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.763">createFile</a>()
+                             throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -1162,7 +1188,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>setFileStripe</h4>
-<pre>private static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.749">setFileStripe</a>(org.apache.hadoop.hbase.regionserver.StoreFile&nbsp;sf,
+<pre>private static&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.767">setFileStripe</a>(<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/StoreFile.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">StoreFile</a>&nbsp;sf,
                  byte[]&nbsp;startKey,
                  byte[]&nbsp;endKey)</pre>
 </li>
@@ -1173,8 +1199,8 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>createCompactor</h4>
-<pre>private static&nbsp;org.apache.hadoop.hbase.regionserver.compactions.StripeCompactor&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.754">createCompactor</a>()
-                                                                                         throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<pre>private&nbsp;<a href="../../../../../../../apidocs/org/apache/hadoop/hbase/regionserver/compactions.StripeCompactor.html?is-external=true" title="class or interface in org.apache.hadoop.hbase.regionserver">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactor</a>&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/regionserver/compactions/TestStripeCompactionPolicy.html#line.772">createCompactor</a>()
+                                                                                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
@@ -1246,6 +1272,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

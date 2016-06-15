@@ -104,7 +104,7 @@
 </dl>
 <hr>
 <br>
-<pre>private static class <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/ReplicationChecker.html#line.108">ReplicationChecker.ReplicationQueueDeletor</a>
+<pre>private static class <a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/ReplicationChecker.html#line.146">ReplicationChecker.ReplicationQueueDeletor</a>
 extends <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html" title="class in org.apache.hadoop.hbase.replication">ReplicationStateZKBase</a></pre>
 </li>
 </ul>
@@ -123,7 +123,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/replication/Replicati
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.apache.hadoop.hbase.replication.<a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html" title="class in org.apache.hadoop.hbase.replication">ReplicationStateZKBase</a></h3>
-<code><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#abortable">abortable</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#conf">conf</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#DISABLED_ZNODE_BYTES">DISABLED_ZNODE_BYTES</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#ENABLED_ZNODE_BYTES">ENABLED_ZNODE_BYTES</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#ourClusterKey">ourClusterKey</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#peerStateNodeName">peerStateNodeName</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#peersZNode">peersZNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#queuesZNode">queuesZNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#replicationZNode">replicationZNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#zookeeper">zookeeper</a></code></li>
+<code><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#abortable">abortable</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#conf">conf</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#DISABLED_ZNODE_BYTES">DISABLED_ZNODE_BYTES</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#ENABLED_ZNODE_BYTES">ENABLED_ZNODE_BYTES</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#hfileRefsZNode">hfileRefsZNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#ourClusterKey">ourClusterKey</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#peerStateNodeName">peerStateNodeName</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#peersZNode">peersZNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#queuesZNode">queuesZNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#replicationZNode">replicationZNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#tableCFsNodeName">tableCFsNodeName</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#zookeeper">zookeeper</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#ZOOKEEPER_ZNODE_REPLICATION_HFILE_REFS_DEFAULT">ZOOKEEPER_ZNODE_REPLICATION_HFILE_REFS_DEFAULT</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#ZOOKEEPER_ZNODE_REPLICATION_HFILE_REFS_KEY">ZOOKEEPER_ZNODE_REPLICATION_HFILE_REFS_KEY</a></code></li>
 </ul>
 </li>
 </ul>
@@ -169,7 +169,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/replication/Replicati
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.apache.hadoop.hbase.replication.<a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html" title="class in org.apache.hadoop.hbase.replication">ReplicationStateZKBase</a></h3>
-<code><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#getListOfReplicators()">getListOfReplicators</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#isPeerPath(java.lang.String)">isPeerPath</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#peerExists(java.lang.String)">peerExists</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#toByteArray(org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationState.State)">toByteArray</a></code></li>
+<code><a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#getListOfReplicators()">getListOfReplicators</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#getPeerNode(java.lang.String)">getPeerNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#getPeerStateNode(java.lang.String)">getPeerStateNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#getTableCFsNode(java.lang.String)">getTableCFsNode</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#isPeerPath(java.lang.String)">isPeerPath</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#peerExists(java.lang.String)">peerExists</a>, <a href="../../../../../../org/apache/hadoop/hbase/replication/ReplicationStateZKBase.html#toByteArray(org.apache.hadoop.hbase.protobuf.generated.ZooKeeperProtos.ReplicationState.State)">toByteArray</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -198,7 +198,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/replication/Replicati
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ReplicationChecker.ReplicationQueueDeletor</h4>
-<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/ReplicationChecker.ReplicationQueueDeletor.html#line.109">ReplicationChecker.ReplicationQueueDeletor</a>(<a href="../../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;zk,
+<pre>public&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/ReplicationChecker.ReplicationQueueDeletor.html#line.147">ReplicationChecker.ReplicationQueueDeletor</a>(<a href="../../../../../../org/apache/hadoop/hbase/zookeeper/ZooKeeperWatcher.html" title="class in org.apache.hadoop.hbase.zookeeper">ZooKeeperWatcher</a>&nbsp;zk,
                                           org.apache.hadoop.conf.Configuration&nbsp;conf,
                                           <a href="../../../../../../org/apache/hadoop/hbase/Abortable.html" title="interface in org.apache.hadoop.hbase">Abortable</a>&nbsp;abortable)</pre>
 </li>
@@ -217,7 +217,7 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/replication/Replicati
 <ul class="blockListLast">
 <li class="blockList">
 <h4>removeQueue</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/ReplicationChecker.ReplicationQueueDeletor.html#line.113">removeQueue</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;replicator,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../../src-html/org/apache/hadoop/hbase/util/hbck/ReplicationChecker.ReplicationQueueDeletor.html#line.151">removeQueue</a>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;replicator,
                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queueId)
                  throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -291,6 +291,6 @@ extends <a href="../../../../../../org/apache/hadoop/hbase/replication/Replicati
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2007&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>
