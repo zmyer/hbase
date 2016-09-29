@@ -6,15 +6,21 @@ package org.apache.hadoop.hbase.shaded.ipc.protobuf.generated;
 public final class TestRpcServiceProtos {
   private TestRpcServiceProtos() {}
   public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
+  }
+
+  public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf service {@code TestProtobufRpcProto}
-   *
    * <pre>
    **
    * A protobuf service for use in tests
    * </pre>
+   *
+   * Protobuf service {@code TestProtobufRpcProto}
    */
   public static abstract class TestProtobufRpcProto
       implements com.google.protobuf.Service {
@@ -534,7 +540,7 @@ public final class TestRpcServiceProtos {
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -550,18 +556,19 @@ public final class TestRpcServiceProtos {
       "edB\024TestRpcServiceProtos\210\001\001\240\001\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.apache.hadoop.hbase.shaded.ipc.protobuf.generated.TestProtos.getDescriptor(),
         }, assigner);
+    org.apache.hadoop.hbase.shaded.ipc.protobuf.generated.TestProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -6,7 +6,13 @@ package org.apache.hadoop.hbase.shaded.protobuf.generated;
 public final class MasterProcedureProtos {
   private MasterProcedureProtos() {}
   public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
+  }
+
+  public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
    * Protobuf enum {@code hbase.pb.CreateTableState}
@@ -16,27 +22,27 @@ public final class MasterProcedureProtos {
     /**
      * <code>CREATE_TABLE_PRE_OPERATION = 1;</code>
      */
-    CREATE_TABLE_PRE_OPERATION(0, 1),
+    CREATE_TABLE_PRE_OPERATION(1),
     /**
      * <code>CREATE_TABLE_WRITE_FS_LAYOUT = 2;</code>
      */
-    CREATE_TABLE_WRITE_FS_LAYOUT(1, 2),
+    CREATE_TABLE_WRITE_FS_LAYOUT(2),
     /**
      * <code>CREATE_TABLE_ADD_TO_META = 3;</code>
      */
-    CREATE_TABLE_ADD_TO_META(2, 3),
+    CREATE_TABLE_ADD_TO_META(3),
     /**
      * <code>CREATE_TABLE_ASSIGN_REGIONS = 4;</code>
      */
-    CREATE_TABLE_ASSIGN_REGIONS(3, 4),
+    CREATE_TABLE_ASSIGN_REGIONS(4),
     /**
      * <code>CREATE_TABLE_UPDATE_DESC_CACHE = 5;</code>
      */
-    CREATE_TABLE_UPDATE_DESC_CACHE(4, 5),
+    CREATE_TABLE_UPDATE_DESC_CACHE(5),
     /**
      * <code>CREATE_TABLE_POST_OPERATION = 6;</code>
      */
-    CREATE_TABLE_POST_OPERATION(5, 6),
+    CREATE_TABLE_POST_OPERATION(6),
     ;
 
     /**
@@ -65,9 +71,19 @@ public final class MasterProcedureProtos {
     public static final int CREATE_TABLE_POST_OPERATION_VALUE = 6;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static CreateTableState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static CreateTableState forNumber(int value) {
       switch (value) {
         case 1: return CREATE_TABLE_PRE_OPERATION;
         case 2: return CREATE_TABLE_WRITE_FS_LAYOUT;
@@ -83,17 +99,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<CreateTableState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CreateTableState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<CreateTableState>() {
             public CreateTableState findValueByNumber(int number) {
-              return CreateTableState.valueOf(number);
+              return CreateTableState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -115,11 +131,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private CreateTableState(int index, int value) {
-      this.index = index;
+    private CreateTableState(int value) {
       this.value = value;
     }
 
@@ -134,31 +148,31 @@ public final class MasterProcedureProtos {
     /**
      * <code>MODIFY_TABLE_PREPARE = 1;</code>
      */
-    MODIFY_TABLE_PREPARE(0, 1),
+    MODIFY_TABLE_PREPARE(1),
     /**
      * <code>MODIFY_TABLE_PRE_OPERATION = 2;</code>
      */
-    MODIFY_TABLE_PRE_OPERATION(1, 2),
+    MODIFY_TABLE_PRE_OPERATION(2),
     /**
      * <code>MODIFY_TABLE_UPDATE_TABLE_DESCRIPTOR = 3;</code>
      */
-    MODIFY_TABLE_UPDATE_TABLE_DESCRIPTOR(2, 3),
+    MODIFY_TABLE_UPDATE_TABLE_DESCRIPTOR(3),
     /**
      * <code>MODIFY_TABLE_REMOVE_REPLICA_COLUMN = 4;</code>
      */
-    MODIFY_TABLE_REMOVE_REPLICA_COLUMN(3, 4),
+    MODIFY_TABLE_REMOVE_REPLICA_COLUMN(4),
     /**
      * <code>MODIFY_TABLE_DELETE_FS_LAYOUT = 5;</code>
      */
-    MODIFY_TABLE_DELETE_FS_LAYOUT(4, 5),
+    MODIFY_TABLE_DELETE_FS_LAYOUT(5),
     /**
      * <code>MODIFY_TABLE_POST_OPERATION = 6;</code>
      */
-    MODIFY_TABLE_POST_OPERATION(5, 6),
+    MODIFY_TABLE_POST_OPERATION(6),
     /**
      * <code>MODIFY_TABLE_REOPEN_ALL_REGIONS = 7;</code>
      */
-    MODIFY_TABLE_REOPEN_ALL_REGIONS(6, 7),
+    MODIFY_TABLE_REOPEN_ALL_REGIONS(7),
     ;
 
     /**
@@ -191,9 +205,19 @@ public final class MasterProcedureProtos {
     public static final int MODIFY_TABLE_REOPEN_ALL_REGIONS_VALUE = 7;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static ModifyTableState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ModifyTableState forNumber(int value) {
       switch (value) {
         case 1: return MODIFY_TABLE_PREPARE;
         case 2: return MODIFY_TABLE_PRE_OPERATION;
@@ -210,17 +234,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ModifyTableState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ModifyTableState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<ModifyTableState>() {
             public ModifyTableState findValueByNumber(int number) {
-              return ModifyTableState.valueOf(number);
+              return ModifyTableState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -242,11 +266,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private ModifyTableState(int index, int value) {
-      this.index = index;
+    private ModifyTableState(int value) {
       this.value = value;
     }
 
@@ -261,31 +283,31 @@ public final class MasterProcedureProtos {
     /**
      * <code>TRUNCATE_TABLE_PRE_OPERATION = 1;</code>
      */
-    TRUNCATE_TABLE_PRE_OPERATION(0, 1),
+    TRUNCATE_TABLE_PRE_OPERATION(1),
     /**
      * <code>TRUNCATE_TABLE_REMOVE_FROM_META = 2;</code>
      */
-    TRUNCATE_TABLE_REMOVE_FROM_META(1, 2),
+    TRUNCATE_TABLE_REMOVE_FROM_META(2),
     /**
      * <code>TRUNCATE_TABLE_CLEAR_FS_LAYOUT = 3;</code>
      */
-    TRUNCATE_TABLE_CLEAR_FS_LAYOUT(2, 3),
+    TRUNCATE_TABLE_CLEAR_FS_LAYOUT(3),
     /**
      * <code>TRUNCATE_TABLE_CREATE_FS_LAYOUT = 4;</code>
      */
-    TRUNCATE_TABLE_CREATE_FS_LAYOUT(3, 4),
+    TRUNCATE_TABLE_CREATE_FS_LAYOUT(4),
     /**
      * <code>TRUNCATE_TABLE_ADD_TO_META = 5;</code>
      */
-    TRUNCATE_TABLE_ADD_TO_META(4, 5),
+    TRUNCATE_TABLE_ADD_TO_META(5),
     /**
      * <code>TRUNCATE_TABLE_ASSIGN_REGIONS = 6;</code>
      */
-    TRUNCATE_TABLE_ASSIGN_REGIONS(5, 6),
+    TRUNCATE_TABLE_ASSIGN_REGIONS(6),
     /**
      * <code>TRUNCATE_TABLE_POST_OPERATION = 7;</code>
      */
-    TRUNCATE_TABLE_POST_OPERATION(6, 7),
+    TRUNCATE_TABLE_POST_OPERATION(7),
     ;
 
     /**
@@ -318,9 +340,19 @@ public final class MasterProcedureProtos {
     public static final int TRUNCATE_TABLE_POST_OPERATION_VALUE = 7;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static TruncateTableState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static TruncateTableState forNumber(int value) {
       switch (value) {
         case 1: return TRUNCATE_TABLE_PRE_OPERATION;
         case 2: return TRUNCATE_TABLE_REMOVE_FROM_META;
@@ -337,17 +369,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<TruncateTableState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        TruncateTableState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<TruncateTableState>() {
             public TruncateTableState findValueByNumber(int number) {
-              return TruncateTableState.valueOf(number);
+              return TruncateTableState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -369,11 +401,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private TruncateTableState(int index, int value) {
-      this.index = index;
+    private TruncateTableState(int value) {
       this.value = value;
     }
 
@@ -388,27 +418,27 @@ public final class MasterProcedureProtos {
     /**
      * <code>DELETE_TABLE_PRE_OPERATION = 1;</code>
      */
-    DELETE_TABLE_PRE_OPERATION(0, 1),
+    DELETE_TABLE_PRE_OPERATION(1),
     /**
      * <code>DELETE_TABLE_REMOVE_FROM_META = 2;</code>
      */
-    DELETE_TABLE_REMOVE_FROM_META(1, 2),
+    DELETE_TABLE_REMOVE_FROM_META(2),
     /**
      * <code>DELETE_TABLE_CLEAR_FS_LAYOUT = 3;</code>
      */
-    DELETE_TABLE_CLEAR_FS_LAYOUT(2, 3),
+    DELETE_TABLE_CLEAR_FS_LAYOUT(3),
     /**
      * <code>DELETE_TABLE_UPDATE_DESC_CACHE = 4;</code>
      */
-    DELETE_TABLE_UPDATE_DESC_CACHE(3, 4),
+    DELETE_TABLE_UPDATE_DESC_CACHE(4),
     /**
      * <code>DELETE_TABLE_UNASSIGN_REGIONS = 5;</code>
      */
-    DELETE_TABLE_UNASSIGN_REGIONS(4, 5),
+    DELETE_TABLE_UNASSIGN_REGIONS(5),
     /**
      * <code>DELETE_TABLE_POST_OPERATION = 6;</code>
      */
-    DELETE_TABLE_POST_OPERATION(5, 6),
+    DELETE_TABLE_POST_OPERATION(6),
     ;
 
     /**
@@ -437,9 +467,19 @@ public final class MasterProcedureProtos {
     public static final int DELETE_TABLE_POST_OPERATION_VALUE = 6;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static DeleteTableState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static DeleteTableState forNumber(int value) {
       switch (value) {
         case 1: return DELETE_TABLE_PRE_OPERATION;
         case 2: return DELETE_TABLE_REMOVE_FROM_META;
@@ -455,17 +495,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<DeleteTableState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DeleteTableState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<DeleteTableState>() {
             public DeleteTableState findValueByNumber(int number) {
-              return DeleteTableState.valueOf(number);
+              return DeleteTableState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -487,11 +527,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private DeleteTableState(int index, int value) {
-      this.index = index;
+    private DeleteTableState(int value) {
       this.value = value;
     }
 
@@ -506,23 +544,23 @@ public final class MasterProcedureProtos {
     /**
      * <code>CREATE_NAMESPACE_PREPARE = 1;</code>
      */
-    CREATE_NAMESPACE_PREPARE(0, 1),
+    CREATE_NAMESPACE_PREPARE(1),
     /**
      * <code>CREATE_NAMESPACE_CREATE_DIRECTORY = 2;</code>
      */
-    CREATE_NAMESPACE_CREATE_DIRECTORY(1, 2),
+    CREATE_NAMESPACE_CREATE_DIRECTORY(2),
     /**
      * <code>CREATE_NAMESPACE_INSERT_INTO_NS_TABLE = 3;</code>
      */
-    CREATE_NAMESPACE_INSERT_INTO_NS_TABLE(2, 3),
+    CREATE_NAMESPACE_INSERT_INTO_NS_TABLE(3),
     /**
      * <code>CREATE_NAMESPACE_UPDATE_ZK = 4;</code>
      */
-    CREATE_NAMESPACE_UPDATE_ZK(3, 4),
+    CREATE_NAMESPACE_UPDATE_ZK(4),
     /**
      * <code>CREATE_NAMESPACE_SET_NAMESPACE_QUOTA = 5;</code>
      */
-    CREATE_NAMESPACE_SET_NAMESPACE_QUOTA(4, 5),
+    CREATE_NAMESPACE_SET_NAMESPACE_QUOTA(5),
     ;
 
     /**
@@ -547,9 +585,19 @@ public final class MasterProcedureProtos {
     public static final int CREATE_NAMESPACE_SET_NAMESPACE_QUOTA_VALUE = 5;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static CreateNamespaceState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static CreateNamespaceState forNumber(int value) {
       switch (value) {
         case 1: return CREATE_NAMESPACE_PREPARE;
         case 2: return CREATE_NAMESPACE_CREATE_DIRECTORY;
@@ -564,17 +612,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<CreateNamespaceState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CreateNamespaceState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<CreateNamespaceState>() {
             public CreateNamespaceState findValueByNumber(int number) {
-              return CreateNamespaceState.valueOf(number);
+              return CreateNamespaceState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -596,11 +644,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private CreateNamespaceState(int index, int value) {
-      this.index = index;
+    private CreateNamespaceState(int value) {
       this.value = value;
     }
 
@@ -615,15 +661,15 @@ public final class MasterProcedureProtos {
     /**
      * <code>MODIFY_NAMESPACE_PREPARE = 1;</code>
      */
-    MODIFY_NAMESPACE_PREPARE(0, 1),
+    MODIFY_NAMESPACE_PREPARE(1),
     /**
      * <code>MODIFY_NAMESPACE_UPDATE_NS_TABLE = 2;</code>
      */
-    MODIFY_NAMESPACE_UPDATE_NS_TABLE(1, 2),
+    MODIFY_NAMESPACE_UPDATE_NS_TABLE(2),
     /**
      * <code>MODIFY_NAMESPACE_UPDATE_ZK = 3;</code>
      */
-    MODIFY_NAMESPACE_UPDATE_ZK(2, 3),
+    MODIFY_NAMESPACE_UPDATE_ZK(3),
     ;
 
     /**
@@ -640,9 +686,19 @@ public final class MasterProcedureProtos {
     public static final int MODIFY_NAMESPACE_UPDATE_ZK_VALUE = 3;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static ModifyNamespaceState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ModifyNamespaceState forNumber(int value) {
       switch (value) {
         case 1: return MODIFY_NAMESPACE_PREPARE;
         case 2: return MODIFY_NAMESPACE_UPDATE_NS_TABLE;
@@ -655,17 +711,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ModifyNamespaceState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ModifyNamespaceState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<ModifyNamespaceState>() {
             public ModifyNamespaceState findValueByNumber(int number) {
-              return ModifyNamespaceState.valueOf(number);
+              return ModifyNamespaceState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -687,11 +743,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private ModifyNamespaceState(int index, int value) {
-      this.index = index;
+    private ModifyNamespaceState(int value) {
       this.value = value;
     }
 
@@ -706,23 +760,23 @@ public final class MasterProcedureProtos {
     /**
      * <code>DELETE_NAMESPACE_PREPARE = 1;</code>
      */
-    DELETE_NAMESPACE_PREPARE(0, 1),
+    DELETE_NAMESPACE_PREPARE(1),
     /**
      * <code>DELETE_NAMESPACE_DELETE_FROM_NS_TABLE = 2;</code>
      */
-    DELETE_NAMESPACE_DELETE_FROM_NS_TABLE(1, 2),
+    DELETE_NAMESPACE_DELETE_FROM_NS_TABLE(2),
     /**
      * <code>DELETE_NAMESPACE_REMOVE_FROM_ZK = 3;</code>
      */
-    DELETE_NAMESPACE_REMOVE_FROM_ZK(2, 3),
+    DELETE_NAMESPACE_REMOVE_FROM_ZK(3),
     /**
      * <code>DELETE_NAMESPACE_DELETE_DIRECTORIES = 4;</code>
      */
-    DELETE_NAMESPACE_DELETE_DIRECTORIES(3, 4),
+    DELETE_NAMESPACE_DELETE_DIRECTORIES(4),
     /**
      * <code>DELETE_NAMESPACE_REMOVE_NAMESPACE_QUOTA = 5;</code>
      */
-    DELETE_NAMESPACE_REMOVE_NAMESPACE_QUOTA(4, 5),
+    DELETE_NAMESPACE_REMOVE_NAMESPACE_QUOTA(5),
     ;
 
     /**
@@ -747,9 +801,19 @@ public final class MasterProcedureProtos {
     public static final int DELETE_NAMESPACE_REMOVE_NAMESPACE_QUOTA_VALUE = 5;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static DeleteNamespaceState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static DeleteNamespaceState forNumber(int value) {
       switch (value) {
         case 1: return DELETE_NAMESPACE_PREPARE;
         case 2: return DELETE_NAMESPACE_DELETE_FROM_NS_TABLE;
@@ -764,17 +828,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<DeleteNamespaceState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DeleteNamespaceState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<DeleteNamespaceState>() {
             public DeleteNamespaceState findValueByNumber(int number) {
-              return DeleteNamespaceState.valueOf(number);
+              return DeleteNamespaceState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -796,11 +860,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private DeleteNamespaceState(int index, int value) {
-      this.index = index;
+    private DeleteNamespaceState(int value) {
       this.value = value;
     }
 
@@ -815,23 +877,23 @@ public final class MasterProcedureProtos {
     /**
      * <code>ADD_COLUMN_FAMILY_PREPARE = 1;</code>
      */
-    ADD_COLUMN_FAMILY_PREPARE(0, 1),
+    ADD_COLUMN_FAMILY_PREPARE(1),
     /**
      * <code>ADD_COLUMN_FAMILY_PRE_OPERATION = 2;</code>
      */
-    ADD_COLUMN_FAMILY_PRE_OPERATION(1, 2),
+    ADD_COLUMN_FAMILY_PRE_OPERATION(2),
     /**
      * <code>ADD_COLUMN_FAMILY_UPDATE_TABLE_DESCRIPTOR = 3;</code>
      */
-    ADD_COLUMN_FAMILY_UPDATE_TABLE_DESCRIPTOR(2, 3),
+    ADD_COLUMN_FAMILY_UPDATE_TABLE_DESCRIPTOR(3),
     /**
      * <code>ADD_COLUMN_FAMILY_POST_OPERATION = 4;</code>
      */
-    ADD_COLUMN_FAMILY_POST_OPERATION(3, 4),
+    ADD_COLUMN_FAMILY_POST_OPERATION(4),
     /**
      * <code>ADD_COLUMN_FAMILY_REOPEN_ALL_REGIONS = 5;</code>
      */
-    ADD_COLUMN_FAMILY_REOPEN_ALL_REGIONS(4, 5),
+    ADD_COLUMN_FAMILY_REOPEN_ALL_REGIONS(5),
     ;
 
     /**
@@ -856,9 +918,19 @@ public final class MasterProcedureProtos {
     public static final int ADD_COLUMN_FAMILY_REOPEN_ALL_REGIONS_VALUE = 5;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static AddColumnFamilyState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static AddColumnFamilyState forNumber(int value) {
       switch (value) {
         case 1: return ADD_COLUMN_FAMILY_PREPARE;
         case 2: return ADD_COLUMN_FAMILY_PRE_OPERATION;
@@ -873,17 +945,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<AddColumnFamilyState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AddColumnFamilyState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<AddColumnFamilyState>() {
             public AddColumnFamilyState findValueByNumber(int number) {
-              return AddColumnFamilyState.valueOf(number);
+              return AddColumnFamilyState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -905,11 +977,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private AddColumnFamilyState(int index, int value) {
-      this.index = index;
+    private AddColumnFamilyState(int value) {
       this.value = value;
     }
 
@@ -924,23 +994,23 @@ public final class MasterProcedureProtos {
     /**
      * <code>MODIFY_COLUMN_FAMILY_PREPARE = 1;</code>
      */
-    MODIFY_COLUMN_FAMILY_PREPARE(0, 1),
+    MODIFY_COLUMN_FAMILY_PREPARE(1),
     /**
      * <code>MODIFY_COLUMN_FAMILY_PRE_OPERATION = 2;</code>
      */
-    MODIFY_COLUMN_FAMILY_PRE_OPERATION(1, 2),
+    MODIFY_COLUMN_FAMILY_PRE_OPERATION(2),
     /**
      * <code>MODIFY_COLUMN_FAMILY_UPDATE_TABLE_DESCRIPTOR = 3;</code>
      */
-    MODIFY_COLUMN_FAMILY_UPDATE_TABLE_DESCRIPTOR(2, 3),
+    MODIFY_COLUMN_FAMILY_UPDATE_TABLE_DESCRIPTOR(3),
     /**
      * <code>MODIFY_COLUMN_FAMILY_POST_OPERATION = 4;</code>
      */
-    MODIFY_COLUMN_FAMILY_POST_OPERATION(3, 4),
+    MODIFY_COLUMN_FAMILY_POST_OPERATION(4),
     /**
      * <code>MODIFY_COLUMN_FAMILY_REOPEN_ALL_REGIONS = 5;</code>
      */
-    MODIFY_COLUMN_FAMILY_REOPEN_ALL_REGIONS(4, 5),
+    MODIFY_COLUMN_FAMILY_REOPEN_ALL_REGIONS(5),
     ;
 
     /**
@@ -965,9 +1035,19 @@ public final class MasterProcedureProtos {
     public static final int MODIFY_COLUMN_FAMILY_REOPEN_ALL_REGIONS_VALUE = 5;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static ModifyColumnFamilyState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ModifyColumnFamilyState forNumber(int value) {
       switch (value) {
         case 1: return MODIFY_COLUMN_FAMILY_PREPARE;
         case 2: return MODIFY_COLUMN_FAMILY_PRE_OPERATION;
@@ -982,17 +1062,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ModifyColumnFamilyState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ModifyColumnFamilyState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<ModifyColumnFamilyState>() {
             public ModifyColumnFamilyState findValueByNumber(int number) {
-              return ModifyColumnFamilyState.valueOf(number);
+              return ModifyColumnFamilyState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -1014,11 +1094,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private ModifyColumnFamilyState(int index, int value) {
-      this.index = index;
+    private ModifyColumnFamilyState(int value) {
       this.value = value;
     }
 
@@ -1033,27 +1111,27 @@ public final class MasterProcedureProtos {
     /**
      * <code>DELETE_COLUMN_FAMILY_PREPARE = 1;</code>
      */
-    DELETE_COLUMN_FAMILY_PREPARE(0, 1),
+    DELETE_COLUMN_FAMILY_PREPARE(1),
     /**
      * <code>DELETE_COLUMN_FAMILY_PRE_OPERATION = 2;</code>
      */
-    DELETE_COLUMN_FAMILY_PRE_OPERATION(1, 2),
+    DELETE_COLUMN_FAMILY_PRE_OPERATION(2),
     /**
      * <code>DELETE_COLUMN_FAMILY_UPDATE_TABLE_DESCRIPTOR = 3;</code>
      */
-    DELETE_COLUMN_FAMILY_UPDATE_TABLE_DESCRIPTOR(2, 3),
+    DELETE_COLUMN_FAMILY_UPDATE_TABLE_DESCRIPTOR(3),
     /**
      * <code>DELETE_COLUMN_FAMILY_DELETE_FS_LAYOUT = 4;</code>
      */
-    DELETE_COLUMN_FAMILY_DELETE_FS_LAYOUT(3, 4),
+    DELETE_COLUMN_FAMILY_DELETE_FS_LAYOUT(4),
     /**
      * <code>DELETE_COLUMN_FAMILY_POST_OPERATION = 5;</code>
      */
-    DELETE_COLUMN_FAMILY_POST_OPERATION(4, 5),
+    DELETE_COLUMN_FAMILY_POST_OPERATION(5),
     /**
      * <code>DELETE_COLUMN_FAMILY_REOPEN_ALL_REGIONS = 6;</code>
      */
-    DELETE_COLUMN_FAMILY_REOPEN_ALL_REGIONS(5, 6),
+    DELETE_COLUMN_FAMILY_REOPEN_ALL_REGIONS(6),
     ;
 
     /**
@@ -1082,9 +1160,19 @@ public final class MasterProcedureProtos {
     public static final int DELETE_COLUMN_FAMILY_REOPEN_ALL_REGIONS_VALUE = 6;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static DeleteColumnFamilyState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static DeleteColumnFamilyState forNumber(int value) {
       switch (value) {
         case 1: return DELETE_COLUMN_FAMILY_PREPARE;
         case 2: return DELETE_COLUMN_FAMILY_PRE_OPERATION;
@@ -1100,17 +1188,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<DeleteColumnFamilyState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DeleteColumnFamilyState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<DeleteColumnFamilyState>() {
             public DeleteColumnFamilyState findValueByNumber(int number) {
-              return DeleteColumnFamilyState.valueOf(number);
+              return DeleteColumnFamilyState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -1132,11 +1220,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private DeleteColumnFamilyState(int index, int value) {
-      this.index = index;
+    private DeleteColumnFamilyState(int value) {
       this.value = value;
     }
 
@@ -1151,27 +1237,27 @@ public final class MasterProcedureProtos {
     /**
      * <code>ENABLE_TABLE_PREPARE = 1;</code>
      */
-    ENABLE_TABLE_PREPARE(0, 1),
+    ENABLE_TABLE_PREPARE(1),
     /**
      * <code>ENABLE_TABLE_PRE_OPERATION = 2;</code>
      */
-    ENABLE_TABLE_PRE_OPERATION(1, 2),
+    ENABLE_TABLE_PRE_OPERATION(2),
     /**
      * <code>ENABLE_TABLE_SET_ENABLING_TABLE_STATE = 3;</code>
      */
-    ENABLE_TABLE_SET_ENABLING_TABLE_STATE(2, 3),
+    ENABLE_TABLE_SET_ENABLING_TABLE_STATE(3),
     /**
      * <code>ENABLE_TABLE_MARK_REGIONS_ONLINE = 4;</code>
      */
-    ENABLE_TABLE_MARK_REGIONS_ONLINE(3, 4),
+    ENABLE_TABLE_MARK_REGIONS_ONLINE(4),
     /**
      * <code>ENABLE_TABLE_SET_ENABLED_TABLE_STATE = 5;</code>
      */
-    ENABLE_TABLE_SET_ENABLED_TABLE_STATE(4, 5),
+    ENABLE_TABLE_SET_ENABLED_TABLE_STATE(5),
     /**
      * <code>ENABLE_TABLE_POST_OPERATION = 6;</code>
      */
-    ENABLE_TABLE_POST_OPERATION(5, 6),
+    ENABLE_TABLE_POST_OPERATION(6),
     ;
 
     /**
@@ -1200,9 +1286,19 @@ public final class MasterProcedureProtos {
     public static final int ENABLE_TABLE_POST_OPERATION_VALUE = 6;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static EnableTableState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static EnableTableState forNumber(int value) {
       switch (value) {
         case 1: return ENABLE_TABLE_PREPARE;
         case 2: return ENABLE_TABLE_PRE_OPERATION;
@@ -1218,17 +1314,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<EnableTableState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EnableTableState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<EnableTableState>() {
             public EnableTableState findValueByNumber(int number) {
-              return EnableTableState.valueOf(number);
+              return EnableTableState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -1250,11 +1346,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private EnableTableState(int index, int value) {
-      this.index = index;
+    private EnableTableState(int value) {
       this.value = value;
     }
 
@@ -1269,27 +1363,27 @@ public final class MasterProcedureProtos {
     /**
      * <code>DISABLE_TABLE_PREPARE = 1;</code>
      */
-    DISABLE_TABLE_PREPARE(0, 1),
+    DISABLE_TABLE_PREPARE(1),
     /**
      * <code>DISABLE_TABLE_PRE_OPERATION = 2;</code>
      */
-    DISABLE_TABLE_PRE_OPERATION(1, 2),
+    DISABLE_TABLE_PRE_OPERATION(2),
     /**
      * <code>DISABLE_TABLE_SET_DISABLING_TABLE_STATE = 3;</code>
      */
-    DISABLE_TABLE_SET_DISABLING_TABLE_STATE(2, 3),
+    DISABLE_TABLE_SET_DISABLING_TABLE_STATE(3),
     /**
      * <code>DISABLE_TABLE_MARK_REGIONS_OFFLINE = 4;</code>
      */
-    DISABLE_TABLE_MARK_REGIONS_OFFLINE(3, 4),
+    DISABLE_TABLE_MARK_REGIONS_OFFLINE(4),
     /**
      * <code>DISABLE_TABLE_SET_DISABLED_TABLE_STATE = 5;</code>
      */
-    DISABLE_TABLE_SET_DISABLED_TABLE_STATE(4, 5),
+    DISABLE_TABLE_SET_DISABLED_TABLE_STATE(5),
     /**
      * <code>DISABLE_TABLE_POST_OPERATION = 6;</code>
      */
-    DISABLE_TABLE_POST_OPERATION(5, 6),
+    DISABLE_TABLE_POST_OPERATION(6),
     ;
 
     /**
@@ -1318,9 +1412,19 @@ public final class MasterProcedureProtos {
     public static final int DISABLE_TABLE_POST_OPERATION_VALUE = 6;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static DisableTableState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static DisableTableState forNumber(int value) {
       switch (value) {
         case 1: return DISABLE_TABLE_PREPARE;
         case 2: return DISABLE_TABLE_PRE_OPERATION;
@@ -1336,17 +1440,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<DisableTableState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DisableTableState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<DisableTableState>() {
             public DisableTableState findValueByNumber(int number) {
-              return DisableTableState.valueOf(number);
+              return DisableTableState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -1368,11 +1472,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private DisableTableState(int index, int value) {
-      this.index = index;
+    private DisableTableState(int value) {
       this.value = value;
     }
 
@@ -1387,27 +1489,27 @@ public final class MasterProcedureProtos {
     /**
      * <code>CLONE_SNAPSHOT_PRE_OPERATION = 1;</code>
      */
-    CLONE_SNAPSHOT_PRE_OPERATION(0, 1),
+    CLONE_SNAPSHOT_PRE_OPERATION(1),
     /**
      * <code>CLONE_SNAPSHOT_WRITE_FS_LAYOUT = 2;</code>
      */
-    CLONE_SNAPSHOT_WRITE_FS_LAYOUT(1, 2),
+    CLONE_SNAPSHOT_WRITE_FS_LAYOUT(2),
     /**
      * <code>CLONE_SNAPSHOT_ADD_TO_META = 3;</code>
      */
-    CLONE_SNAPSHOT_ADD_TO_META(2, 3),
+    CLONE_SNAPSHOT_ADD_TO_META(3),
     /**
      * <code>CLONE_SNAPSHOT_ASSIGN_REGIONS = 4;</code>
      */
-    CLONE_SNAPSHOT_ASSIGN_REGIONS(3, 4),
+    CLONE_SNAPSHOT_ASSIGN_REGIONS(4),
     /**
      * <code>CLONE_SNAPSHOT_UPDATE_DESC_CACHE = 5;</code>
      */
-    CLONE_SNAPSHOT_UPDATE_DESC_CACHE(4, 5),
+    CLONE_SNAPSHOT_UPDATE_DESC_CACHE(5),
     /**
      * <code>CLONE_SNAPSHOT_POST_OPERATION = 6;</code>
      */
-    CLONE_SNAPSHOT_POST_OPERATION(5, 6),
+    CLONE_SNAPSHOT_POST_OPERATION(6),
     ;
 
     /**
@@ -1436,9 +1538,19 @@ public final class MasterProcedureProtos {
     public static final int CLONE_SNAPSHOT_POST_OPERATION_VALUE = 6;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static CloneSnapshotState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static CloneSnapshotState forNumber(int value) {
       switch (value) {
         case 1: return CLONE_SNAPSHOT_PRE_OPERATION;
         case 2: return CLONE_SNAPSHOT_WRITE_FS_LAYOUT;
@@ -1454,17 +1566,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<CloneSnapshotState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CloneSnapshotState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<CloneSnapshotState>() {
             public CloneSnapshotState findValueByNumber(int number) {
-              return CloneSnapshotState.valueOf(number);
+              return CloneSnapshotState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -1486,11 +1598,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private CloneSnapshotState(int index, int value) {
-      this.index = index;
+    private CloneSnapshotState(int value) {
       this.value = value;
     }
 
@@ -1505,19 +1615,19 @@ public final class MasterProcedureProtos {
     /**
      * <code>RESTORE_SNAPSHOT_PRE_OPERATION = 1;</code>
      */
-    RESTORE_SNAPSHOT_PRE_OPERATION(0, 1),
+    RESTORE_SNAPSHOT_PRE_OPERATION(1),
     /**
      * <code>RESTORE_SNAPSHOT_UPDATE_TABLE_DESCRIPTOR = 2;</code>
      */
-    RESTORE_SNAPSHOT_UPDATE_TABLE_DESCRIPTOR(1, 2),
+    RESTORE_SNAPSHOT_UPDATE_TABLE_DESCRIPTOR(2),
     /**
      * <code>RESTORE_SNAPSHOT_WRITE_FS_LAYOUT = 3;</code>
      */
-    RESTORE_SNAPSHOT_WRITE_FS_LAYOUT(2, 3),
+    RESTORE_SNAPSHOT_WRITE_FS_LAYOUT(3),
     /**
      * <code>RESTORE_SNAPSHOT_UPDATE_META = 4;</code>
      */
-    RESTORE_SNAPSHOT_UPDATE_META(3, 4),
+    RESTORE_SNAPSHOT_UPDATE_META(4),
     ;
 
     /**
@@ -1538,9 +1648,19 @@ public final class MasterProcedureProtos {
     public static final int RESTORE_SNAPSHOT_UPDATE_META_VALUE = 4;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static RestoreSnapshotState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static RestoreSnapshotState forNumber(int value) {
       switch (value) {
         case 1: return RESTORE_SNAPSHOT_PRE_OPERATION;
         case 2: return RESTORE_SNAPSHOT_UPDATE_TABLE_DESCRIPTOR;
@@ -1554,17 +1674,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<RestoreSnapshotState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RestoreSnapshotState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<RestoreSnapshotState>() {
             public RestoreSnapshotState findValueByNumber(int number) {
-              return RestoreSnapshotState.valueOf(number);
+              return RestoreSnapshotState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -1586,11 +1706,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private RestoreSnapshotState(int index, int value) {
-      this.index = index;
+    private RestoreSnapshotState(int value) {
       this.value = value;
     }
 
@@ -1605,23 +1723,23 @@ public final class MasterProcedureProtos {
     /**
      * <code>DISPATCH_MERGING_REGIONS_PREPARE = 1;</code>
      */
-    DISPATCH_MERGING_REGIONS_PREPARE(0, 1),
+    DISPATCH_MERGING_REGIONS_PREPARE(1),
     /**
      * <code>DISPATCH_MERGING_REGIONS_PRE_OPERATION = 2;</code>
      */
-    DISPATCH_MERGING_REGIONS_PRE_OPERATION(1, 2),
+    DISPATCH_MERGING_REGIONS_PRE_OPERATION(2),
     /**
      * <code>DISPATCH_MERGING_REGIONS_MOVE_REGION_TO_SAME_RS = 3;</code>
      */
-    DISPATCH_MERGING_REGIONS_MOVE_REGION_TO_SAME_RS(2, 3),
+    DISPATCH_MERGING_REGIONS_MOVE_REGION_TO_SAME_RS(3),
     /**
      * <code>DISPATCH_MERGING_REGIONS_DO_MERGE_IN_RS = 4;</code>
      */
-    DISPATCH_MERGING_REGIONS_DO_MERGE_IN_RS(3, 4),
+    DISPATCH_MERGING_REGIONS_DO_MERGE_IN_RS(4),
     /**
      * <code>DISPATCH_MERGING_REGIONS_POST_OPERATION = 5;</code>
      */
-    DISPATCH_MERGING_REGIONS_POST_OPERATION(4, 5),
+    DISPATCH_MERGING_REGIONS_POST_OPERATION(5),
     ;
 
     /**
@@ -1646,9 +1764,19 @@ public final class MasterProcedureProtos {
     public static final int DISPATCH_MERGING_REGIONS_POST_OPERATION_VALUE = 5;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static DispatchMergingRegionsState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static DispatchMergingRegionsState forNumber(int value) {
       switch (value) {
         case 1: return DISPATCH_MERGING_REGIONS_PREPARE;
         case 2: return DISPATCH_MERGING_REGIONS_PRE_OPERATION;
@@ -1663,17 +1791,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<DispatchMergingRegionsState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DispatchMergingRegionsState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<DispatchMergingRegionsState>() {
             public DispatchMergingRegionsState findValueByNumber(int number) {
-              return DispatchMergingRegionsState.valueOf(number);
+              return DispatchMergingRegionsState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -1695,11 +1823,9 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private DispatchMergingRegionsState(int index, int value) {
-      this.index = index;
+    private DispatchMergingRegionsState(int value) {
       this.value = value;
     }
 
@@ -1714,43 +1840,43 @@ public final class MasterProcedureProtos {
     /**
      * <code>SERVER_CRASH_START = 1;</code>
      */
-    SERVER_CRASH_START(0, 1),
+    SERVER_CRASH_START(1),
     /**
      * <code>SERVER_CRASH_PROCESS_META = 2;</code>
      */
-    SERVER_CRASH_PROCESS_META(1, 2),
+    SERVER_CRASH_PROCESS_META(2),
     /**
      * <code>SERVER_CRASH_GET_REGIONS = 3;</code>
      */
-    SERVER_CRASH_GET_REGIONS(2, 3),
+    SERVER_CRASH_GET_REGIONS(3),
     /**
      * <code>SERVER_CRASH_NO_SPLIT_LOGS = 4;</code>
      */
-    SERVER_CRASH_NO_SPLIT_LOGS(3, 4),
+    SERVER_CRASH_NO_SPLIT_LOGS(4),
     /**
      * <code>SERVER_CRASH_SPLIT_LOGS = 5;</code>
      */
-    SERVER_CRASH_SPLIT_LOGS(4, 5),
+    SERVER_CRASH_SPLIT_LOGS(5),
     /**
      * <code>SERVER_CRASH_PREPARE_LOG_REPLAY = 6;</code>
      */
-    SERVER_CRASH_PREPARE_LOG_REPLAY(5, 6),
+    SERVER_CRASH_PREPARE_LOG_REPLAY(6),
     /**
-     * <code>SERVER_CRASH_ASSIGN = 8;</code>
-     *
      * <pre>
      * Removed SERVER_CRASH_CALC_REGIONS_TO_ASSIGN = 7;
      * </pre>
+     *
+     * <code>SERVER_CRASH_ASSIGN = 8;</code>
      */
-    SERVER_CRASH_ASSIGN(6, 8),
+    SERVER_CRASH_ASSIGN(8),
     /**
      * <code>SERVER_CRASH_WAIT_ON_ASSIGN = 9;</code>
      */
-    SERVER_CRASH_WAIT_ON_ASSIGN(7, 9),
+    SERVER_CRASH_WAIT_ON_ASSIGN(9),
     /**
      * <code>SERVER_CRASH_FINISH = 100;</code>
      */
-    SERVER_CRASH_FINISH(8, 100),
+    SERVER_CRASH_FINISH(100),
     ;
 
     /**
@@ -1778,11 +1904,11 @@ public final class MasterProcedureProtos {
      */
     public static final int SERVER_CRASH_PREPARE_LOG_REPLAY_VALUE = 6;
     /**
-     * <code>SERVER_CRASH_ASSIGN = 8;</code>
-     *
      * <pre>
      * Removed SERVER_CRASH_CALC_REGIONS_TO_ASSIGN = 7;
      * </pre>
+     *
+     * <code>SERVER_CRASH_ASSIGN = 8;</code>
      */
     public static final int SERVER_CRASH_ASSIGN_VALUE = 8;
     /**
@@ -1795,9 +1921,19 @@ public final class MasterProcedureProtos {
     public static final int SERVER_CRASH_FINISH_VALUE = 100;
 
 
-    public final int getNumber() { return value; }
+    public final int getNumber() {
+      return value;
+    }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static ServerCrashState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ServerCrashState forNumber(int value) {
       switch (value) {
         case 1: return SERVER_CRASH_START;
         case 2: return SERVER_CRASH_PROCESS_META;
@@ -1816,17 +1952,17 @@ public final class MasterProcedureProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ServerCrashState>
-        internalValueMap =
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ServerCrashState> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<ServerCrashState>() {
             public ServerCrashState findValueByNumber(int number) {
-              return ServerCrashState.valueOf(number);
+              return ServerCrashState.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -1848,21 +1984,19 @@ public final class MasterProcedureProtos {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private ServerCrashState(int index, int value) {
-      this.index = index;
+    private ServerCrashState(int value) {
       this.value = value;
     }
 
     // @@protoc_insertion_point(enum_scope:hbase.pb.ServerCrashState)
   }
 
-  public interface CreateTableStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface CreateTableStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.CreateTableStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -1876,7 +2010,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.TableSchema table_schema = 2;
     /**
      * <code>required .hbase.pb.TableSchema table_schema = 2;</code>
      */
@@ -1890,7 +2023,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getTableSchemaOrBuilder();
 
-    // repeated .hbase.pb.RegionInfo region_info = 3;
     /**
      * <code>repeated .hbase.pb.RegionInfo region_info = 3;</code>
      */
@@ -1918,36 +2050,28 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.CreateTableStateData}
    */
-  public static final class CreateTableStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements CreateTableStateDataOrBuilder {
+  public  static final class CreateTableStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.CreateTableStateData)
+      CreateTableStateDataOrBuilder {
     // Use CreateTableStateData.newBuilder() to construct.
-    private CreateTableStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CreateTableStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private CreateTableStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final CreateTableStateData defaultInstance;
-    public static CreateTableStateData getDefaultInstance() {
-      return defaultInstance;
+    private CreateTableStateData() {
+      regionInfo_ = java.util.Collections.emptyList();
     }
 
-    public CreateTableStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private CreateTableStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1997,7 +2121,8 @@ public final class MasterProcedureProtos {
                 regionInfo_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000004;
               }
-              regionInfo_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionInfo_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
           }
@@ -2006,7 +2131,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           regionInfo_ = java.util.Collections.unmodifiableList(regionInfo_);
@@ -2020,30 +2145,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CreateTableStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CreateTableStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CreateTableStateData> PARSER =
-        new com.google.protobuf.AbstractParser<CreateTableStateData>() {
-      public CreateTableStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateTableStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CreateTableStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -2056,16 +2165,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.TableSchema table_schema = 2;
     public static final int TABLE_SCHEMA_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema tableSchema_;
     /**
@@ -2078,16 +2186,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableSchema table_schema = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getTableSchema() {
-      return tableSchema_;
+      return tableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
     }
     /**
      * <code>required .hbase.pb.TableSchema table_schema = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getTableSchemaOrBuilder() {
-      return tableSchema_;
+      return tableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
     }
 
-    // repeated .hbase.pb.RegionInfo region_info = 3;
     public static final int REGION_INFO_FIELD_NUMBER = 3;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_;
     /**
@@ -2123,15 +2230,11 @@ public final class MasterProcedureProtos {
       return regionInfo_.get(index);
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      regionInfo_ = java.util.Collections.emptyList();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -2161,49 +2264,41 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, tableSchema_);
+        output.writeMessage(2, getTableSchema());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         output.writeMessage(3, regionInfo_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, tableSchema_);
+          .computeMessageSize(2, getTableSchema());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, regionInfo_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -2227,12 +2322,10 @@ public final class MasterProcedureProtos {
       }
       result = result && getRegionInfoList()
           .equals(other.getRegionInfoList());
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -2252,7 +2345,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + REGION_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getRegionInfoList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2280,46 +2373,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2327,14 +2431,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.CreateTableStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.CreateTableStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CreateTableStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CreateTableStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -2347,31 +2452,28 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getTableSchemaFieldBuilder();
           getRegionInfoFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (tableSchemaBuilder_ == null) {
-          tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          tableSchema_ = null;
         } else {
           tableSchemaBuilder_.clear();
         }
@@ -2383,10 +2485,6 @@ public final class MasterProcedureProtos {
           regionInfoBuilder_.clear();
         }
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -2440,6 +2538,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData)other);
@@ -2476,37 +2600,33 @@ public final class MasterProcedureProtos {
               regionInfo_ = other.regionInfo_;
               bitField0_ = (bitField0_ & ~0x00000004);
               regionInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionInfoFieldBuilder() : null;
             } else {
               regionInfoBuilder_.addAllMessages(other.regionInfo_);
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasTableSchema()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getTableSchema().isInitialized()) {
-          
           return false;
         }
         for (int i = 0; i < getRegionInfoCount(); i++) {
           if (!getRegionInfo(i).isInitialized()) {
-            
             return false;
           }
         }
@@ -2522,7 +2642,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -2532,9 +2652,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -2547,7 +2666,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -2588,6 +2707,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -2606,7 +2726,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -2629,19 +2749,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -2649,9 +2770,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.TableSchema table_schema = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema tableSchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> tableSchemaBuilder_;
       /**
        * <code>required .hbase.pb.TableSchema table_schema = 2;</code>
@@ -2664,7 +2784,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getTableSchema() {
         if (tableSchemaBuilder_ == null) {
-          return tableSchema_;
+          return tableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
         } else {
           return tableSchemaBuilder_.getMessage();
         }
@@ -2705,6 +2825,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableSchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema value) {
         if (tableSchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              tableSchema_ != null &&
               tableSchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance()) {
             tableSchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.newBuilder(tableSchema_).mergeFrom(value).buildPartial();
@@ -2723,7 +2844,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableSchema() {
         if (tableSchemaBuilder_ == null) {
-          tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          tableSchema_ = null;
           onChanged();
         } else {
           tableSchemaBuilder_.clear();
@@ -2746,19 +2867,20 @@ public final class MasterProcedureProtos {
         if (tableSchemaBuilder_ != null) {
           return tableSchemaBuilder_.getMessageOrBuilder();
         } else {
-          return tableSchema_;
+          return tableSchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
         }
       }
       /**
        * <code>required .hbase.pb.TableSchema table_schema = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> 
           getTableSchemaFieldBuilder() {
         if (tableSchemaBuilder_ == null) {
-          tableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder>(
-                  tableSchema_,
+                  getTableSchema(),
                   getParentForChildren(),
                   isClean());
           tableSchema_ = null;
@@ -2766,7 +2888,6 @@ public final class MasterProcedureProtos {
         return tableSchemaBuilder_;
       }
 
-      // repeated .hbase.pb.RegionInfo region_info = 3;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_ =
         java.util.Collections.emptyList();
       private void ensureRegionInfoIsMutable() {
@@ -2776,7 +2897,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionInfoBuilder_;
 
       /**
@@ -2908,7 +3029,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionInfoBuilder_ == null) {
           ensureRegionInfoIsMutable();
-          super.addAll(values, regionInfo_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionInfo_);
           onChanged();
         } else {
           regionInfoBuilder_.addAllMessages(values);
@@ -2991,11 +3113,11 @@ public final class MasterProcedureProtos {
            getRegionInfoBuilderList() {
         return getRegionInfoFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionInfoFieldBuilder() {
         if (regionInfoBuilder_ == null) {
-          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionInfo_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
@@ -3005,22 +3127,59 @@ public final class MasterProcedureProtos {
         }
         return regionInfoBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.CreateTableStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.CreateTableStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new CreateTableStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.CreateTableStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CreateTableStateData>
+        PARSER = new com.google.protobuf.AbstractParser<CreateTableStateData>() {
+      public CreateTableStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CreateTableStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateTableStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateTableStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateTableStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface ModifyTableStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ModifyTableStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.ModifyTableStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -3034,7 +3193,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // optional .hbase.pb.TableSchema unmodified_table_schema = 2;
     /**
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 2;</code>
      */
@@ -3048,7 +3206,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getUnmodifiedTableSchemaOrBuilder();
 
-    // required .hbase.pb.TableSchema modified_table_schema = 3;
     /**
      * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
      */
@@ -3062,7 +3219,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getModifiedTableSchemaOrBuilder();
 
-    // required bool delete_column_family_in_modify = 4;
     /**
      * <code>required bool delete_column_family_in_modify = 4;</code>
      */
@@ -3075,36 +3231,28 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.ModifyTableStateData}
    */
-  public static final class ModifyTableStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements ModifyTableStateDataOrBuilder {
+  public  static final class ModifyTableStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.ModifyTableStateData)
+      ModifyTableStateDataOrBuilder {
     // Use ModifyTableStateData.newBuilder() to construct.
-    private ModifyTableStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private ModifyTableStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private ModifyTableStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final ModifyTableStateData defaultInstance;
-    public static ModifyTableStateData getDefaultInstance() {
-      return defaultInstance;
+    private ModifyTableStateData() {
+      deleteColumnFamilyInModify_ = false;
     }
 
-    public ModifyTableStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private ModifyTableStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3173,7 +3321,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3184,30 +3332,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyTableStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyTableStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<ModifyTableStateData> PARSER =
-        new com.google.protobuf.AbstractParser<ModifyTableStateData>() {
-      public ModifyTableStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ModifyTableStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ModifyTableStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -3220,16 +3352,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // optional .hbase.pb.TableSchema unmodified_table_schema = 2;
     public static final int UNMODIFIED_TABLE_SCHEMA_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_;
     /**
@@ -3242,16 +3373,15 @@ public final class MasterProcedureProtos {
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getUnmodifiedTableSchema() {
-      return unmodifiedTableSchema_;
+      return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
     }
     /**
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getUnmodifiedTableSchemaOrBuilder() {
-      return unmodifiedTableSchema_;
+      return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
     }
 
-    // required .hbase.pb.TableSchema modified_table_schema = 3;
     public static final int MODIFIED_TABLE_SCHEMA_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema modifiedTableSchema_;
     /**
@@ -3264,16 +3394,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getModifiedTableSchema() {
-      return modifiedTableSchema_;
+      return modifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : modifiedTableSchema_;
     }
     /**
      * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getModifiedTableSchemaOrBuilder() {
-      return modifiedTableSchema_;
+      return modifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : modifiedTableSchema_;
     }
 
-    // required bool delete_column_family_in_modify = 4;
     public static final int DELETE_COLUMN_FAMILY_IN_MODIFY_FIELD_NUMBER = 4;
     private boolean deleteColumnFamilyInModify_;
     /**
@@ -3289,16 +3418,11 @@ public final class MasterProcedureProtos {
       return deleteColumnFamilyInModify_;
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      modifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      deleteColumnFamilyInModify_ = false;
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -3332,56 +3456,48 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, unmodifiedTableSchema_);
+        output.writeMessage(2, getUnmodifiedTableSchema());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, modifiedTableSchema_);
+        output.writeMessage(3, getModifiedTableSchema());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBool(4, deleteColumnFamilyInModify_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, unmodifiedTableSchema_);
+          .computeMessageSize(2, getUnmodifiedTableSchema());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, modifiedTableSchema_);
+          .computeMessageSize(3, getModifiedTableSchema());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, deleteColumnFamilyInModify_);
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -3413,12 +3529,10 @@ public final class MasterProcedureProtos {
         result = result && (getDeleteColumnFamilyInModify()
             == other.getDeleteColumnFamilyInModify());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -3440,9 +3554,10 @@ public final class MasterProcedureProtos {
       }
       if (hasDeleteColumnFamilyInModify()) {
         hash = (37 * hash) + DELETE_COLUMN_FAMILY_IN_MODIFY_FIELD_NUMBER;
-        hash = (53 * hash) + hashBoolean(getDeleteColumnFamilyInModify());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDeleteColumnFamilyInModify());
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3470,46 +3585,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3517,14 +3643,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.ModifyTableStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.ModifyTableStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyTableStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyTableStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -3537,37 +3664,34 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getUnmodifiedTableSchemaFieldBuilder();
           getModifiedTableSchemaFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          unmodifiedTableSchema_ = null;
         } else {
           unmodifiedTableSchemaBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (modifiedTableSchemaBuilder_ == null) {
-          modifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          modifiedTableSchema_ = null;
         } else {
           modifiedTableSchemaBuilder_.clear();
         }
@@ -3575,10 +3699,6 @@ public final class MasterProcedureProtos {
         deleteColumnFamilyInModify_ = false;
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -3635,6 +3755,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData)other);
@@ -3658,35 +3804,30 @@ public final class MasterProcedureProtos {
         if (other.hasDeleteColumnFamilyInModify()) {
           setDeleteColumnFamilyInModify(other.getDeleteColumnFamilyInModify());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasModifiedTableSchema()) {
-          
           return false;
         }
         if (!hasDeleteColumnFamilyInModify()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (hasUnmodifiedTableSchema()) {
           if (!getUnmodifiedTableSchema().isInitialized()) {
-            
             return false;
           }
         }
         if (!getModifiedTableSchema().isInitialized()) {
-          
           return false;
         }
         return true;
@@ -3701,7 +3842,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -3711,9 +3852,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -3726,7 +3866,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -3767,6 +3907,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -3785,7 +3926,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -3808,19 +3949,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -3828,9 +3970,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // optional .hbase.pb.TableSchema unmodified_table_schema = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> unmodifiedTableSchemaBuilder_;
       /**
        * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 2;</code>
@@ -3843,7 +3984,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getUnmodifiedTableSchema() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          return unmodifiedTableSchema_;
+          return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
         } else {
           return unmodifiedTableSchemaBuilder_.getMessage();
         }
@@ -3884,6 +4025,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUnmodifiedTableSchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema value) {
         if (unmodifiedTableSchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              unmodifiedTableSchema_ != null &&
               unmodifiedTableSchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance()) {
             unmodifiedTableSchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.newBuilder(unmodifiedTableSchema_).mergeFrom(value).buildPartial();
@@ -3902,7 +4044,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUnmodifiedTableSchema() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          unmodifiedTableSchema_ = null;
           onChanged();
         } else {
           unmodifiedTableSchemaBuilder_.clear();
@@ -3925,19 +4067,20 @@ public final class MasterProcedureProtos {
         if (unmodifiedTableSchemaBuilder_ != null) {
           return unmodifiedTableSchemaBuilder_.getMessageOrBuilder();
         } else {
-          return unmodifiedTableSchema_;
+          return unmodifiedTableSchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
         }
       }
       /**
        * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> 
           getUnmodifiedTableSchemaFieldBuilder() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          unmodifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder>(
-                  unmodifiedTableSchema_,
+                  getUnmodifiedTableSchema(),
                   getParentForChildren(),
                   isClean());
           unmodifiedTableSchema_ = null;
@@ -3945,9 +4088,8 @@ public final class MasterProcedureProtos {
         return unmodifiedTableSchemaBuilder_;
       }
 
-      // required .hbase.pb.TableSchema modified_table_schema = 3;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema modifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema modifiedTableSchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> modifiedTableSchemaBuilder_;
       /**
        * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
@@ -3960,7 +4102,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getModifiedTableSchema() {
         if (modifiedTableSchemaBuilder_ == null) {
-          return modifiedTableSchema_;
+          return modifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : modifiedTableSchema_;
         } else {
           return modifiedTableSchemaBuilder_.getMessage();
         }
@@ -4001,6 +4143,7 @@ public final class MasterProcedureProtos {
       public Builder mergeModifiedTableSchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema value) {
         if (modifiedTableSchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              modifiedTableSchema_ != null &&
               modifiedTableSchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance()) {
             modifiedTableSchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.newBuilder(modifiedTableSchema_).mergeFrom(value).buildPartial();
@@ -4019,7 +4162,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearModifiedTableSchema() {
         if (modifiedTableSchemaBuilder_ == null) {
-          modifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          modifiedTableSchema_ = null;
           onChanged();
         } else {
           modifiedTableSchemaBuilder_.clear();
@@ -4042,19 +4185,20 @@ public final class MasterProcedureProtos {
         if (modifiedTableSchemaBuilder_ != null) {
           return modifiedTableSchemaBuilder_.getMessageOrBuilder();
         } else {
-          return modifiedTableSchema_;
+          return modifiedTableSchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : modifiedTableSchema_;
         }
       }
       /**
        * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> 
           getModifiedTableSchemaFieldBuilder() {
         if (modifiedTableSchemaBuilder_ == null) {
-          modifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          modifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder>(
-                  modifiedTableSchema_,
+                  getModifiedTableSchema(),
                   getParentForChildren(),
                   isClean());
           modifiedTableSchema_ = null;
@@ -4062,7 +4206,6 @@ public final class MasterProcedureProtos {
         return modifiedTableSchemaBuilder_;
       }
 
-      // required bool delete_column_family_in_modify = 4;
       private boolean deleteColumnFamilyInModify_ ;
       /**
        * <code>required bool delete_column_family_in_modify = 4;</code>
@@ -4094,22 +4237,59 @@ public final class MasterProcedureProtos {
         onChanged();
         return this;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.ModifyTableStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.ModifyTableStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new ModifyTableStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.ModifyTableStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ModifyTableStateData>
+        PARSER = new com.google.protobuf.AbstractParser<ModifyTableStateData>() {
+      public ModifyTableStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ModifyTableStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ModifyTableStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ModifyTableStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyTableStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface TruncateTableStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface TruncateTableStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.TruncateTableStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -4123,7 +4303,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required bool preserve_splits = 2;
     /**
      * <code>required bool preserve_splits = 2;</code>
      */
@@ -4133,7 +4312,6 @@ public final class MasterProcedureProtos {
      */
     boolean getPreserveSplits();
 
-    // optional .hbase.pb.TableName table_name = 3;
     /**
      * <code>optional .hbase.pb.TableName table_name = 3;</code>
      */
@@ -4147,7 +4325,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder();
 
-    // optional .hbase.pb.TableSchema table_schema = 4;
     /**
      * <code>optional .hbase.pb.TableSchema table_schema = 4;</code>
      */
@@ -4161,7 +4338,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getTableSchemaOrBuilder();
 
-    // repeated .hbase.pb.RegionInfo region_info = 5;
     /**
      * <code>repeated .hbase.pb.RegionInfo region_info = 5;</code>
      */
@@ -4189,36 +4365,29 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.TruncateTableStateData}
    */
-  public static final class TruncateTableStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements TruncateTableStateDataOrBuilder {
+  public  static final class TruncateTableStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.TruncateTableStateData)
+      TruncateTableStateDataOrBuilder {
     // Use TruncateTableStateData.newBuilder() to construct.
-    private TruncateTableStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private TruncateTableStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private TruncateTableStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final TruncateTableStateData defaultInstance;
-    public static TruncateTableStateData getDefaultInstance() {
-      return defaultInstance;
+    private TruncateTableStateData() {
+      preserveSplits_ = false;
+      regionInfo_ = java.util.Collections.emptyList();
     }
 
-    public TruncateTableStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private TruncateTableStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -4286,7 +4455,8 @@ public final class MasterProcedureProtos {
                 regionInfo_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              regionInfo_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionInfo_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
           }
@@ -4295,7 +4465,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           regionInfo_ = java.util.Collections.unmodifiableList(regionInfo_);
@@ -4309,30 +4479,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_TruncateTableStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_TruncateTableStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<TruncateTableStateData> PARSER =
-        new com.google.protobuf.AbstractParser<TruncateTableStateData>() {
-      public TruncateTableStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TruncateTableStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TruncateTableStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -4345,16 +4499,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required bool preserve_splits = 2;
     public static final int PRESERVE_SPLITS_FIELD_NUMBER = 2;
     private boolean preserveSplits_;
     /**
@@ -4370,7 +4523,6 @@ public final class MasterProcedureProtos {
       return preserveSplits_;
     }
 
-    // optional .hbase.pb.TableName table_name = 3;
     public static final int TABLE_NAME_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_;
     /**
@@ -4383,16 +4535,15 @@ public final class MasterProcedureProtos {
      * <code>optional .hbase.pb.TableName table_name = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
     /**
      * <code>optional .hbase.pb.TableName table_name = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
 
-    // optional .hbase.pb.TableSchema table_schema = 4;
     public static final int TABLE_SCHEMA_FIELD_NUMBER = 4;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema tableSchema_;
     /**
@@ -4405,16 +4556,15 @@ public final class MasterProcedureProtos {
      * <code>optional .hbase.pb.TableSchema table_schema = 4;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getTableSchema() {
-      return tableSchema_;
+      return tableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
     }
     /**
      * <code>optional .hbase.pb.TableSchema table_schema = 4;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getTableSchemaOrBuilder() {
-      return tableSchema_;
+      return tableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
     }
 
-    // repeated .hbase.pb.RegionInfo region_info = 5;
     public static final int REGION_INFO_FIELD_NUMBER = 5;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_;
     /**
@@ -4450,17 +4600,11 @@ public final class MasterProcedureProtos {
       return regionInfo_.get(index);
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      preserveSplits_ = false;
-      tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      regionInfo_ = java.util.Collections.emptyList();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -4498,34 +4642,32 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBool(2, preserveSplits_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, tableName_);
+        output.writeMessage(3, getTableName());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeMessage(4, tableSchema_);
+        output.writeMessage(4, getTableSchema());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         output.writeMessage(5, regionInfo_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -4533,28 +4675,22 @@ public final class MasterProcedureProtos {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, tableName_);
+          .computeMessageSize(3, getTableName());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, tableSchema_);
+          .computeMessageSize(4, getTableSchema());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, regionInfo_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -4588,12 +4724,10 @@ public final class MasterProcedureProtos {
       }
       result = result && getRegionInfoList()
           .equals(other.getRegionInfoList());
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -4607,7 +4741,8 @@ public final class MasterProcedureProtos {
       }
       if (hasPreserveSplits()) {
         hash = (37 * hash) + PRESERVE_SPLITS_FIELD_NUMBER;
-        hash = (53 * hash) + hashBoolean(getPreserveSplits());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPreserveSplits());
       }
       if (hasTableName()) {
         hash = (37 * hash) + TABLE_NAME_FIELD_NUMBER;
@@ -4621,7 +4756,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + REGION_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getRegionInfoList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4649,46 +4784,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4696,14 +4842,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.TruncateTableStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.TruncateTableStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_TruncateTableStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_TruncateTableStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4716,26 +4863,23 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getTableNameFieldBuilder();
           getTableSchemaFieldBuilder();
           getRegionInfoFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
@@ -4743,13 +4887,13 @@ public final class MasterProcedureProtos {
         preserveSplits_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
         } else {
           tableNameBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         if (tableSchemaBuilder_ == null) {
-          tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          tableSchema_ = null;
         } else {
           tableSchemaBuilder_.clear();
         }
@@ -4761,10 +4905,6 @@ public final class MasterProcedureProtos {
           regionInfoBuilder_.clear();
         }
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -4830,6 +4970,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData)other);
@@ -4872,45 +5038,40 @@ public final class MasterProcedureProtos {
               regionInfo_ = other.regionInfo_;
               bitField0_ = (bitField0_ & ~0x00000010);
               regionInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionInfoFieldBuilder() : null;
             } else {
               regionInfoBuilder_.addAllMessages(other.regionInfo_);
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasPreserveSplits()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (hasTableName()) {
           if (!getTableName().isInitialized()) {
-            
             return false;
           }
         }
         if (hasTableSchema()) {
           if (!getTableSchema().isInitialized()) {
-            
             return false;
           }
         }
         for (int i = 0; i < getRegionInfoCount(); i++) {
           if (!getRegionInfo(i).isInitialized()) {
-            
             return false;
           }
         }
@@ -4926,7 +5087,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -4936,9 +5097,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -4951,7 +5111,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -4992,6 +5152,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -5010,7 +5171,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -5033,19 +5194,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -5053,7 +5215,6 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required bool preserve_splits = 2;
       private boolean preserveSplits_ ;
       /**
        * <code>required bool preserve_splits = 2;</code>
@@ -5086,9 +5247,8 @@ public final class MasterProcedureProtos {
         return this;
       }
 
-      // optional .hbase.pb.TableName table_name = 3;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> tableNameBuilder_;
       /**
        * <code>optional .hbase.pb.TableName table_name = 3;</code>
@@ -5101,7 +5261,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
         if (tableNameBuilder_ == null) {
-          return tableName_;
+          return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         } else {
           return tableNameBuilder_.getMessage();
         }
@@ -5142,6 +5302,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableName(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName value) {
         if (tableNameBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              tableName_ != null &&
               tableName_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance()) {
             tableName_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.newBuilder(tableName_).mergeFrom(value).buildPartial();
@@ -5160,7 +5321,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableName() {
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
           onChanged();
         } else {
           tableNameBuilder_.clear();
@@ -5183,19 +5344,20 @@ public final class MasterProcedureProtos {
         if (tableNameBuilder_ != null) {
           return tableNameBuilder_.getMessageOrBuilder();
         } else {
-          return tableName_;
+          return tableName_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         }
       }
       /**
        * <code>optional .hbase.pb.TableName table_name = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> 
           getTableNameFieldBuilder() {
         if (tableNameBuilder_ == null) {
-          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder>(
-                  tableName_,
+                  getTableName(),
                   getParentForChildren(),
                   isClean());
           tableName_ = null;
@@ -5203,9 +5365,8 @@ public final class MasterProcedureProtos {
         return tableNameBuilder_;
       }
 
-      // optional .hbase.pb.TableSchema table_schema = 4;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema tableSchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> tableSchemaBuilder_;
       /**
        * <code>optional .hbase.pb.TableSchema table_schema = 4;</code>
@@ -5218,7 +5379,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getTableSchema() {
         if (tableSchemaBuilder_ == null) {
-          return tableSchema_;
+          return tableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
         } else {
           return tableSchemaBuilder_.getMessage();
         }
@@ -5259,6 +5420,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableSchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema value) {
         if (tableSchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              tableSchema_ != null &&
               tableSchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance()) {
             tableSchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.newBuilder(tableSchema_).mergeFrom(value).buildPartial();
@@ -5277,7 +5439,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableSchema() {
         if (tableSchemaBuilder_ == null) {
-          tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          tableSchema_ = null;
           onChanged();
         } else {
           tableSchemaBuilder_.clear();
@@ -5300,19 +5462,20 @@ public final class MasterProcedureProtos {
         if (tableSchemaBuilder_ != null) {
           return tableSchemaBuilder_.getMessageOrBuilder();
         } else {
-          return tableSchema_;
+          return tableSchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
         }
       }
       /**
        * <code>optional .hbase.pb.TableSchema table_schema = 4;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> 
           getTableSchemaFieldBuilder() {
         if (tableSchemaBuilder_ == null) {
-          tableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder>(
-                  tableSchema_,
+                  getTableSchema(),
                   getParentForChildren(),
                   isClean());
           tableSchema_ = null;
@@ -5320,7 +5483,6 @@ public final class MasterProcedureProtos {
         return tableSchemaBuilder_;
       }
 
-      // repeated .hbase.pb.RegionInfo region_info = 5;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_ =
         java.util.Collections.emptyList();
       private void ensureRegionInfoIsMutable() {
@@ -5330,7 +5492,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionInfoBuilder_;
 
       /**
@@ -5462,7 +5624,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionInfoBuilder_ == null) {
           ensureRegionInfoIsMutable();
-          super.addAll(values, regionInfo_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionInfo_);
           onChanged();
         } else {
           regionInfoBuilder_.addAllMessages(values);
@@ -5545,11 +5708,11 @@ public final class MasterProcedureProtos {
            getRegionInfoBuilderList() {
         return getRegionInfoFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionInfoFieldBuilder() {
         if (regionInfoBuilder_ == null) {
-          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionInfo_,
                   ((bitField0_ & 0x00000010) == 0x00000010),
@@ -5559,22 +5722,59 @@ public final class MasterProcedureProtos {
         }
         return regionInfoBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.TruncateTableStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.TruncateTableStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new TruncateTableStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.TruncateTableStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<TruncateTableStateData>
+        PARSER = new com.google.protobuf.AbstractParser<TruncateTableStateData>() {
+      public TruncateTableStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new TruncateTableStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TruncateTableStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TruncateTableStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.TruncateTableStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface DeleteTableStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface DeleteTableStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.DeleteTableStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -5588,7 +5788,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.TableName table_name = 2;
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
@@ -5602,7 +5801,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder();
 
-    // repeated .hbase.pb.RegionInfo region_info = 3;
     /**
      * <code>repeated .hbase.pb.RegionInfo region_info = 3;</code>
      */
@@ -5630,36 +5828,28 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.DeleteTableStateData}
    */
-  public static final class DeleteTableStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements DeleteTableStateDataOrBuilder {
+  public  static final class DeleteTableStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.DeleteTableStateData)
+      DeleteTableStateDataOrBuilder {
     // Use DeleteTableStateData.newBuilder() to construct.
-    private DeleteTableStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private DeleteTableStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private DeleteTableStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final DeleteTableStateData defaultInstance;
-    public static DeleteTableStateData getDefaultInstance() {
-      return defaultInstance;
+    private DeleteTableStateData() {
+      regionInfo_ = java.util.Collections.emptyList();
     }
 
-    public DeleteTableStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private DeleteTableStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -5709,7 +5899,8 @@ public final class MasterProcedureProtos {
                 regionInfo_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000004;
               }
-              regionInfo_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionInfo_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
           }
@@ -5718,7 +5909,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           regionInfo_ = java.util.Collections.unmodifiableList(regionInfo_);
@@ -5732,30 +5923,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteTableStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteTableStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<DeleteTableStateData> PARSER =
-        new com.google.protobuf.AbstractParser<DeleteTableStateData>() {
-      public DeleteTableStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeleteTableStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeleteTableStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -5768,16 +5943,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.TableName table_name = 2;
     public static final int TABLE_NAME_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_;
     /**
@@ -5790,16 +5964,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
 
-    // repeated .hbase.pb.RegionInfo region_info = 3;
     public static final int REGION_INFO_FIELD_NUMBER = 3;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_;
     /**
@@ -5835,15 +6008,11 @@ public final class MasterProcedureProtos {
       return regionInfo_.get(index);
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      regionInfo_ = java.util.Collections.emptyList();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -5873,49 +6042,41 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, tableName_);
+        output.writeMessage(2, getTableName());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         output.writeMessage(3, regionInfo_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, tableName_);
+          .computeMessageSize(2, getTableName());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, regionInfo_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -5939,12 +6100,10 @@ public final class MasterProcedureProtos {
       }
       result = result && getRegionInfoList()
           .equals(other.getRegionInfoList());
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -5964,7 +6123,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + REGION_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getRegionInfoList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5992,46 +6151,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -6039,14 +6209,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.DeleteTableStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.DeleteTableStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteTableStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteTableStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -6059,31 +6230,28 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getTableNameFieldBuilder();
           getRegionInfoFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
         } else {
           tableNameBuilder_.clear();
         }
@@ -6095,10 +6263,6 @@ public final class MasterProcedureProtos {
           regionInfoBuilder_.clear();
         }
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -6152,6 +6316,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData)other);
@@ -6188,37 +6378,33 @@ public final class MasterProcedureProtos {
               regionInfo_ = other.regionInfo_;
               bitField0_ = (bitField0_ & ~0x00000004);
               regionInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionInfoFieldBuilder() : null;
             } else {
               regionInfoBuilder_.addAllMessages(other.regionInfo_);
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasTableName()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getTableName().isInitialized()) {
-          
           return false;
         }
         for (int i = 0; i < getRegionInfoCount(); i++) {
           if (!getRegionInfo(i).isInitialized()) {
-            
             return false;
           }
         }
@@ -6234,7 +6420,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -6244,9 +6430,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -6259,7 +6444,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -6300,6 +6485,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -6318,7 +6504,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -6341,19 +6527,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -6361,9 +6548,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.TableName table_name = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> tableNameBuilder_;
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
@@ -6376,7 +6562,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
         if (tableNameBuilder_ == null) {
-          return tableName_;
+          return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         } else {
           return tableNameBuilder_.getMessage();
         }
@@ -6417,6 +6603,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableName(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName value) {
         if (tableNameBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              tableName_ != null &&
               tableName_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance()) {
             tableName_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.newBuilder(tableName_).mergeFrom(value).buildPartial();
@@ -6435,7 +6622,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableName() {
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
           onChanged();
         } else {
           tableNameBuilder_.clear();
@@ -6458,19 +6645,20 @@ public final class MasterProcedureProtos {
         if (tableNameBuilder_ != null) {
           return tableNameBuilder_.getMessageOrBuilder();
         } else {
-          return tableName_;
+          return tableName_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         }
       }
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> 
           getTableNameFieldBuilder() {
         if (tableNameBuilder_ == null) {
-          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder>(
-                  tableName_,
+                  getTableName(),
                   getParentForChildren(),
                   isClean());
           tableName_ = null;
@@ -6478,7 +6666,6 @@ public final class MasterProcedureProtos {
         return tableNameBuilder_;
       }
 
-      // repeated .hbase.pb.RegionInfo region_info = 3;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_ =
         java.util.Collections.emptyList();
       private void ensureRegionInfoIsMutable() {
@@ -6488,7 +6675,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionInfoBuilder_;
 
       /**
@@ -6620,7 +6807,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionInfoBuilder_ == null) {
           ensureRegionInfoIsMutable();
-          super.addAll(values, regionInfo_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionInfo_);
           onChanged();
         } else {
           regionInfoBuilder_.addAllMessages(values);
@@ -6703,11 +6891,11 @@ public final class MasterProcedureProtos {
            getRegionInfoBuilderList() {
         return getRegionInfoFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionInfoFieldBuilder() {
         if (regionInfoBuilder_ == null) {
-          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionInfo_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
@@ -6717,22 +6905,59 @@ public final class MasterProcedureProtos {
         }
         return regionInfoBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.DeleteTableStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.DeleteTableStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new DeleteTableStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.DeleteTableStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DeleteTableStateData>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteTableStateData>() {
+      public DeleteTableStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DeleteTableStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteTableStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteTableStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteTableStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface CreateNamespaceStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface CreateNamespaceStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.CreateNamespaceStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;
     /**
      * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
      */
@@ -6749,36 +6974,27 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.CreateNamespaceStateData}
    */
-  public static final class CreateNamespaceStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements CreateNamespaceStateDataOrBuilder {
+  public  static final class CreateNamespaceStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.CreateNamespaceStateData)
+      CreateNamespaceStateDataOrBuilder {
     // Use CreateNamespaceStateData.newBuilder() to construct.
-    private CreateNamespaceStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CreateNamespaceStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private CreateNamespaceStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final CreateNamespaceStateData defaultInstance;
-    public static CreateNamespaceStateData getDefaultInstance() {
-      return defaultInstance;
+    private CreateNamespaceStateData() {
     }
 
-    public CreateNamespaceStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private CreateNamespaceStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -6816,7 +7032,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -6827,30 +7043,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CreateNamespaceStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CreateNamespaceStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CreateNamespaceStateData> PARSER =
-        new com.google.protobuf.AbstractParser<CreateNamespaceStateData>() {
-      public CreateNamespaceStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateNamespaceStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CreateNamespaceStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;
     public static final int NAMESPACE_DESCRIPTOR_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor namespaceDescriptor_;
     /**
@@ -6863,22 +7063,20 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor getNamespaceDescriptor() {
-      return namespaceDescriptor_;
+      return namespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
     }
     /**
      * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder getNamespaceDescriptorOrBuilder() {
-      return namespaceDescriptor_;
+      return namespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
     }
 
-    private void initFields() {
-      namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNamespaceDescriptor()) {
         memoizedIsInitialized = 0;
@@ -6894,35 +7092,27 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, namespaceDescriptor_);
+        output.writeMessage(1, getNamespaceDescriptor());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, namespaceDescriptor_);
+          .computeMessageSize(1, getNamespaceDescriptor());
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -6939,12 +7129,10 @@ public final class MasterProcedureProtos {
         result = result && getNamespaceDescriptor()
             .equals(other.getNamespaceDescriptor());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -6956,7 +7144,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + NAMESPACE_DESCRIPTOR_FIELD_NUMBER;
         hash = (53 * hash) + getNamespaceDescriptor().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6984,46 +7172,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -7031,14 +7230,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.CreateNamespaceStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.CreateNamespaceStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CreateNamespaceStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CreateNamespaceStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -7051,32 +7251,25 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getNamespaceDescriptorFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (namespaceDescriptorBuilder_ == null) {
-          namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
+          namespaceDescriptor_ = null;
         } else {
           namespaceDescriptorBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -7113,6 +7306,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData)other);
@@ -7127,17 +7346,16 @@ public final class MasterProcedureProtos {
         if (other.hasNamespaceDescriptor()) {
           mergeNamespaceDescriptor(other.getNamespaceDescriptor());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasNamespaceDescriptor()) {
-          
           return false;
         }
         if (!getNamespaceDescriptor().isInitialized()) {
-          
           return false;
         }
         return true;
@@ -7152,7 +7370,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -7162,9 +7380,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor namespaceDescriptor_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder> namespaceDescriptorBuilder_;
       /**
        * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
@@ -7177,7 +7394,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor getNamespaceDescriptor() {
         if (namespaceDescriptorBuilder_ == null) {
-          return namespaceDescriptor_;
+          return namespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
         } else {
           return namespaceDescriptorBuilder_.getMessage();
         }
@@ -7218,6 +7435,7 @@ public final class MasterProcedureProtos {
       public Builder mergeNamespaceDescriptor(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor value) {
         if (namespaceDescriptorBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              namespaceDescriptor_ != null &&
               namespaceDescriptor_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance()) {
             namespaceDescriptor_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.newBuilder(namespaceDescriptor_).mergeFrom(value).buildPartial();
@@ -7236,7 +7454,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearNamespaceDescriptor() {
         if (namespaceDescriptorBuilder_ == null) {
-          namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
+          namespaceDescriptor_ = null;
           onChanged();
         } else {
           namespaceDescriptorBuilder_.clear();
@@ -7259,41 +7477,79 @@ public final class MasterProcedureProtos {
         if (namespaceDescriptorBuilder_ != null) {
           return namespaceDescriptorBuilder_.getMessageOrBuilder();
         } else {
-          return namespaceDescriptor_;
+          return namespaceDescriptor_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
         }
       }
       /**
        * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder> 
           getNamespaceDescriptorFieldBuilder() {
         if (namespaceDescriptorBuilder_ == null) {
-          namespaceDescriptorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          namespaceDescriptorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder>(
-                  namespaceDescriptor_,
+                  getNamespaceDescriptor(),
                   getParentForChildren(),
                   isClean());
           namespaceDescriptor_ = null;
         }
         return namespaceDescriptorBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.CreateNamespaceStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.CreateNamespaceStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new CreateNamespaceStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.CreateNamespaceStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CreateNamespaceStateData>
+        PARSER = new com.google.protobuf.AbstractParser<CreateNamespaceStateData>() {
+      public CreateNamespaceStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CreateNamespaceStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateNamespaceStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateNamespaceStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CreateNamespaceStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface ModifyNamespaceStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ModifyNamespaceStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.ModifyNamespaceStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;
     /**
      * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
      */
@@ -7307,7 +7563,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder getNamespaceDescriptorOrBuilder();
 
-    // optional .hbase.pb.NamespaceDescriptor unmodified_namespace_descriptor = 2;
     /**
      * <code>optional .hbase.pb.NamespaceDescriptor unmodified_namespace_descriptor = 2;</code>
      */
@@ -7324,36 +7579,27 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.ModifyNamespaceStateData}
    */
-  public static final class ModifyNamespaceStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements ModifyNamespaceStateDataOrBuilder {
+  public  static final class ModifyNamespaceStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.ModifyNamespaceStateData)
+      ModifyNamespaceStateDataOrBuilder {
     // Use ModifyNamespaceStateData.newBuilder() to construct.
-    private ModifyNamespaceStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private ModifyNamespaceStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private ModifyNamespaceStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final ModifyNamespaceStateData defaultInstance;
-    public static ModifyNamespaceStateData getDefaultInstance() {
-      return defaultInstance;
+    private ModifyNamespaceStateData() {
     }
 
-    public ModifyNamespaceStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private ModifyNamespaceStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -7404,7 +7650,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -7415,30 +7661,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyNamespaceStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyNamespaceStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<ModifyNamespaceStateData> PARSER =
-        new com.google.protobuf.AbstractParser<ModifyNamespaceStateData>() {
-      public ModifyNamespaceStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ModifyNamespaceStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ModifyNamespaceStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;
     public static final int NAMESPACE_DESCRIPTOR_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor namespaceDescriptor_;
     /**
@@ -7451,16 +7681,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor getNamespaceDescriptor() {
-      return namespaceDescriptor_;
+      return namespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
     }
     /**
      * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder getNamespaceDescriptorOrBuilder() {
-      return namespaceDescriptor_;
+      return namespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
     }
 
-    // optional .hbase.pb.NamespaceDescriptor unmodified_namespace_descriptor = 2;
     public static final int UNMODIFIED_NAMESPACE_DESCRIPTOR_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor unmodifiedNamespaceDescriptor_;
     /**
@@ -7473,23 +7702,20 @@ public final class MasterProcedureProtos {
      * <code>optional .hbase.pb.NamespaceDescriptor unmodified_namespace_descriptor = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor getUnmodifiedNamespaceDescriptor() {
-      return unmodifiedNamespaceDescriptor_;
+      return unmodifiedNamespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : unmodifiedNamespaceDescriptor_;
     }
     /**
      * <code>optional .hbase.pb.NamespaceDescriptor unmodified_namespace_descriptor = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder getUnmodifiedNamespaceDescriptorOrBuilder() {
-      return unmodifiedNamespaceDescriptor_;
+      return unmodifiedNamespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : unmodifiedNamespaceDescriptor_;
     }
 
-    private void initFields() {
-      namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
-      unmodifiedNamespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNamespaceDescriptor()) {
         memoizedIsInitialized = 0;
@@ -7511,42 +7737,34 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, namespaceDescriptor_);
+        output.writeMessage(1, getNamespaceDescriptor());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, unmodifiedNamespaceDescriptor_);
+        output.writeMessage(2, getUnmodifiedNamespaceDescriptor());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, namespaceDescriptor_);
+          .computeMessageSize(1, getNamespaceDescriptor());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, unmodifiedNamespaceDescriptor_);
+          .computeMessageSize(2, getUnmodifiedNamespaceDescriptor());
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -7568,12 +7786,10 @@ public final class MasterProcedureProtos {
         result = result && getUnmodifiedNamespaceDescriptor()
             .equals(other.getUnmodifiedNamespaceDescriptor());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -7589,7 +7805,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + UNMODIFIED_NAMESPACE_DESCRIPTOR_FIELD_NUMBER;
         hash = (53 * hash) + getUnmodifiedNamespaceDescriptor().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7617,46 +7833,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -7664,14 +7891,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.ModifyNamespaceStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.ModifyNamespaceStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyNamespaceStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyNamespaceStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -7684,39 +7912,32 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getNamespaceDescriptorFieldBuilder();
           getUnmodifiedNamespaceDescriptorFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (namespaceDescriptorBuilder_ == null) {
-          namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
+          namespaceDescriptor_ = null;
         } else {
           namespaceDescriptorBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (unmodifiedNamespaceDescriptorBuilder_ == null) {
-          unmodifiedNamespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
+          unmodifiedNamespaceDescriptor_ = null;
         } else {
           unmodifiedNamespaceDescriptorBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -7761,6 +7982,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData)other);
@@ -7778,22 +8025,20 @@ public final class MasterProcedureProtos {
         if (other.hasUnmodifiedNamespaceDescriptor()) {
           mergeUnmodifiedNamespaceDescriptor(other.getUnmodifiedNamespaceDescriptor());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasNamespaceDescriptor()) {
-          
           return false;
         }
         if (!getNamespaceDescriptor().isInitialized()) {
-          
           return false;
         }
         if (hasUnmodifiedNamespaceDescriptor()) {
           if (!getUnmodifiedNamespaceDescriptor().isInitialized()) {
-            
             return false;
           }
         }
@@ -7809,7 +8054,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -7819,9 +8064,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor namespaceDescriptor_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder> namespaceDescriptorBuilder_;
       /**
        * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
@@ -7834,7 +8078,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor getNamespaceDescriptor() {
         if (namespaceDescriptorBuilder_ == null) {
-          return namespaceDescriptor_;
+          return namespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
         } else {
           return namespaceDescriptorBuilder_.getMessage();
         }
@@ -7875,6 +8119,7 @@ public final class MasterProcedureProtos {
       public Builder mergeNamespaceDescriptor(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor value) {
         if (namespaceDescriptorBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              namespaceDescriptor_ != null &&
               namespaceDescriptor_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance()) {
             namespaceDescriptor_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.newBuilder(namespaceDescriptor_).mergeFrom(value).buildPartial();
@@ -7893,7 +8138,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearNamespaceDescriptor() {
         if (namespaceDescriptorBuilder_ == null) {
-          namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
+          namespaceDescriptor_ = null;
           onChanged();
         } else {
           namespaceDescriptorBuilder_.clear();
@@ -7916,19 +8161,20 @@ public final class MasterProcedureProtos {
         if (namespaceDescriptorBuilder_ != null) {
           return namespaceDescriptorBuilder_.getMessageOrBuilder();
         } else {
-          return namespaceDescriptor_;
+          return namespaceDescriptor_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
         }
       }
       /**
        * <code>required .hbase.pb.NamespaceDescriptor namespace_descriptor = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder> 
           getNamespaceDescriptorFieldBuilder() {
         if (namespaceDescriptorBuilder_ == null) {
-          namespaceDescriptorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          namespaceDescriptorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder>(
-                  namespaceDescriptor_,
+                  getNamespaceDescriptor(),
                   getParentForChildren(),
                   isClean());
           namespaceDescriptor_ = null;
@@ -7936,9 +8182,8 @@ public final class MasterProcedureProtos {
         return namespaceDescriptorBuilder_;
       }
 
-      // optional .hbase.pb.NamespaceDescriptor unmodified_namespace_descriptor = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor unmodifiedNamespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor unmodifiedNamespaceDescriptor_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder> unmodifiedNamespaceDescriptorBuilder_;
       /**
        * <code>optional .hbase.pb.NamespaceDescriptor unmodified_namespace_descriptor = 2;</code>
@@ -7951,7 +8196,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor getUnmodifiedNamespaceDescriptor() {
         if (unmodifiedNamespaceDescriptorBuilder_ == null) {
-          return unmodifiedNamespaceDescriptor_;
+          return unmodifiedNamespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : unmodifiedNamespaceDescriptor_;
         } else {
           return unmodifiedNamespaceDescriptorBuilder_.getMessage();
         }
@@ -7992,6 +8237,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUnmodifiedNamespaceDescriptor(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor value) {
         if (unmodifiedNamespaceDescriptorBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              unmodifiedNamespaceDescriptor_ != null &&
               unmodifiedNamespaceDescriptor_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance()) {
             unmodifiedNamespaceDescriptor_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.newBuilder(unmodifiedNamespaceDescriptor_).mergeFrom(value).buildPartial();
@@ -8010,7 +8256,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUnmodifiedNamespaceDescriptor() {
         if (unmodifiedNamespaceDescriptorBuilder_ == null) {
-          unmodifiedNamespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
+          unmodifiedNamespaceDescriptor_ = null;
           onChanged();
         } else {
           unmodifiedNamespaceDescriptorBuilder_.clear();
@@ -8033,41 +8279,79 @@ public final class MasterProcedureProtos {
         if (unmodifiedNamespaceDescriptorBuilder_ != null) {
           return unmodifiedNamespaceDescriptorBuilder_.getMessageOrBuilder();
         } else {
-          return unmodifiedNamespaceDescriptor_;
+          return unmodifiedNamespaceDescriptor_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : unmodifiedNamespaceDescriptor_;
         }
       }
       /**
        * <code>optional .hbase.pb.NamespaceDescriptor unmodified_namespace_descriptor = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder> 
           getUnmodifiedNamespaceDescriptorFieldBuilder() {
         if (unmodifiedNamespaceDescriptorBuilder_ == null) {
-          unmodifiedNamespaceDescriptorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          unmodifiedNamespaceDescriptorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder>(
-                  unmodifiedNamespaceDescriptor_,
+                  getUnmodifiedNamespaceDescriptor(),
                   getParentForChildren(),
                   isClean());
           unmodifiedNamespaceDescriptor_ = null;
         }
         return unmodifiedNamespaceDescriptorBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.ModifyNamespaceStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.ModifyNamespaceStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new ModifyNamespaceStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.ModifyNamespaceStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ModifyNamespaceStateData>
+        PARSER = new com.google.protobuf.AbstractParser<ModifyNamespaceStateData>() {
+      public ModifyNamespaceStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ModifyNamespaceStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ModifyNamespaceStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ModifyNamespaceStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyNamespaceStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface DeleteNamespaceStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface DeleteNamespaceStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.DeleteNamespaceStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string namespace_name = 1;
     /**
      * <code>required string namespace_name = 1;</code>
      */
@@ -8082,7 +8366,6 @@ public final class MasterProcedureProtos {
     com.google.protobuf.ByteString
         getNamespaceNameBytes();
 
-    // optional .hbase.pb.NamespaceDescriptor namespace_descriptor = 2;
     /**
      * <code>optional .hbase.pb.NamespaceDescriptor namespace_descriptor = 2;</code>
      */
@@ -8099,36 +8382,28 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.DeleteNamespaceStateData}
    */
-  public static final class DeleteNamespaceStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements DeleteNamespaceStateDataOrBuilder {
+  public  static final class DeleteNamespaceStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.DeleteNamespaceStateData)
+      DeleteNamespaceStateDataOrBuilder {
     // Use DeleteNamespaceStateData.newBuilder() to construct.
-    private DeleteNamespaceStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private DeleteNamespaceStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private DeleteNamespaceStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final DeleteNamespaceStateData defaultInstance;
-    public static DeleteNamespaceStateData getDefaultInstance() {
-      return defaultInstance;
+    private DeleteNamespaceStateData() {
+      namespaceName_ = "";
     }
 
-    public DeleteNamespaceStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private DeleteNamespaceStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -8148,8 +8423,9 @@ public final class MasterProcedureProtos {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              namespaceName_ = input.readBytes();
+              namespaceName_ = bs;
               break;
             }
             case 18: {
@@ -8171,7 +8447,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -8182,32 +8458,16 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteNamespaceStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteNamespaceStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<DeleteNamespaceStateData> PARSER =
-        new com.google.protobuf.AbstractParser<DeleteNamespaceStateData>() {
-      public DeleteNamespaceStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeleteNamespaceStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeleteNamespaceStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required string namespace_name = 1;
     public static final int NAMESPACE_NAME_FIELD_NUMBER = 1;
-    private java.lang.Object namespaceName_;
+    private volatile java.lang.Object namespaceName_;
     /**
      * <code>required string namespace_name = 1;</code>
      */
@@ -8248,7 +8508,6 @@ public final class MasterProcedureProtos {
       }
     }
 
-    // optional .hbase.pb.NamespaceDescriptor namespace_descriptor = 2;
     public static final int NAMESPACE_DESCRIPTOR_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor namespaceDescriptor_;
     /**
@@ -8261,23 +8520,20 @@ public final class MasterProcedureProtos {
      * <code>optional .hbase.pb.NamespaceDescriptor namespace_descriptor = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor getNamespaceDescriptor() {
-      return namespaceDescriptor_;
+      return namespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
     }
     /**
      * <code>optional .hbase.pb.NamespaceDescriptor namespace_descriptor = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder getNamespaceDescriptorOrBuilder() {
-      return namespaceDescriptor_;
+      return namespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
     }
 
-    private void initFields() {
-      namespaceName_ = "";
-      namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNamespaceName()) {
         memoizedIsInitialized = 0;
@@ -8295,42 +8551,33 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getNamespaceNameBytes());
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, namespaceName_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, namespaceDescriptor_);
+        output.writeMessage(2, getNamespaceDescriptor());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getNamespaceNameBytes());
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, namespaceName_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, namespaceDescriptor_);
+          .computeMessageSize(2, getNamespaceDescriptor());
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -8352,12 +8599,10 @@ public final class MasterProcedureProtos {
         result = result && getNamespaceDescriptor()
             .equals(other.getNamespaceDescriptor());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -8373,7 +8618,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + NAMESPACE_DESCRIPTOR_FIELD_NUMBER;
         hash = (53 * hash) + getNamespaceDescriptor().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8401,46 +8646,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -8448,14 +8704,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.DeleteNamespaceStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.DeleteNamespaceStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteNamespaceStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteNamespaceStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -8468,34 +8725,27 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getNamespaceDescriptorFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         namespaceName_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         if (namespaceDescriptorBuilder_ == null) {
-          namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
+          namespaceDescriptor_ = null;
         } else {
           namespaceDescriptorBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -8536,6 +8786,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData)other);
@@ -8555,18 +8831,17 @@ public final class MasterProcedureProtos {
         if (other.hasNamespaceDescriptor()) {
           mergeNamespaceDescriptor(other.getNamespaceDescriptor());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasNamespaceName()) {
-          
           return false;
         }
         if (hasNamespaceDescriptor()) {
           if (!getNamespaceDescriptor().isInitialized()) {
-            
             return false;
           }
         }
@@ -8582,7 +8857,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -8592,7 +8867,6 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required string namespace_name = 1;
       private java.lang.Object namespaceName_ = "";
       /**
        * <code>required string namespace_name = 1;</code>
@@ -8606,9 +8880,12 @@ public final class MasterProcedureProtos {
       public java.lang.String getNamespaceName() {
         java.lang.Object ref = namespaceName_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          namespaceName_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            namespaceName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8666,9 +8943,8 @@ public final class MasterProcedureProtos {
         return this;
       }
 
-      // optional .hbase.pb.NamespaceDescriptor namespace_descriptor = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor namespaceDescriptor_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder> namespaceDescriptorBuilder_;
       /**
        * <code>optional .hbase.pb.NamespaceDescriptor namespace_descriptor = 2;</code>
@@ -8681,7 +8957,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor getNamespaceDescriptor() {
         if (namespaceDescriptorBuilder_ == null) {
-          return namespaceDescriptor_;
+          return namespaceDescriptor_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
         } else {
           return namespaceDescriptorBuilder_.getMessage();
         }
@@ -8722,6 +8998,7 @@ public final class MasterProcedureProtos {
       public Builder mergeNamespaceDescriptor(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor value) {
         if (namespaceDescriptorBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              namespaceDescriptor_ != null &&
               namespaceDescriptor_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance()) {
             namespaceDescriptor_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.newBuilder(namespaceDescriptor_).mergeFrom(value).buildPartial();
@@ -8740,7 +9017,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearNamespaceDescriptor() {
         if (namespaceDescriptorBuilder_ == null) {
-          namespaceDescriptor_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance();
+          namespaceDescriptor_ = null;
           onChanged();
         } else {
           namespaceDescriptorBuilder_.clear();
@@ -8763,41 +9040,79 @@ public final class MasterProcedureProtos {
         if (namespaceDescriptorBuilder_ != null) {
           return namespaceDescriptorBuilder_.getMessageOrBuilder();
         } else {
-          return namespaceDescriptor_;
+          return namespaceDescriptor_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.getDefaultInstance() : namespaceDescriptor_;
         }
       }
       /**
        * <code>optional .hbase.pb.NamespaceDescriptor namespace_descriptor = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder> 
           getNamespaceDescriptorFieldBuilder() {
         if (namespaceDescriptorBuilder_ == null) {
-          namespaceDescriptorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          namespaceDescriptorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptor.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.NamespaceDescriptorOrBuilder>(
-                  namespaceDescriptor_,
+                  getNamespaceDescriptor(),
                   getParentForChildren(),
                   isClean());
           namespaceDescriptor_ = null;
         }
         return namespaceDescriptorBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.DeleteNamespaceStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.DeleteNamespaceStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new DeleteNamespaceStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.DeleteNamespaceStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DeleteNamespaceStateData>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteNamespaceStateData>() {
+      public DeleteNamespaceStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DeleteNamespaceStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteNamespaceStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteNamespaceStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteNamespaceStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface AddColumnFamilyStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AddColumnFamilyStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.AddColumnFamilyStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -8811,7 +9126,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.TableName table_name = 2;
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
@@ -8825,7 +9139,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder();
 
-    // required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;
     /**
      * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
      */
@@ -8839,7 +9152,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder getColumnfamilySchemaOrBuilder();
 
-    // optional .hbase.pb.TableSchema unmodified_table_schema = 4;
     /**
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
      */
@@ -8856,36 +9168,27 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.AddColumnFamilyStateData}
    */
-  public static final class AddColumnFamilyStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements AddColumnFamilyStateDataOrBuilder {
+  public  static final class AddColumnFamilyStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.AddColumnFamilyStateData)
+      AddColumnFamilyStateDataOrBuilder {
     // Use AddColumnFamilyStateData.newBuilder() to construct.
-    private AddColumnFamilyStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private AddColumnFamilyStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private AddColumnFamilyStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final AddColumnFamilyStateData defaultInstance;
-    public static AddColumnFamilyStateData getDefaultInstance() {
-      return defaultInstance;
+    private AddColumnFamilyStateData() {
     }
 
-    public AddColumnFamilyStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private AddColumnFamilyStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -8962,7 +9265,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -8973,30 +9276,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_AddColumnFamilyStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_AddColumnFamilyStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<AddColumnFamilyStateData> PARSER =
-        new com.google.protobuf.AbstractParser<AddColumnFamilyStateData>() {
-      public AddColumnFamilyStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AddColumnFamilyStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AddColumnFamilyStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -9009,16 +9296,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.TableName table_name = 2;
     public static final int TABLE_NAME_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_;
     /**
@@ -9031,16 +9317,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
 
-    // required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;
     public static final int COLUMNFAMILY_SCHEMA_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema columnfamilySchema_;
     /**
@@ -9053,16 +9338,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema getColumnfamilySchema() {
-      return columnfamilySchema_;
+      return columnfamilySchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance() : columnfamilySchema_;
     }
     /**
      * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder getColumnfamilySchemaOrBuilder() {
-      return columnfamilySchema_;
+      return columnfamilySchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance() : columnfamilySchema_;
     }
 
-    // optional .hbase.pb.TableSchema unmodified_table_schema = 4;
     public static final int UNMODIFIED_TABLE_SCHEMA_FIELD_NUMBER = 4;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_;
     /**
@@ -9075,25 +9359,20 @@ public final class MasterProcedureProtos {
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getUnmodifiedTableSchema() {
-      return unmodifiedTableSchema_;
+      return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
     }
     /**
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getUnmodifiedTableSchemaOrBuilder() {
-      return unmodifiedTableSchema_;
+      return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      columnfamilySchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance();
-      unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -9131,56 +9410,48 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, tableName_);
+        output.writeMessage(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, columnfamilySchema_);
+        output.writeMessage(3, getColumnfamilySchema());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeMessage(4, unmodifiedTableSchema_);
+        output.writeMessage(4, getUnmodifiedTableSchema());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, tableName_);
+          .computeMessageSize(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, columnfamilySchema_);
+          .computeMessageSize(3, getColumnfamilySchema());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, unmodifiedTableSchema_);
+          .computeMessageSize(4, getUnmodifiedTableSchema());
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -9212,12 +9483,10 @@ public final class MasterProcedureProtos {
         result = result && getUnmodifiedTableSchema()
             .equals(other.getUnmodifiedTableSchema());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -9241,7 +9510,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + UNMODIFIED_TABLE_SCHEMA_FIELD_NUMBER;
         hash = (53 * hash) + getUnmodifiedTableSchema().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -9269,46 +9538,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -9316,14 +9596,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.AddColumnFamilyStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.AddColumnFamilyStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_AddColumnFamilyStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_AddColumnFamilyStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -9336,53 +9617,46 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getTableNameFieldBuilder();
           getColumnfamilySchemaFieldBuilder();
           getUnmodifiedTableSchemaFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
         } else {
           tableNameBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (columnfamilySchemaBuilder_ == null) {
-          columnfamilySchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance();
+          columnfamilySchema_ = null;
         } else {
           columnfamilySchemaBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          unmodifiedTableSchema_ = null;
         } else {
           unmodifiedTableSchemaBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -9443,6 +9717,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData)other);
@@ -9466,38 +9766,32 @@ public final class MasterProcedureProtos {
         if (other.hasUnmodifiedTableSchema()) {
           mergeUnmodifiedTableSchema(other.getUnmodifiedTableSchema());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasTableName()) {
-          
           return false;
         }
         if (!hasColumnfamilySchema()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getTableName().isInitialized()) {
-          
           return false;
         }
         if (!getColumnfamilySchema().isInitialized()) {
-          
           return false;
         }
         if (hasUnmodifiedTableSchema()) {
           if (!getUnmodifiedTableSchema().isInitialized()) {
-            
             return false;
           }
         }
@@ -9513,7 +9807,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -9523,9 +9817,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -9538,7 +9831,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -9579,6 +9872,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -9597,7 +9891,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -9620,19 +9914,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -9640,9 +9935,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.TableName table_name = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> tableNameBuilder_;
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
@@ -9655,7 +9949,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
         if (tableNameBuilder_ == null) {
-          return tableName_;
+          return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         } else {
           return tableNameBuilder_.getMessage();
         }
@@ -9696,6 +9990,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableName(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName value) {
         if (tableNameBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              tableName_ != null &&
               tableName_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance()) {
             tableName_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.newBuilder(tableName_).mergeFrom(value).buildPartial();
@@ -9714,7 +10009,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableName() {
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
           onChanged();
         } else {
           tableNameBuilder_.clear();
@@ -9737,19 +10032,20 @@ public final class MasterProcedureProtos {
         if (tableNameBuilder_ != null) {
           return tableNameBuilder_.getMessageOrBuilder();
         } else {
-          return tableName_;
+          return tableName_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         }
       }
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> 
           getTableNameFieldBuilder() {
         if (tableNameBuilder_ == null) {
-          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder>(
-                  tableName_,
+                  getTableName(),
                   getParentForChildren(),
                   isClean());
           tableName_ = null;
@@ -9757,9 +10053,8 @@ public final class MasterProcedureProtos {
         return tableNameBuilder_;
       }
 
-      // required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema columnfamilySchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema columnfamilySchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder> columnfamilySchemaBuilder_;
       /**
        * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
@@ -9772,7 +10067,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema getColumnfamilySchema() {
         if (columnfamilySchemaBuilder_ == null) {
-          return columnfamilySchema_;
+          return columnfamilySchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance() : columnfamilySchema_;
         } else {
           return columnfamilySchemaBuilder_.getMessage();
         }
@@ -9813,6 +10108,7 @@ public final class MasterProcedureProtos {
       public Builder mergeColumnfamilySchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema value) {
         if (columnfamilySchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              columnfamilySchema_ != null &&
               columnfamilySchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance()) {
             columnfamilySchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.newBuilder(columnfamilySchema_).mergeFrom(value).buildPartial();
@@ -9831,7 +10127,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearColumnfamilySchema() {
         if (columnfamilySchemaBuilder_ == null) {
-          columnfamilySchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance();
+          columnfamilySchema_ = null;
           onChanged();
         } else {
           columnfamilySchemaBuilder_.clear();
@@ -9854,19 +10150,20 @@ public final class MasterProcedureProtos {
         if (columnfamilySchemaBuilder_ != null) {
           return columnfamilySchemaBuilder_.getMessageOrBuilder();
         } else {
-          return columnfamilySchema_;
+          return columnfamilySchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance() : columnfamilySchema_;
         }
       }
       /**
        * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder> 
           getColumnfamilySchemaFieldBuilder() {
         if (columnfamilySchemaBuilder_ == null) {
-          columnfamilySchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          columnfamilySchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder>(
-                  columnfamilySchema_,
+                  getColumnfamilySchema(),
                   getParentForChildren(),
                   isClean());
           columnfamilySchema_ = null;
@@ -9874,9 +10171,8 @@ public final class MasterProcedureProtos {
         return columnfamilySchemaBuilder_;
       }
 
-      // optional .hbase.pb.TableSchema unmodified_table_schema = 4;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> unmodifiedTableSchemaBuilder_;
       /**
        * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
@@ -9889,7 +10185,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getUnmodifiedTableSchema() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          return unmodifiedTableSchema_;
+          return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
         } else {
           return unmodifiedTableSchemaBuilder_.getMessage();
         }
@@ -9930,6 +10226,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUnmodifiedTableSchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema value) {
         if (unmodifiedTableSchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              unmodifiedTableSchema_ != null &&
               unmodifiedTableSchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance()) {
             unmodifiedTableSchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.newBuilder(unmodifiedTableSchema_).mergeFrom(value).buildPartial();
@@ -9948,7 +10245,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUnmodifiedTableSchema() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          unmodifiedTableSchema_ = null;
           onChanged();
         } else {
           unmodifiedTableSchemaBuilder_.clear();
@@ -9971,41 +10268,79 @@ public final class MasterProcedureProtos {
         if (unmodifiedTableSchemaBuilder_ != null) {
           return unmodifiedTableSchemaBuilder_.getMessageOrBuilder();
         } else {
-          return unmodifiedTableSchema_;
+          return unmodifiedTableSchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
         }
       }
       /**
        * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> 
           getUnmodifiedTableSchemaFieldBuilder() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          unmodifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder>(
-                  unmodifiedTableSchema_,
+                  getUnmodifiedTableSchema(),
                   getParentForChildren(),
                   isClean());
           unmodifiedTableSchema_ = null;
         }
         return unmodifiedTableSchemaBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.AddColumnFamilyStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.AddColumnFamilyStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new AddColumnFamilyStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.AddColumnFamilyStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<AddColumnFamilyStateData>
+        PARSER = new com.google.protobuf.AbstractParser<AddColumnFamilyStateData>() {
+      public AddColumnFamilyStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AddColumnFamilyStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddColumnFamilyStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddColumnFamilyStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.AddColumnFamilyStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface ModifyColumnFamilyStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ModifyColumnFamilyStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.ModifyColumnFamilyStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -10019,7 +10354,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.TableName table_name = 2;
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
@@ -10033,7 +10367,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder();
 
-    // required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;
     /**
      * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
      */
@@ -10047,7 +10380,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder getColumnfamilySchemaOrBuilder();
 
-    // optional .hbase.pb.TableSchema unmodified_table_schema = 4;
     /**
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
      */
@@ -10064,36 +10396,27 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.ModifyColumnFamilyStateData}
    */
-  public static final class ModifyColumnFamilyStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements ModifyColumnFamilyStateDataOrBuilder {
+  public  static final class ModifyColumnFamilyStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.ModifyColumnFamilyStateData)
+      ModifyColumnFamilyStateDataOrBuilder {
     // Use ModifyColumnFamilyStateData.newBuilder() to construct.
-    private ModifyColumnFamilyStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private ModifyColumnFamilyStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private ModifyColumnFamilyStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final ModifyColumnFamilyStateData defaultInstance;
-    public static ModifyColumnFamilyStateData getDefaultInstance() {
-      return defaultInstance;
+    private ModifyColumnFamilyStateData() {
     }
 
-    public ModifyColumnFamilyStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private ModifyColumnFamilyStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -10170,7 +10493,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -10181,30 +10504,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyColumnFamilyStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyColumnFamilyStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<ModifyColumnFamilyStateData> PARSER =
-        new com.google.protobuf.AbstractParser<ModifyColumnFamilyStateData>() {
-      public ModifyColumnFamilyStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ModifyColumnFamilyStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ModifyColumnFamilyStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -10217,16 +10524,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.TableName table_name = 2;
     public static final int TABLE_NAME_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_;
     /**
@@ -10239,16 +10545,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
 
-    // required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;
     public static final int COLUMNFAMILY_SCHEMA_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema columnfamilySchema_;
     /**
@@ -10261,16 +10566,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema getColumnfamilySchema() {
-      return columnfamilySchema_;
+      return columnfamilySchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance() : columnfamilySchema_;
     }
     /**
      * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder getColumnfamilySchemaOrBuilder() {
-      return columnfamilySchema_;
+      return columnfamilySchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance() : columnfamilySchema_;
     }
 
-    // optional .hbase.pb.TableSchema unmodified_table_schema = 4;
     public static final int UNMODIFIED_TABLE_SCHEMA_FIELD_NUMBER = 4;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_;
     /**
@@ -10283,25 +10587,20 @@ public final class MasterProcedureProtos {
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getUnmodifiedTableSchema() {
-      return unmodifiedTableSchema_;
+      return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
     }
     /**
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getUnmodifiedTableSchemaOrBuilder() {
-      return unmodifiedTableSchema_;
+      return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      columnfamilySchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance();
-      unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -10339,56 +10638,48 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, tableName_);
+        output.writeMessage(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, columnfamilySchema_);
+        output.writeMessage(3, getColumnfamilySchema());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeMessage(4, unmodifiedTableSchema_);
+        output.writeMessage(4, getUnmodifiedTableSchema());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, tableName_);
+          .computeMessageSize(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, columnfamilySchema_);
+          .computeMessageSize(3, getColumnfamilySchema());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, unmodifiedTableSchema_);
+          .computeMessageSize(4, getUnmodifiedTableSchema());
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -10420,12 +10711,10 @@ public final class MasterProcedureProtos {
         result = result && getUnmodifiedTableSchema()
             .equals(other.getUnmodifiedTableSchema());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -10449,7 +10738,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + UNMODIFIED_TABLE_SCHEMA_FIELD_NUMBER;
         hash = (53 * hash) + getUnmodifiedTableSchema().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -10477,46 +10766,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -10524,14 +10824,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.ModifyColumnFamilyStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.ModifyColumnFamilyStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyColumnFamilyStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ModifyColumnFamilyStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -10544,53 +10845,46 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getTableNameFieldBuilder();
           getColumnfamilySchemaFieldBuilder();
           getUnmodifiedTableSchemaFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
         } else {
           tableNameBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (columnfamilySchemaBuilder_ == null) {
-          columnfamilySchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance();
+          columnfamilySchema_ = null;
         } else {
           columnfamilySchemaBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          unmodifiedTableSchema_ = null;
         } else {
           unmodifiedTableSchemaBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -10651,6 +10945,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData)other);
@@ -10674,38 +10994,32 @@ public final class MasterProcedureProtos {
         if (other.hasUnmodifiedTableSchema()) {
           mergeUnmodifiedTableSchema(other.getUnmodifiedTableSchema());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasTableName()) {
-          
           return false;
         }
         if (!hasColumnfamilySchema()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getTableName().isInitialized()) {
-          
           return false;
         }
         if (!getColumnfamilySchema().isInitialized()) {
-          
           return false;
         }
         if (hasUnmodifiedTableSchema()) {
           if (!getUnmodifiedTableSchema().isInitialized()) {
-            
             return false;
           }
         }
@@ -10721,7 +11035,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -10731,9 +11045,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -10746,7 +11059,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -10787,6 +11100,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -10805,7 +11119,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -10828,19 +11142,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -10848,9 +11163,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.TableName table_name = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> tableNameBuilder_;
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
@@ -10863,7 +11177,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
         if (tableNameBuilder_ == null) {
-          return tableName_;
+          return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         } else {
           return tableNameBuilder_.getMessage();
         }
@@ -10904,6 +11218,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableName(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName value) {
         if (tableNameBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              tableName_ != null &&
               tableName_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance()) {
             tableName_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.newBuilder(tableName_).mergeFrom(value).buildPartial();
@@ -10922,7 +11237,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableName() {
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
           onChanged();
         } else {
           tableNameBuilder_.clear();
@@ -10945,19 +11260,20 @@ public final class MasterProcedureProtos {
         if (tableNameBuilder_ != null) {
           return tableNameBuilder_.getMessageOrBuilder();
         } else {
-          return tableName_;
+          return tableName_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         }
       }
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> 
           getTableNameFieldBuilder() {
         if (tableNameBuilder_ == null) {
-          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder>(
-                  tableName_,
+                  getTableName(),
                   getParentForChildren(),
                   isClean());
           tableName_ = null;
@@ -10965,9 +11281,8 @@ public final class MasterProcedureProtos {
         return tableNameBuilder_;
       }
 
-      // required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema columnfamilySchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema columnfamilySchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder> columnfamilySchemaBuilder_;
       /**
        * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
@@ -10980,7 +11295,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema getColumnfamilySchema() {
         if (columnfamilySchemaBuilder_ == null) {
-          return columnfamilySchema_;
+          return columnfamilySchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance() : columnfamilySchema_;
         } else {
           return columnfamilySchemaBuilder_.getMessage();
         }
@@ -11021,6 +11336,7 @@ public final class MasterProcedureProtos {
       public Builder mergeColumnfamilySchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema value) {
         if (columnfamilySchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              columnfamilySchema_ != null &&
               columnfamilySchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance()) {
             columnfamilySchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.newBuilder(columnfamilySchema_).mergeFrom(value).buildPartial();
@@ -11039,7 +11355,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearColumnfamilySchema() {
         if (columnfamilySchemaBuilder_ == null) {
-          columnfamilySchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance();
+          columnfamilySchema_ = null;
           onChanged();
         } else {
           columnfamilySchemaBuilder_.clear();
@@ -11062,19 +11378,20 @@ public final class MasterProcedureProtos {
         if (columnfamilySchemaBuilder_ != null) {
           return columnfamilySchemaBuilder_.getMessageOrBuilder();
         } else {
-          return columnfamilySchema_;
+          return columnfamilySchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.getDefaultInstance() : columnfamilySchema_;
         }
       }
       /**
        * <code>required .hbase.pb.ColumnFamilySchema columnfamily_schema = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder> 
           getColumnfamilySchemaFieldBuilder() {
         if (columnfamilySchemaBuilder_ == null) {
-          columnfamilySchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          columnfamilySchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ColumnFamilySchemaOrBuilder>(
-                  columnfamilySchema_,
+                  getColumnfamilySchema(),
                   getParentForChildren(),
                   isClean());
           columnfamilySchema_ = null;
@@ -11082,9 +11399,8 @@ public final class MasterProcedureProtos {
         return columnfamilySchemaBuilder_;
       }
 
-      // optional .hbase.pb.TableSchema unmodified_table_schema = 4;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> unmodifiedTableSchemaBuilder_;
       /**
        * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
@@ -11097,7 +11413,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getUnmodifiedTableSchema() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          return unmodifiedTableSchema_;
+          return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
         } else {
           return unmodifiedTableSchemaBuilder_.getMessage();
         }
@@ -11138,6 +11454,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUnmodifiedTableSchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema value) {
         if (unmodifiedTableSchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              unmodifiedTableSchema_ != null &&
               unmodifiedTableSchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance()) {
             unmodifiedTableSchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.newBuilder(unmodifiedTableSchema_).mergeFrom(value).buildPartial();
@@ -11156,7 +11473,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUnmodifiedTableSchema() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          unmodifiedTableSchema_ = null;
           onChanged();
         } else {
           unmodifiedTableSchemaBuilder_.clear();
@@ -11179,41 +11496,79 @@ public final class MasterProcedureProtos {
         if (unmodifiedTableSchemaBuilder_ != null) {
           return unmodifiedTableSchemaBuilder_.getMessageOrBuilder();
         } else {
-          return unmodifiedTableSchema_;
+          return unmodifiedTableSchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
         }
       }
       /**
        * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> 
           getUnmodifiedTableSchemaFieldBuilder() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          unmodifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder>(
-                  unmodifiedTableSchema_,
+                  getUnmodifiedTableSchema(),
                   getParentForChildren(),
                   isClean());
           unmodifiedTableSchema_ = null;
         }
         return unmodifiedTableSchemaBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.ModifyColumnFamilyStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.ModifyColumnFamilyStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new ModifyColumnFamilyStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.ModifyColumnFamilyStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ModifyColumnFamilyStateData>
+        PARSER = new com.google.protobuf.AbstractParser<ModifyColumnFamilyStateData>() {
+      public ModifyColumnFamilyStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ModifyColumnFamilyStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ModifyColumnFamilyStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ModifyColumnFamilyStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ModifyColumnFamilyStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface DeleteColumnFamilyStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface DeleteColumnFamilyStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.DeleteColumnFamilyStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -11227,7 +11582,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.TableName table_name = 2;
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
@@ -11241,7 +11595,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder();
 
-    // required bytes columnfamily_name = 3;
     /**
      * <code>required bytes columnfamily_name = 3;</code>
      */
@@ -11251,7 +11604,6 @@ public final class MasterProcedureProtos {
      */
     com.google.protobuf.ByteString getColumnfamilyName();
 
-    // optional .hbase.pb.TableSchema unmodified_table_schema = 4;
     /**
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
      */
@@ -11268,36 +11620,28 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.DeleteColumnFamilyStateData}
    */
-  public static final class DeleteColumnFamilyStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements DeleteColumnFamilyStateDataOrBuilder {
+  public  static final class DeleteColumnFamilyStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.DeleteColumnFamilyStateData)
+      DeleteColumnFamilyStateDataOrBuilder {
     // Use DeleteColumnFamilyStateData.newBuilder() to construct.
-    private DeleteColumnFamilyStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private DeleteColumnFamilyStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private DeleteColumnFamilyStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final DeleteColumnFamilyStateData defaultInstance;
-    public static DeleteColumnFamilyStateData getDefaultInstance() {
-      return defaultInstance;
+    private DeleteColumnFamilyStateData() {
+      columnfamilyName_ = com.google.protobuf.ByteString.EMPTY;
     }
 
-    public DeleteColumnFamilyStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private DeleteColumnFamilyStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -11366,7 +11710,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -11377,30 +11721,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteColumnFamilyStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteColumnFamilyStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<DeleteColumnFamilyStateData> PARSER =
-        new com.google.protobuf.AbstractParser<DeleteColumnFamilyStateData>() {
-      public DeleteColumnFamilyStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeleteColumnFamilyStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeleteColumnFamilyStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -11413,16 +11741,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.TableName table_name = 2;
     public static final int TABLE_NAME_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_;
     /**
@@ -11435,16 +11762,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
 
-    // required bytes columnfamily_name = 3;
     public static final int COLUMNFAMILY_NAME_FIELD_NUMBER = 3;
     private com.google.protobuf.ByteString columnfamilyName_;
     /**
@@ -11460,7 +11786,6 @@ public final class MasterProcedureProtos {
       return columnfamilyName_;
     }
 
-    // optional .hbase.pb.TableSchema unmodified_table_schema = 4;
     public static final int UNMODIFIED_TABLE_SCHEMA_FIELD_NUMBER = 4;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_;
     /**
@@ -11473,25 +11798,20 @@ public final class MasterProcedureProtos {
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getUnmodifiedTableSchema() {
-      return unmodifiedTableSchema_;
+      return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
     }
     /**
      * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getUnmodifiedTableSchemaOrBuilder() {
-      return unmodifiedTableSchema_;
+      return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      columnfamilyName_ = com.google.protobuf.ByteString.EMPTY;
-      unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -11525,35 +11845,33 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, tableName_);
+        output.writeMessage(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, columnfamilyName_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeMessage(4, unmodifiedTableSchema_);
+        output.writeMessage(4, getUnmodifiedTableSchema());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, tableName_);
+          .computeMessageSize(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
@@ -11561,20 +11879,14 @@ public final class MasterProcedureProtos {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, unmodifiedTableSchema_);
+          .computeMessageSize(4, getUnmodifiedTableSchema());
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -11606,12 +11918,10 @@ public final class MasterProcedureProtos {
         result = result && getUnmodifiedTableSchema()
             .equals(other.getUnmodifiedTableSchema());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -11635,7 +11945,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + UNMODIFIED_TABLE_SCHEMA_FIELD_NUMBER;
         hash = (53 * hash) + getUnmodifiedTableSchema().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -11663,46 +11973,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -11710,14 +12031,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.DeleteColumnFamilyStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.DeleteColumnFamilyStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteColumnFamilyStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DeleteColumnFamilyStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -11730,31 +12052,28 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getTableNameFieldBuilder();
           getUnmodifiedTableSchemaFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
         } else {
           tableNameBuilder_.clear();
         }
@@ -11762,16 +12081,12 @@ public final class MasterProcedureProtos {
         columnfamilyName_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          unmodifiedTableSchema_ = null;
         } else {
           unmodifiedTableSchemaBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -11828,6 +12143,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData)other);
@@ -11851,34 +12192,29 @@ public final class MasterProcedureProtos {
         if (other.hasUnmodifiedTableSchema()) {
           mergeUnmodifiedTableSchema(other.getUnmodifiedTableSchema());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasTableName()) {
-          
           return false;
         }
         if (!hasColumnfamilyName()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getTableName().isInitialized()) {
-          
           return false;
         }
         if (hasUnmodifiedTableSchema()) {
           if (!getUnmodifiedTableSchema().isInitialized()) {
-            
             return false;
           }
         }
@@ -11894,7 +12230,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -11904,9 +12240,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -11919,7 +12254,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -11960,6 +12295,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -11978,7 +12314,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -12001,19 +12337,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -12021,9 +12358,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.TableName table_name = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> tableNameBuilder_;
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
@@ -12036,7 +12372,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
         if (tableNameBuilder_ == null) {
-          return tableName_;
+          return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         } else {
           return tableNameBuilder_.getMessage();
         }
@@ -12077,6 +12413,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableName(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName value) {
         if (tableNameBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              tableName_ != null &&
               tableName_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance()) {
             tableName_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.newBuilder(tableName_).mergeFrom(value).buildPartial();
@@ -12095,7 +12432,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableName() {
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
           onChanged();
         } else {
           tableNameBuilder_.clear();
@@ -12118,19 +12455,20 @@ public final class MasterProcedureProtos {
         if (tableNameBuilder_ != null) {
           return tableNameBuilder_.getMessageOrBuilder();
         } else {
-          return tableName_;
+          return tableName_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         }
       }
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> 
           getTableNameFieldBuilder() {
         if (tableNameBuilder_ == null) {
-          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder>(
-                  tableName_,
+                  getTableName(),
                   getParentForChildren(),
                   isClean());
           tableName_ = null;
@@ -12138,7 +12476,6 @@ public final class MasterProcedureProtos {
         return tableNameBuilder_;
       }
 
-      // required bytes columnfamily_name = 3;
       private com.google.protobuf.ByteString columnfamilyName_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>required bytes columnfamily_name = 3;</code>
@@ -12174,9 +12511,8 @@ public final class MasterProcedureProtos {
         return this;
       }
 
-      // optional .hbase.pb.TableSchema unmodified_table_schema = 4;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema unmodifiedTableSchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> unmodifiedTableSchemaBuilder_;
       /**
        * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
@@ -12189,7 +12525,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getUnmodifiedTableSchema() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          return unmodifiedTableSchema_;
+          return unmodifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
         } else {
           return unmodifiedTableSchemaBuilder_.getMessage();
         }
@@ -12230,6 +12566,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUnmodifiedTableSchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema value) {
         if (unmodifiedTableSchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              unmodifiedTableSchema_ != null &&
               unmodifiedTableSchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance()) {
             unmodifiedTableSchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.newBuilder(unmodifiedTableSchema_).mergeFrom(value).buildPartial();
@@ -12248,7 +12585,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUnmodifiedTableSchema() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          unmodifiedTableSchema_ = null;
           onChanged();
         } else {
           unmodifiedTableSchemaBuilder_.clear();
@@ -12271,41 +12608,79 @@ public final class MasterProcedureProtos {
         if (unmodifiedTableSchemaBuilder_ != null) {
           return unmodifiedTableSchemaBuilder_.getMessageOrBuilder();
         } else {
-          return unmodifiedTableSchema_;
+          return unmodifiedTableSchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : unmodifiedTableSchema_;
         }
       }
       /**
        * <code>optional .hbase.pb.TableSchema unmodified_table_schema = 4;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> 
           getUnmodifiedTableSchemaFieldBuilder() {
         if (unmodifiedTableSchemaBuilder_ == null) {
-          unmodifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          unmodifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder>(
-                  unmodifiedTableSchema_,
+                  getUnmodifiedTableSchema(),
                   getParentForChildren(),
                   isClean());
           unmodifiedTableSchema_ = null;
         }
         return unmodifiedTableSchemaBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.DeleteColumnFamilyStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.DeleteColumnFamilyStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new DeleteColumnFamilyStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.DeleteColumnFamilyStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DeleteColumnFamilyStateData>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteColumnFamilyStateData>() {
+      public DeleteColumnFamilyStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DeleteColumnFamilyStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteColumnFamilyStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteColumnFamilyStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DeleteColumnFamilyStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface EnableTableStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface EnableTableStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.EnableTableStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -12319,7 +12694,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.TableName table_name = 2;
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
@@ -12333,7 +12707,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder();
 
-    // required bool skip_table_state_check = 3;
     /**
      * <code>required bool skip_table_state_check = 3;</code>
      */
@@ -12346,36 +12719,28 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.EnableTableStateData}
    */
-  public static final class EnableTableStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements EnableTableStateDataOrBuilder {
+  public  static final class EnableTableStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.EnableTableStateData)
+      EnableTableStateDataOrBuilder {
     // Use EnableTableStateData.newBuilder() to construct.
-    private EnableTableStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private EnableTableStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private EnableTableStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final EnableTableStateData defaultInstance;
-    public static EnableTableStateData getDefaultInstance() {
-      return defaultInstance;
+    private EnableTableStateData() {
+      skipTableStateCheck_ = false;
     }
 
-    public EnableTableStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private EnableTableStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -12431,7 +12796,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -12442,30 +12807,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_EnableTableStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_EnableTableStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<EnableTableStateData> PARSER =
-        new com.google.protobuf.AbstractParser<EnableTableStateData>() {
-      public EnableTableStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EnableTableStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EnableTableStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -12478,16 +12827,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.TableName table_name = 2;
     public static final int TABLE_NAME_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_;
     /**
@@ -12500,16 +12848,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
 
-    // required bool skip_table_state_check = 3;
     public static final int SKIP_TABLE_STATE_CHECK_FIELD_NUMBER = 3;
     private boolean skipTableStateCheck_;
     /**
@@ -12525,15 +12872,11 @@ public final class MasterProcedureProtos {
       return skipTableStateCheck_;
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      skipTableStateCheck_ = false;
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -12561,49 +12904,41 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, tableName_);
+        output.writeMessage(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBool(3, skipTableStateCheck_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, tableName_);
+          .computeMessageSize(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, skipTableStateCheck_);
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -12630,12 +12965,10 @@ public final class MasterProcedureProtos {
         result = result && (getSkipTableStateCheck()
             == other.getSkipTableStateCheck());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -12653,9 +12986,10 @@ public final class MasterProcedureProtos {
       }
       if (hasSkipTableStateCheck()) {
         hash = (37 * hash) + SKIP_TABLE_STATE_CHECK_FIELD_NUMBER;
-        hash = (53 * hash) + hashBoolean(getSkipTableStateCheck());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSkipTableStateCheck());
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -12683,46 +13017,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -12730,14 +13075,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.EnableTableStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.EnableTableStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_EnableTableStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_EnableTableStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -12750,30 +13096,27 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getTableNameFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
         } else {
           tableNameBuilder_.clear();
         }
@@ -12781,10 +13124,6 @@ public final class MasterProcedureProtos {
         skipTableStateCheck_ = false;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -12833,6 +13172,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData)other);
@@ -12853,29 +13218,25 @@ public final class MasterProcedureProtos {
         if (other.hasSkipTableStateCheck()) {
           setSkipTableStateCheck(other.getSkipTableStateCheck());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasTableName()) {
-          
           return false;
         }
         if (!hasSkipTableStateCheck()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getTableName().isInitialized()) {
-          
           return false;
         }
         return true;
@@ -12890,7 +13251,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -12900,9 +13261,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -12915,7 +13275,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -12956,6 +13316,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -12974,7 +13335,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -12997,19 +13358,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -13017,9 +13379,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.TableName table_name = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> tableNameBuilder_;
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
@@ -13032,7 +13393,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
         if (tableNameBuilder_ == null) {
-          return tableName_;
+          return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         } else {
           return tableNameBuilder_.getMessage();
         }
@@ -13073,6 +13434,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableName(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName value) {
         if (tableNameBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              tableName_ != null &&
               tableName_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance()) {
             tableName_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.newBuilder(tableName_).mergeFrom(value).buildPartial();
@@ -13091,7 +13453,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableName() {
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
           onChanged();
         } else {
           tableNameBuilder_.clear();
@@ -13114,19 +13476,20 @@ public final class MasterProcedureProtos {
         if (tableNameBuilder_ != null) {
           return tableNameBuilder_.getMessageOrBuilder();
         } else {
-          return tableName_;
+          return tableName_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         }
       }
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> 
           getTableNameFieldBuilder() {
         if (tableNameBuilder_ == null) {
-          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder>(
-                  tableName_,
+                  getTableName(),
                   getParentForChildren(),
                   isClean());
           tableName_ = null;
@@ -13134,7 +13497,6 @@ public final class MasterProcedureProtos {
         return tableNameBuilder_;
       }
 
-      // required bool skip_table_state_check = 3;
       private boolean skipTableStateCheck_ ;
       /**
        * <code>required bool skip_table_state_check = 3;</code>
@@ -13166,22 +13528,59 @@ public final class MasterProcedureProtos {
         onChanged();
         return this;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.EnableTableStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.EnableTableStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new EnableTableStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.EnableTableStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<EnableTableStateData>
+        PARSER = new com.google.protobuf.AbstractParser<EnableTableStateData>() {
+      public EnableTableStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new EnableTableStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableTableStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableTableStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.EnableTableStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface DisableTableStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface DisableTableStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.DisableTableStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -13195,7 +13594,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.TableName table_name = 2;
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
@@ -13209,7 +13607,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder();
 
-    // required bool skip_table_state_check = 3;
     /**
      * <code>required bool skip_table_state_check = 3;</code>
      */
@@ -13222,36 +13619,28 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.DisableTableStateData}
    */
-  public static final class DisableTableStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements DisableTableStateDataOrBuilder {
+  public  static final class DisableTableStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.DisableTableStateData)
+      DisableTableStateDataOrBuilder {
     // Use DisableTableStateData.newBuilder() to construct.
-    private DisableTableStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private DisableTableStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private DisableTableStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final DisableTableStateData defaultInstance;
-    public static DisableTableStateData getDefaultInstance() {
-      return defaultInstance;
+    private DisableTableStateData() {
+      skipTableStateCheck_ = false;
     }
 
-    public DisableTableStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private DisableTableStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -13307,7 +13696,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -13318,30 +13707,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DisableTableStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DisableTableStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<DisableTableStateData> PARSER =
-        new com.google.protobuf.AbstractParser<DisableTableStateData>() {
-      public DisableTableStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DisableTableStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DisableTableStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -13354,16 +13727,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.TableName table_name = 2;
     public static final int TABLE_NAME_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_;
     /**
@@ -13376,16 +13748,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
 
-    // required bool skip_table_state_check = 3;
     public static final int SKIP_TABLE_STATE_CHECK_FIELD_NUMBER = 3;
     private boolean skipTableStateCheck_;
     /**
@@ -13401,15 +13772,11 @@ public final class MasterProcedureProtos {
       return skipTableStateCheck_;
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      skipTableStateCheck_ = false;
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -13437,49 +13804,41 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, tableName_);
+        output.writeMessage(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBool(3, skipTableStateCheck_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, tableName_);
+          .computeMessageSize(2, getTableName());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, skipTableStateCheck_);
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -13506,12 +13865,10 @@ public final class MasterProcedureProtos {
         result = result && (getSkipTableStateCheck()
             == other.getSkipTableStateCheck());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -13529,9 +13886,10 @@ public final class MasterProcedureProtos {
       }
       if (hasSkipTableStateCheck()) {
         hash = (37 * hash) + SKIP_TABLE_STATE_CHECK_FIELD_NUMBER;
-        hash = (53 * hash) + hashBoolean(getSkipTableStateCheck());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSkipTableStateCheck());
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -13559,46 +13917,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -13606,14 +13975,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.DisableTableStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.DisableTableStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DisableTableStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DisableTableStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -13626,30 +13996,27 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getTableNameFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
         } else {
           tableNameBuilder_.clear();
         }
@@ -13657,10 +14024,6 @@ public final class MasterProcedureProtos {
         skipTableStateCheck_ = false;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -13709,6 +14072,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData)other);
@@ -13729,29 +14118,25 @@ public final class MasterProcedureProtos {
         if (other.hasSkipTableStateCheck()) {
           setSkipTableStateCheck(other.getSkipTableStateCheck());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasTableName()) {
-          
           return false;
         }
         if (!hasSkipTableStateCheck()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getTableName().isInitialized()) {
-          
           return false;
         }
         return true;
@@ -13766,7 +14151,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -13776,9 +14161,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -13791,7 +14175,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -13832,6 +14216,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -13850,7 +14235,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -13873,19 +14258,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -13893,9 +14279,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.TableName table_name = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> tableNameBuilder_;
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
@@ -13908,7 +14293,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
         if (tableNameBuilder_ == null) {
-          return tableName_;
+          return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         } else {
           return tableNameBuilder_.getMessage();
         }
@@ -13949,6 +14334,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableName(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName value) {
         if (tableNameBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              tableName_ != null &&
               tableName_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance()) {
             tableName_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.newBuilder(tableName_).mergeFrom(value).buildPartial();
@@ -13967,7 +14353,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableName() {
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
           onChanged();
         } else {
           tableNameBuilder_.clear();
@@ -13990,19 +14376,20 @@ public final class MasterProcedureProtos {
         if (tableNameBuilder_ != null) {
           return tableNameBuilder_.getMessageOrBuilder();
         } else {
-          return tableName_;
+          return tableName_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         }
       }
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> 
           getTableNameFieldBuilder() {
         if (tableNameBuilder_ == null) {
-          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder>(
-                  tableName_,
+                  getTableName(),
                   getParentForChildren(),
                   isClean());
           tableName_ = null;
@@ -14010,7 +14397,6 @@ public final class MasterProcedureProtos {
         return tableNameBuilder_;
       }
 
-      // required bool skip_table_state_check = 3;
       private boolean skipTableStateCheck_ ;
       /**
        * <code>required bool skip_table_state_check = 3;</code>
@@ -14042,22 +14428,59 @@ public final class MasterProcedureProtos {
         onChanged();
         return this;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.DisableTableStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.DisableTableStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new DisableTableStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.DisableTableStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DisableTableStateData>
+        PARSER = new com.google.protobuf.AbstractParser<DisableTableStateData>() {
+      public DisableTableStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DisableTableStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DisableTableStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DisableTableStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DisableTableStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface RestoreParentToChildRegionsPairOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RestoreParentToChildRegionsPairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.RestoreParentToChildRegionsPair)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string parent_region_name = 1;
     /**
      * <code>required string parent_region_name = 1;</code>
      */
@@ -14072,7 +14495,6 @@ public final class MasterProcedureProtos {
     com.google.protobuf.ByteString
         getParentRegionNameBytes();
 
-    // required string child1_region_name = 2;
     /**
      * <code>required string child1_region_name = 2;</code>
      */
@@ -14087,7 +14509,6 @@ public final class MasterProcedureProtos {
     com.google.protobuf.ByteString
         getChild1RegionNameBytes();
 
-    // required string child2_region_name = 3;
     /**
      * <code>required string child2_region_name = 3;</code>
      */
@@ -14105,36 +14526,30 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.RestoreParentToChildRegionsPair}
    */
-  public static final class RestoreParentToChildRegionsPair extends
-      com.google.protobuf.GeneratedMessage
-      implements RestoreParentToChildRegionsPairOrBuilder {
+  public  static final class RestoreParentToChildRegionsPair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.RestoreParentToChildRegionsPair)
+      RestoreParentToChildRegionsPairOrBuilder {
     // Use RestoreParentToChildRegionsPair.newBuilder() to construct.
-    private RestoreParentToChildRegionsPair(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private RestoreParentToChildRegionsPair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private RestoreParentToChildRegionsPair(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final RestoreParentToChildRegionsPair defaultInstance;
-    public static RestoreParentToChildRegionsPair getDefaultInstance() {
-      return defaultInstance;
+    private RestoreParentToChildRegionsPair() {
+      parentRegionName_ = "";
+      child1RegionName_ = "";
+      child2RegionName_ = "";
     }
 
-    public RestoreParentToChildRegionsPair getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private RestoreParentToChildRegionsPair(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -14154,18 +14569,21 @@ public final class MasterProcedureProtos {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              parentRegionName_ = input.readBytes();
+              parentRegionName_ = bs;
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              child1RegionName_ = input.readBytes();
+              child1RegionName_ = bs;
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              child2RegionName_ = input.readBytes();
+              child2RegionName_ = bs;
               break;
             }
           }
@@ -14174,7 +14592,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -14185,32 +14603,16 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_RestoreParentToChildRegionsPair_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_RestoreParentToChildRegionsPair_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<RestoreParentToChildRegionsPair> PARSER =
-        new com.google.protobuf.AbstractParser<RestoreParentToChildRegionsPair>() {
-      public RestoreParentToChildRegionsPair parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RestoreParentToChildRegionsPair(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RestoreParentToChildRegionsPair> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required string parent_region_name = 1;
     public static final int PARENT_REGION_NAME_FIELD_NUMBER = 1;
-    private java.lang.Object parentRegionName_;
+    private volatile java.lang.Object parentRegionName_;
     /**
      * <code>required string parent_region_name = 1;</code>
      */
@@ -14251,9 +14653,8 @@ public final class MasterProcedureProtos {
       }
     }
 
-    // required string child1_region_name = 2;
     public static final int CHILD1_REGION_NAME_FIELD_NUMBER = 2;
-    private java.lang.Object child1RegionName_;
+    private volatile java.lang.Object child1RegionName_;
     /**
      * <code>required string child1_region_name = 2;</code>
      */
@@ -14294,9 +14695,8 @@ public final class MasterProcedureProtos {
       }
     }
 
-    // required string child2_region_name = 3;
     public static final int CHILD2_REGION_NAME_FIELD_NUMBER = 3;
-    private java.lang.Object child2RegionName_;
+    private volatile java.lang.Object child2RegionName_;
     /**
      * <code>required string child2_region_name = 3;</code>
      */
@@ -14337,15 +14737,11 @@ public final class MasterProcedureProtos {
       }
     }
 
-    private void initFields() {
-      parentRegionName_ = "";
-      child1RegionName_ = "";
-      child2RegionName_ = "";
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasParentRegionName()) {
         memoizedIsInitialized = 0;
@@ -14365,49 +14761,38 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getParentRegionNameBytes());
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, parentRegionName_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getChild1RegionNameBytes());
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, child1RegionName_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getChild2RegionNameBytes());
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, child2RegionName_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getParentRegionNameBytes());
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, parentRegionName_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getChild1RegionNameBytes());
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, child1RegionName_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getChild2RegionNameBytes());
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, child2RegionName_);
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -14434,12 +14819,10 @@ public final class MasterProcedureProtos {
         result = result && getChild2RegionName()
             .equals(other.getChild2RegionName());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -14459,7 +14842,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + CHILD2_REGION_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getChild2RegionName().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -14487,46 +14870,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -14534,14 +14928,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.RestoreParentToChildRegionsPair}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPairOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.RestoreParentToChildRegionsPair)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPairOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_RestoreParentToChildRegionsPair_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_RestoreParentToChildRegionsPair_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -14554,18 +14949,15 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         parentRegionName_ = "";
@@ -14575,10 +14967,6 @@ public final class MasterProcedureProtos {
         child2RegionName_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -14619,6 +15007,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair)other);
@@ -14645,21 +15059,19 @@ public final class MasterProcedureProtos {
           child2RegionName_ = other.child2RegionName_;
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasParentRegionName()) {
-          
           return false;
         }
         if (!hasChild1RegionName()) {
-          
           return false;
         }
         if (!hasChild2RegionName()) {
-          
           return false;
         }
         return true;
@@ -14674,7 +15086,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -14684,7 +15096,6 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required string parent_region_name = 1;
       private java.lang.Object parentRegionName_ = "";
       /**
        * <code>required string parent_region_name = 1;</code>
@@ -14698,9 +15109,12 @@ public final class MasterProcedureProtos {
       public java.lang.String getParentRegionName() {
         java.lang.Object ref = parentRegionName_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          parentRegionName_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            parentRegionName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14758,7 +15172,6 @@ public final class MasterProcedureProtos {
         return this;
       }
 
-      // required string child1_region_name = 2;
       private java.lang.Object child1RegionName_ = "";
       /**
        * <code>required string child1_region_name = 2;</code>
@@ -14772,9 +15185,12 @@ public final class MasterProcedureProtos {
       public java.lang.String getChild1RegionName() {
         java.lang.Object ref = child1RegionName_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          child1RegionName_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            child1RegionName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14832,7 +15248,6 @@ public final class MasterProcedureProtos {
         return this;
       }
 
-      // required string child2_region_name = 3;
       private java.lang.Object child2RegionName_ = "";
       /**
        * <code>required string child2_region_name = 3;</code>
@@ -14846,9 +15261,12 @@ public final class MasterProcedureProtos {
       public java.lang.String getChild2RegionName() {
         java.lang.Object ref = child2RegionName_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          child2RegionName_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            child2RegionName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14905,22 +15323,59 @@ public final class MasterProcedureProtos {
         onChanged();
         return this;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.RestoreParentToChildRegionsPair)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.RestoreParentToChildRegionsPair)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair DEFAULT_INSTANCE;
     static {
-      defaultInstance = new RestoreParentToChildRegionsPair(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.RestoreParentToChildRegionsPair)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<RestoreParentToChildRegionsPair>
+        PARSER = new com.google.protobuf.AbstractParser<RestoreParentToChildRegionsPair>() {
+      public RestoreParentToChildRegionsPair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RestoreParentToChildRegionsPair(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RestoreParentToChildRegionsPair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RestoreParentToChildRegionsPair> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface CloneSnapshotStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface CloneSnapshotStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.CloneSnapshotStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -14934,7 +15389,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.SnapshotDescription snapshot = 2;
     /**
      * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
      */
@@ -14948,7 +15402,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder getSnapshotOrBuilder();
 
-    // required .hbase.pb.TableSchema table_schema = 3;
     /**
      * <code>required .hbase.pb.TableSchema table_schema = 3;</code>
      */
@@ -14962,7 +15415,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getTableSchemaOrBuilder();
 
-    // repeated .hbase.pb.RegionInfo region_info = 4;
     /**
      * <code>repeated .hbase.pb.RegionInfo region_info = 4;</code>
      */
@@ -14987,7 +15439,6 @@ public final class MasterProcedureProtos {
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder getRegionInfoOrBuilder(
         int index);
 
-    // repeated .hbase.pb.RestoreParentToChildRegionsPair parent_to_child_regions_pair_list = 5;
     /**
      * <code>repeated .hbase.pb.RestoreParentToChildRegionsPair parent_to_child_regions_pair_list = 5;</code>
      */
@@ -15015,36 +15466,29 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.CloneSnapshotStateData}
    */
-  public static final class CloneSnapshotStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements CloneSnapshotStateDataOrBuilder {
+  public  static final class CloneSnapshotStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.CloneSnapshotStateData)
+      CloneSnapshotStateDataOrBuilder {
     // Use CloneSnapshotStateData.newBuilder() to construct.
-    private CloneSnapshotStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CloneSnapshotStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private CloneSnapshotStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final CloneSnapshotStateData defaultInstance;
-    public static CloneSnapshotStateData getDefaultInstance() {
-      return defaultInstance;
+    private CloneSnapshotStateData() {
+      regionInfo_ = java.util.Collections.emptyList();
+      parentToChildRegionsPairList_ = java.util.Collections.emptyList();
     }
 
-    public CloneSnapshotStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private CloneSnapshotStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -15107,7 +15551,8 @@ public final class MasterProcedureProtos {
                 regionInfo_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              regionInfo_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionInfo_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
             case 42: {
@@ -15115,7 +15560,8 @@ public final class MasterProcedureProtos {
                 parentToChildRegionsPairList_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              parentToChildRegionsPairList_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.PARSER, extensionRegistry));
+              parentToChildRegionsPairList_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.PARSER, extensionRegistry));
               break;
             }
           }
@@ -15124,7 +15570,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           regionInfo_ = java.util.Collections.unmodifiableList(regionInfo_);
@@ -15141,30 +15587,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CloneSnapshotStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CloneSnapshotStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CloneSnapshotStateData> PARSER =
-        new com.google.protobuf.AbstractParser<CloneSnapshotStateData>() {
-      public CloneSnapshotStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CloneSnapshotStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CloneSnapshotStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -15177,16 +15607,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.SnapshotDescription snapshot = 2;
     public static final int SNAPSHOT_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription snapshot_;
     /**
@@ -15199,16 +15628,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription getSnapshot() {
-      return snapshot_;
+      return snapshot_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance() : snapshot_;
     }
     /**
      * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder getSnapshotOrBuilder() {
-      return snapshot_;
+      return snapshot_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance() : snapshot_;
     }
 
-    // required .hbase.pb.TableSchema table_schema = 3;
     public static final int TABLE_SCHEMA_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema tableSchema_;
     /**
@@ -15221,16 +15649,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableSchema table_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getTableSchema() {
-      return tableSchema_;
+      return tableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
     }
     /**
      * <code>required .hbase.pb.TableSchema table_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getTableSchemaOrBuilder() {
-      return tableSchema_;
+      return tableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
     }
 
-    // repeated .hbase.pb.RegionInfo region_info = 4;
     public static final int REGION_INFO_FIELD_NUMBER = 4;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_;
     /**
@@ -15266,7 +15693,6 @@ public final class MasterProcedureProtos {
       return regionInfo_.get(index);
     }
 
-    // repeated .hbase.pb.RestoreParentToChildRegionsPair parent_to_child_regions_pair_list = 5;
     public static final int PARENT_TO_CHILD_REGIONS_PAIR_LIST_FIELD_NUMBER = 5;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair> parentToChildRegionsPairList_;
     /**
@@ -15302,17 +15728,11 @@ public final class MasterProcedureProtos {
       return parentToChildRegionsPairList_.get(index);
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      snapshot_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance();
-      tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      regionInfo_ = java.util.Collections.emptyList();
-      parentToChildRegionsPairList_ = java.util.Collections.emptyList();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -15356,15 +15776,14 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, snapshot_);
+        output.writeMessage(2, getSnapshot());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, tableSchema_);
+        output.writeMessage(3, getTableSchema());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         output.writeMessage(4, regionInfo_.get(i));
@@ -15372,26 +15791,25 @@ public final class MasterProcedureProtos {
       for (int i = 0; i < parentToChildRegionsPairList_.size(); i++) {
         output.writeMessage(5, parentToChildRegionsPairList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, snapshot_);
+          .computeMessageSize(2, getSnapshot());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, tableSchema_);
+          .computeMessageSize(3, getTableSchema());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -15401,18 +15819,12 @@ public final class MasterProcedureProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, parentToChildRegionsPairList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -15443,12 +15855,10 @@ public final class MasterProcedureProtos {
           .equals(other.getRegionInfoList());
       result = result && getParentToChildRegionsPairListList()
           .equals(other.getParentToChildRegionsPairListList());
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -15476,7 +15886,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + PARENT_TO_CHILD_REGIONS_PAIR_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getParentToChildRegionsPairListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -15504,46 +15914,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -15551,14 +15972,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.CloneSnapshotStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.CloneSnapshotStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CloneSnapshotStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_CloneSnapshotStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -15571,12 +15993,13 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getSnapshotFieldBuilder();
           getTableSchemaFieldBuilder();
@@ -15584,26 +16007,22 @@ public final class MasterProcedureProtos {
           getParentToChildRegionsPairListFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (snapshotBuilder_ == null) {
-          snapshot_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance();
+          snapshot_ = null;
         } else {
           snapshotBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (tableSchemaBuilder_ == null) {
-          tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          tableSchema_ = null;
         } else {
           tableSchemaBuilder_.clear();
         }
@@ -15621,10 +16040,6 @@ public final class MasterProcedureProtos {
           parentToChildRegionsPairListBuilder_.clear();
         }
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -15695,6 +16110,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData)other);
@@ -15734,7 +16175,7 @@ public final class MasterProcedureProtos {
               regionInfo_ = other.regionInfo_;
               bitField0_ = (bitField0_ & ~0x00000008);
               regionInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionInfoFieldBuilder() : null;
             } else {
               regionInfoBuilder_.addAllMessages(other.regionInfo_);
@@ -15760,51 +16201,44 @@ public final class MasterProcedureProtos {
               parentToChildRegionsPairList_ = other.parentToChildRegionsPairList_;
               bitField0_ = (bitField0_ & ~0x00000010);
               parentToChildRegionsPairListBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getParentToChildRegionsPairListFieldBuilder() : null;
             } else {
               parentToChildRegionsPairListBuilder_.addAllMessages(other.parentToChildRegionsPairList_);
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasSnapshot()) {
-          
           return false;
         }
         if (!hasTableSchema()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getSnapshot().isInitialized()) {
-          
           return false;
         }
         if (!getTableSchema().isInitialized()) {
-          
           return false;
         }
         for (int i = 0; i < getRegionInfoCount(); i++) {
           if (!getRegionInfo(i).isInitialized()) {
-            
             return false;
           }
         }
         for (int i = 0; i < getParentToChildRegionsPairListCount(); i++) {
           if (!getParentToChildRegionsPairList(i).isInitialized()) {
-            
             return false;
           }
         }
@@ -15820,7 +16254,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -15830,9 +16264,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -15845,7 +16278,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -15886,6 +16319,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -15904,7 +16338,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -15927,19 +16361,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -15947,9 +16382,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.SnapshotDescription snapshot = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription snapshot_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription snapshot_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder> snapshotBuilder_;
       /**
        * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
@@ -15962,7 +16396,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription getSnapshot() {
         if (snapshotBuilder_ == null) {
-          return snapshot_;
+          return snapshot_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance() : snapshot_;
         } else {
           return snapshotBuilder_.getMessage();
         }
@@ -16003,6 +16437,7 @@ public final class MasterProcedureProtos {
       public Builder mergeSnapshot(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription value) {
         if (snapshotBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              snapshot_ != null &&
               snapshot_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance()) {
             snapshot_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.newBuilder(snapshot_).mergeFrom(value).buildPartial();
@@ -16021,7 +16456,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearSnapshot() {
         if (snapshotBuilder_ == null) {
-          snapshot_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance();
+          snapshot_ = null;
           onChanged();
         } else {
           snapshotBuilder_.clear();
@@ -16044,19 +16479,20 @@ public final class MasterProcedureProtos {
         if (snapshotBuilder_ != null) {
           return snapshotBuilder_.getMessageOrBuilder();
         } else {
-          return snapshot_;
+          return snapshot_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance() : snapshot_;
         }
       }
       /**
        * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder> 
           getSnapshotFieldBuilder() {
         if (snapshotBuilder_ == null) {
-          snapshotBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          snapshotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder>(
-                  snapshot_,
+                  getSnapshot(),
                   getParentForChildren(),
                   isClean());
           snapshot_ = null;
@@ -16064,9 +16500,8 @@ public final class MasterProcedureProtos {
         return snapshotBuilder_;
       }
 
-      // required .hbase.pb.TableSchema table_schema = 3;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema tableSchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> tableSchemaBuilder_;
       /**
        * <code>required .hbase.pb.TableSchema table_schema = 3;</code>
@@ -16079,7 +16514,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getTableSchema() {
         if (tableSchemaBuilder_ == null) {
-          return tableSchema_;
+          return tableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
         } else {
           return tableSchemaBuilder_.getMessage();
         }
@@ -16120,6 +16555,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableSchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema value) {
         if (tableSchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              tableSchema_ != null &&
               tableSchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance()) {
             tableSchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.newBuilder(tableSchema_).mergeFrom(value).buildPartial();
@@ -16138,7 +16574,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableSchema() {
         if (tableSchemaBuilder_ == null) {
-          tableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          tableSchema_ = null;
           onChanged();
         } else {
           tableSchemaBuilder_.clear();
@@ -16161,19 +16597,20 @@ public final class MasterProcedureProtos {
         if (tableSchemaBuilder_ != null) {
           return tableSchemaBuilder_.getMessageOrBuilder();
         } else {
-          return tableSchema_;
+          return tableSchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : tableSchema_;
         }
       }
       /**
        * <code>required .hbase.pb.TableSchema table_schema = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> 
           getTableSchemaFieldBuilder() {
         if (tableSchemaBuilder_ == null) {
-          tableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder>(
-                  tableSchema_,
+                  getTableSchema(),
                   getParentForChildren(),
                   isClean());
           tableSchema_ = null;
@@ -16181,7 +16618,6 @@ public final class MasterProcedureProtos {
         return tableSchemaBuilder_;
       }
 
-      // repeated .hbase.pb.RegionInfo region_info = 4;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_ =
         java.util.Collections.emptyList();
       private void ensureRegionInfoIsMutable() {
@@ -16191,7 +16627,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionInfoBuilder_;
 
       /**
@@ -16323,7 +16759,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionInfoBuilder_ == null) {
           ensureRegionInfoIsMutable();
-          super.addAll(values, regionInfo_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionInfo_);
           onChanged();
         } else {
           regionInfoBuilder_.addAllMessages(values);
@@ -16406,11 +16843,11 @@ public final class MasterProcedureProtos {
            getRegionInfoBuilderList() {
         return getRegionInfoFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionInfoFieldBuilder() {
         if (regionInfoBuilder_ == null) {
-          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionInfo_,
                   ((bitField0_ & 0x00000008) == 0x00000008),
@@ -16421,7 +16858,6 @@ public final class MasterProcedureProtos {
         return regionInfoBuilder_;
       }
 
-      // repeated .hbase.pb.RestoreParentToChildRegionsPair parent_to_child_regions_pair_list = 5;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair> parentToChildRegionsPairList_ =
         java.util.Collections.emptyList();
       private void ensureParentToChildRegionsPairListIsMutable() {
@@ -16431,7 +16867,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPairOrBuilder> parentToChildRegionsPairListBuilder_;
 
       /**
@@ -16563,7 +16999,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair> values) {
         if (parentToChildRegionsPairListBuilder_ == null) {
           ensureParentToChildRegionsPairListIsMutable();
-          super.addAll(values, parentToChildRegionsPairList_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parentToChildRegionsPairList_);
           onChanged();
         } else {
           parentToChildRegionsPairListBuilder_.addAllMessages(values);
@@ -16646,11 +17083,11 @@ public final class MasterProcedureProtos {
            getParentToChildRegionsPairListBuilderList() {
         return getParentToChildRegionsPairListFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPairOrBuilder> 
           getParentToChildRegionsPairListFieldBuilder() {
         if (parentToChildRegionsPairListBuilder_ == null) {
-          parentToChildRegionsPairListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          parentToChildRegionsPairListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPairOrBuilder>(
                   parentToChildRegionsPairList_,
                   ((bitField0_ & 0x00000010) == 0x00000010),
@@ -16660,22 +17097,59 @@ public final class MasterProcedureProtos {
         }
         return parentToChildRegionsPairListBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.CloneSnapshotStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.CloneSnapshotStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new CloneSnapshotStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.CloneSnapshotStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CloneSnapshotStateData>
+        PARSER = new com.google.protobuf.AbstractParser<CloneSnapshotStateData>() {
+      public CloneSnapshotStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CloneSnapshotStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CloneSnapshotStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CloneSnapshotStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.CloneSnapshotStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface RestoreSnapshotStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RestoreSnapshotStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.RestoreSnapshotStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -16689,7 +17163,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.SnapshotDescription snapshot = 2;
     /**
      * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
      */
@@ -16703,7 +17176,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder getSnapshotOrBuilder();
 
-    // required .hbase.pb.TableSchema modified_table_schema = 3;
     /**
      * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
      */
@@ -16717,7 +17189,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getModifiedTableSchemaOrBuilder();
 
-    // repeated .hbase.pb.RegionInfo region_info_for_restore = 4;
     /**
      * <code>repeated .hbase.pb.RegionInfo region_info_for_restore = 4;</code>
      */
@@ -16742,7 +17213,6 @@ public final class MasterProcedureProtos {
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder getRegionInfoForRestoreOrBuilder(
         int index);
 
-    // repeated .hbase.pb.RegionInfo region_info_for_remove = 5;
     /**
      * <code>repeated .hbase.pb.RegionInfo region_info_for_remove = 5;</code>
      */
@@ -16767,7 +17237,6 @@ public final class MasterProcedureProtos {
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder getRegionInfoForRemoveOrBuilder(
         int index);
 
-    // repeated .hbase.pb.RegionInfo region_info_for_add = 6;
     /**
      * <code>repeated .hbase.pb.RegionInfo region_info_for_add = 6;</code>
      */
@@ -16792,7 +17261,6 @@ public final class MasterProcedureProtos {
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder getRegionInfoForAddOrBuilder(
         int index);
 
-    // repeated .hbase.pb.RestoreParentToChildRegionsPair parent_to_child_regions_pair_list = 7;
     /**
      * <code>repeated .hbase.pb.RestoreParentToChildRegionsPair parent_to_child_regions_pair_list = 7;</code>
      */
@@ -16820,36 +17288,31 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.RestoreSnapshotStateData}
    */
-  public static final class RestoreSnapshotStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements RestoreSnapshotStateDataOrBuilder {
+  public  static final class RestoreSnapshotStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.RestoreSnapshotStateData)
+      RestoreSnapshotStateDataOrBuilder {
     // Use RestoreSnapshotStateData.newBuilder() to construct.
-    private RestoreSnapshotStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private RestoreSnapshotStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private RestoreSnapshotStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final RestoreSnapshotStateData defaultInstance;
-    public static RestoreSnapshotStateData getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public RestoreSnapshotStateData getDefaultInstanceForType() {
-      return defaultInstance;
+    private RestoreSnapshotStateData() {
+      regionInfoForRestore_ = java.util.Collections.emptyList();
+      regionInfoForRemove_ = java.util.Collections.emptyList();
+      regionInfoForAdd_ = java.util.Collections.emptyList();
+      parentToChildRegionsPairList_ = java.util.Collections.emptyList();
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private RestoreSnapshotStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -16912,7 +17375,8 @@ public final class MasterProcedureProtos {
                 regionInfoForRestore_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              regionInfoForRestore_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionInfoForRestore_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
             case 42: {
@@ -16920,7 +17384,8 @@ public final class MasterProcedureProtos {
                 regionInfoForRemove_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              regionInfoForRemove_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionInfoForRemove_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
             case 50: {
@@ -16928,7 +17393,8 @@ public final class MasterProcedureProtos {
                 regionInfoForAdd_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000020;
               }
-              regionInfoForAdd_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionInfoForAdd_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
             case 58: {
@@ -16936,7 +17402,8 @@ public final class MasterProcedureProtos {
                 parentToChildRegionsPairList_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair>();
                 mutable_bitField0_ |= 0x00000040;
               }
-              parentToChildRegionsPairList_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.PARSER, extensionRegistry));
+              parentToChildRegionsPairList_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.PARSER, extensionRegistry));
               break;
             }
           }
@@ -16945,7 +17412,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           regionInfoForRestore_ = java.util.Collections.unmodifiableList(regionInfoForRestore_);
@@ -16968,30 +17435,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_RestoreSnapshotStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_RestoreSnapshotStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<RestoreSnapshotStateData> PARSER =
-        new com.google.protobuf.AbstractParser<RestoreSnapshotStateData>() {
-      public RestoreSnapshotStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RestoreSnapshotStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RestoreSnapshotStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -17004,16 +17455,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.SnapshotDescription snapshot = 2;
     public static final int SNAPSHOT_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription snapshot_;
     /**
@@ -17026,16 +17476,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription getSnapshot() {
-      return snapshot_;
+      return snapshot_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance() : snapshot_;
     }
     /**
      * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder getSnapshotOrBuilder() {
-      return snapshot_;
+      return snapshot_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance() : snapshot_;
     }
 
-    // required .hbase.pb.TableSchema modified_table_schema = 3;
     public static final int MODIFIED_TABLE_SCHEMA_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema modifiedTableSchema_;
     /**
@@ -17048,16 +17497,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getModifiedTableSchema() {
-      return modifiedTableSchema_;
+      return modifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : modifiedTableSchema_;
     }
     /**
      * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder getModifiedTableSchemaOrBuilder() {
-      return modifiedTableSchema_;
+      return modifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : modifiedTableSchema_;
     }
 
-    // repeated .hbase.pb.RegionInfo region_info_for_restore = 4;
     public static final int REGION_INFO_FOR_RESTORE_FIELD_NUMBER = 4;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfoForRestore_;
     /**
@@ -17093,7 +17541,6 @@ public final class MasterProcedureProtos {
       return regionInfoForRestore_.get(index);
     }
 
-    // repeated .hbase.pb.RegionInfo region_info_for_remove = 5;
     public static final int REGION_INFO_FOR_REMOVE_FIELD_NUMBER = 5;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfoForRemove_;
     /**
@@ -17129,7 +17576,6 @@ public final class MasterProcedureProtos {
       return regionInfoForRemove_.get(index);
     }
 
-    // repeated .hbase.pb.RegionInfo region_info_for_add = 6;
     public static final int REGION_INFO_FOR_ADD_FIELD_NUMBER = 6;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfoForAdd_;
     /**
@@ -17165,7 +17611,6 @@ public final class MasterProcedureProtos {
       return regionInfoForAdd_.get(index);
     }
 
-    // repeated .hbase.pb.RestoreParentToChildRegionsPair parent_to_child_regions_pair_list = 7;
     public static final int PARENT_TO_CHILD_REGIONS_PAIR_LIST_FIELD_NUMBER = 7;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair> parentToChildRegionsPairList_;
     /**
@@ -17201,19 +17646,11 @@ public final class MasterProcedureProtos {
       return parentToChildRegionsPairList_.get(index);
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      snapshot_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance();
-      modifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      regionInfoForRestore_ = java.util.Collections.emptyList();
-      regionInfoForRemove_ = java.util.Collections.emptyList();
-      regionInfoForAdd_ = java.util.Collections.emptyList();
-      parentToChildRegionsPairList_ = java.util.Collections.emptyList();
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -17269,15 +17706,14 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, snapshot_);
+        output.writeMessage(2, getSnapshot());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, modifiedTableSchema_);
+        output.writeMessage(3, getModifiedTableSchema());
       }
       for (int i = 0; i < regionInfoForRestore_.size(); i++) {
         output.writeMessage(4, regionInfoForRestore_.get(i));
@@ -17291,26 +17727,25 @@ public final class MasterProcedureProtos {
       for (int i = 0; i < parentToChildRegionsPairList_.size(); i++) {
         output.writeMessage(7, parentToChildRegionsPairList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, snapshot_);
+          .computeMessageSize(2, getSnapshot());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, modifiedTableSchema_);
+          .computeMessageSize(3, getModifiedTableSchema());
       }
       for (int i = 0; i < regionInfoForRestore_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -17328,18 +17763,12 @@ public final class MasterProcedureProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, parentToChildRegionsPairList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -17374,12 +17803,10 @@ public final class MasterProcedureProtos {
           .equals(other.getRegionInfoForAddList());
       result = result && getParentToChildRegionsPairListList()
           .equals(other.getParentToChildRegionsPairListList());
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -17415,7 +17842,7 @@ public final class MasterProcedureProtos {
         hash = (37 * hash) + PARENT_TO_CHILD_REGIONS_PAIR_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getParentToChildRegionsPairListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -17443,46 +17870,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -17490,14 +17928,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.RestoreSnapshotStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.RestoreSnapshotStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_RestoreSnapshotStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_RestoreSnapshotStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -17510,12 +17949,13 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getSnapshotFieldBuilder();
           getModifiedTableSchemaFieldBuilder();
@@ -17525,26 +17965,22 @@ public final class MasterProcedureProtos {
           getParentToChildRegionsPairListFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (snapshotBuilder_ == null) {
-          snapshot_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance();
+          snapshot_ = null;
         } else {
           snapshotBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (modifiedTableSchemaBuilder_ == null) {
-          modifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          modifiedTableSchema_ = null;
         } else {
           modifiedTableSchemaBuilder_.clear();
         }
@@ -17574,10 +18010,6 @@ public final class MasterProcedureProtos {
           parentToChildRegionsPairListBuilder_.clear();
         }
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -17666,6 +18098,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData)other);
@@ -17705,7 +18163,7 @@ public final class MasterProcedureProtos {
               regionInfoForRestore_ = other.regionInfoForRestore_;
               bitField0_ = (bitField0_ & ~0x00000008);
               regionInfoForRestoreBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionInfoForRestoreFieldBuilder() : null;
             } else {
               regionInfoForRestoreBuilder_.addAllMessages(other.regionInfoForRestore_);
@@ -17731,7 +18189,7 @@ public final class MasterProcedureProtos {
               regionInfoForRemove_ = other.regionInfoForRemove_;
               bitField0_ = (bitField0_ & ~0x00000010);
               regionInfoForRemoveBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionInfoForRemoveFieldBuilder() : null;
             } else {
               regionInfoForRemoveBuilder_.addAllMessages(other.regionInfoForRemove_);
@@ -17757,7 +18215,7 @@ public final class MasterProcedureProtos {
               regionInfoForAdd_ = other.regionInfoForAdd_;
               bitField0_ = (bitField0_ & ~0x00000020);
               regionInfoForAddBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionInfoForAddFieldBuilder() : null;
             } else {
               regionInfoForAddBuilder_.addAllMessages(other.regionInfoForAdd_);
@@ -17783,63 +18241,54 @@ public final class MasterProcedureProtos {
               parentToChildRegionsPairList_ = other.parentToChildRegionsPairList_;
               bitField0_ = (bitField0_ & ~0x00000040);
               parentToChildRegionsPairListBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getParentToChildRegionsPairListFieldBuilder() : null;
             } else {
               parentToChildRegionsPairListBuilder_.addAllMessages(other.parentToChildRegionsPairList_);
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasSnapshot()) {
-          
           return false;
         }
         if (!hasModifiedTableSchema()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getSnapshot().isInitialized()) {
-          
           return false;
         }
         if (!getModifiedTableSchema().isInitialized()) {
-          
           return false;
         }
         for (int i = 0; i < getRegionInfoForRestoreCount(); i++) {
           if (!getRegionInfoForRestore(i).isInitialized()) {
-            
             return false;
           }
         }
         for (int i = 0; i < getRegionInfoForRemoveCount(); i++) {
           if (!getRegionInfoForRemove(i).isInitialized()) {
-            
             return false;
           }
         }
         for (int i = 0; i < getRegionInfoForAddCount(); i++) {
           if (!getRegionInfoForAdd(i).isInitialized()) {
-            
             return false;
           }
         }
         for (int i = 0; i < getParentToChildRegionsPairListCount(); i++) {
           if (!getParentToChildRegionsPairList(i).isInitialized()) {
-            
             return false;
           }
         }
@@ -17855,7 +18304,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -17865,9 +18314,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -17880,7 +18328,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -17921,6 +18369,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -17939,7 +18388,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -17962,19 +18411,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -17982,9 +18432,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.SnapshotDescription snapshot = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription snapshot_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription snapshot_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder> snapshotBuilder_;
       /**
        * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
@@ -17997,7 +18446,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription getSnapshot() {
         if (snapshotBuilder_ == null) {
-          return snapshot_;
+          return snapshot_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance() : snapshot_;
         } else {
           return snapshotBuilder_.getMessage();
         }
@@ -18038,6 +18487,7 @@ public final class MasterProcedureProtos {
       public Builder mergeSnapshot(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription value) {
         if (snapshotBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              snapshot_ != null &&
               snapshot_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance()) {
             snapshot_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.newBuilder(snapshot_).mergeFrom(value).buildPartial();
@@ -18056,7 +18506,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearSnapshot() {
         if (snapshotBuilder_ == null) {
-          snapshot_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance();
+          snapshot_ = null;
           onChanged();
         } else {
           snapshotBuilder_.clear();
@@ -18079,19 +18529,20 @@ public final class MasterProcedureProtos {
         if (snapshotBuilder_ != null) {
           return snapshotBuilder_.getMessageOrBuilder();
         } else {
-          return snapshot_;
+          return snapshot_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.getDefaultInstance() : snapshot_;
         }
       }
       /**
        * <code>required .hbase.pb.SnapshotDescription snapshot = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder> 
           getSnapshotFieldBuilder() {
         if (snapshotBuilder_ == null) {
-          snapshotBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          snapshotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescriptionOrBuilder>(
-                  snapshot_,
+                  getSnapshot(),
                   getParentForChildren(),
                   isClean());
           snapshot_ = null;
@@ -18099,9 +18550,8 @@ public final class MasterProcedureProtos {
         return snapshotBuilder_;
       }
 
-      // required .hbase.pb.TableSchema modified_table_schema = 3;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema modifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema modifiedTableSchema_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> modifiedTableSchemaBuilder_;
       /**
        * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
@@ -18114,7 +18564,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema getModifiedTableSchema() {
         if (modifiedTableSchemaBuilder_ == null) {
-          return modifiedTableSchema_;
+          return modifiedTableSchema_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : modifiedTableSchema_;
         } else {
           return modifiedTableSchemaBuilder_.getMessage();
         }
@@ -18155,6 +18605,7 @@ public final class MasterProcedureProtos {
       public Builder mergeModifiedTableSchema(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema value) {
         if (modifiedTableSchemaBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              modifiedTableSchema_ != null &&
               modifiedTableSchema_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance()) {
             modifiedTableSchema_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.newBuilder(modifiedTableSchema_).mergeFrom(value).buildPartial();
@@ -18173,7 +18624,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearModifiedTableSchema() {
         if (modifiedTableSchemaBuilder_ == null) {
-          modifiedTableSchema_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance();
+          modifiedTableSchema_ = null;
           onChanged();
         } else {
           modifiedTableSchemaBuilder_.clear();
@@ -18196,19 +18647,20 @@ public final class MasterProcedureProtos {
         if (modifiedTableSchemaBuilder_ != null) {
           return modifiedTableSchemaBuilder_.getMessageOrBuilder();
         } else {
-          return modifiedTableSchema_;
+          return modifiedTableSchema_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.getDefaultInstance() : modifiedTableSchema_;
         }
       }
       /**
        * <code>required .hbase.pb.TableSchema modified_table_schema = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder> 
           getModifiedTableSchemaFieldBuilder() {
         if (modifiedTableSchemaBuilder_ == null) {
-          modifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          modifiedTableSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchema.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableSchemaOrBuilder>(
-                  modifiedTableSchema_,
+                  getModifiedTableSchema(),
                   getParentForChildren(),
                   isClean());
           modifiedTableSchema_ = null;
@@ -18216,7 +18668,6 @@ public final class MasterProcedureProtos {
         return modifiedTableSchemaBuilder_;
       }
 
-      // repeated .hbase.pb.RegionInfo region_info_for_restore = 4;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfoForRestore_ =
         java.util.Collections.emptyList();
       private void ensureRegionInfoForRestoreIsMutable() {
@@ -18226,7 +18677,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionInfoForRestoreBuilder_;
 
       /**
@@ -18358,7 +18809,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionInfoForRestoreBuilder_ == null) {
           ensureRegionInfoForRestoreIsMutable();
-          super.addAll(values, regionInfoForRestore_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionInfoForRestore_);
           onChanged();
         } else {
           regionInfoForRestoreBuilder_.addAllMessages(values);
@@ -18441,11 +18893,11 @@ public final class MasterProcedureProtos {
            getRegionInfoForRestoreBuilderList() {
         return getRegionInfoForRestoreFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionInfoForRestoreFieldBuilder() {
         if (regionInfoForRestoreBuilder_ == null) {
-          regionInfoForRestoreBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionInfoForRestoreBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionInfoForRestore_,
                   ((bitField0_ & 0x00000008) == 0x00000008),
@@ -18456,7 +18908,6 @@ public final class MasterProcedureProtos {
         return regionInfoForRestoreBuilder_;
       }
 
-      // repeated .hbase.pb.RegionInfo region_info_for_remove = 5;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfoForRemove_ =
         java.util.Collections.emptyList();
       private void ensureRegionInfoForRemoveIsMutable() {
@@ -18466,7 +18917,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionInfoForRemoveBuilder_;
 
       /**
@@ -18598,7 +19049,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionInfoForRemoveBuilder_ == null) {
           ensureRegionInfoForRemoveIsMutable();
-          super.addAll(values, regionInfoForRemove_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionInfoForRemove_);
           onChanged();
         } else {
           regionInfoForRemoveBuilder_.addAllMessages(values);
@@ -18681,11 +19133,11 @@ public final class MasterProcedureProtos {
            getRegionInfoForRemoveBuilderList() {
         return getRegionInfoForRemoveFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionInfoForRemoveFieldBuilder() {
         if (regionInfoForRemoveBuilder_ == null) {
-          regionInfoForRemoveBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionInfoForRemoveBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionInfoForRemove_,
                   ((bitField0_ & 0x00000010) == 0x00000010),
@@ -18696,7 +19148,6 @@ public final class MasterProcedureProtos {
         return regionInfoForRemoveBuilder_;
       }
 
-      // repeated .hbase.pb.RegionInfo region_info_for_add = 6;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfoForAdd_ =
         java.util.Collections.emptyList();
       private void ensureRegionInfoForAddIsMutable() {
@@ -18706,7 +19157,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionInfoForAddBuilder_;
 
       /**
@@ -18838,7 +19289,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionInfoForAddBuilder_ == null) {
           ensureRegionInfoForAddIsMutable();
-          super.addAll(values, regionInfoForAdd_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionInfoForAdd_);
           onChanged();
         } else {
           regionInfoForAddBuilder_.addAllMessages(values);
@@ -18921,11 +19373,11 @@ public final class MasterProcedureProtos {
            getRegionInfoForAddBuilderList() {
         return getRegionInfoForAddFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionInfoForAddFieldBuilder() {
         if (regionInfoForAddBuilder_ == null) {
-          regionInfoForAddBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionInfoForAddBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionInfoForAdd_,
                   ((bitField0_ & 0x00000020) == 0x00000020),
@@ -18936,7 +19388,6 @@ public final class MasterProcedureProtos {
         return regionInfoForAddBuilder_;
       }
 
-      // repeated .hbase.pb.RestoreParentToChildRegionsPair parent_to_child_regions_pair_list = 7;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair> parentToChildRegionsPairList_ =
         java.util.Collections.emptyList();
       private void ensureParentToChildRegionsPairListIsMutable() {
@@ -18946,7 +19397,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPairOrBuilder> parentToChildRegionsPairListBuilder_;
 
       /**
@@ -19078,7 +19529,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair> values) {
         if (parentToChildRegionsPairListBuilder_ == null) {
           ensureParentToChildRegionsPairListIsMutable();
-          super.addAll(values, parentToChildRegionsPairList_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parentToChildRegionsPairList_);
           onChanged();
         } else {
           parentToChildRegionsPairListBuilder_.addAllMessages(values);
@@ -19161,11 +19613,11 @@ public final class MasterProcedureProtos {
            getParentToChildRegionsPairListBuilderList() {
         return getParentToChildRegionsPairListFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPairOrBuilder> 
           getParentToChildRegionsPairListFieldBuilder() {
         if (parentToChildRegionsPairListBuilder_ == null) {
-          parentToChildRegionsPairListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          parentToChildRegionsPairListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPair.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreParentToChildRegionsPairOrBuilder>(
                   parentToChildRegionsPairList_,
                   ((bitField0_ & 0x00000040) == 0x00000040),
@@ -19175,22 +19627,59 @@ public final class MasterProcedureProtos {
         }
         return parentToChildRegionsPairListBuilder_;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.RestoreSnapshotStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.RestoreSnapshotStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new RestoreSnapshotStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.RestoreSnapshotStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<RestoreSnapshotStateData>
+        PARSER = new com.google.protobuf.AbstractParser<RestoreSnapshotStateData>() {
+      public RestoreSnapshotStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RestoreSnapshotStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RestoreSnapshotStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RestoreSnapshotStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.RestoreSnapshotStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface DispatchMergingRegionsStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface DispatchMergingRegionsStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.DispatchMergingRegionsStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.UserInformation user_info = 1;
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
@@ -19204,7 +19693,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder();
 
-    // required .hbase.pb.TableName table_name = 2;
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
@@ -19218,7 +19706,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder();
 
-    // repeated .hbase.pb.RegionInfo region_info = 3;
     /**
      * <code>repeated .hbase.pb.RegionInfo region_info = 3;</code>
      */
@@ -19243,7 +19730,6 @@ public final class MasterProcedureProtos {
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder getRegionInfoOrBuilder(
         int index);
 
-    // optional bool forcible = 4;
     /**
      * <code>optional bool forcible = 4;</code>
      */
@@ -19256,36 +19742,29 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.DispatchMergingRegionsStateData}
    */
-  public static final class DispatchMergingRegionsStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements DispatchMergingRegionsStateDataOrBuilder {
+  public  static final class DispatchMergingRegionsStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.DispatchMergingRegionsStateData)
+      DispatchMergingRegionsStateDataOrBuilder {
     // Use DispatchMergingRegionsStateData.newBuilder() to construct.
-    private DispatchMergingRegionsStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private DispatchMergingRegionsStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private DispatchMergingRegionsStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final DispatchMergingRegionsStateData defaultInstance;
-    public static DispatchMergingRegionsStateData getDefaultInstance() {
-      return defaultInstance;
+    private DispatchMergingRegionsStateData() {
+      regionInfo_ = java.util.Collections.emptyList();
+      forcible_ = false;
     }
 
-    public DispatchMergingRegionsStateData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private DispatchMergingRegionsStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -19335,7 +19814,8 @@ public final class MasterProcedureProtos {
                 regionInfo_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000004;
               }
-              regionInfo_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionInfo_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
             case 32: {
@@ -19349,7 +19829,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           regionInfo_ = java.util.Collections.unmodifiableList(regionInfo_);
@@ -19363,30 +19843,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DispatchMergingRegionsStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DispatchMergingRegionsStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<DispatchMergingRegionsStateData> PARSER =
-        new com.google.protobuf.AbstractParser<DispatchMergingRegionsStateData>() {
-      public DispatchMergingRegionsStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DispatchMergingRegionsStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DispatchMergingRegionsStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.UserInformation user_info = 1;
     public static final int USER_INFO_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_;
     /**
@@ -19399,16 +19863,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>required .hbase.pb.UserInformation user_info = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder getUserInfoOrBuilder() {
-      return userInfo_;
+      return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
     }
 
-    // required .hbase.pb.TableName table_name = 2;
     public static final int TABLE_NAME_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_;
     /**
@@ -19421,16 +19884,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
     /**
      * <code>required .hbase.pb.TableName table_name = 2;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder getTableNameOrBuilder() {
-      return tableName_;
+      return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
     }
 
-    // repeated .hbase.pb.RegionInfo region_info = 3;
     public static final int REGION_INFO_FIELD_NUMBER = 3;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_;
     /**
@@ -19466,7 +19928,6 @@ public final class MasterProcedureProtos {
       return regionInfo_.get(index);
     }
 
-    // optional bool forcible = 4;
     public static final int FORCIBLE_FIELD_NUMBER = 4;
     private boolean forcible_;
     /**
@@ -19482,16 +19943,11 @@ public final class MasterProcedureProtos {
       return forcible_;
     }
 
-    private void initFields() {
-      userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      regionInfo_ = java.util.Collections.emptyList();
-      forcible_ = false;
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUserInfo()) {
         memoizedIsInitialized = 0;
@@ -19521,12 +19977,11 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, userInfo_);
+        output.writeMessage(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, tableName_);
+        output.writeMessage(2, getTableName());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         output.writeMessage(3, regionInfo_.get(i));
@@ -19534,22 +19989,21 @@ public final class MasterProcedureProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBool(4, forcible_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_);
+          .computeMessageSize(1, getUserInfo());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, tableName_);
+          .computeMessageSize(2, getTableName());
       }
       for (int i = 0; i < regionInfo_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -19559,18 +20013,12 @@ public final class MasterProcedureProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, forcible_);
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -19599,12 +20047,10 @@ public final class MasterProcedureProtos {
         result = result && (getForcible()
             == other.getForcible());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -19626,9 +20072,10 @@ public final class MasterProcedureProtos {
       }
       if (hasForcible()) {
         hash = (37 * hash) + FORCIBLE_FIELD_NUMBER;
-        hash = (53 * hash) + hashBoolean(getForcible());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getForcible());
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -19656,46 +20103,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -19703,14 +20161,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.DispatchMergingRegionsStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.DispatchMergingRegionsStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DispatchMergingRegionsStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_DispatchMergingRegionsStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -19723,31 +20182,28 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getUserInfoFieldBuilder();
           getTableNameFieldBuilder();
           getRegionInfoFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
         } else {
           userInfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
         } else {
           tableNameBuilder_.clear();
         }
@@ -19761,10 +20217,6 @@ public final class MasterProcedureProtos {
         forcible_ = false;
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -19822,6 +20274,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData)other);
@@ -19858,7 +20336,7 @@ public final class MasterProcedureProtos {
               regionInfo_ = other.regionInfo_;
               bitField0_ = (bitField0_ & ~0x00000004);
               regionInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionInfoFieldBuilder() : null;
             } else {
               regionInfoBuilder_.addAllMessages(other.regionInfo_);
@@ -19868,30 +20346,26 @@ public final class MasterProcedureProtos {
         if (other.hasForcible()) {
           setForcible(other.getForcible());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasUserInfo()) {
-          
           return false;
         }
         if (!hasTableName()) {
-          
           return false;
         }
         if (!getUserInfo().isInitialized()) {
-          
           return false;
         }
         if (!getTableName().isInitialized()) {
-          
           return false;
         }
         for (int i = 0; i < getRegionInfoCount(); i++) {
           if (!getRegionInfo(i).isInitialized()) {
-            
             return false;
           }
         }
@@ -19907,7 +20381,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -19917,9 +20391,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.UserInformation user_info = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation userInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> userInfoBuilder_;
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
@@ -19932,7 +20405,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_;
+          return userInfo_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -19973,6 +20446,7 @@ public final class MasterProcedureProtos {
       public Builder mergeUserInfo(org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation value) {
         if (userInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              userInfo_ != null &&
               userInfo_ != org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance()) {
             userInfo_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.newBuilder(userInfo_).mergeFrom(value).buildPartial();
@@ -19991,7 +20465,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearUserInfo() {
         if (userInfoBuilder_ == null) {
-          userInfo_ = org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance();
+          userInfo_ = null;
           onChanged();
         } else {
           userInfoBuilder_.clear();
@@ -20014,19 +20488,20 @@ public final class MasterProcedureProtos {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
-          return userInfo_;
+          return userInfo_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>required .hbase.pb.UserInformation user_info = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder> 
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformation.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.UserInformationOrBuilder>(
-                  userInfo_,
+                  getUserInfo(),
                   getParentForChildren(),
                   isClean());
           userInfo_ = null;
@@ -20034,9 +20509,8 @@ public final class MasterProcedureProtos {
         return userInfoBuilder_;
       }
 
-      // required .hbase.pb.TableName table_name = 2;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName tableName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> tableNameBuilder_;
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
@@ -20049,7 +20523,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName getTableName() {
         if (tableNameBuilder_ == null) {
-          return tableName_;
+          return tableName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         } else {
           return tableNameBuilder_.getMessage();
         }
@@ -20090,6 +20564,7 @@ public final class MasterProcedureProtos {
       public Builder mergeTableName(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName value) {
         if (tableNameBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              tableName_ != null &&
               tableName_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance()) {
             tableName_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.newBuilder(tableName_).mergeFrom(value).buildPartial();
@@ -20108,7 +20583,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearTableName() {
         if (tableNameBuilder_ == null) {
-          tableName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance();
+          tableName_ = null;
           onChanged();
         } else {
           tableNameBuilder_.clear();
@@ -20131,19 +20606,20 @@ public final class MasterProcedureProtos {
         if (tableNameBuilder_ != null) {
           return tableNameBuilder_.getMessageOrBuilder();
         } else {
-          return tableName_;
+          return tableName_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.getDefaultInstance() : tableName_;
         }
       }
       /**
        * <code>required .hbase.pb.TableName table_name = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder> 
           getTableNameFieldBuilder() {
         if (tableNameBuilder_ == null) {
-          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tableNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.TableNameOrBuilder>(
-                  tableName_,
+                  getTableName(),
                   getParentForChildren(),
                   isClean());
           tableName_ = null;
@@ -20151,7 +20627,6 @@ public final class MasterProcedureProtos {
         return tableNameBuilder_;
       }
 
-      // repeated .hbase.pb.RegionInfo region_info = 3;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionInfo_ =
         java.util.Collections.emptyList();
       private void ensureRegionInfoIsMutable() {
@@ -20161,7 +20636,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionInfoBuilder_;
 
       /**
@@ -20293,7 +20768,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionInfoBuilder_ == null) {
           ensureRegionInfoIsMutable();
-          super.addAll(values, regionInfo_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionInfo_);
           onChanged();
         } else {
           regionInfoBuilder_.addAllMessages(values);
@@ -20376,11 +20852,11 @@ public final class MasterProcedureProtos {
            getRegionInfoBuilderList() {
         return getRegionInfoFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionInfoFieldBuilder() {
         if (regionInfoBuilder_ == null) {
-          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionInfo_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
@@ -20391,7 +20867,6 @@ public final class MasterProcedureProtos {
         return regionInfoBuilder_;
       }
 
-      // optional bool forcible = 4;
       private boolean forcible_ ;
       /**
        * <code>optional bool forcible = 4;</code>
@@ -20423,22 +20898,59 @@ public final class MasterProcedureProtos {
         onChanged();
         return this;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.DispatchMergingRegionsStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.DispatchMergingRegionsStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new DispatchMergingRegionsStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.DispatchMergingRegionsStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DispatchMergingRegionsStateData>
+        PARSER = new com.google.protobuf.AbstractParser<DispatchMergingRegionsStateData>() {
+      public DispatchMergingRegionsStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DispatchMergingRegionsStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DispatchMergingRegionsStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DispatchMergingRegionsStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.DispatchMergingRegionsStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public interface ServerCrashStateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ServerCrashStateDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hbase.pb.ServerCrashStateData)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .hbase.pb.ServerName server_name = 1;
     /**
      * <code>required .hbase.pb.ServerName server_name = 1;</code>
      */
@@ -20452,7 +20964,6 @@ public final class MasterProcedureProtos {
      */
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerNameOrBuilder getServerNameOrBuilder();
 
-    // optional bool distributed_log_replay = 2;
     /**
      * <code>optional bool distributed_log_replay = 2;</code>
      */
@@ -20462,7 +20973,6 @@ public final class MasterProcedureProtos {
      */
     boolean getDistributedLogReplay();
 
-    // repeated .hbase.pb.RegionInfo regions_on_crashed_server = 3;
     /**
      * <code>repeated .hbase.pb.RegionInfo regions_on_crashed_server = 3;</code>
      */
@@ -20487,7 +20997,6 @@ public final class MasterProcedureProtos {
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder getRegionsOnCrashedServerOrBuilder(
         int index);
 
-    // repeated .hbase.pb.RegionInfo regions_assigned = 4;
     /**
      * <code>repeated .hbase.pb.RegionInfo regions_assigned = 4;</code>
      */
@@ -20512,7 +21021,6 @@ public final class MasterProcedureProtos {
     org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder getRegionsAssignedOrBuilder(
         int index);
 
-    // optional bool carrying_meta = 5;
     /**
      * <code>optional bool carrying_meta = 5;</code>
      */
@@ -20522,7 +21030,6 @@ public final class MasterProcedureProtos {
      */
     boolean getCarryingMeta();
 
-    // optional bool should_split_wal = 6 [default = true];
     /**
      * <code>optional bool should_split_wal = 6 [default = true];</code>
      */
@@ -20535,36 +21042,32 @@ public final class MasterProcedureProtos {
   /**
    * Protobuf type {@code hbase.pb.ServerCrashStateData}
    */
-  public static final class ServerCrashStateData extends
-      com.google.protobuf.GeneratedMessage
-      implements ServerCrashStateDataOrBuilder {
+  public  static final class ServerCrashStateData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hbase.pb.ServerCrashStateData)
+      ServerCrashStateDataOrBuilder {
     // Use ServerCrashStateData.newBuilder() to construct.
-    private ServerCrashStateData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private ServerCrashStateData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private ServerCrashStateData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final ServerCrashStateData defaultInstance;
-    public static ServerCrashStateData getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public ServerCrashStateData getDefaultInstanceForType() {
-      return defaultInstance;
+    private ServerCrashStateData() {
+      distributedLogReplay_ = false;
+      regionsOnCrashedServer_ = java.util.Collections.emptyList();
+      regionsAssigned_ = java.util.Collections.emptyList();
+      carryingMeta_ = false;
+      shouldSplitWal_ = true;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
+    getUnknownFields() {
       return this.unknownFields;
     }
     private ServerCrashStateData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -20606,7 +21109,8 @@ public final class MasterProcedureProtos {
                 regionsOnCrashedServer_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000004;
               }
-              regionsOnCrashedServer_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionsOnCrashedServer_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
             case 34: {
@@ -20614,7 +21118,8 @@ public final class MasterProcedureProtos {
                 regionsAssigned_ = new java.util.ArrayList<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              regionsAssigned_.add(input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
+              regionsAssigned_.add(
+                  input.readMessage(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.PARSER, extensionRegistry));
               break;
             }
             case 40: {
@@ -20633,7 +21138,7 @@ public final class MasterProcedureProtos {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           regionsOnCrashedServer_ = java.util.Collections.unmodifiableList(regionsOnCrashedServer_);
@@ -20650,30 +21155,14 @@ public final class MasterProcedureProtos {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ServerCrashStateData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ServerCrashStateData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData.class, org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<ServerCrashStateData> PARSER =
-        new com.google.protobuf.AbstractParser<ServerCrashStateData>() {
-      public ServerCrashStateData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ServerCrashStateData(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ServerCrashStateData> getParserForType() {
-      return PARSER;
-    }
-
     private int bitField0_;
-    // required .hbase.pb.ServerName server_name = 1;
     public static final int SERVER_NAME_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName serverName_;
     /**
@@ -20686,16 +21175,15 @@ public final class MasterProcedureProtos {
      * <code>required .hbase.pb.ServerName server_name = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName getServerName() {
-      return serverName_;
+      return serverName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.getDefaultInstance() : serverName_;
     }
     /**
      * <code>required .hbase.pb.ServerName server_name = 1;</code>
      */
     public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerNameOrBuilder getServerNameOrBuilder() {
-      return serverName_;
+      return serverName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.getDefaultInstance() : serverName_;
     }
 
-    // optional bool distributed_log_replay = 2;
     public static final int DISTRIBUTED_LOG_REPLAY_FIELD_NUMBER = 2;
     private boolean distributedLogReplay_;
     /**
@@ -20711,7 +21199,6 @@ public final class MasterProcedureProtos {
       return distributedLogReplay_;
     }
 
-    // repeated .hbase.pb.RegionInfo regions_on_crashed_server = 3;
     public static final int REGIONS_ON_CRASHED_SERVER_FIELD_NUMBER = 3;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionsOnCrashedServer_;
     /**
@@ -20747,7 +21234,6 @@ public final class MasterProcedureProtos {
       return regionsOnCrashedServer_.get(index);
     }
 
-    // repeated .hbase.pb.RegionInfo regions_assigned = 4;
     public static final int REGIONS_ASSIGNED_FIELD_NUMBER = 4;
     private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionsAssigned_;
     /**
@@ -20783,7 +21269,6 @@ public final class MasterProcedureProtos {
       return regionsAssigned_.get(index);
     }
 
-    // optional bool carrying_meta = 5;
     public static final int CARRYING_META_FIELD_NUMBER = 5;
     private boolean carryingMeta_;
     /**
@@ -20799,7 +21284,6 @@ public final class MasterProcedureProtos {
       return carryingMeta_;
     }
 
-    // optional bool should_split_wal = 6 [default = true];
     public static final int SHOULD_SPLIT_WAL_FIELD_NUMBER = 6;
     private boolean shouldSplitWal_;
     /**
@@ -20815,18 +21299,11 @@ public final class MasterProcedureProtos {
       return shouldSplitWal_;
     }
 
-    private void initFields() {
-      serverName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.getDefaultInstance();
-      distributedLogReplay_ = false;
-      regionsOnCrashedServer_ = java.util.Collections.emptyList();
-      regionsAssigned_ = java.util.Collections.emptyList();
-      carryingMeta_ = false;
-      shouldSplitWal_ = true;
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasServerName()) {
         memoizedIsInitialized = 0;
@@ -20854,9 +21331,8 @@ public final class MasterProcedureProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, serverName_);
+        output.writeMessage(1, getServerName());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBool(2, distributedLogReplay_);
@@ -20873,18 +21349,17 @@ public final class MasterProcedureProtos {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBool(6, shouldSplitWal_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, serverName_);
+          .computeMessageSize(1, getServerName());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -20906,18 +21381,12 @@ public final class MasterProcedureProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, shouldSplitWal_);
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -20953,12 +21422,10 @@ public final class MasterProcedureProtos {
         result = result && (getShouldSplitWal()
             == other.getShouldSplitWal());
       }
-      result = result &&
-          getUnknownFields().equals(other.getUnknownFields());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    private int memoizedHashCode = 0;
     @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
@@ -20972,7 +21439,8 @@ public final class MasterProcedureProtos {
       }
       if (hasDistributedLogReplay()) {
         hash = (37 * hash) + DISTRIBUTED_LOG_REPLAY_FIELD_NUMBER;
-        hash = (53 * hash) + hashBoolean(getDistributedLogReplay());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDistributedLogReplay());
       }
       if (getRegionsOnCrashedServerCount() > 0) {
         hash = (37 * hash) + REGIONS_ON_CRASHED_SERVER_FIELD_NUMBER;
@@ -20984,13 +21452,15 @@ public final class MasterProcedureProtos {
       }
       if (hasCarryingMeta()) {
         hash = (37 * hash) + CARRYING_META_FIELD_NUMBER;
-        hash = (53 * hash) + hashBoolean(getCarryingMeta());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCarryingMeta());
       }
       if (hasShouldSplitWal()) {
         hash = (37 * hash) + SHOULD_SPLIT_WAL_FIELD_NUMBER;
-        hash = (53 * hash) + hashBoolean(getShouldSplitWal());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getShouldSplitWal());
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -21018,46 +21488,57 @@ public final class MasterProcedureProtos {
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -21065,14 +21546,15 @@ public final class MasterProcedureProtos {
      * Protobuf type {@code hbase.pb.ServerCrashStateData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateDataOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hbase.pb.ServerCrashStateData)
+        org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ServerCrashStateData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.internal_static_hbase_pb_ServerCrashStateData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -21085,25 +21567,22 @@ public final class MasterProcedureProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getServerNameFieldBuilder();
           getRegionsOnCrashedServerFieldBuilder();
           getRegionsAssignedFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         if (serverNameBuilder_ == null) {
-          serverName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.getDefaultInstance();
+          serverName_ = null;
         } else {
           serverNameBuilder_.clear();
         }
@@ -21127,10 +21606,6 @@ public final class MasterProcedureProtos {
         shouldSplitWal_ = true;
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -21197,6 +21672,32 @@ public final class MasterProcedureProtos {
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData)other);
@@ -21233,7 +21734,7 @@ public final class MasterProcedureProtos {
               regionsOnCrashedServer_ = other.regionsOnCrashedServer_;
               bitField0_ = (bitField0_ & ~0x00000004);
               regionsOnCrashedServerBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionsOnCrashedServerFieldBuilder() : null;
             } else {
               regionsOnCrashedServerBuilder_.addAllMessages(other.regionsOnCrashedServer_);
@@ -21259,7 +21760,7 @@ public final class MasterProcedureProtos {
               regionsAssigned_ = other.regionsAssigned_;
               bitField0_ = (bitField0_ & ~0x00000008);
               regionsAssignedBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRegionsAssignedFieldBuilder() : null;
             } else {
               regionsAssignedBuilder_.addAllMessages(other.regionsAssigned_);
@@ -21272,28 +21773,25 @@ public final class MasterProcedureProtos {
         if (other.hasShouldSplitWal()) {
           setShouldSplitWal(other.getShouldSplitWal());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasServerName()) {
-          
           return false;
         }
         if (!getServerName().isInitialized()) {
-          
           return false;
         }
         for (int i = 0; i < getRegionsOnCrashedServerCount(); i++) {
           if (!getRegionsOnCrashedServer(i).isInitialized()) {
-            
             return false;
           }
         }
         for (int i = 0; i < getRegionsAssignedCount(); i++) {
           if (!getRegionsAssigned(i).isInitialized()) {
-            
             return false;
           }
         }
@@ -21309,7 +21807,7 @@ public final class MasterProcedureProtos {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -21319,9 +21817,8 @@ public final class MasterProcedureProtos {
       }
       private int bitField0_;
 
-      // required .hbase.pb.ServerName server_name = 1;
-      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName serverName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName serverName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerNameOrBuilder> serverNameBuilder_;
       /**
        * <code>required .hbase.pb.ServerName server_name = 1;</code>
@@ -21334,7 +21831,7 @@ public final class MasterProcedureProtos {
        */
       public org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName getServerName() {
         if (serverNameBuilder_ == null) {
-          return serverName_;
+          return serverName_ == null ? org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.getDefaultInstance() : serverName_;
         } else {
           return serverNameBuilder_.getMessage();
         }
@@ -21375,6 +21872,7 @@ public final class MasterProcedureProtos {
       public Builder mergeServerName(org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName value) {
         if (serverNameBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              serverName_ != null &&
               serverName_ != org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.getDefaultInstance()) {
             serverName_ =
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.newBuilder(serverName_).mergeFrom(value).buildPartial();
@@ -21393,7 +21891,7 @@ public final class MasterProcedureProtos {
        */
       public Builder clearServerName() {
         if (serverNameBuilder_ == null) {
-          serverName_ = org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.getDefaultInstance();
+          serverName_ = null;
           onChanged();
         } else {
           serverNameBuilder_.clear();
@@ -21416,19 +21914,20 @@ public final class MasterProcedureProtos {
         if (serverNameBuilder_ != null) {
           return serverNameBuilder_.getMessageOrBuilder();
         } else {
-          return serverName_;
+          return serverName_ == null ?
+              org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.getDefaultInstance() : serverName_;
         }
       }
       /**
        * <code>required .hbase.pb.ServerName server_name = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerNameOrBuilder> 
           getServerNameFieldBuilder() {
         if (serverNameBuilder_ == null) {
-          serverNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          serverNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerName.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.ServerNameOrBuilder>(
-                  serverName_,
+                  getServerName(),
                   getParentForChildren(),
                   isClean());
           serverName_ = null;
@@ -21436,7 +21935,6 @@ public final class MasterProcedureProtos {
         return serverNameBuilder_;
       }
 
-      // optional bool distributed_log_replay = 2;
       private boolean distributedLogReplay_ ;
       /**
        * <code>optional bool distributed_log_replay = 2;</code>
@@ -21469,7 +21967,6 @@ public final class MasterProcedureProtos {
         return this;
       }
 
-      // repeated .hbase.pb.RegionInfo regions_on_crashed_server = 3;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionsOnCrashedServer_ =
         java.util.Collections.emptyList();
       private void ensureRegionsOnCrashedServerIsMutable() {
@@ -21479,7 +21976,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionsOnCrashedServerBuilder_;
 
       /**
@@ -21611,7 +22108,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionsOnCrashedServerBuilder_ == null) {
           ensureRegionsOnCrashedServerIsMutable();
-          super.addAll(values, regionsOnCrashedServer_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionsOnCrashedServer_);
           onChanged();
         } else {
           regionsOnCrashedServerBuilder_.addAllMessages(values);
@@ -21694,11 +22192,11 @@ public final class MasterProcedureProtos {
            getRegionsOnCrashedServerBuilderList() {
         return getRegionsOnCrashedServerFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionsOnCrashedServerFieldBuilder() {
         if (regionsOnCrashedServerBuilder_ == null) {
-          regionsOnCrashedServerBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionsOnCrashedServerBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionsOnCrashedServer_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
@@ -21709,7 +22207,6 @@ public final class MasterProcedureProtos {
         return regionsOnCrashedServerBuilder_;
       }
 
-      // repeated .hbase.pb.RegionInfo regions_assigned = 4;
       private java.util.List<org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> regionsAssigned_ =
         java.util.Collections.emptyList();
       private void ensureRegionsAssignedIsMutable() {
@@ -21719,7 +22216,7 @@ public final class MasterProcedureProtos {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> regionsAssignedBuilder_;
 
       /**
@@ -21851,7 +22348,8 @@ public final class MasterProcedureProtos {
           java.lang.Iterable<? extends org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo> values) {
         if (regionsAssignedBuilder_ == null) {
           ensureRegionsAssignedIsMutable();
-          super.addAll(values, regionsAssigned_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, regionsAssigned_);
           onChanged();
         } else {
           regionsAssignedBuilder_.addAllMessages(values);
@@ -21934,11 +22432,11 @@ public final class MasterProcedureProtos {
            getRegionsAssignedBuilderList() {
         return getRegionsAssignedFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder> 
           getRegionsAssignedFieldBuilder() {
         if (regionsAssignedBuilder_ == null) {
-          regionsAssignedBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          regionsAssignedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo.Builder, org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfoOrBuilder>(
                   regionsAssigned_,
                   ((bitField0_ & 0x00000008) == 0x00000008),
@@ -21949,7 +22447,6 @@ public final class MasterProcedureProtos {
         return regionsAssignedBuilder_;
       }
 
-      // optional bool carrying_meta = 5;
       private boolean carryingMeta_ ;
       /**
        * <code>optional bool carrying_meta = 5;</code>
@@ -21982,7 +22479,6 @@ public final class MasterProcedureProtos {
         return this;
       }
 
-      // optional bool should_split_wal = 6 [default = true];
       private boolean shouldSplitWal_ = true;
       /**
        * <code>optional bool should_split_wal = 6 [default = true];</code>
@@ -22014,109 +22510,146 @@ public final class MasterProcedureProtos {
         onChanged();
         return this;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
 
       // @@protoc_insertion_point(builder_scope:hbase.pb.ServerCrashStateData)
     }
 
+    // @@protoc_insertion_point(class_scope:hbase.pb.ServerCrashStateData)
+    private static final org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData DEFAULT_INSTANCE;
     static {
-      defaultInstance = new ServerCrashStateData(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData();
     }
 
-    // @@protoc_insertion_point(class_scope:hbase.pb.ServerCrashStateData)
+    public static org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ServerCrashStateData>
+        PARSER = new com.google.protobuf.AbstractParser<ServerCrashStateData>() {
+      public ServerCrashStateData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ServerCrashStateData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ServerCrashStateData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ServerCrashStateData> getParserForType() {
+      return PARSER;
+    }
+
+    public org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProcedureProtos.ServerCrashStateData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_CreateTableStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_CreateTableStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_ModifyTableStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_ModifyTableStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_TruncateTableStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_TruncateTableStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_DeleteTableStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_DeleteTableStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_CreateNamespaceStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_CreateNamespaceStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_ModifyNamespaceStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_ModifyNamespaceStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_DeleteNamespaceStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_DeleteNamespaceStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_AddColumnFamilyStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_AddColumnFamilyStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_ModifyColumnFamilyStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_ModifyColumnFamilyStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_DeleteColumnFamilyStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_DeleteColumnFamilyStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_EnableTableStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_EnableTableStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_DisableTableStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_DisableTableStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_RestoreParentToChildRegionsPair_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_RestoreParentToChildRegionsPair_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_CloneSnapshotStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_CloneSnapshotStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_RestoreSnapshotStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_RestoreSnapshotStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_DispatchMergingRegionsStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_DispatchMergingRegionsStateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_ServerCrashStateData_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_ServerCrashStateData_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -22303,121 +22836,123 @@ public final class MasterProcedureProtos {
       "ureProtosH\001\210\001\001\240\001\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_hbase_pb_CreateTableStateData_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_hbase_pb_CreateTableStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_CreateTableStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "TableSchema", "RegionInfo", });
-          internal_static_hbase_pb_ModifyTableStateData_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_hbase_pb_ModifyTableStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_ModifyTableStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "UnmodifiedTableSchema", "ModifiedTableSchema", "DeleteColumnFamilyInModify", });
-          internal_static_hbase_pb_TruncateTableStateData_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_hbase_pb_TruncateTableStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_TruncateTableStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "PreserveSplits", "TableName", "TableSchema", "RegionInfo", });
-          internal_static_hbase_pb_DeleteTableStateData_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_hbase_pb_DeleteTableStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_DeleteTableStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "TableName", "RegionInfo", });
-          internal_static_hbase_pb_CreateNamespaceStateData_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_hbase_pb_CreateNamespaceStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_CreateNamespaceStateData_descriptor,
-              new java.lang.String[] { "NamespaceDescriptor", });
-          internal_static_hbase_pb_ModifyNamespaceStateData_descriptor =
-            getDescriptor().getMessageTypes().get(5);
-          internal_static_hbase_pb_ModifyNamespaceStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_ModifyNamespaceStateData_descriptor,
-              new java.lang.String[] { "NamespaceDescriptor", "UnmodifiedNamespaceDescriptor", });
-          internal_static_hbase_pb_DeleteNamespaceStateData_descriptor =
-            getDescriptor().getMessageTypes().get(6);
-          internal_static_hbase_pb_DeleteNamespaceStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_DeleteNamespaceStateData_descriptor,
-              new java.lang.String[] { "NamespaceName", "NamespaceDescriptor", });
-          internal_static_hbase_pb_AddColumnFamilyStateData_descriptor =
-            getDescriptor().getMessageTypes().get(7);
-          internal_static_hbase_pb_AddColumnFamilyStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_AddColumnFamilyStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "TableName", "ColumnfamilySchema", "UnmodifiedTableSchema", });
-          internal_static_hbase_pb_ModifyColumnFamilyStateData_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_hbase_pb_ModifyColumnFamilyStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_ModifyColumnFamilyStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "TableName", "ColumnfamilySchema", "UnmodifiedTableSchema", });
-          internal_static_hbase_pb_DeleteColumnFamilyStateData_descriptor =
-            getDescriptor().getMessageTypes().get(9);
-          internal_static_hbase_pb_DeleteColumnFamilyStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_DeleteColumnFamilyStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "TableName", "ColumnfamilyName", "UnmodifiedTableSchema", });
-          internal_static_hbase_pb_EnableTableStateData_descriptor =
-            getDescriptor().getMessageTypes().get(10);
-          internal_static_hbase_pb_EnableTableStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_EnableTableStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "TableName", "SkipTableStateCheck", });
-          internal_static_hbase_pb_DisableTableStateData_descriptor =
-            getDescriptor().getMessageTypes().get(11);
-          internal_static_hbase_pb_DisableTableStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_DisableTableStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "TableName", "SkipTableStateCheck", });
-          internal_static_hbase_pb_RestoreParentToChildRegionsPair_descriptor =
-            getDescriptor().getMessageTypes().get(12);
-          internal_static_hbase_pb_RestoreParentToChildRegionsPair_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_RestoreParentToChildRegionsPair_descriptor,
-              new java.lang.String[] { "ParentRegionName", "Child1RegionName", "Child2RegionName", });
-          internal_static_hbase_pb_CloneSnapshotStateData_descriptor =
-            getDescriptor().getMessageTypes().get(13);
-          internal_static_hbase_pb_CloneSnapshotStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_CloneSnapshotStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "Snapshot", "TableSchema", "RegionInfo", "ParentToChildRegionsPairList", });
-          internal_static_hbase_pb_RestoreSnapshotStateData_descriptor =
-            getDescriptor().getMessageTypes().get(14);
-          internal_static_hbase_pb_RestoreSnapshotStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_RestoreSnapshotStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "Snapshot", "ModifiedTableSchema", "RegionInfoForRestore", "RegionInfoForRemove", "RegionInfoForAdd", "ParentToChildRegionsPairList", });
-          internal_static_hbase_pb_DispatchMergingRegionsStateData_descriptor =
-            getDescriptor().getMessageTypes().get(15);
-          internal_static_hbase_pb_DispatchMergingRegionsStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_DispatchMergingRegionsStateData_descriptor,
-              new java.lang.String[] { "UserInfo", "TableName", "RegionInfo", "Forcible", });
-          internal_static_hbase_pb_ServerCrashStateData_descriptor =
-            getDescriptor().getMessageTypes().get(16);
-          internal_static_hbase_pb_ServerCrashStateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_hbase_pb_ServerCrashStateData_descriptor,
-              new java.lang.String[] { "ServerName", "DistributedLogReplay", "RegionsOnCrashedServer", "RegionsAssigned", "CarryingMeta", "ShouldSplitWal", });
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.getDescriptor(),
           org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.getDescriptor(),
         }, assigner);
+    internal_static_hbase_pb_CreateTableStateData_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_hbase_pb_CreateTableStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_CreateTableStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "TableSchema", "RegionInfo", });
+    internal_static_hbase_pb_ModifyTableStateData_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_hbase_pb_ModifyTableStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_ModifyTableStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "UnmodifiedTableSchema", "ModifiedTableSchema", "DeleteColumnFamilyInModify", });
+    internal_static_hbase_pb_TruncateTableStateData_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_hbase_pb_TruncateTableStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_TruncateTableStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "PreserveSplits", "TableName", "TableSchema", "RegionInfo", });
+    internal_static_hbase_pb_DeleteTableStateData_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_hbase_pb_DeleteTableStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_DeleteTableStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "TableName", "RegionInfo", });
+    internal_static_hbase_pb_CreateNamespaceStateData_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_hbase_pb_CreateNamespaceStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_CreateNamespaceStateData_descriptor,
+        new java.lang.String[] { "NamespaceDescriptor", });
+    internal_static_hbase_pb_ModifyNamespaceStateData_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_hbase_pb_ModifyNamespaceStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_ModifyNamespaceStateData_descriptor,
+        new java.lang.String[] { "NamespaceDescriptor", "UnmodifiedNamespaceDescriptor", });
+    internal_static_hbase_pb_DeleteNamespaceStateData_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_hbase_pb_DeleteNamespaceStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_DeleteNamespaceStateData_descriptor,
+        new java.lang.String[] { "NamespaceName", "NamespaceDescriptor", });
+    internal_static_hbase_pb_AddColumnFamilyStateData_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_hbase_pb_AddColumnFamilyStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_AddColumnFamilyStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "TableName", "ColumnfamilySchema", "UnmodifiedTableSchema", });
+    internal_static_hbase_pb_ModifyColumnFamilyStateData_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_hbase_pb_ModifyColumnFamilyStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_ModifyColumnFamilyStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "TableName", "ColumnfamilySchema", "UnmodifiedTableSchema", });
+    internal_static_hbase_pb_DeleteColumnFamilyStateData_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_hbase_pb_DeleteColumnFamilyStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_DeleteColumnFamilyStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "TableName", "ColumnfamilyName", "UnmodifiedTableSchema", });
+    internal_static_hbase_pb_EnableTableStateData_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_hbase_pb_EnableTableStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_EnableTableStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "TableName", "SkipTableStateCheck", });
+    internal_static_hbase_pb_DisableTableStateData_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_hbase_pb_DisableTableStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_DisableTableStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "TableName", "SkipTableStateCheck", });
+    internal_static_hbase_pb_RestoreParentToChildRegionsPair_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_hbase_pb_RestoreParentToChildRegionsPair_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_RestoreParentToChildRegionsPair_descriptor,
+        new java.lang.String[] { "ParentRegionName", "Child1RegionName", "Child2RegionName", });
+    internal_static_hbase_pb_CloneSnapshotStateData_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_hbase_pb_CloneSnapshotStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_CloneSnapshotStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "Snapshot", "TableSchema", "RegionInfo", "ParentToChildRegionsPairList", });
+    internal_static_hbase_pb_RestoreSnapshotStateData_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_hbase_pb_RestoreSnapshotStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_RestoreSnapshotStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "Snapshot", "ModifiedTableSchema", "RegionInfoForRestore", "RegionInfoForRemove", "RegionInfoForAdd", "ParentToChildRegionsPairList", });
+    internal_static_hbase_pb_DispatchMergingRegionsStateData_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_hbase_pb_DispatchMergingRegionsStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_DispatchMergingRegionsStateData_descriptor,
+        new java.lang.String[] { "UserInfo", "TableName", "RegionInfo", "Forcible", });
+    internal_static_hbase_pb_ServerCrashStateData_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_hbase_pb_ServerCrashStateData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hbase_pb_ServerCrashStateData_descriptor,
+        new java.lang.String[] { "ServerName", "DistributedLogReplay", "RegionsOnCrashedServer", "RegionsAssigned", "CarryingMeta", "ShouldSplitWal", });
+    org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.getDescriptor();
+    org.apache.hadoop.hbase.shaded.protobuf.generated.RPCProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
