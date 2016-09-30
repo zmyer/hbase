@@ -1,41 +1,44 @@
-These are the protobuf definition files used by core hbase. This modules
-does shading of all to do with protobuf. All of core relies on this module.
-All core references in core to protobuf are to the protobuf this module
-includes but offset by the package prefix of org.apache.hadoop.hbase.shaded.*
-as in org.apache.hadoop.hbase.shaded.protobuf.generated.* and
-org.apache.hadoop.hbase.shaded.com.google.protobuf.*.
+Please read carefully as the 'menu options' have changed.
 
-NOTE: the .protos in here are copied in an adjacent module, hbase-protocol.
-There they are non-shaded. If you make changes here, consider making them
-over in the adjacent module too. Be careful, the .proto files are not
-exactly the same; they differ in one line at least -- the location the file
-gets generated to; i.e. those in here get the extra 'shaded' in their
-package name.
+This module has proto files used by core. These protos
+overlap with protos that are used by coprocessor endpoints
+(CPEP) in the module hbase-protocol. So the core versions have
+a different name, the generated classes are relocated
+-- i.e. shaded -- to a new location; they are moved from
+org.apache.hadoop.hbase.* to org.apache.hadoop.hbase.shaded.
 
-The produced java classes are generated and then checked in. The reasoning
-is that they change infrequently.
+This module also includes the protobuf that hbase core depends
+on again relocated to live at an offset of
+org.apache.hadoop.hbase.shaded so as to avoid clashes with other
+versions of protobuf resident on our CLASSPATH included,
+transitively or otherwise, by dependencies: i.e. the shaded
+protobuf Message class is at
+org.apache.hadoop.hbase.shaded.com.google.protobuf.Message
+rather than at com.google.protobuf.Message.
 
-To regenerate the classes after making definition file changes, ensure first that
-the protobuf protoc tool is in your $PATH. You may need to download it and build
-it first; its part of the protobuf package. For example, if using v2.5.0 of
-protobuf, it is obtainable from here:
+Below we describe how to generate the java files for this
+module. Run this step any time you change the proto files
+in this module or if you change the protobuf version. If you
+add a new file, be sure to add mention of the proto in the
+pom.xml (scroll till you see the listing of protos to consider).
 
- https://github.com/google/protobuf/releases/tag/v2.5.0
+First ensure that the appropriate protobuf protoc tool is in
+your $PATH (or pass -Dprotoc.path=PATH_TO_PROTOC when running
+the below mvn commands). You may need to download protobuf and
+build protoc first.
 
-HBase uses hadoop-maven-plugins:protoc goal to invoke the protoc command. You can
-compile the protoc definitions by invoking maven with profile compile-protobuf or
-passing in compile-protobuf property.
+Run:
 
-mvn compile -Dcompile-protobuf
+ $ mvn install -Dgenerate-shaded-classes
+
 or
-mvn compile -Pcompile-protobuf
 
-You may also want to define protoc.path for the protoc binary
+ $ mvn install -Pgenerate-shaded-classes
 
-mvn compile -Dcompile-protobuf -Dprotoc.path=/opt/local/bin/protoc
+to build and trigger the special generate-shaded-classes
+profile. When finished, the content of
+src/main/java/org/apache/hadoop/hbase/shaded will have
+been updated. Check in the changes.
 
-If you have added a new proto file, you should add it to the pom.xml file first.
-Other modules also support the maven profile.
-
-After you've done the above, check it in and then check it in (or post a patch
-on a JIRA with your definition file changes and the generated files).
+See the pom.xml under the generate-shaded-classes profile
+for more info on how this step works.

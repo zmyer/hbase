@@ -102,6 +102,7 @@ import org.apache.hadoop.hbase.shaded.com.google.protobuf.RpcController;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.Service;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.ServiceException;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.TextFormat;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.AdminService;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.CloseRegionRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.CloseRegionResponse;
@@ -159,7 +160,6 @@ import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos.FlushDescript
 import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos.RegionEventDescriptor;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos.RegionEventDescriptor.EventType;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.WALProtos.StoreDescriptor;
-import org.apache.hadoop.hbase.shaded.util.ByteStringer;
 import org.apache.hadoop.hbase.util.Addressing;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.DynamicClassLoader;
@@ -311,7 +311,7 @@ public final class ProtobufUtil {
   public static ComparatorProtos.ByteArrayComparable toByteArrayComparable(final byte [] value) {
     ComparatorProtos.ByteArrayComparable.Builder builder =
       ComparatorProtos.ByteArrayComparable.newBuilder();
-    if (value != null) builder.setValue(ByteStringer.wrap(value));
+    if (value != null) builder.setValue(UnsafeByteOperations.unsafeWrap(value));
     return builder.build();
   }
 
@@ -949,7 +949,7 @@ public final class ProtobufUtil {
     scanBuilder.setMaxVersions(scan.getMaxVersions());
     for (Entry<byte[], TimeRange> cftr : scan.getColumnFamilyTimeRange().entrySet()) {
       HBaseProtos.ColumnFamilyTimeRange.Builder b = HBaseProtos.ColumnFamilyTimeRange.newBuilder();
-      b.setColumnFamily(ByteStringer.wrap(cftr.getKey()));
+      b.setColumnFamily(UnsafeByteOperations.unsafeWrap(cftr.getKey()));
       b.setTimeRange(timeRangeToProto(cftr.getValue()));
       scanBuilder.addCfTimeRange(b);
     }
@@ -966,17 +966,17 @@ public final class ProtobufUtil {
       NameBytesPair.Builder attributeBuilder = NameBytesPair.newBuilder();
       for (Map.Entry<String, byte[]> attribute: attributes.entrySet()) {
         attributeBuilder.setName(attribute.getKey());
-        attributeBuilder.setValue(ByteStringer.wrap(attribute.getValue()));
+        attributeBuilder.setValue(UnsafeByteOperations.unsafeWrap(attribute.getValue()));
         scanBuilder.addAttribute(attributeBuilder.build());
       }
     }
     byte[] startRow = scan.getStartRow();
     if (startRow != null && startRow.length > 0) {
-      scanBuilder.setStartRow(ByteStringer.wrap(startRow));
+      scanBuilder.setStartRow(UnsafeByteOperations.unsafeWrap(startRow));
     }
     byte[] stopRow = scan.getStopRow();
     if (stopRow != null && stopRow.length > 0) {
-      scanBuilder.setStopRow(ByteStringer.wrap(stopRow));
+      scanBuilder.setStopRow(UnsafeByteOperations.unsafeWrap(stopRow));
     }
     if (scan.hasFilter()) {
       scanBuilder.setFilter(ProtobufUtil.toFilter(scan.getFilter()));
@@ -985,12 +985,12 @@ public final class ProtobufUtil {
       Column.Builder columnBuilder = Column.newBuilder();
       for (Map.Entry<byte[],NavigableSet<byte []>>
           family: scan.getFamilyMap().entrySet()) {
-        columnBuilder.setFamily(ByteStringer.wrap(family.getKey()));
+        columnBuilder.setFamily(UnsafeByteOperations.unsafeWrap(family.getKey()));
         NavigableSet<byte []> qualifiers = family.getValue();
         columnBuilder.clearQualifier();
         if (qualifiers != null && qualifiers.size() > 0) {
           for (byte [] qualifier: qualifiers) {
-            columnBuilder.addQualifier(ByteStringer.wrap(qualifier));
+            columnBuilder.addQualifier(UnsafeByteOperations.unsafeWrap(qualifier));
           }
         }
         scanBuilder.addColumn(columnBuilder.build());
@@ -1112,7 +1112,7 @@ public final class ProtobufUtil {
       final Get get) throws IOException {
     ClientProtos.Get.Builder builder =
       ClientProtos.Get.newBuilder();
-    builder.setRow(ByteStringer.wrap(get.getRow()));
+    builder.setRow(UnsafeByteOperations.unsafeWrap(get.getRow()));
     builder.setCacheBlocks(get.getCacheBlocks());
     builder.setMaxVersions(get.getMaxVersions());
     if (get.getFilter() != null) {
@@ -1120,7 +1120,7 @@ public final class ProtobufUtil {
     }
     for (Entry<byte[], TimeRange> cftr : get.getColumnFamilyTimeRange().entrySet()) {
       HBaseProtos.ColumnFamilyTimeRange.Builder b = HBaseProtos.ColumnFamilyTimeRange.newBuilder();
-      b.setColumnFamily(ByteStringer.wrap(cftr.getKey()));
+      b.setColumnFamily(UnsafeByteOperations.unsafeWrap(cftr.getKey()));
       b.setTimeRange(timeRangeToProto(cftr.getValue()));
       builder.addCfTimeRange(b);
     }
@@ -1137,7 +1137,7 @@ public final class ProtobufUtil {
       NameBytesPair.Builder attributeBuilder = NameBytesPair.newBuilder();
       for (Map.Entry<String, byte[]> attribute: attributes.entrySet()) {
         attributeBuilder.setName(attribute.getKey());
-        attributeBuilder.setValue(ByteStringer.wrap(attribute.getValue()));
+        attributeBuilder.setValue(UnsafeByteOperations.unsafeWrap(attribute.getValue()));
         builder.addAttribute(attributeBuilder.build());
       }
     }
@@ -1146,11 +1146,11 @@ public final class ProtobufUtil {
       Map<byte[], NavigableSet<byte[]>> families = get.getFamilyMap();
       for (Map.Entry<byte[], NavigableSet<byte[]>> family: families.entrySet()) {
         NavigableSet<byte[]> qualifiers = family.getValue();
-        columnBuilder.setFamily(ByteStringer.wrap(family.getKey()));
+        columnBuilder.setFamily(UnsafeByteOperations.unsafeWrap(family.getKey()));
         columnBuilder.clearQualifier();
         if (qualifiers != null && qualifiers.size() > 0) {
           for (byte[] qualifier: qualifiers) {
-            columnBuilder.addQualifier(ByteStringer.wrap(qualifier));
+            columnBuilder.addQualifier(UnsafeByteOperations.unsafeWrap(qualifier));
           }
         }
         builder.addColumn(columnBuilder.build());
@@ -1190,7 +1190,7 @@ public final class ProtobufUtil {
    */
   public static MutationProto toMutation(
     final Increment increment, final MutationProto.Builder builder, long nonce) {
-    builder.setRow(ByteStringer.wrap(increment.getRow()));
+    builder.setRow(UnsafeByteOperations.unsafeWrap(increment.getRow()));
     builder.setMutateType(MutationType.INCREMENT);
     builder.setDurability(toDurability(increment.getDurability()));
     if (nonce != HConstants.NO_NONCE) {
@@ -1201,18 +1201,18 @@ public final class ProtobufUtil {
     ColumnValue.Builder columnBuilder = ColumnValue.newBuilder();
     QualifierValue.Builder valueBuilder = QualifierValue.newBuilder();
     for (Map.Entry<byte[], List<Cell>> family: increment.getFamilyCellMap().entrySet()) {
-      columnBuilder.setFamily(ByteStringer.wrap(family.getKey()));
+      columnBuilder.setFamily(UnsafeByteOperations.unsafeWrap(family.getKey()));
       columnBuilder.clearQualifierValue();
       List<Cell> values = family.getValue();
       if (values != null && values.size() > 0) {
         for (Cell cell: values) {
           valueBuilder.clear();
-          valueBuilder.setQualifier(ByteStringer.wrap(
+          valueBuilder.setQualifier(UnsafeByteOperations.unsafeWrap(
               cell.getQualifierArray(), cell.getQualifierOffset(), cell.getQualifierLength()));
-          valueBuilder.setValue(ByteStringer.wrap(
+          valueBuilder.setValue(UnsafeByteOperations.unsafeWrap(
               cell.getValueArray(), cell.getValueOffset(), cell.getValueLength()));
           if (cell.getTagsLength() > 0) {
-            valueBuilder.setTags(ByteStringer.wrap(cell.getTagsArray(),
+            valueBuilder.setTags(UnsafeByteOperations.unsafeWrap(cell.getTagsArray(),
                 cell.getTagsOffset(), cell.getTagsLength()));
           }
           columnBuilder.addQualifierValue(valueBuilder.build());
@@ -1225,7 +1225,7 @@ public final class ProtobufUtil {
       NameBytesPair.Builder attributeBuilder = NameBytesPair.newBuilder();
       for (Map.Entry<String, byte[]> attribute : attributes.entrySet()) {
         attributeBuilder.setName(attribute.getKey());
-        attributeBuilder.setValue(ByteStringer.wrap(attribute.getValue()));
+        attributeBuilder.setValue(UnsafeByteOperations.unsafeWrap(attribute.getValue()));
         builder.addAttribute(attributeBuilder.build());
       }
     }
@@ -1266,12 +1266,12 @@ public final class ProtobufUtil {
     QualifierValue.Builder valueBuilder = QualifierValue.newBuilder();
     for (Map.Entry<byte[],List<Cell>> family: mutation.getFamilyCellMap().entrySet()) {
       columnBuilder.clear();
-      columnBuilder.setFamily(ByteStringer.wrap(family.getKey()));
+      columnBuilder.setFamily(UnsafeByteOperations.unsafeWrap(family.getKey()));
       for (Cell cell: family.getValue()) {
         valueBuilder.clear();
-        valueBuilder.setQualifier(ByteStringer.wrap(
+        valueBuilder.setQualifier(UnsafeByteOperations.unsafeWrap(
             cell.getQualifierArray(), cell.getQualifierOffset(), cell.getQualifierLength()));
-        valueBuilder.setValue(ByteStringer.wrap(
+        valueBuilder.setValue(UnsafeByteOperations.unsafeWrap(
             cell.getValueArray(), cell.getValueOffset(), cell.getValueLength()));
         valueBuilder.setTimestamp(cell.getTimestamp());
         if (type == MutationType.DELETE || (type == MutationType.PUT && CellUtil.isDelete(cell))) {
@@ -1335,7 +1335,7 @@ public final class ProtobufUtil {
    */
   private static MutationProto.Builder getMutationBuilderAndSetCommonFields(final MutationType type,
       final Mutation mutation, MutationProto.Builder builder) {
-    builder.setRow(ByteStringer.wrap(mutation.getRow()));
+    builder.setRow(UnsafeByteOperations.unsafeWrap(mutation.getRow()));
     builder.setMutateType(type);
     builder.setDurability(toDurability(mutation.getDurability()));
     builder.setTimestamp(mutation.getTimeStamp());
@@ -1344,7 +1344,7 @@ public final class ProtobufUtil {
       NameBytesPair.Builder attributeBuilder = NameBytesPair.newBuilder();
       for (Map.Entry<String, byte[]> attribute: attributes.entrySet()) {
         attributeBuilder.setName(attribute.getKey());
-        attributeBuilder.setValue(ByteStringer.wrap(attribute.getValue()));
+        attributeBuilder.setValue(UnsafeByteOperations.unsafeWrap(attribute.getValue()));
         builder.addAttribute(attributeBuilder.build());
       }
     }
@@ -1491,7 +1491,7 @@ public final class ProtobufUtil {
   public static ComparatorProtos.Comparator toComparator(ByteArrayComparable comparator) {
     ComparatorProtos.Comparator.Builder builder = ComparatorProtos.Comparator.newBuilder();
     builder.setName(comparator.getClass().getName());
-    builder.setSerializedComparator(ByteStringer.wrap(comparator.toByteArray()));
+    builder.setSerializedComparator(UnsafeByteOperations.unsafeWrap(comparator.toByteArray()));
     return builder.build();
   }
 
@@ -1555,7 +1555,7 @@ public final class ProtobufUtil {
   public static FilterProtos.Filter toFilter(Filter filter) throws IOException {
     FilterProtos.Filter.Builder builder = FilterProtos.Filter.newBuilder();
     builder.setName(filter.getClass().getName());
-    builder.setSerializedFilter(ByteStringer.wrap(filter.toByteArray()));
+    builder.setSerializedFilter(UnsafeByteOperations.unsafeWrap(filter.toByteArray()));
     return builder.build();
   }
 
@@ -2007,15 +2007,15 @@ public final class ProtobufUtil {
     // Doing this is going to kill us if we do it for all data passed.
     // St.Ack 20121205
     CellProtos.Cell.Builder kvbuilder = CellProtos.Cell.newBuilder();
-    kvbuilder.setRow(ByteStringer.wrap(kv.getRowArray(), kv.getRowOffset(),
+    kvbuilder.setRow(UnsafeByteOperations.unsafeWrap(kv.getRowArray(), kv.getRowOffset(),
         kv.getRowLength()));
-    kvbuilder.setFamily(ByteStringer.wrap(kv.getFamilyArray(),
+    kvbuilder.setFamily(UnsafeByteOperations.unsafeWrap(kv.getFamilyArray(),
         kv.getFamilyOffset(), kv.getFamilyLength()));
-    kvbuilder.setQualifier(ByteStringer.wrap(kv.getQualifierArray(),
+    kvbuilder.setQualifier(UnsafeByteOperations.unsafeWrap(kv.getQualifierArray(),
         kv.getQualifierOffset(), kv.getQualifierLength()));
     kvbuilder.setCellType(CellProtos.CellType.valueOf(kv.getTypeByte()));
     kvbuilder.setTimestamp(kv.getTimestamp());
-    kvbuilder.setValue(ByteStringer.wrap(kv.getValueArray(), kv.getValueOffset(),
+    kvbuilder.setValue(UnsafeByteOperations.unsafeWrap(kv.getValueArray(), kv.getValueOffset(),
         kv.getValueLength()));
     return kvbuilder.build();
   }
@@ -2064,10 +2064,10 @@ public final class ProtobufUtil {
     // input / output paths are relative to the store dir
     // store dir is relative to region dir
     CompactionDescriptor.Builder builder = CompactionDescriptor.newBuilder()
-        .setTableName(ByteStringer.wrap(info.getTable().toBytes()))
-        .setEncodedRegionName(ByteStringer.wrap(
+        .setTableName(UnsafeByteOperations.unsafeWrap(info.getTable().toBytes()))
+        .setEncodedRegionName(UnsafeByteOperations.unsafeWrap(
           regionName == null ? info.getEncodedNameAsBytes() : regionName))
-        .setFamilyName(ByteStringer.wrap(family))
+        .setFamilyName(UnsafeByteOperations.unsafeWrap(family))
         .setStoreHomeDir(storeDir.getName()); //make relative
     for (Path inputPath : inputPaths) {
       builder.addCompactionInput(inputPath.getName()); //relative path
@@ -2075,7 +2075,7 @@ public final class ProtobufUtil {
     for (Path outputPath : outputPaths) {
       builder.addCompactionOutput(outputPath.getName());
     }
-    builder.setRegionName(ByteStringer.wrap(info.getRegionName()));
+    builder.setRegionName(UnsafeByteOperations.unsafeWrap(info.getRegionName()));
     return builder.build();
   }
 
@@ -2083,15 +2083,15 @@ public final class ProtobufUtil {
       long flushSeqId, Map<byte[], List<Path>> committedFiles) {
     FlushDescriptor.Builder desc = FlushDescriptor.newBuilder()
         .setAction(action)
-        .setEncodedRegionName(ByteStringer.wrap(hri.getEncodedNameAsBytes()))
-        .setRegionName(ByteStringer.wrap(hri.getRegionName()))
+        .setEncodedRegionName(UnsafeByteOperations.unsafeWrap(hri.getEncodedNameAsBytes()))
+        .setRegionName(UnsafeByteOperations.unsafeWrap(hri.getRegionName()))
         .setFlushSequenceNumber(flushSeqId)
-        .setTableName(ByteStringer.wrap(hri.getTable().getName()));
+        .setTableName(UnsafeByteOperations.unsafeWrap(hri.getTable().getName()));
 
     for (Map.Entry<byte[], List<Path>> entry : committedFiles.entrySet()) {
       WALProtos.FlushDescriptor.StoreFlushDescriptor.Builder builder =
           WALProtos.FlushDescriptor.StoreFlushDescriptor.newBuilder()
-          .setFamilyName(ByteStringer.wrap(entry.getKey()))
+          .setFamilyName(UnsafeByteOperations.unsafeWrap(entry.getKey()))
           .setStoreHomeDir(Bytes.toString(entry.getKey())); //relative to region
       if (entry.getValue() != null) {
         for (Path path : entry.getValue()) {
@@ -2129,15 +2129,15 @@ public final class ProtobufUtil {
                                                               Map<byte[], List<Path>> storeFiles) {
     RegionEventDescriptor.Builder desc = RegionEventDescriptor.newBuilder()
         .setEventType(eventType)
-        .setTableName(ByteStringer.wrap(tableNameAsBytes))
-        .setEncodedRegionName(ByteStringer.wrap(encodedNameAsBytes))
-        .setRegionName(ByteStringer.wrap(regionNameAsBytes))
+        .setTableName(UnsafeByteOperations.unsafeWrap(tableNameAsBytes))
+        .setEncodedRegionName(UnsafeByteOperations.unsafeWrap(encodedNameAsBytes))
+        .setRegionName(UnsafeByteOperations.unsafeWrap(regionNameAsBytes))
         .setLogSequenceNumber(seqId)
         .setServer(toServerName(server));
 
     for (Entry<byte[], List<Path>> entry : storeFiles.entrySet()) {
       StoreDescriptor.Builder builder = StoreDescriptor.newBuilder()
-          .setFamilyName(ByteStringer.wrap(entry.getKey()))
+          .setFamilyName(UnsafeByteOperations.unsafeWrap(entry.getKey()))
           .setStoreHomeDir(Bytes.toString(entry.getKey()));
       for (Path path : entry.getValue()) {
         builder.addStoreFile(path.getName());
@@ -2214,8 +2214,8 @@ public final class ProtobufUtil {
 
   public static HBaseProtos.TableName toProtoTableName(TableName tableName) {
     return HBaseProtos.TableName.newBuilder()
-        .setNamespace(ByteStringer.wrap(tableName.getNamespace()))
-        .setQualifier(ByteStringer.wrap(tableName.getQualifier())).build();
+        .setNamespace(UnsafeByteOperations.unsafeWrap(tableName.getNamespace()))
+        .setQualifier(UnsafeByteOperations.unsafeWrap(tableName.getQualifier())).build();
   }
 
   public static TableName[] getTableNameArray(List<HBaseProtos.TableName> tableNamesList) {
@@ -2484,7 +2484,7 @@ public final class ProtobufUtil {
 
     for (Map.Entry<byte[], List<Path>> entry : storeFiles.entrySet()) {
       WALProtos.StoreDescriptor.Builder builder = StoreDescriptor.newBuilder()
-          .setFamilyName(ByteStringer.wrap(entry.getKey()))
+          .setFamilyName(UnsafeByteOperations.unsafeWrap(entry.getKey()))
           .setStoreHomeDir(Bytes.toString(entry.getKey())); // relative to region
       for (Path path : entry.getValue()) {
         String name = path.getName();
@@ -2697,11 +2697,11 @@ public final class ProtobufUtil {
    */
   public static ColumnFamilySchema convertToColumnFamilySchema(HColumnDescriptor hcd) {
     ColumnFamilySchema.Builder builder = ColumnFamilySchema.newBuilder();
-    builder.setName(ByteStringer.wrap(hcd.getName()));
+    builder.setName(UnsafeByteOperations.unsafeWrap(hcd.getName()));
     for (Map.Entry<Bytes, Bytes> e : hcd.getValues().entrySet()) {
       BytesBytesPair.Builder aBuilder = BytesBytesPair.newBuilder();
-      aBuilder.setFirst(ByteStringer.wrap(e.getKey().get()));
-      aBuilder.setSecond(ByteStringer.wrap(e.getValue().get()));
+      aBuilder.setFirst(UnsafeByteOperations.unsafeWrap(e.getKey().get()));
+      aBuilder.setSecond(UnsafeByteOperations.unsafeWrap(e.getValue().get()));
       builder.addAttributes(aBuilder.build());
     }
     for (Map.Entry<String, String> e : hcd.getConfiguration().entrySet()) {
@@ -2742,8 +2742,8 @@ public final class ProtobufUtil {
     builder.setTableName(toProtoTableName(htd.getTableName()));
     for (Map.Entry<Bytes, Bytes> e : htd.getValues().entrySet()) {
       BytesBytesPair.Builder aBuilder = BytesBytesPair.newBuilder();
-      aBuilder.setFirst(ByteStringer.wrap(e.getKey().get()));
-      aBuilder.setSecond(ByteStringer.wrap(e.getValue().get()));
+      aBuilder.setFirst(UnsafeByteOperations.unsafeWrap(e.getKey().get()));
+      aBuilder.setSecond(UnsafeByteOperations.unsafeWrap(e.getValue().get()));
       builder.addAttributes(aBuilder.build());
     }
     for (HColumnDescriptor hcd : htd.getColumnFamilies()) {
@@ -2948,7 +2948,7 @@ public final class ProtobufUtil {
         ClusterStatusProtos.RegionState rs = rit.convert();
         RegionSpecifier.Builder spec =
             RegionSpecifier.newBuilder().setType(RegionSpecifierType.REGION_NAME);
-        spec.setValue(ByteStringer.wrap(rit.getRegion().getRegionName()));
+        spec.setValue(UnsafeByteOperations.unsafeWrap(rit.getRegion().getRegionName()));
 
         RegionInTransition pbRIT =
             RegionInTransition.newBuilder().setSpec(spec.build()).setRegionState(rs).build();
@@ -3025,7 +3025,7 @@ public final class ProtobufUtil {
      RegionSpecifier region = RequestConverter.buildRegionSpecifier(
        RegionSpecifierType.REGION_NAME, regionName);
      builder.setRegion(region);
-     builder.addFamily(ByteStringer.wrap(family));
+     builder.addFamily(UnsafeByteOperations.unsafeWrap(family));
      return builder.build();
    }
 
@@ -3088,7 +3088,7 @@ public final class ProtobufUtil {
        RegionSpecifierType.REGION_NAME, regionName);
      builder.setRegion(region);
      if (splitPoint != null) {
-       builder.setSplitPoint(ByteStringer.wrap(splitPoint));
+       builder.setSplitPoint(UnsafeByteOperations.unsafeWrap(splitPoint));
      }
      return builder.build();
    }

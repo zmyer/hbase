@@ -77,7 +77,6 @@ import org.apache.hadoop.hbase.regionserver.RegionServerStoppedException;
 import org.apache.hadoop.hbase.security.User;
 import org.apache.hadoop.hbase.testclassification.ClientTests;
 import org.apache.hadoop.hbase.testclassification.SmallTests;
-import org.apache.hadoop.hbase.shaded.util.ByteStringer;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.Pair;
 import org.apache.hadoop.hbase.util.Threads;
@@ -93,6 +92,7 @@ import com.google.common.base.Stopwatch;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.RpcController;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.ServiceException;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
 
 /**
  * Test client behavior w/o setting up a cluster.
@@ -509,7 +509,7 @@ public class TestClientNoCluster extends Configured implements Tool {
       if (max <= 0) break;
       if (++count > max) break;
       HRegionInfo hri = e.getValue().getFirst();
-      ByteString row = ByteStringer.wrap(hri.getRegionName());
+      ByteString row = UnsafeByteOperations.unsafeWrap(hri.getRegionName());
       resultBuilder.clear();
       resultBuilder.addCell(getRegionInfo(row, hri));
       resultBuilder.addCell(getServer(row, e.getValue().getSecond()));
@@ -556,11 +556,11 @@ public class TestClientNoCluster extends Configured implements Tool {
   }
 
   private final static ByteString CATALOG_FAMILY_BYTESTRING =
-      ByteStringer.wrap(HConstants.CATALOG_FAMILY);
+      UnsafeByteOperations.unsafeWrap(HConstants.CATALOG_FAMILY);
   private final static ByteString REGIONINFO_QUALIFIER_BYTESTRING =
-      ByteStringer.wrap(HConstants.REGIONINFO_QUALIFIER);
+      UnsafeByteOperations.unsafeWrap(HConstants.REGIONINFO_QUALIFIER);
   private final static ByteString SERVER_QUALIFIER_BYTESTRING =
-      ByteStringer.wrap(HConstants.SERVER_QUALIFIER);
+      UnsafeByteOperations.unsafeWrap(HConstants.SERVER_QUALIFIER);
 
   static CellProtos.Cell.Builder getBaseCellBuilder(final ByteString row) {
     CellProtos.Cell.Builder cellBuilder = CellProtos.Cell.newBuilder();
@@ -573,7 +573,7 @@ public class TestClientNoCluster extends Configured implements Tool {
   static CellProtos.Cell getRegionInfo(final ByteString row, final HRegionInfo hri) {
     CellProtos.Cell.Builder cellBuilder = getBaseCellBuilder(row);
     cellBuilder.setQualifier(REGIONINFO_QUALIFIER_BYTESTRING);
-    cellBuilder.setValue(ByteStringer.wrap(hri.toByteArray()));
+    cellBuilder.setValue(UnsafeByteOperations.unsafeWrap(hri.toByteArray()));
     return cellBuilder.build();
   }
 
@@ -586,9 +586,10 @@ public class TestClientNoCluster extends Configured implements Tool {
 
   static CellProtos.Cell getStartCode(final ByteString row) {
     CellProtos.Cell.Builder cellBuilder = getBaseCellBuilder(row);
-    cellBuilder.setQualifier(ByteStringer.wrap(HConstants.STARTCODE_QUALIFIER));
+    cellBuilder.setQualifier(UnsafeByteOperations.unsafeWrap(HConstants.STARTCODE_QUALIFIER));
     // TODO:
-    cellBuilder.setValue(ByteStringer.wrap(Bytes.toBytes(META_SERVERNAME.getStartcode())));
+    cellBuilder.setValue(UnsafeByteOperations.unsafeWrap(
+        Bytes.toBytes(META_SERVERNAME.getStartcode())));
     return cellBuilder.build();
   }
 

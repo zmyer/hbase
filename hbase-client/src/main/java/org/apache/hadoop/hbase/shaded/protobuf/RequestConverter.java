@@ -46,6 +46,7 @@ import org.apache.hadoop.hbase.client.RowMutations;
 import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.exceptions.DeserializationException;
 import org.apache.hadoop.hbase.filter.ByteArrayComparable;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.CompactRegionRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.FlushRegionRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.GetOnlineRegionRequest;
@@ -105,7 +106,6 @@ import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.SetSplitOr
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.TruncateTableRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos.UnassignRegionRequest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.GetLastFlushedSequenceIdRequest;
-import org.apache.hadoop.hbase.shaded.util.ByteStringer;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.EnvironmentEdgeManager;
 import org.apache.hadoop.hbase.util.Pair;
@@ -160,14 +160,14 @@ public final class RequestConverter {
     builder.setRegion(region);
 
     MutationProto.Builder mutateBuilder = MutationProto.newBuilder();
-    mutateBuilder.setRow(ByteStringer.wrap(row));
+    mutateBuilder.setRow(UnsafeByteOperations.unsafeWrap(row));
     mutateBuilder.setMutateType(MutationType.INCREMENT);
     mutateBuilder.setDurability(ProtobufUtil.toDurability(durability));
     ColumnValue.Builder columnBuilder = ColumnValue.newBuilder();
-    columnBuilder.setFamily(ByteStringer.wrap(family));
+    columnBuilder.setFamily(UnsafeByteOperations.unsafeWrap(family));
     QualifierValue.Builder valueBuilder = QualifierValue.newBuilder();
-    valueBuilder.setValue(ByteStringer.wrap(Bytes.toBytes(amount)));
-    valueBuilder.setQualifier(ByteStringer.wrap(qualifier));
+    valueBuilder.setValue(UnsafeByteOperations.unsafeWrap(Bytes.toBytes(amount)));
+    valueBuilder.setQualifier(UnsafeByteOperations.unsafeWrap(qualifier));
     columnBuilder.addQualifierValue(valueBuilder.build());
     mutateBuilder.addColumnValue(columnBuilder.build());
     if (nonce != HConstants.NO_NONCE) {
@@ -549,8 +549,8 @@ public final class RequestConverter {
     if (userToken != null) {
       protoDT =
           ClientProtos.DelegationToken.newBuilder()
-            .setIdentifier(ByteStringer.wrap(userToken.getIdentifier()))
-            .setPassword(ByteStringer.wrap(userToken.getPassword()))
+            .setIdentifier(UnsafeByteOperations.unsafeWrap(userToken.getIdentifier()))
+            .setPassword(UnsafeByteOperations.unsafeWrap(userToken.getPassword()))
             .setKind(userToken.getKind().toString())
             .setService(userToken.getService().toString()).build();
     }
@@ -559,7 +559,7 @@ public final class RequestConverter {
         new ArrayList<ClientProtos.BulkLoadHFileRequest.FamilyPath>(familyPaths.size());
     for(Pair<byte[], String> el: familyPaths) {
       protoFamilyPaths.add(ClientProtos.BulkLoadHFileRequest.FamilyPath.newBuilder()
-        .setFamily(ByteStringer.wrap(el.getFirst()))
+        .setFamily(UnsafeByteOperations.unsafeWrap(el.getFirst()))
         .setPath(el.getSecond()).build());
     }
 
@@ -619,7 +619,7 @@ public final class RequestConverter {
              exec.getRequest().toByteArray());
         regionActionBuilder.addAction(actionBuilder.setServiceCall(
             ClientProtos.CoprocessorServiceCall.newBuilder()
-              .setRow(ByteStringer.wrap(exec.getRow()))
+              .setRow(UnsafeByteOperations.unsafeWrap(exec.getRow()))
               .setServiceName(exec.getMethod().getService().getFullName())
               .setMethodName(exec.getMethod().getName())
               .setRequest(value)));
@@ -702,7 +702,7 @@ public final class RequestConverter {
              exec.getRequest().toByteArray());
         builder.addAction(actionBuilder.setServiceCall(
             ClientProtos.CoprocessorServiceCall.newBuilder()
-              .setRow(ByteStringer.wrap(exec.getRow()))
+              .setRow(UnsafeByteOperations.unsafeWrap(exec.getRow()))
               .setServiceName(exec.getMethod().getService().getFullName())
               .setMethodName(exec.getMethod().getName())
               .setRequest(value)));
@@ -875,7 +875,7 @@ public final class RequestConverter {
    builder.setRegion(region);
    builder.setMajor(major);
    if (family != null) {
-     builder.setFamily(ByteStringer.wrap(family));
+     builder.setFamily(UnsafeByteOperations.unsafeWrap(family));
    }
    return builder.build();
  }
@@ -934,7 +934,7 @@ public final class RequestConverter {
   public static RegionSpecifier buildRegionSpecifier(
       final RegionSpecifierType type, final byte[] value) {
     RegionSpecifier.Builder regionBuilder = RegionSpecifier.newBuilder();
-    regionBuilder.setValue(ByteStringer.wrap(value));
+    regionBuilder.setValue(UnsafeByteOperations.unsafeWrap(value));
     regionBuilder.setType(type);
     return regionBuilder.build();
   }
@@ -955,9 +955,9 @@ public final class RequestConverter {
       final ByteArrayComparable comparator,
       final CompareType compareType) throws IOException {
     Condition.Builder builder = Condition.newBuilder();
-    builder.setRow(ByteStringer.wrap(row));
-    builder.setFamily(ByteStringer.wrap(family));
-    builder.setQualifier(ByteStringer.wrap(qualifier));
+    builder.setRow(UnsafeByteOperations.unsafeWrap(row));
+    builder.setFamily(UnsafeByteOperations.unsafeWrap(family));
+    builder.setQualifier(UnsafeByteOperations.unsafeWrap(qualifier));
     builder.setComparator(ProtobufUtil.toComparator(comparator));
     builder.setCompareType(compareType);
     return builder.build();
@@ -997,7 +997,7 @@ public final class RequestConverter {
       final long nonce) {
     DeleteColumnRequest.Builder builder = DeleteColumnRequest.newBuilder();
     builder.setTableName(ProtobufUtil.toProtoTableName((tableName)));
-    builder.setColumnName(ByteStringer.wrap(columnName));
+    builder.setColumnName(UnsafeByteOperations.unsafeWrap(columnName));
     builder.setNonceGroup(nonceGroup);
     builder.setNonce(nonce);
     return builder.build();
@@ -1187,7 +1187,7 @@ public final class RequestConverter {
     builder.setTableSchema(ProtobufUtil.convertToTableSchema(hTableDesc));
     if (splitKeys != null) {
       for (byte [] splitKey : splitKeys) {
-        builder.addSplitKeys(ByteStringer.wrap(splitKey));
+        builder.addSplitKeys(UnsafeByteOperations.unsafeWrap(splitKey));
       }
     }
     builder.setNonceGroup(nonceGroup);
@@ -1401,7 +1401,7 @@ public final class RequestConverter {
   public static GetLastFlushedSequenceIdRequest buildGetLastFlushedSequenceIdRequest(
       byte[] regionName) {
     return GetLastFlushedSequenceIdRequest.newBuilder().setRegionName(
-        ByteStringer.wrap(regionName)).build();
+        UnsafeByteOperations.unsafeWrap(regionName)).build();
   }
 
   /**

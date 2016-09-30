@@ -19,6 +19,8 @@
 package org.apache.hadoop.hbase.snapshot;
 
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
+
 import java.io.IOException;
 import java.io.InterruptedIOException;
 import java.util.ArrayList;
@@ -42,7 +44,6 @@ import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.SnapshotProtos.SnapshotRegionManifest;
 import org.apache.hadoop.hbase.regionserver.StoreFileInfo;
-import org.apache.hadoop.hbase.shaded.util.ByteStringer;
 import org.apache.hadoop.hbase.util.FSUtils;
 
 /**
@@ -101,7 +102,7 @@ public final class SnapshotManifestV2 {
         final SnapshotRegionManifest.Builder region, final byte[] familyName) {
       SnapshotRegionManifest.FamilyFiles.Builder family =
           SnapshotRegionManifest.FamilyFiles.newBuilder();
-      family.setFamilyName(ByteStringer.wrap(familyName));
+      family.setFamilyName(UnsafeByteOperations.unsafeWrap(familyName));
       return family;
     }
 

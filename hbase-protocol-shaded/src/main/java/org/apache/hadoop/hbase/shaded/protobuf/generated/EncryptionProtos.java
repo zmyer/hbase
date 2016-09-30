@@ -6,17 +6,17 @@ package org.apache.hadoop.hbase.shaded.protobuf.generated;
 public final class EncryptionProtos {
   private EncryptionProtos() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+      org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistry registry) {
     registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
+        (org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface WrappedKeyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:hbase.pb.WrappedKey)
-      com.google.protobuf.MessageOrBuilder {
+      org.apache.hadoop.hbase.shaded.com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>required string algorithm = 1;</code>
@@ -29,7 +29,7 @@ public final class EncryptionProtos {
     /**
      * <code>required string algorithm = 1;</code>
      */
-    com.google.protobuf.ByteString
+    org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString
         getAlgorithmBytes();
 
     /**
@@ -48,7 +48,7 @@ public final class EncryptionProtos {
     /**
      * <code>required bytes data = 3;</code>
      */
-    com.google.protobuf.ByteString getData();
+    org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString getData();
 
     /**
      * <code>optional bytes iv = 4;</code>
@@ -57,7 +57,7 @@ public final class EncryptionProtos {
     /**
      * <code>optional bytes iv = 4;</code>
      */
-    com.google.protobuf.ByteString getIv();
+    org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString getIv();
 
     /**
      * <code>optional bytes hash = 5;</code>
@@ -66,40 +66,40 @@ public final class EncryptionProtos {
     /**
      * <code>optional bytes hash = 5;</code>
      */
-    com.google.protobuf.ByteString getHash();
+    org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString getHash();
   }
   /**
    * Protobuf type {@code hbase.pb.WrappedKey}
    */
   public  static final class WrappedKey extends
-      com.google.protobuf.GeneratedMessageV3 implements
+      org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:hbase.pb.WrappedKey)
       WrappedKeyOrBuilder {
     // Use WrappedKey.newBuilder() to construct.
-    private WrappedKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private WrappedKey(org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private WrappedKey() {
       algorithm_ = "";
       length_ = 0;
-      data_ = com.google.protobuf.ByteString.EMPTY;
-      iv_ = com.google.protobuf.ByteString.EMPTY;
-      hash_ = com.google.protobuf.ByteString.EMPTY;
+      data_ = org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.EMPTY;
+      iv_ = org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.EMPTY;
+      hash_ = org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final org.apache.hadoop.hbase.shaded.com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private WrappedKey(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedInputStream input,
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      org.apache.hadoop.hbase.shaded.com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -116,7 +116,7 @@ public final class EncryptionProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               algorithm_ = bs;
               break;
@@ -143,22 +143,22 @@ public final class EncryptionProtos {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.internal_static_hbase_pb_WrappedKey_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.internal_static_hbase_pb_WrappedKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -182,8 +182,8 @@ public final class EncryptionProtos {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString bs = 
+            (org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           algorithm_ = s;
@@ -194,17 +194,17 @@ public final class EncryptionProtos {
     /**
      * <code>required string algorithm = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString
         getAlgorithmBytes() {
       java.lang.Object ref = algorithm_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString b = 
+            org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         algorithm_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString) ref;
       }
     }
 
@@ -224,7 +224,7 @@ public final class EncryptionProtos {
     }
 
     public static final int DATA_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString data_;
+    private org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString data_;
     /**
      * <code>required bytes data = 3;</code>
      */
@@ -234,12 +234,12 @@ public final class EncryptionProtos {
     /**
      * <code>required bytes data = 3;</code>
      */
-    public com.google.protobuf.ByteString getData() {
+    public org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString getData() {
       return data_;
     }
 
     public static final int IV_FIELD_NUMBER = 4;
-    private com.google.protobuf.ByteString iv_;
+    private org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString iv_;
     /**
      * <code>optional bytes iv = 4;</code>
      */
@@ -249,12 +249,12 @@ public final class EncryptionProtos {
     /**
      * <code>optional bytes iv = 4;</code>
      */
-    public com.google.protobuf.ByteString getIv() {
+    public org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString getIv() {
       return iv_;
     }
 
     public static final int HASH_FIELD_NUMBER = 5;
-    private com.google.protobuf.ByteString hash_;
+    private org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString hash_;
     /**
      * <code>optional bytes hash = 5;</code>
      */
@@ -264,7 +264,7 @@ public final class EncryptionProtos {
     /**
      * <code>optional bytes hash = 5;</code>
      */
-    public com.google.protobuf.ByteString getHash() {
+    public org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString getHash() {
       return hash_;
     }
 
@@ -290,10 +290,10 @@ public final class EncryptionProtos {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, algorithm_);
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.writeString(output, 1, algorithm_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeUInt32(2, length_);
@@ -316,22 +316,22 @@ public final class EncryptionProtos {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, algorithm_);
+        size += org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.computeStringSize(1, algorithm_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, length_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, data_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, iv_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, hash_);
       }
       size += unknownFields.getSerializedSize();
@@ -413,61 +413,61 @@ public final class EncryptionProtos {
     }
 
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString data)
+        throws org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString data,
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
     public static org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedInputStream input,
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -485,7 +485,7 @@ public final class EncryptionProtos {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -493,15 +493,15 @@ public final class EncryptionProtos {
      * Protobuf type {@code hbase.pb.WrappedKey}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:hbase.pb.WrappedKey)
         org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKeyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.internal_static_hbase_pb_WrappedKey_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.internal_static_hbase_pb_WrappedKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -514,12 +514,12 @@ public final class EncryptionProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
@@ -529,16 +529,16 @@ public final class EncryptionProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         length_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        data_ = com.google.protobuf.ByteString.EMPTY;
+        data_ = org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
-        iv_ = com.google.protobuf.ByteString.EMPTY;
+        iv_ = org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
-        hash_ = com.google.protobuf.ByteString.EMPTY;
+        hash_ = org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.internal_static_hbase_pb_WrappedKey_descriptor;
       }
@@ -588,29 +588,29 @@ public final class EncryptionProtos {
         return (Builder) super.clone();
       }
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FieldDescriptor field,
           Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FieldDescriptor field,
           Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(org.apache.hadoop.hbase.shaded.com.google.protobuf.Message other) {
         if (other instanceof org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey) {
           return mergeFrom((org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey)other);
         } else {
@@ -657,13 +657,13 @@ public final class EncryptionProtos {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedInputStream input,
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (org.apache.hadoop.hbase.shaded.protobuf.generated.EncryptionProtos.WrappedKey) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
@@ -688,8 +688,8 @@ public final class EncryptionProtos {
       public java.lang.String getAlgorithm() {
         java.lang.Object ref = algorithm_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString bs =
+              (org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             algorithm_ = s;
@@ -702,17 +702,17 @@ public final class EncryptionProtos {
       /**
        * <code>required string algorithm = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString
           getAlgorithmBytes() {
         java.lang.Object ref = algorithm_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString b = 
+              org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           algorithm_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString) ref;
         }
       }
       /**
@@ -741,7 +741,7 @@ public final class EncryptionProtos {
        * <code>required string algorithm = 1;</code>
        */
       public Builder setAlgorithmBytes(
-          com.google.protobuf.ByteString value) {
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -783,7 +783,7 @@ public final class EncryptionProtos {
         return this;
       }
 
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      private org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString data_ = org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>required bytes data = 3;</code>
        */
@@ -793,13 +793,13 @@ public final class EncryptionProtos {
       /**
        * <code>required bytes data = 3;</code>
        */
-      public com.google.protobuf.ByteString getData() {
+      public org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString getData() {
         return data_;
       }
       /**
        * <code>required bytes data = 3;</code>
        */
-      public Builder setData(com.google.protobuf.ByteString value) {
+      public Builder setData(org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -818,7 +818,7 @@ public final class EncryptionProtos {
         return this;
       }
 
-      private com.google.protobuf.ByteString iv_ = com.google.protobuf.ByteString.EMPTY;
+      private org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString iv_ = org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes iv = 4;</code>
        */
@@ -828,13 +828,13 @@ public final class EncryptionProtos {
       /**
        * <code>optional bytes iv = 4;</code>
        */
-      public com.google.protobuf.ByteString getIv() {
+      public org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString getIv() {
         return iv_;
       }
       /**
        * <code>optional bytes iv = 4;</code>
        */
-      public Builder setIv(com.google.protobuf.ByteString value) {
+      public Builder setIv(org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -853,7 +853,7 @@ public final class EncryptionProtos {
         return this;
       }
 
-      private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
+      private org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString hash_ = org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes hash = 5;</code>
        */
@@ -863,13 +863,13 @@ public final class EncryptionProtos {
       /**
        * <code>optional bytes hash = 5;</code>
        */
-      public com.google.protobuf.ByteString getHash() {
+      public org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString getHash() {
         return hash_;
       }
       /**
        * <code>optional bytes hash = 5;</code>
        */
-      public Builder setHash(com.google.protobuf.ByteString value) {
+      public Builder setHash(org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -888,12 +888,12 @@ public final class EncryptionProtos {
         return this;
       }
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final org.apache.hadoop.hbase.shaded.com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final org.apache.hadoop.hbase.shaded.com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -911,22 +911,22 @@ public final class EncryptionProtos {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<WrappedKey>
-        PARSER = new com.google.protobuf.AbstractParser<WrappedKey>() {
+    @java.lang.Deprecated public static final org.apache.hadoop.hbase.shaded.com.google.protobuf.Parser<WrappedKey>
+        PARSER = new org.apache.hadoop.hbase.shaded.com.google.protobuf.AbstractParser<WrappedKey>() {
       public WrappedKey parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.CodedInputStream input,
+          org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws org.apache.hadoop.hbase.shaded.com.google.protobuf.InvalidProtocolBufferException {
           return new WrappedKey(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<WrappedKey> parser() {
+    public static org.apache.hadoop.hbase.shaded.com.google.protobuf.Parser<WrappedKey> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<WrappedKey> getParserForType() {
+    public org.apache.hadoop.hbase.shaded.com.google.protobuf.Parser<WrappedKey> getParserForType() {
       return PARSER;
     }
 
@@ -936,17 +936,17 @@ public final class EncryptionProtos {
 
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.Descriptor
     internal_static_hbase_pb_WrappedKey_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hbase_pb_WrappedKey_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
+  private static  org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -956,22 +956,22 @@ public final class EncryptionProtos {
       "1org.apache.hadoop.hbase.shaded.protobuf" +
       ".generatedB\020EncryptionProtosH\001\240\001\001"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public org.apache.hadoop.hbase.shaded.com.google.protobuf.ExtensionRegistry assignDescriptors(
+              org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new org.apache.hadoop.hbase.shaded.com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
     internal_static_hbase_pb_WrappedKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_hbase_pb_WrappedKey_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      org.apache.hadoop.hbase.shaded.com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hbase_pb_WrappedKey_descriptor,
         new java.lang.String[] { "Algorithm", "Length", "Data", "Iv", "Hash", });
   }

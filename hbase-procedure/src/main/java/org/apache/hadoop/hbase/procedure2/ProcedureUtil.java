@@ -17,13 +17,13 @@
  */
 package org.apache.hadoop.hbase.procedure2;
 
-import org.apache.hadoop.hbase.classification.InterfaceAudience;
-import org.apache.hadoop.hbase.shaded.protobuf.generated.ProcedureProtos;
 import org.apache.hadoop.hbase.HConstants;
 import org.apache.hadoop.hbase.ProcedureInfo;
 import org.apache.hadoop.hbase.ProcedureState;
+import org.apache.hadoop.hbase.classification.InterfaceAudience;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
+import org.apache.hadoop.hbase.shaded.protobuf.generated.ProcedureProtos;
 import org.apache.hadoop.hbase.util.ForeignExceptionUtil;
-import org.apache.hadoop.hbase.shaded.util.ByteStringer;
 import org.apache.hadoop.hbase.util.NonceKey;
 
 /**
@@ -60,7 +60,7 @@ public final class ProcedureUtil {
     }
 
     if (procInfo.hasResultData()) {
-      builder.setResult(ByteStringer.wrap(procInfo.getResult()));
+      builder.setResult(UnsafeByteOperations.unsafeWrap(procInfo.getResult()));
     }
 
     return builder.build();

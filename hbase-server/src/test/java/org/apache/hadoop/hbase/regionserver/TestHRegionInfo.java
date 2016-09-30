@@ -35,9 +35,9 @@ import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.exceptions.DeserializationException;
 import org.apache.hadoop.hbase.master.RegionState;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.RegionInfo;
-import org.apache.hadoop.hbase.shaded.util.ByteStringer;
 import org.apache.hadoop.hbase.testclassification.RegionServerTests;
 import org.apache.hadoop.hbase.testclassification.SmallTests;
 import org.apache.hadoop.hbase.util.Bytes;
@@ -245,11 +245,11 @@ public class TestHRegionInfo {
     // test convert RegionInfo without replicaId
     RegionInfo info = RegionInfo.newBuilder()
       .setTableName(HBaseProtos.TableName.newBuilder()
-        .setQualifier(ByteStringer.wrap(tableName.getQualifier()))
-        .setNamespace(ByteStringer.wrap(tableName.getNamespace()))
+        .setQualifier(UnsafeByteOperations.unsafeWrap(tableName.getQualifier()))
+        .setNamespace(UnsafeByteOperations.unsafeWrap(tableName.getNamespace()))
         .build())
-      .setStartKey(ByteStringer.wrap(startKey))
-      .setEndKey(ByteStringer.wrap(endKey))
+      .setStartKey(UnsafeByteOperations.unsafeWrap(startKey))
+      .setEndKey(UnsafeByteOperations.unsafeWrap(endKey))
       .setSplit(split)
       .setRegionId(regionId)
       .build();

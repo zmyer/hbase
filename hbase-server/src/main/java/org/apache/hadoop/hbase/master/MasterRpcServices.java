@@ -90,7 +90,7 @@ import org.apache.hadoop.hbase.security.visibility.VisibilityController;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.ByteString;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.RpcController;
 import org.apache.hadoop.hbase.shaded.com.google.protobuf.ServiceException;
-import org.apache.hadoop.hbase.shaded.util.ByteStringer;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
 import org.apache.hadoop.hbase.snapshot.ClientSnapshotDescriptionUtils;
 import org.apache.hadoop.hbase.snapshot.SnapshotDescriptionUtils;
 import org.apache.hadoop.hbase.util.Bytes;
@@ -919,7 +919,7 @@ public class MasterRpcServices extends RSRpcServices
           builder.setException(ForeignExceptionUtil.toProtoForeignException(result.getException()));
         }
         if (result.hasResultData()) {
-          builder.setResult(ByteStringer.wrap(result.getResult()));
+          builder.setResult(UnsafeByteOperations.unsafeWrap(result.getResult()));
         }
         master.getMasterProcedureExecutor().removeResult(request.getProcId());
       } else {

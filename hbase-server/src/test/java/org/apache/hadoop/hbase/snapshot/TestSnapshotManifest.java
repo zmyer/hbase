@@ -31,11 +31,11 @@ import org.apache.hadoop.hbase.HBaseTestingUtility;
 import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.TableName;
+import org.apache.hadoop.hbase.shaded.com.google.protobuf.UnsafeByteOperations;
 import org.apache.hadoop.hbase.shaded.protobuf.ProtobufUtil;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.HBaseProtos.SnapshotDescription;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.SnapshotProtos.SnapshotDataManifest;
 import org.apache.hadoop.hbase.shaded.protobuf.generated.SnapshotProtos.SnapshotRegionManifest;
-import org.apache.hadoop.hbase.shaded.util.ByteStringer;
 import org.apache.hadoop.hbase.testclassification.MasterTests;
 import org.apache.hadoop.hbase.testclassification.SmallTests;
 import org.apache.hadoop.hbase.util.Bytes;
@@ -87,7 +87,7 @@ public class TestSnapshotManifest {
       for (HColumnDescriptor hcd: builder.getTableDescriptor().getFamilies()) {
         SnapshotRegionManifest.FamilyFiles.Builder family =
             SnapshotRegionManifest.FamilyFiles.newBuilder();
-        family.setFamilyName(ByteStringer.wrap(hcd.getName()));
+        family.setFamilyName(UnsafeByteOperations.unsafeWrap(hcd.getName()));
         for (int j = 0; j < 100; ++j) {
           SnapshotRegionManifest.StoreFile.Builder sfManifest =
             SnapshotRegionManifest.StoreFile.newBuilder();
