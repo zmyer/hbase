@@ -662,6 +662,10 @@
               <exclude>log4j.properties</exclude>
               <exclude>mapred-queues.xml</exclude>
               <exclude>mapred-site.xml</exclude>
+              <!--I was seeing this w/o the below addition:
+                   [ERROR] Failed to execute goal org.apache.maven.plugins:maven-jar-plugin:2.4:jar (default-jar) on project hbase-protocol-shaded: Error assembling JAR: A zip file cannot include itself -> [Help 1]
+                -->
+              <exclude>*.jar</exclude>
             </excludes>
           </configuration>
         </plugin>
