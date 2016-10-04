@@ -23,8 +23,12 @@ add a new file, be sure to add mention of the proto in the
 pom.xml (scroll till you see the listing of protos to consider).
 
 First ensure that the appropriate protobuf protoc tool is in
-your $PATH (or pass -Dprotoc.path=PATH_TO_PROTOC when running
-the below mvn commands). You may need to download protobuf and
+your $PATH as in:
+
+ $ export PATH=~/bin/protobuf-3.1.0/src:$PATH
+
+.. or pass -Dprotoc.path=PATH_TO_PROTOC when running
+the below mvn commands. You may need to download protobuf and
 build protoc first.
 
 Run:
